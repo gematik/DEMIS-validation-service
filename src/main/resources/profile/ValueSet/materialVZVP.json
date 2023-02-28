@@ -1,0 +1,86 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialVZVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialVZVP",
+  "version": "1.3.0",
+  "name": "MaterialVZVP",
+  "title": "Material für Varizella-Zoster-Virus",
+  "status": "active",
+  "date": "2022-03-16",
+  "description": "Das ValueSet MaterialVZVP enthält die Codes der Materialien für Varizella-Zoster-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119373006",
+        "display": "Amniotic fluid specimen (specimen)"
+      }, {
+        "code": "119295008",
+        "display": "Specimen obtained by aspiration (specimen)"
+      }, {
+        "code": "258446004",
+        "display": "Bronchial fluid sample (specimen)"
+      }, {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)"
+      }, {
+        "code": "258498002",
+        "display": "Conjunctival swab (specimen)"
+      }, {
+        "code": "119400006",
+        "display": "Specimen from cornea (specimen)"
+      }, {
+        "code": "472894002",
+        "display": "Swab from cornea (specimen)"
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid sample (specimen)"
+      }, {
+        "code": "119399004",
+        "display": "Specimen from eye (specimen)"
+      }, {
+        "code": "309128003",
+        "display": "Eye fluid sample (specimen)"
+      }, {
+        "code": "119303007",
+        "display": "Microbial isolate specimen (specimen)"
+      }, {
+        "code": "258606004",
+        "display": "Lower respiratory sample (specimen)"
+      }, {
+        "code": "410580001",
+        "display": "Respiratory fluid specimen (specimen)"
+      }, {
+        "code": "258604001",
+        "display": "Upper respiratory sample (specimen)"
+      }, {
+        "code": "122592007",
+        "display": "Acellular blood (serum or plasma) specimen (specimen)"
+      }, {
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)"
+      }, {
+        "code": "608969007",
+        "display": "Specimen from skin (specimen)"
+      }, {
+        "code": "122575003",
+        "display": "Urine specimen (specimen)"
+      }, {
+        "code": "258565009",
+        "display": "Chorionic villi sample (specimen)"
+      }, {
+        "code": "258503004",
+        "display": "Skin swab (specimen)"
+      }, {
+        "code": "258482009",
+        "display": "Vesicle fluid sample (specimen)"
+      }, {
+        "code": "737357006",
+        "display": "Fetal blood specimen (specimen)"
+      }, {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)"
+      } ]
+    } ]
+  }
+}

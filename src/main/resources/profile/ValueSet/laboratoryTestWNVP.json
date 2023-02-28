@@ -1,0 +1,179 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestWNVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestWNVP",
+  "version": "1.3.0",
+  "name": "LaboratoryTestWNVP",
+  "title": "Labortest für West-Nil-Virus",
+  "status": "active",
+  "date": "2022-03-22",
+  "description": "Das ValueSet LaboratoryTestWNVP enthält die Codes der Labortests für West-Nil-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "97185-3",
+        "display": "West Nile virus RNA [Presence] in Urine by NAA with probe detection"
+      }, {
+        "code": "29535-2",
+        "display": "West Nile virus IgG Ab [Units/volume] in Serum"
+      }, {
+        "code": "29536-0",
+        "display": "West Nile virus IgM Ab [Units/volume] in Serum"
+      }, {
+        "code": "29537-8",
+        "display": "West Nile virus IgG Ab [Units/volume] in Cerebral spinal fluid"
+      }, {
+        "code": "29538-6",
+        "display": "West Nile virus IgM Ab [Units/volume] in Cerebral spinal fluid"
+      }, {
+        "code": "29566-7",
+        "display": "West Nile virus IgG Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "29567-5",
+        "display": "West Nile virus IgM Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "29568-3",
+        "display": "West Nile virus neutralizing antibody [Titer] in Serum by Neutralization test"
+      }, {
+        "code": "29569-1",
+        "display": "West Nile virus IgM Ab [Presence] in Cerebral spinal fluid by Immunoassay"
+      }, {
+        "code": "29570-9",
+        "display": "West Nile virus neutralizing antibody [Titer] in Cerebral spinal fluid by Neutralization test"
+      }, {
+        "code": "29778-8",
+        "display": "West Nile virus IgM Ab [Presence] in Specimen by Immunoassay"
+      }, {
+        "code": "29779-6",
+        "display": "West Nile virus neutralizing antibody [Titer] in Specimen by Neutralization test"
+      }, {
+        "code": "29780-4",
+        "display": "West Nile virus IgM Ab [Presence] in Specimen"
+      }, {
+        "code": "30178-8",
+        "display": "West Nile virus IgG Ab [Presence] in Specimen by Immunoassay"
+      }, {
+        "code": "31701-6",
+        "display": "West Nile virus IgG Ab [Presence] in Serum"
+      }, {
+        "code": "31702-4",
+        "display": "West Nile virus IgG Ab [Presence] in Specimen"
+      }, {
+        "code": "31703-2",
+        "display": "West Nile virus IgM Ab [Presence] in Cerebral spinal fluid"
+      }, {
+        "code": "31704-0",
+        "display": "West Nile virus IgM Ab [Presence] in Serum"
+      }, {
+        "code": "32361-8",
+        "display": "West Nile virus RNA [Presence] in Serum by NAA with probe detection"
+      }, {
+        "code": "32370-9",
+        "display": "West Nile virus RNA [Presence] in Tissue by NAA with probe detection"
+      }, {
+        "code": "32371-7",
+        "display": "West Nile virus Ag [Presence] in Tissue by Immune stain"
+      }, {
+        "code": "33328-6",
+        "display": "West Nile virus IgG Ab [Titer] in Cerebral spinal fluid"
+      }, {
+        "code": "33329-4",
+        "display": "West Nile virus IgG Ab [Titer] in Serum"
+      }, {
+        "code": "33330-2",
+        "display": "West Nile virus IgM Ab [Titer] in Cerebral spinal fluid"
+      }, {
+        "code": "33331-0",
+        "display": "West Nile virus IgM Ab [Titer] in Serum"
+      }, {
+        "code": "34460-6",
+        "display": "West Nile virus RNA [Presence] in Blood by NAA with probe detection"
+      }, {
+        "code": "34461-4",
+        "display": "West Nile virus RNA [Presence] in Cerebral spinal fluid by NAA with probe detection"
+      }, {
+        "code": "34892-0",
+        "display": "West Nile virus RNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "37985-9",
+        "display": "West Nile virus RNA [Presence] in Specimen by Probe"
+      }, {
+        "code": "38166-5",
+        "display": "West Nile virus IgM Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "38997-3",
+        "display": "West Nile virus IgG Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "39572-3",
+        "display": "West Nile virus IgG Ab [Units/volume] in Cerebral spinal fluid by Immunoassay"
+      }, {
+        "code": "39573-1",
+        "display": "West Nile virus IgM Ab [Units/volume] in Cerebral spinal fluid by Immunoassay"
+      }, {
+        "code": "41195-9",
+        "display": "West Nile virus IgM Ab [Titer] in Body fluid"
+      }, {
+        "code": "41196-7",
+        "display": "West Nile virus IgG Ab [Titer] in Body fluid"
+      }, {
+        "code": "41211-4",
+        "display": "West Nile virus IgG+IgM Ab [Presence] in Serum"
+      }, {
+        "code": "41212-2",
+        "display": "West Nile virus RNA [Presence] in Serum from Donor by NAA with probe detection"
+      }, {
+        "code": "41236-1",
+        "display": "West Nile virus IgG Ab [Presence] in Cerebral spinal fluid"
+      }, {
+        "code": "41642-0",
+        "display": "West Nile virus IgM Ab [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "41643-8",
+        "display": "West Nile virus Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "43342-5",
+        "display": "West Nile virus IgM Ab [Titer] in Cerebral spinal fluid by Immunoassay"
+      }, {
+        "code": "43343-3",
+        "display": "West Nile virus IgM Ab [Titer] in Serum by Immunoassay"
+      }, {
+        "code": "50015-7",
+        "display": "West Nile virus Ag [Presence] in Blood or Marrow from Donor"
+      }, {
+        "code": "60028-8",
+        "display": "West Nile virus IgG Ab avidity [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "60029-6",
+        "display": "West Nile virus IgG Ab avidity [Presence] in Serum by Immunofluorescence"
+      }, {
+        "code": "60030-4",
+        "display": "West Nile virus IgG Ab [Presence] in Serum by Immunofluorescence"
+      }, {
+        "code": "62436-1",
+        "display": "West Nile virus IgM Ab [Presence] in Body fluid by Immunoassay"
+      }, {
+        "code": "74857-4",
+        "display": "West Nile virus RNA [Presence] in Serum or Plasma from Donor by NAA with probe detection"
+      }, {
+        "code": "77953-8",
+        "display": "West Nile virus IgG Ab [Presence] in Cerebral spinal fluid by Immunoassay"
+      }, {
+        "code": "81096-0",
+        "display": "West Nile virus Kunjin strain IgM Ab [Presence] in Serum"
+      }, {
+        "code": "81650-4",
+        "display": "West Nile virus Kunjin strain RNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "87395-0",
+        "display": "West Nile virus RNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "94289-6",
+        "display": "West Nile virus neutralizing antibody [Presence] in Specimen by Neutralization test"
+      }, {
+        "code": "94602-0",
+        "display": "West Nile virus IgM Ab/Positive control in Serum by Immunoassay"
+      } ]
+    } ]
+  }
+}

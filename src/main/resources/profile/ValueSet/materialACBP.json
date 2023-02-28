@@ -1,0 +1,179 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialACBP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialACBP",
+  "version": "1.3.0",
+  "name": "MaterialACBP",
+  "title": "Material für Acinetobacter spp. bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation",
+  "status": "active",
+  "date": "2022-03-29",
+  "description": "Das ValueSet MaterialACBP enthält die Codes der Materialien für Acinetobacter spp. bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "258442002",
+        "display": "Fluid sample (specimen)"
+      }, {
+        "code": "119332005",
+        "display": "Synovial fluid specimen (specimen)"
+      }, {
+        "code": "309123007",
+        "display": "Synovial sample (specimen)"
+      }, {
+        "code": "119339001",
+        "display": "Stool specimen (specimen)"
+      }, {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)"
+      }, {
+        "code": "878861003",
+        "display": "Blood specimen in blood culture bottle (specimen)"
+      }, {
+        "code": "119303007",
+        "display": "Microbial isolate specimen (specimen)"
+      }, {
+        "code": "119334006",
+        "display": "Sputum specimen (specimen)"
+      }, {
+        "code": "258607008",
+        "display": "Bronchoalveolar lavage fluid sample (specimen)"
+      }, {
+        "code": "258606004",
+        "display": "Lower respiratory sample (specimen)"
+      }, {
+        "code": "309170008",
+        "display": "Lower respiratory tissue sample (specimen)"
+      }, {
+        "code": "410580001",
+        "display": "Respiratory fluid specimen (specimen)"
+      }, {
+        "code": "258446004",
+        "display": "Bronchial fluid sample (specimen)"
+      }, {
+        "code": "119390000",
+        "display": "Specimen from trachea (specimen)"
+      }, {
+        "code": "445447003",
+        "display": "Specimen from trachea obtained by aspiration (specimen)"
+      }, {
+        "code": "122877000",
+        "display": "Upper respiratory fluid specimen obtained by tracheal aspiration (specimen)"
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid sample (specimen)"
+      }, {
+        "code": "119344008",
+        "display": "Specimen from genital system (specimen)"
+      }, {
+        "code": "122575003",
+        "display": "Urine specimen (specimen)"
+      }, {
+        "code": "16221251000119108",
+        "display": "Urine specimen obtained via straight catheter (specimen)"
+      }, {
+        "code": "122565001",
+        "display": "Urinary catheter specimen (specimen)"
+      }, {
+        "code": "309201001",
+        "display": "Ascitic fluid sample (specimen)"
+      }, {
+        "code": "309052008",
+        "display": "Male genital sample (specimen)"
+      }, {
+        "code": "119347001",
+        "display": "Seminal fluid specimen (specimen)"
+      }, {
+        "code": "418564007",
+        "display": "Pleural fluid specimen (specimen)"
+      }, {
+        "code": "119371008",
+        "display": "Specimen from abscess (specimen)"
+      }, {
+        "code": "119325001",
+        "display": "Skin (tissue) specimen (specimen)"
+      }, {
+        "code": "257261003",
+        "display": "Swab (specimen)"
+      }, {
+        "code": "258528007",
+        "display": "Rectal swab (specimen)"
+      }, {
+        "code": "258508008",
+        "display": "Genital swab (specimen)"
+      }, {
+        "code": "258530009",
+        "display": "Urethral swab (specimen)"
+      }, {
+        "code": "258503004",
+        "display": "Skin swab (specimen)"
+      }, {
+        "code": "258531008",
+        "display": "Wound swab (specimen)"
+      }, {
+        "code": "472867001",
+        "display": "Swab from tonsil (specimen)"
+      }, {
+        "code": "472881004",
+        "display": "Swab from pharynx (specimen)"
+      }, {
+        "code": "258497007",
+        "display": "Abscess swab (specimen)"
+      }, {
+        "code": "258500001",
+        "display": "Nasopharyngeal swab (specimen)"
+      }, {
+        "code": "472901003",
+        "display": "Swab from nasal sinus (specimen)"
+      }, {
+        "code": "445160003",
+        "display": "Swab of eye (specimen)"
+      }, {
+        "code": "258527002",
+        "display": "Anal swab (specimen)"
+      }, {
+        "code": "472866005",
+        "display": "Swab from tongue (specimen)"
+      }, {
+        "code": "309166000",
+        "display": "Ear swab sample (specimen)"
+      }, {
+        "code": "309164002",
+        "display": "Upper respiratory swab sample (specimen)"
+      }, {
+        "code": "119312009",
+        "display": "Catheter tip submitted as specimen (specimen)"
+      }, {
+        "code": "472932002",
+        "display": "Vascular catheter submitted as specimen (specimen)"
+      }, {
+        "code": "473409003",
+        "display": "Central venous catheter submitted as specimen (specimen)"
+      }, {
+        "code": "258604001",
+        "display": "Upper respiratory sample (specimen)"
+      }, {
+        "code": "432419006",
+        "display": "Specimen from joint obtained by fine needle aspiration biopsy (specimen)"
+      }, {
+        "code": "446972001",
+        "display": "Specimen from abscess obtained by aspiration (specimen)"
+      }, {
+        "code": "122618002",
+        "display": "Specimen from pleura obtained by fine needle aspiration procedure (specimen)"
+      }, {
+        "code": "119295008",
+        "display": "Specimen obtained by aspiration (specimen)"
+      }, {
+        "code": "258415003",
+        "display": "Biopsy sample (specimen)"
+      }, {
+        "code": "75016008",
+        "display": "Biopsy of soft tissue (procedure)"
+      }, {
+        "code": "360156006",
+        "display": "Screening - procedure intent (qualifier value)"
+      } ]
+    } ]
+  }
+}

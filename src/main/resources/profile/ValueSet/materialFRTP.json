@@ -1,0 +1,92 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialFRTP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialFRTP",
+  "version": "1.1.1",
+  "name": "MaterialFRTP",
+  "title": "Material für Francisella tularensis",
+  "status": "active",
+  "date": "2021-11-26",
+  "description": "Das ValueSet MaterialFRTP enthält die Codes der Materialien für Francisella tularensis.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)"
+      }, {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)"
+      }, {
+        "code": "119294007",
+        "display": "Dried blood specimen (specimen)"
+      }, {
+        "code": "119361006",
+        "display": "Plasma specimen (specimen)"
+      }, {
+        "code": "122592007",
+        "display": "Acellular blood (serum or plasma) specimen (specimen)"
+      }, {
+        "code": "410580001",
+        "display": "Respiratory fluid specimen (specimen)"
+      }, {
+        "code": "258500001",
+        "display": "Nasopharyngeal swab (specimen)"
+      }, {
+        "code": "472881004",
+        "display": "Swab from pharynx (specimen)"
+      }, {
+        "code": "119390000",
+        "display": "Specimen from trachea (specimen)"
+      }, {
+        "code": "445447003",
+        "display": "Specimen from trachea obtained by aspiration (specimen)"
+      }, {
+        "code": "258446004",
+        "display": "Bronchial fluid sample (specimen)"
+      }, {
+        "code": "309174004",
+        "display": "Bronchial biopsy sample (specimen)"
+      }, {
+        "code": "258609006",
+        "display": "Sputum specimen obtained by aspiration from trachea (specimen)"
+      }, {
+        "code": "119295008",
+        "display": "Specimen obtained by aspiration (specimen)"
+      }, {
+        "code": "119334006",
+        "display": "Sputum specimen (specimen)"
+      }, {
+        "code": "418564007",
+        "display": "Pleural fluid specimen (specimen)"
+      }, {
+        "code": "472862007",
+        "display": "Swab from lesion of skin (specimen)"
+      }, {
+        "code": "258505006",
+        "display": "Skin ulcer swab (specimen)"
+      }, {
+        "code": "302795002",
+        "display": "Lymph node aspirate (specimen)"
+      }, {
+        "code": "309508006",
+        "display": "Soft tissue lesion fine needle aspirate sample (specimen)"
+      }, {
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)"
+      }, {
+        "code": "309079007",
+        "display": "Lymph node biopsy sample (specimen)"
+      }, {
+        "code": "309078004",
+        "display": "Lymph node tissue sample (specimen)"
+      }, {
+        "code": "258484005",
+        "display": "Postmortem tissue sample (specimen)"
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid sample (specimen)"
+      } ]
+    } ]
+  }
+}

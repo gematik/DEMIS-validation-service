@@ -1,0 +1,68 @@
+{
+  "resourceType": "ValueSet",
+  "id": "evidenceCVDD",
+  "url": "https://demis.rki.de/fhir/ValueSet/evidenceCVDD",
+  "version": "1.0.0",
+  "name": "EvidenceCVDD",
+  "title": "Covid-19-Symptom und -Manifestation",
+  "status": "active",
+  "date": "2022-01-18",
+  "description": "Das ValueSet EvidenceCVDD enthält die Codes der Covid-19-Symptome und -Manifestationen.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "386661006",
+        "display": "Fever (finding)"
+      }, {
+        "code": "267102003",
+        "display": "Sore throat symptom (finding)"
+      }, {
+        "code": "49727002",
+        "display": "Cough (finding)"
+      }, {
+        "code": "233604007",
+        "display": "Pneumonia (disorder)"
+      }, {
+        "code": "275280004",
+        "display": "Sniffles (finding)"
+      }, {
+        "code": "67782005",
+        "display": "Acute respiratory distress syndrome (disorder)"
+      }, {
+        "code": "371820004",
+        "display": "Patient ventilated (finding)"
+      }, {
+        "code": "267036007",
+        "display": "Dyspnea (finding)"
+      }, {
+        "code": "62315008",
+        "display": "Diarrhea (finding)"
+      }, {
+        "code": "44169009",
+        "display": "Loss of sense of smell (finding)"
+      }, {
+        "code": "36955009",
+        "display": "Loss of taste (finding)"
+      }, {
+        "code": "271823003",
+        "display": "Tachypnea (finding)"
+      }, {
+        "code": "3424008",
+        "display": "Tachycardia (finding)"
+      }, {
+        "code": "213257006",
+        "display": "Generally unwell (finding)"
+      }, {
+        "code": "43724002",
+        "display": "Chill (finding)"
+      }, {
+        "code": "25064002",
+        "display": "Headache (finding)"
+      }, {
+        "code": "68962001",
+        "display": "Muscle pain (finding)"
+      } ]
+    } ]
+  }
+}

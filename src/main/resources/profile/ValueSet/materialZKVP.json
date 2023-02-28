@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialZKVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialZKVP",
+  "version": "1.1.0",
+  "name": "MaterialZKVP",
+  "title": "Material für Zika-Virus",
+  "status": "active",
+  "date": "2021-12-17",
+  "description": "Das ValueSet MaterialZKVP enthält die Codes der Materialien für Zika-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid sample (specimen)"
+      }, {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)"
+      }, {
+        "code": "122592007",
+        "display": "Acellular blood (serum or plasma) specimen (specimen)"
+      }, {
+        "code": "119361006",
+        "display": "Plasma specimen (specimen)"
+      }, {
+        "code": "445295009",
+        "display": "Blood specimen with edetic acid (specimen)"
+      }, {
+        "code": "708049000",
+        "display": "Plasma specimen with ethylenediamine tetraacetic acid (specimen)"
+      }, {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)"
+      }, {
+        "code": "258580003",
+        "display": "Whole blood sample (specimen)"
+      }, {
+        "code": "119294007",
+        "display": "Dried blood specimen (specimen)"
+      }, {
+        "code": "122575003",
+        "display": "Urine specimen (specimen)"
+      }, {
+        "code": "119373006",
+        "display": "Amniotic fluid specimen (specimen)"
+      }, {
+        "code": "122556008",
+        "display": "Cord blood specimen (specimen)"
+      } ]
+    } ]
+  }
+}

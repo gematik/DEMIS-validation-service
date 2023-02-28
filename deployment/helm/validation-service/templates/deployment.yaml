@@ -1,0 +1,101 @@
+{{/* Check required values and define variables */}}
+{{- $dockerRepository := .Values.required.image.repository | required ".Values.required.image.repository is required." -}}
+{{- $dockerImage := .Values.required.image.name | required ".Values.required.image.name is required." -}}
+{{- $dockerTag := .Values.required.image.tag | default .Chart.AppVersion -}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "validation-service.fullversionname" . }}
+  labels:
+    {{- include "validation-service.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "validation-service.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "validation-service.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets: 
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "validation-service.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ $dockerRepository }}/{{ $dockerImage }}:{{ $dockerTag }}"
+          {{- /* Pull always an image if is tagged as "latest" */}}
+          imagePullPolicy: {{- if eq .Values.required.image.tag "latest" }} "Always" {{else}} "IfNotPresent" {{- end -}}
+          {{- /* If entrypoint and parameters are both defined, configure them */ -}}
+          {{- if .Values.application.entrypoint }}
+          {{- if .Values.application.parameters }}
+          {{- with .Values.application.entrypoint }}
+          command: 
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.application.parameters }}
+          args: 
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- end }}
+          {{- end }}
+          # Set the Environment Variables for the container
+          env:
+            - name: "SERVER_PORT"
+              value: "8080"
+            - name: "TZ"
+              value: "Europe/Berlin"
+          # Ports to be exposed from the container
+          ports:
+            - name: val-port
+              containerPort: 8080
+              protocol: TCP
+          # Performs checks to verify that the application is successfully started
+          # The Application is marked as failed after periodSeconds*failureThreshold seconds
+          startupProbe:
+            httpGet:
+              path: /actuator/health
+              port: val-port
+            failureThreshold: 10
+            periodSeconds: 30
+          # Use SpringBoot Actuator Liveness Chech
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: val-port
+            failureThreshold: 3
+            periodSeconds: 30
+          # Use SpringBoot Actuator Readiness Chech
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: val-port
+            failureThreshold: 5
+            periodSeconds: 10
+          # Define Limits and Requested Resources (CPU/RAM)
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

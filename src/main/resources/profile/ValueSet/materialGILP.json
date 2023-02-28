@@ -1,0 +1,23 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialGILP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialGILP",
+  "version": "1.0.0",
+  "name": "MaterialGILP",
+  "title": "Material für Giardia lamblia",
+  "status": "active",
+  "date": "2021-10-06",
+  "description": "Das ValueSet MaterialGILP enthält die Codes der Materialien für Giardia lamblia.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119339001",
+        "display": "Stool specimen (specimen)"
+      }, {
+        "code": "122574004",
+        "display": "Duodenal fluid specimen (specimen)"
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vaccineCVDD",
+  "url": "https://demis.rki.de/fhir/ValueSet/vaccineCVDD",
+  "version": "1.1.0",
+  "name": "VaccineCVDD",
+  "title": "Covid-19-Impfstoff",
+  "status": "active",
+  "date": "2022-11-02",
+  "description": "Das ValueSet VaccineCVDD enthält die Codes der Covid-19-Impfstoffe.",
+  "compose": {
+    "include": [ {
+      "system": "https://ec.europa.eu/health/documents/community-register/html/",
+      "concept": [ {
+        "code": "EU/1/20/1507",
+        "display": "Spikevax (COVID-19 Vaccine Moderna)"
+      }, {
+        "code": "EU/1/20/1525",
+        "display": "COVID-19 Vaccine Janssen"
+      }, {
+        "code": "EU/1/20/1528",
+        "display": "Comirnaty"
+      }, {
+        "code": "EU/1/21/1529",
+        "display": "Vaxzevria (COVID-19 Vaccine AstraZeneca)"
+      }, {
+        "code": "EU/1/21/1618",
+        "display": "Nuvaxovid (NVX-CoV2373)"
+      }, {
+        "code": "EU/1/21/1624",
+        "display": "Valneva"
+      } ]
+    }, {
+      "system": "https://demis.rki.de/fhir/CodeSystem/vaccine",
+      "concept": [ {
+        "code": "otherVaccine",
+        "display": "Anderer Impfstoff"
+      } ]
+    }, {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+      "concept": [ {
+        "code": "ASKU",
+        "display": "asked but unknown"
+      }, {
+        "code": "NASK",
+        "display": "not asked"
+      } ]
+    } ]
+  }
+}

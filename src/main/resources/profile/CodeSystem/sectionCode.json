@@ -1,0 +1,25 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "sectionCode",
+  "url": "https://demis.rki.de/fhir/CodeSystem/sectionCode",
+  "version": "1.0.0",
+  "name": "SectionCode",
+  "title": "Section-Code",
+  "status": "active",
+  "date": "2022-01-18",
+  "description": "Das CodeSystem SectionCode enthält die Codes der document sections.",
+  "caseSensitive": false,
+  "valueSet": "https://demis.rki.de/fhir/ValueSet/sectionCode",
+  "content": "complete",
+  "count": 3,
+  "concept": [ {
+    "code": "diagnosis",
+    "display": "Diagnose"
+  }, {
+    "code": "generalClinAndEpiInformation",
+    "display": "Meldetatbestandsübergreifende klinische und epidemiologische Angaben"
+  }, {
+    "code": "specificClinAndEpiInformation",
+    "display": "Meldetatbestandsspezifische klinische und epidemiologische Angaben"
+  } ]
+}

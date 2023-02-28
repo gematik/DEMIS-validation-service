@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "id": "notificationDiseaseCategory",
+  "url": "https://demis.rki.de/fhir/ValueSet/notificationDiseaseCategory",
+  "version": "1.0.0",
+  "name": "NotificationDiseaseCategory",
+  "title": "Meldetatbestand",
+  "status": "active",
+  "date": "2022-01-18",
+  "description": "Das ValueSet NotificationDiseaseCategory enthält die Codes der Meldetatbestände.",
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory"
+    } ]
+  }
+}

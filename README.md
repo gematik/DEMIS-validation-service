@@ -80,7 +80,7 @@ In IntelliJ as SpringBoot Application:
 
 `/status` get Endpunkt für Statusmeldung (aktuell minimal implementiert)
 
-`/validate` post Endpunkt um Meldungen zu validieren, liefert Validierungsergebnis von HAPI-Validator zurück
+`/$validate` post Endpunkt um Meldungen zu validieren, liefert Validierungsergebnis von HAPI-Validator zurück
 
 `/actuator/health/` Standardenpunkt vom Actuator
 

@@ -1,0 +1,31 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "notificationType",
+  "url": "https://demis.rki.de/fhir/CodeSystem/notificationType",
+  "version": "1.0.0",
+  "name": "NotificationType",
+  "title": "Typ der Meldung",
+  "status": "active",
+  "date": "2022-01-18",
+  "description": "Das CodeSystem NotificationType enthält die Codes für den Typ der Meldung.",
+  "caseSensitive": false,
+  "valueSet": "https://demis.rki.de/fhir/ValueSet/notificationType",
+  "content": "complete",
+  "count": 5,
+  "concept": [ {
+    "code": "7.1_2",
+    "display": "Meldung gemäß IfSG §7 Absatz 1, 2"
+  }, {
+    "code": "6.1_2",
+    "display": "Meldung gemäß IfSG §6 Absatz 1, 2"
+  }, {
+    "code": "7.3",
+    "display": "Meldung gemäß IfSG §7 Absatz 3"
+  }, {
+    "code": "6.3",
+    "display": "Meldung gemäß IfSG §6 Absatz 3"
+  }, {
+    "code": "34_36",
+    "display": "Benachrichtigung gemäß IfSG §34, §36"
+  } ]
+}

@@ -1,0 +1,185 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialMYTP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialMYTP",
+  "version": "1.1.2",
+  "name": "MaterialMYTP",
+  "title": "Material für Mycobacterium tuberculosis, Mycobacterium africanum, Mycobacterium bovis; Meldepflicht für den direkten Erregernachweis sowie nachfolgend für das Ergebnis der Resistenzbestimmung; vorab auch für den Nachweis säurefester Stäbchen im Sputum",
+  "status": "active",
+  "date": "2021-11-30",
+  "description": "Das ValueSet MaterialMYTP enthält die Codes der Materialien für Mycobacterium tuberculosis/africanum, Mycobacterium bovis; Meldepflicht für den direkten Erregernachweis sowie nachfolgend für das Ergebnis der Resistenzbestimmung; vorab auch für den Nachweis säurefester Stäbchen im Sputum",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)"
+      }, {
+        "code": "257261003",
+        "display": "Swab (specimen)"
+      }, {
+        "code": "119341000",
+        "display": "Bile specimen (specimen)"
+      }, {
+        "code": "431887008",
+        "display": "Specimen from unspecified body site obtained by biopsy (specimen)"
+      }, {
+        "code": "309051001",
+        "display": "Body fluid sample (specimen)"
+      }, {
+        "code": "309105004",
+        "display": "Bone biopsy sample (specimen)"
+      }, {
+        "code": "119359002",
+        "display": "Bone marrow specimen (specimen)"
+      }, {
+        "code": "258417006",
+        "display": "Bone tissue sample (specimen)"
+      }, {
+        "code": "309174004",
+        "display": "Bronchial biopsy sample (specimen)"
+      }, {
+        "code": "258446004",
+        "display": "Bronchial fluid sample (specimen)"
+      }, {
+        "code": "258607008",
+        "display": "Bronchoalveolar lavage fluid sample (specimen)"
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid sample (specimen)"
+      }, {
+        "code": "258498002",
+        "display": "Conjunctival swab (specimen)"
+      }, {
+        "code": "309216003",
+        "display": "Duodenal biopsy sample (specimen)"
+      }, {
+        "code": "258459007",
+        "display": "Gastric fluid sample (specimen)"
+      }, {
+        "code": "309199003",
+        "display": "Gastrointestinal fluid sample (specimen)"
+      }, {
+        "code": "431898009",
+        "display": "Joint fluid (substance)"
+      }, {
+        "code": "309269002",
+        "display": "Kidney biopsy sample (specimen)"
+      }, {
+        "code": "309203003",
+        "display": "Liver biopsy sample (specimen)"
+      }, {
+        "code": "258606004",
+        "display": "Lower respiratory sample (specimen)"
+      }, {
+        "code": "302795002",
+        "display": "Lymph node aspirate (specimen)"
+      }, {
+        "code": "309079007",
+        "display": "Lymph node biopsy sample (specimen)"
+      }, {
+        "code": "309078004",
+        "display": "Lymph node tissue sample (specimen)"
+      }, {
+        "code": "119345009",
+        "display": "Menstrual blood specimen (specimen)"
+      }, {
+        "code": "119303007",
+        "display": "Microbial isolate specimen (specimen)"
+      }, {
+        "code": "309172000",
+        "display": "Pleura biopsy sample (specimen)"
+      }, {
+        "code": "418564007",
+        "display": "Pleural fluid specimen (specimen)"
+      }, {
+        "code": "258470000",
+        "display": "Prostatic fluid sample (specimen)"
+      }, {
+        "code": "119323008",
+        "display": "Pus specimen (specimen)"
+      }, {
+        "code": "119347001",
+        "display": "Seminal fluid specimen (specimen)"
+      }, {
+        "code": "309066003",
+        "display": "Skin biopsy sample (specimen)"
+      }, {
+        "code": "123038009",
+        "display": "Specimen (specimen)"
+      }, {
+        "code": "119371008",
+        "display": "Specimen from abscess (specimen)"
+      }, {
+        "code": "446972001",
+        "display": "Specimen from abscess obtained by aspiration (specimen)"
+      }, {
+        "code": "119382000",
+        "display": "Specimen from colon (specimen)"
+      }, {
+        "code": "119400006",
+        "display": "Specimen from cornea (specimen)"
+      }, {
+        "code": "432981006",
+        "display": "Specimen from eye obtained by fine needle aspiration biopsy (specimen)"
+      }, {
+        "code": "434250007",
+        "display": "Specimen from pericardium obtained by biopsy (specimen)"
+      }, {
+        "code": "608969007",
+        "display": "Specimen from skin (specimen)"
+      }, {
+        "code": "445447003",
+        "display": "Specimen from trachea obtained by aspiration (specimen)"
+      }, {
+        "code": "119295008",
+        "display": "Specimen obtained by aspiration (specimen)"
+      }, {
+        "code": "119334006",
+        "display": "Sputum specimen (specimen)"
+      }, {
+        "code": "258609006",
+        "display": "Sputum specimen obtained by aspiration from trachea (specimen)"
+      }, {
+        "code": "119339001",
+        "display": "Stool specimen (specimen)"
+      }, {
+        "code": "472894002",
+        "display": "Swab from cornea (specimen)"
+      }, {
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)"
+      }, {
+        "code": "128157004",
+        "display": "Tissue specimen from brain (specimen)"
+      }, {
+        "code": "128168004",
+        "display": "Tissue specimen from liver (specimen)"
+      }, {
+        "code": "399492000",
+        "display": "Tissue specimen from lung (specimen)"
+      }, {
+        "code": "699874006",
+        "display": "Tissue specimen from pericardium (specimen)"
+      }, {
+        "code": "122575003",
+        "display": "Urine specimen (specimen)"
+      }, {
+        "code": "128159001",
+        "display": "Tissue specimen from colon (specimen)"
+      }, {
+        "code": "122610009",
+        "display": "Specimen from lung obtained by biopsy (specimen)"
+      }, {
+        "code": "127474009",
+        "display": "Tissue specimen from kidney (specimen)"
+      }, {
+        "code": "127460002",
+        "display": "Tissue specimen from pleura (specimen)"
+      }, {
+        "code": "309176002",
+        "display": "Bronchial brushings sample (specimen)"
+      } ]
+    } ]
+  }
+}

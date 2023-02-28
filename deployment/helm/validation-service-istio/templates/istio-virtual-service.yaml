@@ -1,0 +1,42 @@
+{{- if .Values.istio.enable -}}
+{{- $name := .Values.fullName }}
+{{- $url := printf "%s.%s.svc.cluster.local" $name .Release.Namespace }}
+{{- $port := .Values.service.ports.http }}
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: "{{ $name }}-virtual-service"
+spec:
+  hosts:
+    - {{ $url }}
+  {{- if .Values.istio.virtualService.hosts }}
+    {{- toYaml .Values.istio.virtualService.hosts | nindent 4 }}
+  {{- end}}
+  {{- if .Values.istio.virtualService.gateways }}
+  gateways:
+    {{- toYaml .Values.istio.virtualService.gateways | nindent 4 }}
+  {{- end}}
+  http:
+    - match:
+        - uri:
+            prefix: {{ .Values.istio.virtualService.http.uri.prefix }}
+      rewrite:
+        uri: {{ .Values.istio.virtualService.http.rewrite.uri }}
+      route:
+        {{- range $k, $v := .Values.istio.subsets }}
+        - destination:
+            host: {{ $url }}
+            subset: {{ regexReplaceAll "\\.+" $v.version "-" }}
+            port:
+              number: {{ $port }}
+          weight: {{ $v.weight }}
+          {{- if $v.mirror }}
+          mirror:
+            host: {{ $url }}
+            subset: {{ regexReplaceAll "\\.+" $v.mirror.version "-" }}
+            mirrorPercentage:
+              value: {{ $v.mirror.mirrorPercentage }}
+          {{- end }}
+        {{- end }}
+{{- end }}

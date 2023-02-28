@@ -1,0 +1,20 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestBOVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestBOVP",
+  "version": "1.0.0",
+  "name": "LaboratoryTestBOVP",
+  "title": "Labortest für humanpathogene Bornaviren; Meldepflicht nur für den direkten Nachweis",
+  "status": "active",
+  "date": "2021-11-25",
+  "description": "Das ValueSet LaboratoryTestBOVP enthält die Codes der Labortests für humanpathogene Bornaviren.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      } ]
+    } ]
+  }
+}

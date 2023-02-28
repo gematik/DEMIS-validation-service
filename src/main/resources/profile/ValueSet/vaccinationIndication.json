@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vaccinationIndication",
+  "url": "https://demis.rki.de/fhir/ValueSet/vaccinationIndication",
+  "version": "1.0.0",
+  "name": "VaccinationIndication",
+  "title": "Impfindikation",
+  "status": "active",
+  "date": "2022-01-18",
+  "description": "Das ValueSet VaccinationIndication enthält die Codes für die Impfindikation.",
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/vaccinationIndication"
+    } ]
+  }
+}

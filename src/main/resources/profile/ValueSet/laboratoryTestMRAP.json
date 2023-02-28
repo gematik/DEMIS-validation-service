@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestMRAP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestMRAP",
+  "version": "1.2.0",
+  "name": "LaboratoryTestMRAP",
+  "title": "Labortest für Staphylococcus aureus (Methicillin-resistente Stämme); Meldepflicht nur für den Nachweis aus Blut oder Liquor",
+  "status": "active",
+  "date": "2021-12-19",
+  "description": "Das ValueSet LaboratoryTestMRAP enthält die Codes der Labortests für Staphylococcus aureus (Methicillin-resistente Stämme); Meldepflicht nur für den Nachweis aus Blut oder Liquor.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "13317-3",
+        "display": "Methicillin resistant Staphylococcus aureus [Presence] in Specimen by Organism specific culture"
+      }, {
+        "code": "35492-8",
+        "display": "Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "42721-1",
+        "display": "Oxacillin Resistant Staphylococcus sp isolate [Presence] in Isolate by Latex agglutination"
+      }, {
+        "code": "94424-9",
+        "display": "Staphylococcus aureus methicillin resistance SCCmec+orfX junction [Presence] by Molecular method"
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

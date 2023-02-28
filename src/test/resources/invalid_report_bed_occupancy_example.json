@@ -1,0 +1,182 @@
+{
+    "resourceType": "Bundle",
+    "id": "d41d8cd9-8f00-3204-a980-0998ecf8427e",
+    "meta": {
+        "lastUpdated": "2021-11-20T17:50:00.000+01:00",
+        "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/ReportBundle"
+        ]
+    },
+    "identifier": {
+        "system": "https://demis.rki.de/fhir/NamingSystem/NotificationBundleId",
+        "value": "cfcd2084-95d5-35ef-a6e7-dff9f98764da"
+    },
+    "type": "document",
+    "timestamp": "2021-11-20T17:50:00.000+01:00",
+    "entry": [
+        {
+            "fullUrl": "https://demis.rki.de/fhir/Composition/1b22c8d8-f1cb-311a-991a-8b488979af8e",
+            "resource": {
+                "resourceType": "Composition",
+                "id": "1b22c8d8-f1cb-311a-991a-8b488979af8e",
+                "meta": {
+                    "lastUpdated": "2021-11-20T17:50:00.000+01:00",
+                    "profile": [
+                        "https://demis.rki.de/fhir/StructureDefinition/ReportBedOccupancy"
+                    ]
+                },
+                "identifier": {
+                    "system": "https://demis.rki.de/fhir/NamingSystem/NotificationId",
+                    "value": "5e1e89ce-7a44-4ec1-801c-0f988992e8fe"
+                },
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "80563-0",
+                            "display": "Report"
+                        }
+                    ]
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "https://demis.rki.de/fhir/CodeSystem/reportCategory",
+                                "code": "bedOccupancyReport",
+                                "display": "Bettenbelegungsstatistik"
+                            }
+                        ]
+                    }
+                ],
+                "subject": {
+                    "identifier": {
+                        "system": "https://demis.rki.de/fhir/NamingSystem/InekStandortId",
+                        "value": "772557"
+                    }
+                },
+                "date": "2021-11-20T17:50:00.000+01:00",
+                "author": [
+                    {
+                        "reference": "PractitionerRole/2b9aa7a8-0881-34cb-9b01-b79ff1a367cf"
+                    }
+                ],
+                "title": "Bericht (Krankenhausbettenbelegungsstatistik)",
+                "section": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "https://demis.rki.de/fhir/CodeSystem/reportSection",
+                                    "code": "statisticInformationBedOccupancySection",
+                                    "display": "Abschnitt 'Statistische Informationen zur Krankenhausbettenbelegung'"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "QuestionnaireResponse/5e1e89ce-7a44-4ec1-801c-0f988992e8fa"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "https://demis.rki.de/fhir/Organization/5e1e89ce-7a44-4ec1-801c-0f988992e8ff",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "5e1e89ce-7a44-4ec1-801c-0f988992e8ff",
+                "meta": {
+                    "profile": [
+                        "https://demis.rki.de/fhir/StructureDefinition/NotifierFacility"
+                    ]
+                },
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+                                "code": "hospital"
+                            }
+                        ]
+                    }
+                ],
+                "name": "Sankt Gertrauden-Krankenhaus GmbH",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "309876543210",
+                        "use": "work"
+                    }
+                ],
+                "address": [
+                    {
+                        "line": [
+                            "Paretzer Straße 12"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "10713",
+                        "country": "20422"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "https://demis.rki.de/fhir/PractitionerRole/2b9aa7a8-0881-34cb-9b01-b79ff1a367cf",
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "2b9aa7a8-0881-34cb-9b01-b79ff1a367cf",
+                "meta": {
+                    "profile": [
+                        "https://demis.rki.de/fhir/StructureDefinition/NotifierRole"
+                    ]
+                },
+                "organization": {
+                    "reference": "Organization/5e1e89ce-7a44-4ec1-801c-0f988992e8ff"
+                }
+            }
+        },
+        {
+            "fullUrl": "https://demis.rki.de/fhir/QuestionnaireResponse/5e1e89ce-7a44-4ec1-801c-0f988992e8fa",
+            "resource": {
+                "resourceType": "QuestionnaireResponse",
+                "id": "5e1e89ce-7a44-4ec1-801c-0f988992e8fa",
+                "meta": {
+                    "profile": [
+                        "https://demis.rki.de/fhir/StructureDefinition/StatisticInformationBedOccupancy"
+                    ]
+                },
+                "questionnaire": "https://demis.rki.de/fhir/Questionnaire/StatisticQuestionsBedOccupancy",
+                "status": "completed",
+                "item": [
+                    {
+                        "linkId": "numberOperableBedsGeneralWardAdults",
+                        "answer": [
+                            {
+                                "valueInteger": 250
+                            }
+                        ]
+                    },
+                    {
+                        "linkId": "numberOccupiedBedsGeneralWardAdults",
+                        "answer": [
+                            {
+                                "valueInteger": 221
+                            }
+                        ]
+                    },
+                    {
+                        "linkId": "numberOperableBedsGeneralWardChildren",
+                        "answer": [
+                            {
+                                "valueInteger": 50
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

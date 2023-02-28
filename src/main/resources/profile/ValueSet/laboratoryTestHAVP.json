@@ -1,0 +1,95 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestHAVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestHAVP",
+  "version": "1.1.0",
+  "name": "LaboratoryTestHAVP",
+  "title": "Labortest für Hepatitis-A-Virus",
+  "status": "active",
+  "date": "2021-11-23",
+  "description": "Das ValueSet LaboratoryTestHAVP enthält die Codes der Labortests für Hepatitis-A-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "97523-5",
+        "display": "Hepatitis A virus RNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "13950-1",
+        "display": "Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay"
+      }, {
+        "code": "22312-3",
+        "display": "Hepatitis A virus Ab [Units/volume] in Serum"
+      }, {
+        "code": "22313-1",
+        "display": "Hepatitis A virus IgG Ab [Units/volume] in Serum"
+      }, {
+        "code": "22314-9",
+        "display": "Hepatitis A virus IgM Ab [Presence] in Serum"
+      }, {
+        "code": "22315-6",
+        "display": "Hepatitis A virus IgM Ab [Units/volume] in Serum"
+      }, {
+        "code": "51660-9",
+        "display": "Hepatitis A virus IgM Ab [Presence] in Body fluid"
+      }, {
+        "code": "5179-7",
+        "display": "Hepatitis A virus IgG Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "5180-5",
+        "display": "Hepatitis A virus IgG Ab [Units/volume] in Serum by Radioimmunoassay (RIA)"
+      }, {
+        "code": "5181-3",
+        "display": "Hepatitis A virus IgM Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "5182-1",
+        "display": "Hepatitis A virus IgM Ab [Units/volume] in Serum by Radioimmunoassay (RIA)"
+      }, {
+        "code": "51913-2",
+        "display": "Hepatitis A virus IgG+IgM Ab [Presence] in Serum"
+      }, {
+        "code": "53776-1",
+        "display": "Hepatitis A virus Ab [Interpretation] in Serum"
+      }, {
+        "code": "75540-5",
+        "display": "Hepatitis A virus RNA+Parvovirus B19 DNA [Interpretation] in Plasma from Donor Qualitative by NAA with probe detection"
+      }, {
+        "code": "75542-1",
+        "display": "Hepatitis A virus RNA [Interpretation] in Plasma from Donor Qualitative by NAA with probe detection"
+      }, {
+        "code": "78444-7",
+        "display": "Hepatitis A virus IgG+IgM Ab [Units/volume] in Serum or Plasma by Immunoassay"
+      }, {
+        "code": "7904-6",
+        "display": "Hepatitis A virus RNA [Presence] in Serum by NAA with probe detection"
+      }, {
+        "code": "89373-5",
+        "display": "Hepatitis A virus genotype in Specimen by NAA with probe detection"
+      }, {
+        "code": "91070-3",
+        "display": "Hepatitis A virus RNA [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "20575-7",
+        "display": "Hepatitis A virus Ab [Presence] in Serum"
+      }, {
+        "code": "32018-4",
+        "display": "Hepatitis A virus IgG Ab [Presence] in Serum"
+      }, {
+        "code": "40724-7",
+        "display": "Hepatitis A virus IgG Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "51661-7",
+        "display": "Hepatitis A virus Ab [Presence] in Body fluid"
+      }, {
+        "code": "5183-9",
+        "display": "Hepatitis A virus Ab [Units/volume] in Serum or Plasma by Immunoassay"
+      }, {
+        "code": "5184-7",
+        "display": "Hepatitis A virus Ab [Units/volume] in Serum by Radioimmunoassay (RIA)"
+      }, {
+        "code": "13951-9",
+        "display": "Hepatitis A virus Ab [Presence] in Serum by Immunoassay"
+      } ]
+    } ]
+  }
+}

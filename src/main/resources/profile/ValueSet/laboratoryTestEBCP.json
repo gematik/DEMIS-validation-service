@@ -1,0 +1,235 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestEBCP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestEBCP",
+  "version": "1.0.0",
+  "name": "LaboratoryTestEBCP",
+  "title": "Labortest für Enterobacterales bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation",
+  "status": "active",
+  "date": "2021-11-24",
+  "description": "Das ValueSet LaboratoryTestEBCP enthält die Codes der Labortests für Enterobacterales bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "97616-7",
+        "display": "Enterobacter cloacae complex DNA [Presence] in Synovial fluid by NAA with non-probe detection"
+      }, {
+        "code": "77924-9",
+        "display": "Enterobacteriaceae.carbapenem resistant [Presence] in Anorectal or stool specimen by Organism specific culture"
+      }, {
+        "code": "85771-4",
+        "display": "Enterobacteriaceae DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "85772-2",
+        "display": "Enterobacter cloacae complex DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "88255-5",
+        "display": "Enterobacter sp gyrB+metB genes [Presence] by Probe in Positive blood culture"
+      }, {
+        "code": "90067-0",
+        "display": "Enterobacteriaceae identified in Isolate by Organism specific culture"
+      }, {
+        "code": "92984-4",
+        "display": "Enterobacter cloacae complex DNA [NCncRange] in Sputum Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "92985-1",
+        "display": "Enterobacter cloacae complex DNA [NCncRange] in Bronchoalveolar lavage Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "93400-0",
+        "display": "Enterobacter aerogenes+Enterobacter amnigenus+Enterobacter gergoviae DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "93404-2",
+        "display": "Enterobacter cloacae complex DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "94379-5",
+        "display": "Enterobacter cloacae complex DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "96306-6",
+        "display": "Enterobacterales DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "96318-1",
+        "display": "Enterobacter cloacae complex DNA [NCncRange] in Lower respiratory specimen Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "88254-8",
+        "display": "Citrobacter sp ompA+mrkC genes [Presence] by Probe in Positive blood culture"
+      }, {
+        "code": "93403-4",
+        "display": "Citrobacter sp DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "93402-6",
+        "display": "Cronobacter sakazakii DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "32158-8",
+        "display": "Klebsiella granulomatis [Presence] in Genital specimen by Light microscopy"
+      }, {
+        "code": "61361-2",
+        "display": "Klebsiella aerogenes DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "61399-2",
+        "display": "Klebsiella pneumoniae DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "6595-3",
+        "display": "Klebsiella granulomatis [Presence] in Isolate by Organism specific culture"
+      }, {
+        "code": "70019-5",
+        "display": "Klebsiella oxytoca DNA [Presence] in Blood by NAA with probe detection"
+      }, {
+        "code": "73961-5",
+        "display": "Escherichia coli and Klebsiella pneumoniae and Pseudomonas aeruginosa rRNA [Identifier] by FISH in Positive blood culture"
+      }, {
+        "code": "76583-4",
+        "display": "Klebsiella pneumoniae phoE gene [Presence] in Swab specimen by NAA with probe detection"
+      }, {
+        "code": "76598-2",
+        "display": "Klebsiella pneumoniae phoE gene [#/mass] in XXX.tissue by NAA with probe detection"
+      }, {
+        "code": "76611-3",
+        "display": "Klebsiella pneumoniae phoE gene [#/volume] in XXX.body fluid by NAA with probe detection"
+      }, {
+        "code": "85761-5",
+        "display": "Klebsiella pneumoniae DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "85774-8",
+        "display": "Klebsiella oxytoca DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "88263-9",
+        "display": "Klebsiella oxytoca ompA gene [Presence] by Probe in Positive blood culture"
+      }, {
+        "code": "88264-7",
+        "display": "Klebsiella pneumoniae yggE gene [Presence] by Probe in Positive blood culture"
+      }, {
+        "code": "92970-3",
+        "display": "Klebsiella pneumoniae+Klebsiella variicola+Klebsiella quasipneumoniae DNA [NCncRange] in Sputum Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "92971-1",
+        "display": "Klebsiella pneumoniae+Klebsiella variicola+Klebsiella quasipneumoniae DNA [NCncRange] in Bronchoalveolar lavage Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "92972-9",
+        "display": "Klebsiella oxytoca DNA [NCncRange] in Sputum Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "92973-7",
+        "display": "Klebsiella oxytoca DNA [NCncRange] in Bronchoalveolar lavage Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "92974-5",
+        "display": "Klebsiella aerogenes DNA [NCncRange] in Sputum Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "92975-2",
+        "display": "Klebsiella aerogenes DNA [NCncRange] in Bronchoalveolar lavage Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "93395-2",
+        "display": "Klebsiella pneumoniae DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "93398-6",
+        "display": "Klebsiella oxytoca DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "94374-6",
+        "display": "Klebsiella pneumoniae DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "94375-3",
+        "display": "Klebsiella oxytoca DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "94376-1",
+        "display": "Klebsiella aerogenes DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "96307-4",
+        "display": "Klebsiella pneumoniae+Klebsiella variicola+Klebsiella quasipneumoniae DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "96308-2",
+        "display": "Klebsiella aerogenes DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "96322-3",
+        "display": "Klebsiella oxytoca DNA [NCncRange] in Lower respiratory specimen Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "96323-1",
+        "display": "Klebsiella aerogenes DNA [NCncRange] in Lower respiratory specimen Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "96324-9",
+        "display": "Klebsiella pneumoniae+Klebsiella variicola+Klebsiella quasipneumoniae DNA [NCncRange] in Lower respiratory specimen Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "93394-5",
+        "display": "Morganella morganii DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "70296-9",
+        "display": "Plesiomonas shigelloides DNA [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "82198-3",
+        "display": "Plesiomonas shigelloides DNA [Presence] in Stool by NAA with non-probe detection"
+      }, {
+        "code": "82304-7",
+        "display": "Plesiomonas shigelloides [Presence] in Stool by Culture"
+      }, {
+        "code": "61400-8",
+        "display": "Proteus mirabilis DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "85776-3",
+        "display": "Proteus sp DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "88267-0",
+        "display": "Proteus sp atpD gene [Presence] by Probe in Positive blood culture"
+      }, {
+        "code": "92961-2",
+        "display": "Proteus sp DNA [NCncRange] in Sputum Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "92962-0",
+        "display": "Proteus sp DNA [NCncRange] in Bronchoalveolar lavage Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "93387-9",
+        "display": "Proteus mirabilis DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "93393-7",
+        "display": "Proteus sp DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "94372-0",
+        "display": "Proteus sp DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "96327-2",
+        "display": "Proteus sp DNA [NCncRange] in Lower respiratory specimen Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "61402-4",
+        "display": "Serratia marcescens DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "76576-8",
+        "display": "Serratia marcescens gyrB gene [Presence] in Swab specimen by NAA with probe detection"
+      }, {
+        "code": "76591-7",
+        "display": "Serratia marcescens gyrB gene [#/mass] in XXX.tissue by NAA with probe detection"
+      }, {
+        "code": "76604-8",
+        "display": "Serratia marcescens gyrB gene [#/volume] in XXX.body fluid by NAA with probe detection"
+      }, {
+        "code": "85777-1",
+        "display": "Serratia marcescens DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "92954-7",
+        "display": "Serratia marcescens DNA [NCncRange] in Sputum Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "92955-4",
+        "display": "Serratia marcescens DNA [NCncRange] in Bronchoalveolar lavage Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "93384-6",
+        "display": "Serratia sp DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "93392-9",
+        "display": "Serratia marcescens DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "94370-4",
+        "display": "Serratia marcescens DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "96329-8",
+        "display": "Serratia marcescens DNA [NCncRange] in Lower respiratory specimen Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "86930-5",
+        "display": "Carbapenemase [Presence] in Isolate"
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF"
+      }, {
+        "code": "88462-7",
+        "display": "Carbapenem [Susceptibility]"
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

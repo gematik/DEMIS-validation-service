@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialSALP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialSALP",
+  "version": "1.2.0",
+  "name": "MaterialSALP",
+  "title": "Material für Salmonella (sonstige)",
+  "status": "active",
+  "date": "2022-03-16",
+  "description": "Das ValueSet MaterialSALP enthält die Codes der Materialien für Salmonella (sonstige).",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119303007",
+        "display": "Microbial isolate specimen (specimen)"
+      }, {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)"
+      }, {
+        "code": "119339001",
+        "display": "Stool specimen (specimen)"
+      }, {
+        "code": "258528007",
+        "display": "Rectal swab (specimen)"
+      }, {
+        "code": "122572000",
+        "display": "Vomitus specimen (specimen)"
+      }, {
+        "code": "258580003",
+        "display": "Whole blood sample (specimen)"
+      }, {
+        "code": "878861003",
+        "display": "Blood specimen in blood culture bottle (specimen)"
+      }, {
+        "code": "122575003",
+        "display": "Urine specimen (specimen)"
+      } ]
+    } ]
+  }
+}

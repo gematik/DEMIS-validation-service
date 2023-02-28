@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialTRIP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialTRIP",
+  "version": "1.1.0",
+  "name": "MaterialTRIP",
+  "title": "Material für Trichinella spiralis",
+  "status": "active",
+  "date": "2022-03-29",
+  "description": "Das ValueSet MaterialTRIP enthält die Codes der Materialien für Trichinella spiralis.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)"
+      }, {
+        "code": "878861003",
+        "display": "Blood specimen in blood culture bottle (specimen)"
+      }, {
+        "code": "91727004",
+        "display": "Structure of muscle tissue (body structure)"
+      }, {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)"
+      } ]
+    } ]
+  }
+}

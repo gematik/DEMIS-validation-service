@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hospitalizationReason",
+  "url": "https://demis.rki.de/fhir/ValueSet/hospitalizationReason",
+  "version": "1.0.0",
+  "name": "HospitalizationReason",
+  "title": "Grund der Hospitalisierung",
+  "status": "active",
+  "date": "2022-08-01",
+  "description": "Das ValueSet HospitalizationReason enthält die Codes für den Hospitalisierungsgrund.",
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/hospitalizationReason"
+    } ]
+  }
+}

@@ -1,0 +1,12 @@
+checks:
+  addAllBuiltIn: true
+  exclude:
+    - "no-read-only-root-fs"
+    - "use-namespace"
+    - "required-label-owner"
+    - "required-annotation-email"
+    - "no-node-affinity"
+    - "dnsconfig-options"
+    - "non-isolated-pod"
+    - "no-rolling-update-strategy"
+    - "minimum-three-replicas"

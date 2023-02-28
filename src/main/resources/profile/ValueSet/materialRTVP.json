@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialRTVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialRTVP",
+  "version": "1.1.1",
+  "name": "MaterialRTVP",
+  "title": "Material für Rotavirus",
+  "status": "active",
+  "date": "2021-09-12",
+  "description": "Das ValueSet MaterialRTVP enthält die Codes der Materialien für Rotavirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119339001",
+        "display": "Stool specimen (specimen)"
+      }, {
+        "code": "119303007",
+        "display": "Microbial isolate specimen (specimen)"
+      }, {
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)"
+      } ]
+    } ]
+  }
+}

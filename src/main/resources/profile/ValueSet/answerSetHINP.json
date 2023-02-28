@@ -1,0 +1,74 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetHINP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetHINP",
+  "version": "1.1.0",
+  "name": "AnswerSetHINP",
+  "title": "AnswerSet für Haemophilus influenzae; Meldepflicht nur für den direkten Nachweis aus Liquor oder Blut",
+  "status": "active",
+  "date": "2022-03-23",
+  "description": "Das ValueSet AnswerSetHINP enthält die Codes der Answer-Codes für Haemophilus influenzae; Meldepflicht nur für den direkten Nachweis aus Liquor oder Blut.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "722351007",
+        "display": "Haemophilus influenzae, beta lactamase negative (organism)"
+      }, {
+        "code": "127505006",
+        "display": "Haemophilus influenzae, biotype I (organism)"
+      }, {
+        "code": "127512002",
+        "display": "Haemophilus influenzae, biotype VIII (organism)"
+      }, {
+        "code": "103445005",
+        "display": "Haemophilus influenzae type e (organism)"
+      }, {
+        "code": "127510005",
+        "display": "Haemophilus influenzae, biotype VI (organism)"
+      }, {
+        "code": "127507003",
+        "display": "Haemophilus influenzae, biotype III (organism)"
+      }, {
+        "code": "44470000",
+        "display": "Haemophilus influenzae (organism)"
+      }, {
+        "code": "103444009",
+        "display": "Haemophilus influenzae type d (organism)"
+      }, {
+        "code": "726495003",
+        "display": "Ampicillin resistant Haemophilus influenzae (organism)"
+      }, {
+        "code": "127509000",
+        "display": "Haemophilus influenzae, biotype V (organism)"
+      }, {
+        "code": "127508008",
+        "display": "Haemophilus influenzae, biotype IV (organism)"
+      }, {
+        "code": "127506007",
+        "display": "Haemophilus influenzae, biotype II (organism)"
+      }, {
+        "code": "103443003",
+        "display": "Haemophilus influenzae type c (organism)"
+      }, {
+        "code": "103446006",
+        "display": "Haemophilus influenzae type f (organism)"
+      }, {
+        "code": "722353005",
+        "display": "Haemophilus influenzae, beta lactamase positive (organism)"
+      }, {
+        "code": "115407004",
+        "display": "Haemophilus influenzae, not b (organism)"
+      }, {
+        "code": "127511009",
+        "display": "Haemophilus influenzae, biotype VII (organism)"
+      }, {
+        "code": "103441001",
+        "display": "Haemophilus influenzae type a (organism)"
+      }, {
+        "code": "103442008",
+        "display": "Haemophilus influenzae type b (organism)"
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "validation-service.fullversionname" . }}-test-connection"
+  labels:
+    {{- include "validation-service.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+    "helm.sh/hook-delete-policy": hook-succeeded # Delete Pod if the test completes successfully
+    "ignore-check.kube-linter.io/no-readiness-probe" : "Not necessary here, it's only a single 'wget' execution"
+    "ignore-check.kube-linter.io/no-liveness-probe" : "Not necessary here, it's only a single 'wget' execution"
+spec:
+  serviceAccountName: {{ include "validation-service.serviceAccountName" . }}
+  containers:
+    - name: "{{ include "validation-service.fullversionname" . }}-test-connection"
+      image: busybox:1.36.0
+      command: ['wget']
+      args: ['-O', '/dev/null', '{{ include "validation-service.fullversionname" . }}:{{ .Values.service.ports.http }}/actuator/health']
+      securityContext:
+        {{- toYaml .Values.securityContext | nindent 8 }}
+      resources: 
+        limits:
+          cpu: "50m"
+          memory: "20M"
+        requests:
+          cpu: "50m"
+          memory: "20M"
+  restartPolicy: Never

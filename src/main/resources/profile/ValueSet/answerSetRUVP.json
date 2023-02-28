@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetRUVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetRUVP",
+  "version": "1.1.0",
+  "name": "AnswerSetRUVP",
+  "title": "AnswerSet für Rubellavirus",
+  "status": "active",
+  "date": "2022-03-29",
+  "description": "Das ValueSet AnswerSetRUVP enthält die Codes der Answer-Codes für Rubellavirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "5210005",
+        "display": "Rubella virus (organism)"
+      }, {
+        "code": "425872000",
+        "display": "Rubella virus genotype 1a (organism)"
+      }, {
+        "code": "425415004",
+        "display": "Rubella virus genotype 1B (organism)"
+      }, {
+        "code": "427398000",
+        "display": "Rubella virus genotype 1C (organism)"
+      }, {
+        "code": "427559006",
+        "display": "Rubella virus genotype 1D (organism)"
+      }, {
+        "code": "426085007",
+        "display": "Rubella virus genotype 1E (organism)"
+      }, {
+        "code": "426367009",
+        "display": "Rubella virus genotype 1F (organism)"
+      }, {
+        "code": "426209008",
+        "display": "Rubella virus genotype 1G (organism)"
+      }, {
+        "code": "698201004",
+        "display": "Rubella virus genotype 1H (organism)"
+      }, {
+        "code": "698202006",
+        "display": "Rubella virus genotype 1I (organism)"
+      }, {
+        "code": "698203001",
+        "display": "Rubella virus genotype 1J (organism)"
+      }, {
+        "code": "425891000",
+        "display": "Rubella virus genotype 2A (organism)"
+      }, {
+        "code": "426612000",
+        "display": "Rubella virus genotype 2B (organism)"
+      }, {
+        "code": "427329000",
+        "display": "Rubella virus genotype 2C (organism)"
+      } ]
+    } ]
+  }
+}

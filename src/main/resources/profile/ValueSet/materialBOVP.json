@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialBOVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialBOVP",
+  "version": "1.0.0",
+  "name": "MaterialBOVP",
+  "title": "Material für humanpathogene Bornaviren; Meldepflicht nur für den direkten Nachweis",
+  "status": "active",
+  "date": "2021-11-25",
+  "description": "Das ValueSet MaterialBOVP enthält die Codes der Materialien für humanpathogene Bornaviren.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid sample (specimen)"
+      }, {
+        "code": "309129006",
+        "display": "Nerve tissue sample (specimen)"
+      }, {
+        "code": "128157004",
+        "display": "Tissue specimen from brain (specimen)"
+      } ]
+    } ]
+  }
+}

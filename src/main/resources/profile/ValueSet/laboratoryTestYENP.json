@@ -1,0 +1,67 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestYENP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestYENP",
+  "version": "1.2.0",
+  "name": "LaboratoryTestYENP",
+  "title": "Labortest für Yersinia spp. (darmpathogen)",
+  "status": "active",
+  "date": "2021-12-07",
+  "description": "Das ValueSet LaboratoryTestYENP enthält die Codes der Labortests für Yersinia spp. (darmpathogen).",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "28549-4",
+        "display": "Yersinia sp identified in Stool by Organism specific culture"
+      }, {
+        "code": "30100-2",
+        "display": "Yersinia enterocolitica O:3 Ab [Titer] in Specimen"
+      }, {
+        "code": "30101-0",
+        "display": "Yersinia enterocolitica O:5 Ab [Titer] in Specimen"
+      }, {
+        "code": "30103-6",
+        "display": "Yersinia enterocolitica O:9 Ab [Titer] in Specimen"
+      }, {
+        "code": "31707-3",
+        "display": "Yersinia enterocolitica O:5 Ab [Units/volume] in Specimen"
+      }, {
+        "code": "48646-4",
+        "display": "Yersinia sp DNA [Identifier] in Specimen by NAA with probe detection"
+      }, {
+        "code": "701-3",
+        "display": "Yersinia sp identified in Specimen by Organism specific culture"
+      }, {
+        "code": "73664-5",
+        "display": "Yersinia adhesion protein YadA [Presence] in Isolate"
+      }, {
+        "code": "73673-6",
+        "display": "Yersinia enterocolitica serotype [Type] in Isolate by Agglutination"
+      }, {
+        "code": "79385-1",
+        "display": "Yersinia enterocolitica recN gene [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "82202-3",
+        "display": "Yersinia enterocolitica DNA [Presence] in Stool by NAA with non-probe detection"
+      }, {
+        "code": "82298-1",
+        "display": "Yersinia enterocolitica [Presence] in Specimen by Culture"
+      }, {
+        "code": "86930-5",
+        "display": "Carbapenemase [Presence] in Isolate"
+      }, {
+        "code": "92723-6",
+        "display": "Yersinia enterocolitica DNA [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF"
+      }, {
+        "code": "88462-7",
+        "display": "Carbapenem [Susceptibility]"
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

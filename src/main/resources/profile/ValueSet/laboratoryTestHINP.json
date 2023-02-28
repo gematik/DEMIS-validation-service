@@ -1,0 +1,175 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestHINP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestHINP",
+  "version": "1.3.0",
+  "name": "LaboratoryTestHINP",
+  "title": "Labortest für Haemophilus influenzae; Meldepflicht nur für den direkten Nachweis aus Liquor oder Blut",
+  "status": "active",
+  "date": "2022-03-17",
+  "description": "Das ValueSet LaboratoryTestHINP enthält die Codes der Labortests für Haemophilus influenzae; Meldepflicht nur für den direkten Nachweis aus Liquor oder Blut.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "99090-3",
+        "display": "Haemophilus influenzae DNA [Presence] in Cerebral spinal fluid by NAA with probe detection"
+      }, {
+        "code": "85681-5",
+        "display": "Haemophilus influenzae dcs gene [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "14321-4",
+        "display": "Haemophilus influenzae B Ag [Presence] in Cerebral spinal fluid by Latex agglutination"
+      }, {
+        "code": "16926-8",
+        "display": "Haemophilus influenzae A Ag [Presence] in Cerebral spinal fluid"
+      }, {
+        "code": "20486-7",
+        "display": "Haemophilus influenzae B Ag [Units/volume] in Cerebral spinal fluid"
+      }, {
+        "code": "21320-7",
+        "display": "Haemophilus influenzae B Ag [Presence] in Specimen by Latex agglutination"
+      }, {
+        "code": "24010-1",
+        "display": "Haemophilus influenzae B Ag [Presence] in Cerebral spinal fluid"
+      }, {
+        "code": "29906-5",
+        "display": "Haemophilus influenzae A DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "29907-3",
+        "display": "Haemophilus influenzae B DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "31833-7",
+        "display": "Haemophilus influenzae A Ag [Presence] in Specimen"
+      }, {
+        "code": "31834-5",
+        "display": "Haemophilus influenzae B Ag [Presence] in Specimen"
+      }, {
+        "code": "31835-2",
+        "display": "Haemophilus influenzae C Ag [Presence] in Cerebral spinal fluid"
+      }, {
+        "code": "31836-0",
+        "display": "Haemophilus influenzae C Ag [Presence] in Specimen"
+      }, {
+        "code": "31837-8",
+        "display": "Haemophilus influenzae D Ag [Presence] in Cerebral spinal fluid"
+      }, {
+        "code": "31838-6",
+        "display": "Haemophilus influenzae D Ag [Presence] in Specimen"
+      }, {
+        "code": "31839-4",
+        "display": "Haemophilus influenzae E Ag [Presence] in Cerebral spinal fluid"
+      }, {
+        "code": "31840-2",
+        "display": "Haemophilus influenzae E Ag [Presence] in Specimen"
+      }, {
+        "code": "31841-0",
+        "display": "Haemophilus influenzae F Ag [Presence] in Cerebral spinal fluid"
+      }, {
+        "code": "31842-8",
+        "display": "Haemophilus influenzae F Ag [Presence] in Specimen"
+      }, {
+        "code": "32139-8",
+        "display": "Haemophilus influenzae Ag [Presence] in Cerebral spinal fluid"
+      }, {
+        "code": "41495-3",
+        "display": "Haemophilus influenzae B Ag [Presence] in Body fluid"
+      }, {
+        "code": "43429-0",
+        "display": "Haemophilus influenzae B Ag [Presence] in Serum"
+      }, {
+        "code": "49721-4",
+        "display": "Haemophilus influenzae type [Identifier] in Isolate"
+      }, {
+        "code": "5006-2",
+        "display": "Haemophilus influenzae rRNA [Presence] in Specimen by Probe"
+      }, {
+        "code": "53607-8",
+        "display": "Haemophilus influenzae B DNA [Presence] in Blood by NAA with probe detection"
+      }, {
+        "code": "58473-0",
+        "display": "Haemophilus influenzae serotype DNA [Identifier] in Specimen by NAA with probe detection"
+      }, {
+        "code": "58739-4",
+        "display": "Haemophilus influenzae serotype [Identifier] in Isolate by Agglutination"
+      }, {
+        "code": "61366-1",
+        "display": "Haemophilus influenzae DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "6414-7",
+        "display": "Haemophilus influenzae A Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "6416-2",
+        "display": "Haemophilus influenzae D Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "6417-0",
+        "display": "Haemophilus influenzae E Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "6418-8",
+        "display": "Haemophilus influenzae F Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "6599-5",
+        "display": "Haemophilus influenzae B Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "6610-0",
+        "display": "Haemophilus influenzae A Ag [Presence] in Cerebral spinal fluid by Immunofluorescence"
+      }, {
+        "code": "6611-8",
+        "display": "Haemophilus influenzae B Ag [Presence] in Cerebral spinal fluid by Immunofluorescence"
+      }, {
+        "code": "6612-6",
+        "display": "Haemophilus influenzae C Ag [Presence] in Cerebral spinal fluid by Immunofluorescence"
+      }, {
+        "code": "6613-4",
+        "display": "Haemophilus influenzae D Ag [Presence] in Cerebral spinal fluid by Immunofluorescence"
+      }, {
+        "code": "6614-2",
+        "display": "Haemophilus influenzae E Ag [Presence] in Cerebral spinal fluid by Immunofluorescence"
+      }, {
+        "code": "6615-9",
+        "display": "Haemophilus influenzae F Ag [Presence] in Cerebral spinal fluid by Immunofluorescence"
+      }, {
+        "code": "69410-9",
+        "display": "Haemophilus influenzae [Identifier] in Specimen by Organism specific culture"
+      }, {
+        "code": "76602-2",
+        "display": "Haemophilus influenzae lex2 gene [#/volume] in XXX.body fluid by NAA with probe detection"
+      }, {
+        "code": "82183-5",
+        "display": "Haemophilus influenzae DNA [Presence] in Cerebral spinal fluid by NAA with non-probe detection"
+      }, {
+        "code": "8271-9",
+        "display": "Haemophilus influenzae C Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "85627-8",
+        "display": "Haemophilus influenzae hpd gene [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "85678-1",
+        "display": "Haemophilus influenzae acs gene [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "85679-9",
+        "display": "Haemophilus influenzae bex gene [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "85680-7",
+        "display": "Haemophilus influenzae ecs gene [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "85682-3",
+        "display": "Haemophilus influenzae ccs gene [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "85683-1",
+        "display": "Haemophilus influenzae bcs gene [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "85778-9",
+        "display": "Haemophilus influenzae DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "93397-8",
+        "display": "Haemophilus influenzae DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF"
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

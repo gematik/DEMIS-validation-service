@@ -1,0 +1,134 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "translationEvidence",
+  "url": "https://demis.rki.de/fhir/CodeSystem/translationEvidence",
+  "version": "1.0.1",
+  "name": "TranslationEvidence",
+  "title": "Übersetzung Symptom und Manifestation",
+  "status": "active",
+  "date": "2022-03-25",
+  "description": "Das CodeSystem translationEvidence enthält die deutschen Displays der DEMIS-Symptome und -Manifestationen.",
+  "caseSensitive": false,
+  "content": "supplement",
+  "supplements": "http://snomed.info/sct",
+  "concept": [ {
+    "code": "3424008",
+    "display": "Tachycardia (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Tachykardie (Herzrhythmusstörung mit Anstieg der Herzfrequenz)"
+    } ]
+  }, {
+    "code": "25064002",
+    "display": "Headache (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Kopfschmerzen"
+    } ]
+  }, {
+    "code": "36955009",
+    "display": "Loss of taste (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Geschmacksverlust"
+    } ]
+  }, {
+    "code": "43724002",
+    "display": "Chill (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Frösteln"
+    } ]
+  }, {
+    "code": "44169009",
+    "display": "Loss of sense of smell (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Geruchsverlust"
+    } ]
+  }, {
+    "code": "49727002",
+    "display": "Cough (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Husten"
+    } ]
+  }, {
+    "code": "62315008",
+    "display": "Diarrhea (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Durchfall, nicht näher bezeichnet"
+    } ]
+  }, {
+    "code": "67782005",
+    "display": "Acute respiratory distress syndrome (disorder)",
+    "designation": [ {
+      "language": "de",
+      "value": "akutes schweres Atemnotsyndrom (ARDS)"
+    } ]
+  }, {
+    "code": "68962001",
+    "display": "Muscle pain (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Muskel-, Glieder- oder Rückenschmerzen"
+    } ]
+  }, {
+    "code": "267102003",
+    "display": "Sore throat symptom (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Halsschmerzen/-entzündung"
+    } ]
+  }, {
+    "code": "233604007",
+    "display": "Pneumonia (disorder)",
+    "designation": [ {
+      "language": "de",
+      "value": "Pneunomie (Lungenentzündung)"
+    } ]
+  }, {
+    "code": "271823003",
+    "display": "Tachypnea (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Tachypnoe (beschleunigte Atmung)"
+    } ]
+  }, {
+    "code": "267036007",
+    "display": "Dyspnea (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Dyspnoe (Atemstörung)"
+    } ]
+  }, {
+    "code": "275280004",
+    "display": "Sniffles (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Schnupfen"
+    } ]
+  }, {
+    "code": "371820004",
+    "display": "Patient ventilated (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "beatmungspflichtige Atemwegserkrankung"
+    } ]
+  }, {
+    "code": "386661006",
+    "display": "Fever (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "Fieber"
+    } ]
+  }, {
+    "code": "213257006",
+    "display": "Generally unwell (finding)",
+    "designation": [ {
+      "language": "de",
+      "value": "allgemeine Krankheitszeichen"
+    } ]
+  } ]
+}

@@ -1,0 +1,62 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetMYTP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetMYTP",
+  "version": "1.1.0",
+  "name": "AnswerSetMYTP",
+  "title": "AnswerSet für Mycobacterium tuberculosis, Mycobacterium africanum, Mycobacterium bovis; Meldepflicht für den direkten Erregernachweis sowie nachfolgend für das Ergebnis der Resistenzbestimmung; vorab auch für den Nachweis säurefester Stäbchen im Sputum",
+  "status": "active",
+  "date": "2022-03-23",
+  "description": "Das ValueSet AnswerSetMYTP enthält die Codes der Answer-Codes für Mycobacterium tuberculosis, Mycobacterium africanum, Mycobacterium bovis; Meldepflicht für den direkten Erregernachweis sowie nachfolgend für das Ergebnis der Resistenzbestimmung; vorab auch für den Nachweis säurefester Stäbchen im Sputum.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "110379001",
+        "display": "Mycobacterium, non-tuberculosis (organism)"
+      }, {
+        "code": "51320008",
+        "display": "Mycobacterium africanum (organism)"
+      }, {
+        "code": "27142009",
+        "display": "Mycobacterium bovis (organism)"
+      }, {
+        "code": "832924651000087107",
+        "display": "Mycobacterium bovis subspecies bovis (organism)"
+      }, {
+        "code": "414789006",
+        "display": "Mycobacterium canettii (organism)"
+      }, {
+        "code": "430579009",
+        "display": "Mycobacterium caprae (organism)"
+      }, {
+        "code": "70801007",
+        "display": "Mycobacterium microti (organism)"
+      }, {
+        "code": "430914003",
+        "display": "Mycobacterium pinnipedii (organism)"
+      }, {
+        "code": "113861009",
+        "display": "Mycobacterium tuberculosis (organism)"
+      }, {
+        "code": "243372002",
+        "display": "Mycobacterium tuberculosis African I variant (organism)"
+      }, {
+        "code": "243373007",
+        "display": "Mycobacterium tuberculosis African II variant (organism)"
+      }, {
+        "code": "243371009",
+        "display": "Mycobacterium tuberculosis Asian variant (organism)"
+      }, {
+        "code": "243370005",
+        "display": "Mycobacterium tuberculosis classical variant (organism)"
+      }, {
+        "code": "113858008",
+        "display": "Mycobacterium tuberculosis complex (organism)"
+      }, {
+        "code": "36354002",
+        "display": "Mycobacterium tuberculosis hominis (organism)"
+      } ]
+    } ]
+  }
+}

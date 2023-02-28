@@ -1,0 +1,92 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetCVDP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetCVDP",
+  "version": "1.1.0",
+  "name": "AnswerSetCVDP",
+  "title": "AnswerSet für Severe-Acute-Respiratory-Syndrome-Coronavirus-2 (SARS-CoV-2)",
+  "status": "active",
+  "date": "2022-03-29",
+  "description": "Das ValueSet AnswerSetCVDP enthält die Codes der Answer-Codes für Severe-Acute-Respiratory-Syndrome-Coronavirus-2 (SARS-CoV-2).",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "421050008",
+        "display": "Greek letter chi (qualifier value)"
+      }, {
+        "code": "422253001",
+        "display": "Greek letter lambda (qualifier value)"
+      }, {
+        "code": "421416008",
+        "display": "Greek letter gamma (qualifier value)"
+      }, {
+        "code": "261956002",
+        "display": "Greek letter mu (qualifier value)"
+      }, {
+        "code": "422086006",
+        "display": "Greek letter omicron (qualifier value)"
+      }, {
+        "code": "260989008",
+        "display": "Greek letter beta (qualifier value)"
+      }, {
+        "code": "421417004",
+        "display": "Greek letter eta (qualifier value)"
+      }, {
+        "code": "421564002",
+        "display": "Greek letter upsilon (qualifier value)"
+      }, {
+        "code": "420605004",
+        "display": "Greek letter zeta (qualifier value)"
+      }, {
+        "code": "261003002",
+        "display": "Greek letter delta (qualifier value)"
+      }, {
+        "code": "420547009",
+        "display": "Greek letter omega (qualifier value)"
+      }, {
+        "code": "260243007",
+        "display": "Greek letter kappa (qualifier value)"
+      }, {
+        "code": "421110008",
+        "display": "Greek letter tau (qualifier value)"
+      }, {
+        "code": "421654003",
+        "display": "Greek letter pi (qualifier value)"
+      }, {
+        "code": "840533007",
+        "display": "Severe acute respiratory syndrome coronavirus 2 (organism)"
+      }, {
+        "code": "261854003",
+        "display": "Greek letter iota (qualifier value)"
+      }, {
+        "code": "420782007",
+        "display": "Greek letter psi (qualifier value)"
+      }, {
+        "code": "261031006",
+        "display": "Greek letter theta (qualifier value)"
+      }, {
+        "code": "421317003",
+        "display": "Greek letter phi (qualifier value)"
+      }, {
+        "code": "421802005",
+        "display": "Greek letter rho (qualifier value)"
+      }, {
+        "code": "261783005",
+        "display": "Greek letter epsilon (qualifier value)"
+      }, {
+        "code": "263660008",
+        "display": "Greek letter alpha (qualifier value)"
+      }, {
+        "code": "421269006",
+        "display": "Greek letter sigma (qualifier value)"
+      }, {
+        "code": "420866003",
+        "display": "Greek letter xi (qualifier value)"
+      }, {
+        "code": "262010005",
+        "display": "Greek letter nu (qualifier value)"
+      } ]
+    } ]
+  }
+}

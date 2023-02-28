@@ -1,0 +1,6 @@
+apiVersion: v2
+name: validation-service
+description: DEMIS Validation Service Helm Chart
+type: application
+version: 1.0.0
+appVersion: "1.0.0"

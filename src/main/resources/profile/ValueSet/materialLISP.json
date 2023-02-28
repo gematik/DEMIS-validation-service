@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialLISP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialLISP",
+  "version": "1.1.0",
+  "name": "MaterialLISP",
+  "title": "Material für Listeria monocytogenes; Meldepflicht nur für den direkten Nachweis aus Blut, Liquor oder anderen normalerweise sterilen Substraten sowie aus Abstrichen von Neugeborenen",
+  "status": "active",
+  "date": "2022-03-29",
+  "description": "Das ValueSet MaterialLISP enthält die Codes der Materialien für Listeria monocytogenes (Meldepflicht nur für den direkten Nachweis aus Blut, Liquor oder anderen normalerweise sterilen Substraten sowie aus Abstrichen von Neugeborenen).",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)"
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid sample (specimen)"
+      }, {
+        "code": "122579009",
+        "display": "Genital lochia specimen (specimen)"
+      }, {
+        "code": "122578001",
+        "display": "Female genital fluid specimen (specimen)"
+      }, {
+        "code": "258577004",
+        "display": "Vaginal secretion sample (specimen)"
+      }, {
+        "code": "119323008",
+        "display": "Pus specimen (specimen)"
+      }, {
+        "code": "119373006",
+        "display": "Amniotic fluid specimen (specimen)"
+      } ]
+    } ]
+  }
+}

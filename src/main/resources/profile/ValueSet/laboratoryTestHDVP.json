@@ -1,0 +1,95 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestHDVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestHDVP",
+  "version": "1.0.1",
+  "name": "LaboratoryTestHDVP",
+  "title": "Labortest für Hepatitis-D-Virus; Meldepflicht für alle Nachweise",
+  "status": "active",
+  "date": "2021-11-30",
+  "description": "Das ValueSet LaboratoryTestHDVP enthält die Codes der Labortests für Hepatitis-D-Virus; Meldepflicht für alle Nachweise.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "33464-9",
+        "display": "Hepatitis D virus Ag [Presence] in Serum"
+      }, {
+        "code": "34597-5",
+        "display": "Hepatitis D virus IgM Ab [Presence] in Serum"
+      }, {
+        "code": "43280-7",
+        "display": "Hepatitis D virus Ag [Mass/volume] in Urine"
+      }, {
+        "code": "43281-5",
+        "display": "Hepatitis D virus Ag [Mass/volume] in Serum"
+      }, {
+        "code": "44754-0",
+        "display": "Hepatitis D virus Ag [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "44755-7",
+        "display": "Hepatitis D virus Ag [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "44826-6",
+        "display": "Hepatitis D virus IgM Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "44938-9",
+        "display": "Hepatitis D virus IgM Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "45159-1",
+        "display": "Hepatitis B virus and Hepatitis D virus Ab [Interpretation] in Serum Narrative"
+      }, {
+        "code": "72606-7",
+        "display": "Hepatitis D virus genotype [Identifier] in Specimen by NAA with probe detection"
+      }, {
+        "code": "7906-1",
+        "display": "Hepatitis D virus RNA [Presence] in Serum by NAA with probe detection"
+      }, {
+        "code": "80426-0",
+        "display": "Hepatitis D virus RNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection"
+      }, {
+        "code": "85512-2",
+        "display": "Hepatitis D virus RNA [Units/volume] (viral load) in Serum by NAA with probe detection"
+      }, {
+        "code": "85513-0",
+        "display": "Hepatitis D virus RNA [log units/volume] (viral load) in Serum by NAA with probe detection"
+      }, {
+        "code": "9525-7",
+        "display": "Hepatitis D virus IgM Ab [Units/volume] in Serum"
+      }, {
+        "code": "13248-0",
+        "display": "Hepatitis D virus Ab [Presence] in Serum"
+      }, {
+        "code": "22330-5",
+        "display": "Hepatitis D virus Ab [Units/volume] in Serum"
+      }, {
+        "code": "35273-2",
+        "display": "Hepatitis D virus IgG Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "35283-1",
+        "display": "Hepatitis D virus IgG Ab [Presence] in Serum"
+      }, {
+        "code": "40727-0",
+        "display": "Hepatitis D virus Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "49775-0",
+        "display": "Hepatitis D virus IgG Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "51458-8",
+        "display": "Hepatitis D virus IgG Ab [Units/volume] in Serum"
+      }, {
+        "code": "51654-2",
+        "display": "Hepatitis D virus Ab [Presence] in Body fluid"
+      }, {
+        "code": "5200-1",
+        "display": "Hepatitis D virus Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "5201-9",
+        "display": "Hepatitis D virus Ab [Units/volume] in Serum by Radioimmunoassay (RIA)"
+      }, {
+        "code": "95238-2",
+        "display": "Hepatitis D virus Ab [Interpretation] in Serum or Plasma"
+      } ]
+    } ]
+  }
+}

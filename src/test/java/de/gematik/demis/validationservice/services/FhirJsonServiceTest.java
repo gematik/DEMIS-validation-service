@@ -20,6 +20,8 @@ package de.gematik.demis.validationservice.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import ca.uhn.fhir.context.FhirContext;
+import de.gematik.demis.validationservice.util.ContextUtil;
 import org.hl7.fhir.r4.model.Patient;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -30,8 +32,8 @@ class FhirJsonServiceTest {
 
   @BeforeEach
   void setupFhirParsingService() {
-    FhirContextService fhirContextService = new FhirContextService("en_US");
-    jsonService = new FhirJsonService(fhirContextService);
+    FhirContext ctx = ContextUtil.getFhirContextEn();
+    jsonService = new FhirJsonService(ctx);
   }
 
   @Test

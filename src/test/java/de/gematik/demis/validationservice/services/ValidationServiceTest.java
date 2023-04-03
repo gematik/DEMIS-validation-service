@@ -21,7 +21,9 @@ package de.gematik.demis.validationservice.services;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import ca.uhn.fhir.context.FhirContext;
 import de.gematik.demis.validationservice.services.validation.ValidationService;
+import de.gematik.demis.validationservice.util.ContextUtil;
 import de.gematik.demis.validationservice.util.FileTestUtil;
 import de.gematik.demis.validationservice.util.ResourceFileConstants;
 import java.io.IOException;
@@ -54,11 +56,10 @@ class ValidationServiceTest {
 
   @BeforeAll
   static void setupValidationService() {
-    FhirContextService fhirContextService = new FhirContextService(DEFAULT_LOCALE);
+    FhirContext fhirContext = ContextUtil.getFhirContextEn();
     profileParserService =
-        new ProfileParserService(fhirContextService, ResourceFileConstants.PROFILE_RESOURCE_PATH);
-    validationService =
-        new ValidationService(fhirContextService, profileParserService, "information");
+        new ProfileParserService(fhirContext, ResourceFileConstants.PROFILE_RESOURCE_PATH);
+    validationService = new ValidationService(fhirContext, profileParserService, "information");
   }
 
   @Test
@@ -140,9 +141,9 @@ class ValidationServiceTest {
   @Test
   void validateValidFileAndFilterInformationAndWarningsAndCheckThereIsOnlyOneIssue()
       throws IOException {
-    FhirContextService fhirContextService = new FhirContextService(DEFAULT_LOCALE);
+    FhirContext fhirContextEn = ContextUtil.getFhirContextEn();
     ValidationService validationServiceWithFilter =
-        new ValidationService(fhirContextService, profileParserService, "error");
+        new ValidationService(fhirContextEn, profileParserService, "error");
     String validFileContent =
         FileTestUtil.readFileIntoString(ResourceFileConstants.VALID_REPORT_BED_OCCUPANCY_EXAMPLE);
 
@@ -155,9 +156,9 @@ class ValidationServiceTest {
   @Test
   void setValidationServiceToGermanAndValidateInvalidFileAndCheckThereIsOneErrorWithAGermanAnswer()
       throws IOException {
-    FhirContextService fhirContextService = new FhirContextService("de_DE");
+    FhirContext fhirContext = ContextUtil.getFhirContextDe();
     ValidationService germanValidationService =
-        new ValidationService(fhirContextService, profileParserService, "information");
+        new ValidationService(fhirContext, profileParserService, "information");
     String invalidFileContent =
         FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_REPORT_BED_OCCUPANCY_EXAMPLE);
 

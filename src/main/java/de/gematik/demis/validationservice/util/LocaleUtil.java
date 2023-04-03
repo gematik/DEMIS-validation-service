@@ -16,22 +16,28 @@
  *
  */
 
-package de.gematik.demis.validationservice.services;
+package de.gematik.demis.validationservice.util;
 
-import ca.uhn.fhir.context.FhirContext;
-import org.hl7.fhir.instance.model.api.IBaseResource;
-import org.springframework.stereotype.Service;
+import java.util.Locale;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.function.Supplier;
 
-/** Service to serialize FHIR resources to JSON. */
-@Service
-public class FhirJsonService {
-  private final FhirContext fhir;
+public class LocaleUtil {
 
-  public FhirJsonService(FhirContext fhirContext) {
-    this.fhir = fhirContext;
-  }
+  private LocaleUtil() {}
 
-  public String toJson(IBaseResource resource) {
-    return fhir.newJsonParser().encodeResourceToString(resource);
+  private static final Lock LOCALE_LOCK = new ReentrantLock();
+
+  public static <T> T withDefaultLocale(Locale tempDefault, Supplier<T> actionWithDefaultLocale) {
+    LOCALE_LOCK.lock();
+    Locale oldDefault = Locale.getDefault();
+    try {
+      Locale.setDefault(tempDefault);
+      return actionWithDefaultLocale.get();
+    } finally {
+      Locale.setDefault(oldDefault);
+      LOCALE_LOCK.unlock();
+    }
   }
 }

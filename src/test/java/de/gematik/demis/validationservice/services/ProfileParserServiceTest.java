@@ -20,6 +20,8 @@ package de.gematik.demis.validationservice.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import ca.uhn.fhir.context.FhirContext;
+import de.gematik.demis.validationservice.util.ContextUtil;
 import de.gematik.demis.validationservice.util.ResourceFileConstants;
 import java.util.Map;
 import org.hl7.fhir.instance.model.api.IBaseResource;
@@ -37,9 +39,9 @@ class ProfileParserServiceTest {
 
   @BeforeAll
   static void parseProfile() {
-    FhirContextService fhirContextService = new FhirContextService("en_US");
+    FhirContext fhirContext = ContextUtil.getFhirContextEn();
     ProfileParserService service =
-        new ProfileParserService(fhirContextService, ResourceFileConstants.PROFILE_RESOURCE_PATH);
+        new ProfileParserService(fhirContext, ResourceFileConstants.PROFILE_RESOURCE_PATH);
     parsedProfile = service.getParseProfiles();
   }
 

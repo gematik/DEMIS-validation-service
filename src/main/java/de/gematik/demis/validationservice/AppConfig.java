@@ -16,36 +16,32 @@
  *
  */
 
-package de.gematik.demis.validationservice.services;
+package de.gematik.demis.validationservice;
+
+import static de.gematik.demis.validationservice.util.LocaleUtil.withDefaultLocale;
 
 import ca.uhn.fhir.context.FhirContext;
 import java.util.Locale;
 import org.apache.commons.lang3.LocaleUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-/**
- * Service that holds the R4 FHIR context as singleton, so that there is only one in the
- * application.
- */
-@Service
-public class FhirContextService {
-  private final FhirContext fhirContext;
-  private final Locale configuredLocale;
+@Configuration
+public class AppConfig {
 
-  public FhirContextService(@Value("${demis.validation-service.locale}") String locale) {
-    configuredLocale = LocaleUtils.toLocale(locale);
-    Locale oldLocale = Locale.getDefault();
-    Locale.setDefault(configuredLocale);
-    fhirContext = FhirContext.forR4();
-    Locale.setDefault(oldLocale); // Put back global default locale to avoid side effects
+  public static final String CONFIGURED_LOCALE_NAME = "demis.configuredLocale";
+
+  @Bean
+  public FhirContext createFhirContext(
+      @Autowired @Qualifier(CONFIGURED_LOCALE_NAME) Locale configuredLocale) {
+    return withDefaultLocale(configuredLocale, FhirContext::forR4);
   }
 
-  public FhirContext getFhirContext() {
-    return fhirContext;
-  }
-
-  public Locale getConfiguredLocale() {
-    return configuredLocale;
+  @Bean(CONFIGURED_LOCALE_NAME)
+  public Locale configuredLocale(@Value("${demis.validation-service.locale}") String locale) {
+    return LocaleUtils.toLocale(locale);
   }
 }

@@ -18,6 +18,8 @@
 
 package de.gematik.demis.validationservice.services.validation;
 
+import static de.gematik.demis.validationservice.util.LocaleUtil.withDefaultLocale;
+
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.context.support.DefaultProfileValidationSupport;
 import ca.uhn.fhir.context.support.IValidationSupport;
@@ -25,11 +27,9 @@ import ca.uhn.fhir.validation.FhirValidator;
 import ca.uhn.fhir.validation.ResultSeverityEnum;
 import ca.uhn.fhir.validation.SingleValidationMessage;
 import ca.uhn.fhir.validation.ValidationResult;
-import de.gematik.demis.validationservice.services.FhirContextService;
 import de.gematik.demis.validationservice.services.ProfileParserService;
 import de.gematik.demis.validationservice.services.validation.severity.SeverityComparator;
 import de.gematik.demis.validationservice.services.validation.severity.SeverityParser;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -52,6 +52,7 @@ import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r4.model.Questionnaire;
 import org.hl7.fhir.r4.model.StructureDefinition;
 import org.hl7.fhir.r4.model.ValueSet;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -66,16 +67,17 @@ public class ValidationService {
           "BUNDLE_BUNDLE_ENTRY_MULTIPLE_PROFILES",
           "Validation_VAL_Profile_NoMatch",
           "This_element_does_not_match_any_known_slice_");
-  private final FhirContextService fhirContextService;
+  private final FhirContext fhirContext;
   private final FhirValidator validator;
   private final ResultSeverityEnum minSeverityOutcome;
-  private Set<String> filteredMessagePrefixes;
+  private final Set<String> filteredMessagePrefixes;
 
   public ValidationService(
-      FhirContextService fhirContextService,
-      ProfileParserService profileParserService,
-      @Value("${demis.validation-service.minSeverityOutcome}") String minSeverityOutcome) {
-    this.fhirContextService = fhirContextService;
+      @Autowired FhirContext fhirContext,
+      @Autowired ProfileParserService profileParserService,
+      @Autowired @Value("${demis.validation-service.minSeverityOutcome}")
+          String minSeverityOutcome) {
+    this.fhirContext = fhirContext;
     this.minSeverityOutcome = SeverityParser.parse(minSeverityOutcome);
     if (this.minSeverityOutcome == null) {
       String errorMessage =
@@ -84,20 +86,24 @@ public class ValidationService {
       throw new NoSuchElementException(
           errorMessage); // Shutdown service -> No silent config error treatment
     }
-    Locale parsedLocale = fhirContextService.getConfiguredLocale();
-    Locale oldLocale = Locale.getDefault();
-    Locale.setDefault(parsedLocale);
-    log.info(
-        "Locale for validation messages: %s"
-            .formatted(
-                this.fhirContextService.getFhirContext().getLocalizer().getLocale().toString()));
+    Locale messageLocale = fhirContext.getLocalizer().getLocale();
+    log.info("Locale for validation messages: %s".formatted(messageLocale.toString()));
     log.info("Minimum severity of the outcome: %s".formatted(this.minSeverityOutcome));
-    // Eager creation of validator for validation performance
+
     Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> profiles =
         profileParserService.getParseProfiles();
-    this.validator = createAndInitValidator(profiles);
-    this.filteredMessagePrefixes = loadMessagesToFilter(parsedLocale);
-    Locale.setDefault(oldLocale); // Put back global default locale to avoid side effects
+    // Eager creation of validator for validation performance
+    record Fileds(FhirValidator validator, Set<String> messagesToFilter) {}
+    Fileds fields =
+        withDefaultLocale(
+            messageLocale,
+            () -> {
+              FhirValidator fhirValidator = createAndInitValidator(profiles);
+              Set<String> messagesToFilter = loadMessagesToFilter(messageLocale);
+              return new Fileds(fhirValidator, messagesToFilter);
+            });
+    this.validator = fields.validator;
+    this.filteredMessagePrefixes = fields.messagesToFilter;
   }
 
   /**
@@ -127,7 +133,6 @@ public class ValidationService {
 
   private Set<String> loadMessagesToFilter(Locale parsedLocale) {
     final ResourceBundle resourceBundle = ResourceBundle.getBundle("Messages", parsedLocale);
-    filteredMessagePrefixes = new HashSet<>(FILTERED_MESSAGES_KEYS.size());
     return FILTERED_MESSAGES_KEYS.stream()
         .map(resourceBundle::getString)
         .map(
@@ -146,7 +151,6 @@ public class ValidationService {
     Map<String, IBaseResource> questionnaires = profiles.get(Questionnaire.class);
 
     log.info("Start creating and initializing fhir validator");
-    FhirContext fhirContext = fhirContextService.getFhirContext();
     FhirValidator fhirValidator = fhirContext.newValidator();
 
     IValidationSupport prePopulatedValidationSupport =
@@ -192,8 +196,7 @@ public class ValidationService {
                 message ->
                     SEVERITY_COMPARATOR.compare(message.getSeverity(), minSeverityOutcome) >= 0)
             .toList();
-    ValidationResult filteredValidationResult =
-        new ValidationResult(fhirContextService.getFhirContext(), collect);
+    ValidationResult filteredValidationResult = new ValidationResult(fhirContext, collect);
 
     OperationOutcome outcome = new OperationOutcome();
     filteredValidationResult.populateOperationOutcome(outcome);

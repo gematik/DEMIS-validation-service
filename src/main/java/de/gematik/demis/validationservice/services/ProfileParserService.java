@@ -20,6 +20,7 @@ package de.gematik.demis.validationservice.services;
 
 import static java.util.function.Function.identity;
 
+import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.parser.IParser;
 import java.io.IOException;
 import java.io.InputStream;
@@ -53,13 +54,13 @@ public class ProfileParserService {
           "StructureDefinition", StructureDefinition.class,
           "ValueSet", ValueSet.class);
   private final String profileResource;
-  private final FhirContextService fhirContextService;
+  private final FhirContext fhirContext;
   private Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> parsedProfile;
 
   public ProfileParserService(
-      FhirContextService fhirContextService,
+      FhirContext fhirContext,
       @Value("${demis.validation-service.profileResourcePath}") String profileResource) {
-    this.fhirContextService = fhirContextService;
+    this.fhirContext = fhirContext;
     this.profileResource = profileResource;
   }
 
@@ -92,7 +93,7 @@ public class ProfileParserService {
 
     log.info("Start parsing Profiles");
     parsedProfile = new HashMap<>();
-    IParser parser = fhirContextService.getFhirContext().newJsonParser();
+    IParser parser = fhirContext.newJsonParser();
     for (Map.Entry<String, Class<? extends MetadataResource>> profilePart :
         profileParts.entrySet()) {
       Path path = Path.of(profileResource, profilePart.getKey());

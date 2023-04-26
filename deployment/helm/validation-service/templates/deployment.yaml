@@ -31,13 +31,29 @@ spec:
       serviceAccountName: {{ include "validation-service.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      # Volume for Profiles
+      volumes:
+        - name: profiles-volume-{{ include "validation-service.fullversionname" . }}
+          emptyDir: {}
+      initContainers:
+        - name: {{ .Chart.Name }}-init-profiles
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ $dockerRepository }}/fhir-profile-snapshots:{{ .Values.required.profiles.version }}"
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          command: 
+            - /bin/sh
+            - -c
+            - "rm -rf /profiles/* && cp -r /app/data/profiles/* /profiles/"
+          volumeMounts:
+            - name: profiles-volume-{{ include "validation-service.fullversionname" . }}
+              mountPath: "/profiles"
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ $dockerRepository }}/{{ $dockerImage }}:{{ $dockerTag }}"
-          {{- /* Pull always an image if is tagged as "latest" */}}
-          imagePullPolicy: {{- if eq .Values.required.image.tag "latest" }} "Always" {{else}} "IfNotPresent" {{- end -}}
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
           {{- /* If entrypoint and parameters are both defined, configure them */ -}}
           {{- if .Values.application.entrypoint }}
           {{- if .Values.application.parameters }}
@@ -51,12 +67,17 @@ spec:
           {{- end }}
           {{- end }}
           {{- end }}
+          volumeMounts:
+          - name: profiles-volume-{{ include "validation-service.fullversionname" . }}
+            mountPath: "/profiles"
           # Set the Environment Variables for the container
           env:
             - name: "SERVER_PORT"
               value: "8080"
             - name: "TZ"
               value: "Europe/Berlin"
+            - name: "FHIR_PROFILES_PATH"
+              value: "/profiles/Fhir"
           # Ports to be exposed from the container
           ports:
             - name: val-port

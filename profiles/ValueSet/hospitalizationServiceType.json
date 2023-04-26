@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "id": "hospitalizationServiceType",
+  "url": "https://demis.rki.de/fhir/ValueSet/hospitalizationServiceType",
+  "version": "1.0.0",
+  "name": "HospitalizationServiceType",
+  "title": "Art der Hospitalisierung",
+  "status": "active",
+  "date": "2022-01-18",
+  "description": "Das ValueSet HospitalizationServiceType enthält die Codes zur Angabe der Art der Hospitalisierung.",
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/hospitalizationServiceType"
+    } ]
+  }
+}

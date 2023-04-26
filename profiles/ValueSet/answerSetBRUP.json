@@ -1,0 +1,98 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetBRUP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetBRUP",
+  "version": "1.1.0",
+  "name": "AnswerSetBRUP",
+  "title": "AnswerSet für Brucella sp.",
+  "status": "active",
+  "date": "2022-03-23",
+  "description": "Das ValueSet AnswerSetBRUP enthält die Codes der Answer-Codes für Brucella sp.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "115641003",
+        "display": "Brucella abortus, biovar 4 (organism)"
+      }, {
+        "code": "35049005",
+        "display": "Brucella ovis (organism)"
+      }, {
+        "code": "1086701000112101",
+        "display": "Brucella microti (organism)"
+      }, {
+        "code": "115639004",
+        "display": "Brucella abortus, biovar 2 (organism)"
+      }, {
+        "code": "417031003",
+        "display": "Brucella suis biovar 3 (organism)"
+      }, {
+        "code": "419212009",
+        "display": "Brucella maris (organism)"
+      }, {
+        "code": "698207000",
+        "display": "Brucella ceti (organism)"
+      }, {
+        "code": "28461002",
+        "display": "Brucella neotomae (organism)"
+      }, {
+        "code": "430983003",
+        "display": "Brucella abortus, vaccinal strain RB51 (organism)"
+      }, {
+        "code": "698206009",
+        "display": "Brucella suis biovar 4 (organism)"
+      }, {
+        "code": "432697004",
+        "display": "Brucella pseudintermedia (organism)"
+      }, {
+        "code": "115644006",
+        "display": "Brucella abortus, biovar 9 (organism)"
+      }, {
+        "code": "698208005",
+        "display": "Brucella pinnipedialis (organism)"
+      }, {
+        "code": "430982008",
+        "display": "Brucella abortus, vaccinal strain 19 (organism)"
+      }, {
+        "code": "38025008",
+        "display": "Brucella canis (organism)"
+      }, {
+        "code": "1086801000112109",
+        "display": "Brucella papionis (organism)"
+      }, {
+        "code": "115643000",
+        "display": "Brucella abortus, biovar 6 (organism)"
+      }, {
+        "code": "24224000",
+        "display": "Brucella abortus (organism)"
+      }, {
+        "code": "698209002",
+        "display": "Brucella abortus, biovar 7 (organism)"
+      }, {
+        "code": "26250004",
+        "display": "Genus Brucella (organism)"
+      }, {
+        "code": "48317004",
+        "display": "Brucella suis (organism)"
+      }, {
+        "code": "115642005",
+        "display": "Brucella abortus, biovar 5 (organism)"
+      }, {
+        "code": "449411006",
+        "display": "Brucella inopinata (organism)"
+      }, {
+        "code": "115640002",
+        "display": "Brucella abortus, biovar 3 (organism)"
+      }, {
+        "code": "115638007",
+        "display": "Brucella abortus, biovar 1 (organism)"
+      }, {
+        "code": "72829003",
+        "display": "Brucella melitensis (organism)"
+      }, {
+        "code": "116506004",
+        "display": "Family Brucellaceae (organism)"
+      } ]
+    } ]
+  }
+}

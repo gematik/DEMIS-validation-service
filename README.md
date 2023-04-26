@@ -1,6 +1,6 @@
 <img align="right" width="250" height="47" src="media/Gematik_Logo_Flag.png"/> <br/> 
 
-[![Quality Gate Status](https://sonar.prod.ccs.gematik.solutions/api/project_badges/measure?project=de.gematik.demis%3Avalidation-service&metric=alert_status&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service)[![Vulnerabilities](https://sonar.prod.ccs.gematik.solutions/api/project_badges/measure?project=de.gematik.demis%3Avalidation-service&metric=vulnerabilities&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service)[![Bugs](https://sonar.prod.ccs.gematik.solutions/api/project_badges/measure?project=de.gematik.demis%3Avalidation-service&metric=bugs&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service)[![Code Smells](https://sonar.prod.ccs.gematik.solutions/api/project_badges/measure?project=de.gematik.demis%3Avalidation-service&metric=code_smells&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service)[![Lines of Code](https://sonar.prod.ccs.gematik.solutions/api/project_badges/measure?project=de.gematik.demis%3Avalidation-service&metric=ncloc&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service)[![Coverage](https://sonar.prod.ccs.gematik.solutions/api/project_badges/measure?project=de.gematik.demis%3Avalidation-service&metric=coverage&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service) 
+[![Quality Gate Status](https://sonar.prod.ccs.gematik.solutions/api/project_badges/measure?project=de.gematik.demis%3Avalidation-service&metric=alert_status&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service)[![Vulnerabilities](https://sonar.prod.ccs.gematik.solutions/api/project_badges/measure?project=de.gematik.demis%3Avalidation-service&metric=vulnerabilities&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service)[![Bugs](https://sonar.prod.ccs.gematik.solutions/api/project_badges/measure?project=de.gematik.demis%3Avalidation-service&metric=bugs&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service)[![Code Smells](https://sonar.prod.ccs.gematik.solutions/api/project_badges/measure?project=de.gematik.demis%3Avalidation-service&metric=code_smells&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service)[![Lines of Code](https://sonar.prod.ccs.gematik.solutions/api/project_badges/measure?project=de.gematik.demis%3Avalidation-service&metric=ncloc&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service)[![Coverage](https://sonar.prod.ccs.gematik.solutions/api/project_badges/measure?project=de.gematik.demis%3Avalidation-service&metric=coverage&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service)
 
 # Validation-Service
 
@@ -33,43 +33,74 @@
 
 ## About The Project
 
-This service serves as a validation service for all notifications send to DEMIS. It uses a snapshot of all profiles and the DEMIS-Schemas Project to validate any notification.
+This service serves as a validation service for all notifications send to DEMIS. It uses a snapshot of all profiles and
+the DEMIS-Schemas Project to validate any notification.
 
 ### Status
+
 [![Quality gate](https://sonar.prod.ccs.gematik.solutions/api/project_badges/quality_gate?project=de.gematik.demis%3Avalidation-service&token=1625f4e36c06a30f797ae56839cc931512156967)](https://sonar.prod.ccs.gematik.solutions/dashboard?id=de.gematik.demis%3Avalidation-service)
 
 ### Release Notes
+
 See [ReleaseNotes.md](./ReleaseNotes.md) for all information regarding the (newest) releases.
 
 ### Properties
 
-| Property      | Default Value | Description                                                                                                                 |
-| ----------- |---------------|-----------------------------------------------------------------------------------------------------------------------------|
-| demis.validation-service.profileResourcePath    | `/profile` | Path to the DEMIS profiles inside the resources.                                                                            |
-| demis.validation-service.locale    | `en_US` | Locale for the HAPI-FHIR context and validator. The language of diagnostics of the outcome is dependent on this locale.     |
-| demis.validation-service.minSeverityOutcome    | `information` | Minimal severity that will not be filtered out in the Outcome. Possible values: `information`, `warning`, `error`, `fatal`. |
+| Property                                     | Default Value | Description                                                                                                                 |
+|----------------------------------------------|---------------|-----------------------------------------------------------------------------------------------------------------------------|
+| demis.validation-service.profileResourcePath | `/profile`    | Path to the DEMIS profiles inside the resources.                                                                            |
+| demis.validation-service.locale              | `en_US`       | Locale for the HAPI-FHIR context and validator. The language of diagnostics of the outcome is dependent on this locale.     |
+| demis.validation-service.minSeverityOutcome  | `information` | Minimal severity that will not be filtered out in the Outcome. Possible values: `information`, `warning`, `error`, `fatal`. |
 
 ## Getting Started
 
-### Docker build
+The application requires the DEMIS FHIR Profiles, they can be retrieved from a git
+repository, [https://gitlab.prod.ccs.gematik.solutions/git/demis/demis-profile-snapshots](demis-fhir-profiles).
+
+The profiles are require to execute the unit and integration tests included in this repository. At runtime execution the
+profile files must be available in a folder and this folder must be specified through the environment
+variable `FHIR_PROFILES_PATH`.
+
+### Maven Build
+
+The project can be built with the command:
+
+```shell
+mvn -e clean install -DskipTests=true
+```
+### Creation of Docker Image
 
 build container with
+
 ```docker 
-docker build -t validation-service:latest .
+docker build -t europe-west3-docker.pkg.dev/gematik-all-infra-prod/demis-dev/validation-service:latest .
 ```
+
 the image can alternatively also be built with maven:
+
 ```docker
-mvn clean install -Pdocker
+# With Profiles
+mvn -e clean install -Pdownload-profile -Pdocker
+# Without Profiles
+mvn -e clean install -DskipTests=true -Pdocker
 ```
 
 ### Docker run
 
-run with `docker run -p 8081:8081 validation-service:latest`
+The application can be started as Docker container with the following commands:
+
+```shell
+docker run --rm --name validation-service \
+    -v $(pwd)/profiles:/profiles \
+    -p 8080:8080 \
+    -e FHIR_PROFILES_PATH=/profiles \
+    europe-west3-docker.pkg.dev/gematik-all-infra-prod/demis-dev/validation-service:latest
+```
 
 ### Intellij/CMD
 
 Start the spring boot server with: `mvn clean spring-boot:run`
-Check the server with: `curl -v localhost:8081/status`
+Check the server with: `curl -v localhost:8080/actuator/health`
 
 ### Kubernetes
 
@@ -89,6 +120,7 @@ In IntelliJ as SpringBoot Application:
 `/actuator/health/readiness` Standardenpunkt vom Actuator
 
 ## Contributing
+
 If you want to contribute, please check our [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## License

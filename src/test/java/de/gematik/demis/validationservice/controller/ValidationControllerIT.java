@@ -27,6 +27,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import de.gematik.demis.validationservice.ValidationServiceApplication;
 import de.gematik.demis.validationservice.util.FileTestUtil;
 import de.gematik.demis.validationservice.util.ResourceFileConstants;
 import org.junit.jupiter.api.BeforeEach;
@@ -34,13 +35,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest
+@ActiveProfiles(value = {"test"})
+@SpringBootTest(classes = {ValidationServiceApplication.class})
 class ValidationControllerIT {
   @Autowired private WebApplicationContext webApplicationContext;
   private MockMvc mockMvc;
@@ -52,7 +55,7 @@ class ValidationControllerIT {
 
   @Test
   void passValidReportAnCheckItIsSuccessful() throws Exception {
-    String validFileContent =
+    final String validFileContent =
         FileTestUtil.readFileIntoString(ResourceFileConstants.VALID_REPORT_BED_OCCUPANCY_EXAMPLE);
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
@@ -64,7 +67,7 @@ class ValidationControllerIT {
 
   @Test
   void passInvalidReportAndCheckItHasErrors() throws Exception {
-    String validFileContent =
+    final String validFileContent =
         FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_REPORT_BED_OCCUPANCY_EXAMPLE);
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
@@ -75,7 +78,7 @@ class ValidationControllerIT {
 
   @Test
   void passInvalidDv2MessageAndCheckMatchingProfileIssuesAreFiltered() throws Exception {
-    String validFileContent =
+    final String validFileContent =
         FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_TEST_NOTIFICATION_DV_2);
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
@@ -110,7 +113,7 @@ class ValidationControllerIT {
 
   @Test
   void passInvalidJsonAnCheckItHasErrors() throws Exception {
-    String invalidJson = "{ \"key\" : \"value\"";
+    final String invalidJson = "{ \"key\" : \"value\"";
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(invalidJson))
         .andExpect(status().isUnprocessableEntity())
@@ -120,7 +123,7 @@ class ValidationControllerIT {
 
   @Test
   void passXmlContentTypeAnCheckItIsNotSupported() throws Exception {
-    String xmlContent = "<test></test>";
+    final String xmlContent = "<test></test>";
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_XML_VALUE).content(xmlContent))
         .andExpect(status().isUnsupportedMediaType());
@@ -128,7 +131,7 @@ class ValidationControllerIT {
 
   @Test
   void passXmlAsJsonAnCheckItIsNotSupported() throws Exception {
-    String xmlContent = "<test></test>";
+    final String xmlContent = "<test></test>";
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(xmlContent))
         .andExpect(status().isUnprocessableEntity())
@@ -138,7 +141,7 @@ class ValidationControllerIT {
 
   @Test
   void passNotParsableReportAnCheckItHasErrors() throws Exception {
-    String validFileContent =
+    final String validFileContent =
         FileTestUtil.readFileIntoString(
             ResourceFileConstants.NOT_PARSEABLE_REPORT_BED_OCCUPANCY_EXAMPLE);
     mockMvc

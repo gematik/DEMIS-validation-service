@@ -1,0 +1,157 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestLEGP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestLEGP",
+  "version": "1.1.0",
+  "name": "LaboratoryTestLEGP",
+  "title": "Labortest für Legionella sp.",
+  "status": "active",
+  "date": "2022-03-17",
+  "description": "Das ValueSet LaboratoryTestLEGP enthält die Codes der Labortests für Legionella sp..",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "17058-9",
+        "display": "Legionella pneumophila Ag [Presence] in Urine by Latex agglutination"
+      }, {
+        "code": "38394-3",
+        "display": "Legionella sp identified in Urine by Organism specific culture"
+      }, {
+        "code": "6448-5",
+        "display": "Legionella pneumophila Ag [Presence] in Urine by Radioimmunoassay (RIA)"
+      }, {
+        "code": "9543-0",
+        "display": "Legionella pneumophila 1 Ag [Presence] in Urine by Radioimmunoassay (RIA)"
+      }, {
+        "code": "17057-1",
+        "display": "Legionella pneumophila Ag [Presence] in Specimen"
+      }, {
+        "code": "17059-7",
+        "display": "Legionella pneumophila Ag [Presence] in Urine by Immunofluorescence"
+      }, {
+        "code": "21363-7",
+        "display": "Legionella pneumophila DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "24203-2",
+        "display": "Legionella pneumophila Ab [Titer] in Serum by Immunofluorescence --1st specimen"
+      }, {
+        "code": "24204-0",
+        "display": "Legionella pneumophila Ab [Titer] in Serum by Immunofluorescence --2nd specimen"
+      }, {
+        "code": "26621-3",
+        "display": "Legionella sp Ag [Presence] in Specimen"
+      }, {
+        "code": "31868-3",
+        "display": "Legionella pneumophila 1 Ag [Presence] in Urine"
+      }, {
+        "code": "31870-9",
+        "display": "Legionella pneumophila Ag [Presence] in Urine"
+      }, {
+        "code": "32781-7",
+        "display": "Legionella sp Ag [Presence] in Urine"
+      }, {
+        "code": "38393-5",
+        "display": "Legionella sp identified in Pleural fluid by Organism specific culture"
+      }, {
+        "code": "38463-6",
+        "display": "Legionella sp Ag [Presence] in Urine by Immunofluorescence"
+      }, {
+        "code": "39541-8",
+        "display": "Legionella sp Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "41499-5",
+        "display": "Legionella pneumophila 1 Ag [Presence] in Urine by Immunoassay"
+      }, {
+        "code": "43192-4",
+        "display": "Legionella pneumophila 2+3+4+5+6+8 Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "49616-6",
+        "display": "Legionella sp DNA [Identifier] in Specimen by NAA with probe detection"
+      }, {
+        "code": "5020-3",
+        "display": "Legionella sp rRNA [Presence] in Specimen by Probe"
+      }, {
+        "code": "588-4",
+        "display": "Legionella pneumophila Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "589-2",
+        "display": "Legionella sp identified in Bronchial specimen by Organism specific culture"
+      }, {
+        "code": "590-0",
+        "display": "Legionella sp identified in Sputum by Organism specific culture"
+      }, {
+        "code": "593-4",
+        "display": "Legionella sp identified in Specimen by Organism specific culture"
+      }, {
+        "code": "6447-7",
+        "display": "Legionella pneumophila Ag [Presence] in Urine by Immunoassay"
+      }, {
+        "code": "6449-3",
+        "display": "Legionella pneumophila Ag [Presence] in Specimen by Latex agglutination"
+      }, {
+        "code": "67563-7",
+        "display": "Legionella micdadei DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "71377-6",
+        "display": "Legionella sp [Identifier] in Isolate by Agglutination"
+      }, {
+        "code": "73671-0",
+        "display": "Legionella pneumophila serogroup [Type] in Isolate by Agglutination"
+      }, {
+        "code": "77684-9",
+        "display": "Legionella pneumophila 1 Ag [Presence] in Urine by Rapid immunoassay"
+      }, {
+        "code": "7948-3",
+        "display": "Legionella pneumophila 1 Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "81690-0",
+        "display": "Legionella longbeachae 1 and 2 DNA [Identifier] in Specimen by NAA with probe detection"
+      }, {
+        "code": "87956-9",
+        "display": "Legionella sp identified in Tissue by Organism specific culture"
+      }, {
+        "code": "88577-2",
+        "display": "Legionella pneumophila DNA [Presence] in Tissue by NAA with probe detection"
+      }, {
+        "code": "88585-5",
+        "display": "Legionella sp identified in Lower respiratory specimen by Organism specific culture"
+      }, {
+        "code": "88587-1",
+        "display": "Legionella sp DNA [Identifier] in Tissue by NAA with probe detection"
+      }, {
+        "code": "88588-9",
+        "display": "Legionella sp DNA [Identifier] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "88590-5",
+        "display": "Legionella pneumophila DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "92145-2",
+        "display": "Legionella pneumophila DNA [Presence] in Respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "92969-5",
+        "display": "Legionella pneumophila DNA [Presence] in Lower respiratory specimen by NAA with non-probe detection"
+      }, {
+        "code": "9542-2",
+        "display": "Legionella pneumophila 1 IgM Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "56950-9",
+        "display": "Legionella pneumophila IgG Ab [Titer] in Serum by Immunofluorescence --2nd specimen"
+      }, {
+        "code": "57008-5",
+        "display": "Legionella pneumophila IgG Ab [Titer] in Serum by Immunofluorescence --1st specimen"
+      }, {
+        "code": "57675-1",
+        "display": "Legionella pneumophila IgG Ab [Presence] in Serum by Immunofluorescence --1st specimen"
+      }, {
+        "code": "57676-9",
+        "display": "Legionella pneumophila IgG Ab [Presence] in Serum by Immunofluorescence --2nd specimen"
+      }, {
+        "code": "9541-4",
+        "display": "Legionella pneumophila 1 IgG Ab [Titer] in Serum by Immunofluorescence"
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

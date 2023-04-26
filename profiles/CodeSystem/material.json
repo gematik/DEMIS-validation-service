@@ -1,0 +1,69 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "material",
+  "url": "https://demis.rki.de/fhir/CodeSystem/material",
+  "version": "1.0.1",
+  "name": "Material",
+  "title": "Material",
+  "status": "retired",
+  "date": "2021-05-10",
+  "description": "Das CodeSystem Material enthält die Codes der Materialien.",
+  "caseSensitive": false,
+  "content": "complete",
+  "count": 17,
+  "concept": [ {
+    "code": "s001",
+    "display": "Upper respiratory swab sample (specimen)",
+    "concept": [ {
+      "code": "s002",
+      "display": "Nasopharyngeal swab (specimen)"
+    }, {
+      "code": "s003",
+      "display": "Swab from nasal sinus (specimen)"
+    }, {
+      "code": "s004",
+      "display": "Anterior nares swab (specimen)"
+    } ]
+  }, {
+    "code": "s005",
+    "display": "Oropharyngeal aspirate (specimen)"
+  }, {
+    "code": "s006",
+    "display": "Nasopharyngeal aspirate (specimen)"
+  }, {
+    "code": "s007",
+    "display": "Lower respiratory sample (specimen)",
+    "concept": [ {
+      "code": "s008",
+      "display": "Bronchoalveolar lavage fluid sample (specimen)"
+    }, {
+      "code": "s009",
+      "display": "Sputum specimen (specimen)"
+    }, {
+      "code": "s010",
+      "display": "Specimen from trachea obtained by aspiration (specimen)"
+    } ]
+  }, {
+    "code": "s011",
+    "display": "Pleural fluid specimen (specimen)"
+  }, {
+    "code": "s012",
+    "display": "Specimen from lung obtained by biopsy (specimen)"
+  }, {
+    "code": "s013",
+    "display": "Blood specimen (specimen)",
+    "concept": [ {
+      "code": "s014",
+      "display": "Plasma specimen or serum specimen or whole blood specimen (specimen)"
+    }, {
+      "code": "s015",
+      "display": "Whole blood sample (specimen)"
+    } ]
+  }, {
+    "code": "s016",
+    "display": "Stool specimen (specimen)"
+  }, {
+    "code": "s017",
+    "display": "Urine specimen (specimen)"
+  } ]
+}

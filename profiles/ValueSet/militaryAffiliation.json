@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "id": "militaryAffiliation",
+  "url": "https://demis.rki.de/fhir/ValueSet/militaryAffiliation",
+  "version": "1.0.0",
+  "name": "MilitaryAffiliation",
+  "title": "Zugehörigkeit zur Bundeswehr",
+  "status": "active",
+  "date": "2022-01-18",
+  "description": "Das ValueSet MilitaryAffiliation enthält die Codes zur Angabe der Zugehörigkeit zur Bundeswehr.",
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/militaryAffiliation"
+    } ]
+  }
+}

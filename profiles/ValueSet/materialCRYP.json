@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialCRYP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialCRYP",
+  "version": "1.1.0",
+  "name": "MaterialCRYP",
+  "title": "Material für humanpathogene Cryptosporidium sp.",
+  "status": "active",
+  "date": "2022-03-29",
+  "description": "Das ValueSet MaterialCRYP enthält die Codes der Materialien für humanpathogene Cryptosporidium sp.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119339001",
+        "display": "Stool specimen (specimen)"
+      }, {
+        "code": "119380008",
+        "display": "Specimen from small intestine (specimen)"
+      }, {
+        "code": "119381007",
+        "display": "Specimen from large intestine (specimen)"
+      }, {
+        "code": "122638001",
+        "display": "Tissue specimen from small intestine (specimen)"
+      }, {
+        "code": "122643008",
+        "display": "Tissue specimen from large intestine (specimen)"
+      }, {
+        "code": "119382000",
+        "display": "Specimen from colon (specimen)"
+      }, {
+        "code": "309216003",
+        "display": "Duodenal biopsy sample (specimen)"
+      } ]
+    } ]
+  }
+}

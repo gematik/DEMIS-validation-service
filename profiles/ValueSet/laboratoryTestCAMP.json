@@ -1,0 +1,67 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestCAMP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestCAMP",
+  "version": "1.4.0",
+  "name": "LaboratoryTestCAMP",
+  "title": "Labortest für Campylobacter spp. (darmpathogen)",
+  "status": "active",
+  "date": "2022-01-22",
+  "description": "Das ValueSet LaboratoryTestCAMP enthält die Codes der Labortests für Campylobacter spp. (darmpathogen).",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "20738-1",
+        "display": "Campylobacter sp identified in Isolate by Organism specific culture"
+      }, {
+        "code": "82302-1",
+        "display": "Campylobacter sp [Presence] in Stool by Culture"
+      }, {
+        "code": "6330-5",
+        "display": "Campylobacter sp identified in Blood by Organism specific culture"
+      }, {
+        "code": "97513-6",
+        "display": "Campylobacter sp [Presence] in Specimen by Organism specific culture"
+      }, {
+        "code": "6331-3",
+        "display": "Campylobacter sp identified in Stool by Organism specific culture"
+      }, {
+        "code": "6332-1",
+        "display": "Campylobacter sp identified in Specimen by Organism specific culture"
+      }, {
+        "code": "57768-4",
+        "display": "Campylobacter jejuni+Campylobacter coli Ag [Presence] in Stool"
+      }, {
+        "code": "49614-1",
+        "display": "Campylobacter sp DNA [Identifier] in Specimen by NAA with probe detection"
+      }, {
+        "code": "71429-5",
+        "display": "Campylobacter sp DNA.diarrheagenic [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "31756-0",
+        "display": "Campylobacter fetus Ag [Presence] in Specimen"
+      }, {
+        "code": "81656-1",
+        "display": "Campylobacter coli+jejuni tuf gene [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "97312-3",
+        "display": "Campylobacter coli+jejuni+upsaliensis DNA [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "61368-7",
+        "display": "Campylobacter jejuni DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "79382-8",
+        "display": "Campylobacter coli+jejuni+lari fusA gene [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "82196-7",
+        "display": "Campylobacter coli+jejuni+upsaliensis DNA [Presence] in Stool by NAA with non-probe detection"
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF"
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialFSVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialFSVP",
+  "version": "1.0.0",
+  "name": "MaterialFSVP",
+  "title": "Material für FSME-Virus",
+  "status": "active",
+  "date": "2021-11-10",
+  "description": "Das ValueSet MaterialFSVP enthält die Codes der Materialien für FSME-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)"
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid sample (specimen)"
+      }, {
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)"
+      }, {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)"
+      } ]
+    } ]
+  }
+}

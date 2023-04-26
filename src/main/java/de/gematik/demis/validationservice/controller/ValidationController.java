@@ -20,9 +20,10 @@ package de.gematik.demis.validationservice.controller;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-import de.gematik.demis.validationservice.services.FhirJsonService;
+import ca.uhn.fhir.context.FhirContext;
 import de.gematik.demis.validationservice.services.JsonValidator;
 import de.gematik.demis.validationservice.services.validation.ValidationService;
+import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity;
 import org.hl7.fhir.r4.model.OperationOutcome.OperationOutcomeIssueComponent;
@@ -35,19 +36,20 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 /** Controller for the main rest endpoint dor this service. */
+@Slf4j
 @RestController
 @RequestMapping(path = "/")
 public class ValidationController {
   private final JsonValidator jsonValidator;
-  private final FhirJsonService fhirJsonService;
+  private final FhirContext fhirContext;
   private final ValidationService validationService;
 
   public ValidationController(
-      JsonValidator jsonValidator,
-      FhirJsonService fhirJsonService,
-      ValidationService validationService) {
+      final JsonValidator jsonValidator,
+      final FhirContext fhirContext,
+      final ValidationService validationService) {
     this.jsonValidator = jsonValidator;
-    this.fhirJsonService = fhirJsonService;
+    this.fhirContext = fhirContext;
     this.validationService = validationService;
   }
 
@@ -56,17 +58,17 @@ public class ValidationController {
       consumes = APPLICATION_JSON_VALUE,
       produces = APPLICATION_JSON_VALUE)
   @ResponseStatus(HttpStatus.OK)
-  public ResponseEntity<String> processReport(@RequestBody String content) {
+  public ResponseEntity<String> processReport(@RequestBody final String content) {
     if (!jsonValidator.isValidJson(content)) {
+      log.warn("Validation of JSON failed");
       return operationOutcomeErrorWithNoValidJson();
     }
-    OperationOutcome operationOutcome = validationService.validate(content);
-
+    final OperationOutcome operationOutcome = validationService.validate(content);
     return toResponseEntity(operationOutcome);
   }
 
   private ResponseEntity<String> operationOutcomeErrorWithNoValidJson() {
-    OperationOutcome operationOutcome =
+    final OperationOutcome operationOutcome =
         new OperationOutcome()
             .addIssue(
                 new OperationOutcomeIssueComponent()
@@ -76,15 +78,17 @@ public class ValidationController {
     return toResponseEntity(operationOutcome);
   }
 
-  private ResponseEntity<String> toResponseEntity(OperationOutcome operationOutcome) {
-    String operationOutcomeAsJson = fhirJsonService.toJson(operationOutcome);
-    boolean hasErrorOrFatalIssue =
+  private ResponseEntity<String> toResponseEntity(final OperationOutcome operationOutcome) {
+    final String operationOutcomeAsJson =
+        fhirContext.newJsonParser().encodeResourceToString(operationOutcome);
+    final boolean hasErrorOrFatalIssue =
         operationOutcome.getIssue().stream()
             .anyMatch(
                 issue ->
                     issue.getSeverity() == IssueSeverity.ERROR
                         || issue.getSeverity() == IssueSeverity.FATAL);
     if (hasErrorOrFatalIssue) {
+      log.warn("Operation failed with {}", operationOutcomeAsJson);
       return ResponseEntity.unprocessableEntity().body(operationOutcomeAsJson);
     }
 

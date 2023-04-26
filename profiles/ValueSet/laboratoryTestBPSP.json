@@ -1,0 +1,115 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestBPSP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestBPSP",
+  "version": "1.4.0",
+  "name": "LaboratoryTestBPSP",
+  "title": "Labortest für Bordetella pertussis, Bordetella parapertussis",
+  "status": "active",
+  "date": "2022-03-17",
+  "description": "Das ValueSet LaboratoryTestBPSP enthält die Codes der Labortests für Bordetella pertussis, Bordetella parapertussis.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "96962-6",
+        "display": "Bordetella pertussis.pertussis toxin promoter region [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "97186-1",
+        "display": "Bordetella parapertussis IS1001 DNA [Presence] in Lower respiratory specimen by NAA with non-probe detection"
+      }, {
+        "code": "23826-1",
+        "display": "Bordetella pertussis DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "23830-3",
+        "display": "Bordetella pertussis.pertussis toxin IgA Ab [Units/volume] in Serum"
+      }, {
+        "code": "23831-1",
+        "display": "Bordetella pertussis.pertussis toxin IgG Ab [Units/volume] in Serum"
+      }, {
+        "code": "24127-3",
+        "display": "Bordetella pertussis.pertussis toxin IgG Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "24128-1",
+        "display": "Bordetella pertussis.pertussis toxin IgA Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "43890-3",
+        "display": "Bordetella pertussis [Presence] in Sputum by Organism specific culture"
+      }, {
+        "code": "43896-0",
+        "display": "Bordetella pertussis [Presence] in Pleural fluid by Organism specific culture"
+      }, {
+        "code": "43913-3",
+        "display": "Bordetella pertussis DNA [Presence] in Nasopharynx by NAA with probe detection"
+      }, {
+        "code": "48741-3",
+        "display": "Bordetella pertussis [Presence] in Nasopharynx by Organism specific culture"
+      }, {
+        "code": "548-8",
+        "display": "Bordetella pertussis [Presence] in Throat by Organism specific culture"
+      }, {
+        "code": "549-6",
+        "display": "Bordetella pertussis [Presence] in Specimen by Organism specific culture"
+      }, {
+        "code": "80600-0",
+        "display": "Bordetella pertussis.pertussis toxin promoter region [Presence] in Nasopharynx by NAA with probe detection"
+      }, {
+        "code": "82179-3",
+        "display": "Bordetella pertussis.pertussis toxin promoter region [Presence] in Nasopharynx by NAA with non-probe detection"
+      }, {
+        "code": "91815-1",
+        "display": "Bordetella pertussis DNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "91869-8",
+        "display": "Bordetella pertussis DNA [Presence] in Throat by NAA with probe detection"
+      }, {
+        "code": "92128-8",
+        "display": "Bordetella pertussis DNA [Presence] in Respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "94365-4",
+        "display": "Bordetella pertussis DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "94478-5",
+        "display": "Bordetella pertussis.pertussis toxin promoter region [Presence] in Lower respiratory specimen by NAA with non-probe detection"
+      }, {
+        "code": "29723-4",
+        "display": "Bordetella parapertussis DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "42588-4",
+        "display": "Bordetella parapertussis DNA [Presence] in Nasopharynx by NAA with probe detection"
+      }, {
+        "code": "43879-6",
+        "display": "Bordetella parapertussis [Presence] in Nasopharynx by Organism specific culture"
+      }, {
+        "code": "43925-7",
+        "display": "Bordetella parapertussis [Presence] in Specimen by Organism specific culture"
+      }, {
+        "code": "86327-4",
+        "display": "Bordetella parapertussis IS1001 DNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "87621-9",
+        "display": "Bordetella parapertussis IS1001 DNA [Presence] in Nasopharynx by NAA with non-probe detection"
+      }, {
+        "code": "91816-9",
+        "display": "Bordetella parapertussis DNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "91868-0",
+        "display": "Bordetella parapertussis DNA [Presence] in Throat by NAA with probe detection"
+      }, {
+        "code": "92129-6",
+        "display": "Bordetella parapertussis DNA [Presence] in Respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "92855-6",
+        "display": "Bordetella parapertussis IS1001 DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "92856-4",
+        "display": "Bordetella parapertussis IS1001 DNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF"
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

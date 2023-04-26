@@ -1,0 +1,949 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "notificationCategory",
+  "url": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+  "version": "1.6.1",
+  "name": "NotificationCategory",
+  "title": "Meldetatbestand",
+  "status": "active",
+  "date": "2022-06-11",
+  "description": "Das CodeSystem NotificationCategory enthält die Codes der Meldetatbestände.",
+  "caseSensitive": false,
+  "valueSet": "https://demis.rki.de/fhir/ValueSet/notificationCategory",
+  "content": "complete",
+  "count": 66,
+  "property": [ {
+    "code": "usage-status",
+    "description": "Nutzungsstatus",
+    "type": "code"
+  }, {
+    "code": "diagnosticReport-profile",
+    "description": "Verweis auf das zu verwendende Profil für den Laborbericht (DiagnosticReport)",
+    "type": "string"
+  } ],
+  "concept": [ {
+    "code": "advp",
+    "display": "Adenoviren; Meldepflicht nur für den direkten Nachweis im Konjunktivalabstrich",
+    "designation": [ {
+      "language": "de",
+      "value": "Adenoviren"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportADVP"
+    } ]
+  }, {
+    "code": "banp",
+    "display": "Bacillus anthracis",
+    "designation": [ {
+      "language": "de",
+      "value": "Bacillus anthracis"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportBANP"
+    } ]
+  }, {
+    "code": "bpsp",
+    "display": "Bordetella pertussis, Bordetella parapertussis",
+    "designation": [ {
+      "language": "de",
+      "value": "Bordetella pertussis/parapertussis"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportBPSP"
+    } ]
+  }, {
+    "code": "bovp",
+    "display": "humanpathogene Bornaviren; Meldepflicht nur für den direkten Nachweis",
+    "designation": [ {
+      "language": "de",
+      "value": "Bornaviren"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportBOVP"
+    } ]
+  }, {
+    "code": "borp",
+    "display": "Borrelia recurrentis",
+    "designation": [ {
+      "language": "de",
+      "value": "Borrelia recurrentis"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportBORP"
+    } ]
+  }, {
+    "code": "brup",
+    "display": "Brucella sp.",
+    "designation": [ {
+      "language": "de",
+      "value": "Brucella sp."
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportBRUP"
+    } ]
+  }, {
+    "code": "camp",
+    "display": "Campylobacter spp. (darmpathogen)",
+    "designation": [ {
+      "language": "de",
+      "value": "Campylobacter spp."
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportCAMP"
+    } ]
+  }, {
+    "code": "ckvp",
+    "display": "Chikungunya-Virus",
+    "designation": [ {
+      "language": "de",
+      "value": "Chikungunya-Virus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportCKVP"
+    } ]
+  }, {
+    "code": "chlp",
+    "display": "Chlamydia psittaci",
+    "designation": [ {
+      "language": "de",
+      "value": "Chlamydia psittaci"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportCHLP"
+    } ]
+  }, {
+    "code": "clop",
+    "display": "Clostridium botulinum oder Toxinnachweis",
+    "designation": [ {
+      "language": "de",
+      "value": "Clostridium botulinum"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportCLOP"
+    } ]
+  }, {
+    "code": "corp",
+    "display": "Corynebacterium spp. (Toxin bildend)",
+    "designation": [ {
+      "language": "de",
+      "value": "Corynebacterium spp."
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportCORP"
+    } ]
+  }, {
+    "code": "coxp",
+    "display": "Coxiella burnetii",
+    "designation": [ {
+      "language": "de",
+      "value": "Coxiella burnetii"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportCOXP"
+    } ]
+  }, {
+    "code": "denp",
+    "display": "Denguevirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Denguevirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportDENP"
+    } ]
+  }, {
+    "code": "cryp",
+    "display": "humanpathogene Cryptosporidium sp.",
+    "designation": [ {
+      "language": "de",
+      "value": "Cryptosporidium sp."
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportCRYP"
+    } ]
+  }, {
+    "code": "ebvp",
+    "display": "Ebolavirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Ebolavirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportEBVP"
+    } ]
+  }, {
+    "code": "ehcp",
+    "display": "Escherichia coli (enterohämorrhagisch)",
+    "designation": [ {
+      "language": "de",
+      "value": "E. coli, enterohämorrhagisch"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportEHCP"
+    } ]
+  }, {
+    "code": "ecop",
+    "display": "Escherichia coli (sonstige darmpathogene Stämme)",
+    "designation": [ {
+      "language": "de",
+      "value": "E. coli, sonstige"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportECOP"
+    } ]
+  }, {
+    "code": "frtp",
+    "display": "Francisella tularensis",
+    "designation": [ {
+      "language": "de",
+      "value": "Francisella tularensis"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportFRTP"
+    } ]
+  }, {
+    "code": "fsvp",
+    "display": "FSME-Virus",
+    "designation": [ {
+      "language": "de",
+      "value": "FSME-Virus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportFSVP"
+    } ]
+  }, {
+    "code": "gfvp",
+    "display": "Gelbfiebervirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Gelbfiebervirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportGFVP"
+    } ]
+  }, {
+    "code": "gilp",
+    "display": "Giardia lamblia",
+    "designation": [ {
+      "language": "de",
+      "value": "Giardia lamblia"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportGILP"
+    } ]
+  }, {
+    "code": "hinp",
+    "display": "Haemophilus influenzae; Meldepflicht nur für den direkten Nachweis aus Liquor oder Blut",
+    "designation": [ {
+      "language": "de",
+      "value": "Haemophilus influenzae"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportHINP"
+    } ]
+  }, {
+    "code": "havp",
+    "display": "Hepatitis-A-Virus",
+    "designation": [ {
+      "language": "de",
+      "value": "Hepatitis-A-Virus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportHAVP"
+    } ]
+  }, {
+    "code": "hbvp",
+    "display": "Hepatitis-B-Virus; Meldepflicht für alle Nachweise",
+    "designation": [ {
+      "language": "de",
+      "value": "Hepatitis-B-Virus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportHBVP"
+    } ]
+  }, {
+    "code": "hcvp",
+    "display": "Hepatitis-C-Virus; Meldepflicht für alle Nachweise",
+    "designation": [ {
+      "language": "de",
+      "value": "Hepatitis-C-Virus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportHCVP"
+    } ]
+  }, {
+    "code": "hdvp",
+    "display": "Hepatitis-D-Virus; Meldepflicht für alle Nachweise",
+    "designation": [ {
+      "language": "de",
+      "value": "Hepatitis-D-Virus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportHDVP"
+    } ]
+  }, {
+    "code": "hevp",
+    "display": "Hepatitis-E-Virus",
+    "designation": [ {
+      "language": "de",
+      "value": "Hepatitis-E-Virus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportHEVP"
+    } ]
+  }, {
+    "code": "htvp",
+    "display": "Hantavirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Hantavirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportHTVP"
+    } ]
+  }, {
+    "code": "invp",
+    "display": "Influenzavirus; Meldepflicht nur für den direkten Nachweis",
+    "designation": [ {
+      "language": "de",
+      "value": "Influenzavirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportINVP"
+    } ]
+  }, {
+    "code": "lsvp",
+    "display": "Lassavirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Lassavirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportLSVP"
+    } ]
+  }, {
+    "code": "legp",
+    "display": "Legionella sp.",
+    "designation": [ {
+      "language": "de",
+      "value": "Legionella sp."
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportLEGP"
+    } ]
+  }, {
+    "code": "lepp",
+    "display": "humanpathogene Leptospira sp.",
+    "designation": [ {
+      "language": "de",
+      "value": "Leptospira sp."
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportLEPP"
+    } ]
+  }, {
+    "code": "lisp",
+    "display": "Listeria monocytogenes; Meldepflicht nur für den direkten Nachweis aus Blut, Liquor oder anderen normalerweise sterilen Substraten sowie aus Abstrichen von Neugeborenen",
+    "designation": [ {
+      "language": "de",
+      "value": "Listeria monocytogenes"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportLISP"
+    } ]
+  }, {
+    "code": "mbvp",
+    "display": "Marburgvirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Marburgvirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportMBVP"
+    } ]
+  }, {
+    "code": "msvp",
+    "display": "Masernvirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Masernvirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportMSVP"
+    } ]
+  }, {
+    "code": "mrsp",
+    "display": "Middle-East-Respiratory-Syndrome-Coronavirus (MERS-CoV)",
+    "designation": [ {
+      "language": "de",
+      "value": "MERS-CoV"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportMRSP"
+    } ]
+  }, {
+    "code": "mpvp",
+    "display": "Mumpsvirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Mumpsvirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportMPVP"
+    } ]
+  }, {
+    "code": "mylp",
+    "display": "Mycobacterium leprae",
+    "designation": [ {
+      "language": "de",
+      "value": "Mycobacterium leprae"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportMYLP"
+    } ]
+  }, {
+    "code": "mytp",
+    "display": "Mycobacterium tuberculosis, Mycobacterium africanum, Mycobacterium bovis; Meldepflicht für den direkten Erregernachweis sowie nachfolgend für das Ergebnis der Resistenzbestimmung; vorab auch für den Nachweis säurefester Stäbchen im Sputum",
+    "designation": [ {
+      "language": "de",
+      "value": "Mycobacterium tuberculosis"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportMYTP"
+    } ]
+  }, {
+    "code": "neip",
+    "display": "Neisseria meningitidis; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, hämorrhagischen Hautinfiltraten oder anderen normalerweise sterilen Substraten",
+    "designation": [ {
+      "language": "de",
+      "value": "Neisseria meningitidis"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportNEIP"
+    } ]
+  }, {
+    "code": "novp",
+    "display": "Norovirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Norovirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportNOVP"
+    } ]
+  }, {
+    "code": "povp",
+    "display": "Poliovirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Poliovirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportPOVP"
+    } ]
+  }, {
+    "code": "rbvp",
+    "display": "Rabiesvirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Rabiesvirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportRBVP"
+    } ]
+  }, {
+    "code": "ricp",
+    "display": "Rickettsia prowazekii",
+    "designation": [ {
+      "language": "de",
+      "value": "Rickettsia prowazekii"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportRICP"
+    } ]
+  }, {
+    "code": "rtvp",
+    "display": "Rotavirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Rotavirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportRTVP"
+    } ]
+  }, {
+    "code": "ruvp",
+    "display": "Rubellavirus",
+    "designation": [ {
+      "language": "de",
+      "value": "Rubellavirus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportRUVP"
+    } ]
+  }, {
+    "code": "spap",
+    "display": "Salmonella Paratyphi; Meldepflicht für alle direkten Nachweise",
+    "designation": [ {
+      "language": "de",
+      "value": "Salmonella Paratyphi"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportSPAP"
+    } ]
+  }, {
+    "code": "styp",
+    "display": "Salmonella Typhi; Meldepflicht für alle direkten Nachweise",
+    "designation": [ {
+      "language": "de",
+      "value": "Salmonella Typhi"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportSTYP"
+    } ]
+  }, {
+    "code": "salp",
+    "display": "Salmonella (sonstige)",
+    "designation": [ {
+      "language": "de",
+      "value": "Salmonella, sonstige"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportSALP"
+    } ]
+  }, {
+    "code": "cvdp",
+    "display": "Severe-Acute-Respiratory-Syndrome-Coronavirus-2 (SARS-CoV-2)",
+    "designation": [ {
+      "language": "de",
+      "value": "SARS-CoV-2"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportCVDP"
+    } ]
+  }, {
+    "code": "cvsp",
+    "display": "Severe-Acute-Respiratory-Syndrome-Coronavirus (SARS-CoV)",
+    "designation": [ {
+      "language": "de",
+      "value": "SARS-CoV"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportCVSP"
+    } ]
+  }, {
+    "code": "ship",
+    "display": "Shigella sp.",
+    "designation": [ {
+      "language": "de",
+      "value": "Shigella sp."
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportSHIP"
+    } ]
+  }, {
+    "code": "spnp",
+    "display": "Streptococcus pneumoniae; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, Gelenkpunktat oder anderen normalerweise sterilen Substraten",
+    "designation": [ {
+      "language": "de",
+      "value": "Streptococcus pneumoniae"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportSPNP"
+    } ]
+  }, {
+    "code": "trip",
+    "display": "Trichinella spiralis",
+    "designation": [ {
+      "language": "de",
+      "value": "Trichinella spiralis"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportTRIP"
+    } ]
+  }, {
+    "code": "vzvp",
+    "display": "Varizella-Zoster-Virus",
+    "designation": [ {
+      "language": "de",
+      "value": "Varizella-Zoster-Virus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportVZVP"
+    } ]
+  }, {
+    "code": "vchp",
+    "display": "Vibrio spp. (humanpathogen); soweit ausschließlich eine Ohrinfektion vorliegt nur bei Vibrio cholerae",
+    "designation": [ {
+      "language": "de",
+      "value": "Vibrio spp."
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportVCHP"
+    } ]
+  }, {
+    "code": "wnvp",
+    "display": "West-Nil-Virus",
+    "designation": [ {
+      "language": "de",
+      "value": "West-Nil-Virus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportWNVP"
+    } ]
+  }, {
+    "code": "ypsp",
+    "display": "Yersinia pestis",
+    "designation": [ {
+      "language": "de",
+      "value": "Yersinia pestis"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportYPSP"
+    } ]
+  }, {
+    "code": "yenp",
+    "display": "Yersinia spp. (darmpathogen)",
+    "designation": [ {
+      "language": "de",
+      "value": "Yersinia spp."
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportYENP"
+    } ]
+  }, {
+    "code": "zkvp",
+    "display": "Zika-Virus",
+    "designation": [ {
+      "language": "de",
+      "value": "Zika-Virus"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportZKVP"
+    } ]
+  }, {
+    "code": "abvp",
+    "display": "Arboviren (sonstige)",
+    "designation": [ {
+      "language": "de",
+      "value": "sonstige Arboviren"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportABVP"
+    } ]
+  }, {
+    "code": "hfap",
+    "display": "Andere Erreger hämorrhagischer Fieber",
+    "designation": [ {
+      "language": "de",
+      "value": "Erreger hämorrhagischer Fieber"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportHFAP"
+    } ]
+  }, {
+    "code": "mrap",
+    "display": "Staphylococcus aureus (Methicillin-resistente Stämme); Meldepflicht nur für den Nachweis aus Blut oder Liquor",
+    "designation": [ {
+      "language": "de",
+      "value": "MRSA"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportMRAP"
+    } ]
+  }, {
+    "code": "ebcp",
+    "display": "Enterobacterales bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation",
+    "designation": [ {
+      "language": "de",
+      "value": "Enterobacterales"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportEBCP"
+    } ]
+  }, {
+    "code": "acbp",
+    "display": "Acinetobacter spp. bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation.",
+    "designation": [ {
+      "language": "de",
+      "value": "Acinetobacter spp."
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportACBP"
+    } ]
+  }, {
+    "code": "wbkp",
+    "display": "Krankheitserreger unter Berücksichtigung der Art der Krankheitserreger und der Häufigkeit ihres Nachweises wenn Hinweise auf eine schwerwiegende Gefahr für die Allgemeinheit bestehen",
+    "designation": [ {
+      "language": "de",
+      "value": "Weitere bedrohliche Erreger"
+    } ],
+    "property": [ {
+      "code": "usage-status",
+      "valueCode": "active"
+    }, {
+      "code": "diagnosticReport-profile",
+      "valueString": "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportWBKP"
+    } ]
+  } ]
+}

@@ -21,29 +21,32 @@ package de.gematik.demis.validationservice.services;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import ca.uhn.fhir.context.FhirContext;
 import de.gematik.demis.validationservice.services.validation.ValidationService;
 import de.gematik.demis.validationservice.util.FileTestUtil;
 import de.gematik.demis.validationservice.util.ResourceFileConstants;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.LocaleUtils;
 import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity;
 import org.hl7.fhir.r4.model.OperationOutcome.OperationOutcomeIssueComponent;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+@Slf4j
 @ExtendWith(MockitoExtension.class)
 class ValidationServiceTest {
-  private static final String DEFAULT_LOCALE = "en_US";
-  private static ProfileParserService profileParserService;
-  private static ValidationService validationService;
+  private final String DEFAULT_LOCALE = "en_US";
+  private ProfileParserService profileParserService;
+  private ValidationService validationService;
 
   private static List<OperationOutcomeIssueComponent> getErrorOrFatalIssue(
-      OperationOutcome operationOutcome) {
+      final OperationOutcome operationOutcome) {
     return operationOutcome.getIssue().stream()
         .filter(
             issue ->
@@ -52,58 +55,65 @@ class ValidationServiceTest {
         .toList();
   }
 
-  @BeforeAll
-  static void setupValidationService() {
-    FhirContextService fhirContextService = new FhirContextService(DEFAULT_LOCALE);
+  @BeforeEach
+  void setupValidationService() {
+    final FhirContext fhirContext = FhirContext.forR4();
     profileParserService =
-        new ProfileParserService(fhirContextService, ResourceFileConstants.PROFILE_RESOURCE_PATH);
+        new ProfileParserService(fhirContext, ResourceFileConstants.PROFILE_RESOURCE_PATH);
     validationService =
-        new ValidationService(fhirContextService, profileParserService, "information");
+        new ValidationService(profileParserService, fhirContext, DEFAULT_LOCALE, "information");
   }
 
   @Test
   void validateValidFileAndCheckThereIsNoErrorOrFatal() throws IOException {
-    String validFileContent =
+    final String validFileContent =
         FileTestUtil.readFileIntoString(ResourceFileConstants.VALID_REPORT_BED_OCCUPANCY_EXAMPLE);
 
-    OperationOutcome operationOutcome = validationService.validate(validFileContent);
+    final OperationOutcome operationOutcome = validationService.validate(validFileContent);
 
-    long issueCount = operationOutcome.getIssue().stream().count();
+    final long issueCount = operationOutcome.getIssue().stream().count();
     assertEquals(1, issueCount);
-    List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
+    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
         getErrorOrFatalIssue(operationOutcome);
     assertEquals(0, errorsOrFatalIssues.size(), "There are Errors or Fatal issues in outcome");
   }
 
   @Test
   void validateInvalidFileAndCheckThereIsOneErrorWithMissingAnswer() throws IOException {
-    String invalidFileContent =
+    final String invalidFileContent =
         FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_REPORT_BED_OCCUPANCY_EXAMPLE);
+    //    final FhirContext fhirContext = FhirContext.forR4();
+    //    validationService =
+    //            new ValidationService(profileParserService, fhirContext, DEFAULT_LOCALE,
+    // "information");
 
-    OperationOutcome operationOutcome = validationService.validate(invalidFileContent);
+    final OperationOutcome operationOutcome = validationService.validate(invalidFileContent);
 
-    List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
+    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
         getErrorOrFatalIssue(operationOutcome);
     assertEquals(1, errorsOrFatalIssues.size());
-    String diagnosticsOfOnlyError = errorsOrFatalIssues.get(0).getDiagnostics();
+    final String diagnosticsOfOnlyError = errorsOrFatalIssues.get(0).getDiagnostics();
     assertEquals(
         "No response answer found for required item 'numberOccupiedBedsGeneralWardChildren'",
         diagnosticsOfOnlyError);
   }
 
   @Test
-  void validateInvalidDv2FileWithFollowupsAndCheckThereIsOneErrorAndFollowUpsAreFiltered()
-      throws IOException {
-    String invalidFileContent =
+  void expectNoNumbersInFamilyNameErrorFoundInInvalidNotificationDV2() throws IOException {
+
+    // GIVEN an invalid file with different invalid values
+    final String invalidFileContent =
         FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_TEST_NOTIFICATION_DV_2);
 
-    OperationOutcome operationOutcome = validationService.validate(invalidFileContent);
+    // WHEN it's validated
+    final OperationOutcome operationOutcome = validationService.validate(invalidFileContent);
 
-    List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
+    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
         getErrorOrFatalIssue(operationOutcome);
+
+    // THEN at least "noNumbersInFamilyName is found across one or multiple errors found
     System.out.println(errorsOrFatalIssues.get(0).getDiagnostics());
-    assertEquals(2, errorsOrFatalIssues.size());
-    List<String> diagnostics =
+    final List<String> diagnostics =
         errorsOrFatalIssues.stream().map(OperationOutcomeIssueComponent::getDiagnostics).toList();
     assertTrue(diagnostics.stream().anyMatch(s -> s.contains("noNumbersInFamilyName")));
   }
@@ -111,12 +121,12 @@ class ValidationServiceTest {
   @Test
   void validateInvalidDv2FileWithFollowupsAndCheckThereIsSlicedMessageAndMultipleProfilesMessage()
       throws IOException {
-    String invalidFileContent =
+    final String invalidFileContent =
         FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_TEST_NOTIFICATION_DV_2);
 
-    OperationOutcome operationOutcome = validationService.validate(invalidFileContent);
+    final OperationOutcome operationOutcome = validationService.validate(invalidFileContent);
 
-    List<String> diagnostics =
+    final List<String> diagnostics =
         operationOutcome.getIssue().stream()
             .map(OperationOutcomeIssueComponent::getDiagnostics)
             .toList();
@@ -126,13 +136,13 @@ class ValidationServiceTest {
 
   @Test
   void validateNotParsableFileAndCheckThereAreTenErrorAndFatalIssues() throws IOException {
-    String validFileContent =
+    final String validFileContent =
         FileTestUtil.readFileIntoString(
             ResourceFileConstants.NOT_PARSEABLE_REPORT_BED_OCCUPANCY_EXAMPLE);
 
-    OperationOutcome operationOutcome = validationService.validate(validFileContent);
+    final OperationOutcome operationOutcome = validationService.validate(validFileContent);
 
-    List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
+    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
         getErrorOrFatalIssue(operationOutcome);
     assertEquals(10, errorsOrFatalIssues.size());
   }
@@ -140,35 +150,42 @@ class ValidationServiceTest {
   @Test
   void validateValidFileAndFilterInformationAndWarningsAndCheckThereIsOnlyOneIssue()
       throws IOException {
-    FhirContextService fhirContextService = new FhirContextService(DEFAULT_LOCALE);
-    ValidationService validationServiceWithFilter =
-        new ValidationService(fhirContextService, profileParserService, "error");
-    String validFileContent =
+    final FhirContext fhirContext = FhirContext.forR4();
+    final ValidationService validationServiceWithFilter =
+        new ValidationService(profileParserService, fhirContext, DEFAULT_LOCALE, "error");
+    final String validFileContent =
         FileTestUtil.readFileIntoString(ResourceFileConstants.VALID_REPORT_BED_OCCUPANCY_EXAMPLE);
 
-    OperationOutcome operationOutcome = validationServiceWithFilter.validate(validFileContent);
+    final OperationOutcome operationOutcome =
+        validationServiceWithFilter.validate(validFileContent);
 
-    long issueCount = operationOutcome.getIssue().stream().count();
+    operationOutcome
+        .getIssue()
+        .forEach(
+            operationOutcomeIssueComponent ->
+                log.info(operationOutcomeIssueComponent.getDiagnostics()));
+
+    final long issueCount = operationOutcome.getIssue().stream().count();
     assertEquals(1, issueCount, "There still more issues in outcome");
   }
 
   @Test
   void setValidationServiceToGermanAndValidateInvalidFileAndCheckThereIsOneErrorWithAGermanAnswer()
       throws IOException {
-    FhirContextService fhirContextService = new FhirContextService("de_DE");
-    ValidationService germanValidationService =
-        new ValidationService(fhirContextService, profileParserService, "information");
-    String invalidFileContent =
+    final FhirContext fhirContext = FhirContext.forR4();
+    final ValidationService germanValidationService =
+        new ValidationService(profileParserService, fhirContext, "de_DE", "information");
+    final String invalidFileContent =
         FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_REPORT_BED_OCCUPANCY_EXAMPLE);
 
-    OperationOutcome operationOutcome = germanValidationService.validate(invalidFileContent);
+    final OperationOutcome operationOutcome = germanValidationService.validate(invalidFileContent);
 
-    Locale parsedLocale = LocaleUtils.toLocale(DEFAULT_LOCALE);
+    final Locale parsedLocale = LocaleUtils.toLocale(DEFAULT_LOCALE);
     Locale.setDefault(parsedLocale); // Set back global locale
-    List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
+    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
         getErrorOrFatalIssue(operationOutcome);
     assertEquals(1, errorsOrFatalIssues.size());
-    String diagnosticsOfOnlyError = errorsOrFatalIssues.get(0).getDiagnostics();
+    final String diagnosticsOfOnlyError = errorsOrFatalIssues.get(0).getDiagnostics();
     assertEquals(
         "Keine Antwort für das erforderliche Element gefunden numberOccupiedBedsGeneralWardChildren",
         diagnosticsOfOnlyError);

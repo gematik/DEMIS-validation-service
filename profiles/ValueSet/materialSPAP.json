@@ -1,0 +1,50 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialSPAP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialSPAP",
+  "version": "1.1.0",
+  "name": "MaterialSPAP",
+  "title": "Material für Salmonella Paratyphi; Meldepflicht für alle direkten Nachweise",
+  "status": "active",
+  "date": "2021-12-01",
+  "description": "Das ValueSet MaterialSPAP enthält die Codes der Materialien für Salmonella Paratyphi; Meldepflicht für alle direkten Nachweise.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)"
+      }, {
+        "code": "119339001",
+        "display": "Stool specimen (specimen)"
+      }, {
+        "code": "258528007",
+        "display": "Rectal swab (specimen)"
+      }, {
+        "code": "122572000",
+        "display": "Vomitus specimen (specimen)"
+      }, {
+        "code": "258580003",
+        "display": "Whole blood sample (specimen)"
+      }, {
+        "code": "878861003",
+        "display": "Blood specimen in blood culture bottle (specimen)"
+      }, {
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)"
+      }, {
+        "code": "119371008",
+        "display": "Specimen from abscess (specimen)"
+      }, {
+        "code": "119359002",
+        "display": "Bone marrow specimen (specimen)"
+      }, {
+        "code": "122575003",
+        "display": "Urine specimen (specimen)"
+      }, {
+        "code": "122574004",
+        "display": "Duodenal fluid specimen (specimen)"
+      } ]
+    } ]
+  }
+}

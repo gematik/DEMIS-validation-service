@@ -1,0 +1,212 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetACBP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetACBP",
+  "version": "1.0.0",
+  "name": "AnswerSetACBP",
+  "title": "AnswerSet für Acinetobacter spp. bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation.",
+  "status": "active",
+  "date": "2022-03-23",
+  "description": "Das ValueSet AnswerSetACBP enthält die Codes der Answer-Codes für Acinetobacter spp. bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "91288006",
+        "display": "Acinetobacter baumannii (organism)"
+      }, {
+        "code": "1003795002",
+        "display": "Acinetobacter baumannii group (organism)"
+      }, {
+        "code": "423974000",
+        "display": "Acinetobacter baylyi (organism)"
+      }, {
+        "code": "771547006",
+        "display": "Acinetobacter beijerinckii (organism)"
+      }, {
+        "code": "700398000",
+        "display": "Acinetobacter bereziniae (organism)"
+      }, {
+        "code": "424539001",
+        "display": "Acinetobacter bouvetii (organism)"
+      }, {
+        "code": "82550008",
+        "display": "Acinetobacter calcoaceticus (organism)"
+      }, {
+        "code": "113376007",
+        "display": "Acinetobacter calcoaceticus-Acinetobacter baumannii complex (organism)"
+      }, {
+        "code": "890447005",
+        "display": "Acinetobacter courvalinii (organism)"
+      }, {
+        "code": "788668000",
+        "display": "Acinetobacter dispersus (organism)"
+      }, {
+        "code": "445480005",
+        "display": "Acinetobacter genomospecies 9 (organism)"
+      }, {
+        "code": "131203002",
+        "display": "Acinetobacter genospecies (organism)"
+      }, {
+        "code": "113383000",
+        "display": "Acinetobacter genospecies 14 (organism)"
+      }, {
+        "code": "113385007",
+        "display": "Acinetobacter genospecies 16 (organism)"
+      }, {
+        "code": "113377003",
+        "display": "Acinetobacter genospecies 3 (organism)"
+      }, {
+        "code": "113378008",
+        "display": "Acinetobacter genospecies 6 (organism)"
+      }, {
+        "code": "424700008",
+        "display": "Acinetobacter gerneri (organism)"
+      }, {
+        "code": "423329001",
+        "display": "Acinetobacter grimontii (organism)"
+      }, {
+        "code": "700397005",
+        "display": "Acinetobacter guillouiae (organism)"
+      }, {
+        "code": "450384008",
+        "display": "Acinetobacter gyllenbergii (organism)"
+      }, {
+        "code": "77045006",
+        "display": "Acinetobacter haemolyticus (organism)"
+      }, {
+        "code": "708566008",
+        "display": "Acinetobacter indicus (organism)"
+      }, {
+        "code": "252000",
+        "display": "Acinetobacter johnsonii (organism)"
+      }, {
+        "code": "13879009",
+        "display": "Acinetobacter junii (organism)"
+      }, {
+        "code": "787183008",
+        "display": "Acinetobacter lactucae (organism)"
+      }, {
+        "code": "83088009",
+        "display": "Acinetobacter lwoffii (organism)"
+      }, {
+        "code": "890448000",
+        "display": "Acinetobacter modestus (organism)"
+      }, {
+        "code": "723323008",
+        "display": "Acinetobacter nectaris (organism)"
+      }, {
+        "code": "708859003",
+        "display": "Acinetobacter nosocomialis (organism)"
+      }, {
+        "code": "423516002",
+        "display": "Acinetobacter parvus (organism)"
+      }, {
+        "code": "698244000",
+        "display": "Acinetobacter pittii (organism)"
+      }, {
+        "code": "797934007",
+        "display": "Acinetobacter proteolyticus (organism)"
+      }, {
+        "code": "113381003",
+        "display": "Acinetobacter radioresistens (organism)"
+      }, {
+        "code": "115391000146107",
+        "display": "Acinetobacter rudis (organism)"
+      }, {
+        "code": "423732001",
+        "display": "Acinetobacter schindleri (organism)"
+      }, {
+        "code": "787184002",
+        "display": "Acinetobacter seifertii (organism)"
+      }, {
+        "code": "700396001",
+        "display": "Acinetobacter soli (organism)"
+      }, {
+        "code": "424021002",
+        "display": "Acinetobacter tandoii (organism)"
+      }, {
+        "code": "425109008",
+        "display": "Acinetobacter tjernbergiae (organism)"
+      }, {
+        "code": "424930007",
+        "display": "Acinetobacter towneri (organism)"
+      }, {
+        "code": "424791004",
+        "display": "Acinetobacter ursingii (organism)"
+      }, {
+        "code": "113384006",
+        "display": "Acinetobacter variabilis (organism)"
+      }, {
+        "code": "28931000087103",
+        "display": "Acinetobacter venetianus (organism)"
+      }, {
+        "code": "419589005",
+        "display": "Asaccharolytic acinetobacter (organism)"
+      }, {
+        "code": "719030002",
+        "display": "Asaccharolytic hemolytic Acinetobacter (organism)"
+      }, {
+        "code": "719027009",
+        "display": "Asaccharolytic non-hemolytic Acinetobacter (organism)"
+      }, {
+        "code": "445721008",
+        "display": "Carbapenem resistant Acinetobacter (organism)"
+      }, {
+        "code": "715174007",
+        "display": "Carbapenem resistant Acinetobacter baumannii (organism)"
+      }, {
+        "code": "1085501000112104",
+        "display": "Carbapenemase-producing Acinetobacter (organism)"
+      }, {
+        "code": "737526007",
+        "display": "Carbapenemase-producing Acinetobacter baumannii (organism)"
+      }, {
+        "code": "1085401000112103",
+        "display": "Carbapenemase-producing Acinetobacter baumannii-Acinetobacter calcoaceticus complex (organism)"
+      }, {
+        "code": "1085301000112105",
+        "display": "Carbapenemase-producing Acinetobacter calcoaceticus (organism)"
+      }, {
+        "code": "1085701000112109",
+        "display": "Carbapenemase-producing Acinetobacter johnsonii (organism)"
+      }, {
+        "code": "1085801000112101",
+        "display": "Carbapenemase-producing Acinetobacter junii (organism)"
+      }, {
+        "code": "1085901000112106",
+        "display": "Carbapenemase-producing Acinetobacter lwoffii (organism)"
+      }, {
+        "code": "1086001000112103",
+        "display": "Carbapenemase-producing Acinetobacter nosocomialis (organism)"
+      }, {
+        "code": "1086101000112102",
+        "display": "Carbapenemase-producing Acinetobacter radioresistens (organism)"
+      }, {
+        "code": "1086201000112108",
+        "display": "Carbapenemase-producing Acinetobacter ursingii (organism)"
+      }, {
+        "code": "816084004",
+        "display": "Carbapenem-resistant Acinetobacter baumannii-calcoaceticus complex (organism)"
+      }, {
+        "code": "7757008",
+        "display": "Genus Acinetobacter (organism)"
+      }, {
+        "code": "446157004",
+        "display": "Multidrug-resistant Acinetobacter (organism)"
+      }, {
+        "code": "715353004",
+        "display": "Multiple drug-resistant Acinetobacter baumannii (organism)"
+      }, {
+        "code": "418688000",
+        "display": "Saccharolytic Acinetobacter (organism)"
+      }, {
+        "code": "719031003",
+        "display": "Saccharolytic hemolytic Acinetobacter (organism)"
+      }, {
+        "code": "719032005",
+        "display": "Saccharolytic non-hemolytic Acinetobacter (organism)"
+      } ]
+    } ]
+  }
+}

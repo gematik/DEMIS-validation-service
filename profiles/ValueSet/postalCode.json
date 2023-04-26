@@ -1,0 +1,23 @@
+{
+  "resourceType": "ValueSet",
+  "id": "postalCode",
+  "url": "https://demis.rki.de/fhir/ValueSet/postalCode",
+  "version": "1.0.0",
+  "name": "PostalCode",
+  "title": "Postleitzahl",
+  "status": "active",
+  "date": "2021-03-26",
+  "description": "Das ValueSet PostalCode enthält die Codes der Postleitzahlen.",
+  "jurisdiction": [ {
+    "coding": [ {
+      "system": "urn:iso:std:iso:3166",
+      "version": "ALPHA-2",
+      "code": "DE"
+    } ]
+  } ],
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/postalCode"
+    } ]
+  }
+}

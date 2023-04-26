@@ -7,6 +7,13 @@ STOPSIGNAL SIGTERM
 # Define the exposed port or range of ports for the service
 EXPOSE 8080
 
+# Defining Healthcheck
+HEALTHCHECK --interval=15s \
+            --timeout=10s \
+            --start-period=30s \
+            --retries=3 \
+            CMD ["/usr/bin/wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/actuator/health"]
+
 # Default USERID and GROUPID
 ARG USERID=10000
 ARG GROUPID=10000

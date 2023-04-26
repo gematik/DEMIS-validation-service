@@ -29,7 +29,7 @@ public final class ResourceFileConstants {
       "./src/test/resources/invalid_test_notification_dv2.json";
   public static final String NOT_PARSEABLE_REPORT_BED_OCCUPANCY_EXAMPLE =
       "./src/test/resources/not_parseable_report_bed_occupancy_example.json";
-  public static final String PROFILE_RESOURCE_PATH = "/profile";
+  public static final String PROFILE_RESOURCE_PATH = "./profiles";
 
   private ResourceFileConstants() {}
 }

@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestVCHP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestVCHP",
+  "version": "1.2.0",
+  "name": "LaboratoryTestVCHP",
+  "title": "Labortest für Vibrio spp. (humanpathogen); soweit ausschließlich eine Ohrinfektion vorliegt nur bei Vibrio cholerae",
+  "status": "active",
+  "date": "2021-12-19",
+  "description": "Das ValueSet LaboratoryTestVCHP enthält die Codes der Labortests für Vibrio spp. (humanpathogen); soweit ausschließlich eine Ohrinfektion vorliegt nur bei Vibrio cholerae.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "41857-4",
+        "display": "Vibrio parahaemolyticus DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "49609-1",
+        "display": "Vibrio sp DNA [Identifier] in Specimen by NAA with probe detection"
+      }, {
+        "code": "53941-1",
+        "display": "Vibrio cholerae toxin Ag [Presence] in Isolate"
+      }, {
+        "code": "53942-9",
+        "display": "Vibrio cholerae toxin ctx gene [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "61371-1",
+        "display": "Vibrio cholerae DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "6578-9",
+        "display": "Vibrio sp identified in Blood by Organism specific culture"
+      }, {
+        "code": "6579-7",
+        "display": "Vibrio sp identified in Stool by Organism specific culture"
+      }, {
+        "code": "6580-5",
+        "display": "Vibrio sp identified in Water by Organism specific culture"
+      }, {
+        "code": "6581-3",
+        "display": "Vibrio sp identified in Specimen by Organism specific culture"
+      }, {
+        "code": "80680-2",
+        "display": "Vibrio cholerae toxin ctxA gene [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "82201-5",
+        "display": "Vibrio cholerae DNA [Presence] in Stool by NAA with non-probe detection"
+      }, {
+        "code": "97314-9",
+        "display": "Vibrio cholerae DNA [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "97315-6",
+        "display": "Vibrio parahaemolyticus DNA [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "97316-4",
+        "display": "Vibrio vulnificus DNA [Presence] in Stool by NAA with probe detection"
+      } ]
+    } ]
+  }
+}

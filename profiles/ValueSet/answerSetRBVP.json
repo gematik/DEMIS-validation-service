@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetRBVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetRBVP",
+  "version": "1.0.0",
+  "name": "AnswerSetRBVP",
+  "title": "AnswerSet für Rabiesvirus",
+  "status": "active",
+  "date": "2021-12-19",
+  "description": "Das ValueSet AnswerSetRBVP enthält die Codes der Answer-Codes für Rabiesvirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "450805000",
+        "display": "European bat lyssavirus 1 (organism)"
+      }, {
+        "code": "450806004",
+        "display": "European bat lyssavirus 2 (organism)"
+      }, {
+        "code": "112368004",
+        "display": "Genus Lyssavirus (organism)"
+      }, {
+        "code": "59881000",
+        "display": "Rabies virus (organism)"
+      }, {
+        "code": "12551003",
+        "display": "Mokola virus (organism)"
+      }, {
+        "code": "32052006",
+        "display": "Lagos bat virus (organism)"
+      }, {
+        "code": "72296007",
+        "display": "Duvenhage virus (organism)"
+      }, {
+        "code": "426972006",
+        "display": "Australian bat lyssavirus (organism)"
+      } ]
+    } ]
+  }
+}

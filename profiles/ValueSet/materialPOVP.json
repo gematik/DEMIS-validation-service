@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialPOVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialPOVP",
+  "version": "1.0.0",
+  "name": "MaterialPOVP",
+  "title": "Material für Poliovirus",
+  "status": "active",
+  "date": "2021-11-22",
+  "description": "Das ValueSet MaterialPOVP enthält die Codes der Materialien für Poliovirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119339001",
+        "display": "Stool specimen (specimen)"
+      }, {
+        "code": "472881004",
+        "display": "Swab from pharynx (specimen)"
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid sample (specimen)"
+      } ]
+    } ]
+  }
+}

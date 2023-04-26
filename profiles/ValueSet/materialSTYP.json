@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialSTYP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialSTYP",
+  "version": "1.1.1",
+  "name": "MaterialSTYP",
+  "title": "Material für Salmonella Typhi; Meldepflicht für alle direkten Nachweise",
+  "status": "active",
+  "date": "2021-11-30",
+  "description": "Das ValueSet MaterialSTYP enthält die Codes der Materialien für Salmonella Typhi; Meldepflicht für alle direkten Nachweise.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119303007",
+        "display": "Microbial isolate specimen (specimen)"
+      }, {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)"
+      }, {
+        "code": "119339001",
+        "display": "Stool specimen (specimen)"
+      }, {
+        "code": "258528007",
+        "display": "Rectal swab (specimen)"
+      }, {
+        "code": "122572000",
+        "display": "Vomitus specimen (specimen)"
+      }, {
+        "code": "119371008",
+        "display": "Specimen from abscess (specimen)"
+      }, {
+        "code": "258580003",
+        "display": "Whole blood sample (specimen)"
+      }, {
+        "code": "878861003",
+        "display": "Blood specimen in blood culture bottle (specimen)"
+      }, {
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)"
+      }, {
+        "code": "119359002",
+        "display": "Bone marrow specimen (specimen)"
+      }, {
+        "code": "122575003",
+        "display": "Urine specimen (specimen)"
+      }, {
+        "code": "122574004",
+        "display": "Duodenal fluid specimen (specimen)"
+      } ]
+    } ]
+  }
+}

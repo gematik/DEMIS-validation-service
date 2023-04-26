@@ -1,0 +1,58 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestCHLP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestCHLP",
+  "version": "1.0.0",
+  "name": "LaboratoryTestCHLP",
+  "title": "Labortest für Chlamydia psittaci",
+  "status": "active",
+  "date": "2021-11-22",
+  "description": "Das ValueSet LaboratoryTestCHLP enthält die Codes der Labortests für Chlamydia psittaci.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "14198-6",
+        "display": "Chlamydophila psittaci Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "20752-2",
+        "display": "Chlamydophila psittaci [Presence] in Specimen by Organism specific culture"
+      }, {
+        "code": "22992-2",
+        "display": "Chlamydophila psittaci [Presence] in Specimen by Giemsa stain"
+      }, {
+        "code": "22993-0",
+        "display": "Chlamydophila psittaci [Presence] in Placenta by Electron microscopy"
+      }, {
+        "code": "22996-3",
+        "display": "Chlamydophila psittaci Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "23001-1",
+        "display": "Chlamydophila psittaci DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "51808-4",
+        "display": "Chlamydophila psittaci IgG Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "51809-2",
+        "display": "Chlamydophila psittaci IgM Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "59065-3",
+        "display": "Chlamydophila psittaci [Presence] in Bronchial brush by Organism specific culture"
+      }, {
+        "code": "6915-3",
+        "display": "Chlamydophila psittaci IgA Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "6916-1",
+        "display": "Chlamydophila psittaci IgG Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "6917-9",
+        "display": "Chlamydophila psittaci IgM Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF"
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

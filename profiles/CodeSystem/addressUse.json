@@ -1,0 +1,49 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "addressUse",
+  "url": "https://demis.rki.de/fhir/CodeSystem/addressUse",
+  "version": "1.0.0",
+  "name": "AddressUse",
+  "title": "Adressnutzung",
+  "status": "active",
+  "date": "2021-03-26",
+  "description": "Das CodeSystem AddressUse enthält die Codes für die Adressnutzung.",
+  "caseSensitive": false,
+  "valueSet": "https://demis.rki.de/fhir/ValueSet/addressUse",
+  "content": "complete",
+  "count": 3,
+  "concept": [ {
+    "code": "current",
+    "display": "Derzeitiger Aufenthaltsort",
+    "designation": [ {
+      "language": "en",
+      "use": {
+        "system": "http://snomed.info/sct",
+        "code": "900000000000003001"
+      },
+      "value": "Current Residence"
+    } ]
+  }, {
+    "code": "ordinary",
+    "display": "Gewöhnlicher Aufenthaltsort",
+    "designation": [ {
+      "language": "en",
+      "use": {
+        "system": "http://snomed.info/sct",
+        "code": "900000000000003001"
+      },
+      "value": "Ordinary Residence"
+    } ]
+  }, {
+    "code": "primary",
+    "display": "Hauptwohnsitz",
+    "designation": [ {
+      "language": "en",
+      "use": {
+        "system": "http://snomed.info/sct",
+        "code": "900000000000003001"
+      },
+      "value": "Primary Residence"
+    } ]
+  } ]
+}

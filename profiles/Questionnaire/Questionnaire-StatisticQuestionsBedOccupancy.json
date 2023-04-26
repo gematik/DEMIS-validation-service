@@ -1,0 +1,32 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "StatisticQuestionsBedOccupancy",
+  "url": "https://demis.rki.de/fhir/Questionnaire/StatisticQuestionsBedOccupancy",
+  "version": "1.0.0",
+  "name": "StatisticQuestionsBedOccupancy",
+  "title": "Fragebogen zur Krankenhausbettenbelegung",
+  "status": "active",
+  "date": "2022-07-07",
+  "description": "Dieser Fragebogen definiert die im Rahmen der Meldepflicht zur Krankenhausbettenbelegung (§13 Absatz 7 IfSG) zu berichtenden Angaben.",
+  "item": [ {
+    "linkId": "numberOperableBedsGeneralWardAdults",
+    "text": "Anzahl betreibbarer Betten auf Normalstationen für Erwachsene",
+    "type": "integer",
+    "required": false
+  }, {
+    "linkId": "numberOccupiedBedsGeneralWardAdults",
+    "text": "Anzahl belegter Betten auf Normalstationen für Erwachsene",
+    "type": "integer",
+    "required": true
+  }, {
+    "linkId": "numberOperableBedsGeneralWardChildren",
+    "text": "Anzahl betreibbarer Betten auf Normalstationen für Kinder",
+    "type": "integer",
+    "required": false
+  }, {
+    "linkId": "numberOccupiedBedsGeneralWardChildren",
+    "text": "Anzahl belegter Betten auf Normalstationen für Kinder",
+    "type": "integer",
+    "required": true
+  } ]
+}

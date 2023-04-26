@@ -1,0 +1,23 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialADVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialADVP",
+  "version": "1.0.0",
+  "name": "MaterialADVP",
+  "title": "Material für Adenoviren; Meldepflicht nur für den direkten Nachweis im Konjunktivalabstrich",
+  "status": "active",
+  "date": "2021-11-24",
+  "description": "Das ValueSet MaterialADVP enthält die Codes der Materialien für Adenoviren; Meldepflicht nur für den direkten Nachweis im Konjunktivalabstrich.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119401005",
+        "display": "Specimen from conjunctiva (specimen)"
+      }, {
+        "code": "258498002",
+        "display": "Conjunctival swab (specimen)"
+      } ]
+    } ]
+  }
+}

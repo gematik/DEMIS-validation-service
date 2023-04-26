@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestSTYP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestSTYP",
+  "version": "1.2.0",
+  "name": "LaboratoryTestSTYP",
+  "title": "Labortest für Salmonella Typhi; Meldepflicht für alle direkten Nachweise",
+  "status": "active",
+  "date": "2021-12-07",
+  "description": "Das ValueSet LaboratoryTestSTYP enthält die Codes der Labortests für Salmonella Typhi; Meldepflicht für alle direkten Nachweise.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "53956-9",
+        "display": "Salmonella typhi [Identifier] in Isolate by Agglutination"
+      }, {
+        "code": "70021-1",
+        "display": "Salmonella typhi DNA [Presence] in Blood by NAA with probe detection"
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF"
+      }, {
+        "code": "86930-5",
+        "display": "Carbapenemase [Presence] in Isolate"
+      }, {
+        "code": "88462-7",
+        "display": "Carbapenem [Susceptibility]"
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

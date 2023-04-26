@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialLSVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialLSVP",
+  "version": "1.0.0",
+  "name": "MaterialLSVP",
+  "title": "Material für Lassavirus",
+  "status": "active",
+  "date": "2021-10-17",
+  "description": "Das ValueSet MaterialLSVP enthält die Codes der Materialien für Lassavirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)"
+      }, {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)"
+      }, {
+        "code": "119342007",
+        "display": "Saliva specimen (specimen)"
+      }, {
+        "code": "472881004",
+        "display": "Swab from pharynx (specimen)"
+      }, {
+        "code": "122575003",
+        "display": "Urine specimen (specimen)"
+      }, {
+        "code": "418564007",
+        "display": "Pleural fluid specimen (specimen)"
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid sample (specimen)"
+      } ]
+    } ]
+  }
+}

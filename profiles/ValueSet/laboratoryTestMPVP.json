@@ -1,0 +1,107 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestMPVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestMPVP",
+  "version": "1.1.0",
+  "name": "LaboratoryTestMPVP",
+  "title": "Labortest für Mumpsvirus",
+  "status": "active",
+  "date": "2022-03-17",
+  "description": "Das ValueSet LaboratoryTestMPVP enthält die Codes der Labortests für Mumpsvirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "13267-0",
+        "display": "Mumps virus IgM Ab [Units/volume] in Cerebral spinal fluid"
+      }, {
+        "code": "13921-2",
+        "display": "Mumps virus [Presence] in Specimen by Organism specific culture"
+      }, {
+        "code": "21402-3",
+        "display": "Mumps virus IgM Ab [Titer] in Cerebral spinal fluid by Immunofluorescence"
+      }, {
+        "code": "22416-2",
+        "display": "Mumps virus IgG Ab [Titer] in Cerebral spinal fluid"
+      }, {
+        "code": "22418-8",
+        "display": "Mumps virus IgM Ab [Presence] in Serum"
+      }, {
+        "code": "22419-6",
+        "display": "Mumps virus IgM Ab [Titer] in Cerebral spinal fluid"
+      }, {
+        "code": "22420-4",
+        "display": "Mumps virus IgM Ab [Titer] in Serum"
+      }, {
+        "code": "21401-5",
+        "display": "Mumps virus IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence"
+      }, {
+        "code": "22417-0",
+        "display": "Mumps virus IgG Ab [Titer] in Serum"
+      }, {
+        "code": "6477-4",
+        "display": "Mumps virus IgG Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "25419-3",
+        "display": "Mumps virus IgM Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "31900-4",
+        "display": "Mumps virus Ag [Presence] in Specimen"
+      }, {
+        "code": "40738-7",
+        "display": "Mumps virus IgM Ab [Presence] in Cerebral spinal fluid by Immunoassay"
+      }, {
+        "code": "41131-4",
+        "display": "Mumps virus IgM Ab [Presence] in Cerebral spinal fluid"
+      }, {
+        "code": "47532-7",
+        "display": "Mumps virus RNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "53603-7",
+        "display": "Mumps virus RNA [Presence] in Serum by NAA with probe detection"
+      }, {
+        "code": "24240-4",
+        "display": "Mumps virus IgG Ab [Units/volume] in Serum --1st specimen"
+      }, {
+        "code": "24241-2",
+        "display": "Mumps virus IgG Ab [Units/volume] in Serum --2nd specimen"
+      }, {
+        "code": "6478-2",
+        "display": "Mumps virus IgM Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "6479-0",
+        "display": "Mumps virus IgM Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "6480-8",
+        "display": "Mumps virus Ag [Presence] in Serum by Immunofluorescence"
+      }, {
+        "code": "25418-5",
+        "display": "Mumps virus IgG Ab [Units/volume] in Serum by Immunoassay"
+      }, {
+        "code": "7967-3",
+        "display": "Mumps virus IgM Ab [Units/volume] in Serum"
+      }, {
+        "code": "7968-1",
+        "display": "Mumps virus RNA [Presence] in Cerebral spinal fluid by NAA with probe detection"
+      }, {
+        "code": "85800-1",
+        "display": "Mumps virus SH gene [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "85807-6",
+        "display": "Mumps virus genotype in Specimen"
+      }, {
+        "code": "86580-8",
+        "display": "Mumps virus RNA [Presence] in Urine by NAA with probe detection"
+      }, {
+        "code": "91787-2",
+        "display": "Mumps virus [Presence] in Upper respiratory specimen by Organism specific culture"
+      }, {
+        "code": "91806-0",
+        "display": "Mumps virus RNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "93749-0",
+        "display": "Mumps virus N gene [Cycle Threshold #] in Specimen by NAA with probe detection"
+      } ]
+    } ]
+  }
+}

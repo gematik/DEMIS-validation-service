@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialCORP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialCORP",
+  "version": "1.0.1",
+  "name": "MaterialCORP",
+  "title": "Material für Corynebacterium spp. (Toxin bildend)",
+  "status": "active",
+  "date": "2021-11-30",
+  "description": "Das ValueSet MaterialCORP enthält die Codes der Materialien für Corynebacterium spp., Toxin bildend.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "472881004",
+        "display": "Swab from pharynx (specimen)"
+      }, {
+        "code": "119365002",
+        "display": "Specimen from wound (specimen)"
+      }, {
+        "code": "878861003",
+        "display": "Blood specimen in blood culture bottle (specimen)"
+      }, {
+        "code": "472901003",
+        "display": "Swab from nasal sinus (specimen)"
+      }, {
+        "code": "309166000",
+        "display": "Ear swab sample (specimen)"
+      }, {
+        "code": "309079007",
+        "display": "Lymph node biopsy sample (specimen)"
+      }, {
+        "code": "257261003",
+        "display": "Swab (specimen)"
+      } ]
+    } ]
+  }
+}

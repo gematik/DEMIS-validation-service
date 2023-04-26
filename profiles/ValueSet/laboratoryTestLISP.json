@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestLISP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestLISP",
+  "version": "1.4.0",
+  "name": "LaboratoryTestLISP",
+  "title": "Labortest für Listeria monocytogenes; Meldepflicht nur für den direkten Nachweis aus Blut, Liquor oder anderen normalerweise sterilen Substraten sowie aus Abstrichen von Neugeborenen",
+  "status": "active",
+  "date": "2022-03-17",
+  "description": "Das ValueSet LaboratoryTestLISP enthält die Codes der Labortests für Listeria monocytogenes; Meldepflicht nur für den direkten Nachweis aus Blut, Liquor oder anderen normalerweise sterilen Substraten sowie aus Abstrichen von Neugeborenen.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "99091-1",
+        "display": "Listeria monocytogenes DNA [Presence] in Cerebral spinal fluid by NAA with probe detection"
+      }, {
+        "code": "85763-1",
+        "display": "Listeria monocytogenes DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "92780-6",
+        "display": "Listeria monocytogenes DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "89596-1",
+        "display": "Listeria monocytogenes DNA [Presence] in Blood by NAA with probe detection"
+      }, {
+        "code": "82184-3",
+        "display": "Listeria monocytogenes DNA [Presence] in Cerebral spinal fluid by NAA with non-probe detection"
+      }, {
+        "code": "61369-5",
+        "display": "Listeria monocytogenes DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "6609-2",
+        "display": "Listeria sp identified in Specimen by Organism specific culture"
+      }, {
+        "code": "5021-1",
+        "display": "Listeria monocytogenes rRNA [Presence] in Specimen by Probe"
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF"
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

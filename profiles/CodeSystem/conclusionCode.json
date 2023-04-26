@@ -1,0 +1,22 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "conclusionCode",
+  "url": "https://demis.rki.de/fhir/CodeSystem/conclusionCode",
+  "version": "1.2.0",
+  "name": "ConclusionCode",
+  "title": "Gesamttestergebnis",
+  "status": "active",
+  "date": "2021-12-08",
+  "description": "Das CodeSystem ConclusionCode enthält die Codes des Gesamttestergebnisses.",
+  "caseSensitive": false,
+  "valueSet": "https://demis.rki.de/fhir/ValueSet/conclusionCode",
+  "content": "complete",
+  "count": 2,
+  "concept": [ {
+    "code": "pathogenDetected",
+    "display": "Meldepflichtiger Erreger nachgewiesen"
+  }, {
+    "code": "pathogenNotDetected",
+    "display": "Meldepflichtiger Erreger nicht nachgewiesen"
+  } ]
+}

@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "id": "geographicRegion",
+  "url": "https://demis.rki.de/fhir/ValueSet/geographicRegion",
+  "version": "1.0.0",
+  "name": "GeographicRegion",
+  "title": "Geografische Region",
+  "status": "active",
+  "date": "2022-01-18",
+  "description": "Das ValueSet GeographicRegion enthält die Codes der geografischen Region.",
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/geographicRegion"
+    } ]
+  }
+}

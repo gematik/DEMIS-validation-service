@@ -14,6 +14,9 @@ required:
     # Overrides the image tag whose default is the chart appVersion. 
     # If not given, the Chart AppVersion will be used
     tag: null
+  # Version of the profiles to be used
+  profiles:
+    version: 1.0.0-b7
 
 # Define custom Container Entrypoint and Arguments (e.g. JVM Tuning)
 # If not given, the Entrypoint defined in Dockerfile will be used
@@ -21,6 +24,7 @@ application:
   entrypoint: ["java"]
   parameters: ["-XX:ActiveProcessorCount=2", "-XX:MaxRAMPercentage=95.0", "-XX:+TieredCompilation", "-XX:+UseSerialGC", "-jar", "-Xmx1G", "/app.jar"]
 
+imagePullPolicy: IfNotPresent
 # Define Image Pull Secrets if using private registry
 imagePullSecrets: []
 nameOverride: "validation-service"

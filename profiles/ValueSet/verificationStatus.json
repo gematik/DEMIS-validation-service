@@ -1,0 +1,23 @@
+{
+  "resourceType": "ValueSet",
+  "id": "verificationStatus",
+  "url": "https://demis.rki.de/fhir/ValueSet/verificationStatus",
+  "version": "1.0.0",
+  "name": "VerificationStatus",
+  "title": "Verifikationsstatus der Diagnose",
+  "status": "active",
+  "date": "2022-01-18",
+  "description": "Das ValueSet VerificationStatus enthält die Codes für den Verifikationsstatus der Diagnose.",
+  "compose": {
+    "include": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "concept": [ {
+        "code": "confirmed",
+        "display": "Confirmed"
+      }, {
+        "code": "unconfirmed",
+        "display": "Unconfirmed"
+      } ]
+    } ]
+  }
+}

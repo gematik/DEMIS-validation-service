@@ -1,0 +1,110 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestZKVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestZKVP",
+  "version": "1.0.0",
+  "name": "LaboratoryTestZKVP",
+  "title": "Labortest für Zika-Virus",
+  "status": "active",
+  "date": "2021-11-22",
+  "description": "Das ValueSet LaboratoryTestZKVP enthält die Codes der Labortests für Zika-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "95663-1",
+        "display": "Zika virus IgG Ab [Presence] in Specimen by Immunoassay"
+      }, {
+        "code": "97870-0",
+        "display": "Zika virus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay"
+      }, {
+        "code": "79190-5",
+        "display": "Zika virus RNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "80618-2",
+        "display": "Zika virus IgM Ab [Units/volume] in Cerebral spinal fluid by Immunoassay"
+      }, {
+        "code": "80619-0",
+        "display": "Zika virus IgM Ab [Units/volume] in Serum or Plasma by Immunoassay"
+      }, {
+        "code": "80622-4",
+        "display": "Zika virus neutralizing antibody [Titer] in Serum by Neutralization test --1st specimen"
+      }, {
+        "code": "80623-2",
+        "display": "Zika virus neutralizing antibody [Titer] in Serum by Neutralization test --2nd specimen"
+      }, {
+        "code": "80823-8",
+        "display": "Zika virus IgM Ab [Presence] in Cerebral spinal fluid by Immunoassay"
+      }, {
+        "code": "80824-6",
+        "display": "Zika virus IgM Ab [Presence] in Serum or Plasma by Immunoassay"
+      }, {
+        "code": "80825-3",
+        "display": "Zika virus envelope E gene [Presence] in Serum by NAA with probe detection"
+      }, {
+        "code": "80826-1",
+        "display": "Zika virus envelope E gene [Presence] in Cerebral spinal fluid by NAA with probe detection"
+      }, {
+        "code": "81148-9",
+        "display": "Zika virus envelope E gene [Presence] in Urine by NAA with probe detection"
+      }, {
+        "code": "81149-7",
+        "display": "Zika virus envelope E gene [Presence] in Amniotic fluid by NAA with probe detection"
+      }, {
+        "code": "82731-1",
+        "display": "Zika virus IgM Ab [Presence] in Serum by Immunofluorescence"
+      }, {
+        "code": "83069-5",
+        "display": "Zika virus non-structural protein 1 IgG Ab [Units/volume] in Serum or Plasma by Immunoassay"
+      }, {
+        "code": "85621-1",
+        "display": "Zika virus RNA [Presence] in Amniotic fluid by NAA with probe detection"
+      }, {
+        "code": "85622-9",
+        "display": "Zika virus RNA [Presence] in Serum or Plasma by NAA with probe detection"
+      }, {
+        "code": "85623-7",
+        "display": "Zika virus RNA [Presence] in Urine by NAA with probe detection"
+      }, {
+        "code": "86190-6",
+        "display": "Zika virus RNA [Presence] in Plasma from Donor by NAA with probe detection"
+      }, {
+        "code": "86594-9",
+        "display": "Zika virus RNA [Presence] in Cerebral spinal fluid by NAA with probe detection"
+      }, {
+        "code": "87439-6",
+        "display": "Zika virus IgA+IgG+IgM Ab [Interpretation] in Specimen Qualitative by Immunoassay"
+      }, {
+        "code": "87622-7",
+        "display": "Zika virus IgM Ab [Presence] in Specimen by Immunoassay"
+      }, {
+        "code": "89369-3",
+        "display": "Zika virus non-structural protein 1 IgM Ab [Units/volume] in Serum or Plasma by Immunoassay"
+      }, {
+        "code": "89370-1",
+        "display": "Zika virus non-structural protein 1 IgM Ab [Interpretation] in Serum by Immunoassay"
+      }, {
+        "code": "89590-4",
+        "display": "Zika virus IgG Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "89591-2",
+        "display": "Zika virus IgM Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "90462-3",
+        "display": "Zika virus RNA [Presence] in Cord blood by NAA with probe detection"
+      }, {
+        "code": "91078-6",
+        "display": "Zika virus RNA [Presence] in Blood by NAA with probe detection"
+      }, {
+        "code": "91079-4",
+        "display": "Zika virus RNA [Presence] in Placenta by NAA with probe detection"
+      }, {
+        "code": "91080-2",
+        "display": "Zika virus IgG Ab [Presence] in Serum or Plasma by Immunoassay"
+      }, {
+        "code": "91678-3",
+        "display": "Zika virus IgM Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay"
+      } ]
+    } ]
+  }
+}

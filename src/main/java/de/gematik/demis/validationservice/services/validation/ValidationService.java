@@ -25,7 +25,6 @@ import ca.uhn.fhir.validation.FhirValidator;
 import ca.uhn.fhir.validation.ResultSeverityEnum;
 import ca.uhn.fhir.validation.SingleValidationMessage;
 import ca.uhn.fhir.validation.ValidationResult;
-import de.gematik.demis.validationservice.services.FhirContextService;
 import de.gematik.demis.validationservice.services.ProfileParserService;
 import de.gematik.demis.validationservice.services.validation.severity.SeverityComparator;
 import de.gematik.demis.validationservice.services.validation.severity.SeverityParser;
@@ -38,6 +37,7 @@ import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.LocaleUtils;
 import org.hl7.fhir.common.hapi.validation.support.CommonCodeSystemsTerminologyService;
 import org.hl7.fhir.common.hapi.validation.support.InMemoryTerminologyServerValidationSupport;
 import org.hl7.fhir.common.hapi.validation.support.SnapshotGeneratingValidationSupport;
@@ -63,40 +63,39 @@ public class ValidationService {
   private static final Set<String> FILTERED_MESSAGES_KEYS =
       Set.of(
           "Reference_REF_CantMatchChoice",
-          "BUNDLE_BUNDLE_ENTRY_MULTIPLE_PROFILES",
+          "BUNDLE_BUNDLE_ENTRY_MULTIPLE_PROFILES_other",
           "Validation_VAL_Profile_NoMatch",
           "This_element_does_not_match_any_known_slice_");
-  private final FhirContextService fhirContextService;
+  private final FhirContext fhirContext;
   private final FhirValidator validator;
   private final ResultSeverityEnum minSeverityOutcome;
   private Set<String> filteredMessagePrefixes;
 
   public ValidationService(
-      FhirContextService fhirContextService,
-      ProfileParserService profileParserService,
-      @Value("${demis.validation-service.minSeverityOutcome}") String minSeverityOutcome) {
-    this.fhirContextService = fhirContextService;
+      final ProfileParserService profileParserService,
+      final FhirContext fhirContext,
+      @Value("${demis.validation-service.locale}") String locale,
+      @Value("${demis.validation-service.minSeverityOutcome}") final String minSeverityOutcome) {
     this.minSeverityOutcome = SeverityParser.parse(minSeverityOutcome);
+    this.fhirContext = fhirContext;
     if (this.minSeverityOutcome == null) {
-      String errorMessage =
+      final String errorMessage =
           "Configured minSeverityOutcome has an illegal value: %s".formatted(minSeverityOutcome);
       log.error(errorMessage);
       throw new NoSuchElementException(
           errorMessage); // Shutdown service -> No silent config error treatment
     }
-    Locale parsedLocale = fhirContextService.getConfiguredLocale();
-    Locale oldLocale = Locale.getDefault();
+    final Locale parsedLocale = LocaleUtils.toLocale(locale);
+    final Locale oldLocale = Locale.getDefault();
     Locale.setDefault(parsedLocale);
     log.info(
         "Locale for validation messages: %s"
-            .formatted(
-                this.fhirContextService.getFhirContext().getLocalizer().getLocale().toString()));
+            .formatted(fhirContext.getLocalizer().getLocale().toString()));
     log.info("Minimum severity of the outcome: %s".formatted(this.minSeverityOutcome));
     // Eager creation of validator for validation performance
-    Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> profiles =
-        profileParserService.getParseProfiles();
-    this.validator = createAndInitValidator(profiles);
-    this.filteredMessagePrefixes = loadMessagesToFilter(parsedLocale);
+    final var profiles = profileParserService.getParseProfiles();
+    validator = createAndInitValidator(profiles);
+    filteredMessagePrefixes = loadMessagesToFilter(parsedLocale);
     Locale.setDefault(oldLocale); // Put back global default locale to avoid side effects
   }
 
@@ -105,8 +104,8 @@ public class ValidationService {
    *
    * @param fhirValidator validator to initialize
    */
-  private static void initValidator(FhirValidator fhirValidator) {
-    Observation observation = new Observation();
+  private static void initValidator(final FhirValidator fhirValidator) {
+    final Observation observation = new Observation();
     observation.setStatus(Observation.ObservationStatus.FINAL);
     observation
         .getCode()
@@ -114,7 +113,7 @@ public class ValidationService {
         .setSystem("http://loinc.org")
         .setCode("789-8")
         .setDisplay("Erythrocytes [#/volume] in Blood by Automated count");
-    Bundle bundle = new Bundle();
+    final Bundle bundle = new Bundle();
     bundle
         .addEntry()
         .setResource(observation)
@@ -125,7 +124,7 @@ public class ValidationService {
     fhirValidator.validateWithResult(bundle);
   }
 
-  private Set<String> loadMessagesToFilter(Locale parsedLocale) {
+  private Set<String> loadMessagesToFilter(final Locale parsedLocale) {
     final ResourceBundle resourceBundle = ResourceBundle.getBundle("Messages", parsedLocale);
     filteredMessagePrefixes = new HashSet<>(FILTERED_MESSAGES_KEYS.size());
     return FILTERED_MESSAGES_KEYS.stream()
@@ -139,33 +138,32 @@ public class ValidationService {
   }
 
   private FhirValidator createAndInitValidator(
-      Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> profiles) {
-    Map<String, IBaseResource> structureDefinitions = profiles.get(StructureDefinition.class);
-    Map<String, IBaseResource> valueSets = profiles.get(ValueSet.class);
-    Map<String, IBaseResource> codeSystems = profiles.get(CodeSystem.class);
-    Map<String, IBaseResource> questionnaires = profiles.get(Questionnaire.class);
+      final Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> profiles) {
+    final Map<String, IBaseResource> structureDefinitions = profiles.get(StructureDefinition.class);
+    final Map<String, IBaseResource> valueSets = profiles.get(ValueSet.class);
+    final Map<String, IBaseResource> codeSystems = profiles.get(CodeSystem.class);
+    final Map<String, IBaseResource> questionnaires = profiles.get(Questionnaire.class);
 
     log.info("Start creating and initializing fhir validator");
-    FhirContext fhirContext = fhirContextService.getFhirContext();
-    FhirValidator fhirValidator = fhirContext.newValidator();
+    final FhirValidator fhirValidator = fhirContext.newValidator();
 
-    IValidationSupport prePopulatedValidationSupport =
+    final IValidationSupport prePopulatedValidationSupport =
         new DemisPrePopulatedValidationSupportHapi4(
             fhirContext, structureDefinitions, valueSets, codeSystems, questionnaires);
 
-    DefaultProfileValidationSupport defaultProfileValidationSupport =
+    final DefaultProfileValidationSupport defaultProfileValidationSupport =
         new DefaultProfileValidationSupport(fhirContext);
 
-    InMemoryTerminologyServerValidationSupport inMemoryTerminologyServerValidationSupport =
+    final InMemoryTerminologyServerValidationSupport inMemoryTerminologyServerValidationSupport =
         new InMemoryTerminologyServerValidationSupport(fhirContext);
 
-    SnapshotGeneratingValidationSupport snapshotGenerator =
+    final SnapshotGeneratingValidationSupport snapshotGenerator =
         new SnapshotGeneratingValidationSupport(fhirContext);
 
-    CommonCodeSystemsTerminologyService commonCodeSystemsTerminologyService =
+    final CommonCodeSystemsTerminologyService commonCodeSystemsTerminologyService =
         new CommonCodeSystemsTerminologyService(fhirContext);
 
-    ValidationSupportChain validationSupportChain =
+    final ValidationSupportChain validationSupportChain =
         new ValidationSupportChain(
             prePopulatedValidationSupport,
             defaultProfileValidationSupport,
@@ -173,7 +171,7 @@ public class ValidationService {
             commonCodeSystemsTerminologyService,
             snapshotGenerator);
 
-    FhirInstanceValidator fhirModule = new FhirInstanceValidator(validationSupportChain);
+    final FhirInstanceValidator fhirModule = new FhirInstanceValidator(validationSupportChain);
     fhirModule.setErrorForUnknownProfiles(true);
     fhirValidator.registerValidatorModule(fhirModule);
     initValidator(fhirValidator);
@@ -182,8 +180,8 @@ public class ValidationService {
     return fhirValidator;
   }
 
-  private OperationOutcome toOperationOutcome(ValidationResult validationResult) {
-    List<SingleValidationMessage> collect =
+  private OperationOutcome toOperationOutcome(final ValidationResult validationResult) {
+    final List<SingleValidationMessage> collect =
         validationResult.getMessages().stream()
             .filter(
                 message ->
@@ -192,18 +190,17 @@ public class ValidationService {
                 message ->
                     SEVERITY_COMPARATOR.compare(message.getSeverity(), minSeverityOutcome) >= 0)
             .toList();
-    ValidationResult filteredValidationResult =
-        new ValidationResult(fhirContextService.getFhirContext(), collect);
+    final ValidationResult filteredValidationResult = new ValidationResult(fhirContext, collect);
 
-    OperationOutcome outcome = new OperationOutcome();
+    final OperationOutcome outcome = new OperationOutcome();
     filteredValidationResult.populateOperationOutcome(outcome);
 
     return outcome;
   }
 
-  public OperationOutcome validate(String content) {
-    ValidationResult validationResult = validator.validateWithResult(content);
-
+  public OperationOutcome validate(final String content) {
+    final ValidationResult validationResult = validator.validateWithResult(content);
+    log.info("Validation successful: {}", validationResult.isSuccessful());
     return toOperationOutcome(validationResult);
   }
 }

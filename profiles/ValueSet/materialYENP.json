@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialYENP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialYENP",
+  "version": "1.0.1",
+  "name": "MaterialYENP",
+  "title": "Material für Yersinia spp. (darmpathogen)",
+  "status": "active",
+  "date": "2021-11-30",
+  "description": "Das ValueSet MaterialYENP enthält die Codes der Materialien für Yersinia spp., darmpathogen.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "concept": [ {
+        "code": "119303007",
+        "display": "Microbial isolate specimen (specimen)"
+      }, {
+        "code": "119339001",
+        "display": "Stool specimen (specimen)"
+      }, {
+        "code": "119381007",
+        "display": "Specimen from large intestine (specimen)"
+      }, {
+        "code": "68534000",
+        "display": "Intestinal mucous membrane structure (body structure)"
+      }, {
+        "code": "119380008",
+        "display": "Specimen from small intestine (specimen)"
+      }, {
+        "code": "72517000",
+        "display": "Structure of intestinal epithelium (body structure)"
+      } ]
+    } ]
+  }
+}

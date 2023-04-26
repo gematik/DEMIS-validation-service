@@ -7,13 +7,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.7</version>
+        <version>3.0.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>de.gematik.demis</groupId>
     <artifactId>validation-service</artifactId>
-    <version>1.4.0-SNAPSHOT</version>
+    <version>1.4.3-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>validation-service</name>
     <description>Validation Service for DEMIS</description>
@@ -21,25 +21,38 @@
     <properties>
         <java.version>17</java.version>
         <image.docker.registry>europe-west3-docker.pkg.dev/gematik-all-infra-prod/demis-dev</image.docker.registry>
-        <jackson-bom.version>2.14.1</jackson-bom.version>
+        <jackson-bom.version>2.14.2</jackson-bom.version>
+        <enforcer.plugin.version>3.2.1</enforcer.plugin.version>
+        <hapi.fhir.version>6.4.4</hapi.fhir.version>
         <fmt.maven.plugin.version>2.19</fmt.maven.plugin.version>
+        <!-- Logging in JSON Format -->
+        <logback.version>1.4.5</logback.version>
+        <logback.logstash.version>7.3</logback.logstash.version>
+        <!-- Fix CVEs -->
+        <snakeyaml.version>2.0</snakeyaml.version>
+        <commons-compress.version>1.23.0</commons-compress.version>
     </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <!-- Avoid vulnerabilities -->
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-compress</artifactId>
-                <version>1.21</version>
+                <groupId>ca.uhn.hapi.fhir</groupId>
+                <artifactId>hapi-fhir-base</artifactId>
+                <version>${hapi.fhir.version}</version>
             </dependency>
             <dependency>
-                <!-- Avoid vulnerabilities -->
-                <groupId>org.yaml</groupId>
-                <artifactId>snakeyaml</artifactId>
-                <version>1.33</version>
+                <groupId>org.checkerframework</groupId>
+                <artifactId>checker-qual</artifactId>
+                <version>3.31.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.errorprone</groupId>
+                <artifactId>error_prone_annotations</artifactId>
+                <version>2.18.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -54,29 +67,55 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>${snakeyaml.version}</version>
+        </dependency>
+        <dependency>
             <groupId>ca.uhn.hapi.fhir</groupId>
             <artifactId>hapi-fhir-validation</artifactId>
-            <version>6.1.1</version>
+            <version>${hapi.fhir.version}</version>
         </dependency>
         <dependency>
             <groupId>ca.uhn.hapi.fhir</groupId>
             <artifactId>hapi-fhir-structures-r4</artifactId>
-            <version>6.1.1</version>
+            <version>${hapi.fhir.version}</version>
         </dependency>
         <dependency>
             <groupId>ca.uhn.hapi.fhir</groupId>
             <artifactId>hapi-fhir-validation-resources-r4</artifactId>
-            <version>6.1.1</version>
+            <version>${hapi.fhir.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-text</artifactId>
             <version>1.10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-tracing</artifactId>
+            <version>${micrometer-tracing.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-tracing-bridge-otel</artifactId>
+            <version>${micrometer-tracing.version}</version>
+        </dependency>
+        <!-- Logback -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>${logback.logstash.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -88,6 +127,34 @@
     <build>
         <finalName>validation-service</finalName>
         <plugins>
+            <!-- Enforce Rules -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>${enforcer.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>enforce-maven</id>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <banDuplicatePomDependencyVersions/>
+                                <dependencyConvergence/>
+                                <reactorModuleConvergence/>
+                                <requireJavaVersion>
+                                    <version>${java.version}</version>
+                                </requireJavaVersion>
+                                <requireMavenVersion>
+                                    <version>3.8</version>
+                                </requireMavenVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

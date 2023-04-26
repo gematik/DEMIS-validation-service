@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "id": "methodSARSCoV2",
+  "url": "https://demis.rki.de/fhir/ValueSet/methodSARSCoV2",
+  "version": "1.0.3",
+  "name": "MethodSARSCoV2",
+  "title": "SARS-CoV-2-Nachweismethode",
+  "status": "retired",
+  "date": "2021-09-13",
+  "description": "Das ValueSet MethodSARSCoV2 enthält die Codes der SARS-CoV-2-Nachweismethoden.",
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/method",
+      "concept": [ {
+        "code": "s001",
+        "display": "Polymerase chain reaction analysis (procedure)"
+      }, {
+        "code": "s002",
+        "display": "Nucleic acid assay (procedure)"
+      }, {
+        "code": "s003",
+        "display": "Immunoassay method (procedure)"
+      }, {
+        "code": "s004",
+        "display": "Enzyme-linked immunosorbent assay (procedure)"
+      }, {
+        "code": "s005",
+        "display": "Fluorescent immunoassay (procedure)"
+      }, {
+        "code": "s006",
+        "display": "Nucleic acid sequencing (procedure)"
+      } ]
+    } ]
+  }
+}

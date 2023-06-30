@@ -1,0 +1,288 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetLISP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetLISP",
+  "version": "1.2.0",
+  "name": "AnswerSetLISP",
+  "title": "AnswerSet für Listeria monocytogenes; Meldepflicht nur für den direkten Nachweis aus Blut, Liquor oder anderen normalerweise sterilen Substraten sowie aus Abstrichen von Neugeborenen",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetLISP enthält die Codes der Answer-Codes für Listeria monocytogenes; Meldepflicht nur für den direkten Nachweis aus Blut, Liquor oder anderen normalerweise sterilen Substraten sowie aus Abstrichen von Neugeborenen.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "36094007",
+        "display": "Listeria monocytogenes (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450536000",
+        "display": "Listeria monocytogenes serotype 1/2a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 1/2a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 1/2a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450537009",
+        "display": "Listeria monocytogenes serotype 1/2b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 1/2b (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 1/2b"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450538004",
+        "display": "Listeria monocytogenes serotype 1/2c (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 1/2c (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 1/2c"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450540009",
+        "display": "Listeria monocytogenes serotype 3a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 3a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 3a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450541008",
+        "display": "Listeria monocytogenes serotype 3b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 3b (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 3b"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450542001",
+        "display": "Listeria monocytogenes serotype 3c (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 3c (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 3c"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450543006",
+        "display": "Listeria monocytogenes serotype 4a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 4a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 4a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450545004",
+        "display": "Listeria monocytogenes serotype 4ab (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 4ab (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 4ab"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450539007",
+        "display": "Listeria monocytogenes serotype 4b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 4b (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 4b"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698150000",
+        "display": "Listeria monocytogenes serotype 4bx (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 4bx (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 4bx"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450544000",
+        "display": "Listeria monocytogenes serotype 4c (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 4c (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 4c"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450546003",
+        "display": "Listeria monocytogenes serotype 4d (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 4d (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 4d"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450547007",
+        "display": "Listeria monocytogenes serotype 4e (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 4e (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 4e"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450548002",
+        "display": "Listeria monocytogenes serotype 7 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Listeria monocytogenes serotype 7 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Listeria monocytogenes, Serotyp 7"
+        } ]
+      } ]
+    } ]
+  }
+}

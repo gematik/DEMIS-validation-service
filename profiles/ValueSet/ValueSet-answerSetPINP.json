@@ -1,0 +1,95 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetPINP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetPINP",
+  "version": "1.0.0",
+  "name": "AnswerSetPINP",
+  "title": "AnswerSet für Parainfluenzavirus",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet AnswerSetPINP enthält die Codes der Answer-Codes für Parainfluenzavirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "407489008",
+        "display": "Human parainfluenza virus 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human parainfluenza virus 1 (organism)"
+        } ]
+      }, {
+        "code": "407491000",
+        "display": "Human parainfluenza virus 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human parainfluenza virus 2 (organism)"
+        } ]
+      }, {
+        "code": "407493002",
+        "display": "Human parainfluenza virus 3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human parainfluenza virus 3 (organism)"
+        } ]
+      }, {
+        "code": "89117003",
+        "display": "Human parainfluenza virus 4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human parainfluenza virus 4 (organism)"
+        } ]
+      }, {
+        "code": "128359006",
+        "display": "Human parainfluenza virus 4a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human parainfluenza virus 4a (organism)"
+        } ]
+      }, {
+        "code": "128360001",
+        "display": "Human parainfluenza virus 4b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human parainfluenza virus 4b (organism)"
+        } ]
+      }, {
+        "code": "407498006",
+        "display": "Human parainfluenza viruses (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human parainfluenza viruses (organism)"
+        } ]
+      } ]
+    } ]
+  }
+}

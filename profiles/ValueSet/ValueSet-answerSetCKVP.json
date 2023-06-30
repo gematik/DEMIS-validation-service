@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetCKVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetCKVP",
+  "version": "1.1.0",
+  "name": "AnswerSetCKVP",
+  "title": "AnswerSet für Chikungunya-Virus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetCKVP enthält die Codes der Answer-Codes für Chikungunya-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "2423009",
+        "display": "Chikungunya virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Chikungunya virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Chikungunya-Virus"
+        } ]
+      } ]
+    } ]
+  }
+}

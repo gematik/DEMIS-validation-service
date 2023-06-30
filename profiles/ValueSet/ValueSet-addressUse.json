@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "id": "addressUse",
+  "url": "https://demis.rki.de/fhir/ValueSet/addressUse",
+  "version": "1.2.0",
+  "name": "AddressUse",
+  "title": "Adressnutzung",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AddressUse enthält die Codes für die Adressnutzung.",
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/addressUse",
+      "version": "1.1.0"
+    } ]
+  }
+}

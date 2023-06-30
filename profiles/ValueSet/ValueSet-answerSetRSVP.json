@@ -1,0 +1,270 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetRSVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetRSVP",
+  "version": "1.1.0",
+  "name": "AnswerSetRSVP",
+  "title": "AnswerSet für Respiratorisches-Synzytial-Virus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetRSVP enthält die Codes der Answer-Codes für Respiratorisches-Synzytial-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "6415009",
+        "display": "Human respiratory syncytial virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417772008",
+        "display": "Human respiratory syncytial virus GA1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus GA1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus A1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417773003",
+        "display": "Human respiratory syncytial virus GA2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus GA2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus A2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417774009",
+        "display": "Human respiratory syncytial virus GA3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus GA3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus A3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417790009",
+        "display": "Human respiratory syncytial virus GA4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus GA4 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus A4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417791008",
+        "display": "Human respiratory syncytial virus GA5 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus GA5 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus A5"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417792001",
+        "display": "Human respiratory syncytial virus GA6 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus GA6 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus A6"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417793006",
+        "display": "Human respiratory syncytial virus GA7 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus GA7 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus A7"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417794000",
+        "display": "Human respiratory syncytial virus GB1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus GB1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus B1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417795004",
+        "display": "Human respiratory syncytial virus GB2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus GB2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus B2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417796003",
+        "display": "Human respiratory syncytial virus GB3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus GB3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus B3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417797007",
+        "display": "Human respiratory syncytial virus GB4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus GB4 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus B4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417770000",
+        "display": "Human respiratory syncytial virus Group A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus Group A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417771001",
+        "display": "Human respiratory syncytial virus Group B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human respiratory syncytial virus Group B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes respiratorisches Synzytial-Virus B"
+        } ]
+      } ]
+    } ]
+  }
+}

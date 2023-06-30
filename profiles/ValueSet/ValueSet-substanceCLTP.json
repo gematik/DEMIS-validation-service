@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "substanceCLTP",
+  "url": "https://demis.rki.de/fhir/ValueSet/substanceCLTP",
+  "version": "1.0.0",
+  "name": "SubstanceCLTP",
+  "title": "Analyt-Set für Tetanus, Clostridium tetani",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet SubstanceCLTP enthält die Codes des Analyt-Sets für Tetanus, Clostridium tetani.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "26159005",
+        "display": "Clostridium tetani toxin (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "Tetanustoxin"
+        } ]
+      } ]
+    } ]
+  }
+}

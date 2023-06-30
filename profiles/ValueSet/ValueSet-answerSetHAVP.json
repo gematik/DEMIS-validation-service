@@ -1,0 +1,252 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetHAVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetHAVP",
+  "version": "1.2.0",
+  "name": "AnswerSetHAVP",
+  "title": "AnswerSet für Hepatitis-A-Virus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetHAVP enthält die Codes der Answer-Codes für Hepatitis-A-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "32452004",
+        "display": "Hepatitis A virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "HAV - Hepatitis A-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "773674008",
+        "display": "Hepatitis A virus genotype I (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus genotype I (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-A-Virus, Genotyp I"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "773680000",
+        "display": "Hepatitis A virus genotype IA (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus genotype IA (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-A-Virus, Genotyp IA"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "773682008",
+        "display": "Hepatitis A virus genotype IB (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus genotype IB (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-A-Virus, Genotyp IB"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "773675009",
+        "display": "Hepatitis A virus genotype II (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus genotype II (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-A-Virus, Genotyp II"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "773681001",
+        "display": "Hepatitis A virus genotype IIA (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus genotype IIA (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-A-Virus, Genotyp IIA"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "773683003",
+        "display": "Hepatitis A virus genotype IIB (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus genotype IIB (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-A-Virus, Genotyp IIB"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "773676005",
+        "display": "Hepatitis A virus genotype III (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus genotype III (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-A-Virus, Genotyp III"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "773685005",
+        "display": "Hepatitis A virus genotype IIIA (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus genotype IIIA (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-A-Virus, Genotyp IIIA"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "773684009",
+        "display": "Hepatitis A virus genotype IIIB (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus genotype IIIB (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-A-Virus, Genotyp IIIB"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "773677001",
+        "display": "Hepatitis A virus genotype IV (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus genotype IV (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-A-Virus, Genotyp IV"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "773678006",
+        "display": "Hepatitis A virus genotype V (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus genotype V (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-A-Virus, Genotyp V"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "773679003",
+        "display": "Hepatitis A virus genotype VI (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis A virus genotype VI (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-A-Virus, Genotyp VI"
+        } ]
+      } ]
+    } ]
+  }
+}

@@ -105,7 +105,7 @@
       "type": [ {
         "extension": [ {
           "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-          "valueUrl": "string"
+          "valueUrl": "id"
         } ],
         "code": "http://hl7.org/fhirpath/System.String"
       } ],
@@ -2518,13 +2518,15 @@
         "severity": "error",
         "human": "A section must contain at least one of text, entries, or sub-sections",
         "expression": "text.exists() or entry.exists() or section.exists()",
-        "xpath": "exists(f:text) or exists(f:entry) or exists(f:section)"
+        "xpath": "exists(f:text) or exists(f:entry) or exists(f:section)",
+        "source": "http://hl7.org/fhir/StructureDefinition/Composition"
       }, {
         "key": "cmp-2",
         "severity": "error",
         "human": "A section can only have an emptyReason if it is empty",
         "expression": "emptyReason.empty() or entry.empty()",
-        "xpath": "not(exists(f:emptyReason) and exists(f:entry))"
+        "xpath": "not(exists(f:emptyReason) and exists(f:entry))",
+        "source": "http://hl7.org/fhir/StructureDefinition/Composition"
       }, {
         "key": "ele-1",
         "severity": "error",

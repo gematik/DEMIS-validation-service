@@ -1,0 +1,122 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestCORP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestCORP",
+  "version": "1.4.0",
+  "name": "LaboratoryTestCORP",
+  "title": "Labortest für Corynebacterium spp. (Toxin bildend)",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestCORP enthält die Codes der Labortests für Corynebacterium spp. (Toxin bildend).",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "16676-9",
+        "display": "Corynebacterium diphtheriae [Presence] in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Corynebacterium diphtheriae [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "24102-6",
+        "display": "Corynebacterium toxin [Presence] in Specimen by Immune diffusion (ID)",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Corynebacterium-Toxin [Nachweis] in Probenmaterial mit Immundiffusion"
+        } ]
+      }, {
+        "code": "67561-1",
+        "display": "Corynebacterium diphtheriae DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Corynebacterium diphtheriae-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "88584-8",
+        "display": "Corynebacterium diphtheriae [Presence] in Upper respiratory specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Corynebacterium diphtheriae [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "90066-2",
+        "display": "Corynebacterium sp identified in Isolate by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Corynebacterium sp identifiziert in Isolat mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "92786-3",
+        "display": "Corynebacterium sp DNA [Presence] by NAA with probe detection in Positive blood culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Corynebacterium sp-DNA [Nachweis] in positiver Blutkultur mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "23667-9",
+        "display": "Bacteria identified in Specimen"
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

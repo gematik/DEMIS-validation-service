@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetBORP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetBORP",
+  "version": "1.2.0",
+  "name": "AnswerSetBORP",
+  "title": "AnswerSet für Borrelia recurrentis",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetBORP enthält die Codes der Answer-Codes für Borrelia recurrentis.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "34726005",
+        "display": "Borrelia recurrentis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Borrelia recurrentis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Borrelia recurrentis"
+        } ]
+      } ]
+    } ]
+  }
+}

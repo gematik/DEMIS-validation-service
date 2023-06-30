@@ -1,0 +1,252 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetMPVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetMPVP",
+  "version": "1.1.0",
+  "name": "AnswerSetMPVP",
+  "title": "AnswerSet für Mumpsvirus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetMPVP enthält die Codes der Answer-Codes für Mumpsvirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "725448009",
+        "display": "Mumps genotype G (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps genotype G (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps, Genotyp G"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "725451002",
+        "display": "Mumps genotype J (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps genotype J (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps, Genotyp J"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "725453004",
+        "display": "Mumps genotype L (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps genotype L (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps, Genotyp L"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "725447004",
+        "display": "Mumps genotype F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps genotype F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps, Genotyp F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "725445007",
+        "display": "Mumps genotype C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps genotype C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps, Genotyp C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "725450001",
+        "display": "Mumps genotype I (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps genotype I (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps, Genotyp I"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "725452009",
+        "display": "Mumps genotype K (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps genotype K (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps, Genotyp K"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "725444006",
+        "display": "Mumps genotype B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps genotype B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps, Genotyp B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "725454005",
+        "display": "Mumps genotype N (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps genotype N (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps, Genotyp N"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "725446008",
+        "display": "Mumps genotype D (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps genotype D (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps, Genotyp D"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "725449001",
+        "display": "Mumps genotype H (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps genotype H (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps, Genotyp H"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "50384007",
+        "display": "Mumps virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "725443000",
+        "display": "Mumps genotype A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mumps genotype A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mumps, Genotyp A"
+        } ]
+      } ]
+    } ]
+  }
+}

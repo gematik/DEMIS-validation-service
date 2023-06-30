@@ -1,0 +1,90 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetNOVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetNOVP",
+  "version": "1.1.0",
+  "name": "AnswerSetNOVP",
+  "title": "AnswerSet für Norovirus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetNOVP enthält die Codes der Answer-Codes für Norovirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "919722731000087109",
+        "display": "Norovirus genogroup I (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Norovirus genogroup I (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Norovirus G1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "909640571000087107",
+        "display": "Norovirus GIV (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Norovirus GIV (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Norovirus G4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "347362891000087107",
+        "display": "Norovirus genogroup II (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Norovirus genogroup II (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Norovirus G2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "407359000",
+        "display": "Genus Norovirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Norovirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Norovirus"
+        } ]
+      } ]
+    } ]
+  }
+}

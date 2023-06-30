@@ -1,0 +1,5148 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetEBCP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetEBCP",
+  "version": "1.3.0",
+  "name": "AnswerSetEBCP",
+  "title": "AnswerSet für Enterobacterales bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetEBCP enthält die Codes der Answer-Codes für Enterobacterales bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "56813009",
+        "display": "Enterobacter cloacae subspecies dissolvens (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Enterobacter cloacae subspecies dissolvens (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Enterobacter cloacae Subspecies dissolvens"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "75464008",
+        "display": "Budvicia aquatica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Budvicia aquatica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Budvicia aquatica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "55851000",
+        "display": "Genus Budvicia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Budvicia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Budvicia spp."
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "10969007",
+        "display": "Buttiauxella agrestis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Buttiauxella agrestis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Buttiauxella agrestis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "416844002",
+        "display": "Buttiauxella brennerae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Buttiauxella brennerae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Buttiauxella brennerae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417520001",
+        "display": "Buttiauxella ferragutiae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Buttiauxella ferragutiae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Buttiauxella ferragutiae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "416852004",
+        "display": "Buttiauxella gaviniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Buttiauxella gaviniae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Buttiauxella gaviniae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417035007",
+        "display": "Buttiauxella izardii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Buttiauxella izardii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Buttiauxella izardii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114261007",
+        "display": "Buttiauxella noackiae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Buttiauxella noackiae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Buttiauxella noackiae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "3451006",
+        "display": "Genus Buttiauxella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Buttiauxella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Buttiauxella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "416444007",
+        "display": "Buttiauxella warmboldiae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Buttiauxella warmboldiae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Buttiauxella warmboldiae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "30854004",
+        "display": "Cedecea davisae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cedecea davisae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cedecea davisae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "2345009",
+        "display": "Cedecea lapagei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cedecea lapagei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cedecea lapagei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "83767006",
+        "display": "Cedecea neteri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cedecea neteri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cedecea neteri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "69937007",
+        "display": "Genus Cedecea (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Cedecea (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cedecea spp."
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "55744003",
+        "display": "Citrobacter amalonaticus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Citrobacter amalonaticus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Citrobacter amalonaticus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114262000",
+        "display": "Citrobacter braakii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Citrobacter braakii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Citrobacter braakii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114263005",
+        "display": "Citrobacter farmeri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Citrobacter farmeri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Citrobacter farmeri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "6265002",
+        "display": "Citrobacter freundii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Citrobacter freundii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Citrobacter freundii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "416990006",
+        "display": "Citrobacter gillenii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Citrobacter gillenii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Citrobacter gillenii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114264004",
+        "display": "Citrobacter koseri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Citrobacter koseri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Citrobacter koseri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417581000",
+        "display": "Citrobacter murliniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Citrobacter murliniae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Citrobacter murliniae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114444007",
+        "display": "Citrobacter rodentium (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Citrobacter rodentium (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Citrobacter rodentium"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114265003",
+        "display": "Citrobacter sedlakii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Citrobacter sedlakii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Citrobacter sedlakii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "75972000",
+        "display": "Genus Citrobacter (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Citrobacter (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Citrobacter spp."
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114442006",
+        "display": "Citrobacter werkmanii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Citrobacter werkmanii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Citrobacter werkmanii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114443001",
+        "display": "Citrobacter youngae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Citrobacter youngae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Citrobacter youngae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "445559002",
+        "display": "Cronobacter dublinensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cronobacter dublinensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cronobacter dublinensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "5711000087108",
+        "display": "Cronobacter dublinensis subspecies lausannensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cronobacter dublinensis subspecies lausannensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cronobacter dublinensis Subspecies lausannensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "445560007",
+        "display": "Cronobacter malonaticus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cronobacter malonaticus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cronobacter malonaticus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "445561006",
+        "display": "Cronobacter muytjensii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cronobacter muytjensii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cronobacter muytjensii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "1156339009",
+        "display": "Franconibacter pulveris (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Franconibacter pulveris (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Franconibacter pulveris"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "445562004",
+        "display": "Cronobacter sakazakii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cronobacter sakazakii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cronobacter sakazakii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "444664004",
+        "display": "Genus Cronobacter (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Cronobacter (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cronobacter spp."
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "445639005",
+        "display": "Cronobacter turicensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cronobacter turicensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cronobacter turicensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "707335003",
+        "display": "Cronobacter universalis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cronobacter universalis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cronobacter universalis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "717974005",
+        "display": "Siccibacter turicensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Siccibacter turicensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Siccibacter turicensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "421225004",
+        "display": "Dickeya chrysanthemi (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Dickeya chrysanthemi (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Dickeya chrysanthemi"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "420926001",
+        "display": "Genus Dickeya (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Dickeya (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Dickeya spp."
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "4280005",
+        "display": "Edwardsiella hoshinae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Edwardsiella hoshinae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Edwardsiella hoshinae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "68227003",
+        "display": "Edwardsiella ictaluri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Edwardsiella ictaluri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Edwardsiella ictaluri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "14566004",
+        "display": "Genus Edwardsiella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Edwardsiella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Edwardsiella spp."
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "74672006",
+        "display": "Edwardsiella tarda (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Edwardsiella tarda (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Edwardsiella tarda"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "62592009",
+        "display": "Klebsiella aerogenes (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Klebsiella aerogenes (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Klebsiella aerogenes"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115015008",
+        "display": "Pantoea agglomerans (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pantoea agglomerans (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pantoea agglomerans"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "84221003",
+        "display": "Lelliottia amnigena (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Lelliottia amnigena (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Lelliottia amnigena"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "33115003",
+        "display": "Enterobacter asburiae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Enterobacter asburiae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Enterobacter asburiae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "113611000146106",
+        "display": "Enterobacter bugandensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Enterobacter bugandensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Enterobacter bugandensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114451003",
+        "display": "Enterobacter cancerogenus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Enterobacter cancerogenus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Enterobacter cancerogenus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "14385002",
+        "display": "Enterobacter cloacae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Enterobacter cloacae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Enterobacter cloacae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "721950003",
+        "display": "Enterobacter cloacae subspecies cloacae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Enterobacter cloacae subspecies cloacae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Enterobacter cloacae Subspecies cloacae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "416229008",
+        "display": "Kosakonia cowanii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kosakonia cowanii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kosakonia cowanii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "716346000",
+        "display": "Pluralibacter gergoviae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pluralibacter gergoviae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pluralibacter gergoviae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114454006",
+        "display": "Enterobacter hormaechei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Enterobacter hormaechei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Enterobacter hormaechei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "431977008",
+        "display": "Kluyvera intermedia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kluyvera intermedia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kluyvera intermedia"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114456008",
+        "display": "Enterobacter kobei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Enterobacter kobei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Enterobacter kobei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "432763001",
+        "display": "Enterobacter ludwigii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Enterobacter ludwigii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Enterobacter ludwigii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "771468005",
+        "display": "Metakosakonia massiliensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Metakosakonia massiliensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Metakosakonia massiliensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "738504009",
+        "display": "Enterobacter mori (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Enterobacter mori (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Enterobacter mori"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "29511003",
+        "display": "Lelliottia nimipressuralis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Lelliottia nimipressuralis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Lelliottia nimipressuralis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114455007",
+        "display": "Pluralibacter pyrinus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pluralibacter pyrinus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pluralibacter pyrinus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "8181000146108",
+        "display": "Kosakonia radicincitans (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kosakonia radicincitans (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kosakonia radicincitans"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "58683007",
+        "display": "Genus Enterobacter (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Enterobacter (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Enterobacter spp."
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "768157006",
+        "display": "Enterobacter xiangfangensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Enterobacter xiangfangensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Enterobacter xiangfangensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417937002",
+        "display": "Order Enterobacterales (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Order Enterobacterales (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Ordnung Enterobacteriales"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "50097002",
+        "display": "Erwinia amylovora (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Erwinia amylovora (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia amylovora"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "431386007",
+        "display": "Erwinia aphidicola (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Erwinia aphidicola (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia aphidicola"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "432735003",
+        "display": "Erwinia billingiae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Erwinia billingiae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia billingiae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "420741007",
+        "display": "Pectobacterium cacticida (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pectobacterium cacticida (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pectobacterium cacticida"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "420478006",
+        "display": "Pectobacterium carotovorum (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pectobacterium carotovorum (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pectobacterium carotovorum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "421190009",
+        "display": "Pectobacterium atrosepticum (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pectobacterium atrosepticum (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pectobacterium atrosepticum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "420948007",
+        "display": "Pectobacterium betavasculorum (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pectobacterium betavasculorum (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pectobacterium betavasculorum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "420518002",
+        "display": "Pectobacterium carotovorum subspecies carotovorum (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pectobacterium carotovorum subspecies carotovorum (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pectobacterium carotovorum Subspecies carotovorum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "422046003",
+        "display": "Pectobacterium carotovorum subspecies odoriferum (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pectobacterium carotovorum subspecies odoriferum (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pectobacterium carotovorum Subspecies odoriferum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "421499000",
+        "display": "Pantoea cypripedii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pantoea cypripedii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pantoea cypripedii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "79946002",
+        "display": "Erwinia mallotivora (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Erwinia mallotivora (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia mallotivora"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "420490008",
+        "display": "Brenneria nigrifluens (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brenneria nigrifluens (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brenneria nigrifluens"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "708449009",
+        "display": "Erwinia oleae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Erwinia oleae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia oleae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "431273000",
+        "display": "Erwinia papayae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Erwinia papayae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia papayae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "421625009",
+        "display": "Dickeya paradisiaca (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Dickeya paradisiaca (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Dickeya paradisiaca"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "431272005",
+        "display": "Erwinia persicina (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Erwinia persicina (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia persicina"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "302568005",
+        "display": "Erwinia psidii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Erwinia psidii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia psidii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "432736002",
+        "display": "Erwinia pyrifoliae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Erwinia pyrifoliae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia pyrifoliae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "420872003",
+        "display": "Lonsdalea quercina (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Lonsdalea quercina (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Lonsdalea quercina"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "431387003",
+        "display": "Pectobacterium rhapontici (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pectobacterium rhapontici (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pectobacterium rhapontici"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "422105006",
+        "display": "Brenneria rubrifaciens (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brenneria rubrifaciens (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brenneria rubrifaciens"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "431100005",
+        "display": "Brenneria salicis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brenneria salicis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brenneria salicis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "38865008",
+        "display": "Genus Erwinia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Erwinia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia spp."
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115020008",
+        "display": "Pantoea stewartii subsp stewartii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pantoea stewartii subsp stewartii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pantoea stewartii Subspecies stewartii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "4411000146103",
+        "display": "Erwinia tasmaniensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Erwinia tasmaniensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia tasmaniensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "431385006",
+        "display": "Erwinia toletana (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Erwinia toletana (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia toletana"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "17031002",
+        "display": "Erwinia tracheiphila (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Erwinia tracheiphila (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erwinia tracheiphila"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115014007",
+        "display": "Pantoea ananatis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pantoea ananatis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pantoea ananatis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "57459006",
+        "display": "Leclercia adecarboxylata (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Leclercia adecarboxylata (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Leclercia adecarboxylata"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "419388003",
+        "display": "Escherichia albertii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Escherichia albertii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Escherichia albertii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "8361000146103",
+        "display": "Shimwellia blattae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shimwellia blattae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shimwellia blattae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "72461005",
+        "display": "Escherichia fergusonii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Escherichia fergusonii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Escherichia fergusonii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "85786000",
+        "display": "Escherichia hermannii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Escherichia hermannii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Escherichia hermannii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "14961000146107",
+        "display": "Escherichia marmotae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Escherichia marmotae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Escherichia marmotae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "64735005",
+        "display": "Genus Escherichia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Escherichia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Escherichia spp."
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "53013003",
+        "display": "Pseudescherichia vulneris (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pseudescherichia vulneris (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pseudescherichia vulneris"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "19027003",
+        "display": "Ewingella americana (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Ewingella americana (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Ewingella americana"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "3878001",
+        "display": "Genus Ewingella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Ewingella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Ewingella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "76694001",
+        "display": "Hafnia alvei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hafnia alvei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hafnia alvei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "717644004",
+        "display": "Hafnia paralvei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hafnia paralvei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hafnia paralvei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "718798008",
+        "display": "Hafnia psychrotolerans (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hafnia psychrotolerans (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hafnia psychrotolerans"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "20523001",
+        "display": "Genus Hafnia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Hafnia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Hafnia"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417443008",
+        "display": "Klebsiella granulomatis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Klebsiella granulomatis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Klebsiella granulomatis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "416832000",
+        "display": "Raoultella ornithinolytica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Raoultella ornithinolytica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Raoultella ornithinolytica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "40886007",
+        "display": "Klebsiella oxytoca (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Klebsiella oxytoca (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Klebsiella oxytoca"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "65186004",
+        "display": "Klebsiella pneumoniae ss. ozaenae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Klebsiella pneumoniae ss. ozaenae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Klebsiella pneumoniae Subspecies ozaenae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "416264004",
+        "display": "Raoultella planticola (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Raoultella planticola (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Raoultella planticola"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "56415008",
+        "display": "Klebsiella pneumoniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Klebsiella pneumoniae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Klebsiella pneumoniae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "18400002",
+        "display": "Klebsiella pneumoniae ss. pneumoniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Klebsiella pneumoniae ss. pneumoniae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Klebsiella pneumoniae Subspecies pneumoniae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "17688001",
+        "display": "Klebsiella pneumoniae ss. rhinoscleromatis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Klebsiella pneumoniae ss. rhinoscleromatis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Klebsiella pneumoniae Subspecies rhinoscleromatis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "781054004",
+        "display": "Klebsiella quasipneumoniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Klebsiella quasipneumoniae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Klebsiella quasipneumoniae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "781056002",
+        "display": "Klebsiella quasipneumoniae subspecies quasipneumoniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Klebsiella quasipneumoniae subspecies quasipneumoniae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Klebsiella quasipneumoniae Subspecies quasipneumoniae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "781055003",
+        "display": "Klebsiella quasipneumoniae subspecies similipneumoniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Klebsiella quasipneumoniae subspecies similipneumoniae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Klebsiella quasipneumoniae Subspecies similipneumoniae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "433047006",
+        "display": "Klebsiella singaporensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Klebsiella singaporensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Klebsiella singaporensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "75032006",
+        "display": "Genus Klebsiella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Klebsiella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Klebsiella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "416096003",
+        "display": "Raoultella terrigena (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Raoultella terrigena (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Raoultella terrigena"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "431976004",
+        "display": "Klebsiella variicola (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Klebsiella variicola (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Klebsiella variicola"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "58493008",
+        "display": "Kluyvera ascorbata (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kluyvera ascorbata (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kluyvera ascorbata"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "32547006",
+        "display": "Kluyvera cryocrescens (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kluyvera cryocrescens (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kluyvera cryocrescens"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "416156003",
+        "display": "Kluyvera georgiana (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kluyvera georgiana (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kluyvera georgiana"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "61161003",
+        "display": "Genus Kluyvera (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Kluyvera (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Kluyvera"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "43590002",
+        "display": "Genus Leclercia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Leclercia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Leclercia"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "717652001",
+        "display": "Genus Lelliottia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Lelliottia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Lelliottia"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "71655003",
+        "display": "Genus Moellerella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Moellerella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Moellerella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "37107002",
+        "display": "Moellerella wisconsensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Moellerella wisconsensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Moellerella wisconsensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "243301005",
+        "display": "Morganella morganii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Morganella morganii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Morganella morganii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "243303008",
+        "display": "Morganella morganii subsp sibonii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Morganella morganii subsp sibonii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Morganella morganii Subspecies sibonii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "50713005",
+        "display": "Genus Morganella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Morganella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Morganella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "28501001",
+        "display": "Obesumbacterium proteus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Obesumbacterium proteus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Obesumbacterium proteus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "50732004",
+        "display": "Genus Obesumbacterium (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Obesumbacterium (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Obesumbacterium"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "717167001",
+        "display": "Pantoea brenneri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pantoea brenneri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pantoea brenneri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "709310002",
+        "display": "Mixta calida (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mixta calida (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mixta calida"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "8321000146105",
+        "display": "Tatumella citrea (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tatumella citrea (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Tatumella citrea"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "717168006",
+        "display": "Pantoea conspicua (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pantoea conspicua (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pantoea conspicua"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115017000",
+        "display": "Pantoea dispersa (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pantoea dispersa (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pantoea dispersa"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "717170002",
+        "display": "Pantoea eucrina (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pantoea eucrina (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pantoea eucrina"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "709309007",
+        "display": "Mixta gaviniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mixta gaviniae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mixta gaviniae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "765101001",
+        "display": "Pantoea intestinalis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pantoea intestinalis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pantoea intestinalis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "8311000146100",
+        "display": "Tatumella punctata (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tatumella punctata (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Tatumella punctata"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "5681000146105",
+        "display": "Pantoea septica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pantoea septica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pantoea septica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115013001",
+        "display": "Genus Pantoea (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Pantoea (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Pantoea"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "131300002",
+        "display": "Pantoea stewartii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pantoea stewartii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pantoea stewartii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115019002",
+        "display": "Pantoea stewartii subsp indologenes (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pantoea stewartii subsp indologenes (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pantoea stewartii Subspecies indologenes"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "8301000146102",
+        "display": "Tatumella terrea (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tatumella terrea (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Tatumella terrea"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "718813007",
+        "display": "Pectobacterium aroidearum (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pectobacterium aroidearum (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pectobacterium aroidearum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "422013009",
+        "display": "Genus Pectobacterium (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Pectobacterium (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Pectobacterium"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "421786004",
+        "display": "Pectobacterium wasabiae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pectobacterium wasabiae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pectobacterium wasabiae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "38643006",
+        "display": "Plesiomonas shigelloides (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Plesiomonas shigelloides (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Plesiomonas shigelloides"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "42929008",
+        "display": "Genus Plesiomonas (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Plesiomonas (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Plesiomonas"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "716344002",
+        "display": "Genus Pluralibacter (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Pluralibacter (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Pluralibacter"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115024004",
+        "display": "Genus Pragia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Pragia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Pragia"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417592004",
+        "display": "Proteus hauseri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Proteus hauseri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Proteus hauseri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "114461005",
+        "display": "Proteus inconstans (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Proteus inconstans (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Proteus inconstans"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "73457008",
+        "display": "Proteus mirabilis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Proteus mirabilis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Proteus mirabilis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "243302003",
+        "display": "Morganella morganii subspecies morganii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Morganella morganii subspecies morganii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Morganella morganii Subspecies morganii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "86145008",
+        "display": "Cosenzaea myxofaciens (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cosenzaea myxofaciens (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cosenzaea myxofaciens"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "45298005",
+        "display": "Proteus penneri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Proteus penneri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Proteus penneri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "14196002",
+        "display": "Providencia rettgeri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Providencia rettgeri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Providencia rettgeri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "50517009",
+        "display": "Genus Proteus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Proteus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Proteus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "45834001",
+        "display": "Proteus vulgaris (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Proteus vulgaris (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Proteus vulgaris"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "46349009",
+        "display": "Providencia alcalifaciens (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Providencia alcalifaciens (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Providencia alcalifaciens"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "19196004",
+        "display": "Providencia rustigianii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Providencia rustigianii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Providencia rustigianii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "47300009",
+        "display": "Providencia heimbachae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Providencia heimbachae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Providencia heimbachae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "112284001",
+        "display": "Genus Providencia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Providencia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Providencia"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "1445008",
+        "display": "Providencia stuartii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Providencia stuartii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Providencia stuartii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "6031000146109",
+        "display": "Providencia vermicola (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Providencia vermicola (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Providencia vermicola"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "10021006",
+        "display": "Rahnella aquatilis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rahnella aquatilis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Rahnella aquatilis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "48569008",
+        "display": "Genus Rahnella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Rahnella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Rahnella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417468005",
+        "display": "Genus Raoultella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Raoultella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Raoultella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "40369005",
+        "display": "Salmonella Abony (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Abony (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Abony"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "80627004",
+        "display": "Salmonella Agona (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Agona (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Agona"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "72033009",
+        "display": "Salmonella Albany (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Albany (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Albany"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "47229009",
+        "display": "Salmonella Altona (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Altona (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Altona"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "38658003",
+        "display": "Salmonella Amsterdam (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Amsterdam (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Amsterdam"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "37261005",
+        "display": "Salmonella Anatum (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Anatum (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Anatum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "40697005",
+        "display": "Salmonella Berta (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Berta (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Berta"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "53684004",
+        "display": "Salmonella Blockley (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Blockley (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Blockley"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "73541005",
+        "display": "Salmonella Bochum (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Bochum (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Bochum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "81938008",
+        "display": "Salmonella Bovismorbificans (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Bovismorbificans (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Bovismorbificans"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "35225001",
+        "display": "Salmonella Braenderup (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Braenderup (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Braenderup"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "16888008",
+        "display": "Salmonella Brandenburg (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Brandenburg (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Brandenburg"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "82364007",
+        "display": "Salmonella Bredeney (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Bredeney (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Bredeney"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "28206007",
+        "display": "Salmonella Cannstatt (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Cannstatt (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Cannstatt"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "70344002",
+        "display": "Salmonella Cerro (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Cerro (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Cerro"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "5461002",
+        "display": "Salmonella Chester (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Chester (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Chester"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "80232006",
+        "display": "Salmonella Choleraesuis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Choleraesuis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Choleraesuis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "37091006",
+        "display": "Salmonella Derby (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Derby (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Derby"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "62136003",
+        "display": "Salmonella Dublin (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Dublin (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Dublin"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "42410007",
+        "display": "Salmonella Duisburg (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Duisburg (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Duisburg"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "110378009",
+        "display": "Salmonella enterica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella enterica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella enterica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "398428002",
+        "display": "Salmonella enterica subsp. diarizonae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella enterica subsp. diarizonae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella enterica subsp diarizonae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "398508004",
+        "display": "Salmonella enterica subsp. enterica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella enterica subsp. enterica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella enterica Subspecies enterica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "73525009",
+        "display": "Salmonella Enteritidis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Enteritidis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Enteritidis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "4687003",
+        "display": "Salmonella Essen (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Essen (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Essen"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "71768003",
+        "display": "Salmonella Give (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Give (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Give"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "16820003",
+        "display": "Salmonella Goldcoast (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Goldcoast (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Goldcoast"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "49491006",
+        "display": "Salmonella Hadar (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Hadar (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Hadar"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "38788001",
+        "display": "Salmonella Havana (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Havana (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Havana"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "71865006",
+        "display": "Salmonella Heidelberg (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Heidelberg (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Heidelberg"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "74630005",
+        "display": "Salmonella Hofit (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Hofit (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Hofit"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "12278000",
+        "display": "Salmonella Indiana (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Indiana (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Indiana"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "82071007",
+        "display": "Salmonella Infantis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Infantis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Infantis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "35373008",
+        "display": "Salmonella Istanbul (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Istanbul (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Istanbul"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "128388007",
+        "display": "Salmonella Paratyphi B var. Java (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Paratyphi B var. Java (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Paratyphi B, Variante Java"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "8455004",
+        "display": "Salmonella Kentucky (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Kentucky (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Kentucky"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "51008005",
+        "display": "Salmonella Kingston (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Kingston (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Kingston"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "66713000",
+        "display": "Salmonella Livingstone (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Livingstone (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Livingstone"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "2291004",
+        "display": "Salmonella London (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella London (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella London"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "20073008",
+        "display": "Salmonella Manhattan (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Manhattan (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Manhattan"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "80268001",
+        "display": "Salmonella Montevideo (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Montevideo (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Montevideo"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "77584005",
+        "display": "Salmonella Muenchen (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Muenchen (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Muenchen"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "68916009",
+        "display": "Salmonella Muenster (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Muenster (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Muenster"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "56077000",
+        "display": "Salmonella Newport (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Newport (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Newport"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "67210008",
+        "display": "Salmonella Ohio (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Ohio (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Ohio"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "46667007",
+        "display": "Salmonella Oranienburg (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Oranienburg (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Oranienburg"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "11342005",
+        "display": "Salmonella Othmarschen (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Othmarschen (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Othmarschen"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "40114001",
+        "display": "Salmonella Panama (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Panama (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Panama"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "79128009",
+        "display": "Salmonella Paratyphi A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Paratyphi A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Paratyphi A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "85908006",
+        "display": "Salmonella Paratyphi B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Paratyphi B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Paratyphi B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "32488009",
+        "display": "Salmonella Paratyphi C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Paratyphi C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Paratyphi C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "44768008",
+        "display": "Salmonella Putten (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Putten (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Putten"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "31517006",
+        "display": "Salmonella Richmond (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Richmond (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Richmond"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "25520000",
+        "display": "Salmonella Ruiru (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Ruiru (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Ruiru"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "112287008",
+        "display": "Salmonella Sandiego (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Sandiego (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Sandiego"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "45651006",
+        "display": "Salmonella Schwarzengrund (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Schwarzengrund (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Schwarzengrund"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "27268008",
+        "display": "Genus Salmonella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Salmonella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Salmonella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "88091007",
+        "display": "Salmonella Stanley (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Stanley (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Stanley"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "47441000",
+        "display": "Salmonella Stanleyville (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Stanleyville (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Stanleyville"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "4361005",
+        "display": "Salmonella Thompson (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Thompson (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Thompson"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "5595000",
+        "display": "Salmonella enterica subspecies enterica serovar Typhi (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella enterica subspecies enterica serovar Typhi (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella enterica Subspecies enterica, Serovar Typhi"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "50136005",
+        "display": "Salmonella Typhimurium (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Typhimurium (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Typhimurium"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "2434007",
+        "display": "Salmonella Uganda (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Uganda (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Uganda"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "5929008",
+        "display": "Salmonella Virchow (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Virchow (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Virchow"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "91661006",
+        "display": "Salmonella Weltevreden (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Weltevreden (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Weltevreden"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "24666009",
+        "display": "Salmonella Worthington (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Worthington (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Worthington"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "29090008",
+        "display": "Salmonella Zanzibar (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Zanzibar (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Zanzibar"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "76656001",
+        "display": "Serratia entomophila (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia entomophila (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia entomophila"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "802004",
+        "display": "Serratia ficaria (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia ficaria (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia ficaria"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "112329006",
+        "display": "Serratia fonticola (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia fonticola (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia fonticola"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115005002",
+        "display": "Serratia grimesii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia grimesii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia grimesii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "23787004",
+        "display": "Serratia liquefaciens (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia liquefaciens (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia liquefaciens"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "33522002",
+        "display": "Serratia marcescens (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia marcescens (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia marcescens"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "438911005",
+        "display": "Serratia marcescens subspecies marcescens (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia marcescens subspecies marcescens (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia marcescens marcescens"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "438912003",
+        "display": "Serratia marcescens subspecies sakuensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia marcescens subspecies sakuensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia marcescens sakuensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "55825002",
+        "display": "Serratia rubidaea (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia rubidaea (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia rubidaea"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450415000",
+        "display": "Serratia nematodiphila (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia nematodiphila (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia nematodiphila"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "10413007",
+        "display": "Serratia odorifera (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia odorifera (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia odorifera"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "28955009",
+        "display": "Serratia plymuthica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia plymuthica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia plymuthica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "116135003",
+        "display": "Serratia proteamaculans (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia proteamaculans (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia proteamaculans"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "116136002",
+        "display": "Serratia proteamaculans subsp proteamaculans (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia proteamaculans subsp proteamaculans (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia proteamaculans Subspecies proteamaculans"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115004003",
+        "display": "Serratia proteamaculans subsp quinovora (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia proteamaculans subsp quinovora (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia proteamaculans Subspecies quinovora"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "438199009",
+        "display": "Serratia quinivorans (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia quinivorans (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia quinivorans"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "42025004",
+        "display": "Genus Serratia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Serratia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Serratia"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450416004",
+        "display": "Serratia ureilytica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia ureilytica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia ureilytica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "718823003",
+        "display": "Serratia vespertilionis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serratia vespertilionis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Serratia vespertilionis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "55462008",
+        "display": "Shigella boydii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "43612004",
+        "display": "Shigella dysenteriae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "85729005",
+        "display": "Shigella flexneri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "4298009",
+        "display": "Shigella sonnei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella sonnei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella sonnei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "77352002",
+        "display": "Genus Shigella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Shigella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Shigella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "723345009",
+        "display": "Siccibacter colletis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Siccibacter colletis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Siccibacter colletis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "723344008",
+        "display": "Genus Siccibacter (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Siccibacter (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Siccibacter"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "1546007",
+        "display": "Tatumella ptyseos (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tatumella ptyseos (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Tatumella ptyseos"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "12162005",
+        "display": "Genus Tatumella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Tatumella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Tatumella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "91246002",
+        "display": "Yersinia aldovae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia aldovae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia aldovae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450391006",
+        "display": "Yersinia aleksiciae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia aleksiciae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia aleksiciae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103434007",
+        "display": "Yersinia bercovieri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia bercovieri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia bercovieri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "65255000",
+        "display": "Yersinia enterocolitica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia enterocolitica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia enterocolitica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "85159008",
+        "display": "Yersinia frederiksenii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia frederiksenii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia frederiksenii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "10334001",
+        "display": "Yersinia intermedia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia intermedia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia intermedia"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "91042006",
+        "display": "Yersinia kristensenii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia kristensenii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia kristensenii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "446489003",
+        "display": "Yersinia massiliensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia massiliensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia massiliensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "90530002",
+        "display": "Yersinia pseudotuberculosis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia pseudotuberculosis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia pseudotuberculosis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "87145000",
+        "display": "Yersinia rohdei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia rohdei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia rohdei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "64125009",
+        "display": "Yersinia ruckeri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia ruckeri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia ruckeri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450392004",
+        "display": "Yersinia similis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia similis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia similis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "4668009",
+        "display": "Genus Yersinia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Yersinia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Yersinia"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "89477001",
+        "display": "Yokenella regensburgei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yokenella regensburgei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yokenella regensburgei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "14943005",
+        "display": "Genus Yokenella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Yokenella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Yokenella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "112283007",
+        "display": "Escherichia coli (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Escherichia coli (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Escherichia coli"
+        } ]
+      } ]
+    } ]
+  }
+}

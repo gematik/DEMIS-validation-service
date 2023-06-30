@@ -1,0 +1,54 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetMBVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetMBVP",
+  "version": "1.1.0",
+  "name": "AnswerSetMBVP",
+  "title": "AnswerSet für Marburgvirus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetMBVP enthält die Codes der Answer-Codes für Marburgvirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "424421007",
+        "display": "Genus Marburgvirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Marburgvirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Marburgvirus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "422839008",
+        "display": "Lake Victoria marburgvirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Lake Victoria marburgvirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Lake-Victoria-Marburgvirus"
+        } ]
+      } ]
+    } ]
+  }
+}

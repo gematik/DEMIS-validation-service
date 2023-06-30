@@ -3,6 +3,10 @@
 # Number of Pod Replicas desired
 replicaCount: 1
 
+# Enables debug mode
+debug:
+  enable: false
+
 # Required Values for the Chart
 required:
   # Define the docker image
@@ -16,7 +20,7 @@ required:
     tag: null
   # Version of the profiles to be used
   profiles:
-    version: 1.0.0-b7
+    version: 1.1.1-b15
 
 # Define custom Container Entrypoint and Arguments (e.g. JVM Tuning)
 # If not given, the Entrypoint defined in Dockerfile will be used

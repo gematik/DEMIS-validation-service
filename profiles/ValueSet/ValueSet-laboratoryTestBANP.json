@@ -1,0 +1,312 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestBANP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestBANP",
+  "version": "1.4.0",
+  "name": "LaboratoryTestBANP",
+  "title": "Labortest für Bacillus anthracis",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestBANP enthält die Codes der Labortests für Bacillus anthracis.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "101362-2",
+        "display": "Bacillus anthracis DNA [Presence] in Blood by NAA with non-probe detection"
+      }, {
+        "code": "101368-9",
+        "display": "Bacillus anthracis DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "11467-8",
+        "display": "Bacillus anthracis Ab [Units/volume] in Serum by Immunoblot",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antikörper [Einheiten/Volumen] in Serum mit Immunoblot"
+        } ]
+      }, {
+        "code": "11468-6",
+        "display": "Bacillus anthracis Ab [Units/volume] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antikörper [Einheiten/Volumen] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "11469-4",
+        "display": "Bacillus anthracis [Presence] in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "22109-3",
+        "display": "Bacillus anthracis Ab [Units/volume] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antikörper [Einheiten/Volumen] in Probenmaterial"
+        } ]
+      }, {
+        "code": "22859-3",
+        "display": "Bacillus anthracis Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "22860-1",
+        "display": "Bacillus anthracis Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "22861-9",
+        "display": "Bacillus anthracis Ab [Presence] in Serum by Immune diffusion (ID)",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antikörper [Nachweis] in Serum mit Immundiffusion"
+        } ]
+      }, {
+        "code": "22862-7",
+        "display": "Bacillus anthracis Ab [Presence] in Serum by Agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antikörper [Nachweis] in Serum mit Agglutination"
+        } ]
+      }, {
+        "code": "22863-5",
+        "display": "Bacillus anthracis Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "22864-3",
+        "display": "Bacillus anthracis Ab [Presence] in Serum by Complement fixation",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antikörper [Nachweis] in Serum mit Komplementbindungsreaktion"
+        } ]
+      }, {
+        "code": "22865-0",
+        "display": "Bacillus anthracis Ab [Titer] in Serum by Immune diffusion (ID)",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antikörper [Titer] in Serum mit Immundiffusion"
+        } ]
+      }, {
+        "code": "22866-8",
+        "display": "Bacillus anthracis Ag [Presence] in Tissue by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antigen [Nachweis] in Gewebe mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "22867-6",
+        "display": "Bacillus anthracis Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "31726-3",
+        "display": "Bacillus anthracis Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "33697-4",
+        "display": "Bacillus anthracis Ag [Presence] in Isolate by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antigen [Nachweis] in Isolat mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "33698-2",
+        "display": "Bacillus anthracis [Presence] in Isolate by Phage lysis",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis [Nachweis] in Isolat mit Lyse durch Phagen"
+        } ]
+      }, {
+        "code": "41622-2",
+        "display": "Bacillus anthracis DNA [Identifier] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-DNA [Nachweis oder Identität] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "41623-0",
+        "display": "Bacillus anthracis DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "44269-9",
+        "display": "Bacillus anthracis cell wall Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Zellwand-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "44270-7",
+        "display": "Bacillus anthracis spore Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Spore-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "5055-9",
+        "display": "Bacillus anthracis Ab [Units/volume] in Serum by Hemagglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antikörper [Einheiten/Volumen] in Serum mit Hämagglutinationstest"
+        } ]
+      }, {
+        "code": "51976-9",
+        "display": "Bacillus anthracis capsule Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Kapsel-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "7814-7",
+        "display": "Bacillus anthracis Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bacillus anthracis-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

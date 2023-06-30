@@ -1,0 +1,249 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestRBVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestRBVP",
+  "version": "1.3.0",
+  "name": "LaboratoryTestRBVP",
+  "title": "Labortest für Rabiesvirus",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestRBVP enthält die Codes der Labortests für Rabiesvirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "23388-2",
+        "display": "Rabies virus [Presence] in Brain by Light microscopy",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus [Nachweis] in Gehirn mit Lichtmikroskopie"
+        } ]
+      }, {
+        "code": "23389-0",
+        "display": "Rabies virus Ag [Presence] in Brain by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-Antigen [Nachweis] in Gehirn mit Immunoassay"
+        } ]
+      }, {
+        "code": "23390-8",
+        "display": "Rabies virus Ag [Presence] in Brain by Immune stain",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-Antigen [Nachweis] in Gehirn mit Immunfärbung"
+        } ]
+      }, {
+        "code": "23391-6",
+        "display": "Rabies virus Ag [Presence] in Specimen by Immune stain",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-Antigen [Nachweis] in Probenmaterial mit Immunfärbung"
+        } ]
+      }, {
+        "code": "51646-8",
+        "display": "Rabies virus RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "51647-6",
+        "display": "Rabies virus RNA [Presence] in Specimen by Probe",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-RNA [Nachweis] in Probenmaterial mit Sonde"
+        } ]
+      }, {
+        "code": "60270-6",
+        "display": "Rabies virus RNA [Presence] in Isolate by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-RNA [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "6528-4",
+        "display": "Rabies virus Ag [Presence] in Tissue by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-Antigen [Nachweis] in Gewebe mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6532-6",
+        "display": "Rabies virus Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6536-7",
+        "display": "Rabies virus identified in Tissue by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus identifiziert in Gewebe mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "6539-1",
+        "display": "Rabies virus identified in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus identifiziert in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "70866-9",
+        "display": "Rabies virus strain identified in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-Stamm identifiziert in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "70867-7",
+        "display": "Rabies virus strain identified in Specimen by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-Stamm identifiziert in Probenmaterial mit Sequenzierung"
+        } ]
+      }, {
+        "code": "86588-1",
+        "display": "Rabies virus RNA [Presence] in Cerebral spinal fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-RNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "88211-8",
+        "display": "Rabies virus Ag [Presence] in Cerebral spinal fluid by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-Antigen [Nachweis] in Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "88214-2",
+        "display": "Rabies virus RNA [Presence] in Tissue by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-RNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "88215-9",
+        "display": "Rabies virus RNA [Presence] in Saliva (oral fluid) by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-RNA [Nachweis] in Speichel mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "91075-2",
+        "display": "Rabies virus Ag [Presence] in Saliva (oral fluid) by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-Antigen [Nachweis] in Speichel mit Immunoassay"
+        } ]
+      }, {
+        "code": "91076-0",
+        "display": "Rabies virus Ag [Presence] in Tissue by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Tollwut-Virus-Antigen [Nachweis] in Gewebe mit Immunoassay"
+        } ]
+      }, {
+        "code": "41461-5",
+        "display": "Virus identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Virus identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      } ]
+    } ]
+  }
+}

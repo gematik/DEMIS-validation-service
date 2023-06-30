@@ -1,0 +1,186 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestHEVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestHEVP",
+  "version": "1.3.0",
+  "name": "LaboratoryTestHEVP",
+  "title": "Labortest für Hepatitis-E-Virus",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestHEVP enthält die Codes der Labortests für Hepatitis-E-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "101208-7",
+        "display": "Hepatitis E virus IgM Ab [Presence] in Serum or Plasma by Line blot"
+      }, {
+        "code": "14212-5",
+        "display": "Hepatitis E virus IgM Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus-IgM-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "51798-7",
+        "display": "Hepatitis E virus IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "56513-5",
+        "display": "Hepatitis E virus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "60430-6",
+        "display": "Hepatitis E virus genotype [Identifier] in Blood by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus-Genotyp [Nachweis oder Identität] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "69577-5",
+        "display": "Hepatitis E virus RNA [Presence] in Blood by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus-RNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "69961-1",
+        "display": "Hepatitis E virus RNA [Units/volume] (viral load) in Serum or Plasma by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus-RNA [Einheiten/Volumen] (Viruslast) in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "74858-2",
+        "display": "Hepatitis E virus genotypes 1+2+3+4 RNA [Presence] in Serum or Plasma from Donor by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus Genotypen 1+2+3+4-RNA [Nachweis] in Serum oder Plasma von Donor mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "78750-7",
+        "display": "Hepatitis E virus RNA [log units/volume] (viral load) in Serum or Plasma by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus-RNA [log Einheiten/Volumen] (Viruslast) in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "83128-9",
+        "display": "Hepatitis E virus IgM Ab [Presence] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "90460-7",
+        "display": "Hepatitis E virus RNA [Presence] in Serum or Plasma by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus-RNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "91071-1",
+        "display": "Hepatitis E virus RNA [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus-RNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "95156-6",
+        "display": "Hepatitis E virus RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "95240-8",
+        "display": "Hepatitis E virus Ab [Interpretation] in Serum or Plasma",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-E-Virus-Antikörper [Interpretation] in Serum oder Plasma"
+        } ]
+      }, {
+        "code": "41461-5",
+        "display": "Virus identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Virus identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      } ]
+    } ]
+  }
+}

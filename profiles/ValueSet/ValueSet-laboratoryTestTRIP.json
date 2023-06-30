@@ -1,0 +1,337 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestTRIP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestTRIP",
+  "version": "1.2.0",
+  "name": "LaboratoryTestTRIP",
+  "title": "Labortest für Trichinella spiralis",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestTRIP enthält die Codes der Labortests für Trichinella spiralis.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "13922-0",
+        "display": "Trichinella spiralis IgA Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-IgA-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "13923-8",
+        "display": "Trichinella spiralis IgM Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "17732-9",
+        "display": "Trichinella spiralis Ab [Presence] in Serum by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-Antikörper [Nachweis] in Serum mit Latexagglutination"
+        } ]
+      }, {
+        "code": "17733-7",
+        "display": "Trichinella spiralis IgA Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-IgA-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "17734-5",
+        "display": "Trichinella spiralis IgG Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-IgG-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "17735-2",
+        "display": "Trichinella spiralis IgM Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-IgM-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "19253-4",
+        "display": "Trichinella spiralis Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "22595-3",
+        "display": "Trichinella spiralis Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "22596-1",
+        "display": "Trichinella spiralis Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "23499-7",
+        "display": "Trichinella spiralis [Presence] in Tissue by Light microscopy",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis [Nachweis] in Gewebe mit Lichtmikroskopie"
+        } ]
+      }, {
+        "code": "25423-5",
+        "display": "Trichinella spiralis IgG Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "25993-7",
+        "display": "Trichinella spiralis Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "26661-9",
+        "display": "Trichinella sp Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella sp-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "27426-6",
+        "display": "Trichinella sp IgM Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella sp-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "31687-7",
+        "display": "Trichinella sp IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella sp-IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "32723-9",
+        "display": "Trichinella sp IgG Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella sp-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "32768-4",
+        "display": "Trichinella sp IgG Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella sp-IgG-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "33587-7",
+        "display": "Trichinella sp IgA Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella sp-IgA-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "41426-8",
+        "display": "Trichinella spiralis Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "52979-2",
+        "display": "Trichinella spiralis IgG Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-IgG-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "53387-7",
+        "display": "Trichinella spiralis IgG Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-IgG-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "5395-9",
+        "display": "Trichinella spiralis Ab [Titer] in Serum by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-Antikörper [Titer] in Serum mit Latexagglutination"
+        } ]
+      }, {
+        "code": "56992-1",
+        "display": "Trichinella sp IgG Ab [Presence] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella sp-IgG-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6563-1",
+        "display": "Trichinella spiralis IgG Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "8042-4",
+        "display": "Trichinella spiralis Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "8043-2",
+        "display": "Trichinella spiralis IgG Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-IgG-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "87985-8",
+        "display": "Trichinella spiralis DNA [Presence] in Tissue by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Trichinella spiralis-DNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      }, {
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+        } ]
+      } ]
+    } ]
+  }
+}

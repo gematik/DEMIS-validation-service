@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetLSVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetLSVP",
+  "version": "1.1.0",
+  "name": "AnswerSetLSVP",
+  "title": "AnswerSet für Lassavirus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetLSVP enthält die Codes der Answer-Codes für Lassavirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "85944001",
+        "display": "Lassa virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Lassa virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Lassa-Virus"
+        } ]
+      } ]
+    } ]
+  }
+}

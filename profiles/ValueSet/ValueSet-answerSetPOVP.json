@@ -1,0 +1,90 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetPOVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetPOVP",
+  "version": "1.2.0",
+  "name": "AnswerSetPOVP",
+  "title": "AnswerSet für Poliovirus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetPOVP enthält die Codes der Answer-Codes für Poliovirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "44172002",
+        "display": "Human poliovirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human poliovirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes Poliovirus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "22580008",
+        "display": "Human poliovirus 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human poliovirus 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes Poliovirus 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "55174004",
+        "display": "Human poliovirus 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human poliovirus 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes Poliovirus 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "16362001",
+        "display": "Human poliovirus 3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human poliovirus 3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes Poliovirus 3"
+        } ]
+      } ]
+    } ]
+  }
+}

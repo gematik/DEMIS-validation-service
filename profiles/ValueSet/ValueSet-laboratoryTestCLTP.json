@@ -1,0 +1,127 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestCLTP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestCLTP",
+  "version": "1.0.0",
+  "name": "LaboratoryTestCLTP",
+  "title": "Labortest für Tetanus, Clostridium tetani",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet LaboratoryTestCLTP enthält die Codes der Labortests für Tetanus, Clostridium tetani.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "26643-7",
+        "display": "Clostridium tetani toxoid Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Clostridium tetani-Toxoid-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "32775-9",
+        "display": "Clostridium tetani toxoid Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Clostridium tetani-Toxoid-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "41483-9",
+        "display": "Clostridium tetani toxoid Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Clostridium tetani-Toxoid-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "47296-9",
+        "display": "Clostridium tetani toxoid Ab [Ratio] in Serum --2nd specimen/1st specimen"
+      }, {
+        "code": "48652-2",
+        "display": "Clostridium tetani toxoid IgG Ab [Units/volume] in Serum by Immunoassay --2nd specimen"
+      }, {
+        "code": "48653-0",
+        "display": "Clostridium tetani toxoid IgG Ab [Units/volume] in Serum by Immunoassay --1st specimen"
+      }, {
+        "code": "49191-0",
+        "display": "Clostridium tetani toxoid IgG Ab [Units/volume] in Serum --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Clostridium tetani-Toxoid-IgG-Antikörper [Einheiten/Volumen] in Serum --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "49192-8",
+        "display": "Clostridium tetani toxoid IgG Ab [Units/volume] in Serum --2nd specimen"
+      }, {
+        "code": "53935-3",
+        "display": "Clostridium tetani toxoid IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Clostridium tetani-Toxoid-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "58770-9",
+        "display": "Clostridium tetani toxoid IgG Ab [Units/volume] in Serum by Immunofluorescence"
+      }, {
+        "code": "99454-1",
+        "display": "Clostridium tetani toxoid IgG Ab [Mass/volume] in Serum"
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "6462-6",
+        "display": "Bacteria identified in Wound by Culture"
+      } ]
+    } ]
+  }
+}

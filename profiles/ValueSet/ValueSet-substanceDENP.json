@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "substanceDENP",
+  "url": "https://demis.rki.de/fhir/ValueSet/substanceDENP",
+  "version": "1.0.0",
+  "name": "SubstanceDENP",
+  "title": "Analyt-Set für Denguevirus",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet SubstanceDENP enthält die Codes des Analyt-Sets für Denguevirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "121020003",
+        "display": "Antigen of Dengue virus (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "Dengue-Antigen"
+        } ]
+      } ]
+    } ]
+  }
+}

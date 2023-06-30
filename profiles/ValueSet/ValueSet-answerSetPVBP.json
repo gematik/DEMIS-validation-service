@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetPVBP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetPVBP",
+  "version": "1.0.0",
+  "name": "AnswerSetPVBP",
+  "title": "AnswerSet für Ringelröteln, Parvovirus B 19",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet AnswerSetPVBP enthält die Codes der Answer-Codes für Ringelröteln, Parvovirus B 19.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "407394007",
+        "display": "Genus Erythroparvovirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Erythroparvovirus (organism)"
+        } ]
+      }, {
+        "code": "11970002",
+        "display": "Genus Parvovirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Parvovirus (organism)"
+        } ]
+      }, {
+        "code": "63603005",
+        "display": "Primate erythroparvovirus 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Primate erythroparvovirus 1 (organism)"
+        } ]
+      } ]
+    } ]
+  }
+}

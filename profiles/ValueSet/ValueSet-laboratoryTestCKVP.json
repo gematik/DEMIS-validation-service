@@ -1,0 +1,285 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestCKVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestCKVP",
+  "version": "1.5.0",
+  "name": "LaboratoryTestCKVP",
+  "title": "Labortest für Chikungunya-Virus",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestCKVP enthält die Codes der Labortests für Chikungunya-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "101303-6",
+        "display": "Chikungunya virus RNA [Presence] in Blood by NAA with non-probe detection"
+      }, {
+        "code": "95672-2",
+        "display": "Chikungunya virus IgG Ab [Presence] in Specimen by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-IgG-Antikörper [Nachweis] in Probenmaterial mit Immunoassay"
+        } ]
+      }, {
+        "code": "95687-0",
+        "display": "Chikungunya virus IgM Ab [Presence] in Specimen by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-IgM-Antikörper [Nachweis] in Probenmaterial mit Immunoassay"
+        } ]
+      }, {
+        "code": "97866-8",
+        "display": "Chikungunya virus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "97867-6",
+        "display": "Chikungunya virus IgM Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "51664-1",
+        "display": "Chikungunya virus RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "56128-2",
+        "display": "Chikungunya virus IgG Ab [Titer] in Serum or Plasma by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-IgG-Antikörper [Titer] in Serum oder Plasma mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "56129-0",
+        "display": "Chikungunya virus IgG Ab [Presence] in Serum or Plasma by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-IgG-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "56130-8",
+        "display": "Chikungunya virus IgM Ab [Titer] in Serum or Plasma by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-IgM-Antikörper [Titer] in Serum oder Plasma mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "56131-6",
+        "display": "Chikungunya virus IgM Ab [Presence] in Serum or Plasma by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "57934-2",
+        "display": "Chikungunya virus IgM Ab [Presence] in Serum or Plasma",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-IgM-Antikörper [Nachweis] in Serum oder Plasma"
+        } ]
+      }, {
+        "code": "60260-7",
+        "display": "Chikungunya virus RNA [Presence] in Serum or Plasma by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-RNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "81152-1",
+        "display": "Chikungunya virus non-structural protein 1 (nsP1) RNA [Presence] in Serum by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus Nichtstrukturprotein 1 (nsP1)-RNA [Nachweis] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "81153-9",
+        "display": "Chikungunya virus non-structural protein 1 (nsP1) RNA [Presence] in Cerebral spinal fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus Nichtstrukturprotein 1 (nsP1)-RNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "82297-3",
+        "display": "Chikungunya virus structural proteins (E1+E2) IgG Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus Strukturproteine (E1+E2)-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "83067-9",
+        "display": "Chikungunya virus structural proteins (E1+E2) IgM Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus Strukturproteine (E1+E2)-IgM-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "83068-7",
+        "display": "Chikungunya virus structural proteins (E1+E2) IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus Strukturproteine (E1+E2)-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "85583-3",
+        "display": "Chikungunya virus RNA [Presence] in Plasma from Donor by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-RNA [Nachweis] in Plasma von Donor mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "86514-7",
+        "display": "Chikungunya virus RNA [Presence] in Amniotic fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-RNA [Nachweis] in Amnionflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "86515-4",
+        "display": "Chikungunya virus RNA [Presence] in Urine by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-RNA [Nachweis] in Urin mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "88629-1",
+        "display": "Chikungunya virus IgM Ab [Presence] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "88630-9",
+        "display": "Chikungunya virus IgG Ab [Presence] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-IgG-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "93979-3",
+        "display": "Chikungunya virus IgG Ab [Presence] in Serum or Plasma",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chikungunya-Virus-IgG-Antikörper [Nachweis] in Serum oder Plasma"
+        } ]
+      }, {
+        "code": "41461-5",
+        "display": "Virus identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Virus identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      } ]
+    } ]
+  }
+}

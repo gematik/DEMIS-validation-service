@@ -1,0 +1,54 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetBOVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetBOVP",
+  "version": "1.2.0",
+  "name": "AnswerSetBOVP",
+  "title": "AnswerSet für humanpathogene Bornaviren; Meldepflicht nur für den direkten Nachweis",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetBOVP enthält die Codes der Answer-Codes für humanpathogene Bornaviren; Meldepflicht nur für den direkten Nachweis.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "285349002",
+        "display": "Borna disease virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Borna disease virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Borna-disease-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "407340002",
+        "display": "Genus Bornavirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Bornavirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Bornavirus spp."
+        } ]
+      } ]
+    } ]
+  }
+}

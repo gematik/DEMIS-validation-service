@@ -51,7 +51,8 @@
         "severity": "error",
         "human": "Must have either extensions or value[x], not both",
         "expression": "extension.exists() != value.exists()",
-        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+        "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+        "source": "http://hl7.org/fhir/StructureDefinition/Extension"
       } ],
       "isModifier": false,
       "mapping": [ {

@@ -1,0 +1,1872 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetSPNP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetSPNP",
+  "version": "1.3.0",
+  "name": "AnswerSetSPNP",
+  "title": "AnswerSet für Streptococcus pneumoniae; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, Gelenkpunktat oder anderen normalerweise sterilen Substraten",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetSPNP enthält die Codes der Answer-Codes für Streptococcus pneumoniae; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, Gelenkpunktat oder anderen normalerweise sterilen Substraten.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "713921004",
+        "display": "Alpha-hemolytic Streptococcus not Streptococcus pneumoniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Alpha-hemolytic Streptococcus not Streptococcus pneumoniae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Alpha-hämolytischer Streptococcus, nicht Streptococcus pneumoniae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "409806004",
+        "display": "Multiple drug-resistant Streptococcus pneumoniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Multiple drug-resistant Streptococcus pneumoniae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mehrfach Arzneimittel-resistenter Streptococcus pneumoniae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "409807008",
+        "display": "Penicillin resistant Streptococcus pneumoniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Penicillin resistant Streptococcus pneumoniae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Penicillin-resistente Streptococcus pneumoniae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "9861002",
+        "display": "Streptococcus pneumoniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "415607008",
+        "display": "Streptococcus pneumoniae Danish serotype 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "415608003",
+        "display": "Streptococcus pneumoniae Danish serotype 10A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 10A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 10A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "428124003",
+        "display": "Streptococcus pneumoniae Danish serotype 10B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 10B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 10B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698103009",
+        "display": "Streptococcus pneumoniae Danish serotype 10C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 10C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 10C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "441602004",
+        "display": "Streptococcus pneumoniae Danish serotype 10F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 10F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 10F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "419071000",
+        "display": "Streptococcus pneumoniae Danish serotype 11A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 11A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 11A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698104003",
+        "display": "Streptococcus pneumoniae Danish serotype 11B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 11B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 11B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698105002",
+        "display": "Streptococcus pneumoniae Danish serotype 11C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 11C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 11C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698106001",
+        "display": "Streptococcus pneumoniae Danish serotype 11D (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 11D (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 11D"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "763392007",
+        "display": "Streptococcus pneumoniae Danish serotype 11E (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 11E (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 11E"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698107005",
+        "display": "Streptococcus pneumoniae Danish serotype 11F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 11F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 11F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698108000",
+        "display": "Streptococcus pneumoniae Danish serotype 12A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 12A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 12A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698109008",
+        "display": "Streptococcus pneumoniae Danish serotype 12B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 12B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 12B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "419305002",
+        "display": "Streptococcus pneumoniae Danish serotype 12F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 12F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 12F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "428366009",
+        "display": "Streptococcus pneumoniae Danish serotype 13 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 13 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 13"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103498008",
+        "display": "Streptococcus pneumoniae Danish serotype 14 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 14 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 14"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "443239003",
+        "display": "Streptococcus pneumoniae Danish serotype 15A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 15A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 15A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "415610001",
+        "display": "Streptococcus pneumoniae Danish serotype 15B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 15B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 15B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "443240001",
+        "display": "Streptococcus pneumoniae Danish serotype 15C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 15C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 15C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698110003",
+        "display": "Streptococcus pneumoniae Danish serotype 15F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 15F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 15F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698111004",
+        "display": "Streptococcus pneumoniae Danish serotype 16A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 16A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 16A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698112006",
+        "display": "Streptococcus pneumoniae Danish serotype 16F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 16F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 16F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698113001",
+        "display": "Streptococcus pneumoniae Danish serotype 17A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 17A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 17A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "420138009",
+        "display": "Streptococcus pneumoniae Danish serotype 17F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 17F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 17F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698114007",
+        "display": "Streptococcus pneumoniae Danish serotype 18A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 18A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 18A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698115008",
+        "display": "Streptococcus pneumoniae Danish serotype 18B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 18B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 18B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "418451009",
+        "display": "Streptococcus pneumoniae Danish serotype 18C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 18C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 18C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698116009",
+        "display": "Streptococcus pneumoniae Danish serotype 18F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 18F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 18F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "415611002",
+        "display": "Streptococcus pneumoniae Danish serotype 19A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 19A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 19A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698117000",
+        "display": "Streptococcus pneumoniae Danish serotype 19B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 19B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 19B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698118005",
+        "display": "Streptococcus pneumoniae Danish serotype 19C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 19C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 19C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "419915004",
+        "display": "Streptococcus pneumoniae Danish serotype 19F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 19F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 19F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "419527005",
+        "display": "Streptococcus pneumoniae Danish serotype 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "763395009",
+        "display": "Streptococcus pneumoniae Danish serotype 20A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 20A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 20A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "763396005",
+        "display": "Streptococcus pneumoniae Danish serotype 20B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 20B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 20B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698097002",
+        "display": "Streptococcus pneumoniae Danish serotype 21 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 21 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 21"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "441566007",
+        "display": "Streptococcus pneumoniae Danish serotype 22A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 22A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 22A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "420216004",
+        "display": "Streptococcus pneumoniae Danish serotype 22F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 22F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 22F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698098007",
+        "display": "Streptococcus pneumoniae Danish serotype 23A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 23A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 23A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "427741005",
+        "display": "Streptococcus pneumoniae Danish serotype 23B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 23B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 23B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "418217008",
+        "display": "Streptococcus pneumoniae Danish serotype 23F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 23F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 23F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698119002",
+        "display": "Streptococcus pneumoniae Danish serotype 24A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 24A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 24A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698120008",
+        "display": "Streptococcus pneumoniae Danish serotype 24B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 24B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 24B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698121007",
+        "display": "Streptococcus pneumoniae Danish serotype 24F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 24F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 24F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698123005",
+        "display": "Streptococcus pneumoniae Danish serotype 25A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 25A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 25A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698124004",
+        "display": "Streptococcus pneumoniae Danish serotype 25F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 25F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 25F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698125003",
+        "display": "Streptococcus pneumoniae Danish serotype 27 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 27 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 27"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "444352000",
+        "display": "Streptococcus pneumoniae Danish serotype 28A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 28A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 28A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "444353005",
+        "display": "Streptococcus pneumoniae Danish serotype 28F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 28F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 28F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "131363003",
+        "display": "Streptococcus pneumoniae Danish serotype 29 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 29 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 29"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103497003",
+        "display": "Streptococcus pneumoniae Danish serotype 3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "443670000",
+        "display": "Streptococcus pneumoniae Danish serotype 31 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 31 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 31"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698127006",
+        "display": "Streptococcus pneumoniae Danish serotype 32A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 32A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 32A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698128001",
+        "display": "Streptococcus pneumoniae Danish serotype 32F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 32F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 32F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "442049002",
+        "display": "Streptococcus pneumoniae Danish serotype 33A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 33A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 33A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698129009",
+        "display": "Streptococcus pneumoniae Danish serotype 33B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 33B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 33B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698130004",
+        "display": "Streptococcus pneumoniae Danish serotype 33C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 33C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 33C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698131000",
+        "display": "Streptococcus pneumoniae Danish serotype 33D (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 33D (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 33D"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "763393002",
+        "display": "Streptococcus pneumoniae Danish serotype 33E (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 33E (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 33E"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "420148006",
+        "display": "Streptococcus pneumoniae Danish serotype 33F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 33F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 33F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "767201007",
+        "display": "Streptococcus pneumoniae Danish serotype 34 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 34 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 34"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698132007",
+        "display": "Streptococcus pneumoniae Danish serotype 35A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 35A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 35A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698133002",
+        "display": "Streptococcus pneumoniae Danish serotype 35B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 35B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 35B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698134008",
+        "display": "Streptococcus pneumoniae Danish serotype 35C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 35C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 35C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698135009",
+        "display": "Streptococcus pneumoniae Danish serotype 35F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 35F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 35F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698136005",
+        "display": "Streptococcus pneumoniae Danish serotype 36 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 36 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 36"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698137001",
+        "display": "Streptococcus pneumoniae Danish serotype 37 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 37 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 37"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "767204004",
+        "display": "Streptococcus pneumoniae Danish serotype 38 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 38 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 38"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "767208001",
+        "display": "Streptococcus pneumoniae Danish serotype 39 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 39 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 39"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "415616007",
+        "display": "Streptococcus pneumoniae Danish serotype 4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 4 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "767274003",
+        "display": "Streptococcus pneumoniae Danish serotype 40 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 40 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 40"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698139003",
+        "display": "Streptococcus pneumoniae Danish serotype 41A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 41A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 41A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698140001",
+        "display": "Streptococcus pneumoniae Danish serotype 41F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 41F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 41F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "767285001",
+        "display": "Streptococcus pneumoniae Danish serotype 42 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 42 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 42"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "767284002",
+        "display": "Streptococcus pneumoniae Danish serotype 43 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 43 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 43"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "767283008",
+        "display": "Streptococcus pneumoniae Danish serotype 44 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 44 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 44"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "767282003",
+        "display": "Streptococcus pneumoniae Danish serotype 45 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 45 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 45"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "767281005",
+        "display": "Streptococcus pneumoniae Danish serotype 46 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 46 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 46"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698147003",
+        "display": "Streptococcus pneumoniae Danish serotype 47A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 47A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 47A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698148008",
+        "display": "Streptococcus pneumoniae Danish serotype 47F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 47F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 47F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "767275002",
+        "display": "Streptococcus pneumoniae Danish serotype 48 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 48 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 48"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "419871001",
+        "display": "Streptococcus pneumoniae Danish serotype 5 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 5 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 5"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "443156004",
+        "display": "Streptococcus pneumoniae Danish serotype 6A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 6A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 6A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "418902003",
+        "display": "Streptococcus pneumoniae Danish serotype 6B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 6B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 6B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698095005",
+        "display": "Streptococcus pneumoniae Danish serotype 6C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 6C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 6C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "719028004",
+        "display": "Streptococcus pneumoniae Danish serotype 6D (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 6D (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 6D"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "763388000",
+        "display": "Streptococcus pneumoniae Danish serotype 6E (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 6E (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 6E"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "763389008",
+        "display": "Streptococcus pneumoniae Danish serotype 6F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 6F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 6F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "763390004",
+        "display": "Streptococcus pneumoniae Danish serotype 6G (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 6G (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 6G"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "763391000",
+        "display": "Streptococcus pneumoniae Danish serotype 6H (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 6H (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 6H"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "415619000",
+        "display": "Streptococcus pneumoniae Danish serotype 7A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 7A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 7A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698102004",
+        "display": "Streptococcus pneumoniae Danish serotype 7B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 7B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 7B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698096006",
+        "display": "Streptococcus pneumoniae Danish serotype 7C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 7C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 7C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103499000",
+        "display": "Streptococcus pneumoniae Danish serotype 7F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 7F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 7F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "418759005",
+        "display": "Streptococcus pneumoniae Danish serotype 8 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 8 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 8"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "419167001",
+        "display": "Streptococcus pneumoniae Danish serotype 9A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 9A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 9A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "418883007",
+        "display": "Streptococcus pneumoniae Danish serotype 9L (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 9L (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 9L"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103500009",
+        "display": "Streptococcus pneumoniae Danish serotype 9N (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 9N (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 9N"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "418322006",
+        "display": "Streptococcus pneumoniae Danish serotype 9V (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Streptococcus pneumoniae Danish serotype 9V (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Streptococcus pneumoniae, dänischer Serotyp 9V"
+        } ]
+      } ]
+    } ]
+  }
+}

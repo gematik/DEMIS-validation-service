@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetCVDP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetCVDP",
+  "version": "1.3.0",
+  "name": "AnswerSetCVDP",
+  "title": "AnswerSet für Severe-Acute-Respiratory-Syndrome-Coronavirus-2 (SARS-CoV-2)",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetCVDP enthält die Codes der Answer-Codes für Severe-Acute-Respiratory-Syndrome-Coronavirus-2 (SARS-CoV-2).",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "840533007",
+        "display": "Severe acute respiratory syndrome coronavirus 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Severe acute respiratory syndrome coronavirus 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "SARS-CoV-2"
+        } ]
+      } ]
+    } ]
+  }
+}

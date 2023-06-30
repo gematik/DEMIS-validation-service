@@ -1,0 +1,180 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetHBVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetHBVP",
+  "version": "1.1.0",
+  "name": "AnswerSetHBVP",
+  "title": "AnswerSet für Hepatitis-B-Virus; Meldepflicht für alle Nachweise",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetHBVP enthält die Codes der Answer-Codes für Hepatitis-B-Virus; Meldepflicht für alle Nachweise.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "81665004",
+        "display": "Hepatitis B virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis B virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-B-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "703886001",
+        "display": "Hepatitis B virus genotype A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis B virus genotype A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-B-Virus, Genotyp A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "703887005",
+        "display": "Hepatitis B virus genotype B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis B virus genotype B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-B-Virus, Genotyp B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "703888000",
+        "display": "Hepatitis B virus genotype C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis B virus genotype C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-B-Virus, Genotyp C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "703889008",
+        "display": "Hepatitis B virus genotype D (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis B virus genotype D (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-B-Virus, Genotyp D"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "703890004",
+        "display": "Hepatitis B virus genotype E (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis B virus genotype E (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-B-Virus, Genotyp E"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "703891000",
+        "display": "Hepatitis B virus genotype F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis B virus genotype F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-B-Virus, Genotyp F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "703892007",
+        "display": "Hepatitis B virus genotype G (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis B virus genotype G (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-B-Virus, Genotyp G"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "703893002",
+        "display": "Hepatitis B virus genotype H (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis B virus genotype H (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-B-Virus, Genotyp H"
+        } ]
+      } ]
+    } ]
+  }
+}

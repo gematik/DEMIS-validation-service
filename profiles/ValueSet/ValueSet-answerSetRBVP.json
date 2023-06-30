@@ -1,0 +1,162 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetRBVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetRBVP",
+  "version": "1.2.0",
+  "name": "AnswerSetRBVP",
+  "title": "AnswerSet für Rabiesvirus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetRBVP enthält die Codes der Answer-Codes für Rabiesvirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450805000",
+        "display": "European bat lyssavirus 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "European bat lyssavirus 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Europäisches Fledermaus-Lyssavirus 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450806004",
+        "display": "European bat lyssavirus 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "European bat lyssavirus 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Europäisches Fledermaus-Lyssavirus 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "112368004",
+        "display": "Genus Lyssavirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Lyssavirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Lyssavirus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "59881000",
+        "display": "Rabies virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rabies virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Tollwut-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "12551003",
+        "display": "Mokola virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mokola virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mokola-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "32052006",
+        "display": "Lagos bat virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Lagos bat virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Lagos-Fledermaus-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "72296007",
+        "display": "Duvenhage virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Duvenhage virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Duvenhage-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "426972006",
+        "display": "Australian bat lyssavirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Australian bat lyssavirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Australisches Fledermaus-Lyssavirus"
+        } ]
+      } ]
+    } ]
+  }
+}

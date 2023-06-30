@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetCLTP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetCLTP",
+  "version": "1.0.0",
+  "name": "AnswerSetCLTP",
+  "title": "AnswerSet für Tetanus, Clostridium tetani",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet AnswerSetCLTP enthält die Codes der Answer-Codes für Tetanus, Clostridium tetani.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "30917009",
+        "display": "Clostridium tetani (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Clostridium tetani (organism)"
+        } ]
+      }, {
+        "code": "26159005",
+        "display": "Clostridium tetani toxin (substance)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Clostridium tetani toxin (substance)"
+        } ]
+      } ]
+    } ]
+  }
+}

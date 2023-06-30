@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "substanceCORP",
+  "url": "https://demis.rki.de/fhir/ValueSet/substanceCORP",
+  "version": "1.0.0",
+  "name": "SubstanceCORP",
+  "title": "Analyt-Set für Corynebacterium spp. (Toxin bildend)",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet SubstanceCORP enthält die Codes des Analyt-Sets für Corynebacterium spp. (Toxin bildend).",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "55123007",
+        "display": "Diphtheria toxin (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "Diphtherietoxin"
+        } ]
+      } ]
+    } ]
+  }
+}

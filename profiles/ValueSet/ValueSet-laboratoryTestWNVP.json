@@ -1,0 +1,634 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestWNVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestWNVP",
+  "version": "1.5.0",
+  "name": "LaboratoryTestWNVP",
+  "title": "Labortest für West-Nil-Virus",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestWNVP enthält die Codes der Labortests für West-Nil-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "97185-3",
+        "display": "West Nile virus RNA [Presence] in Urine by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-RNA [Nachweis] in Urin mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "29535-2",
+        "display": "West Nile virus IgG Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "29536-0",
+        "display": "West Nile virus IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "29537-8",
+        "display": "West Nile virus IgG Ab [Units/volume] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "29538-6",
+        "display": "West Nile virus IgM Ab [Units/volume] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "29566-7",
+        "display": "West Nile virus IgG Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "29567-5",
+        "display": "West Nile virus IgM Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "29568-3",
+        "display": "West Nile virus neutralizing antibody [Titer] in Serum by Neutralization test",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-neutralisierender Antikörper [Titer] in Serum mit Neutralisationstest"
+        } ]
+      }, {
+        "code": "29569-1",
+        "display": "West Nile virus IgM Ab [Presence] in Cerebral spinal fluid by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Nachweis] in Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "29570-9",
+        "display": "West Nile virus neutralizing antibody [Titer] in Cerebral spinal fluid by Neutralization test",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-neutralisierender Antikörper [Titer] in Zerebrospinalflüssigkeit mit Neutralisationstest"
+        } ]
+      }, {
+        "code": "29778-8",
+        "display": "West Nile virus IgM Ab [Presence] in Specimen by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Nachweis] in Probenmaterial mit Immunoassay"
+        } ]
+      }, {
+        "code": "29779-6",
+        "display": "West Nile virus neutralizing antibody [Titer] in Specimen by Neutralization test",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-neutralisierender Antikörper [Titer] in Probenmaterial mit Neutralisationstest"
+        } ]
+      }, {
+        "code": "29780-4",
+        "display": "West Nile virus IgM Ab [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "30178-8",
+        "display": "West Nile virus IgG Ab [Presence] in Specimen by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Nachweis] in Probenmaterial mit Immunoassay"
+        } ]
+      }, {
+        "code": "31701-6",
+        "display": "West Nile virus IgG Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "31702-4",
+        "display": "West Nile virus IgG Ab [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "31703-2",
+        "display": "West Nile virus IgM Ab [Presence] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Nachweis] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "31704-0",
+        "display": "West Nile virus IgM Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "32361-8",
+        "display": "West Nile virus RNA [Presence] in Serum by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-RNA [Nachweis] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "32370-9",
+        "display": "West Nile virus RNA [Presence] in Tissue by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-RNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "32371-7",
+        "display": "West Nile virus Ag [Presence] in Tissue by Immune stain",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-Antigen [Nachweis] in Gewebe mit Immunfärbung"
+        } ]
+      }, {
+        "code": "33328-6",
+        "display": "West Nile virus IgG Ab [Titer] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Titer] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "33329-4",
+        "display": "West Nile virus IgG Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "33330-2",
+        "display": "West Nile virus IgM Ab [Titer] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Titer] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "33331-0",
+        "display": "West Nile virus IgM Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "34460-6",
+        "display": "West Nile virus RNA [Presence] in Blood by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-RNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "34461-4",
+        "display": "West Nile virus RNA [Presence] in Cerebral spinal fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-RNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "34892-0",
+        "display": "West Nile virus RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "37985-9",
+        "display": "West Nile virus RNA [Presence] in Specimen by Probe",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-RNA [Nachweis] in Probenmaterial mit Sonde"
+        } ]
+      }, {
+        "code": "38166-5",
+        "display": "West Nile virus IgM Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "38997-3",
+        "display": "West Nile virus IgG Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "39572-3",
+        "display": "West Nile virus IgG Ab [Units/volume] in Cerebral spinal fluid by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "39573-1",
+        "display": "West Nile virus IgM Ab [Units/volume] in Cerebral spinal fluid by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "41195-9",
+        "display": "West Nile virus IgM Ab [Titer] in Body fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Titer] in Körperflüssigkeit"
+        } ]
+      }, {
+        "code": "41196-7",
+        "display": "West Nile virus IgG Ab [Titer] in Body fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Titer] in Körperflüssigkeit"
+        } ]
+      }, {
+        "code": "41211-4",
+        "display": "West Nile virus IgG+IgM Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG+IgM-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "41212-2",
+        "display": "West Nile virus RNA [Presence] in Serum from Donor by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-RNA [Nachweis] in Serum von Donor mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "41236-1",
+        "display": "West Nile virus IgG Ab [Presence] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Nachweis] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "41642-0",
+        "display": "West Nile virus IgM Ab [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "41643-8",
+        "display": "West Nile virus Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "43342-5",
+        "display": "West Nile virus IgM Ab [Titer] in Cerebral spinal fluid by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Titer] in Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "43343-3",
+        "display": "West Nile virus IgM Ab [Titer] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Titer] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "50015-7",
+        "display": "West Nile virus Ag [Presence] in Blood or Marrow from Donor",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-Antigen [Nachweis] in Blut oder Knochenmark von Donor"
+        } ]
+      }, {
+        "code": "60028-8",
+        "display": "West Nile virus IgG Ab avidity [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörperavidität [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "60029-6",
+        "display": "West Nile virus IgG Ab avidity [Presence] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörperavidität [Nachweis] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "60030-4",
+        "display": "West Nile virus IgG Ab [Presence] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "62436-1",
+        "display": "West Nile virus IgM Ab [Presence] in Body fluid by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper [Nachweis] in Körperflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "74857-4",
+        "display": "West Nile virus RNA [Presence] in Serum or Plasma from Donor by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-RNA [Nachweis] in Serum oder Plasma von Donor mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "77953-8",
+        "display": "West Nile virus IgG Ab [Presence] in Cerebral spinal fluid by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgG-Antikörper [Nachweis] in Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "81096-0",
+        "display": "West Nile virus Kunjin strain IgM Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus, Kunjin-Stamm-IgM-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "81650-4",
+        "display": "West Nile virus Kunjin strain RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus, Kunjin-Stamm-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "87395-0",
+        "display": "West Nile virus RNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-RNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "94289-6",
+        "display": "West Nile virus neutralizing antibody [Presence] in Specimen by Neutralization test",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-neutralisierender Antikörper [Nachweis] in Probenmaterial mit Neutralisationstest"
+        } ]
+      }, {
+        "code": "94602-0",
+        "display": "West Nile virus IgM Ab/Positive control in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "West-Nil-Virus-IgM-Antikörper/Positivkontrolle in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "41461-5",
+        "display": "Virus identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Virus identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      } ]
+    } ]
+  }
+}

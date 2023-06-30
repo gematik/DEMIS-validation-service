@@ -1,0 +1,126 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetFRTP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetFRTP",
+  "version": "1.2.0",
+  "name": "AnswerSetFRTP",
+  "title": "AnswerSet für Francisella tularensis",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetFRTP enthält die Codes der Answer-Codes für Francisella tularensis.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "51526001",
+        "display": "Francisella tularensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Francisella tularensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Francisella tularensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "60502008",
+        "display": "Francisella tularensis subspecies holarctica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Francisella tularensis subspecies holarctica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Francisella tularensis Subspecies holarctica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "432830002",
+        "display": "Francisella tularensis subspecies japonica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Francisella tularensis subspecies japonica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Francisella tularensis Subspecies japonica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "23930001",
+        "display": "Francisella tularensis subspecies mediasiatica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Francisella tularensis subspecies mediasiatica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Francisella tularensis Subspecies mediasiatica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "432832005",
+        "display": "Francisella tularensis subspecies novicida (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Francisella tularensis subspecies novicida (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Francisella tularensis Subspecies novicida"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "91508008",
+        "display": "Francisella tularensis subspecies tularensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Francisella tularensis subspecies tularensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Francisella tularensis Subspecies tularensis"
+        } ]
+      } ]
+    } ]
+  }
+}

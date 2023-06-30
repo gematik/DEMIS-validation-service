@@ -1,0 +1,54 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetGILP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetGILP",
+  "version": "1.2.0",
+  "name": "AnswerSetGILP",
+  "title": "AnswerSet für Giardia lamblia",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetGILP enthält die Codes der Answer-Codes für Giardia lamblia.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "608948005",
+        "display": "Cyst of Giardia lamblia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cyst of Giardia lamblia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Giardia-lamblia-Zyste"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "608932009",
+        "display": "Trophozoite of Giardia lamblia (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Trophozoite of Giardia lamblia (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Giardia-lamblia-Trophozoit"
+        } ]
+      } ]
+    } ]
+  }
+}

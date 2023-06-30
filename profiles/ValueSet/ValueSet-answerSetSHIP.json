@@ -1,0 +1,1422 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetSHIP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetSHIP",
+  "version": "1.4.0",
+  "name": "AnswerSetSHIP",
+  "title": "AnswerSet für Shigella sp.",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetSHIP enthält die Codes der Answer-Codes für Shigella sp..",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "721911002",
+        "display": "Extended spectrum beta-lactamase producing Shigella sonnei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Extended spectrum beta-lactamase producing Shigella sonnei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Erweitertes-Spektrum-Beta-Laktamase produzierende Shigella sonnei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "726499009",
+        "display": "Fluoroquinolone resistant Shigella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Fluoroquinolone resistant Shigella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Fluoroquinolon-resistente Shigella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406478008",
+        "display": "Provisional shigella 3065-93 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Provisional shigella 3065-93 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Provisional shigella 3065-93"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406479000",
+        "display": "Provisional shigella 3162-96 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Provisional shigella 3162-96 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Provisional shigella 3162-96"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406480002",
+        "display": "Provisional shigella 88-893 [-: (6)] (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Provisional shigella 88-893 [-: (6)] (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Provisional shigella 88-893 [-: (6)]"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406481003",
+        "display": "Provisional shigella 89-141 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Provisional shigella 89-141 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Provisional shigella 89-141"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406482005",
+        "display": "Provisional shigella 93-119 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Provisional shigella 93-119 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Provisional shigella 93-119"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406483000",
+        "display": "Provisional shigella 96-204 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Provisional shigella 96-204 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Provisional shigella 96-204"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406484006",
+        "display": "Provisional shigella 96-265 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Provisional shigella 96-265 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Provisional shigella 96-265"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406485007",
+        "display": "Provisional shigella E28938 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Provisional shigella E28938 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Provisional shigella E28938"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406486008",
+        "display": "Provisional shigella E670/74 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Provisional shigella E670/74 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Provisional shigella E670/74"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406487004",
+        "display": "Provisional shigella Y394 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Provisional shigella Y394 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Provisional shigella Y394"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125029005",
+        "display": "Shigella boydii, serovar 8 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 8 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 8"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125030000",
+        "display": "Shigella boydii, serovar 9 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 9 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 9"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125032008",
+        "display": "Shigella boydii, serovar 11 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 11 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 11"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125028002",
+        "display": "Shigella boydii, serovar 7 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 7 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 7"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125026003",
+        "display": "Shigella boydii, serovar 5 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 5 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 5"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125027007",
+        "display": "Shigella boydii, serovar 6 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 6 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 6"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125033003",
+        "display": "Shigella boydii, serovar 12 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 12 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 12"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125025004",
+        "display": "Shigella boydii, serovar 4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 4 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125022001",
+        "display": "Shigella boydii, serovar 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125035005",
+        "display": "Shigella boydii, serovar 14 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 14 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 14"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125034009",
+        "display": "Shigella boydii, serovar 13 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 13 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 13"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125023006",
+        "display": "Shigella boydii, serovar 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125036006",
+        "display": "Shigella boydii, serovar 15 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 15 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 15"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125024000",
+        "display": "Shigella boydii, serovar 3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125031001",
+        "display": "Shigella boydii, serovar 10 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii, serovar 10 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serovar 10"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "55462008",
+        "display": "Shigella boydii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406488009",
+        "display": "Shigella boydii 16 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii 16 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii 16"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406489001",
+        "display": "Shigella boydii 17 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii 17 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii 17"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406490005",
+        "display": "Shigella boydii 18 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii 18 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii 18"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406491009",
+        "display": "Shigella boydii 19 [Provisional Serotype E16553] (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii 19 [Provisional Serotype E16553] (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii 19 [Vorläufiger Serotyp E16553]"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406492002",
+        "display": "Shigella boydii 20 [Provisional Serotype SH108(99-4528)] (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii 20 [Provisional Serotype SH108(99-4528)] (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii 20 [Vorläufiger Serotyp SH108(99-4528)]"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406493007",
+        "display": "Shigella boydii serotype undetermined (Subgroup C) (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella boydii serotype undetermined (Subgroup C) (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella boydii, Serotyp unbestimmt (Subgruppe C)"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "783138941000087102",
+        "display": "Shigella dysenteriae, serovar 16 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae, serovar 16 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae, Serovar 16"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "124998000",
+        "display": "Shigella dysenteriae, serovar 4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae, serovar 4 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae, Serovar 4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125002000",
+        "display": "Shigella dysenteriae, serovar 8 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae, serovar 8 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae, Serovar 8"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "124995002",
+        "display": "Shigella dysenteriae, serovar 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae, serovar 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae, Serovar 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125001007",
+        "display": "Shigella dysenteriae, serovar 7 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae, serovar 7 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae, Serovar 7"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "124996001",
+        "display": "Shigella dysenteriae, serovar 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae, serovar 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae, Serovar 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125000008",
+        "display": "Shigella dysenteriae, serovar 6 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae, serovar 6 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae, Serovar 6"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "124997005",
+        "display": "Shigella dysenteriae, serovar 3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae, serovar 3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae, Serovar 3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125004004",
+        "display": "Shigella dysenteriae, serovar 10 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae, serovar 10 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae, Serovar 10"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "124999008",
+        "display": "Shigella dysenteriae, serovar 5 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae, serovar 5 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae, Serovar 5"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125003005",
+        "display": "Shigella dysenteriae, serovar 9 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae, serovar 9 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae, Serovar 9"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "43612004",
+        "display": "Shigella dysenteriae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406494001",
+        "display": "Shigella dysenteriae 11 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae 11 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae 11"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406495000",
+        "display": "Shigella dysenteriae 12 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae 12 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae 12"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406496004",
+        "display": "Shigella dysenteriae 13 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae 13 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae 13"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406498003",
+        "display": "Shigella dysenteriae 14 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae 14 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae 14"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406497008",
+        "display": "Shigella dysenteriae 15 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella dysenteriae 15 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella dysenteriae 15"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125006002",
+        "display": "Shigella flexneri, serovar 1a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 1a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 1a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125018006",
+        "display": "Shigella flexneri, serovar 5 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 5 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 5"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125010004",
+        "display": "Shigella flexneri, serovar 2b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 2b (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 2b"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125013002",
+        "display": "Shigella flexneri, serovar 3b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 3b (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 3b"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125020009",
+        "display": "Shigella flexneri, serovar X (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar X (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar X"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125014008",
+        "display": "Shigella flexneri, serovar 3c (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 3c (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 3c"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125011000",
+        "display": "Shigella flexneri, serovar 3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125008001",
+        "display": "Shigella flexneri, serovar 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125015009",
+        "display": "Shigella flexneri, serovar 4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 4 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125005003",
+        "display": "Shigella flexneri, serovar 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125016005",
+        "display": "Shigella flexneri, serovar 4a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 4a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 4a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125007006",
+        "display": "Shigella flexneri, serovar 1b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 1b (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 1b"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125009009",
+        "display": "Shigella flexneri, serovar 2a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 2a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 2a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125019003",
+        "display": "Shigella flexneri, serovar 6 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 6 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 6"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125021008",
+        "display": "Shigella flexneri, serovar Y (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar Y (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar Y"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125017001",
+        "display": "Shigella flexneri, serovar 4b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 4b (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 4b"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "125012007",
+        "display": "Shigella flexneri, serovar 3a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri, serovar 3a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 3a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "85729005",
+        "display": "Shigella flexneri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406500002",
+        "display": "Shigella flexneri 4c [IV:7,8] (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri 4c [IV:7,8] (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri 4c [IV:7,8]"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "646165971000087107",
+        "display": "Shigella flexneri 5a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri 5a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri 5a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406501003",
+        "display": "Shigella flexneri 5a [V:3,4] (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri 5a [V:3,4] (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri 5a [V:3,4]"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "473764841000087103",
+        "display": "Shigella flexneri 5b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri 5b (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri 5b"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406502005",
+        "display": "Shigella flexneri 5b [V:7,8] (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri 5b [V:7,8] (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri 5b [V:7,8]"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406503000",
+        "display": "Shigella flexneri serotype undetermined (Subgroup B) (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri serotype undetermined (Subgroup B) (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serotyp unbestimmt (Subgruppe B)"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "721980008",
+        "display": "Shigella flexneri serovar 6 biotype Manchester (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella flexneri serovar 6 biotype Manchester (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella flexneri, Serovar 6, Biotyp Manchester"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "4298009",
+        "display": "Shigella sonnei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella sonnei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella sonnei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "406504006",
+        "display": "Shigella sonnei (Subgroup D) (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Shigella sonnei (Subgroup D) (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Shigella sonnei (Subgruppe D)"
+        } ]
+      } ]
+    } ]
+  }
+}

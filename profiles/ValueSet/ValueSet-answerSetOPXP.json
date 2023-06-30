@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetOPXP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetOPXP",
+  "version": "1.2.0",
+  "name": "AnswerSetOPXP",
+  "title": "AnswerSet für Orthopockenviren (sonstige Orthopockenviren)",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetOPXP enthält die Codes der Answer-Codes für Orthopockenviren (sonstige Orthopockenviren).",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "37362000",
+        "display": "Cowpox virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cowpox virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kuhpocken-Virus"
+        } ]
+      } ]
+    } ]
+  }
+}

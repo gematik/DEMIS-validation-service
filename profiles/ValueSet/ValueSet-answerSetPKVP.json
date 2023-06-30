@@ -1,0 +1,72 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetPKVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetPKVP",
+  "version": "1.1.0",
+  "name": "AnswerSetPKVP",
+  "title": "AnswerSet für Orthopockenviren (Variolavirus)",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetPKVP enthält die Codes der Answer-Codes für Orthopockenviren (Variolavirus).",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "312411000",
+        "display": "Variola minor virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Variola minor virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Variola-minor-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "243568000",
+        "display": "Variola virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Variola virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Variola-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "312410004",
+        "display": "Variola major virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Variola major virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Variola-major-Virus"
+        } ]
+      } ]
+    } ]
+  }
+}

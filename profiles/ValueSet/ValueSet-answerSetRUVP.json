@@ -1,0 +1,270 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetRUVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetRUVP",
+  "version": "1.3.0",
+  "name": "AnswerSetRUVP",
+  "title": "AnswerSet für Rubellavirus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetRUVP enthält die Codes der Answer-Codes für Rubellavirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "5210005",
+        "display": "Rubella virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "425872000",
+        "display": "Rubella virus genotype 1a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 1a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 1a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "425415004",
+        "display": "Rubella virus genotype 1B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 1B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 1B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "427398000",
+        "display": "Rubella virus genotype 1C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 1C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 1C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "427559006",
+        "display": "Rubella virus genotype 1D (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 1D (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 1D"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "426085007",
+        "display": "Rubella virus genotype 1E (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 1E (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 1E"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "426367009",
+        "display": "Rubella virus genotype 1F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 1F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 1F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "426209008",
+        "display": "Rubella virus genotype 1G (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 1G (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 1G"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698201004",
+        "display": "Rubella virus genotype 1H (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 1H (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 1H"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698202006",
+        "display": "Rubella virus genotype 1I (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 1I (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 1I"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698203001",
+        "display": "Rubella virus genotype 1J (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 1J (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 1J"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "425891000",
+        "display": "Rubella virus genotype 2A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 2A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 2A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "426612000",
+        "display": "Rubella virus genotype 2B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 2B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 2B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "427329000",
+        "display": "Rubella virus genotype 2C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rubella virus genotype 2C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Röteln-Virus, Genotyp 2C"
+        } ]
+      } ]
+    } ]
+  }
+}

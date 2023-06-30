@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetCYMP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetCYMP",
+  "version": "1.0.0",
+  "name": "AnswerSetCYMP",
+  "title": "AnswerSet für Cytomegalie, Cytomegalievirus",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet AnswerSetCYMP enthält die Codes der Answer-Codes für Cytomegalie, Cytomegalievirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "407444007",
+        "display": "Genus Cytomegalovirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Cytomegalovirus (organism)"
+        } ]
+      }, {
+        "code": "243579005",
+        "display": "Human cytomegalovirus 5 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human cytomegalovirus 5 (organism)"
+        } ]
+      } ]
+    } ]
+  }
+}

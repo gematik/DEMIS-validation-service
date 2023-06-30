@@ -1,0 +1,72 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetCOXP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetCOXP",
+  "version": "1.1.0",
+  "name": "AnswerSetCOXP",
+  "title": "AnswerSet für Coxiella burnetii",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetCOXP enthält die Codes der Answer-Codes für Coxiella burnetii.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "22533000",
+        "display": "Coxiella burnetii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Coxiella burnetii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Coxiella burnetii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103509005",
+        "display": "Coxiella burnetii, phase II (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Coxiella burnetii, phase II (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Coxiella burnetii, Phase II"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103508002",
+        "display": "Coxiella burnetii, phase I (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Coxiella burnetii, phase I (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Coxiella burnetii, Phase I"
+        } ]
+      } ]
+    } ]
+  }
+}

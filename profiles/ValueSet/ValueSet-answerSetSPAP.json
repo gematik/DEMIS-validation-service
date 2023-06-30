@@ -1,0 +1,108 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetSPAP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetSPAP",
+  "version": "1.4.0",
+  "name": "AnswerSetSPAP",
+  "title": "AnswerSet für Salmonella Paratyphi; Meldepflicht für alle direkten Nachweise",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetSPAP enthält die Codes der Answer-Codes für Salmonella Paratyphi; Meldepflicht für alle direkten Nachweise.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "840687007",
+        "display": "Multidrug-resistant Salmonella paratyphi (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Multidrug-resistant Salmonella paratyphi (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Multidrug-resistente Salmonella paratyphi"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "79128009",
+        "display": "Salmonella Paratyphi A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Paratyphi A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Paratyphi A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "85908006",
+        "display": "Salmonella Paratyphi B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Paratyphi B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Paratyphi B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "128388007",
+        "display": "Salmonella Paratyphi B var. Java (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Paratyphi B var. Java (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Paratyphi B, Variante Java"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "32488009",
+        "display": "Salmonella Paratyphi C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmonella Paratyphi C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmonella Paratyphi C"
+        } ]
+      } ]
+    } ]
+  }
+}

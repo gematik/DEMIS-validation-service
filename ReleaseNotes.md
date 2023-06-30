@@ -2,6 +2,45 @@
 
 # Release Validation-Service
 
+## Release 2.0.1
+
+### fixed
+- add missing License-Header
+- add checks to CI-Pipeline 
+
+
+## Release 2.0.0
+
+### fixed
+- fix CVEs
+
+### changed
+- Support for new RKI Profiles 1.23.0.alpha3
+- Upgraded SpringBoot to 3.0.7
+
+
+## Release 1.4.3
+
+### changed
+- Upgraded Docker Image to use JRE 17.0.7
+- Upgraded HAPI FHIR Utilities to 6.4.4
+
+
+## Release 1.4.2
+
+## fixed
+- fix CVE-2023-24057
+- fix CVE-2023-28465
+
+### changed
+- Upgraded HAPI FHIR Utilities to 6.2.5
+
+
+## Release 1.4.1
+
+### changed
+- Changed logging format to JSON
+
 ## Release 1.4.0
 
 ### fixed

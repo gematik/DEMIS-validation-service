@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "substanceHCVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/substanceHCVP",
+  "version": "1.0.0",
+  "name": "SubstanceHCVP",
+  "title": "Analyt-Set für Hepatitis-C-Virus; Meldepflicht für alle Nachweise",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet SubstanceHCVP enthält die Codes des Analyt-Sets für Hepatitis-C-Virus; Meldepflicht für alle Nachweise.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "726592002",
+        "display": "Antigen of Hepatitis C virus core (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "HCV-Core-Antigen"
+        } ]
+      } ]
+    } ]
+  }
+}

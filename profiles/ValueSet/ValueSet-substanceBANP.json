@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "id": "substanceBANP",
+  "url": "https://demis.rki.de/fhir/ValueSet/substanceBANP",
+  "version": "1.0.0",
+  "name": "SubstanceBANP",
+  "title": "Analyt-Set für Bacillus anthracis",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet SubstanceBANP enthält die Codes des Analyt-Sets für Bacillus anthracis.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "409647003",
+        "display": "Anthrax toxin lethal toxin (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "Anthrax Letaltoxin"
+        } ]
+      }, {
+        "code": "409500003",
+        "display": "Anthrax toxin edema factor (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "Anthrax Ödemfaktor (EF)"
+        } ]
+      }, {
+        "code": "409502006",
+        "display": "Anthrax toxin lethal factor (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "Anthrax Letalfaktor (LF)"
+        } ]
+      }, {
+        "code": "409499007",
+        "display": "Protective antigen of anthrax toxin (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "Anthrax Protektives Antigen (PA)"
+        } ]
+      } ]
+    } ]
+  }
+}

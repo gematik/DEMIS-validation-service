@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestBOVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestBOVP",
+  "version": "1.2.0",
+  "name": "LaboratoryTestBOVP",
+  "title": "Labortest für humanpathogene Bornaviren; Meldepflicht nur für den direkten Nachweis",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestBOVP enthält die Codes der Labortests für humanpathogene Bornaviren; Meldepflicht nur für den direkten Nachweis.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "41461-5",
+        "display": "Virus identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Virus identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      } ]
+    } ]
+  }
+}

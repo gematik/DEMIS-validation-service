@@ -1,0 +1,54 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetWNVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetWNVP",
+  "version": "1.2.0",
+  "name": "AnswerSetWNVP",
+  "title": "AnswerSet für West-Nil-Virus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetWNVP enthält die Codes der Answer-Codes für West-Nil-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "57311007",
+        "display": "West Nile virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "West Nile virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "West-Nil-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "31441007",
+        "display": "Kunjin virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kunjin virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kunjin-Virus"
+        } ]
+      } ]
+    } ]
+  }
+}

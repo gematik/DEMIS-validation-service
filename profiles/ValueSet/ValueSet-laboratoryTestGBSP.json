@@ -1,0 +1,167 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestGBSP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestGBSP",
+  "version": "1.0.0",
+  "name": "LaboratoryTestGBSP",
+  "title": "Labortest für Gruppe-B-Streptokokken (GBS); Meldepflicht nur für den direkten Nachweis bei Schwangeren und Neugeborenen",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet LaboratoryTestGBSP enthält die Codes der Labortests für Gruppe-B-Streptokokken (GBS); Meldepflicht nur für den direkten Nachweis bei Schwangeren und Neugeborenen.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "48683-7",
+        "display": "Streptococcus agalactiae DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "5034-4",
+        "display": "Streptococcus agalactiae rRNA [Presence] in Specimen by Probe"
+      }, {
+        "code": "52968-5",
+        "display": "Streptococcus agalactiae [Presence] in Anal by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus agalactiae [Nachweis] in analem Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "581-9",
+        "display": "Streptococcus agalactiae [Presence] in Cervix by Organism specific culture"
+      }, {
+        "code": "582-7",
+        "display": "Streptococcus agalactiae [Presence] in Genital specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus agalactiae [Nachweis] in Probenmaterial aus dem Genitaltrakt mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "583-5",
+        "display": "Streptococcus agalactiae [Presence] in Genital lochia by Organism specific culture"
+      }, {
+        "code": "584-3",
+        "display": "Streptococcus agalactiae [Presence] in Vaginal fluid by Organism specific culture"
+      }, {
+        "code": "585-0",
+        "display": "Streptococcus agalactiae [Presence] in Throat by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus agalactiae [Nachweis] in Rachen mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "586-8",
+        "display": "Streptococcus agalactiae [Presence] in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus agalactiae [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "62493-2",
+        "display": "Streptococcus pneumoniae DNA and Haemophilus influenza DNA and Streptococcus agalactiae DNA [Identifier] in Unspecified specimen by NAA with probe detection"
+      }, {
+        "code": "72607-5",
+        "display": "Streptococcus agalactiae [Presence] in Vag+Rectum by Organism specific culture"
+      }, {
+        "code": "76582-6",
+        "display": "Streptococcus agalactiae cfb gene [Presence] in Swab specimen by NAA with probe detection"
+      }, {
+        "code": "76597-4",
+        "display": "Streptococcus agalactiae cfb gene [#/mass] in XXX.tissue by NAA with probe detection"
+      }, {
+        "code": "76610-5",
+        "display": "Streptococcus agalactiae cfb gene [#/volume] in XXX.body fluid by NAA with probe detection"
+      }, {
+        "code": "82186-8",
+        "display": "Streptococcus agalactiae DNA [Presence] in Cerebral spinal fluid by NAA with non-probe detection"
+      }, {
+        "code": "85767-2",
+        "display": "Streptococcus agalactiae DNA [Presence] by NAA with non-probe detection in Positive blood culture"
+      }, {
+        "code": "88273-8",
+        "display": "Streptococcus agalactiae hsp60 gene [Presence] by Probe in Positive blood culture"
+      }, {
+        "code": "90272-6",
+        "display": "Streptococcus agalactiae DNA [Presence] in Vaginal fluid by NAA with probe detection"
+      }, {
+        "code": "91847-4",
+        "display": "Streptococcus agalactiae DNA [Presence] in Genital specimen by NAA with probe detection"
+      }, {
+        "code": "91875-5",
+        "display": "Streptococcus agalactiae DNA [Presence] in Vag+Rectum by NAA with probe detection"
+      }, {
+        "code": "92773-1",
+        "display": "Streptococcus agalactiae DNA [Presence] by NAA with probe detection in Positive blood culture"
+      }, {
+        "code": "92950-5",
+        "display": "Streptococcus agalactiae DNA [NCncRange] in Sputum Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "92951-3",
+        "display": "Streptococcus agalactiae DNA [NCncRange] in Bronchoalveolar lavage Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "94368-8",
+        "display": "Streptococcus agalactiae DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "96320-7",
+        "display": "Streptococcus agalactiae DNA [NCncRange] in Lower respiratory specimen Qualitative by NAA with non-probe detection"
+      }, {
+        "code": "97636-5",
+        "display": "Streptococcus agalactiae DNA [Presence] in Synovial fluid by NAA with non-probe detection"
+      }, {
+        "code": "99032-5",
+        "display": "Streptococcus agalactiae DNA [Presence] in Urine by NAA with probe detection"
+      }, {
+        "code": "99093-7",
+        "display": "Streptococcus agalactiae DNA [Presence] in Cerebral spinal fluid by NAA with probe detection"
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    } ]
+  }
+}

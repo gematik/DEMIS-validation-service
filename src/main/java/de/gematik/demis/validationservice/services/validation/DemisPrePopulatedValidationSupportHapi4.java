@@ -30,11 +30,11 @@ import org.hl7.fhir.r4.model.Questionnaire;
  * Custom IValidationSupport that extends {@link PrePopulatedValidationSupport} for {@link
  * Questionnaire}s.
  */
-public class DemisPrePopulatedValidationSupportHapi4 extends PrePopulatedValidationSupport {
+class DemisPrePopulatedValidationSupportHapi4 extends PrePopulatedValidationSupport {
 
   private final Map<String, IBaseResource> myQuestionnaireSets;
 
-  public DemisPrePopulatedValidationSupportHapi4(
+  DemisPrePopulatedValidationSupportHapi4(
       FhirContext context,
       Map<String, IBaseResource> theStructureDefinitions,
       Map<String, IBaseResource> theValueSets,

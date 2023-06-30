@@ -1,0 +1,450 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetHCVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetHCVP",
+  "version": "1.1.0",
+  "name": "AnswerSetHCVP",
+  "title": "AnswerSet für Hepatitis-C-Virus; Meldepflicht für alle Nachweise",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetHCVP enthält die Codes der Answer-Codes für Hepatitis-C-Virus; Meldepflicht für alle Nachweise.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603418001",
+        "display": "Hepatitis C virus subtype 3b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 3b (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 3b"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603415003",
+        "display": "Hepatitis C virus subtype 2a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 2a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 2a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603426009",
+        "display": "Hepatitis C virus genotype 5 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus genotype 5 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Genotyp 5"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603419009",
+        "display": "Hepatitis C virus subtype 5a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 5a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 5a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603428005",
+        "display": "Hepatitis C virus subtype 1c (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 1c (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 1c"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "781276001",
+        "display": "Hepatitis C virus genotype 3c (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus genotype 3c (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Genotyp 3c"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "62944002",
+        "display": "Hepatitis C virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603417006",
+        "display": "Hepatitis C virus subtype 3a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 3a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 3a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603431006",
+        "display": "Hepatitis C virus subtype 4c (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 4c (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 4c"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603413005",
+        "display": "Hepatitis C virus subtype 1a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 1a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 1a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603416002",
+        "display": "Hepatitis C virus subtype 2b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 2b (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 2b"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603424007",
+        "display": "Hepatitis C virus genotype 3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus genotype 3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Genotyp 3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603433009",
+        "display": "Hepatitis C virus subtype 4e (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 4e (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 4e"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603425008",
+        "display": "Hepatitis C virus genotype 4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus genotype 4 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Genotyp 4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603423001",
+        "display": "Hepatitis C virus genotype 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus genotype 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Genotyp 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603427000",
+        "display": "Hepatitis C virus genotype 6 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus genotype 6 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Genotyp 6"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603430007",
+        "display": "Hepatitis C virus subtype 4b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 4b (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 4b"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603421004",
+        "display": "Hepatitis C virus subtype 4a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 4a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 4a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603432004",
+        "display": "Hepatitis C virus subtype 4d (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 4d (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 4d"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603422006",
+        "display": "Hepatitis C virus genotype 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus genotype 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Genotyp 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603420003",
+        "display": "Hepatitis C virus subtype 6a (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 6a (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 6a"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "781245007",
+        "display": "Hepatitis C virus genotype 4h (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus genotype 4h (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Genotyp 4h"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603429002",
+        "display": "Hepatitis C virus subtype 2c (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 2c (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 2c"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "603414004",
+        "display": "Hepatitis C virus subtype 1b (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis C virus subtype 1b (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-C-Virus, Subtyp 1b"
+        } ]
+      } ]
+    } ]
+  }
+}

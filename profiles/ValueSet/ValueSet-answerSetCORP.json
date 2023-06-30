@@ -1,0 +1,198 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetCORP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetCORP",
+  "version": "1.4.0",
+  "name": "AnswerSetCORP",
+  "title": "AnswerSet für Corynebacterium spp. (Toxin bildend)",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetCORP enthält die Codes der Answer-Codes für Corynebacterium spp. (Toxin bildend).",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "5851001",
+        "display": "Corynebacterium diphtheriae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Corynebacterium diphtheriae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Corynebacterium diphtheriae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "83675005",
+        "display": "Corynebacterium diphtheriae type gravis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Corynebacterium diphtheriae type gravis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Corynebacterium diphtheriae, Typ gravis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "70876001",
+        "display": "Corynebacterium diphtheriae type intermedius (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Corynebacterium diphtheriae type intermedius (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Corynebacterium diphtheriae, Typ intermedius"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "13755001",
+        "display": "Corynebacterium diphtheriae type mitis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Corynebacterium diphtheriae type mitis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Corynebacterium diphtheriae, Typ mitis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "55084001",
+        "display": "Corynebacterium pseudotuberculosis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Corynebacterium pseudotuberculosis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Corynebacterium pseudotuberculosis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103428000",
+        "display": "Corynebacterium ulcerans (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Corynebacterium ulcerans (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Corynebacterium ulcerans"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "443377006",
+        "display": "Toxigenic Corynebacterium diphtheriae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Toxigenic Corynebacterium diphtheriae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Toxigene Corynebacterium diphtheriae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "722246003",
+        "display": "Toxigenic Corynebacterium pseudotuberculosis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Toxigenic Corynebacterium pseudotuberculosis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Toxigene Corynebacterium pseudotuberculosis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "719913002",
+        "display": "Toxigenic Corynebacterium ulcerans (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Toxigenic Corynebacterium ulcerans (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Toxigene Corynebacterium ulcerans"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "77086004",
+        "display": "Genus Corynebacterium (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Corynebacterium (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Corynebacterium spp."
+        } ]
+      } ]
+    } ]
+  }
+}

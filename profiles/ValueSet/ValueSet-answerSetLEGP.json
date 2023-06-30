@@ -1,0 +1,1548 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetLEGP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetLEGP",
+  "version": "1.4.0",
+  "name": "AnswerSetLEGP",
+  "title": "AnswerSet für Legionella sp.",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetLEGP enthält die Codes der Answer-Codes für Legionella sp..",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "638008",
+        "display": "Legionella oakridgensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella oakridgensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella oakridgensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "3128001",
+        "display": "Legionella israelensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella israelensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella israelensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "7527002",
+        "display": "Genus Legionella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Legionella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Legionella"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "8147000",
+        "display": "Legionella wadsworthii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella wadsworthii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella wadsworthii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "14121003",
+        "display": "Legionella steigerwaltii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella steigerwaltii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella steigerwaltii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "17083009",
+        "display": "Legionella feeleii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella feeleii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella feeleii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "17298000",
+        "display": "Legionella rubrilucens (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella rubrilucens (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella rubrilucens"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "18214000",
+        "display": "Legionella anisa (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella anisa (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella anisa"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "22592008",
+        "display": "Legionella birminghamensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella birminghamensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella birminghamensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "28109006",
+        "display": "Legionella erythra (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella erythra (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella erythra"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "38322001",
+        "display": "Legionella parisiensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella parisiensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella parisiensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "39739007",
+        "display": "Legionella jordanis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella jordanis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella jordanis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "52462004",
+        "display": "Legionella cherrii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella cherrii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella cherrii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "58923007",
+        "display": "Legionella cincinnatiensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella cincinnatiensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella cincinnatiensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "58939000",
+        "display": "Legionella hackeliae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella hackeliae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella hackeliae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "64930007",
+        "display": "Legionella spiritensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella spiritensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella spiritensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "72814000",
+        "display": "Legionella santicrucis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella santicrucis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella santicrucis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "80897008",
+        "display": "Legionella pneumophila (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "87271006",
+        "display": "Legionella sainthelens (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella sainthelens (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella sainthelens"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "89605004",
+        "display": "Legionella longbeachae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella longbeachae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella longbeachae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "89709001",
+        "display": "Legionella jamestowniensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella jamestowniensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella jamestowniensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103447002",
+        "display": "Legionella adelaidensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella adelaidensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella adelaidensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103448007",
+        "display": "Legionella brunensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella brunensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella brunensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103449004",
+        "display": "Legionella fairfieldensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella fairfieldensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella fairfieldensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103450004",
+        "display": "Legionella geestiana (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella geestiana (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella geestiana"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103451000",
+        "display": "Legionella gratiana (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella gratiana (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella gratiana"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103452007",
+        "display": "Legionella lansingensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella lansingensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella lansingensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103453002",
+        "display": "Legionella londiniensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella londiniensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella londiniensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103454008",
+        "display": "Legionella moravica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella moravica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella moravica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103455009",
+        "display": "Legionella nautarum (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella nautarum (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella nautarum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103456005",
+        "display": "Legionella pneumophila ss. fraseri (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila ss. fraseri (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila Subspecies fraseri"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103457001",
+        "display": "Legionella pneumophila ss. pascullei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila ss. pascullei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila Subspecies pascullei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103458006",
+        "display": "Legionella pneumophila ss. pneumophila (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila ss. pneumophila (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila Subspecies pneumophila"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103459003",
+        "display": "Legionella quinlivanii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella quinlivanii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella quinlivanii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103460008",
+        "display": "Legionella shakespearei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella shakespearei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella shakespearei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103461007",
+        "display": "Legionella tucsonensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella tucsonensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella tucsonensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103462000",
+        "display": "Legionella worsleiensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella worsleiensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella worsleiensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103463005",
+        "display": "Legionella pneumophila serogroup 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila serogroup 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila, Serogruppe 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103464004",
+        "display": "Legionella pneumophila serogroup 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila serogroup 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila, Serogruppe 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103465003",
+        "display": "Legionella pneumophila serogroup 3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila serogroup 3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila, Serogruppe 3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103466002",
+        "display": "Legionella pneumophila serogroup 4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila serogroup 4 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila, Serogruppe 4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103467006",
+        "display": "Legionella pneumophila serogroup 5 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila serogroup 5 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila, Serogruppe 5"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103468001",
+        "display": "Legionella pneumophila serogroup 6 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila serogroup 6 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila, Serogruppe 6"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103469009",
+        "display": "Legionella pneumophila serogroup 7 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila serogroup 7 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila, Serogruppe 7"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103470005",
+        "display": "Legionella pneumophila serogroup 8 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila serogroup 8 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila, Serogruppe 8"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103471009",
+        "display": "Legionella pneumophila serogroup 9 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila serogroup 9 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophila, Serogruppe 9"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "113720002",
+        "display": "Legionella dumoffii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella dumoffii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella dumoffii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "113721003",
+        "display": "Legionella gormanii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella gormanii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella gormanii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "113806002",
+        "display": "Legionella lytica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella lytica (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella lytica"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "113807006",
+        "display": "Legionella quateirensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella quateirensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella quateirensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "113808001",
+        "display": "Legionella waltersii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella waltersii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella waltersii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "115071005",
+        "display": "Family Legionellaceae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Family Legionellaceae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Familie Legionellaceae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115515003",
+        "display": "Legionella longbeachae, serogroup 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella longbeachae, serogroup 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella longbeachae, Serogruppe 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115516002",
+        "display": "Legionella longbeachae, serogroup 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella longbeachae, serogroup 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella longbeachae, Serogruppe 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "115517006",
+        "display": "Legionella, non-pneumophia species (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella, non-pneumophia species (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella, nicht-Pneumophia-Species"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "116379006",
+        "display": "Legionella maceachernii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella maceachernii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella maceachernii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "116380009",
+        "display": "Legionella micdadei (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella micdadei (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella micdadei"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "131322009",
+        "display": "Legionella pneumophilia serogroup 10 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophilia serogroup 10 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophilia, Serogruppe 10"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "131323004",
+        "display": "Legionella pneumophilia serogroup 11 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophilia serogroup 11 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophilia, Serogruppe 11"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "131324005",
+        "display": "Legionella pneumophilia serogroup 12 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophilia serogroup 12 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophilia, Serogruppe 12"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "131325006",
+        "display": "Legionella pneumophilia serogroup 13 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophilia serogroup 13 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophilia, Serogruppe 13"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "131326007",
+        "display": "Legionella pneumophilia serogroup 14 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophilia serogroup 14 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella pneumophilia, Serogruppe 14"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "401198008",
+        "display": "Legionella serotype (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella serotype (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella-Serotyp"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "414961002",
+        "display": "Order Legionellales (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Order Legionellales (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Ordnung Legionellales"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "432325006",
+        "display": "Legionella drancourtii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella drancourtii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella drancourtii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "432453005",
+        "display": "Legionella fallonii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella fallonii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella fallonii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "432712001",
+        "display": "Legionella drozanskii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella drozanskii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella drozanskii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "432713006",
+        "display": "Legionella rowbothamii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella rowbothamii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella rowbothamii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "432714000",
+        "display": "Legionella beliardensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella beliardensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella beliardensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "433048001",
+        "display": "Legionella taurinensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella taurinensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella taurinensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "433050009",
+        "display": "Legionella busanensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella busanensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella busanensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "433052001",
+        "display": "Legionella gresilensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella gresilensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella gresilensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "450611004",
+        "display": "Legionella bozemanae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella bozemanae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella bozemanae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "1003646009",
+        "display": "Legionella pneumophila serogroup, not serogroup 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella pneumophila serogroup, not serogroup 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella-pneumophila-Serogruppe, nicht Serogruppe 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "5111000146108",
+        "display": "Legionella dresdenensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella dresdenensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella dresdenensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "5121000146103",
+        "display": "Legionella impletisoli (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella impletisoli (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella impletisoli"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "5131000146101",
+        "display": "Legionella yabuuchiae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella yabuuchiae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella yabuuchiae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "185883611000087104",
+        "display": "Legionella hackeliae serogroup 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella hackeliae serogroup 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella hackeliae, Serogruppe 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "304915231000087102",
+        "display": "Legionella sainthelensi serogroup 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella sainthelensi serogroup 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella sainthelensi, Serogruppe 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "317082141000087106",
+        "display": "Legionella feeleii serogroup 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella feeleii serogroup 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella feeleii, Serogruppe 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "570536261000087106",
+        "display": "Legionella sainthelensi serogroup 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella sainthelensi serogroup 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella sainthelensi, Serogruppe 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "801523611000087100",
+        "display": "Legionella bozemanii Serogroup 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella bozemanii Serogroup 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella bozemanii, Serogruppe 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "844125861000087102",
+        "display": "Legionella bozemanii serogroup 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella bozemanii serogroup 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella bozemanii, Serogruppe 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "937671351000087109",
+        "display": "Legionella feeleii Serogroup 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella feeleii Serogroup 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella feeleii, Serogruppe 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "998010041000087101",
+        "display": "Legionella hackeliae serogroup 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Legionella hackeliae serogroup 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Legionella hackeliae, Serogruppe 2"
+        } ]
+      } ]
+    } ]
+  }
+}

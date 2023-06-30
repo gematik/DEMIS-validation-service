@@ -1,0 +1,468 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetMSVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetMSVP",
+  "version": "1.3.0",
+  "name": "AnswerSetMSVP",
+  "title": "AnswerSet für Masernvirus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetMSVP enthält die Codes der Answer-Codes für Masernvirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "416435006",
+        "display": "Measles virus, viral envelope M protein variant (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus, viral envelope M protein variant (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Variante des M-Proteins der Virushülle"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "426558008",
+        "display": "Measles virus genotype A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "732209005",
+        "display": "Measles virus genotype B1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype B1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp B1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "426654002",
+        "display": "Measles virus genotype B2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype B2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp B2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "427073007",
+        "display": "Measles virus genotype B3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype B3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp B3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "426188007",
+        "display": "Measles virus genotype C1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype C1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp C1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "427182003",
+        "display": "Measles virus genotype C2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype C2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp C2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "732208002",
+        "display": "Measles virus genotype D1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype D1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp D1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "427263000",
+        "display": "Measles virus genotype D10 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype D10 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp D10"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "698204007",
+        "display": "Measles virus genotype D11 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype D11 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp D11"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "426640005",
+        "display": "Measles virus genotype D2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype D2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp D2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "425970007",
+        "display": "Measles virus genotype D3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype D3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp D3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "426261008",
+        "display": "Measles virus genotype D4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype D4 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp D4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "427706006",
+        "display": "Measles virus genotype D5 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype D5 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp D5"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "426028006",
+        "display": "Measles virus genotype D6 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype D6 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp D6"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "427353006",
+        "display": "Measles virus genotype D7 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype D7 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp D7"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "427290009",
+        "display": "Measles virus genotype D8 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype D8 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp D8"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "426535005",
+        "display": "Measles virus genotype D9 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype D9 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp D9"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "732207007",
+        "display": "Measles virus genotype E (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype E (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp E"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "732206003",
+        "display": "Measles virus genotype F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "732210000",
+        "display": "Measles virus genotype G1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype G1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp G1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "426091009",
+        "display": "Measles virus genotype G2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype G2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp G2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "425684000",
+        "display": "Measles virus genotype G3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype G3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp G3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "425966004",
+        "display": "Measles virus genotype H1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype H1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp H1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "426424002",
+        "display": "Measles virus genotype H2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Measles virus genotype H2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Masern-Virus, Genotyp H2"
+        } ]
+      } ]
+    } ]
+  }
+}

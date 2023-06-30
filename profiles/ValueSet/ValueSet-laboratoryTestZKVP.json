@@ -1,0 +1,381 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestZKVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestZKVP",
+  "version": "1.2.0",
+  "name": "LaboratoryTestZKVP",
+  "title": "Labortest für Zika-Virus",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestZKVP enthält die Codes der Labortests für Zika-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "95663-1",
+        "display": "Zika virus IgG Ab [Presence] in Specimen by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgG-Antikörper [Nachweis] in Probenmaterial mit Immunoassay"
+        } ]
+      }, {
+        "code": "97870-0",
+        "display": "Zika virus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "79190-5",
+        "display": "Zika virus RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "80618-2",
+        "display": "Zika virus IgM Ab [Units/volume] in Cerebral spinal fluid by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgM-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "80619-0",
+        "display": "Zika virus IgM Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "80622-4",
+        "display": "Zika virus neutralizing antibody [Titer] in Serum by Neutralization test --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-neutralisierender Antikörper [Titer] in Serum mit Neutralisationstest --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "80623-2",
+        "display": "Zika virus neutralizing antibody [Titer] in Serum by Neutralization test --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-neutralisierender Antikörper [Titer] in Serum mit Neutralisationstest --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "80823-8",
+        "display": "Zika virus IgM Ab [Presence] in Cerebral spinal fluid by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgM-Antikörper [Nachweis] in Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "80824-6",
+        "display": "Zika virus IgM Ab [Presence] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "80825-3",
+        "display": "Zika virus envelope E gene [Presence] in Serum by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus envelope-E-Gen [Nachweis] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "80826-1",
+        "display": "Zika virus envelope E gene [Presence] in Cerebral spinal fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus envelope-E-Gen [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "81148-9",
+        "display": "Zika virus envelope E gene [Presence] in Urine by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus envelope-E-Gen [Nachweis] in Urin mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "81149-7",
+        "display": "Zika virus envelope E gene [Presence] in Amniotic fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus envelope-E-Gen [Nachweis] in Amnionflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "82731-1",
+        "display": "Zika virus IgM Ab [Presence] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgM-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "83069-5",
+        "display": "Zika virus non-structural protein 1 IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus Nichtstrukturprotein 1-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "85621-1",
+        "display": "Zika virus RNA [Presence] in Amniotic fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-RNA [Nachweis] in Amnionflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85622-9",
+        "display": "Zika virus RNA [Presence] in Serum or Plasma by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-RNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85623-7",
+        "display": "Zika virus RNA [Presence] in Urine by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-RNA [Nachweis] in Urin mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "86190-6",
+        "display": "Zika virus RNA [Presence] in Plasma from Donor by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-RNA [Nachweis] in Plasma von Donor mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "86594-9",
+        "display": "Zika virus RNA [Presence] in Cerebral spinal fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-RNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "87439-6",
+        "display": "Zika virus IgA+IgG+IgM Ab [Interpretation] in Specimen Qualitative by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgA+IgG+IgM-Antikörper [Interpretation] in Probenmaterial mit Immunoassay"
+        } ]
+      }, {
+        "code": "87622-7",
+        "display": "Zika virus IgM Ab [Presence] in Specimen by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgM-Antikörper [Nachweis] in Probenmaterial mit Immunoassay"
+        } ]
+      }, {
+        "code": "89369-3",
+        "display": "Zika virus non-structural protein 1 IgM Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus Nichtstrukturprotein 1-IgM-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "89370-1",
+        "display": "Zika virus non-structural protein 1 IgM Ab [Interpretation] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus Nichtstrukturprotein 1-IgM-Antikörper [Interpretation] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "89590-4",
+        "display": "Zika virus IgG Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgG-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "89591-2",
+        "display": "Zika virus IgM Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgM-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "90462-3",
+        "display": "Zika virus RNA [Presence] in Cord blood by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-RNA [Nachweis] in Nabelschnurblut mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "91078-6",
+        "display": "Zika virus RNA [Presence] in Blood by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-RNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "91079-4",
+        "display": "Zika virus RNA [Presence] in Placenta by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-RNA [Nachweis] in Plazenta mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "91080-2",
+        "display": "Zika virus IgG Ab [Presence] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgG-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "91678-3",
+        "display": "Zika virus IgM Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Zika-Virus-IgM-Antikörper [Nachweis] in Serum, Plasma oder Blut mit Immunoassay-Schnelltest"
+        } ]
+      }, {
+        "code": "41461-5",
+        "display": "Virus identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Virus identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      } ]
+    } ]
+  }
+}

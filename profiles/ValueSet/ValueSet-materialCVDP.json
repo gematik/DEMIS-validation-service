@@ -1,0 +1,702 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialCVDP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialCVDP",
+  "version": "1.7.0",
+  "name": "MaterialCVDP",
+  "title": "Material für Severe-Acute-Respiratory-Syndrome-Coronavirus-2 (SARS-CoV-2)",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet MaterialCVDP enthält die Codes der Materialien für Severe-Acute-Respiratory-Syndrome-Coronavirus-2 (SARS-CoV-2).",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "258607008",
+        "display": "Bronchoalveolar lavage fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bronchoalveolar lavage fluid specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Bronchoalveoläre Lavage"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "309174004",
+        "display": "Bronchial biopsy specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bronchial biopsy specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Bronchialbiopsie"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "258446004",
+        "display": "Bronchial fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bronchial fluid specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Bronchialsekret"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "258498002",
+        "display": "Conjunctival swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Conjunctival swab (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Konjunktivalabstrich"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "119401005",
+        "display": "Specimen from conjunctiva (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from conjunctiva (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Konjunktiva"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "119400006",
+        "display": "Specimen from cornea (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from cornea (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Cornea"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "472894002",
+        "display": "Swab from cornea (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Swab from cornea (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Kornealabstrich"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "258450006",
+        "display": "Cerebrospinal fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cerebrospinal fluid specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Liquor"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "119303007",
+        "display": "Microbial isolate specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Microbial isolate specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Isolat"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "258500001",
+        "display": "Nasopharyngeal swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Nasopharyngeal swab (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Nasopharyngealer Abstrich"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "122571007",
+        "display": "Pericardial fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pericardial fluid specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Perikardiale Flüssigkeit"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "410580001",
+        "display": "Respiratory fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Respiratory fluid specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Atemwegssekret"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "430248009",
+        "display": "Specimen from nasopharyngeal structure (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from nasopharyngeal structure (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Nasopharynx"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "447154002",
+        "display": "Specimen from nose (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from nose (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Nase"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "119389009",
+        "display": "Specimen from throat (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from throat (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Rachen"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "258529004",
+        "display": "Throat swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Throat swab (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Rachenabstrich"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "258606004",
+        "display": "Lower respiratory tract specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Lower respiratory tract specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Untere Atemwege"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "258604001",
+        "display": "Upper respiratory specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Upper respiratory specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Obere Atemwege"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "258609006",
+        "display": "Sputum specimen obtained by aspiration from trachea (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Sputum specimen obtained by aspiration from trachea (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Sputum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "119334006",
+        "display": "Sputum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Sputum specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Sputum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "119390000",
+        "display": "Specimen from trachea (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from trachea (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Trachea"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "445447003",
+        "display": "Specimen from trachea obtained by aspiration (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from trachea obtained by aspiration (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Trachealsekret"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "309164002",
+        "display": "Upper respiratory swab specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Upper respiratory swab specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Abstrich obere Atemwege"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "472901003",
+        "display": "Swab from nasal sinus (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Swab from nasal sinus (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Nasennebenhöhlenabstrich"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "697989009",
+        "display": "Anterior nares swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Anterior nares swab (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Nasenvorhofabstrich"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "461911000124106",
+        "display": "Swab specimen from oropharynx (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Swab specimen from oropharynx (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Oropharyngealer Abstrich"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "258411007",
+        "display": "Nasopharyngeal aspirate (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Nasopharyngeal aspirate (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Nasopharyngeales Aspirat"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "418564007",
+        "display": "Pleural fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pleural fluid specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Pleuraflüssigkeit"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "122610009",
+        "display": "Specimen from lung obtained by biopsy (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from lung obtained by biopsy (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Lungenbiopsie"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "119297000",
+        "display": "Blood specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Blood specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Blut"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "258580003",
+        "display": "Whole blood specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Whole blood specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Vollblut"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "119339001",
+        "display": "Stool specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Stool specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Stuhl"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "122575003",
+        "display": "Urine specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Urine specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Urin"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "119361006",
+        "display": "Plasma specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Plasma specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Plasma"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "119364003",
+        "display": "Serum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serum specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Serum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "257261003",
+        "display": "Swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Swab (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Abstrich"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "258469001",
+        "display": "Pharyngeal washings (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pharyngeal washings (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Rachenspülflüssigkeit"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "123038009",
+        "display": "Specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Anderes Untersuchungsmaterial"
+        } ]
+      } ]
+    } ]
+  }
+}

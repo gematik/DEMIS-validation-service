@@ -1,0 +1,62 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetMPMP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetMPMP",
+  "version": "1.0.0",
+  "name": "AnswerSetMPMP",
+  "title": "AnswerSet für Mycoplasmen",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet AnswerSetMPMP enthält die Codes der Answer-Codes für Mycoplasmen.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "78981005",
+        "display": "Genus Mycoplasma (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Mycoplasma (organism)"
+        } ]
+      }, {
+        "code": "5056007",
+        "display": "Mycoplasma genitalium (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mycoplasma genitalium (organism)"
+        } ]
+      }, {
+        "code": "1290001",
+        "display": "Metamycoplasma hominis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Metamycoplasma hominis (organism)"
+        } ]
+      }, {
+        "code": "58720004",
+        "display": "Mycoplasma pneumoniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mycoplasma pneumoniae (organism)"
+        } ]
+      } ]
+    } ]
+  }
+}

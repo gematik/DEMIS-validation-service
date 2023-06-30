@@ -1,0 +1,90 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialBOVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialBOVP",
+  "version": "1.3.0",
+  "name": "MaterialBOVP",
+  "title": "Material für humanpathogene Bornaviren; Meldepflicht nur für den direkten Nachweis",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet MaterialBOVP enthält die Codes der Materialien für humanpathogene Bornaviren; Meldepflicht nur für den direkten Nachweis.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "258450006",
+        "display": "Cerebrospinal fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cerebrospinal fluid specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Liquor"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "309129006",
+        "display": "Nerve tissue specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Nerve tissue specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Nervengewebe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "128157004",
+        "display": "Tissue specimen from brain (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tissue specimen from brain (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Hirngewebe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "123038009",
+        "display": "Specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Anderes Untersuchungsmaterial"
+        } ]
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,499 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestEHCP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestEHCP",
+  "version": "1.5.0",
+  "name": "LaboratoryTestEHCP",
+  "title": "Labortest für E. coli (enterohämorrhagische Stämme) (EHEC)",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestEHCP enthält die Codes der Labortests für E. coli (enterohämorrhagische Stämme) (EHEC).",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "101558-5",
+        "display": "Escherichia coli enteroinvasive DNA [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "10851-4",
+        "display": "Escherichia coli O157:H7 [Presence] in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157:H7 [Nachweis] in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "16283-4",
+        "display": "Escherichia coli verotoxin [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Vero-Toxin [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "16835-1",
+        "display": "Escherichia coli shiga-like toxin identified in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Shiga-ähnliches Toxin identifiziert in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "16836-9",
+        "display": "Escherichia coli verotoxic identified in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli verotoxisch identifiziert in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "20789-4",
+        "display": "Escherichia coli serotype [Identifier] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli-Serotyp [Nachweis oder Identität] in Isolat"
+        } ]
+      }, {
+        "code": "21262-1",
+        "display": "Escherichia coli shiga-like toxin [Presence] in Stool by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Shiga-ähnliches Toxin [Nachweis] in Stuhl mit Immunoassay"
+        } ]
+      }, {
+        "code": "28035-4",
+        "display": "Escherichia coli shiga-like toxin [Units/volume] in Specimen by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Shiga-ähnliches Toxin [Einheiten/Volumen] in Probenmaterial mit Immunoassay"
+        } ]
+      }, {
+        "code": "32777-5",
+        "display": "Escherichia coli O157:H7 Ag [Presence] in Stool",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157:H7-Antigen [Nachweis] in Stuhl"
+        } ]
+      }, {
+        "code": "35878-8",
+        "display": "Escherichia coli O157:H7 IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157:H7-IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "35879-6",
+        "display": "Escherichia coli O157:H7 IgG Ab [Units/volume] in Serum"
+      }, {
+        "code": "38990-8",
+        "display": "Escherichia coli O157:H7 DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157:H7-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "44087-5",
+        "display": "Escherichia coli O157 Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "44088-3",
+        "display": "Escherichia coli O157:H7 DNA [Identifier] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157:H7-DNA [Nachweis oder Identität] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "44089-1",
+        "display": "Escherichia coli O157:H7 [Identifier] in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157:H7 [Nachweis oder Identität] in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "44090-9",
+        "display": "Escherichia coli O157:H7 [Presence] in Isolate by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157:H7 [Nachweis] in Isolat mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "45162-5",
+        "display": "Escherichia coli O157 Ag [Presence] in Isolate by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157-Antigen [Nachweis] in Isolat mit Latexagglutination"
+        } ]
+      }, {
+        "code": "51939-7",
+        "display": "Escherichia coli shiga-like toxin 2 [Presence] in Stool by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Shiga-ähnliches Toxin 2 [Nachweis] in Stuhl mit Immunoassay"
+        } ]
+      }, {
+        "code": "51940-5",
+        "display": "Escherichia coli shiga-like toxin 1 [Presence] in Stool by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Shiga-ähnliches Toxin 1 [Nachweis] in Stuhl mit Immunoassay"
+        } ]
+      }, {
+        "code": "53946-0",
+        "display": "Escherichia coli shiga-like toxin identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Shiga-ähnliches Toxin identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "53947-8",
+        "display": "Escherichia coli Stx1 and Stx2 toxin stx1 and stx2 and H7 flagellar fliC genes [Identifier] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Stx1 und Stx2-Toxine stx1 und stx2 und H7 flagellar fliC-Gene [Nachweis oder Identität] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "53955-1",
+        "display": "Escherichia coli O157 identified in Isolate by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157 identifiziert in Isolat mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "63427-9",
+        "display": "Escherichia coli Stx1 toxin stx1 gene [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Stx1 Toxin stx1-Gen [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "63428-7",
+        "display": "Escherichia coli Stx2 toxin stx2 gene [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Stx2 Toxin stx2-Gen [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "64013-6",
+        "display": "Escherichia coli shiga-like toxin 1 and 2 [Identifier] in Stool by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Shiga-ähnliches Toxin 1 und 2 [Nachweis oder Identität] in Stuhl mit Immunoassay"
+        } ]
+      }, {
+        "code": "6574-8",
+        "display": "Escherichia coli verotoxin 1 [Presence] in Stool",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Vero-Toxin 1 [Nachweis] in Stuhl"
+        } ]
+      }, {
+        "code": "6576-3",
+        "display": "Escherichia coli verotoxin 2 [Presence] in Stool",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Vero-Toxin 2 [Nachweis] in Stuhl"
+        } ]
+      }, {
+        "code": "79386-9",
+        "display": "Escherichia coli Stx1 toxin stx1 gene [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Stx1 Toxin stx1-Gen [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "79387-7",
+        "display": "Escherichia coli Stx2 toxin stx2 gene [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Stx2 Toxin stx2-Gen [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "80676-0",
+        "display": "Escherichia coli O157 rfbE gene [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157 rfbE-Gen [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "80679-4",
+        "display": "Escherichia coli Stx1 and Stx2 toxin stx1+stx2 genes [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Stx1+Stx2-Toxine stx1+stx2-Gene [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "81285-9",
+        "display": "Escherichia coli Stx1 and Stx2 toxin stx1 and stx2 genes [Identifier] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Stx1 und Stx2-Toxine stx1 und stx2-Gene [Nachweis oder Identität] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "82203-1",
+        "display": "Escherichia coli Stx1 and Stx2 toxin stx1+stx2 genes [Presence] in Stool by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Stx1+Stx2-Toxine stx1+stx2-Gene [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "82204-9",
+        "display": "Escherichia coli O157 DNA [Presence] in Stool by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "82299-9",
+        "display": "Escherichia coli shiga-like toxin 1+2 [Presence] in Stool by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Shiga-ähnliches Toxin 1+2 [Nachweis] in Stuhl mit Immunoassay"
+        } ]
+      }, {
+        "code": "82303-9",
+        "display": "Escherichia coli O157 [Presence] in Stool by Culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157 [Nachweis] in Stuhl mit Kultur"
+        } ]
+      }, {
+        "code": "87376-0",
+        "display": "Escherichia coli Stx1 toxin stx1 gene [Presence] in Isolate by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Stx1 Toxin stx1-Gen [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "87377-8",
+        "display": "Escherichia coli Stx2 toxin stx2 gene [Presence] in Isolate by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Stx2 Toxin stx2-Gen [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "87380-2",
+        "display": "Escherichia coli Stx2e toxin stx2e gene [Presence] in Isolate by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Stx2e-Toxin stx2e-Gen [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "97320-6",
+        "display": "Escherichia coli O157 DNA [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli O157-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "86930-5",
+        "display": "Carbapenemase [Presence] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Carbapenemase [Nachweis] in Isolat"
+        } ]
+      }, {
+        "code": "88462-7",
+        "display": "Carbapenem [Susceptibility]",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Carbapenem [Empfindlichkeit]"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

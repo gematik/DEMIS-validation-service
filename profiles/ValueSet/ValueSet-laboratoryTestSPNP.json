@@ -1,0 +1,482 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestSPNP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestSPNP",
+  "version": "1.3.0",
+  "name": "LaboratoryTestSPNP",
+  "title": "Labortest für Streptococcus pneumoniae; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, Gelenkpunktat oder anderen normalerweise sterilen Substraten",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestSPNP enthält die Codes der Labortests für Streptococcus pneumoniae; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, Gelenkpunktat oder anderen normalerweise sterilen Substraten.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "99094-5",
+        "display": "Streptococcus pneumoniae DNA [Presence] in Cerebral spinal fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-DNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "97637-3",
+        "display": "Streptococcus pneumoniae DNA [Presence] in Synovial fluid by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-DNA [Nachweis] in Synovialflüssigkeit mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "14322-2",
+        "display": "Streptococcus pneumoniae Ag [Presence] in Cerebral spinal fluid by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-Antigen [Nachweis] in Zerebrospinalflüssigkeit mit Latexagglutination"
+        } ]
+      }, {
+        "code": "17652-9",
+        "display": "Streptococcus pneumoniae Ag [Presence] in Specimen by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-Antigen [Nachweis] in Probenmaterial mit Latexagglutination"
+        } ]
+      }, {
+        "code": "20489-1",
+        "display": "Streptococcus pneumoniae Ag [Presence] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-Antigen [Nachweis] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "49672-9",
+        "display": "Streptococcus pneumoniae DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "5035-1",
+        "display": "Streptococcus pneumoniae rRNA [Presence] in Specimen by Probe",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-rRNA [Nachweis] in Probenmaterial mit Sonde"
+        } ]
+      }, {
+        "code": "6553-2",
+        "display": "Streptococcus pneumoniae Ag [Presence] in Cerebral spinal fluid by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-Antigen [Nachweis] in Zerebrospinalflüssigkeit mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6555-7",
+        "display": "Streptococcus pneumoniae Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "73674-4",
+        "display": "Streptococcus pneumoniae serotype [Type] in Isolate by Agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-Serotyp [Typ] in Isolat mit Agglutination"
+        } ]
+      }, {
+        "code": "73685-0",
+        "display": "Streptococcus pneumoniae Ag [Presence] in Isolate by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-Antigen [Nachweis] in Isolat mit Latexagglutination"
+        } ]
+      }, {
+        "code": "82187-6",
+        "display": "Streptococcus pneumoniae DNA [Presence] in Cerebral spinal fluid by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-DNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "85496-8",
+        "display": "Streptococcus pneumoniae serotype [Identifier] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-Serotyp [Nachweis oder Identität] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85740-9",
+        "display": "Streptococcus pneumoniae Danish serotype 5 DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänischer Serotyp 5-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85741-7",
+        "display": "Streptococcus pneumoniae Danish serotype 4 DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänischer Serotyp 4-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85742-5",
+        "display": "Streptococcus pneumoniae Danish serotype 3 DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänischer Serotyp 3-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85743-3",
+        "display": "Streptococcus pneumoniae Danish serotype 23F DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänischer Serotyp 23F-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85744-1",
+        "display": "Streptococcus pneumoniae Danish serotype 2 DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänischer Serotyp 2-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85745-8",
+        "display": "Streptococcus pneumoniae Danish serotype 19F DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänischer Serotyp 19F-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85746-6",
+        "display": "Streptococcus pneumoniae Danish serotype 14 DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänischer Serotyp 14-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85747-4",
+        "display": "Streptococcus pneumoniae Danish serotype 1 DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänischer Serotyp 1-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85748-2",
+        "display": "Streptococcus pneumoniae Danish serotypes 7A+7F DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänische Serotypen 7A+7F-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85749-0",
+        "display": "Streptococcus pneumoniae Danish serotypes 22A+22F DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänische Serotypen 22A+22F-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85750-8",
+        "display": "Streptococcus pneumoniae Danish serotype 23A DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänischer Serotyp 23A-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85751-6",
+        "display": "Streptococcus pneumoniae Danish serotype 16F DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänischer Serotyp 16F-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85752-4",
+        "display": "Streptococcus pneumoniae Danish serotypes 9A+9V DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänische Serotypen 9A+9V-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85753-2",
+        "display": "Streptococcus pneumoniae Danish serotypes 6C+6D DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänische Serotypen 6C+6D-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85754-0",
+        "display": "Streptococcus pneumoniae Danish serotypes 6A+6B+6C+6D DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänische Serotypen 6A+6B+6C+6D-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85755-7",
+        "display": "Streptococcus pneumoniae Danish serotypes 33A+33F+37 DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänische Serotypen 33A+33F+37-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85756-5",
+        "display": "Streptococcus pneumoniae Danish serotypes 18A+18B+18C+18F DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänische Serotypen 18A+18B+18C+18F-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85757-3",
+        "display": "Streptococcus pneumoniae Danish serotypes 15A+15F DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänische Serotypen 15A+15F-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85758-1",
+        "display": "Streptococcus pneumoniae Danish serotypes 12A+12F+44+46 DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänische Serotypen 12A+12F+44+46-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85759-9",
+        "display": "Streptococcus pneumoniae Danish serotypes 11A+11D DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänische Serotypen 11A+11D-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85760-7",
+        "display": "Streptococcus pneumoniae Danish serotype 19A DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae Dänischer Serotyp 19A-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85768-0",
+        "display": "Streptococcus pneumoniae DNA [Presence] by NAA with non-probe detection in Positive blood culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-DNA [Nachweis] in positiver Blutkultur mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "86590-7",
+        "display": "Streptococcus pneumoniae Ag [Presence] in Cerebral spinal fluid by Rapid immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-Antigen [Nachweis] in Zerebrospinalflüssigkeit mit Immunoassay-Schnelltest"
+        } ]
+      }, {
+        "code": "88722-4",
+        "display": "Streptococcus pneumoniae serotype [Type] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-Serotyp [Typ] in Isolat"
+        } ]
+      }, {
+        "code": "92771-5",
+        "display": "Streptococcus pneumoniae DNA [Presence] by NAA with probe detection in Positive blood culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus pneumoniae-DNA [Nachweis] in positiver Blutkultur mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "43390-4",
+        "display": "Streptococcus sp identified in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Streptococcus sp identifiziert in Isolat"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

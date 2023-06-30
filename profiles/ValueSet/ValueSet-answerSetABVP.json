@@ -1,0 +1,1602 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetABVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetABVP",
+  "version": "1.1.0",
+  "name": "AnswerSetABVP",
+  "title": "AnswerSet für Arboviren (sonstige)",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetABVP enthält die Codes der Answer-Codes für Arboviren (sonstige).",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "312319002",
+        "display": "Rio Bravo virus group (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rio Bravo virus group (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Rio-Bravo-Virus-Gruppe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "76383005",
+        "display": "Dakar bat virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Dakar bat virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Dakar-Fledermaus-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "46098008",
+        "display": "Bukalassa virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bukalassa virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Bukalassa-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "38113008",
+        "display": "Apoi virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Apoi virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Apoi-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "77985003",
+        "display": "Rio Bravo virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rio Bravo virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Rio-Bravo-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "90868008",
+        "display": "Carey Island virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Carey Island virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Carey-Island-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "428458004",
+        "display": "Entebbe bat virus group (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Entebbe bat virus group (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Entebbe-Fledermaus-Virus-Gruppe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "15184004",
+        "display": "Sokoluk virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Sokoluk virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Sokoluk-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "5531007",
+        "display": "Cowbone Ridge virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cowbone Ridge virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cowbone-Ridge-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "14191007",
+        "display": "Entebbe bat virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Entebbe bat virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Entebbe-Fledermaus-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "68262008",
+        "display": "Montana Myotis leukoencephalitis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Montana Myotis leukoencephalitis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Montana-Myotis-Leukoenzephalitis-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "76833007",
+        "display": "Phnom Penh bat virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Phnom Penh bat virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Phnom-Penh-Fledermaus-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "61728001",
+        "display": "Batu Cave virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Batu Cave virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Batu-Cave-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "31899000",
+        "display": "Modoc virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Modoc virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Modoc-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "76850009",
+        "display": "Israel turkey meningoencephalitis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Israel turkey meningoencephalitis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Israel-Truthahn-Meningoenzephalitis-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "407540001",
+        "display": "Japanese encephalitis virus group (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Japanese encephalitis virus group (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Japanische Enzephalitis-Virus-Gruppe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "407541002",
+        "display": "Kokobera virus group (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kokobera virus group (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kokobera-Virus-Gruppe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "48439003",
+        "display": "Stratford virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Stratford virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Stratford-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "60420002",
+        "display": "Kokobera virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kokobera virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kokobera-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "85183000",
+        "display": "Usutu virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Usutu virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Usutu-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "31989009",
+        "display": "Murray Valley encephalitis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Murray Valley encephalitis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Murray-Valley-Enzephalitis-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "54521007",
+        "display": "Alfuy virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Alfuy virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Alfuy-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "58432001",
+        "display": "Saint Louis encephalitis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Saint Louis encephalitis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Saint-Louis-Enzephalitis-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "243603004",
+        "display": "Japanese encephalitis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Japanese encephalitis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Japanische B-Enzephalitis-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "60542003",
+        "display": "Koutango virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Koutango virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Koutango-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "314824006",
+        "display": "Tentative flavivirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tentative flavivirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mutmaßliches Flavivirus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "314825007",
+        "display": "Tentative mosquito borne flavivirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tentative mosquito borne flavivirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mutmaßliches Mücken-übertragenes Flavivirus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "428380002",
+        "display": "Spondweni virus group (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Spondweni virus group (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Spondweni-Virus-Gruppe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "50471002",
+        "display": "Zika virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Zika virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Zika-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "38222004",
+        "display": "Spondweni virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Spondweni virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Spondweni-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "428354003",
+        "display": "Seabird tick-borne virus group (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Seabird tick-borne virus group (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Seabird-tick-borne-Virus-Gruppe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "51741004",
+        "display": "Saumarez Reef virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Saumarez Reef virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Saumarez-Reef-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "397582004",
+        "display": "Hepatitis G virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hepatitis G virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hepatitis-G-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "428729001",
+        "display": "Aroa virus group (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Aroa virus group (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Aroa-Virus-Gruppe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "68323002",
+        "display": "Bussuquara virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bussuquara virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Bussuquara-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "414649007",
+        "display": "Mammalian tick-borne virus group (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mammalian tick-borne virus group (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Säugetier-tick-borne-Virus-Gruppe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "23466005",
+        "display": "Langat virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Langat virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Langat-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "51439004",
+        "display": "Omsk hemorrhagic fever virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Omsk hemorrhagic fever virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Omsk-Hämorrhagisches-Fieber-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "27530005",
+        "display": "Louping ill virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Louping ill virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Louping-ill-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "14267007",
+        "display": "Negishi virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Negishi virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Negishi-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "65090000",
+        "display": "Royal Farm virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Royal Farm virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Royal-Farm-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "79809000",
+        "display": "Karshi virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Karshi virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Karshi-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "19389005",
+        "display": "Kadam virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kadam virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kadam-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "32137001",
+        "display": "Kyasanur Forest disease virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kyasanur Forest disease virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kyasanur-Wald-Krankheit-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "45838003",
+        "display": "Powassan virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Powassan virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Powassan-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "429172006",
+        "display": "Ntaya virus group (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Ntaya virus group (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Ntaya-Virus-Gruppe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "68096005",
+        "display": "Bagaza virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bagaza virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Bagaza-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "47637005",
+        "display": "Ntaya virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Ntaya virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Ntaya-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "64995004",
+        "display": "Ilheus virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Ilheus virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Ilheus-virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "71518008",
+        "display": "Rocio virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rocio virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Rocio-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "4729008",
+        "display": "Tembusu virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tembusu virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Tembusu-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "764949001",
+        "display": "Alkhurma virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Alkhurma virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Alkhurma-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "61023003",
+        "display": "Jutiapa virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Jutiapa virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Jutiapa-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "55249007",
+        "display": "Tyuleniy virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tyuleniy virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Tyuleniy-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "8905000",
+        "display": "O'nyong-nyong virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "O'nyong-nyong virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "O'nyong-nyong-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "84133002",
+        "display": "Bebaru virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bebaru virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Bebaru-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "87149006",
+        "display": "Aura virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Aura virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Aura-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "55345004",
+        "display": "Semliki Forest virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Semliki Forest virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Semliki Forest-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "312318005",
+        "display": "Ockelbo virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Ockelbo virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Ockelbo-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "322070401000087107",
+        "display": "Salmon pancreas disease virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Salmon pancreas disease virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Salmon-pancreas-disease-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "11428003",
+        "display": "Western equine encephalomyelitis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Western equine encephalomyelitis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Westliche-equine-Enzephalomyelitis-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "1262000",
+        "display": "Sagiyama virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Sagiyama virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Sagiyama-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "90596006",
+        "display": "Una virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Una virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Una-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "23264006",
+        "display": "Ndumu virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Ndumu virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Ndumu-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "88920004",
+        "display": "Pixuna virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pixuna virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Pixuna-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "19874008",
+        "display": "Mayaro virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mayaro virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mayaro-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "32458000",
+        "display": "Ross River virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Ross River virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Ross River-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "62958000",
+        "display": "Venezuelan equine encephalomyelitis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Venezuelan equine encephalomyelitis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Venezuelanische-equine-Enzephalomyelitis-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "721926000",
+        "display": "Venezuelan equine encephalitis virus strain AG80-663 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Venezuelan equine encephalitis virus strain AG80-663 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Venezuelanische-equine-Enzephalomyelitis-Virus, Stamm AG80-663"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "710254005",
+        "display": "78V-3531 virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "78V-3531 virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "78V-3531-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "64149007",
+        "display": "Bijou Bridge virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bijou Bridge virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Bijou Bridge-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "31719006",
+        "display": "Fort Morgan virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Fort Morgan virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Fort-Morgan-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "56932004",
+        "display": "Barmah Forest virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Barmah Forest virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Barmah-Forest-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "12576002",
+        "display": "Everglades virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Everglades virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Venezuelanische-equine-Enzephalomyelitis-Virus, Stamm Everglades FE3-7C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "243601002",
+        "display": "Eastern equine encephalitis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Eastern equine encephalitis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Östliche-equine-Enzephalitis-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "26130005",
+        "display": "Getah virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Getah virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Getah-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "588234111000087104",
+        "display": "Highlands J virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Highlands J virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Highlands-J-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "53694009",
+        "display": "Tonate virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tonate virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Tonate-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "16604006",
+        "display": "Wataroa virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Wataroa virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Wataroa-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "21676006",
+        "display": "Middelburg virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Middelburg virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Middelburg-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "51045004",
+        "display": "Mucambo virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mucambo virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mucambo-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "91412000",
+        "display": "Kyzylagch virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kyzylagch virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kyzylagch-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "30681002",
+        "display": "Sindbis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Sindbis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Sindbis-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "70101005",
+        "display": "Cabassou virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cabassou virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Cabassou-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "28375005",
+        "display": "Genus Flavivirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Flavivirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Flavivirus spp."
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "243600001",
+        "display": "Alphavirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Alphavirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Alphavirus spp."
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "407466000",
+        "display": "Genus Orthobunyavirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Orthobunyavirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Orthobunyavirus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "44725007",
+        "display": "Genus Orbivirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Orbivirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Orbivirus"
+        } ]
+      } ]
+    } ]
+  }
+}

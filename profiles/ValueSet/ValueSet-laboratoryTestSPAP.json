@@ -1,0 +1,75 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestSPAP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestSPAP",
+  "version": "1.4.0",
+  "name": "LaboratoryTestSPAP",
+  "title": "Labortest für Salmonella Paratyphi; Meldepflicht für alle direkten Nachweise",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestSPAP enthält die Codes der Labortests für Salmonella Paratyphi; Meldepflicht für alle direkten Nachweise.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "86930-5",
+        "display": "Carbapenemase [Presence] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Carbapenemase [Nachweis] in Isolat"
+        } ]
+      }, {
+        "code": "88462-7",
+        "display": "Carbapenem [Susceptibility]",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Carbapenem [Empfindlichkeit]"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

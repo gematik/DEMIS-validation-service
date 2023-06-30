@@ -1,0 +1,234 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialBANP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialBANP",
+  "version": "1.4.0",
+  "name": "MaterialBANP",
+  "title": "Material für Bacillus anthracis",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet MaterialBANP enthält die Codes der Materialien für Bacillus anthracis.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "878861003",
+        "display": "Blood specimen in blood culture bottle (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Blood specimen in blood culture bottle (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Blutkultur"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "119334006",
+        "display": "Sputum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Sputum specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Sputum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "258607008",
+        "display": "Bronchoalveolar lavage fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bronchoalveolar lavage fluid specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Bronchoalveoläre Lavage"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "119339001",
+        "display": "Stool specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Stool specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Stuhl"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "258450006",
+        "display": "Cerebrospinal fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cerebrospinal fluid specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Liquor"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "119297000",
+        "display": "Blood specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Blood specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Blut"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "119364003",
+        "display": "Serum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serum specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Serum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "258531008",
+        "display": "Wound swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Wound swab (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Wundabstrich"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tissue specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Gewebe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "258455001",
+        "display": "Drainage fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Drainage fluid specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Drainageflüssigkeit"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "258484005",
+        "display": "Postmortem tissue specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Postmortem tissue specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Gewebe, postmortale Entnahme"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "123038009",
+        "display": "Specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Anderes Untersuchungsmaterial"
+        } ]
+      } ]
+    } ]
+  }
+}

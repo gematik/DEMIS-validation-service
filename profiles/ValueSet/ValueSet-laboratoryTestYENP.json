@@ -1,0 +1,218 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestYENP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestYENP",
+  "version": "1.4.0",
+  "name": "LaboratoryTestYENP",
+  "title": "Labortest für Yersinia spp. (darmpathogen)",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestYENP enthält die Codes der Labortests für Yersinia spp. (darmpathogen).",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "28549-4",
+        "display": "Yersinia sp identified in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia sp identifiziert in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "30100-2",
+        "display": "Yersinia enterocolitica O:3 Ab [Titer] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia enterocolitica O:3-Antikörper [Titer] in Probenmaterial"
+        } ]
+      }, {
+        "code": "30101-0",
+        "display": "Yersinia enterocolitica O:5 Ab [Titer] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia enterocolitica O:5-Antikörper [Titer] in Probenmaterial"
+        } ]
+      }, {
+        "code": "30103-6",
+        "display": "Yersinia enterocolitica O:9 Ab [Titer] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia enterocolitica O:9-Antikörper [Titer] in Probenmaterial"
+        } ]
+      }, {
+        "code": "31707-3",
+        "display": "Yersinia enterocolitica O:5 Ab [Units/volume] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia enterocolitica O:5-Antikörper [Einheiten/Volumen] in Probenmaterial"
+        } ]
+      }, {
+        "code": "48646-4",
+        "display": "Yersinia sp DNA [Identifier] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia sp-DNA [Nachweis oder Identität] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "701-3",
+        "display": "Yersinia sp identified in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia sp identifiziert in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "73664-5",
+        "display": "Yersinia adhesion protein YadA [Presence] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia Adhäsionsprotein YadA [Nachweis] in Isolat"
+        } ]
+      }, {
+        "code": "73673-6",
+        "display": "Yersinia enterocolitica serotype [Type] in Isolate by Agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia enterocolitica-Serotyp [Typ] in Isolat mit Agglutination"
+        } ]
+      }, {
+        "code": "79385-1",
+        "display": "Yersinia enterocolitica recN gene [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia enterocolitica recN-Gen [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "82202-3",
+        "display": "Yersinia enterocolitica DNA [Presence] in Stool by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia enterocolitica-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "82298-1",
+        "display": "Yersinia enterocolitica [Presence] in Specimen by Culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia enterocolitica [Nachweis] in Probenmaterial mit Kultur"
+        } ]
+      }, {
+        "code": "86930-5",
+        "display": "Carbapenemase [Presence] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Carbapenemase [Nachweis] in Isolat"
+        } ]
+      }, {
+        "code": "92723-6",
+        "display": "Yersinia enterocolitica DNA [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Yersinia enterocolitica-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "88462-7",
+        "display": "Carbapenem [Susceptibility]",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Carbapenem [Empfindlichkeit]"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

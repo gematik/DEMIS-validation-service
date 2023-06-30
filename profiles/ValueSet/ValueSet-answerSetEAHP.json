@@ -1,0 +1,95 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetEAHP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetEAHP",
+  "version": "1.0.0",
+  "name": "AnswerSetEAHP",
+  "title": "AnswerSet für Amoebiasis, Entamoeba histolytica",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet AnswerSetEAHP enthält die Codes der Answer-Codes für Amoebiasis, Entamoeba histolytica.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "699416007",
+        "display": "Cyst of Entamoeba histolytica-Entamoeba dispar complex (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cyst of Entamoeba histolytica-Entamoeba dispar complex (organism)"
+        } ]
+      }, {
+        "code": "4716008",
+        "display": "Entamoeba histolytica (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Entamoeba histolytica (organism)"
+        } ]
+      }, {
+        "code": "110390006",
+        "display": "Entamoeba histolytica cyst (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Entamoeba histolytica cyst (organism)"
+        } ]
+      }, {
+        "code": "110389002",
+        "display": "Entamoeba histolytica trophozoite (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Entamoeba histolytica trophozoite (organism)"
+        } ]
+      }, {
+        "code": "363769000",
+        "display": "Entamoeba histolytica/Entamoeba dispar complex (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Entamoeba histolytica/Entamoeba dispar complex (organism)"
+        } ]
+      }, {
+        "code": "699415006",
+        "display": "Trophozoite of Entamoeba histolytica-Entamoeba dispar complex (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Trophozoite of Entamoeba histolytica-Entamoeba dispar complex (organism)"
+        } ]
+      }, {
+        "code": "699399003",
+        "display": "Trophozoite of genus Entamoeba (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Trophozoite of genus Entamoeba (organism)"
+        } ]
+      } ]
+    } ]
+  }
+}

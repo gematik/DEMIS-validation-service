@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "id": "organizationType",
+  "url": "https://demis.rki.de/fhir/ValueSet/organizationType",
+  "version": "1.2.0",
+  "name": "OrganizationType",
+  "title": "Einrichtungsart",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet OrganizationType enthält die Codes der Einrichtungsarten.",
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+      "version": "1.1.0"
+    } ]
+  }
+}

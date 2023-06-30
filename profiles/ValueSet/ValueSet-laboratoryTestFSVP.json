@@ -1,0 +1,161 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestFSVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestFSVP",
+  "version": "1.3.0",
+  "name": "LaboratoryTestFSVP",
+  "title": "Labortest für FSME-Virus",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestFSVP enthält die Codes der Labortests für FSME-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "26059-6",
+        "display": "European tick borne encephalitis virus IgG Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Europäisches Frühsommer-Meningoenzephalitis-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "26060-4",
+        "display": "European tick borne encephalitis virus IgM Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Europäisches Frühsommer-Meningoenzephalitis-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "26062-0",
+        "display": "European tick borne encephalitis virus IgG Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Europäisches Frühsommer-Meningoenzephalitis-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "26063-8",
+        "display": "European tick borne encephalitis virus IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Europäisches Frühsommer-Meningoenzephalitis-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "69923-1",
+        "display": "European tick borne encephalitis virus IgM Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Europäisches Frühsommer-Meningoenzephalitis-Virus-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "69924-9",
+        "display": "European tick borne encephalitis virus IgM Ab [Presence] in Cerebral spinal fluid by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Europäisches Frühsommer-Meningoenzephalitis-Virus-IgM-Antikörper [Nachweis] in Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "69925-6",
+        "display": "European tick borne encephalitis virus IgM Ab index [Units/volume] in Serum and CSF by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Europäischer-Tick-borne-Encephalitis-Virus-IgM-Antikörperindex [Einheiten/Volumen] in Serum und Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "69926-4",
+        "display": "European tick borne encephalitis virus IgG Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Europäisches Frühsommer-Meningoenzephalitis-Virus-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "69927-2",
+        "display": "European tick borne encephalitis virus IgG Ab [Presence] in Cerebral spinal fluid by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Europäisches Frühsommer-Meningoenzephalitis-Virus-IgG-Antikörper [Nachweis] in Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "69928-0",
+        "display": "European tick borne encephalitis virus IgG Ab index [Units/volume] in Serum and CSF by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Europäischer-Tick-borne-Encephalitis-Virus-IgG-Antikörperindex [Einheiten/Volumen] in Serum und Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "86519-6",
+        "display": "European tick borne encephalitis virus RNA [Presence] in Serum by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Europäisches Frühsommer-Meningoenzephalitis-Virus-RNA [Nachweis] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "41461-5",
+        "display": "Virus identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Virus identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      } ]
+    } ]
+  }
+}

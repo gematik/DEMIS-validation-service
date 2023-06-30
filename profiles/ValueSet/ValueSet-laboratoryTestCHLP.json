@@ -1,0 +1,185 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestCHLP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestCHLP",
+  "version": "1.2.0",
+  "name": "LaboratoryTestCHLP",
+  "title": "Labortest für Chlamydia psittaci",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestCHLP enthält die Codes der Labortests für Chlamydia psittaci.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "14198-6",
+        "display": "Chlamydophila psittaci Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chlamydophila psittaci-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "20752-2",
+        "display": "Chlamydophila psittaci [Presence] in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chlamydophila psittaci [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "22992-2",
+        "display": "Chlamydophila psittaci [Presence] in Specimen by Giemsa stain",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chlamydophila psittaci [Nachweis] in Probenmaterial mit Giemsa-Färbung"
+        } ]
+      }, {
+        "code": "22993-0",
+        "display": "Chlamydophila psittaci [Presence] in Placenta by Electron microscopy",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chlamydophila psittaci [Nachweis] in Plazenta mit Elektronenmikroskopie"
+        } ]
+      }, {
+        "code": "22996-3",
+        "display": "Chlamydophila psittaci Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chlamydophila psittaci-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "23001-1",
+        "display": "Chlamydophila psittaci DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chlamydophila psittaci-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "51808-4",
+        "display": "Chlamydophila psittaci IgG Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chlamydophila psittaci-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "51809-2",
+        "display": "Chlamydophila psittaci IgM Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chlamydophila psittaci-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "59065-3",
+        "display": "Chlamydophila psittaci [Presence] in Bronchial brush by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chlamydophila psittaci [Nachweis] in Bronchialabstrich mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "6915-3",
+        "display": "Chlamydophila psittaci IgA Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chlamydophila psittaci-IgA-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6916-1",
+        "display": "Chlamydophila psittaci IgG Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chlamydophila psittaci-IgG-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6917-9",
+        "display": "Chlamydophila psittaci IgM Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Chlamydophila psittaci-IgM-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

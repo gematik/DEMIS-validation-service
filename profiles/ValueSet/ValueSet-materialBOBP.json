@@ -1,0 +1,95 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialBOBP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialBOBP",
+  "version": "1.1.0",
+  "name": "MaterialBOBP",
+  "title": "Material für (Lyme-) Borreliose, Borrelia burgdorferi",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet MaterialBOBP enthält die Codes der Materialien für (Lyme-) Borreliose, Borrelia burgdorferi.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serum specimen (specimen)"
+        } ]
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cerebrospinal fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "119332005",
+        "display": "Synovial fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Synovial fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "122575003",
+        "display": "Urine specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Urine specimen (specimen)"
+        } ]
+      }, {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Blood specimen (specimen)"
+        } ]
+      }, {
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tissue specimen (specimen)"
+        } ]
+      }, {
+        "code": "119361006",
+        "display": "Plasma specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Plasma specimen (specimen)"
+        } ]
+      } ]
+    } ]
+  }
+}

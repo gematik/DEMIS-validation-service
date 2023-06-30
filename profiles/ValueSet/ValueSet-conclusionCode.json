@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "id": "conclusionCode",
+  "url": "https://demis.rki.de/fhir/ValueSet/conclusionCode",
+  "version": "1.1.0",
+  "name": "ConclusionCode",
+  "title": "Gesamttestergebnis-Code",
+  "status": "active",
+  "date": "2023-02-09",
+  "description": "Das ValueSet ConclusionCode enthält die Codes des Gesamttestergebnisses.",
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/conclusionCode",
+      "version": "1.2.0"
+    } ]
+  }
+}

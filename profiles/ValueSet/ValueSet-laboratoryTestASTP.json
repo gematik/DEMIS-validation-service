@@ -1,0 +1,74 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestASTP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestASTP",
+  "version": "1.0.0",
+  "name": "LaboratoryTestASTP",
+  "title": "Labortest für Astroviren",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet LaboratoryTestASTP enthält die Codes der Labortests für Astroviren.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "7811-3",
+        "display": "Astrovirus RNA [Presence] in Serum by NAA with probe detection"
+      }, {
+        "code": "69938-9",
+        "display": "Astrovirus RNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "10646-8",
+        "display": "Astrovirus [Identifier] in Stool by Electron microscopy",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Astrovirus [Nachweis oder Identität] in Stuhl mit Elektronenmikroskopie"
+        } ]
+      }, {
+        "code": "31718-0",
+        "display": "Astrovirus Ag [Presence] in Stool",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Astrovirus-Antigen [Nachweis] in Stuhl"
+        } ]
+      }, {
+        "code": "7809-7",
+        "display": "Astrovirus [Presence] in Stool by Electron microscopy",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Astrovirus [Nachweis] in Stuhl mit Elektronenmikroskopie"
+        } ]
+      }, {
+        "code": "7810-5",
+        "display": "Astrovirus Ag [Presence] in Stool by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Astrovirus-Antigen [Nachweis] in Stuhl mit Immunoassay"
+        } ]
+      }, {
+        "code": "82210-6",
+        "display": "Astrovirus subtypes 1-8 RNA [Presence] in Stool by NAA with non-probe detection"
+      }, {
+        "code": "92691-5",
+        "display": "Astrovirus RNA [Presence] in Stool by NAA with probe detection"
+      } ]
+    } ]
+  }
+}

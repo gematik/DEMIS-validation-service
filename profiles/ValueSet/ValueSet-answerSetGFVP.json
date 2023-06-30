@@ -1,0 +1,198 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetGFVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetGFVP",
+  "version": "1.1.0",
+  "name": "AnswerSetGFVP",
+  "title": "AnswerSet für Gelbfiebervirus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetGFVP enthält die Codes der Answer-Codes für Gelbfiebervirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "26630006",
+        "display": "Yellow fever virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yellow fever virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gelbfieber-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "407538006",
+        "display": "Yellow Fever virus group (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yellow Fever virus group (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gelbfieber-Virus-Gruppe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "87826007",
+        "display": "Bouboui virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bouboui virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Bouboui-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "82929009",
+        "display": "Saboya virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Saboya virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Saboya-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "43086007",
+        "display": "Edgehill virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Edgehill virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Edgehill-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "30478002",
+        "display": "Jugra virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Jugra virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Jugra-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "1718008",
+        "display": "Sepik virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Sepik virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Sepik-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "32469002",
+        "display": "Wesselsbron virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Wesselsbron virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Wesselsbron-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "407539003",
+        "display": "Uganda S virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Uganda S virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Uganda-S-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "16636004",
+        "display": "Banzi virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Banzi virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Banzi-Virus"
+        } ]
+      } ]
+    } ]
+  }
+}

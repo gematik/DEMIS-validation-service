@@ -1,0 +1,86 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestMRAP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestMRAP",
+  "version": "1.4.0",
+  "name": "LaboratoryTestMRAP",
+  "title": "Labortest für Staphylococcus aureus (Methicillin-resistente Stämme); Meldepflicht nur für den Nachweis aus Blut oder Liquor",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestMRAP enthält die Codes der Labortests für Staphylococcus aureus (Methicillin-resistente Stämme); Meldepflicht nur für den Nachweis aus Blut oder Liquor.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "13317-3",
+        "display": "Methicillin resistant Staphylococcus aureus [Presence] in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Methicillin-resistenter Staphylococcus aureus [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "35492-8",
+        "display": "Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Methicillin resistant Staphylococcus aureus-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "42721-1",
+        "display": "Oxacillin Resistant Staphylococcus sp isolate [Presence] in Isolate by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Oxacillin-resistente Staphylococcus sp-Isolat [Nachweis] in Isolat mit Latexagglutination"
+        } ]
+      }, {
+        "code": "94424-9",
+        "display": "Staphylococcus aureus methicillin resistance SCCmec+orfX junction [Presence] by Molecular method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Staphylococcus aureus Methicillin-Resistenz SCCmec+orfX junction [Nachweis], molekulargenetisch"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestSTYP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestSTYP",
+  "version": "1.4.0",
+  "name": "LaboratoryTestSTYP",
+  "title": "Labortest für Salmonella Typhi; Meldepflicht für alle direkten Nachweise",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestSTYP enthält die Codes der Labortests für Salmonella Typhi; Meldepflicht für alle direkten Nachweise.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "53956-9",
+        "display": "Salmonella typhi [Identifier] in Isolate by Agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella typhi [Nachweis oder Identität] in Isolat mit Agglutination"
+        } ]
+      }, {
+        "code": "70021-1",
+        "display": "Salmonella typhi DNA [Presence] in Blood by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella typhi-DNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "86930-5",
+        "display": "Carbapenemase [Presence] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Carbapenemase [Nachweis] in Isolat"
+        } ]
+      }, {
+        "code": "88462-7",
+        "display": "Carbapenem [Susceptibility]",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Carbapenem [Empfindlichkeit]"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialEAHP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialEAHP",
+  "version": "1.0.0",
+  "name": "MaterialEAHP",
+  "title": "Material für Amoebiasis, Entamoeba histolytica",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet MaterialEAHP enthält die Codes der Materialien für Amoebiasis, Entamoeba histolytica.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "119339001",
+        "display": "Stool specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Stool specimen (specimen)"
+        } ]
+      }, {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serum specimen (specimen)"
+        } ]
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cerebrospinal fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "119342007",
+        "display": "Saliva specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Saliva specimen (specimen)"
+        } ]
+      }, {
+        "code": "119295008",
+        "display": "Specimen obtained by aspiration (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen obtained by aspiration (specimen)"
+        } ]
+      }, {
+        "code": "122592007",
+        "display": "Acellular blood (serum or plasma) specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Acellular blood (serum or plasma) specimen (specimen)"
+        } ]
+      }, {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Blood specimen (specimen)"
+        } ]
+      }, {
+        "code": "128159001",
+        "display": "Tissue specimen from colon (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tissue specimen from colon (specimen)"
+        } ]
+      }, {
+        "code": "122643008",
+        "display": "Tissue specimen from large intestine (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tissue specimen from large intestine (specimen)"
+        } ]
+      }, {
+        "code": "122638001",
+        "display": "Tissue specimen from small intestine (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tissue specimen from small intestine (specimen)"
+        } ]
+      } ]
+    } ]
+  }
+}

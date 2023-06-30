@@ -1,0 +1,162 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialCLOP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialCLOP",
+  "version": "1.3.0",
+  "name": "MaterialCLOP",
+  "title": "Material für Clostridium botulinum oder Toxinnachweis",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet MaterialCLOP enthält die Codes der Materialien für Clostridium botulinum oder Toxinnachweis.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "119364003",
+        "display": "Serum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serum specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Serum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "119339001",
+        "display": "Stool specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Stool specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Stuhl"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "258531008",
+        "display": "Wound swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Wound swab (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Wundabstrich"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "122572000",
+        "display": "Vomitus specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Vomitus specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Erbrochenes"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "122573005",
+        "display": "Gastric contents specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Gastric contents specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Mageninhalt"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "472901003",
+        "display": "Swab from nasal sinus (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Swab from nasal sinus (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Nasennebenhöhlenabstrich"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "258607008",
+        "display": "Bronchoalveolar lavage fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bronchoalveolar lavage fluid specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Bronchoalveoläre Lavage"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "123038009",
+        "display": "Specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Anderes Untersuchungsmaterial"
+        } ]
+      } ]
+    } ]
+  }
+}

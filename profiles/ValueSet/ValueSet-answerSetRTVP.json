@@ -1,0 +1,180 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetRTVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetRTVP",
+  "version": "1.1.0",
+  "name": "AnswerSetRTVP",
+  "title": "AnswerSet für Rotavirus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetRTVP enthält die Codes der Answer-Codes für Rotavirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "416138003",
+        "display": "Rotavirus group A (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rotavirus group A (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Rotavirus, Gruppe A"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "89331006",
+        "display": "Rotavirus group B (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rotavirus group B (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Rotavirus, Gruppe B"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "31551005",
+        "display": "Rotavirus group C (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rotavirus group C (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Rotavirus, Gruppe C"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "88227009",
+        "display": "Rotavirus group D (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rotavirus group D (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Rotavirus, Gruppe D"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "2864009",
+        "display": "Rotavirus group E (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rotavirus group E (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Rotavirus, Gruppe E"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "83358009",
+        "display": "Rotavirus group F (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rotavirus group F (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Rotavirus, Gruppe F"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "36833002",
+        "display": "Rotavirus group G (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rotavirus group G (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Rotavirus, Gruppe G"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417542000",
+        "display": "Genus Rotavirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Rotavirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Gattung Rotavirus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "64694002",
+        "display": "Human rotavirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human rotavirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes Rotavirus"
+        } ]
+      } ]
+    } ]
+  }
+}

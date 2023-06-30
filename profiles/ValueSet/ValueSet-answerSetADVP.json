@@ -1,0 +1,144 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetADVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetADVP",
+  "version": "1.2.0",
+  "name": "AnswerSetADVP",
+  "title": "AnswerSet für Adenoviren; Meldepflicht nur für den direkten Nachweis im Konjunktivalabstrich",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetADVP enthält die Codes der Answer-Codes für Adenoviren; Meldepflicht nur für den direkten Nachweis im Konjunktivalabstrich.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "1098002",
+        "display": "Human adenovirus 3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human adenovirus 3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes Adenovirus 3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "23684001",
+        "display": "Human adenovirus 4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human adenovirus 4 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes Adenovirus 4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "68957002",
+        "display": "Human adenovirus 7 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human adenovirus 7 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes Adenovirus 7"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "46957004",
+        "display": "Human adenovirus 8 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human adenovirus 8 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes Adenovirus 8"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "49787000",
+        "display": "Human adenovirus 19 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human adenovirus 19 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes Adenovirus 19"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "91125002",
+        "display": "Human adenovirus 37 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human adenovirus 37 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes Adenovirus 37"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "74871001",
+        "display": "Human adenovirus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Human adenovirus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Humanes Adenovirus"
+        } ]
+      } ]
+    } ]
+  }
+}

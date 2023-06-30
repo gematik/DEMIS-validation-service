@@ -1,0 +1,216 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialCYMP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialCYMP",
+  "version": "1.0.0",
+  "name": "MaterialCYMP",
+  "title": "Material für Cytomegalie, Cytomegalievirus",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet MaterialCYMP enthält die Codes der Materialien für Cytomegalie, Cytomegalievirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serum specimen (specimen)"
+        } ]
+      }, {
+        "code": "119361006",
+        "display": "Plasma specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Plasma specimen (specimen)"
+        } ]
+      }, {
+        "code": "788707000",
+        "display": "Plasma specimen or serum specimen or whole blood specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Plasma specimen or serum specimen or whole blood specimen (specimen)"
+        } ]
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cerebrospinal fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Blood specimen (specimen)"
+        } ]
+      }, {
+        "code": "122575003",
+        "display": "Urine specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Urine specimen (specimen)"
+        } ]
+      }, {
+        "code": "309051001",
+        "display": "Body fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Body fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "119373006",
+        "display": "Amniotic fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Amniotic fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "441620008",
+        "display": "Oral fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Oral fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "309128003",
+        "display": "Eye fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Eye fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tissue specimen (specimen)"
+        } ]
+      }, {
+        "code": "258527002",
+        "display": "Anal swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Anal swab (specimen)"
+        } ]
+      }, {
+        "code": "258607008",
+        "display": "Bronchoalveolar lavage fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bronchoalveolar lavage fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "119391001",
+        "display": "Specimen from bronchus (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from bronchus (specimen)"
+        } ]
+      }, {
+        "code": "119359002",
+        "display": "Bone marrow specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bone marrow specimen (specimen)"
+        } ]
+      }, {
+        "code": "258606004",
+        "display": "Lower respiratory tract specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Lower respiratory tract specimen (specimen)"
+        } ]
+      }, {
+        "code": "119303007",
+        "display": "Microbial isolate specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Microbial isolate specimen (specimen)"
+        } ]
+      }, {
+        "code": "119294007",
+        "display": "Dried blood specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Dried blood specimen (specimen)"
+        } ]
+      } ]
+    } ]
+  }
+}

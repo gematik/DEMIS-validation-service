@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "id": "country",
+  "url": "https://demis.rki.de/fhir/ValueSet/country",
+  "version": "1.1.0",
+  "name": "Country",
+  "title": "Land",
+  "status": "active",
+  "date": "2023-02-09",
+  "description": "Das ValueSet Country enthält die Codes der Länder.",
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/country",
+      "version": "1.0.0"
+    } ]
+  }
+}

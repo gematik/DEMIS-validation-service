@@ -1,0 +1,331 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestECOP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestECOP",
+  "version": "1.4.0",
+  "name": "LaboratoryTestECOP",
+  "title": "Labortest für Escherichia coli (sonstige darmpathogene Stämme)",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestECOP enthält die Codes der Labortests für Escherichia coli (sonstige darmpathogene Stämme).",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "101558-5",
+        "display": "Escherichia coli enteroinvasive DNA [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "16283-4",
+        "display": "Escherichia coli verotoxin [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Vero-Toxin [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "16836-9",
+        "display": "Escherichia coli verotoxic identified in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli verotoxisch identifiziert in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "6574-8",
+        "display": "Escherichia coli verotoxin 1 [Presence] in Stool",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Vero-Toxin 1 [Nachweis] in Stuhl"
+        } ]
+      }, {
+        "code": "6576-3",
+        "display": "Escherichia coli verotoxin 2 [Presence] in Stool",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli Vero-Toxin 2 [Nachweis] in Stuhl"
+        } ]
+      }, {
+        "code": "97317-2",
+        "display": "Escherichia coli enteroaggregative DNA [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enteroaggregativ-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "97318-0",
+        "display": "Escherichia coli enteropathogenic DNA [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enteropathogen-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "97319-8",
+        "display": "Escherichia coli enterotoxigenic DNA [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enterotoxigen-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "13318-1",
+        "display": "Escherichia coli enteroinvasive identified in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enteroinvasiv identifiziert in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "13329-8",
+        "display": "Escherichia coli labile toxin [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli labiles Toxin [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "16832-8",
+        "display": "Escherichia coli enterotoxic identified in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enterotoxisch identifiziert in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "20789-4",
+        "display": "Escherichia coli serotype [Identifier] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli-Serotyp [Nachweis oder Identität] in Isolat"
+        } ]
+      }, {
+        "code": "53944-5",
+        "display": "Escherichia coli enteroinvasive [Presence] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enteroinvasiv [Nachweis] in Isolat"
+        } ]
+      }, {
+        "code": "61398-4",
+        "display": "Escherichia coli DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "63423-8",
+        "display": "Escherichia coli eaeA gene [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli eaeA-Gen [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "80348-6",
+        "display": "Escherichia coli enteropathogenic eae gene [Presence] in Stool by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enteropathogen eae-Gen [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "80349-4",
+        "display": "Escherichia coli enteroaggregative pAA plasmid aggR+aatA genes [Presence] in Stool by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enteroaggregativ pAA-Plasmid aggR+aatA-Gene [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "80351-0",
+        "display": "Escherichia coli enterotoxigenic ltA+st1a+st1b genes [Presence] in Stool by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enterotoxigen ltA+st1a+st1b-Gene [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "80677-8",
+        "display": "Escherichia coli enterotoxigenic eltA+estB genes [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enterotoxigen eltA+estB-Gene [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "87318-2",
+        "display": "Escherichia coli eaeA gene [Presence] in Isolate by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli eaeA-Gen [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "87319-0",
+        "display": "Escherichia coli enteroaggregative astA gene [Presence] in Isolate by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enteroaggregativ astA-Gen [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "87320-8",
+        "display": "Escherichia coli enterotoxigenic heat-labile toxin DNA [Presence] in Isolate by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enterotoxigen hitzelabiles Toxin-DNA [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "87321-6",
+        "display": "Escherichia coli enterotoxigenic sta gene [Presence] in Isolate by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enterotoxigenic sta-Gen [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "87322-4",
+        "display": "Escherichia coli enterotoxigenic stb gene [Presence] in Isolate by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli enterotoxigen stb-Gen [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "87951-0",
+        "display": "Escherichia coli eaeA gene [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Escherichia coli eaeA-Gen [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "86930-5",
+        "display": "Carbapenemase [Presence] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Carbapenemase [Nachweis] in Isolat"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

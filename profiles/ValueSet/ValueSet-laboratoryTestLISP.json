@@ -1,0 +1,144 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestLISP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestLISP",
+  "version": "1.6.0",
+  "name": "LaboratoryTestLISP",
+  "title": "Labortest für Listeria monocytogenes; Meldepflicht nur für den direkten Nachweis aus Blut, Liquor oder anderen normalerweise sterilen Substraten sowie aus Abstrichen von Neugeborenen",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestLISP enthält die Codes der Labortests für Listeria monocytogenes; Meldepflicht nur für den direkten Nachweis aus Blut, Liquor oder anderen normalerweise sterilen Substraten sowie aus Abstrichen von Neugeborenen.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "101559-3",
+        "display": "Listeria monocytogenes DNA [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "99091-1",
+        "display": "Listeria monocytogenes DNA [Presence] in Cerebral spinal fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Listeria monocytogenes-DNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85763-1",
+        "display": "Listeria monocytogenes DNA [Presence] by NAA with non-probe detection in Positive blood culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Listeria monocytogenes-DNA [Nachweis] in positiver Blutkultur mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "92780-6",
+        "display": "Listeria monocytogenes DNA [Presence] by NAA with probe detection in Positive blood culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Listeria monocytogenes-DNA [Nachweis] in positiver Blutkultur mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "89596-1",
+        "display": "Listeria monocytogenes DNA [Presence] in Blood by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Listeria monocytogenes-DNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "82184-3",
+        "display": "Listeria monocytogenes DNA [Presence] in Cerebral spinal fluid by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Listeria monocytogenes-DNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "61369-5",
+        "display": "Listeria monocytogenes DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Listeria monocytogenes-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "6609-2",
+        "display": "Listeria sp identified in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Listeria sp identifiziert in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "5021-1",
+        "display": "Listeria monocytogenes rRNA [Presence] in Specimen by Probe",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Listeria monocytogenes-rRNA [Nachweis] in Probenmaterial mit Sonde"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

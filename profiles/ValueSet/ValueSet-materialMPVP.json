@@ -1,0 +1,90 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialMPVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialMPVP",
+  "version": "1.2.0",
+  "name": "MaterialMPVP",
+  "title": "Material für Mumpsvirus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet MaterialMPVP enthält die Codes der Materialien für Mumpsvirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "119364003",
+        "display": "Serum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serum specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Serum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "472881004",
+        "display": "Swab from pharynx (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Swab from pharynx (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Pharynxabstrich"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "122575003",
+        "display": "Urine specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Urine specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Urin"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "123038009",
+        "display": "Specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen (specimen)"
+        }, {
+          "language": "de-DE",
+          "value": "Anderes Untersuchungsmaterial"
+        } ]
+      } ]
+    } ]
+  }
+}

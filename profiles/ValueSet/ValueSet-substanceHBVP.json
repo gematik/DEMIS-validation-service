@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "id": "substanceHBVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/substanceHBVP",
+  "version": "1.0.0",
+  "name": "SubstanceHBVP",
+  "title": "Analyt-Set für Hepatitis-B-Virus; Meldepflicht für alle Nachweise",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet SubstanceHBVP enthält die Codes des Analyt-Sets für Hepatitis-B-Virus; Meldepflicht für alle Nachweise.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "22290004",
+        "display": "Antigen of Hepatitis B virus surface protein (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "HBs-Antigen"
+        } ]
+      }, {
+        "code": "60605004",
+        "display": "Antigen of Hepatitis B virus e protein (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "HBe-Antigen"
+        } ]
+      }, {
+        "code": "39082004",
+        "display": "Antigen of Hepatitis B virus core protein (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "HBc-Antigen"
+        } ]
+      } ]
+    } ]
+  }
+}

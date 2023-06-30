@@ -1,0 +1,106 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetBOBP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetBOBP",
+  "version": "1.1.0",
+  "name": "AnswerSetBOBP",
+  "title": "AnswerSet für (Lyme-) Borreliose, Borrelia burgdorferi",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetBOBP enthält die Codes der Answer-Codes für (Lyme-) Borreliose, Borrelia burgdorferi.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "76327009",
+        "display": "Borrelia burgdorferi (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Borrelia burgdorferi (organism)"
+        } ]
+      }, {
+        "code": "416551001",
+        "display": "Borrelia afzelii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Borrelia afzelii (organism)"
+        } ]
+      }, {
+        "code": "113497007",
+        "display": "Borrelia garinii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Borrelia garinii (organism)"
+        } ]
+      }, {
+        "code": "450599009",
+        "display": "Borrelia spielmanii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Borrelia spielmanii (organism)"
+        } ]
+      }, {
+        "code": "718776004",
+        "display": "Borrelia bavariensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Borrelia bavariensis (organism)"
+        } ]
+      }, {
+        "code": "781273009",
+        "display": "Borrelia mayonii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Borrelia mayonii (organism)"
+        } ]
+      }, {
+        "code": "113499005",
+        "display": "Borrelia lusitaniae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Borrelia lusitaniae (organism)"
+        } ]
+      }, {
+        "code": "113503004",
+        "display": "Borrelia valaisiana (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Borrelia valaisiana (organism)"
+        } ]
+      } ]
+    } ]
+  }
+}

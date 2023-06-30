@@ -1,0 +1,956 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestADEP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestADEP",
+  "version": "1.0.0",
+  "name": "LaboratoryTestADEP",
+  "title": "Labortest für Adenoviren; Meldepflicht bei akuter Infektion für Nachweise aus allen Körpermaterialien",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet LaboratoryTestADEP enthält die Codes der Labortests für Adenoviren; Meldepflicht bei akuter Infektion für Nachweise aus allen Körpermaterialien.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "101286-3",
+        "display": "Adenovirus DNA [Presence] in Throat by NAA with non-probe detection"
+      }, {
+        "code": "99386-5",
+        "display": "Adenovirus DNA [Log #/volume] (viral load) in Cornea or Conjunctiva by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [log #/Volumen] (Viruslast) in Kornea bzw. Konjunktiva mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "13192-0",
+        "display": "Adenovirus Ab [Units/volume] in Cerebral spinal fluid"
+      }, {
+        "code": "13913-9",
+        "display": "Adenovirus Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "13914-7",
+        "display": "Adenovirus IgG Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-IgG-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "13915-4",
+        "display": "Adenovirus IgM Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-IgM-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "21053-4",
+        "display": "Adenovirus IgG Ab [Titer] in Serum"
+      }, {
+        "code": "21054-2",
+        "display": "Adenovirus IgM Ab [Presence] in Serum"
+      }, {
+        "code": "21055-9",
+        "display": "Adenovirus DNA [Presence] in Serum or Plasma by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "22080-6",
+        "display": "Adenovirus Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "23950-9",
+        "display": "Adenovirus Ab [Titer] in Cerebral spinal fluid by Complement fixation"
+      }, {
+        "code": "24126-5",
+        "display": "Adenovirus type [Identifier] in Specimen by Neutralization test",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Typ [Nachweis oder Identität] in Probenmaterial mit Neutralisationstest"
+        } ]
+      }, {
+        "code": "24175-2",
+        "display": "Adenovirus Ab [Titer] in Serum by Complement fixation --1st specimen"
+      }, {
+        "code": "24176-0",
+        "display": "Adenovirus Ab [Titer] in Serum by Complement fixation --2nd specimen"
+      }, {
+        "code": "24249-5",
+        "display": "Adenovirus Ab [Titer] in Serum --1st specimen"
+      }, {
+        "code": "24250-3",
+        "display": "Adenovirus Ab [Titer] in Serum --2nd specimen"
+      }, {
+        "code": "29314-2",
+        "display": "Adenovirus Ab [Titer] in Body fluid by Complement fixation",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antikörper [Titer] in Körperflüssigkeit mit Komplementbindungsreaktion"
+        } ]
+      }, {
+        "code": "29416-5",
+        "display": "Adenovirus Ab [Titer] in Body fluid"
+      }, {
+        "code": "31217-3",
+        "display": "Adenovirus Ab [Units/volume] in Body fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antikörper [Einheiten/Volumen] in Körperflüssigkeit"
+        } ]
+      }, {
+        "code": "31709-9",
+        "display": "Adenovirus 40+41 Ag [Presence] in Stool",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus 40+41-Antigen [Nachweis] in Stuhl"
+        } ]
+      }, {
+        "code": "31711-5",
+        "display": "Adenovirus Ag [Presence] in Stool",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in Stuhl"
+        } ]
+      }, {
+        "code": "31712-3",
+        "display": "Adenovirus Ag [Presence] in Throat",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in Rachen"
+        } ]
+      }, {
+        "code": "31713-1",
+        "display": "Adenovirus Ag [Presence] in Urine"
+      }, {
+        "code": "31714-9",
+        "display": "Adenovirus Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "34576-9",
+        "display": "Adenovirus Ab [Titer] in Cerebral spinal fluid"
+      }, {
+        "code": "35705-3",
+        "display": "Adenovirus Ag [Presence] in Nasopharynx"
+      }, {
+        "code": "38375-2",
+        "display": "Adenovirus DNA [Presence] in Cerebral spinal fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "39528-5",
+        "display": "Adenovirus DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "40975-5",
+        "display": "Adenovirus DNA [Identifier] in Specimen by RFLP",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [Nachweis oder Identität] in Probenmaterial mit Restriktionsfragmentlängenpolymorphismus"
+        } ]
+      }, {
+        "code": "40976-3",
+        "display": "Adenovirus DNA [Identifier] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [Nachweis oder Identität] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "40977-1",
+        "display": "Adenovirus IgG Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "41162-9",
+        "display": "Adenovirus IgG Ab [Presence] in Serum"
+      }, {
+        "code": "43610-5",
+        "display": "Adenovirus Ag [Presence] in Nasopharynx by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in Nasopharynx mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "43611-3",
+        "display": "Adenovirus Ag [Presence] in Bronchial specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in Probenmaterial aus dem Bronchialtrakt mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "43612-1",
+        "display": "Adenovirus Ag [Presence] in Nose by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in Nase mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "43613-9",
+        "display": "Adenovirus Ag [Presence] in Trachea by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in Trachea mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "43614-7",
+        "display": "Adenovirus Ag [Presence] in Nose"
+      }, {
+        "code": "43615-4",
+        "display": "Adenovirus Ag [Presence] in Genital specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in Probenmaterial aus dem Genitaltrakt"
+        } ]
+      }, {
+        "code": "43616-2",
+        "display": "Adenovirus Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "43617-0",
+        "display": "Adenovirus Ab [Presence] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antikörper [Nachweis] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "43618-8",
+        "display": "Adenovirus Ab [Presence] in Serum by Complement fixation"
+      }, {
+        "code": "43714-5",
+        "display": "Adenovirus Ab [Presence] in Specimen"
+      }, {
+        "code": "44289-7",
+        "display": "Adenovirus Ab [Units/volume] in Serum by Complement fixation"
+      }, {
+        "code": "48609-2",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Urine by NAA with probe detection"
+      }, {
+        "code": "49334-6",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection"
+      }, {
+        "code": "49335-3",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Tissue by NAA with probe detection"
+      }, {
+        "code": "49336-1",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Bronchoalveolar lavage by NAA with probe detection"
+      }, {
+        "code": "49337-9",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Bone marrow by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [#/Volumen] (Viruslast) in Knochenmark mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "49338-7",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Cerebral spinal fluid by NAA with probe detection"
+      }, {
+        "code": "49339-5",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [#/Volumen] (Viruslast) in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "49340-3",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [#/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "49341-1",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Blood by NAA with probe detection"
+      }, {
+        "code": "5041-9",
+        "display": "Adenovirus Ab [Titer] in Serum by Complement fixation",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antikörper [Titer] in Serum mit Komplementbindungsreaktion"
+        } ]
+      }, {
+        "code": "5042-7",
+        "display": "Adenovirus IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "51822-5",
+        "display": "Adenovirus IgG Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "51823-3",
+        "display": "Adenovirus IgM Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "55095-4",
+        "display": "Adenovirus [Presence] in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "5825-5",
+        "display": "Adenovirus Ag [Presence] in Stool by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in Stuhl mit Immunoassay"
+        } ]
+      }, {
+        "code": "5826-3",
+        "display": "Adenovirus Ag [Presence] in Stool by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in Stuhl mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "5827-1",
+        "display": "Adenovirus Ag [Presence] in Throat by Immunoassay"
+      }, {
+        "code": "5828-9",
+        "display": "Adenovirus Ag [Presence] in Throat by Immunofluorescence"
+      }, {
+        "code": "5829-7",
+        "display": "Adenovirus Ag [Presence] in Tissue by Immunoassay"
+      }, {
+        "code": "5830-5",
+        "display": "Adenovirus Ag [Presence] in Tissue by Immunofluorescence"
+      }, {
+        "code": "5831-3",
+        "display": "Adenovirus Ag [Presence] in Urine by Immunoassay"
+      }, {
+        "code": "5832-1",
+        "display": "Adenovirus Ag [Presence] in Urine by Immunofluorescence"
+      }, {
+        "code": "5833-9",
+        "display": "Adenovirus Ag [Presence] in Specimen by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in Probenmaterial mit Immunoassay"
+        } ]
+      }, {
+        "code": "5834-7",
+        "display": "Adenovirus Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "60259-9",
+        "display": "Adenovirus DNA [Presence] in Isolate by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "61363-8",
+        "display": "Adenovirus 3+4+7+21 DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus 3+4+7+21-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "62480-9",
+        "display": "Adenovirus DNA [Presence] in Bronchoalveolar lavage by NAA with probe detection"
+      }, {
+        "code": "6306-5",
+        "display": "Adenovirus 40+41 Ag [Presence] in Stool by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus 40+41-Antigen [Nachweis] in Stuhl mit Immunoassay"
+        } ]
+      }, {
+        "code": "6307-3",
+        "display": "Adenovirus rRNA [Presence] in Tissue by Probe"
+      }, {
+        "code": "6308-1",
+        "display": "Adenovirus rRNA [Presence] in Specimen by Probe",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-rRNA [Nachweis] in Probenmaterial mit Sonde"
+        } ]
+      }, {
+        "code": "64038-3",
+        "display": "Adenovirus DNA [Log #/volume] (viral load) in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [log #/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "66719-6",
+        "display": "Adenovirus DNA [Log #/volume] (viral load) in Urine by NAA with probe detection"
+      }, {
+        "code": "66720-4",
+        "display": "Adenovirus DNA [Log #/volume] (viral load) in Body fluid by NAA with probe detection"
+      }, {
+        "code": "66721-2",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Body fluid by NAA with probe detection"
+      }, {
+        "code": "66722-0",
+        "display": "Adenovirus DNA [Log #/volume] (viral load) in Tissue by NAA with probe detection"
+      }, {
+        "code": "66723-8",
+        "display": "Adenovirus DNA [Log #/volume] (viral load) in Serum or Plasma by NAA with probe detection"
+      }, {
+        "code": "66724-6",
+        "display": "Adenovirus DNA [Log #/volume] (viral load) in Stool by NAA with probe detection"
+      }, {
+        "code": "66725-3",
+        "display": "Adenovirus DNA [Log #/volume] (viral load) in Blood by NAA with probe detection"
+      }, {
+        "code": "66726-1",
+        "display": "Adenovirus DNA [Log #/volume] (viral load) in Genital specimen by NAA with probe detection"
+      }, {
+        "code": "66727-9",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Genital specimen by NAA with probe detection"
+      }, {
+        "code": "66728-7",
+        "display": "Adenovirus DNA [Log #/volume] (viral load) in Skin by NAA with probe detection"
+      }, {
+        "code": "66729-5",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Skin by NAA with probe detection"
+      }, {
+        "code": "66730-3",
+        "display": "Adenovirus DNA [Log #/volume] (viral load) in Cerebral spinal fluid by NAA with probe detection"
+      }, {
+        "code": "66731-1",
+        "display": "Adenovirus DNA [Log #/volume] (viral load) in Sputum or Bronchial by NAA with probe detection"
+      }, {
+        "code": "69920-7",
+        "display": "Adenovirus IgA Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "73754-4",
+        "display": "Adenovirus C DNA [Presence] in Nasopharynx by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus C-DNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "73755-1",
+        "display": "Adenovirus B+E DNA [Presence] in Nasopharynx by NAA with probe detection"
+      }, {
+        "code": "76070-2",
+        "display": "Adenovirus DNA [Presence] in Nasopharynx by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "77382-0",
+        "display": "Adenovirus Ag [Presence] in Bronchoalveolar lavage by Immunofluorescence"
+      }, {
+        "code": "7805-5",
+        "display": "Adenovirus Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "78529-5",
+        "display": "Adenovirus Ag [Presence] in Stool by Rapid immunoassay"
+      }, {
+        "code": "80586-1",
+        "display": "Adenovirus hexon gene [Presence] in Nasopharynx by NAA with probe detection"
+      }, {
+        "code": "80674-5",
+        "display": "Adenovirus 40+41fiber protein gene [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "82160-3",
+        "display": "Adenovirus DNA [Presence] in Nasopharynx by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "82209-8",
+        "display": "Adenovirus 40+41 DNA [Presence] in Stool by NAA with non-probe detection"
+      }, {
+        "code": "85810-0",
+        "display": "Adenovirus serotype DNA panel - Specimen by NAA with probe detection"
+      }, {
+        "code": "86328-2",
+        "display": "Adenovirus B(21) DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus B(21)-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "86329-0",
+        "display": "Adenovirus B(16) DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus B(16)-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "86330-8",
+        "display": "Adenovirus B(11) DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus B(11)-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "86331-6",
+        "display": "Adenovirus B(14) DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus B(14)-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "86332-4",
+        "display": "Adenovirus B(7) DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus B(7)-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "86333-2",
+        "display": "Adenovirus E(4) DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus E(4)-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "86334-0",
+        "display": "Adenovirus B(3) DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus B(3)-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "86510-5",
+        "display": "Adenovirus DNA [Presence] in Tissue by NAA with probe detection"
+      }, {
+        "code": "86511-3",
+        "display": "Adenovirus DNA [Presence] in Blood by NAA with probe detection"
+      }, {
+        "code": "86512-1",
+        "display": "Adenovirus DNA [Presence] in Urine by NAA with probe detection"
+      }, {
+        "code": "86513-9",
+        "display": "Adenovirus IgM Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "87959-3",
+        "display": "Adenovirus Ag [Presence] in Cerebral spinal fluid by Immunoassay"
+      }, {
+        "code": "88539-2",
+        "display": "Adenovirus DNA [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "88541-8",
+        "display": "Adenovirus DNA [Presence] in Aspirate by NAA with probe detection"
+      }, {
+        "code": "88602-8",
+        "display": "Adenovirus Ag [Presence] in Nasopharynx by Immunoassay"
+      }, {
+        "code": "88603-6",
+        "display": "Adenovirus Ag [Presence] in Lower respiratory specimen by Immunoassay"
+      }, {
+        "code": "88716-6",
+        "display": "Adenovirus A+B+C+D+E+F DNA [Presence] in Nasopharynx by NAA with probe detection"
+      }, {
+        "code": "88897-4",
+        "display": "Adenovirus Ag [Presence] in Lower respiratory specimen by Immunofluorescence"
+      }, {
+        "code": "88898-2",
+        "display": "Adenovirus [Presence] in Lower respiratory specimen by Organism specific culture"
+      }, {
+        "code": "88900-6",
+        "display": "Adenovirus [Presence] in Upper respiratory specimen by Organism specific culture"
+      }, {
+        "code": "88901-4",
+        "display": "Adenovirus [Presence] in Stool by Organism specific culture"
+      }, {
+        "code": "88902-2",
+        "display": "Adenovirus [Presence] in Urine by Organism specific culture"
+      }, {
+        "code": "90463-1",
+        "display": "Adenovirus DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "91820-1",
+        "display": "Adenovirus DNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "91821-9",
+        "display": "Adenovirus Ag [Presence] in Upper respiratory specimen by Rapid immunoassay"
+      }, {
+        "code": "91822-7",
+        "display": "Adenovirus Ag [Presence] in Upper respiratory specimen by Immunoassay"
+      }, {
+        "code": "91841-7",
+        "display": "Adenovirus Ag [Presence] in Lower respiratory specimen by Rapid immunoassay"
+      }, {
+        "code": "92136-1",
+        "display": "Adenovirus B+C+E DNA [Presence] in Respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "92690-7",
+        "display": "Adenovirus 40+41 DNA [Presence] in Stool by NAA with probe detection"
+      }, {
+        "code": "92828-3",
+        "display": "Adenovirus B+E DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus B+E-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "92987-7",
+        "display": "Adenovirus DNA [Presence] in Lower respiratory specimen by NAA with non-probe detection"
+      }, {
+        "code": "94040-3",
+        "display": "Adenovirus A+B+C+D+E DNA [Presence] in Respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "95659-9",
+        "display": "Adenovirus RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "96503-8",
+        "display": "Adenovirus DNA [Presence] in Respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "9782-4",
+        "display": "Adenovirus sp identified in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus sp identifiziert in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "31710-7",
+        "display": "Adenovirus Ag [Presence] in Conjunctival specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in konjunktivalem Probenmaterial"
+        } ]
+      }, {
+        "code": "5823-0",
+        "display": "Adenovirus Ag [Presence] in Conjunctival specimen by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in konjunktivalem Probenmaterial mit Immunoassay"
+        } ]
+      }, {
+        "code": "5824-8",
+        "display": "Adenovirus Ag [Presence] in Conjunctival specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-Antigen [Nachweis] in konjunktivalem Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "88533-5",
+        "display": "Adenovirus DNA [Presence] in Cornea or Conjunctiva by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [Nachweis] in Kornea bzw. Konjunktiva mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "88899-0",
+        "display": "Adenovirus [Presence] in Cornea or Conjunctiva by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus [Nachweis] in Kornea bzw. Konjunktiva mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "92854-9",
+        "display": "Adenovirus DNA [#/volume] (viral load) in Cornea or Conjunctiva by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Adenovirus-DNA [#/Volumen] (Viruslast) in Kornea bzw. Konjunktiva mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "41461-5",
+        "display": "Virus identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Virus identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestBORP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestBORP",
+  "version": "1.4.0",
+  "name": "LaboratoryTestBORP",
+  "title": "Labortest für Borrelia recurrentis",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestBORP enthält die Codes der Labortests für Borrelia recurrentis.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "49615-8",
+        "display": "Borrelia sp DNA [Identifier] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Borrelia sp-DNA [Nachweis oder Identität] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "6323-0",
+        "display": "Borrelia sp identified in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Borrelia sp identifiziert in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "87945-2",
+        "display": "Borrelia sp identified in Cerebral spinal fluid by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Borrelia sp identifiziert in Zerebrospinalflüssigkeit mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "87946-0",
+        "display": "Borrelia sp identified in Tissue by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Borrelia sp identifiziert in Gewebe mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "87947-8",
+        "display": "Borrelia sp DNA identified in Tissue by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Borrelia sp-DNA in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "88581-4",
+        "display": "Borrelia sp DNA [Identifier] in Cerebral spinal fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Borrelia sp-DNA [Nachweis oder Identität] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialSPYP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialSPYP",
+  "version": "1.0.0",
+  "name": "MaterialSPYP",
+  "title": "Material für Scharlach, Beta-hämolysierenden Streptokokken der Gruppe A",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet MaterialSPYP enthält die Codes der Materialien für Scharlach, Beta-hämolysierenden Streptokokken der Gruppe A.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Blood specimen (specimen)"
+        } ]
+      }, {
+        "code": "309051001",
+        "display": "Body fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Body fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "258607008",
+        "display": "Bronchoalveolar lavage fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bronchoalveolar lavage fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cerebrospinal fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "258606004",
+        "display": "Lower respiratory tract specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Lower respiratory tract specimen (specimen)"
+        } ]
+      }, {
+        "code": "119303007",
+        "display": "Microbial isolate specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Microbial isolate specimen (specimen)"
+        } ]
+      }, {
+        "code": "258411007",
+        "display": "Nasopharyngeal aspirate (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Nasopharyngeal aspirate (specimen)"
+        } ]
+      }, {
+        "code": "258500001",
+        "display": "Nasopharyngeal swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Nasopharyngeal swab (specimen)"
+        } ]
+      }, {
+        "code": "410580001",
+        "display": "Respiratory fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Respiratory fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serum specimen (specimen)"
+        } ]
+      }, {
+        "code": "447154002",
+        "display": "Specimen from nose (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from nose (specimen)"
+        } ]
+      }, {
+        "code": "119334006",
+        "display": "Sputum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Sputum specimen (specimen)"
+        } ]
+      }, {
+        "code": "257261003",
+        "display": "Swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Swab (specimen)"
+        } ]
+      }, {
+        "code": "119332005",
+        "display": "Synovial fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Synovial fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "258529004",
+        "display": "Throat swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Throat swab (specimen)"
+        } ]
+      }, {
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tissue specimen (specimen)"
+        } ]
+      }, {
+        "code": "258604001",
+        "display": "Upper respiratory specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Upper respiratory specimen (specimen)"
+        } ]
+      }, {
+        "code": "122566000",
+        "display": "Fluid specimen from wound (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Fluid specimen from wound (specimen)"
+        } ]
+      }, {
+        "code": "16211051000119109",
+        "display": "Specimen from deep wound (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from deep wound (specimen)"
+        } ]
+      }, {
+        "code": "119365002",
+        "display": "Specimen from wound (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from wound (specimen)"
+        } ]
+      }, {
+        "code": "258531008",
+        "display": "Wound swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Wound swab (specimen)"
+        } ]
+      }, {
+        "code": "309066003",
+        "display": "Skin biopsy specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Skin biopsy specimen (specimen)"
+        } ]
+      }, {
+        "code": "258505006",
+        "display": "Skin ulcer swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Skin ulcer swab (specimen)"
+        } ]
+      }, {
+        "code": "608969007",
+        "display": "Specimen from skin (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from skin (specimen)"
+        } ]
+      }, {
+        "code": "472862007",
+        "display": "Swab from lesion of skin (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Swab from lesion of skin (specimen)"
+        } ]
+      } ]
+    } ]
+  }
+}

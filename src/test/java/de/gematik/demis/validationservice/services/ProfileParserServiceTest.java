@@ -18,6 +18,7 @@
 
 package de.gematik.demis.validationservice.services;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import ca.uhn.fhir.context.FhirContext;
@@ -37,9 +38,10 @@ class ProfileParserServiceTest {
   private static Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> parsedProfile;
 
   @BeforeAll
-  static void parseProfile() {
+  static void parseProfile() throws Exception {
     ProfileParserService service =
         new ProfileParserService(FhirContext.forR4(), ResourceFileConstants.PROFILE_RESOURCE_PATH);
+    service.afterPropertiesSet();
     parsedProfile = service.getParseProfiles();
   }
 
@@ -49,26 +51,26 @@ class ProfileParserServiceTest {
   }
 
   @Test
-  void checkThereAre31CodeSystems() {
+  void checkNumberOfCodeSystems() {
     Map<String, IBaseResource> codeSystems = parsedProfile.get(CodeSystem.class);
-    assertEquals(32, codeSystems.values().size());
+    assertThat(codeSystems).as("versioned and non-versioned code systems").hasSize(2 * 30);
   }
 
   @Test
-  void checkThereIsThreeQuestionnaire() {
+  void checkNumberOfQuestionnaires() {
     Map<String, IBaseResource> questionnaires = parsedProfile.get(Questionnaire.class);
-    assertEquals(3, questionnaires.values().size());
+    assertThat(questionnaires).as("non-versioned questionnaires").hasSize(3);
   }
 
   @Test
-  void checkThereAre255StructureDefinitions() {
+  void checkNumberOfStructureDefinitions() {
     Map<String, IBaseResource> structureDefinitions = parsedProfile.get(StructureDefinition.class);
-    assertEquals(255, structureDefinitions.values().size());
+    assertThat(structureDefinitions).as("non-versioned structure definitions").hasSize(300);
   }
 
   @Test
-  void checkThereAre207ValueSets() {
+  void checkNumberOfValueSets() {
     Map<String, IBaseResource> valueSets = parsedProfile.get(ValueSet.class);
-    assertEquals(209, valueSets.values().size());
+    assertThat(valueSets).as("versioned and non-versioned value sets").hasSize(2 * 295);
   }
 }

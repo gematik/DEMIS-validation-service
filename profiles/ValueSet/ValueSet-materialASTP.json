@@ -1,0 +1,84 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialASTP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialASTP",
+  "version": "1.0.0",
+  "name": "MaterialASTP",
+  "title": "Material für Astroviren",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet MaterialASTP enthält die Codes der Materialien für Astroviren.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "122572000",
+        "display": "Vomitus specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Vomitus specimen (specimen)"
+        } ]
+      }, {
+        "code": "119339001",
+        "display": "Stool specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Stool specimen (specimen)"
+        } ]
+      }, {
+        "code": "119303007",
+        "display": "Microbial isolate specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Microbial isolate specimen (specimen)"
+        } ]
+      }, {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serum specimen (specimen)"
+        } ]
+      }, {
+        "code": "258528007",
+        "display": "Rectal swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Rectal swab (specimen)"
+        } ]
+      }, {
+        "code": "258527002",
+        "display": "Anal swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Anal swab (specimen)"
+        } ]
+      } ]
+    } ]
+  }
+}

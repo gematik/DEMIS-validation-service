@@ -1,0 +1,315 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialMPMP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialMPMP",
+  "version": "1.0.0",
+  "name": "MaterialMPMP",
+  "title": "Material für Mycoplasmen",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet MaterialMPMP enthält die Codes der Materialien für Mycoplasmen.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serum specimen (specimen)"
+        } ]
+      }, {
+        "code": "258508008",
+        "display": "Genital swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genital swab (specimen)"
+        } ]
+      }, {
+        "code": "258606004",
+        "display": "Lower respiratory tract specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Lower respiratory tract specimen (specimen)"
+        } ]
+      }, {
+        "code": "410580001",
+        "display": "Respiratory fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Respiratory fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "258604001",
+        "display": "Upper respiratory specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Upper respiratory specimen (specimen)"
+        } ]
+      }, {
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tissue specimen (specimen)"
+        } ]
+      }, {
+        "code": "119297000",
+        "display": "Blood specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Blood specimen (specimen)"
+        } ]
+      }, {
+        "code": "309051001",
+        "display": "Body fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Body fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "258450006",
+        "display": "Cerebrospinal fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Cerebrospinal fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "418564007",
+        "display": "Pleural fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Pleural fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "447154002",
+        "display": "Specimen from nose (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from nose (specimen)"
+        } ]
+      }, {
+        "code": "122575003",
+        "display": "Urine specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Urine specimen (specimen)"
+        } ]
+      }, {
+        "code": "119389009",
+        "display": "Specimen from throat (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from throat (specimen)"
+        } ]
+      }, {
+        "code": "258520000",
+        "display": "Vaginal swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Vaginal swab (specimen)"
+        } ]
+      }, {
+        "code": "119401005",
+        "display": "Specimen from conjunctiva (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from conjunctiva (specimen)"
+        } ]
+      }, {
+        "code": "119400006",
+        "display": "Specimen from cornea (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from cornea (specimen)"
+        } ]
+      }, {
+        "code": "258527002",
+        "display": "Anal swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Anal swab (specimen)"
+        } ]
+      }, {
+        "code": "119395005",
+        "display": "Specimen from uterine cervix (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from uterine cervix (specimen)"
+        } ]
+      }, {
+        "code": "119393003",
+        "display": "Specimen from urethra (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from urethra (specimen)"
+        } ]
+      }, {
+        "code": "258500001",
+        "display": "Nasopharyngeal swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Nasopharyngeal swab (specimen)"
+        } ]
+      }, {
+        "code": "119334006",
+        "display": "Sputum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Sputum specimen (specimen)"
+        } ]
+      }, {
+        "code": "119303007",
+        "display": "Microbial isolate specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Microbial isolate specimen (specimen)"
+        } ]
+      }, {
+        "code": "258441009",
+        "display": "Exudate specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Exudate specimen (specimen)"
+        } ]
+      }, {
+        "code": "119328004",
+        "display": "Mother's milk specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mother's milk specimen (specimen)"
+        } ]
+      }, {
+        "code": "258607008",
+        "display": "Bronchoalveolar lavage fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bronchoalveolar lavage fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "16224371000119105",
+        "display": "Nasal lavage fluid specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Nasal lavage fluid specimen (specimen)"
+        } ]
+      }, {
+        "code": "258530009",
+        "display": "Urethral swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Urethral swab (specimen)"
+        } ]
+      } ]
+    } ]
+  }
+}

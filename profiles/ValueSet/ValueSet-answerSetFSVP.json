@@ -1,0 +1,126 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetFSVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetFSVP",
+  "version": "1.1.0",
+  "name": "AnswerSetFSVP",
+  "title": "AnswerSet für FSME-Virus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetFSVP enthält die Codes der Answer-Codes für FSME-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "81370003",
+        "display": "European tick-borne encephalitis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "European tick-borne encephalitis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Europäische-Frühsommer-Meningoenzephalitis-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "281169009",
+        "display": "Kumlinge virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Kumlinge virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Kumlinge-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "243605006",
+        "display": "Tick-borne encephalitis virus subgroup (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tick-borne encephalitis virus subgroup (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Frühsommer-Meningoenzephalitis-Virus-Subgruppe"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "32323003",
+        "display": "Tick-borne encephalitis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Tick-borne encephalitis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Frühsommer-Meningoenzephalitis-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "6186009",
+        "display": "Far Eastern tick-borne encephalitis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Far Eastern tick-borne encephalitis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Fernöstliche-Frühsommer-Meningoenzephalitis-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "415526006",
+        "display": "Siberian tick-borne encephalitis virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Siberian tick-borne encephalitis virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Sibirische-Frühsommer-Meningoenzephalitis-Virus"
+        } ]
+      } ]
+    } ]
+  }
+}

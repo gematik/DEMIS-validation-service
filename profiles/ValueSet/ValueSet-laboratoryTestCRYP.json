@@ -1,0 +1,326 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestCRYP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestCRYP",
+  "version": "1.3.0",
+  "name": "LaboratoryTestCRYP",
+  "title": "Labortest für humanpathogene Cryptosporidium sp.",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestCRYP enthält die Codes der Labortests für humanpathogene Cryptosporidium sp..",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "100868-9",
+        "display": "Cryptosporidium sp 18S-LC2 rRNA [Genotype] in Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp 18S-LC2-rRNA [Genotyp] in Probenmaterial, molekulargenetisch"
+        } ]
+      }, {
+        "code": "100869-7",
+        "display": "Cryptosporidium gp60 gene [Type] in Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium gp60-Gen [Typ] in Probenmaterial, molekulargenetisch"
+        } ]
+      }, {
+        "code": "100870-5",
+        "display": "Cryptosporidium 18S rRNA [Genotype] in Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium 18S-rRNA [Genotyp] in Probenmaterial, molekulargenetisch"
+        } ]
+      }, {
+        "code": "20780-3",
+        "display": "Cryptosporidium sp [Presence] in Large intestine or small intestine Tissue by Acid fast stain",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp [Nachweis] in Dickdarm-oder Dünndarmgewebe mit säurefester Färbung"
+        } ]
+      }, {
+        "code": "20781-1",
+        "display": "Cryptosporidium sp [Presence] in Stool by Acid fast stain",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp [Nachweis] in Stuhl mit säurefester Färbung"
+        } ]
+      }, {
+        "code": "21233-2",
+        "display": "Cryptosporidium sp Ag [Presence] in Stool",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp-Antigen [Nachweis] in Stuhl"
+        } ]
+      }, {
+        "code": "27907-5",
+        "display": "Cryptosporidium sp [Identifier] in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp [Nachweis oder Identität] in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "31793-3",
+        "display": "Cryptosporidium sp Ag [Units/volume] in Stool",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp-Antigen [Einheiten/Volumen] in Stuhl"
+        } ]
+      }, {
+        "code": "31794-1",
+        "display": "Cryptosporidium sp Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "39534-3",
+        "display": "Cryptosporidium sp Ag [Presence] in Stool by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp-Antigen [Nachweis] in Stuhl mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "40958-1",
+        "display": "Cryptosporidium parvum identified in Stool",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium parvum identifiziert in Stuhl"
+        } ]
+      }, {
+        "code": "41433-4",
+        "display": "Cryptosporidium hominis DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium hominis-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "41434-2",
+        "display": "Cryptosporidium parvum DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium parvum-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "41487-0",
+        "display": "Cryptosporidium parvum Ag [Presence] in Stool by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium parvum-Antigen [Nachweis] in Stuhl mit Immunoassay"
+        } ]
+      }, {
+        "code": "41488-8",
+        "display": "Cryptosporidium sp [Presence] in Specimen by Acid fast stain",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp [Nachweis] in Probenmaterial mit säurefester Färbung"
+        } ]
+      }, {
+        "code": "566-0",
+        "display": "Cryptosporidium sp Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "60545-1",
+        "display": "Cryptosporidium sp DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "6371-9",
+        "display": "Cryptosporidium sp Ag [Presence] in Stool by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp-Antigen [Nachweis] in Stuhl mit Immunoassay"
+        } ]
+      }, {
+        "code": "6372-7",
+        "display": "Cryptosporidium sp Ag [Titer] in Stool by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp-Antigen [Titer] in Stuhl mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "82205-6",
+        "display": "Cryptosporidium sp DNA [Presence] in Stool by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "88927-9",
+        "display": "Cryptosporidium sp DNA [Presence] in Tissue by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp-DNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "88928-7",
+        "display": "Cryptosporidium sp DNA [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "91677-5",
+        "display": "Cryptosporidium parvum Ag [Presence] in Stool by Rapid immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium parvum-Antigen [Nachweis] in Stuhl mit Immunoassay-Schnelltest"
+        } ]
+      }, {
+        "code": "92688-1",
+        "display": "Cryptosporidium parvum+hominis DNA [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium parvum+hominis-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "94633-5",
+        "display": "Cryptosporidium parvum DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium parvum-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "97524-3",
+        "display": "Cryptosporidium sp [Presence] in Water by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp [Nachweis] in Wasser mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "98411-2",
+        "display": "Cryptosporidium sp [Identifier] in Isolate by RFLP.rRNA",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Cryptosporidium sp [Nachweis oder Identität] in Isolat mit Restriktionsfragmentlängenpolymorphismus.rRNA"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      } ]
+    } ]
+  }
+}

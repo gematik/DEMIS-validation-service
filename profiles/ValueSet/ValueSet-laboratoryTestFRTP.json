@@ -1,0 +1,521 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestFRTP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestFRTP",
+  "version": "1.5.0",
+  "name": "LaboratoryTestFRTP",
+  "title": "Labortest für Francisella tularensis",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestFRTP enthält die Codes der Labortests für Francisella tularensis.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "101364-8",
+        "display": "Francisella tularensis DNA [Presence] in Blood by NAA with non-probe detection"
+      }, {
+        "code": "101373-9",
+        "display": "Francisella tularensis DNA [Presence] in Sputum by NAA with non-probe detection"
+      }, {
+        "code": "14209-1",
+        "display": "Francisella tularensis IgA Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgA-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "16875-7",
+        "display": "Francisella tularensis Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "16876-5",
+        "display": "Francisella tularensis IgA Ab [Presence] in Serum by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgA-Antikörper [Nachweis] in Serum mit Latexagglutination"
+        } ]
+      }, {
+        "code": "16877-3",
+        "display": "Francisella tularensis IgG Ab [Presence] in Serum by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgG-Antikörper [Nachweis] in Serum mit Latexagglutination"
+        } ]
+      }, {
+        "code": "16878-1",
+        "display": "Francisella tularensis IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "16879-9",
+        "display": "Francisella tularensis Ag [Presence] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antigen [Nachweis] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "23122-5",
+        "display": "Francisella tularensis A DNA [Presence] in Tissue by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis subsp Tularensis-DNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "23124-1",
+        "display": "Francisella tularensis Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "23125-8",
+        "display": "Francisella tularensis Ab [Titer] in Serum by Agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antikörper [Titer] in Serum mit Agglutination"
+        } ]
+      }, {
+        "code": "23126-6",
+        "display": "Francisella tularensis Ag [Presence] in Tissue by Immune stain",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antigen [Nachweis] in Gewebe mit Immunfärbung"
+        } ]
+      }, {
+        "code": "23127-4",
+        "display": "Francisella tularensis Ag [Presence] in Tissue by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antigen [Nachweis] in Gewebe mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "23128-2",
+        "display": "Francisella tularensis B DNA [Presence] in Tissue by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis subsp Holarctica-DNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "23130-8",
+        "display": "Francisella tularensis DNA [Presence] in Tissue by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-DNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "23131-6",
+        "display": "Francisella tularensis rRNA [Presence] in Tissue by Probe",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-rRNA [Nachweis] in Gewebe mit Sonde"
+        } ]
+      }, {
+        "code": "31396-5",
+        "display": "Francisella tularensis Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "31829-5",
+        "display": "Francisella tularensis Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "33465-6",
+        "display": "Francisella tularensis IgG Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgG-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "33466-4",
+        "display": "Francisella tularensis IgM Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgM-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "33576-0",
+        "display": "Francisella tularensis IgA Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgA-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "33676-8",
+        "display": "Francisella tularensis [Presence] in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "33677-6",
+        "display": "Francisella tularensis [Presence] in Isolate by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis [Nachweis] in Isolat mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "33678-4",
+        "display": "Francisella tularensis Ag [Presence] in Isolate by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antigen [Nachweis] in Isolat mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "33679-2",
+        "display": "Francisella tularensis DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "33680-0",
+        "display": "Francisella tularensis DNA [Presence] in Isolate by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-DNA [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "33681-8",
+        "display": "Francisella tularensis [Presence] in Specimen by Cell wall fatty acid analysis",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis [Nachweis] in Probenmaterial mit Analyse der Zellwandfettsäuren"
+        } ]
+      }, {
+        "code": "33682-6",
+        "display": "Francisella tularensis [Presence] in Isolate by Cell wall fatty acid analysis",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis [Nachweis] in Isolat mit Analyse der Zellwandfettsäuren"
+        } ]
+      }, {
+        "code": "33683-4",
+        "display": "Francisella tularensis Ab [Titer] in Serum by Microagglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antikörper [Titer] in Serum mit Mikroagglutinationstest"
+        } ]
+      }, {
+        "code": "33684-2",
+        "display": "Francisella tularensis Ab [Titer] in Serum by Tube agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antikörper [Titer] in Serum mit Röhrchen-Agglutinationstest"
+        } ]
+      }, {
+        "code": "45040-3",
+        "display": "Francisella tularensis Ab [Presence] in Serum by Microagglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antikörper [Nachweis] in Serum mit Mikroagglutinationstest"
+        } ]
+      }, {
+        "code": "45041-1",
+        "display": "Francisella tularensis Ag [Presence] in Specimen by Slide agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antigen [Nachweis] in Probenmaterial mit Agglutination auf Objektträger"
+        } ]
+      }, {
+        "code": "46732-4",
+        "display": "Francisella tularensis subtype [Identifier] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella-tularensis-Subtyp [Nachweis oder Identität] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "5166-4",
+        "display": "Francisella tularensis Ab [Presence] in Serum by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antikörper [Nachweis] in Serum mit Latexagglutination"
+        } ]
+      }, {
+        "code": "5167-2",
+        "display": "Francisella tularensis Ab [Titer] in Serum by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antikörper [Titer] in Serum mit Latexagglutination"
+        } ]
+      }, {
+        "code": "6407-1",
+        "display": "Francisella tularensis IgM Ab [Presence] in Serum by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgM-Antikörper [Nachweis] in Serum mit Latexagglutination"
+        } ]
+      }, {
+        "code": "6408-9",
+        "display": "Francisella tularensis Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "70121-9",
+        "display": "Francisella tularensis IgG Ab [Units/volume] in Serum or Plasma",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma"
+        } ]
+      }, {
+        "code": "7888-1",
+        "display": "Francisella tularensis Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "7889-9",
+        "display": "Francisella tularensis IgG Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgG-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "7890-7",
+        "display": "Francisella tularensis IgM Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgM-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "93716-9",
+        "display": "Francisella tularensis IgM Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "93717-7",
+        "display": "Francisella tularensis IgG Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "93718-5",
+        "display": "Francisella tularensis IgG and IgM [Interpretation] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Francisella tularensis-IgG- und IgM-Antikörper [Interpretation] in Serum"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

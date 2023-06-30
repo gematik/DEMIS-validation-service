@@ -1,0 +1,141 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestMYLP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestMYLP",
+  "version": "1.2.0",
+  "name": "LaboratoryTestMYLP",
+  "title": "Labortest für Mycobacterium leprae",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestMYLP enthält die Codes der Labortests für Mycobacterium leprae.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "72863-4",
+        "display": "Mycobacterium leprae gyrB gene fluoroquinolone resistance mutation [Presence] by Molecular method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycobacterium leprae gyrB-Gen Mutation zu Fluorchinolon-Resistenz [Nachweis], molekulargenetisch"
+        } ]
+      }, {
+        "code": "72868-3",
+        "display": "Mycobacterium leprae folP1 gene dapsone resistance mutation [Presence] by Molecular method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycobacterium leprae folP1-Gen Mutation zu Dapson-Resistenz [Nachweis], molekulargenetisch"
+        } ]
+      }, {
+        "code": "72869-1",
+        "display": "Mycobacterium leprae gyrA gene fluoroquinolone resistance mutation [Presence] by Molecular method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycobacterium leprae gyrA-Gen Mutation zu Fluorchinolon-Resistenz [Nachweis], molekulargenetisch"
+        } ]
+      }, {
+        "code": "72870-9",
+        "display": "Mycobacterium leprae rpoB gene rifAMPin resistance mutation [Presence] by Molecular method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycobacterium leprae rpoB-Gen Mutation zu Rifampicin-Resistenz [Nachweis], molekulargenetisch"
+        } ]
+      }, {
+        "code": "91805-2",
+        "display": "Mycobacterium leprae DNA [Presence] in Upper respiratory specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycobacterium leprae-DNA [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "11545-1",
+        "display": "Microscopic observation [Identifier] in Specimen by Acid fast stain",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroskopische Beobachtung [Nachweis oder Identität] in Probenmaterial mit säurefester Färbung"
+        } ]
+      }, {
+        "code": "72357-7",
+        "display": "Microscopic observation [Presence] in Specimen by Acid fast stain",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroskopische Beobachtung [Nachweis] in Probenmaterial mit säurefester Färbung"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "88183-9",
+        "display": "Mycobacterium sp identified in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycobacterium sp identifiziert in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90306-2",
+        "display": "Mycobacterium sp identified in Specimen by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycobacterium sp identifiziert in Probenmaterial mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

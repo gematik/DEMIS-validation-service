@@ -1,0 +1,403 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestSALP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestSALP",
+  "version": "1.5.0",
+  "name": "LaboratoryTestSALP",
+  "title": "Labortest für Salmonella (sonstige)",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestSALP enthält die Codes der Labortests für Salmonella (sonstige).",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "101140-2",
+        "display": "Salmonella sp Ag [Presence] in Stool by Rapid immunoassay"
+      }, {
+        "code": "101512-2",
+        "display": "Salmonella typhimurium DNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "101536-1",
+        "display": "Salmonella sp whole genome [Nucleotide sequence] in Isolate by Sequencing"
+      }, {
+        "code": "23431-0",
+        "display": "Salmonella gallinarum DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella gallinarum-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "23432-8",
+        "display": "Salmonella gallinarum rRNA [Presence] in Specimen by Probe",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella gallinarum-rRNA [Nachweis] in Probenmaterial mit Sonde"
+        } ]
+      }, {
+        "code": "23435-1",
+        "display": "Salmonella pullorum DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella pullorum-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "23436-9",
+        "display": "Salmonella pullorum rRNA [Presence] in Specimen by Probe",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella pullorum-rRNA [Nachweis] in Probenmaterial mit Sonde"
+        } ]
+      }, {
+        "code": "96313-2",
+        "display": "Salmonella sp DNA [Presence] by NAA with non-probe detection in Positive blood culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp-DNA [Nachweis] in positiver Blutkultur mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "97313-1",
+        "display": "Salmonella sp DNA [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "97632-4",
+        "display": "Salmonella sp DNA [Presence] in Synovial fluid by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp-DNA [Nachweis] in Synovialflüssigkeit mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "17563-8",
+        "display": "Salmonella sp identified in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp identifiziert in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "20951-0",
+        "display": "Salmonella sp serotype [Identifier] in Isolate by Agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp-Serotyp [Nachweis oder Identität] in Isolat mit Agglutination"
+        } ]
+      }, {
+        "code": "20953-6",
+        "display": "Salmonella sp identified in Tissue by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp identifiziert in Gewebe mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "20955-1",
+        "display": "Salmonella sp identified in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp identifiziert in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "23602-6",
+        "display": "Salmonella enteritidis [Presence] in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella enteritidis [Nachweis] in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "34891-2",
+        "display": "Salmonella enteritidis [Presence] in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella enteritidis [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "42255-0",
+        "display": "Salmonella and Shigella sp identified in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp and Shigella sp identifiziert in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "43371-4",
+        "display": "Salmonella and Shigella sp identified in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp and Shigella sp identifiziert in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "48806-4",
+        "display": "Salmonella sp+Shigella sp+Escherichia coli enterotoxic identified in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp+Shigella sp+Escherichia coli enterotoxisch identifiziert in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "49612-5",
+        "display": "Salmonella sp DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "56475-7",
+        "display": "Salmonella sp antigenic formula [Identifier] in Isolate by Agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp Antigen-Formel [Identität] in Isolat mit Agglutination"
+        } ]
+      }, {
+        "code": "59846-6",
+        "display": "Salmonella sp identified [Type] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp identifiziert [Typ] in Isolat"
+        } ]
+      }, {
+        "code": "61370-3",
+        "display": "Salmonella enterica DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella enterica-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "65756-9",
+        "display": "Salmonella sp serovar [Type] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp-Serovar [Typ] in Isolat"
+        } ]
+      }, {
+        "code": "73672-8",
+        "display": "Salmonella sp phage type in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp Phagentyp in Isolat"
+        } ]
+      }, {
+        "code": "79383-6",
+        "display": "Salmonella sp rpoD gene [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp rpoD-Gen [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "80678-6",
+        "display": "Salmonella sp invA+fliC genes [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp invA+fliC-Gene [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "81657-9",
+        "display": "Salmonella sp spaO gene [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp spaO-Gen [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "82199-1",
+        "display": "Salmonella enterica+bongori DNA [Presence] in Stool by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella enterica+bongori-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "82301-3",
+        "display": "Salmonella sp [Presence] in Stool by Culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp [Nachweis] in Stuhl mit Kultur"
+        } ]
+      }, {
+        "code": "87394-3",
+        "display": "Salmonella sp DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "93385-3",
+        "display": "Salmonella sp DNA [Presence] by NAA with probe detection in Positive blood culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Salmonella sp-DNA [Nachweis] in positiver Blutkultur mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "86930-5",
+        "display": "Carbapenemase [Presence] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Carbapenemase [Nachweis] in Isolat"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "88462-7",
+        "display": "Carbapenem [Susceptibility]",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Carbapenem [Empfindlichkeit]"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

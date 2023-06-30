@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestPKVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestPKVP",
+  "version": "1.0.0",
+  "name": "LaboratoryTestPKVP",
+  "title": "Labortest für Orthopockenviren (Variolavirus)",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestPKVP enthält die Codes der Labortests für Orthopockenviren (Variolavirus).",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "41856-6",
+        "display": "Variola virus DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "41461-5",
+        "display": "Virus identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Virus identifiziert in Probenmaterial"
+        } ]
+      } ]
+    } ]
+  }
+}

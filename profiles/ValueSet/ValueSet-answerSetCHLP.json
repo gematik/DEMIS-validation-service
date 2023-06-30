@@ -1,0 +1,90 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetCHLP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetCHLP",
+  "version": "1.2.0",
+  "name": "AnswerSetCHLP",
+  "title": "AnswerSet für Chlamydia psittaci",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetCHLP enthält die Codes der Answer-Codes für Chlamydia psittaci.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "14590003",
+        "display": "Chlamydophila psittaci (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Chlamydophila psittaci (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Chlamydophila psittaci"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "41090000",
+        "display": "Chlamydophila psittaci variant bovis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Chlamydophila psittaci variant bovis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Chlamydophila psittaci, Variante bovis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "60927005",
+        "display": "Chlamydophila psittaci variant felis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Chlamydophila psittaci variant felis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Chlamydophila psittaci, Variante felis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "18279000",
+        "display": "Chlamydophila psittaci variant ovis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Chlamydophila psittaci variant ovis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Chlamydophila psittaci, Variante ovis"
+        } ]
+      } ]
+    } ]
+  }
+}

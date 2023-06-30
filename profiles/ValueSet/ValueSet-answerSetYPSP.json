@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetYPSP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetYPSP",
+  "version": "1.1.0",
+  "name": "AnswerSetYPSP",
+  "title": "AnswerSet für Yersinia pestis",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetYPSP enthält die Codes der Answer-Codes für Yersinia pestis.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "54365000",
+        "display": "Yersinia pestis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Yersinia pestis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Yersinia pestis"
+        } ]
+      } ]
+    } ]
+  }
+}

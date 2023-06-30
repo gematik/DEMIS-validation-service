@@ -1,0 +1,705 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestCOXP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestCOXP",
+  "version": "1.2.0",
+  "name": "LaboratoryTestCOXP",
+  "title": "Labortest für Coxiella burnetii",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestCOXP enthält die Codes der Labortests für Coxiella burnetii.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "101365-5",
+        "display": "Coxiella burnetii DNA [Presence] in Blood by NAA with non-probe detection"
+      }, {
+        "code": "44799-5",
+        "display": "Coxiella burnetii [Presence] in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "56920-2",
+        "display": "Coxiella burnetii IgG Ab [Titer] in Serum by Immunofluorescence --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-IgG-Antikörper [Titer] in Serum mit Immunfluoreszenztest --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "57681-9",
+        "display": "Coxiella burnetii IgG Ab [Presence] in Serum by Immunofluorescence --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-IgG-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "56919-4",
+        "display": "Coxiella burnetii IgG Ab [Titer] in Serum by Immunofluorescence --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-IgG-Antikörper [Titer] in Serum mit Immunfluoreszenztest --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "57682-7",
+        "display": "Coxiella burnetii IgG Ab [Presence] in Serum by Immunofluorescence --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-IgG-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "16678-5",
+        "display": "Coxiella burnetii IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "25336-9",
+        "display": "Coxiella burnetii IgM Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-IgM-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "25385-6",
+        "display": "Coxiella burnetii IgM Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-IgM-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "56917-8",
+        "display": "Coxiella burnetii IgM Ab [Presence] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-IgM-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "56918-6",
+        "display": "Coxiella burnetii IgM Ab [Titer] in Serum by Immunofluorescence --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-IgM-Antikörper [Titer] in Serum mit Immunfluoreszenztest --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "57673-6",
+        "display": "Coxiella burnetii IgM Ab [Presence] in Serum by Immunofluorescence --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-IgM-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "56916-0",
+        "display": "Coxiella burnetii IgM Ab [Units/volume] in Serum by Immunofluorescence --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunfluoreszenztest --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "57674-4",
+        "display": "Coxiella burnetii IgM Ab [Presence] in Serum by Immunofluorescence --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-IgM-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "23021-9",
+        "display": "Coxiella burnetii Ag [Presence] in Tissue by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-Antigen [Nachweis] in Gewebe mit Immunoassay"
+        } ]
+      }, {
+        "code": "23022-7",
+        "display": "Coxiella burnetii Ag [Presence] in Placenta by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-Antigen [Nachweis] in Plazenta mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "23023-5",
+        "display": "Coxiella burnetii Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "31783-4",
+        "display": "Coxiella burnetii Ag [Presence] in Placenta",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-Antigen [Nachweis] in Plazenta"
+        } ]
+      }, {
+        "code": "31784-2",
+        "display": "Coxiella burnetii Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "90442-5",
+        "display": "Coxiella burnetii aroE gene [Presence] in Tissue by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii aroE-Gen [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "90443-3",
+        "display": "Coxiella burnetii aroE gene [Presence] in Serum, Plasma or Blood by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii aroE-Gen [Nachweis] in Serum, Plasma oder Blut mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "23024-3",
+        "display": "Coxiella burnetii DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "60261-5",
+        "display": "Coxiella burnetii DNA [Presence] in Serum or Plasma by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-DNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "88177-1",
+        "display": "Coxiella burnetii DNA [Presence] in Blood by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-DNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "88178-9",
+        "display": "Coxiella burnetii DNA [Presence] in Tissue by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-DNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "89649-8",
+        "display": "Coxiella burnetii DNA [Presence] in Implanted device by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-DNA [Nachweis] in implantiertem Medizinprodukt mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "94634-3",
+        "display": "Coxiella burnetii DNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii-DNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "49124-1",
+        "display": "Coxiella burnetii identified in Specimen by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii identifiziert in Probenmaterial mit Sequenzierung"
+        } ]
+      }, {
+        "code": "42897-9",
+        "display": "Coxiella burnetii phase 1 IgM Ab [Units/volume] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 1-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "47075-7",
+        "display": "Coxiella burnetii phase 1 IgM Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 1-IgM-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "7831-1",
+        "display": "Coxiella burnetii phase 1 IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 1-IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "9710-5",
+        "display": "Coxiella burnetii phase 1 IgM Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 1-IgM-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "27945-5",
+        "display": "Coxiella burnetii phase 2 Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "29772-1",
+        "display": "Coxiella burnetii phase 2 Ab [Titer] in Serum by Complement fixation",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-Antikörper [Titer] in Serum mit Komplementbindungsreaktion"
+        } ]
+      }, {
+        "code": "31313-0",
+        "display": "Coxiella burnetii phase 2 Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "38389-3",
+        "display": "Coxiella burnetii phase 2 Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "31316-3",
+        "display": "Coxiella burnetii phase 2 IgA Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgA-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "48849-4",
+        "display": "Coxiella burnetii phase 2 IgA Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgA-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "48891-6",
+        "display": "Coxiella burnetii phase 2 IgA Ab [Titer] in Body fluid by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgA-Antikörper [Titer] in Körperflüssigkeit mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "49184-5",
+        "display": "Coxiella burnetii phase 2 IgA Ab [Titer] in Body fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgA-Antikörper [Titer] in Körperflüssigkeit"
+        } ]
+      }, {
+        "code": "9707-1",
+        "display": "Coxiella burnetii phase 2 IgA Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgA-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "29777-0",
+        "display": "Coxiella burnetii phase 2 IgG Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "31314-8",
+        "display": "Coxiella burnetii phase 2 IgG Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgG-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "34717-9",
+        "display": "Coxiella burnetii phase 2 IgG Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgG-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "48719-9",
+        "display": "Coxiella burnetii phase 2 IgG Ab [Presence] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgG-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "48893-2",
+        "display": "Coxiella burnetii phase 2 IgG Ab [Titer] in Body fluid by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgG-Antikörper [Titer] in Körperflüssigkeit mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "49183-7",
+        "display": "Coxiella burnetii phase 2 IgG Ab [Titer] in Body fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgG-Antikörper [Titer] in Körperflüssigkeit"
+        } ]
+      }, {
+        "code": "51812-6",
+        "display": "Coxiella burnetii phase 2 IgG Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "58761-8",
+        "display": "Coxiella burnetii phase 2 IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgG-Antikörper [Titer] in Zerebrospinalflüssigkeit mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "58762-6",
+        "display": "Coxiella burnetii phase 2 IgG Ab [Units/volume] in Cerebral spinal fluid by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgG-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit mit Immunoassay"
+        } ]
+      }, {
+        "code": "7830-3",
+        "display": "Coxiella burnetii phase 2 IgG Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgG-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "9709-7",
+        "display": "Coxiella burnetii phase 2 IgG Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgG-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "29773-9",
+        "display": "Coxiella burnetii phase 2 IgM Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "31315-5",
+        "display": "Coxiella burnetii phase 2 IgM Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgM-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "43928-1",
+        "display": "Coxiella burnetii phase 2 IgM Ab [Presence] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgM-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "44814-2",
+        "display": "Coxiella burnetii phase 2 IgM Ab [Titer] in Serum by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgM-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "48892-4",
+        "display": "Coxiella burnetii phase 2 IgM Ab [Titer] in Body fluid by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgM-Antikörper [Titer] in Körperflüssigkeit mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "49182-9",
+        "display": "Coxiella burnetii phase 2 IgM Ab [Titer] in Body fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgM-Antikörper [Titer] in Körperflüssigkeit"
+        } ]
+      }, {
+        "code": "51813-4",
+        "display": "Coxiella burnetii phase 2 IgM Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "7832-9",
+        "display": "Coxiella burnetii phase 2 IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "9711-3",
+        "display": "Coxiella burnetii phase 2 IgM Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Coxiella burnetii Phase 2-IgM-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialCLTP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialCLTP",
+  "version": "1.0.0",
+  "name": "MaterialCLTP",
+  "title": "Material für Tetanus, Clostridium tetani",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet MaterialCLTP enthält die Codes der Materialien für Tetanus, Clostridium tetani.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "119364003",
+        "display": "Serum specimen (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Serum specimen (specimen)"
+        } ]
+      }, {
+        "code": "258531008",
+        "display": "Wound swab (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Wound swab (specimen)"
+        } ]
+      }, {
+        "code": "119365002",
+        "display": "Specimen from wound (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Specimen from wound (specimen)"
+        } ]
+      }, {
+        "code": "122566000",
+        "display": "Fluid specimen from wound (specimen)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Fluid specimen from wound (specimen)"
+        } ]
+      } ]
+    } ]
+  }
+}

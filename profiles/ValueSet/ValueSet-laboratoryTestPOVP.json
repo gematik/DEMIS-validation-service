@@ -1,0 +1,183 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestPOVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestPOVP",
+  "version": "1.3.0",
+  "name": "LaboratoryTestPOVP",
+  "title": "Labortest für Poliovirus",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestPOVP enthält die Codes der Labortests für Poliovirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "24169-5",
+        "display": "Polio virus 1 neutralizing antibody [Titer] in Serum by Neutralization test --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Poliovirus 1-neutralisierender Antikörper [Titer] in Serum mit Neutralisationstest --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "24170-3",
+        "display": "Polio virus 1 neutralizing antibody [Titer] in Serum by Neutralization test --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Polio-Virus 1-neutralisierender Antikörper [Titer] in Serum mit Neutralisationstest --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "24173-7",
+        "display": "Polio virus 3 neutralizing antibody [Titer] in Serum by Neutralization test --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Poliovirus 3-neutralisierender Antikörper [Titer] in Serum mit Neutralisationstest --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "24174-5",
+        "display": "Polio virus 3 neutralizing antibody [Titer] in Serum by Neutralization test --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Poliovirus 3-neutralisierender Antikörper [Titer] in Serum mit Neutralisationstest --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "24243-8",
+        "display": "Polio virus 1 Ab [Titer] in Serum --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Polio-Virus 1-Antikörper [Titer] in Serum --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "24244-6",
+        "display": "Polio virus 1 Ab [Titer] in Serum --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Polio-Virus 1-Antikörper [Titer] in Serum --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "24245-3",
+        "display": "Polio virus 2 Ab [Titer] in Serum --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Polio-Virus 2-Antikörper [Titer] in Serum --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "24246-1",
+        "display": "Polio virus 2 Ab [Titer] in Serum --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Polio-Virus 2-Antikörper [Titer] in Serum --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "24247-9",
+        "display": "Polio virus 3 Ab [Titer] in Serum --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Polio-Virus 3-Antikörper [Titer] in Serum --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "24248-7",
+        "display": "Polio virus 3 Ab [Titer] in Serum --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Polio-Virus 3-Antikörper [Titer] in Serum --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "53645-8",
+        "display": "Polio virus identified in Stool by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Polio-Virus identifiziert in Stuhl mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "60546-9",
+        "display": "Polio virus identified [Type] in Isolate by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Polio-Virus identifiziert [Typ] in Isolat mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "73907-8",
+        "display": "Polio virus identified in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Polio-Virus identifiziert in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "41461-5",
+        "display": "Virus identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Virus identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetHTVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetHTVP",
+  "version": "1.1.0",
+  "name": "AnswerSetHTVP",
+  "title": "AnswerSet für Hantavirus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetHTVP enthält die Codes der Answer-Codes für Hantavirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "35439004",
+        "display": "Seoul virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Seoul virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Seoul-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "103525000",
+        "display": "Prospect Hill virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Prospect Hill virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Prospect-Hill-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "40754006",
+        "display": "Puumala virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Puumala virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Puumala-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "442513007",
+        "display": "Araraquara virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Araraquara virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Araraquara-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "116665009",
+        "display": "Bayou virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bayou virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Bayou-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "116662007",
+        "display": "Dobrava-Belgrade virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Dobrava-Belgrade virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Dobrava-Belgrad-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "73517007",
+        "display": "Bhanja virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bhanja virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Bhanja-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "116664008",
+        "display": "Black Creek Canal virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Black Creek Canal virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Black-Creek-Canal-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "52779006",
+        "display": "Hantaan virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Hantaan virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Hantaan-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "441618005",
+        "display": "Amur virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Amur virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Amur-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "441666003",
+        "display": "Castelo dos Sonhos virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Castelo dos Sonhos virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Castelo-dos-Sonhos-Virus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "116663002",
+        "display": "Sin Nombre virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Sin Nombre virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Sin-Nombre-Virus"
+        } ]
+      } ]
+    } ]
+  }
+}

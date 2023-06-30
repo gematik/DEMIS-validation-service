@@ -1,0 +1,326 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestHAVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestHAVP",
+  "version": "1.3.0",
+  "name": "LaboratoryTestHAVP",
+  "title": "Labortest für Hepatitis-A-Virus",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestHAVP enthält die Codes der Labortests für Hepatitis-A-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "97523-5",
+        "display": "Hepatitis A virus RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "13950-1",
+        "display": "Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "22312-3",
+        "display": "Hepatitis A virus Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "22313-1",
+        "display": "Hepatitis A virus IgG Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "22314-9",
+        "display": "Hepatitis A virus IgM Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgM-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "22315-6",
+        "display": "Hepatitis A virus IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "51660-9",
+        "display": "Hepatitis A virus IgM Ab [Presence] in Body fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgM-Antikörper [Nachweis] in Körperflüssigkeit"
+        } ]
+      }, {
+        "code": "5179-7",
+        "display": "Hepatitis A virus IgG Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "5180-5",
+        "display": "Hepatitis A virus IgG Ab [Units/volume] in Serum by Radioimmunoassay (RIA)",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum mit Radioimmunoassay"
+        } ]
+      }, {
+        "code": "5181-3",
+        "display": "Hepatitis A virus IgM Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "5182-1",
+        "display": "Hepatitis A virus IgM Ab [Units/volume] in Serum by Radioimmunoassay (RIA)",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum mit Radioimmunoassay"
+        } ]
+      }, {
+        "code": "51913-2",
+        "display": "Hepatitis A virus IgG+IgM Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgG+IgM-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "53776-1",
+        "display": "Hepatitis A virus Ab [Interpretation] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-Antikörper [Interpretation] in Serum"
+        } ]
+      }, {
+        "code": "75540-5",
+        "display": "Hepatitis A virus RNA+Parvovirus B19 DNA [Interpretation] in Plasma from Donor Qualitative by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-RNA+Parvovirus B19-DNA [Interpretation] in Plasma von Donor mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "75542-1",
+        "display": "Hepatitis A virus RNA [Interpretation] in Plasma from Donor Qualitative by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-RNA [Interpretation] in Plasma von Donor mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "78444-7",
+        "display": "Hepatitis A virus IgG+IgM Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgG+IgM-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "7904-6",
+        "display": "Hepatitis A virus RNA [Presence] in Serum by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-RNA [Nachweis] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "89373-5",
+        "display": "Hepatitis A virus genotype in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-Genotyp in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "91070-3",
+        "display": "Hepatitis A virus RNA [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-RNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "20575-7",
+        "display": "Hepatitis A virus Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "32018-4",
+        "display": "Hepatitis A virus IgG Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgG-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "40724-7",
+        "display": "Hepatitis A virus IgG Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "51661-7",
+        "display": "Hepatitis A virus Ab [Presence] in Body fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-Antikörper [Nachweis] in Körperflüssigkeit"
+        } ]
+      }, {
+        "code": "5183-9",
+        "display": "Hepatitis A virus Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
+        } ]
+      }, {
+        "code": "5184-7",
+        "display": "Hepatitis A virus Ab [Units/volume] in Serum by Radioimmunoassay (RIA)",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-Antikörper [Einheiten/Volumen] in Serum mit Radioimmunoassay"
+        } ]
+      }, {
+        "code": "13951-9",
+        "display": "Hepatitis A virus Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Hepatitis-A-Virus-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "41461-5",
+        "display": "Virus identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Virus identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      } ]
+    } ]
+  }
+}

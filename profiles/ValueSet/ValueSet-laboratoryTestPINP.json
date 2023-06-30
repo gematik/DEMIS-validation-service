@@ -1,0 +1,482 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestPINP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestPINP",
+  "version": "1.0.0",
+  "name": "LaboratoryTestPINP",
+  "title": "Labortest für Parainfluenzavirus",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet LaboratoryTestPINP enthält die Codes der Labortests für Parainfluenzavirus.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "101297-0",
+        "display": "Parainfluenza virus 1+2+3+4 RNA [Presence] in Throat by NAA with non-probe detection"
+      }, {
+        "code": "60269-8",
+        "display": "Parainfluenza virus 1 RNA [Presence] in Isolate by NAA with probe detection"
+      }, {
+        "code": "77385-3",
+        "display": "Parainfluenza virus 1 Ag [Presence] in Bronchoalveolar lavage by Immunofluorescence"
+      }, {
+        "code": "67808-6",
+        "display": "Parainfluenza virus 1 Ag [Presence] in Isolate by Immunofluorescence"
+      }, {
+        "code": "88906-3",
+        "display": "Parainfluenza virus 1 Ag [Presence] in Lower respiratory specimen by Immunofluorescence"
+      }, {
+        "code": "38395-0",
+        "display": "Parainfluenza virus 1 Ag [Presence] in Nasopharynx by Immunofluorescence"
+      }, {
+        "code": "38396-8",
+        "display": "Parainfluenza virus 1 Ag [Presence] in Nose by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 1-Antigen [Nachweis] in Nase mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "31924-4",
+        "display": "Parainfluenza virus 1 Ag [Presence] in Specimen"
+      }, {
+        "code": "5869-3",
+        "display": "Parainfluenza virus 1 Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 1-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "31923-6",
+        "display": "Parainfluenza virus 1 Ag [Presence] in Throat"
+      }, {
+        "code": "5868-5",
+        "display": "Parainfluenza virus 1 Ag [Presence] in Throat by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 1-Antigen [Nachweis] in Rachen mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "60417-3",
+        "display": "Parainfluenza virus 2 RNA [Presence] in Isolate by NAA with probe detection"
+      }, {
+        "code": "60416-5",
+        "display": "Parainfluenza virus 3 RNA [Presence] in Isolate by NAA with probe detection"
+      }, {
+        "code": "88208-4",
+        "display": "Parainfluenza virus 1 RNA [Presence] in Cornea or Conjunctiva by NAA with probe detection"
+      }, {
+        "code": "60415-7",
+        "display": "Parainfluenza virus 4 RNA [Presence] in Isolate by NAA with probe detection"
+      }, {
+        "code": "94483-5",
+        "display": "Parainfluenza virus 1 RNA [Presence] in Lower respiratory specimen by NAA with non-probe detection"
+      }, {
+        "code": "88563-2",
+        "display": "Parainfluenza virus 1 RNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "82171-0",
+        "display": "Parainfluenza virus 1 RNA [Presence] in Nasopharynx by NAA with non-probe detection"
+      }, {
+        "code": "76084-3",
+        "display": "Parainfluenza virus 1 RNA [Presence] in Nasopharynx by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 1-RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "92140-3",
+        "display": "Parainfluenza virus 1 RNA [Presence] in Respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "55097-0",
+        "display": "Parainfluenza virus 1 [Presence] in Specimen by Organism specific culture"
+      }, {
+        "code": "91802-9",
+        "display": "Parainfluenza virus 1 RNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "17414-4",
+        "display": "Parainfluenza virus 1+2+3 Ag [Presence] in Specimen"
+      }, {
+        "code": "55098-8",
+        "display": "Parainfluenza virus 2 [Presence] in Specimen by Organism specific culture"
+      }, {
+        "code": "92883-8",
+        "display": "Parainfluenza virus 1+2+3+4 RNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "88890-9",
+        "display": "Parainfluenza virus 1+2+3+4 RNA [Presence] in Nasopharynx by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 1+2+3+4-RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "53252-3",
+        "display": "Parainfluenza virus 1 RNA [#/volume] (viral load) in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 1-RNA [#/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "92884-6",
+        "display": "Parainfluenza virus 1+2+3+4 RNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "29908-1",
+        "display": "Parainfluenza virus 1 RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 1-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "77386-1",
+        "display": "Parainfluenza virus 2 Ag [Presence] in Bronchoalveolar lavage by Immunofluorescence"
+      }, {
+        "code": "67809-4",
+        "display": "Parainfluenza virus 2 Ag [Presence] in Isolate by Immunofluorescence"
+      }, {
+        "code": "88907-1",
+        "display": "Parainfluenza virus 2 Ag [Presence] in Lower respiratory specimen by Immunofluorescence"
+      }, {
+        "code": "77391-1",
+        "display": "Parainfluenza virus 2 Ag [Presence] in Nasopharynx by Immunofluorescence"
+      }, {
+        "code": "31926-9",
+        "display": "Parainfluenza virus 2 Ag [Presence] in Specimen"
+      }, {
+        "code": "5871-9",
+        "display": "Parainfluenza virus 2 Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 2-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "31925-1",
+        "display": "Parainfluenza virus 2 Ag [Presence] in Throat"
+      }, {
+        "code": "5870-1",
+        "display": "Parainfluenza virus 2 Ag [Presence] in Throat by Immunofluorescence"
+      }, {
+        "code": "88531-9",
+        "display": "Parainfluenza virus identified in Cornea or Conjunctiva by Organism specific culture"
+      }, {
+        "code": "60254-0",
+        "display": "Parainfluenza virus 1+2+3 RNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "88209-2",
+        "display": "Parainfluenza virus 2 RNA [Presence] in Cornea or Conjunctiva by NAA with probe detection"
+      }, {
+        "code": "97645-6",
+        "display": "Parainfluenza virus 1+2+3+4 RNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "94484-3",
+        "display": "Parainfluenza virus 2 RNA [Presence] in Lower respiratory specimen by NAA with non-probe detection"
+      }, {
+        "code": "88559-0",
+        "display": "Parainfluenza virus 2 RNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "82172-8",
+        "display": "Parainfluenza virus 2 RNA [Presence] in Nasopharynx by NAA with non-probe detection"
+      }, {
+        "code": "76085-0",
+        "display": "Parainfluenza virus 2 RNA [Presence] in Nasopharynx by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 2-RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "92139-5",
+        "display": "Parainfluenza virus 2 RNA [Presence] in Respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "55099-6",
+        "display": "Parainfluenza virus 3 [Presence] in Specimen by Organism specific culture"
+      }, {
+        "code": "91801-1",
+        "display": "Parainfluenza virus 2 RNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "89653-0",
+        "display": "Parainfluenza virus identified in Lower respiratory specimen by Organism specific culture"
+      }, {
+        "code": "77387-9",
+        "display": "Parainfluenza virus 3 Ag [Presence] in Bronchoalveolar lavage by Immunofluorescence"
+      }, {
+        "code": "67810-2",
+        "display": "Parainfluenza virus 3 Ag [Presence] in Isolate by Immunofluorescence"
+      }, {
+        "code": "88908-9",
+        "display": "Parainfluenza virus 3 Ag [Presence] in Lower respiratory specimen by Immunofluorescence"
+      }, {
+        "code": "77392-9",
+        "display": "Parainfluenza virus 3 Ag [Presence] in Nasopharynx by Immunofluorescence"
+      }, {
+        "code": "31928-5",
+        "display": "Parainfluenza virus 3 Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 3-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "5873-5",
+        "display": "Parainfluenza virus 3 Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 3-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "31927-7",
+        "display": "Parainfluenza virus 3 Ag [Presence] in Throat"
+      }, {
+        "code": "5872-7",
+        "display": "Parainfluenza virus 3 Ag [Presence] in Throat by Immunofluorescence"
+      }, {
+        "code": "21442-9",
+        "display": "Parainfluenza virus identified in Nose by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus identifiziert in Nase mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "53253-1",
+        "display": "Parainfluenza virus 2 RNA [#/volume] (viral load) in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 2-RNA [#/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "88210-0",
+        "display": "Parainfluenza virus 3 RNA [Presence] in Cornea or Conjunctiva by NAA with probe detection"
+      }, {
+        "code": "29909-9",
+        "display": "Parainfluenza virus 2 RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 2-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "94485-0",
+        "display": "Parainfluenza virus 3 RNA [Presence] in Lower respiratory specimen by NAA with non-probe detection"
+      }, {
+        "code": "88560-8",
+        "display": "Parainfluenza virus 3 RNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "82173-6",
+        "display": "Parainfluenza virus 3 RNA [Presence] in Nasopharynx by NAA with non-probe detection"
+      }, {
+        "code": "76086-8",
+        "display": "Parainfluenza virus 3 RNA [Presence] in Nasopharynx by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 3-RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "92138-7",
+        "display": "Parainfluenza virus 3 RNA [Presence] in Respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "53254-9",
+        "display": "Parainfluenza virus 3 RNA [#/volume] (viral load) in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 3-RNA [#/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "91800-3",
+        "display": "Parainfluenza virus 3 RNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "67811-0",
+        "display": "Parainfluenza virus 4 Ag [Presence] in Isolate by Immunofluorescence"
+      }, {
+        "code": "60424-9",
+        "display": "Parainfluenza virus 4 Ag [Presence] in Specimen"
+      }, {
+        "code": "40986-2",
+        "display": "Parainfluenza virus 4 Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "29910-7",
+        "display": "Parainfluenza virus 3 RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 3-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "88530-1",
+        "display": "Parainfluenza virus 4 RNA [Presence] in Cornea or Conjunctiva by NAA with probe detection"
+      }, {
+        "code": "40436-8",
+        "display": "Parainfluenza virus identified in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus identifiziert in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "94486-8",
+        "display": "Parainfluenza virus 4 RNA [Presence] in Lower respiratory specimen by NAA with non-probe detection"
+      }, {
+        "code": "88561-6",
+        "display": "Parainfluenza virus 4 RNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "82174-4",
+        "display": "Parainfluenza virus 4 RNA [Presence] in Nasopharynx by NAA with non-probe detection"
+      }, {
+        "code": "76087-6",
+        "display": "Parainfluenza virus 4 RNA [Presence] in Nasopharynx by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus 4-RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "92137-9",
+        "display": "Parainfluenza virus 4 RNA [Presence] in Respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "41010-0",
+        "display": "Parainfluenza virus 4 RNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "91799-7",
+        "display": "Parainfluenza virus 4 RNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "67818-5",
+        "display": "Parainfluenza virus 4a RNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "67819-3",
+        "display": "Parainfluenza virus 4b RNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "43366-4",
+        "display": "Parainfluenza virus Ag [Identifier] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus-Antigen [Nachweis oder Identität] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "31929-3",
+        "display": "Parainfluenza virus Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "13327-2",
+        "display": "Parainfluenza virus Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Parainfluenza-Virus-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "89654-8",
+        "display": "Parainfluenza virus identified in Upper respiratory specimen by Organism specific culture"
+      }, {
+        "code": "80592-9",
+        "display": "Parainfluenza virus 1 F gene [Presence] in Nasopharynx by NAA with probe detection"
+      }, {
+        "code": "80593-7",
+        "display": "Parainfluenza virus 2 L gene [Presence] in Nasopharynx by NAA with probe detection"
+      }, {
+        "code": "80594-5",
+        "display": "Parainfluenza virus 3 NP gene [Presence] in Nasopharynx by NAA with probe detection"
+      }, {
+        "code": "80595-2",
+        "display": "Parainfluenza virus 4 P gene [Presence] in Nasopharynx by NAA with probe detection"
+      }, {
+        "code": "88529-3",
+        "display": "Parainfluenza virus RNA [Presence] in Cornea or Conjunctiva by NAA with probe detection"
+      }, {
+        "code": "92963-8",
+        "display": "Parainfluenza virus RNA [Presence] in Lower respiratory specimen by NAA with non-probe detection"
+      }, {
+        "code": "88562-4",
+        "display": "Parainfluenza virus RNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "61365-3",
+        "display": "Parainfluenza virus RNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "91798-9",
+        "display": "Parainfluenza virus RNA [Presence] in Upper respiratory specimen by NAA with probe detection"
+      } ]
+    } ]
+  }
+}

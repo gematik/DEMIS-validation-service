@@ -1,0 +1,1162 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestMPMP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestMPMP",
+  "version": "1.0.0",
+  "name": "LaboratoryTestMPMP",
+  "title": "Labortest für Mycoplasmen",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet LaboratoryTestMPMP enthält die Codes der Labortests für Mycoplasmen.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "101296-2",
+        "display": "Mycoplasma pneumoniae DNA [Presence] in Throat by NAA with non-probe detection"
+      }, {
+        "code": "101513-0",
+        "display": "Mycoplasma flocculare DNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "101524-7",
+        "display": "Mycoplasma hyopneumoniae [Titer] in Specimen"
+      }, {
+        "code": "101528-8",
+        "display": "Mycoplasma sp DNA [Identifier] in Isolate by Sequencing"
+      }, {
+        "code": "101529-6",
+        "display": "Mycoplasma sp DNA [Nucleotide sequence] in Isolate by Sequencing"
+      }, {
+        "code": "23753-7",
+        "display": "Mycoplasma hyopneumoniae Ab [Presence] in Serum by Immunofluorescence"
+      }, {
+        "code": "24428-5",
+        "display": "Mycoplasma hyopneumoniae Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "31513-5",
+        "display": "Mycoplasma hyopneumoniae Ab [Presence] in Serum"
+      }, {
+        "code": "80219-9",
+        "display": "Mycoplasma hyopneumoniae Ab sample/Positive control in Serum by Immunoassay"
+      }, {
+        "code": "80244-7",
+        "display": "Mycoplasma hyopneumoniae DNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "85536-1",
+        "display": "Mycoplasma hyopneumoniae DNA [#/volume] in Specimen by NAA with probe detection"
+      }, {
+        "code": "90324-5",
+        "display": "Mycoplasma hyopneumoniae DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "88229-0",
+        "display": "Mycoplasma genitalium DNA [Presence] in Anorectal by NAA with probe detection"
+      }, {
+        "code": "23251-2",
+        "display": "Mycoplasma agalactiae Ab [Presence] in Serum"
+      }, {
+        "code": "23249-6",
+        "display": "Mycoplasma agalactiae Ab [Presence] in Serum by Complement fixation"
+      }, {
+        "code": "23250-4",
+        "display": "Mycoplasma agalactiae Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "23252-0",
+        "display": "Mycoplasma agalactiae DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "55167-1",
+        "display": "Mycoplasma sp Ab [Presence] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma sp-Antikörper [Nachweis] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "23253-8",
+        "display": "Mycoplasma arginini Ab [Presence] in Serum"
+      }, {
+        "code": "23254-6",
+        "display": "Mycoplasma arginini Ab [Presence] in Serum by Complement fixation"
+      }, {
+        "code": "23255-3",
+        "display": "Mycoplasma bovis Ab [Presence] in Serum"
+      }, {
+        "code": "23256-1",
+        "display": "Mycoplasma bovis Ab [Presence] in Serum by Complement fixation"
+      }, {
+        "code": "94612-9",
+        "display": "Mycoplasma bovis Ag [Presence] in Tissue by Immune stain"
+      }, {
+        "code": "94628-5",
+        "display": "Mycoplasma bovis DNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "23259-5",
+        "display": "Mycoplasma capricolum ss capricolum Ab [Presence] in Serum"
+      }, {
+        "code": "23258-7",
+        "display": "Mycoplasma capricolum ss capricolum Ab [Presence] in Serum by Complement fixation"
+      }, {
+        "code": "23257-9",
+        "display": "Mycoplasma capricolum ss capricolum Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "31508-5",
+        "display": "Mycoplasma capricolum ss capripneumonia Ab [Presence] in Blood"
+      }, {
+        "code": "23264-5",
+        "display": "Mycoplasma capricolum ss capripneumonia Ab [Presence] in Blood by Agglutination"
+      }, {
+        "code": "31510-1",
+        "display": "Mycoplasma capricolum ss capripneumonia Ab [Presence] in Serum"
+      }, {
+        "code": "23260-3",
+        "display": "Mycoplasma capricolum ss capripneumonia Ab [Presence] in Serum by Agglutination"
+      }, {
+        "code": "23266-0",
+        "display": "Mycoplasma capricolum ss capripneumonia Ab [Presence] in Serum by Complement fixation"
+      }, {
+        "code": "23263-7",
+        "display": "Mycoplasma capricolum ss capripneumonia Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "23262-9",
+        "display": "Mycoplasma capricolum ss capripneumonia Ab [Titer] in Serum"
+      }, {
+        "code": "23265-2",
+        "display": "Mycoplasma capricolum ss capripneumonia Ab [Titer] in Serum by Complement fixation"
+      }, {
+        "code": "31509-3",
+        "display": "Mycoplasma capricolum ss capripneumonia Ab [Units/volume] in Serum"
+      }, {
+        "code": "23269-4",
+        "display": "Mycoplasma capricolum ss capripneumonia Ag [Presence] in Specimen"
+      }, {
+        "code": "23268-6",
+        "display": "Mycoplasma capricolum ss capripneumonia Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "23267-8",
+        "display": "Mycoplasma capricolum ss capripneumonia Ag [Presence] in Specimen by Neutralization test"
+      }, {
+        "code": "23270-2",
+        "display": "Mycoplasma capricolum ss capripneumonia Ag [Presence] in Tissue"
+      }, {
+        "code": "23272-8",
+        "display": "Mycoplasma capricolum ss capripneumonia rRNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "23271-0",
+        "display": "Mycoplasma capricolum ss capripneumonia rRNA [Presence] in Specimen by Probe"
+      }, {
+        "code": "17299-9",
+        "display": "Mycoplasma fermentans Ab [Presence] in Serum"
+      }, {
+        "code": "34150-3",
+        "display": "Mycoplasma fermentans DNA [Presence] in Blood by NAA with probe detection"
+      }, {
+        "code": "85553-6",
+        "display": "Mycoplasma flocculare 16S rRNA gene [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "22422-0",
+        "display": "Mycoplasma gallisepticum Ab [Presence] in Serum"
+      }, {
+        "code": "15484-9",
+        "display": "Mycoplasma gallisepticum Ab [Presence] in Serum by Agglutination"
+      }, {
+        "code": "23273-6",
+        "display": "Mycoplasma gallisepticum Ab [Presence] in Serum by Hemagglutination"
+      }, {
+        "code": "15485-6",
+        "display": "Mycoplasma gallisepticum Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "23275-1",
+        "display": "Mycoplasma gallisepticum Ab [Titer] in Serum"
+      }, {
+        "code": "23274-4",
+        "display": "Mycoplasma gallisepticum Ab [Titer] in Serum by Hemagglutination"
+      }, {
+        "code": "95180-6",
+        "display": "Mycoplasma gallisepticum Ab [Titer] in Serum by Immunoassay"
+      }, {
+        "code": "31511-9",
+        "display": "Mycoplasma gallisepticum Ab [Units/volume] in Serum"
+      }, {
+        "code": "95165-7",
+        "display": "Mycoplasma gallisepticum Ab/Positive control in Serum by Immunoassay"
+      }, {
+        "code": "31901-2",
+        "display": "Mycoplasma gallisepticum Ag [Presence] in Specimen"
+      }, {
+        "code": "23277-7",
+        "display": "Mycoplasma gallisepticum Ag [Presence] in Specimen by Immune stain"
+      }, {
+        "code": "23276-9",
+        "display": "Mycoplasma gallisepticum Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "23278-5",
+        "display": "Mycoplasma gallisepticum Ag [Presence] in Specimen by Neutralization test"
+      }, {
+        "code": "20895-9",
+        "display": "Mycoplasma gallisepticum Ag [Presence] in Tissue by Immune stain"
+      }, {
+        "code": "95170-7",
+        "display": "Mycoplasma gallisepticum DNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "23279-3",
+        "display": "Mycoplasma gallisepticum DNA [Presence] in Nose or Trachea by NAA with probe detection"
+      }, {
+        "code": "15486-4",
+        "display": "Mycoplasma gallisepticum rRNA [Presence] in Nose or Trachea by Probe"
+      }, {
+        "code": "100705-3",
+        "display": "Mycoplasma genitalium rRNA [Presence] in Anorectal by NAA with probe detection"
+      }, {
+        "code": "42621-3",
+        "display": "Mycoplasma hominis DNA [Presence] in Blood by NAA with probe detection"
+      }, {
+        "code": "49104-3",
+        "display": "Mycoplasma pneumoniae DNA [Units/volume] in Blood by NAA with probe detection"
+      }, {
+        "code": "46111-1",
+        "display": "Mycoplasma sp DNA [Presence] in Body fluid by NAA with probe detection"
+      }, {
+        "code": "99096-0",
+        "display": "Mycoplasma pneumoniae DNA [Presence] in Cerebral spinal fluid by NAA with probe detection"
+      }, {
+        "code": "89597-9",
+        "display": "Mycoplasma genitalium DNA [Presence] in Cornea or Conjunctiva by NAA with probe detection"
+      }, {
+        "code": "89598-7",
+        "display": "Mycoplasma hominis DNA [Presence] in Cornea or Conjunctiva by NAA with probe detection"
+      }, {
+        "code": "88227-4",
+        "display": "Mycoplasma genitalium DNA [Presence] in Cervix by NAA with probe detection"
+      }, {
+        "code": "91849-0",
+        "display": "Mycoplasma genitalium DNA [Presence] in Genital specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma genitalium-DNA [Nachweis] in Probenmaterial aus dem Genitaltrakt mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "91874-8",
+        "display": "Mycoplasma genitalium DNA [Presence] in Urethra by NAA with probe detection"
+      }, {
+        "code": "88226-6",
+        "display": "Mycoplasma genitalium DNA [Presence] in Urine by NAA with probe detection"
+      }, {
+        "code": "88228-2",
+        "display": "Mycoplasma genitalium DNA [Presence] in Vaginal fluid by NAA with probe detection"
+      }, {
+        "code": "100704-6",
+        "display": "Mycoplasma genitalium rRNA [Presence] in Cervix by NAA with probe detection"
+      }, {
+        "code": "100702-0",
+        "display": "Mycoplasma genitalium rRNA [Presence] in Urethra by NAA with probe detection"
+      }, {
+        "code": "100703-8",
+        "display": "Mycoplasma genitalium rRNA [Presence] in Urine by NAA with probe detection"
+      }, {
+        "code": "93756-5",
+        "display": "Mycoplasma hyorhinis IgG Ab/Positive control in Serum by Immunoassay"
+      }, {
+        "code": "17301-3",
+        "display": "Mycoplasma hominis Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma hominis-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "22423-8",
+        "display": "Mycoplasma hominis Ab [Titer] in Serum"
+      }, {
+        "code": "17300-5",
+        "display": "Mycoplasma hominis Ab [Titer] in Serum by Complement fixation",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma hominis-Antikörper [Titer] in Serum mit Komplementbindungsreaktion"
+        } ]
+      }, {
+        "code": "31512-7",
+        "display": "Mycoplasma hominis Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma hominis-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "20899-1",
+        "display": "Mycoplasma sp [Presence] in Exudate by Organism specific culture"
+      }, {
+        "code": "683-3",
+        "display": "Genital Mycoplasma identified in Genital specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Genital-Mycoplasma identifiziert in Probenmaterial aus dem Genitaltrakt mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "91848-2",
+        "display": "Mycoplasma hominis DNA [Presence] in Genital specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma hominis-DNA [Nachweis] in Probenmaterial aus dem Genitaltrakt mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "20897-5",
+        "display": "Mycoplasma sp serotype [Identifier] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma sp-Serotyp [Nachweis oder Identität] in Isolat"
+        } ]
+      }, {
+        "code": "91828-4",
+        "display": "Mycoplasma genitalium DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "85538-7",
+        "display": "Mycoplasma hyorhinis 16S rRNA gene [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "95166-5",
+        "display": "Mycoplasma synoviae Ab/Positive control in Serum by Immunoassay"
+      }, {
+        "code": "85537-9",
+        "display": "Mycoplasma hyosynoviae 16S rRNA gene [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "95172-3",
+        "display": "Mycoplasma iowae DNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "22424-6",
+        "display": "Mycoplasma meleagridis Ab [Presence] in Serum"
+      }, {
+        "code": "15488-0",
+        "display": "Mycoplasma meleagridis Ab [Presence] in Serum by Agglutination"
+      }, {
+        "code": "23280-1",
+        "display": "Mycoplasma meleagridis Ab [Presence] in Serum by Hemagglutination"
+      }, {
+        "code": "15487-2",
+        "display": "Mycoplasma meleagridis Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "95173-1",
+        "display": "Mycoplasma meleagridis DNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "23282-7",
+        "display": "Mycoplasma mycoides ss capri Ab [Presence] in Serum"
+      }, {
+        "code": "23281-9",
+        "display": "Mycoplasma mycoides ss capri Ab [Presence] in Serum by Complement fixation"
+      }, {
+        "code": "31514-3",
+        "display": "Mycoplasma mycoides ss mycoides large colony Ab [Presence] in Serum"
+      }, {
+        "code": "23283-5",
+        "display": "Mycoplasma mycoides ss mycoides large colony Ab [Presence] in Serum by Complement fixation"
+      }, {
+        "code": "23284-3",
+        "display": "Mycoplasma mycoides ss mycoides large colony Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "23285-0",
+        "display": "Mycoplasma mycoides ss mycoides small colony Ab [Presence] in Serum"
+      }, {
+        "code": "23289-2",
+        "display": "Mycoplasma mycoides ss mycoides small colony Ab [Presence] in Serum by Agglutination"
+      }, {
+        "code": "23288-4",
+        "display": "Mycoplasma mycoides ss mycoides small colony Ab [Presence] in Serum by Complement fixation"
+      }, {
+        "code": "23287-6",
+        "display": "Mycoplasma mycoides ss mycoides small colony Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "23286-8",
+        "display": "Mycoplasma mycoides ss mycoides small colony Ab [Presence] in Serum by Immunoblot"
+      }, {
+        "code": "31902-0",
+        "display": "Mycoplasma mycoides ss mycoides small colony Ag [Presence] in Specimen"
+      }, {
+        "code": "23290-0",
+        "display": "Mycoplasma mycoides ss mycoides small colony Ag [Presence] in Specimen by Immune diffusion (ID)"
+      }, {
+        "code": "23291-8",
+        "display": "Mycoplasma mycoides ss mycoides small colony Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "23292-6",
+        "display": "Mycoplasma mycoides ss mycoides small colony Ag [Presence] in Tissue by Immune stain"
+      }, {
+        "code": "23293-4",
+        "display": "Mycoplasma mycoides ss mycoides small colony DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "47965-9",
+        "display": "Mycoplasma penetrans DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "39012-0",
+        "display": "Mycoplasma pneumoniae Ab [Presence] in Body fluid"
+      }, {
+        "code": "17302-1",
+        "display": "Mycoplasma pneumoniae Ab [Presence] in Serum"
+      }, {
+        "code": "5253-0",
+        "display": "Mycoplasma pneumoniae Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "42993-6",
+        "display": "Mycoplasma pneumoniae Ab [Titer] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-Antikörper [Titer] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "28548-6",
+        "display": "Mycoplasma pneumoniae Ab [Titer] in Cerebral spinal fluid by Complement fixation"
+      }, {
+        "code": "27318-5",
+        "display": "Mycoplasma pneumoniae Ab [Titer] in Cerebral spinal fluid by Immunofluorescence"
+      }, {
+        "code": "22425-3",
+        "display": "Mycoplasma pneumoniae Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "24310-5",
+        "display": "Mycoplasma pneumoniae Ab [Titer] in Serum --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-Antikörper [Titer] in Serum --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "24311-3",
+        "display": "Mycoplasma pneumoniae Ab [Titer] in Serum --2nd specimen"
+      }, {
+        "code": "91896-1",
+        "display": "Mycoplasma pneumoniae Ab [Titer] in Serum by Agglutination"
+      }, {
+        "code": "5254-8",
+        "display": "Mycoplasma pneumoniae Ab [Titer] in Serum by Complement fixation",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-Antikörper [Titer] in Serum mit Komplementbindungsreaktion"
+        } ]
+      }, {
+        "code": "24236-2",
+        "display": "Mycoplasma pneumoniae Ab [Titer] in Serum by Complement fixation --1st specimen"
+      }, {
+        "code": "24237-0",
+        "display": "Mycoplasma pneumoniae Ab [Titer] in Serum by Complement fixation --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-Antikörper [Titer] in Serum mit Komplementbindungsreaktion --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "31202-5",
+        "display": "Mycoplasma pneumoniae Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "60533-7",
+        "display": "Mycoplasma pneumoniae Ab [Titer] in Serum by Latex agglutination"
+      }, {
+        "code": "17303-9",
+        "display": "Mycoplasma pneumoniae Ab [Units/volume] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "7969-9",
+        "display": "Mycoplasma pneumoniae Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "13268-8",
+        "display": "Mycoplasma pneumoniae Ab [Units/volume] in Serum --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-Antikörper [Einheiten/Volumen] in Serum --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "13269-6",
+        "display": "Mycoplasma pneumoniae Ab [Units/volume] in Serum --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-Antikörper [Einheiten/Volumen] in Serum --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "52987-5",
+        "display": "Mycoplasma pneumoniae Ab [Units/volume] in Serum by Complement fixation",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-Antikörper [Einheiten/Volumen] in Serum mit Komplementbindungsreaktion"
+        } ]
+      }, {
+        "code": "5252-2",
+        "display": "Mycoplasma pneumoniae Ab [Units/volume] in Serum by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-Antikörper [Einheiten/Volumen] in Serum mit Latexagglutination"
+        } ]
+      }, {
+        "code": "31515-0",
+        "display": "Mycoplasma pneumoniae IgA Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgA-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "26684-1",
+        "display": "Mycoplasma pneumoniae IgA Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "13270-4",
+        "display": "Mycoplasma pneumoniae IgA Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgA-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "46198-8",
+        "display": "Mycoplasma pneumoniae IgG Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgG-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "45224-3",
+        "display": "Mycoplasma pneumoniae IgG Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "57677-7",
+        "display": "Mycoplasma pneumoniae IgG Ab [Presence] in Serum by Immunoassay --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgG-Antikörper [Nachweis] in Serum mit Immunoassay --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "57678-5",
+        "display": "Mycoplasma pneumoniae IgG Ab [Presence] in Serum by Immunoassay --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgG-Antikörper [Nachweis] in Serum mit Immunoassay --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "42992-8",
+        "display": "Mycoplasma pneumoniae IgG Ab [Titer] in Cerebral spinal fluid"
+      }, {
+        "code": "26947-2",
+        "display": "Mycoplasma pneumoniae IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence"
+      }, {
+        "code": "42526-4",
+        "display": "Mycoplasma pneumoniae IgG Ab [Titer] in Pleural fluid"
+      }, {
+        "code": "42989-4",
+        "display": "Mycoplasma pneumoniae IgG Ab [Titer] in Pleural fluid by Immunofluorescence"
+      }, {
+        "code": "22426-1",
+        "display": "Mycoplasma pneumoniae IgG Ab [Titer] in Serum"
+      }, {
+        "code": "6481-6",
+        "display": "Mycoplasma pneumoniae IgG Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "18243-6",
+        "display": "Mycoplasma pneumoniae IgG Ab [Units/volume] in Cerebral spinal fluid"
+      }, {
+        "code": "7970-7",
+        "display": "Mycoplasma pneumoniae IgG Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgG-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "24234-7",
+        "display": "Mycoplasma pneumoniae IgG Ab [Units/volume] in Serum --1st specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgG-Antikörper [Einheiten/Volumen] in Serum --1. Probenmaterial"
+        } ]
+      }, {
+        "code": "24235-4",
+        "display": "Mycoplasma pneumoniae IgG Ab [Units/volume] in Serum --2nd specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgG-Antikörper [Einheiten/Volumen] in Serum --2. Probenmaterial"
+        } ]
+      }, {
+        "code": "5255-5",
+        "display": "Mycoplasma pneumoniae IgG Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "56958-2",
+        "display": "Mycoplasma pneumoniae IgG Ab [Units/volume] in Serum by Immunoassay --1st specimen"
+      }, {
+        "code": "57009-3",
+        "display": "Mycoplasma pneumoniae IgG Ab [Units/volume] in Serum by Immunoassay --2nd specimen"
+      }, {
+        "code": "17304-7",
+        "display": "Mycoplasma pneumoniae IgG+IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgG+IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "21406-4",
+        "display": "Mycoplasma pneumoniae IgM Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgM-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "5257-1",
+        "display": "Mycoplasma pneumoniae IgM Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "58708-9",
+        "display": "Mycoplasma pneumoniae IgM Ab [Presence] in Serum by Immunofluorescence"
+      }, {
+        "code": "42991-0",
+        "display": "Mycoplasma pneumoniae IgM Ab [Titer] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgM-Antikörper [Titer] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "26946-4",
+        "display": "Mycoplasma pneumoniae IgM Ab [Titer] in Cerebral spinal fluid by Immunofluorescence"
+      }, {
+        "code": "42990-2",
+        "display": "Mycoplasma pneumoniae IgM Ab [Titer] in Pleural fluid"
+      }, {
+        "code": "42525-6",
+        "display": "Mycoplasma pneumoniae IgM Ab [Titer] in Pleural fluid by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgM-Antikörper [Titer] in Pleuraflüssigkeit mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "22427-9",
+        "display": "Mycoplasma pneumoniae IgM Ab [Titer] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgM-Antikörper [Titer] in Serum"
+        } ]
+      }, {
+        "code": "5258-9",
+        "display": "Mycoplasma pneumoniae IgM Ab [Titer] in Serum by Immunofluorescence"
+      }, {
+        "code": "31516-8",
+        "display": "Mycoplasma pneumoniae IgM Ab [Units/volume] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgM-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "58782-4",
+        "display": "Mycoplasma pneumoniae IgM Ab [Units/volume] in Cerebral spinal fluid by Immunoassay"
+      }, {
+        "code": "8078-8",
+        "display": "Mycoplasma pneumoniae IgM Ab [Units/volume] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgM-Antikörper [Einheiten/Volumen] in Serum"
+        } ]
+      }, {
+        "code": "5256-3",
+        "display": "Mycoplasma pneumoniae IgM Ab [Units/volume] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "91827-6",
+        "display": "Mycoplasma hominis DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "92964-6",
+        "display": "Mycoplasma pneumoniae DNA [Presence] in Lower respiratory specimen by NAA with non-probe detection"
+      }, {
+        "code": "88579-8",
+        "display": "Mycoplasma pneumoniae DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
+      }, {
+        "code": "20898-3",
+        "display": "Mycoplasma sp [Presence] in Milk by Organism specific culture"
+      }, {
+        "code": "82177-7",
+        "display": "Mycoplasma pneumoniae DNA [Presence] in Nasopharynx by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-DNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "88720-8",
+        "display": "Mycoplasma pneumoniae DNA [Presence] in Nasopharynx by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-DNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "92126-2",
+        "display": "Mycoplasma pneumoniae DNA [Presence] in Respiratory specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-DNA [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "69935-5",
+        "display": "Mycoplasma genitalium DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma genitalium-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "100706-1",
+        "display": "Mycoplasma genitalium rRNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "68546-1",
+        "display": "Mycoplasma hominis DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma hominis-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "19054-6",
+        "display": "Mycoplasma pneumoniae [Presence] in Specimen by Organism specific culture"
+      }, {
+        "code": "53255-6",
+        "display": "Mycoplasma pneumoniae DNA [#/volume] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-DNA [#/Volumen] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "29257-3",
+        "display": "Mycoplasma pneumoniae DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "23296-7",
+        "display": "Mycoplasma putrefaciens Ab [Presence] in Serum"
+      }, {
+        "code": "23295-9",
+        "display": "Mycoplasma putrefaciens Ab [Presence] in Serum by Complement fixation"
+      }, {
+        "code": "23294-2",
+        "display": "Mycoplasma putrefaciens Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "23248-8",
+        "display": "Mycoplasma agalactiae neutralizing antibody [Presence] in Serum by Neutralization test"
+      }, {
+        "code": "6483-2",
+        "display": "Mycoplasma pneumoniae rRNA [Presence] in Specimen by Probe",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-rRNA [Nachweis] in Probenmaterial mit Sonde"
+        } ]
+      }, {
+        "code": "22428-7",
+        "display": "Mycoplasma sp Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma sp-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "23297-5",
+        "display": "Mycoplasma sp Ab [Presence] in Serum by Complement fixation"
+      }, {
+        "code": "20900-7",
+        "display": "Mycoplasma sp Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "23754-5",
+        "display": "Mycoplasma sp Ab [Titer] in Serum"
+      }, {
+        "code": "31517-6",
+        "display": "Mycoplasma sp Ab [Units/volume] in Serum"
+      }, {
+        "code": "20901-5",
+        "display": "Mycoplasma sp Ag [Presence] in Isolate by Immune stain"
+      }, {
+        "code": "23299-1",
+        "display": "Mycoplasma sp Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma sp-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "23298-3",
+        "display": "Mycoplasma sp Ag [Presence] in Specimen by Immunofluorescence"
+      }, {
+        "code": "34883-9",
+        "display": "Mycoplasma sp Ag [Presence] in Tissue by Immune stain"
+      }, {
+        "code": "49110-0",
+        "display": "Mycoplasma sp identified in Urine by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma sp identifiziert in Urin mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "15388-2",
+        "display": "Mycoplasma hominis [Presence] in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma hominis [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "34702-1",
+        "display": "Mycoplasma sp [Presence] in Specimen by Hoechst stain",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma sp [Nachweis] in Probenmaterial mit Hoechst-Färbung"
+        } ]
+      }, {
+        "code": "23301-5",
+        "display": "Mycoplasma sp DNA [Presence] in Specimen by NAA with probe detection"
+      }, {
+        "code": "6486-5",
+        "display": "Mycoplasma sp identified in Specimen by Organism specific culture"
+      }, {
+        "code": "23300-7",
+        "display": "Mycoplasma sp rRNA [Presence] in Specimen by Probe",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma sp-rRNA [Nachweis] in Probenmaterial mit Sonde"
+        } ]
+      }, {
+        "code": "40698-3",
+        "display": "Mycoplasma sp identified in Specimen"
+      }, {
+        "code": "91776-5",
+        "display": "Respiratory Mycoplasma identified in Lower respiratory specimen by Organism specific culture"
+      }, {
+        "code": "6482-4",
+        "display": "Mycoplasma pneumoniae rRNA [Presence] in Sputum by Probe",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-rRNA [Nachweis] in Sputum mit Sonde"
+        } ]
+      }, {
+        "code": "686-6",
+        "display": "Respiratory Mycoplasma identified in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Respiratorische Mycoplasmen identifiziert in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "90325-2",
+        "display": "Mycoplasma suis DNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "22429-5",
+        "display": "Mycoplasma synoviae Ab [Presence] in Serum"
+      }, {
+        "code": "15490-6",
+        "display": "Mycoplasma synoviae Ab [Presence] in Serum by Agglutination"
+      }, {
+        "code": "23302-3",
+        "display": "Mycoplasma synoviae Ab [Presence] in Serum by Hemagglutination"
+      }, {
+        "code": "15489-8",
+        "display": "Mycoplasma synoviae Ab [Presence] in Serum by Immunoassay"
+      }, {
+        "code": "42988-6",
+        "display": "Mycoplasma synoviae Ab [Titer] in Serum"
+      }, {
+        "code": "23755-2",
+        "display": "Mycoplasma synoviae Ab [Titer] in Serum by Hemagglutination"
+      }, {
+        "code": "95181-4",
+        "display": "Mycoplasma synoviae Ab [Titer] in Serum by Immunoassay"
+      }, {
+        "code": "31518-4",
+        "display": "Mycoplasma synoviae Ab [Units/volume] in Serum"
+      }, {
+        "code": "684-1",
+        "display": "Respiratory Mycoplasma identified in Sputum by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Respiratorische Mycoplasmen identifiziert in Sputum mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "95152-5",
+        "display": "Mycoplasma synoviae DNA [#/volume] in Specimen by NAA with probe detection"
+      }, {
+        "code": "95171-5",
+        "display": "Mycoplasma synoviae DNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+      }, {
+        "code": "15491-4",
+        "display": "Mycoplasma synoviae rRNA [Presence] in Serum by Probe"
+      }, {
+        "code": "685-8",
+        "display": "Respiratory Mycoplasma identified in Throat by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Respiratorische Mycoplasmen identifiziert in Rachen mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "88230-8",
+        "display": "Mycoplasma genitalium DNA [Presence] in Throat by NAA with probe detection"
+      }, {
+        "code": "20896-7",
+        "display": "Mycoplasma sp [Presence] in Tissue by Culture NPIP (National Poultry Improvement Plan)"
+      }, {
+        "code": "91804-5",
+        "display": "Mycoplasma pneumoniae DNA [Presence] in Upper respiratory specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mycoplasma pneumoniae-DNA [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    } ]
+  }
+}

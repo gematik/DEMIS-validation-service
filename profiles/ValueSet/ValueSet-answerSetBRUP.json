@@ -1,0 +1,324 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetBRUP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetBRUP",
+  "version": "1.4.0",
+  "name": "AnswerSetBRUP",
+  "title": "AnswerSet für Brucella sp.",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetBRUP enthält die Codes der Answer-Codes für Brucella sp..",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115642005",
+        "display": "Brucella abortus, biovar 5 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella abortus, biovar 5 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella abortus, Biovar 5"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115638007",
+        "display": "Brucella abortus, biovar 1 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella abortus, biovar 1 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella abortus, Biovar 1"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "430982008",
+        "display": "Brucella abortus, vaccinal strain 19 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella abortus, vaccinal strain 19 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella abortus, Impfstamm 19"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115643000",
+        "display": "Brucella abortus, biovar 6 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella abortus, biovar 6 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella abortus, Biovar 6"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115644006",
+        "display": "Brucella abortus, biovar 9 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella abortus, biovar 9 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella abortus, Biovar 9"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "430983003",
+        "display": "Brucella abortus, vaccinal strain RB51 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella abortus, vaccinal strain RB51 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella abortus, Impfstamm RB51"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115641003",
+        "display": "Brucella abortus, biovar 4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella abortus, biovar 4 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella abortus, Biovar 4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115639004",
+        "display": "Brucella abortus, biovar 2 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella abortus, biovar 2 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella abortus, Biovar 2"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "115640002",
+        "display": "Brucella abortus, biovar 3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella abortus, biovar 3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella abortus, Biovar 3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698209002",
+        "display": "Brucella abortus, biovar 7 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella abortus, biovar 7 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella abortus, Biovar 7"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "24224000",
+        "display": "Brucella abortus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella abortus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella abortus"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "38025008",
+        "display": "Brucella canis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella canis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella canis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "72829003",
+        "display": "Brucella melitensis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella melitensis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella melitensis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "48317004",
+        "display": "Brucella suis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella suis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella suis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "417031003",
+        "display": "Brucella suis biovar 3 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella suis biovar 3 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella suis, Biovar 3"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "698206009",
+        "display": "Brucella suis biovar 4 (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Brucella suis biovar 4 (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella suis, Biovar 4"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "26250004",
+        "display": "Genus Brucella (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Genus Brucella (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Brucella spp."
+        } ]
+      } ]
+    } ]
+  }
+}

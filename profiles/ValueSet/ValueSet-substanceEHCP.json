@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "substanceEHCP",
+  "url": "https://demis.rki.de/fhir/ValueSet/substanceEHCP",
+  "version": "1.0.0",
+  "name": "SubstanceEHCP",
+  "title": "Analyt-Set für Escherichia coli (enterohämorrhagisch)",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet SubstanceEHCP enthält die Codes des Analyt-Sets für Escherichia coli (enterohämorrhagisch).",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "709385004",
+        "display": "Antigen of Escherichia coli O157 (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "E.coli-O157-Antigen"
+        } ]
+      }, {
+        "code": "259835003",
+        "display": "Escherichia coli lipopolysaccharide antibody (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "E.coli-LPS-Antikörper"
+        } ]
+      }, {
+        "code": "608774005",
+        "display": "Shiga toxin 1 (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "Shigatoxin 1 (stx1)"
+        } ]
+      }, {
+        "code": "608775006",
+        "display": "Shiga toxin 2 (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "Shigatoxin 2 (stx2)"
+        } ]
+      }, {
+        "code": "255835006",
+        "display": "Shiga toxin (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "Shigatoxin"
+        } ]
+      } ]
+    } ]
+  }
+}

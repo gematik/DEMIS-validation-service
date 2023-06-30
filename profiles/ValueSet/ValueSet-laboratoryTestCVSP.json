@@ -1,0 +1,161 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestCVSP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestCVSP",
+  "version": "1.2.0",
+  "name": "LaboratoryTestCVSP",
+  "title": "Labortest für Severe-Acute-Respiratory-Syndrome-Coronavirus (SARS-CoV)",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestCVSP enthält die Codes der Labortests für Severe-Acute-Respiratory-Syndrome-Coronavirus (SARS-CoV).",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "33964-8",
+        "display": "SARS coronavirus Urbani RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "SARS-Coronavirus Urbani-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "33965-5",
+        "display": "SARS coronavirus Urbani RNA [Presence] in Stool by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "SARS-Coronavirus Urbani-RNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "33966-3",
+        "display": "SARS coronavirus Urbani RNA [Presence] in Nose by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "SARS-Coronavirus Urbani-RNA [Nachweis] in Nase mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "33967-1",
+        "display": "SARS coronavirus Urbani RNA [Presence] in Serum or Plasma by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "SARS-Coronavirus Urbani-RNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "33975-4",
+        "display": "SARS coronavirus Urbani RNA [Presence] in Sputum by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "SARS-Coronavirus Urbani-RNA [Nachweis] in Sputum mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "41458-1",
+        "display": "SARS coronavirus RNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "SARS-Coronavirus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "41459-9",
+        "display": "SARS coronavirus [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "SARS-Coronavirus [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "41991-1",
+        "display": "SARS coronavirus IgM Ab [Presence] in Serum by Immunoassay",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "SARS-Coronavirus-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
+        } ]
+      }, {
+        "code": "42956-3",
+        "display": "SARS coronavirus IgM Ab [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "SARS-Coronavirus-IgM-Antikörper [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "60275-5",
+        "display": "SARS coronavirus RNA [Presence] in Isolate by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "SARS-Coronavirus-RNA [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "60534-5",
+        "display": "SARS coronavirus RNA [Presence] in Serum or Plasma by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "SARS-Coronavirus-RNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "41461-5",
+        "display": "Virus identified in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Virus identifiziert in Probenmaterial"
+        } ]
+      }, {
+        "code": "92253-4",
+        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
+        } ]
+      } ]
+    } ]
+  }
+}

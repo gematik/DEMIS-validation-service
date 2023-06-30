@@ -1,0 +1,90 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetCLOP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetCLOP",
+  "version": "1.1.0",
+  "name": "AnswerSetCLOP",
+  "title": "AnswerSet für Clostridium botulinum oder Toxinnachweis",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetCLOP enthält die Codes der Answer-Codes für Clostridium botulinum oder Toxinnachweis.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "13080008",
+        "display": "Clostridium botulinum (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Clostridium botulinum (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Clostridium botulinum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "31169007",
+        "display": "Clostridium baratii (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Clostridium baratii (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Clostridium baratii"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "19084008",
+        "display": "Clostridium butyricum (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Clostridium butyricum (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Clostridium butyricum"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "113565009",
+        "display": "Clostridium argentiense (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Clostridium argentiense (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Clostridium argentiense"
+        } ]
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,614 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestHINP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestHINP",
+  "version": "1.5.0",
+  "name": "LaboratoryTestHINP",
+  "title": "Labortest für Haemophilus influenzae; Meldepflicht nur für den direkten Nachweis aus Liquor oder Blut",
+  "status": "active",
+  "date": "2023-05-04",
+  "description": "Das ValueSet LaboratoryTestHINP enthält die Codes der Labortests für Haemophilus influenzae; Meldepflicht nur für den direkten Nachweis aus Liquor oder Blut.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "version": "2.74",
+      "concept": [ {
+        "code": "99090-3",
+        "display": "Haemophilus influenzae DNA [Presence] in Cerebral spinal fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae-DNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85681-5",
+        "display": "Haemophilus influenzae dcs gene [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae dcs-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "14321-4",
+        "display": "Haemophilus influenzae B Ag [Presence] in Cerebral spinal fluid by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae B-Antigen [Nachweis] in Zerebrospinalflüssigkeit mit Latexagglutination"
+        } ]
+      }, {
+        "code": "16926-8",
+        "display": "Haemophilus influenzae A Ag [Presence] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae A-Antigen [Nachweis] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "20486-7",
+        "display": "Haemophilus influenzae B Ag [Units/volume] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae B-Antigen [Einheiten/Volumen] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "21320-7",
+        "display": "Haemophilus influenzae B Ag [Presence] in Specimen by Latex agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae B-Antigen [Nachweis] in Probenmaterial mit Latexagglutination"
+        } ]
+      }, {
+        "code": "24010-1",
+        "display": "Haemophilus influenzae B Ag [Presence] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae B-Antigen [Nachweis] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "29906-5",
+        "display": "Haemophilus influenzae A DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae A-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "29907-3",
+        "display": "Haemophilus influenzae B DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae B-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "31833-7",
+        "display": "Haemophilus influenzae A Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae A-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "31834-5",
+        "display": "Haemophilus influenzae B Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae B-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "31835-2",
+        "display": "Haemophilus influenzae C Ag [Presence] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae C-Antigen [Nachweis] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "31836-0",
+        "display": "Haemophilus influenzae C Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae C-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "31837-8",
+        "display": "Haemophilus influenzae D Ag [Presence] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae D-Antigen [Nachweis] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "31838-6",
+        "display": "Haemophilus influenzae D Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae D-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "31839-4",
+        "display": "Haemophilus influenzae E Ag [Presence] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae E-Antigen [Nachweis] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "31840-2",
+        "display": "Haemophilus influenzae E Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae E-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "31841-0",
+        "display": "Haemophilus influenzae F Ag [Presence] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae F-Antigen [Nachweis] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "31842-8",
+        "display": "Haemophilus influenzae F Ag [Presence] in Specimen",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae F-Antigen [Nachweis] in Probenmaterial"
+        } ]
+      }, {
+        "code": "32139-8",
+        "display": "Haemophilus influenzae Ag [Presence] in Cerebral spinal fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae-Antigen [Nachweis] in Zerebrospinalflüssigkeit"
+        } ]
+      }, {
+        "code": "41495-3",
+        "display": "Haemophilus influenzae B Ag [Presence] in Body fluid",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae B-Antigen [Nachweis] in Körperflüssigkeit"
+        } ]
+      }, {
+        "code": "43429-0",
+        "display": "Haemophilus influenzae B Ag [Presence] in Serum",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae B-Antigen [Nachweis] in Serum"
+        } ]
+      }, {
+        "code": "49721-4",
+        "display": "Haemophilus influenzae type [Identifier] in Isolate",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae-Typ [Nachweis oder Identität] in Isolat"
+        } ]
+      }, {
+        "code": "5006-2",
+        "display": "Haemophilus influenzae rRNA [Presence] in Specimen by Probe",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae-rRNA [Nachweis] in Probenmaterial mit Sonde"
+        } ]
+      }, {
+        "code": "53607-8",
+        "display": "Haemophilus influenzae B DNA [Presence] in Blood by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae B-DNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "58473-0",
+        "display": "Haemophilus influenzae serotype DNA [Identifier] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae-Serotyp-DNA [Nachweis oder Identität] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "58739-4",
+        "display": "Haemophilus influenzae serotype [Identifier] in Isolate by Agglutination",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae-Serotyp [Nachweis oder Identität] in Isolat mit Agglutination"
+        } ]
+      }, {
+        "code": "61366-1",
+        "display": "Haemophilus influenzae DNA [Presence] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "6414-7",
+        "display": "Haemophilus influenzae A Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae A-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6416-2",
+        "display": "Haemophilus influenzae D Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae D-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6417-0",
+        "display": "Haemophilus influenzae E Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae E-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6418-8",
+        "display": "Haemophilus influenzae F Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae F-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6599-5",
+        "display": "Haemophilus influenzae B Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae B-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6610-0",
+        "display": "Haemophilus influenzae A Ag [Presence] in Cerebral spinal fluid by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae A-Antigen [Nachweis] in Zerebrospinalflüssigkeit mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6611-8",
+        "display": "Haemophilus influenzae B Ag [Presence] in Cerebral spinal fluid by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae B-Antigen [Nachweis] in Zerebrospinalflüssigkeit mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6612-6",
+        "display": "Haemophilus influenzae C Ag [Presence] in Cerebral spinal fluid by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae C-Antigen [Nachweis] in Zerebrospinalflüssigkeit mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6613-4",
+        "display": "Haemophilus influenzae D Ag [Presence] in Cerebral spinal fluid by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae D-Antigen [Nachweis] in Zerebrospinalflüssigkeit mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6614-2",
+        "display": "Haemophilus influenzae E Ag [Presence] in Cerebral spinal fluid by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae E-Antigen [Nachweis] in Zerebrospinalflüssigkeit mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "6615-9",
+        "display": "Haemophilus influenzae F Ag [Presence] in Cerebral spinal fluid by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae F-Antigen [Nachweis] in Zerebrospinalflüssigkeit mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "69410-9",
+        "display": "Haemophilus influenzae [Identifier] in Specimen by Organism specific culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae [Nachweis oder Identität] in Probenmaterial mit erregerspezifischer Kultur"
+        } ]
+      }, {
+        "code": "76602-2",
+        "display": "Haemophilus influenzae lex2 gene [#/volume] in XXX.body fluid by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae lex2-Gen [#/Volumen] in XXX.Körperflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "82183-5",
+        "display": "Haemophilus influenzae DNA [Presence] in Cerebral spinal fluid by NAA with non-probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae-DNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "8271-9",
+        "display": "Haemophilus influenzae C Ag [Presence] in Specimen by Immunofluorescence",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae C-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
+        } ]
+      }, {
+        "code": "85627-8",
+        "display": "Haemophilus influenzae hpd gene [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae hpd-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85678-1",
+        "display": "Haemophilus influenzae acs gene [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae acs-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85679-9",
+        "display": "Haemophilus influenzae bex gene [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae bex-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85680-7",
+        "display": "Haemophilus influenzae ecs gene [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae ecs-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85682-3",
+        "display": "Haemophilus influenzae ccs gene [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae ccs-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85683-1",
+        "display": "Haemophilus influenzae bcs gene [Cycle Threshold #] in Specimen by NAA with probe detection",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae bcs-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "85778-9",
+        "display": "Haemophilus influenzae DNA [Presence] by NAA with non-probe detection in Positive blood culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae-DNA [Nachweis] in positiver Blutkultur mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
+        } ]
+      }, {
+        "code": "93397-8",
+        "display": "Haemophilus influenzae DNA [Presence] by NAA with probe detection in Positive blood culture",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Haemophilus influenzae-DNA [Nachweis] in positiver Blutkultur mit Nukleinsäureamplifikation mit Sondendetektion"
+        } ]
+      }, {
+        "code": "75756-7",
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
+        } ]
+      }, {
+        "code": "91895-3",
+        "display": "Bacterial strain [Type] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
+        } ]
+      }, {
+        "code": "90246-0",
+        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
+        "designation": [ {
+          "language": "de-DE",
+          "use": {
+            "system": "http://loinc.org",
+            "code": "LONG_COMMON_NAME"
+          },
+          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
+        } ]
+      } ]
+    }, {
+      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
+    } ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "id": "salutation",
+  "url": "https://demis.rki.de/fhir/ValueSet/salutation",
+  "version": "1.2.0",
+  "name": "Salutation",
+  "title": "Anrede",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet Salutation enthält die Codes der Anreden.",
+  "compose": {
+    "include": [ {
+      "system": "https://demis.rki.de/fhir/CodeSystem/salutation",
+      "version": "1.1.0"
+    } ]
+  }
+}

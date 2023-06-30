@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetZKVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetZKVP",
+  "version": "1.1.0",
+  "name": "AnswerSetZKVP",
+  "title": "AnswerSet für Zika-Virus",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetZKVP enthält die Codes der Answer-Codes für Zika-Virus.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "50471002",
+        "display": "Zika virus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Zika virus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Zika-Virus"
+        } ]
+      } ]
+    } ]
+  }
+}

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "humanname-de-basis",
   "url": "http://fhir.de/StructureDefinition/humanname-de-basis",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "name": "HumannameDeBasis",
   "title": "HumanName, deutsches Basisprofil",
   "status": "active",
@@ -958,7 +958,7 @@
         "human": "If present, start SHALL have a lower value than end",
         "expression": "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath": "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source": "http://hl7.org/fhir/StructureDefinition/HumanName"
+        "source": "http://hl7.org/fhir/StructureDefinition/Identifier"
       } ],
       "isSummary": true,
       "mapping": [ {

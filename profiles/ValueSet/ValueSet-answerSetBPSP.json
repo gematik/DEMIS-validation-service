@@ -1,0 +1,72 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetBPSP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetBPSP",
+  "version": "1.4.0",
+  "name": "AnswerSetBPSP",
+  "title": "AnswerSet für Bordetella pertussis, Bordetella parapertussis",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetBPSP enthält die Codes der Answer-Codes für Bordetella pertussis, Bordetella parapertussis.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "26183002",
+        "display": "Bordetella parapertussis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bordetella parapertussis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Bordetella parapertussis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "5247005",
+        "display": "Bordetella pertussis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bordetella pertussis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Bordetella pertussis"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 0
+        } ],
+        "code": "782952004",
+        "display": "Bordetella species not Bordetella pertussis (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Bordetella species not Bordetella pertussis (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Bordetella Species, nicht Bordetella pertussis"
+        } ]
+      } ]
+    } ]
+  }
+}

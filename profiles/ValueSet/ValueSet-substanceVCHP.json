@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "substanceVCHP",
+  "url": "https://demis.rki.de/fhir/ValueSet/substanceVCHP",
+  "version": "1.0.0",
+  "name": "SubstanceVCHP",
+  "title": "Analyt-Set für Vibrio spp. (humanpathogen); soweit ausschließlich eine Ohrinfektion vorliegt nur bei Vibrio cholerae",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Das ValueSet SubstanceVCHP enthält die Codes des Analyt-Sets für Vibrio spp. (humanpathogen); soweit ausschließlich eine Ohrinfektion vorliegt nur bei Vibrio cholerae.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "code": "255821009",
+        "display": "Cholera toxin (substance)",
+        "designation": [ {
+          "language": "de-DE",
+          "value": "Choleratoxin"
+        } ]
+      } ]
+    } ]
+  }
+}

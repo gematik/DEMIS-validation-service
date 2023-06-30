@@ -1,0 +1,54 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetMYLP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetMYLP",
+  "version": "1.2.0",
+  "name": "AnswerSetMYLP",
+  "title": "AnswerSet für Mycobacterium leprae",
+  "status": "active",
+  "date": "2023-05-30",
+  "description": "Das ValueSet AnswerSetMYLP enthält die Codes der Answer-Codes für Mycobacterium leprae.",
+  "compose": {
+    "include": [ {
+      "system": "http://snomed.info/sct",
+      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
+      "concept": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "58242002",
+        "display": "Mycobacterium leprae (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mycobacterium leprae (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Mycobacterium leprae"
+        } ]
+      }, {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+          "valueInteger": 100
+        } ],
+        "code": "243365003",
+        "display": "Acid-fast bacillus (organism)",
+        "designation": [ {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Acid-fast bacillus (organism)"
+        }, {
+          "language": "de-DE",
+          "value": "Säure-fester Bacillus"
+        } ]
+      } ]
+    } ]
+  }
+}

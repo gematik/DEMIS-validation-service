@@ -35,6 +35,13 @@ spec:
       volumes:
         - name: profiles-volume-{{ include "validation-service.fullversionname" . }}
           emptyDir: {}
+        # Add writable volumes
+        - name: tmp-volume
+          emptyDir: {}
+        {{- if .Values.debug.enable }}
+        - name: jfr-volume
+          emptyDir: {}
+        {{- end }}
       initContainers:
         - name: {{ .Chart.Name }}-init-profiles
           securityContext:
@@ -67,9 +74,17 @@ spec:
           {{- end }}
           {{- end }}
           {{- end }}
+          # Mount Volumes in container
           volumeMounts:
           - name: profiles-volume-{{ include "validation-service.fullversionname" . }}
-            mountPath: "/profiles"
+            mountPath: /profiles
+            readOnly: true
+          - name: tmp-volume
+            mountPath: /tmp
+          {{- if .Values.debug.enable }}
+          - name: jfr-volume
+            mountPath: /jfrdump
+          {{- end }}
           # Set the Environment Variables for the container
           env:
             - name: "SERVER_PORT"
@@ -78,11 +93,20 @@ spec:
               value: "Europe/Berlin"
             - name: "FHIR_PROFILES_PATH"
               value: "/profiles/Fhir"
+            {{- if .Values.debug.enable }}
+            - name: "JAVA_TOOL_OPTIONS"
+              value: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9000"
+            {{- end }}
           # Ports to be exposed from the container
           ports:
             - name: val-port
               containerPort: 8080
               protocol: TCP
+            {{- if .Values.debug.enable }}
+            - name: val-debug
+              containerPort: 9000
+              protocol: TCP
+            {{- end }}
           # Performs checks to verify that the application is successfully started
           # The Application is marked as failed after periodSeconds*failureThreshold seconds
           startupProbe:

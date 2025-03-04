@@ -2,520 +2,3116 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestFRTP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestFRTP",
-  "version": "1.5.0",
+  "version": "1.8.0",
   "name": "LaboratoryTestFRTP",
   "title": "Labortest für Francisella tularensis",
   "status": "active",
-  "date": "2023-05-04",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestFRTP enthält die Codes der Labortests für Francisella tularensis.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "101364-8",
-        "display": "Francisella tularensis DNA [Presence] in Blood by NAA with non-probe detection"
-      }, {
-        "code": "101373-9",
-        "display": "Francisella tularensis DNA [Presence] in Sputum by NAA with non-probe detection"
-      }, {
-        "code": "14209-1",
-        "display": "Francisella tularensis IgA Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "14209-1",
+            "display": "Francisella tularensis IgA Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Francisella tularensis IgA-Antikörper [Nachweis] in Serum"
+              }
+            ]
           },
-          "value": "Francisella tularensis-IgA-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "16875-7",
-        "display": "Francisella tularensis Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "16878-1",
+            "display": "Francisella tularensis IgM Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Francisella tularensis IgM-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
           },
-          "value": "Francisella tularensis-Antikörper [Titer] in Serum"
-        } ]
-      }, {
-        "code": "16876-5",
-        "display": "Francisella tularensis IgA Ab [Presence] in Serum by Latex agglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "33465-6",
+            "display": "Francisella tularensis IgG Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Francisella tularensis IgG-Antikörper [Titer] in Serum"
+              }
+            ]
           },
-          "value": "Francisella tularensis-IgA-Antikörper [Nachweis] in Serum mit Latexagglutination"
-        } ]
-      }, {
-        "code": "16877-3",
-        "display": "Francisella tularensis IgG Ab [Presence] in Serum by Latex agglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "33466-4",
+            "display": "Francisella tularensis IgM Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Francisella tularensis IgM-Antikörper [Titer] in Serum"
+              }
+            ]
           },
-          "value": "Francisella tularensis-IgG-Antikörper [Nachweis] in Serum mit Latexagglutination"
-        } ]
-      }, {
-        "code": "16878-1",
-        "display": "Francisella tularensis IgM Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "33576-0",
+            "display": "Francisella tularensis IgA Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Francisella tularensis IgA-Antikörper [Titer] in Serum"
+              }
+            ]
           },
-          "value": "Francisella tularensis-IgM-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "16879-9",
-        "display": "Francisella tularensis Ag [Presence] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "33679-2",
+            "display": "Francisella tularensis DNA [Presence] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Francisella tularensis DNA [Nachweis] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "Francisella tularensis-Antigen [Nachweis] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "23122-5",
-        "display": "Francisella tularensis A DNA [Presence] in Tissue by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
           },
-          "value": "Francisella tularensis subsp Tularensis-DNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "23124-1",
-        "display": "Francisella tularensis Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "46732-4",
+            "display": "Francisella tularensis subtype [Identifier] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Francisella-tularensis-Subtyp [Nachweis oder Identität] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "Francisella tularensis-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "23125-8",
-        "display": "Francisella tularensis Ab [Titer] in Serum by Agglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "70121-9",
+            "display": "Francisella tularensis IgG Ab [Units/volume] in Serum or Plasma",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Francisella tularensis IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma"
+              }
+            ]
           },
-          "value": "Francisella tularensis-Antikörper [Titer] in Serum mit Agglutination"
-        } ]
-      }, {
-        "code": "23126-6",
-        "display": "Francisella tularensis Ag [Presence] in Tissue by Immune stain",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "75756-7",
+            "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Bakterien identifiziert in Isolat mittels MS.MALDI-TOF"
+              }
+            ]
           },
-          "value": "Francisella tularensis-Antigen [Nachweis] in Gewebe mit Immunfärbung"
-        } ]
-      }, {
-        "code": "23127-4",
-        "display": "Francisella tularensis Ag [Presence] in Tissue by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "7889-9",
+            "display": "Francisella tularensis IgG Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Francisella tularensis IgG-Antikörper [Nachweis] in Serum"
+              }
+            ]
           },
-          "value": "Francisella tularensis-Antigen [Nachweis] in Gewebe mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "23128-2",
-        "display": "Francisella tularensis B DNA [Presence] in Tissue by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis subsp Holarctica-DNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "23130-8",
-        "display": "Francisella tularensis DNA [Presence] in Tissue by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-DNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "23131-6",
-        "display": "Francisella tularensis rRNA [Presence] in Tissue by Probe",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-rRNA [Nachweis] in Gewebe mit Sonde"
-        } ]
-      }, {
-        "code": "31396-5",
-        "display": "Francisella tularensis Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "31829-5",
-        "display": "Francisella tularensis Ag [Presence] in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-Antigen [Nachweis] in Probenmaterial"
-        } ]
-      }, {
-        "code": "33465-6",
-        "display": "Francisella tularensis IgG Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-IgG-Antikörper [Titer] in Serum"
-        } ]
-      }, {
+          {
+            "code": "7890-7",
+            "display": "Francisella tularensis IgM Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Francisella tularensis IgM-Antikörper [Nachweis] in Serum"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/resistance"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/resistanceGene"
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18985-2",
+        "display": "Sulfamethoxazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101125-3",
+        "display": "Bacterial carbapenem resistance blaOXA-235-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55614-2",
+        "display": "Amoxicillin+Sulbactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18962-1",
+        "display": "Oxytetracycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85501-5",
+        "display": "Carbapenem resistance blaVIM gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "95540-1",
+        "display": "Carbapenem resistance blaIMP+blaVIM genes [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100050-4",
+        "display": "Erythromycin+Ethambutol [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "87791-0",
+        "display": "Carbadox [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18864-9",
+        "display": "Ampicillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18887-0",
+        "display": "cefoTEtan [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "256-8",
+        "display": "Foscarnet [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72867-5",
+        "display": "Mycobacterium tuberculosis gyrB gene fluoroquinolone resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18997-7",
+        "display": "Trimethoprim [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18974-6",
+        "display": "rifAMPin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "92968-7",
+        "display": "Methicillin resistance mecA+mecC genes [Presence] in Isolate or Specimen by Molecular genetics method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "51724-3",
+        "display": "Cefuroxime [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55625-8",
+        "display": "Cefacetrile [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94062-7",
+        "display": "Bacterial rrs gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "6-7",
+        "display": "Amantadine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "33466-4",
-        "display": "Francisella tularensis IgM Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-IgM-Antikörper [Titer] in Serum"
-        } ]
-      }, {
-        "code": "33576-0",
-        "display": "Francisella tularensis IgA Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-IgA-Antikörper [Titer] in Serum"
-        } ]
-      }, {
-        "code": "33676-8",
-        "display": "Francisella tularensis [Presence] in Specimen by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "33677-6",
-        "display": "Francisella tularensis [Presence] in Isolate by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis [Nachweis] in Isolat mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "33678-4",
-        "display": "Francisella tularensis Ag [Presence] in Isolate by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-Antigen [Nachweis] in Isolat mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "33679-2",
-        "display": "Francisella tularensis DNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "33680-0",
-        "display": "Francisella tularensis DNA [Presence] in Isolate by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-DNA [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "33681-8",
-        "display": "Francisella tularensis [Presence] in Specimen by Cell wall fatty acid analysis",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis [Nachweis] in Probenmaterial mit Analyse der Zellwandfettsäuren"
-        } ]
-      }, {
-        "code": "33682-6",
-        "display": "Francisella tularensis [Presence] in Isolate by Cell wall fatty acid analysis",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis [Nachweis] in Isolat mit Analyse der Zellwandfettsäuren"
-        } ]
-      }, {
-        "code": "33683-4",
-        "display": "Francisella tularensis Ab [Titer] in Serum by Microagglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-Antikörper [Titer] in Serum mit Mikroagglutinationstest"
-        } ]
-      }, {
-        "code": "33684-2",
-        "display": "Francisella tularensis Ab [Titer] in Serum by Tube agglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-Antikörper [Titer] in Serum mit Röhrchen-Agglutinationstest"
-        } ]
-      }, {
-        "code": "45040-3",
-        "display": "Francisella tularensis Ab [Presence] in Serum by Microagglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-Antikörper [Nachweis] in Serum mit Mikroagglutinationstest"
-        } ]
-      }, {
-        "code": "45041-1",
-        "display": "Francisella tularensis Ag [Presence] in Specimen by Slide agglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-Antigen [Nachweis] in Probenmaterial mit Agglutination auf Objektträger"
-        } ]
-      }, {
-        "code": "46732-4",
-        "display": "Francisella tularensis subtype [Identifier] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella-tularensis-Subtyp [Nachweis oder Identität] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "5166-4",
-        "display": "Francisella tularensis Ab [Presence] in Serum by Latex agglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-Antikörper [Nachweis] in Serum mit Latexagglutination"
-        } ]
-      }, {
-        "code": "5167-2",
-        "display": "Francisella tularensis Ab [Titer] in Serum by Latex agglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-Antikörper [Titer] in Serum mit Latexagglutination"
-        } ]
-      }, {
-        "code": "6407-1",
-        "display": "Francisella tularensis IgM Ab [Presence] in Serum by Latex agglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-IgM-Antikörper [Nachweis] in Serum mit Latexagglutination"
-        } ]
-      }, {
-        "code": "6408-9",
-        "display": "Francisella tularensis Ag [Presence] in Specimen by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "70121-9",
-        "display": "Francisella tularensis IgG Ab [Units/volume] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "7888-1",
-        "display": "Francisella tularensis Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "7889-9",
-        "display": "Francisella tularensis IgG Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-IgG-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
+        "display": "Francisella tularensis IgM Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18951-4",
+        "display": "Nafcillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "102120-3",
+        "display": "Carbapenemase [Type] in Isolate by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100061-1",
+        "display": "Tosufloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35789-7",
+        "display": "DAPTOmycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "7890-7",
-        "display": "Francisella tularensis IgM Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-IgM-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "93716-9",
-        "display": "Francisella tularensis IgM Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "93717-7",
-        "display": "Francisella tularensis IgG Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "93718-5",
-        "display": "Francisella tularensis IgG and IgM [Interpretation] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Francisella tularensis-IgG- und IgM-Antikörper [Interpretation] in Serum"
-        } ]
-      }, {
+        "display": "Francisella tularensis IgM Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18888-8",
+        "display": "cefOXitin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18899-5",
+        "display": "Cephaloridine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100699-8",
+        "display": "Rifabutin+Ethambutol [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18876-3",
+        "display": "Cefamandole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "25595-0",
+        "display": "Econazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "87792-8",
+        "display": "Cefovecin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "20390-1",
+        "display": "Silver sulfADIAZINE [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "88252-2",
+        "display": "Vancomycin resistance vanA gene [Presence] by Probe in Positive blood culture"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85840-7",
+        "display": "Beta-lactam resistance ESBL blaVEB gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "14209-1",
+        "display": "Francisella tularensis IgA Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101124-6",
+        "display": "Bacterial carbapenem resistance blaIMI+blaNMC genes [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73982-1",
+        "display": "Carbapenem resistance blaNDM gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18984-5",
+        "display": "sulfADIAZINE [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35779-8",
+        "display": "Ceftibuten [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18961-3",
+        "display": "Oxacillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100051-2",
+        "display": "Ethambutol+rifAMPin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35756-6",
+        "display": "Avilamycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18886-2",
+        "display": "Cefotaxime [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18863-1",
+        "display": "Amphotericin B [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35831-7",
+        "display": "Pirlimycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "33465-6",
+        "display": "Francisella tularensis IgG Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "99037-4",
+        "display": "Trimethoprim dfrA12 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35854-9",
+        "display": "Trospectinomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72868-3",
+        "display": "Mycobacterium leprae folP1 gene dapsone resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18973-8",
+        "display": "Pyrazinamide [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18996-9",
+        "display": "Tobramycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "77666-6",
+        "display": "Methicillin resistance mecA mRNA [Presence] by FISH in Positive blood culture"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "87802-5",
+        "display": "Sulfachloropyridazine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18950-6",
+        "display": "Moxalactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23658-8",
+        "display": "Other Antibiotic [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18898-7",
+        "display": "Cephaloglycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "62258-9",
+        "display": "Erythromyin+clindamycin resistance ermA + ermC genes [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "25596-8",
+        "display": "Fosfomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "25607-3",
+        "display": "Miconazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18875-5",
+        "display": "Cefadroxil [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41993-7",
+        "display": "Atazanavir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "88251-4",
+        "display": "Methicillin resistance mecA gene [Presence] by Probe in Positive blood culture"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18909-2",
+        "display": "Clotrimazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85841-5",
+        "display": "Beta-lactam resistance AmpC blaACC gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18941-5",
+        "display": "Lymecycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18964-7",
+        "display": "Penicillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32381-6",
+        "display": "Isepamicin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "51504-9",
+        "display": "Penicillin G benzathine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55289-3",
+        "display": "Sulopenem [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100052-0",
+        "display": "Flomoxef [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18878-9",
+        "display": "ceFAZolin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55635-7",
+        "display": "Cefamandole+Sulbactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85503-1",
+        "display": "Carbapenem resistance blaOXA-48 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18889-6",
+        "display": "Cefpirome [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18866-4",
+        "display": "Azithromycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "103654-0",
+        "display": "Meropenem [Susceptibility] for meningitis"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "54169-8",
+        "display": "Thiamphenicol [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85831-6",
+        "display": "Beta-lactam resistance ESBL blaBEL gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35874-7",
+        "display": "Penicillin+Novobiocin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "46245-7",
+        "display": "Mycobacterium tuberculosis pncA gene pyrazinamide resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72869-1",
+        "display": "Mycobacterium leprae gyrA gene fluoroquinolone resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101127-9",
+        "display": "Bacterial carbapenem resistance blaSIM gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94064-3",
+        "display": "Bacterial eis gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18999-3",
+        "display": "Troleandomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "89314-9",
+        "display": "Bacterial 23S rRNA gene azithromycin resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18976-1",
+        "display": "Rolitetracycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18930-8",
+        "display": "Gramicidin D [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23659-6",
+        "display": "Apramycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18953-0",
+        "display": "Neomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "96309-0",
+        "display": "Methicillin resistance mecA+mecC genes+SCCmec+OrfX junction [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23636-4",
+        "display": "Cefdinir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18855-7",
+        "display": "5-Fluorocytosine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41729-5",
+        "display": "cefoTEtan+Clavulanate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "33576-0",
+        "display": "Francisella tularensis IgA Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "58080-3",
+        "display": "Penicillin Parenteral [Susceptibility] for meningitis"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85842-3",
+        "display": "Beta-lactam resistance AmpC blaACT+blaMIR genes [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101673-2",
+        "display": "KPC carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101126-1",
+        "display": "Bacterial carbapenem resistance blaOXA-24+blaOXA-40 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "29258-1",
+        "display": "Linezolid [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18963-9",
+        "display": "Pefloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100053-8",
+        "display": "Fluoroquinolone [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18940-7",
+        "display": "Loracarbef [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18986-0",
+        "display": "sulfiSOXAZOLE [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "51503-1",
+        "display": "Penicillin G procaine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55657-1",
+        "display": "Clindamycin.high potency [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "96372-8",
+        "display": "Imipenem+Relebactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18865-6",
+        "display": "Ampicillin+Sulbactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "103653-2",
+        "display": "Ciprofloxacin [Susceptibility] for meningitis"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "46244-0",
+        "display": "Mycobacterium tuberculosis complex rpoB gene rifAMPin resistance mutation identified by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85832-4",
+        "display": "Beta-lactam resistance ESBL blaCTX-M-1 Group gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94063-5",
+        "display": "Bacterial rpsL gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18998-5",
+        "display": "Trimethoprim+Sulfamethoxazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "99036-6",
+        "display": "Trimethoprim resistance dfrA7+dfrA17 genes [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18952-2",
+        "display": "Nalidixate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72276-9",
+        "display": "Mycobacterium tuberculosis gyrA gene fluoroquinolone resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35851-5",
+        "display": "Tilmicosin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18975-3",
+        "display": "Ristocetin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "48175-4",
+        "display": "Mycobacterium tuberculosis katG + inhA gene isoniazid resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "87800-9",
+        "display": "Pradofloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100041-3",
+        "display": "Aminoglycoside [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35776-4",
+        "display": "cefTAZidime+Clavulanate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "88253-0",
+        "display": "Vancomycin resistance vanB gene [Presence] by Probe in Positive blood culture"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "20391-9",
+        "display": "Mafenide [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18877-1",
+        "display": "Cefatrizine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101576-7",
+        "display": "Bacterial gyrB gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85843-1",
+        "display": "Beta-lactam resistance AmpC blaFOX gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101674-0",
+        "display": "OXA-48-like carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18987-8",
+        "display": "Sulfonamide [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23712-3",
+        "display": "Enrofloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "42357-4",
+        "display": "Tigecycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32383-2",
+        "display": "Pristinamycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100054-6",
+        "display": "Gamithromycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73602-5",
+        "display": "Ceftolozane+Tazobactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18905-0",
+        "display": "Cinoxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "54170-6",
+        "display": "Imipenem+EDTA [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "86621-0",
+        "display": "Methicillin resistance mecC gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30308-1",
+        "display": "Ritonavir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "6984-9",
+        "display": "Beta lactamase.extended spectrum [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18981-1",
+        "display": "Spiramycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "98065-6",
+        "display": "Carbapenem resistance blaOXA-143 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18883-9",
+        "display": "Cefonicid [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23709-9",
+        "display": "Ceftiofur [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18860-7",
+        "display": "Amikacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73591-0",
+        "display": "Premafloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18917-5",
+        "display": "Doxycycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85833-2",
+        "display": "Carbapenem resistance blaGIM gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41731-1",
+        "display": "Cefpodoxime+Clavulanate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "46247-3",
+        "display": "Mycobacterium tuberculosis embB gene ethambutol resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73592-8",
+        "display": "Plazomicin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18993-6",
+        "display": "Tetracycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101675-7",
+        "display": "IMP Carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18970-4",
+        "display": "Piperacillin+Tazobactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100042-1",
+        "display": "Atovaquone [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32372-5",
+        "display": "Fleroxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55682-9",
+        "display": "Isoconazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85844-9",
+        "display": "Beta-lactam resistance ESBL blaCTX-M-2 Group gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55196-0",
+        "display": "Terconazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72836-0",
+        "display": "Vancomycin resistance vanC2+vanC3 genes [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55670-4",
+        "display": "Dibekacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18895-3",
+        "display": "cefTRIAXone [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18929-0",
+        "display": "Gentamicin.high potency [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18872-2",
+        "display": "Capreomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18906-8",
+        "display": "Ciprofloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35845-7",
+        "display": "Telithromycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "88886-7",
+        "display": "Telavancin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100055-3",
+        "display": "Optochin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18980-3",
+        "display": "Spectinomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73603-3",
+        "display": "cefTAZidime+Avibactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30307-3",
+        "display": "Indinavir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32384-0",
+        "display": "Thiacetazone [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "6985-6",
+        "display": "Beta lactamase.usual [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "99280-0",
+        "display": "Cefiderocol [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18939-9",
+        "display": "Lomefloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "98066-4",
+        "display": "Colistin resistance mcr-3+mcr-4+mcr-5 genes [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55738-9",
+        "display": "Cefotiam hexetil [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41732-9",
+        "display": "cefTRIAXone+Clavulanate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85834-0",
+        "display": "Beta-lactam resistance ESBL blaCTX-M-9 Group gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18882-1",
+        "display": "Cefodizime [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35858-0",
+        "display": "Tylosin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "46246-5",
+        "display": "Mycobacterium tuberculosis katG gene isoniazid high level resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18916-7",
+        "display": "Dicloxacillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23740-4",
+        "display": "Florfenicol [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72837-8",
+        "display": "Vancomycin resistance vanC1 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100043-9",
+        "display": "Azithromycin+Ethambutol [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18992-8",
+        "display": "Terbinafine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32373-3",
+        "display": "Arbekacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23642-2",
+        "display": "Trovafloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "49617-4",
+        "display": "Carbapenem resistance blaKPC gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18894-6",
+        "display": "Ceftizoxime [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32597-7",
+        "display": "Natamycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18871-4",
+        "display": "Butirosin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "88887-5",
+        "display": "Isavuconazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18928-2",
+        "display": "Gentamicin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101676-5",
+        "display": "VIM Carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "50712-9",
+        "display": "Influenza virus.neuraminidase inhibitor resistance [Susceptibility] Qualitative"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85822-5",
+        "display": "Beta-lactam resistance AmpC blaCMY+blaMOX genes [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100056-1",
+        "display": "Panipenem [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "54191-2",
+        "display": "Cefotaxime+Sulbactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18960-5",
+        "display": "Oleandomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18983-7",
+        "display": "Streptomycin.high potency [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73600-9",
+        "display": "Faropenem [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85835-7",
+        "display": "Beta-lactam resistance ESBL blaCTX-M-8+blaCTX-M-25 Group genes [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "33679-2",
+        "display": "Francisella tularensis DNA [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18885-4",
+        "display": "Ceforanide [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18919-1",
+        "display": "Erythromycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18862-3",
+        "display": "Amoxicillin+Clavulanate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "77682-3",
+        "display": "Staphylococcus aureus methicillin resistance SCCmec+orfX junction [Presence] in Nose by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "98063-1",
+        "display": "Beta-lactam resistance ESBL blaCTX-M-15 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94061-9",
+        "display": "Bacterial gidB gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30299-2",
+        "display": "Amprenavir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "93700-3",
+        "display": "Beta-lactam resistance AmpC blaDHA gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "69379-6",
+        "display": "Vancomycin resistance vanA and vanB and vanC1 and vanC2 genes [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100044-7",
+        "display": "Cefcapene [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "87803-3",
+        "display": "Sulfadimethoxine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18972-0",
+        "display": "Polymyxin B [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18995-1",
+        "display": "Ticarcillin+Clavulanate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94060-1",
+        "display": "Bacterial gyrA gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32374-1",
+        "display": "Cefotiam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18897-9",
+        "display": "Cephalexin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18874-8",
+        "display": "Cefaclor [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101677-3",
+        "display": "NDM Carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55691-0",
+        "display": "Ornidazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18908-4",
+        "display": "Clindamycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "43272-4",
+        "display": "Ceftobiprole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41740-2",
+        "display": "Tazobactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85823-3",
+        "display": "Carbapenem resistance blaGES gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "88250-6",
+        "display": "Cephalosporin resistance blaCTX-M gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "42353-3",
+        "display": "Cefepime+Clavulanate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "69574-2",
+        "display": "Furazolidone [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18982-9",
+        "display": "Streptomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30309-9",
+        "display": "Nelfinavir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73601-7",
+        "display": "Danofloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "86620-2",
+        "display": "Methicillin resistance mecA+mecC genes [Presence] in Nose by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "54928-7",
+        "display": "Tinidazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "33634-7",
+        "display": "Mycobacterium tuberculosis rifAMPin resistance gene [Identifier] in Sputum by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85836-5",
+        "display": "Beta-lactam resistance ESBL blaGES gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "98064-9",
+        "display": "Beta-lactam resistance ESBL blaCTX-M-14 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18884-7",
+        "display": "Cefoperazone [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18861-5",
+        "display": "Amoxicillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32375-8",
+        "display": "Cefmenoxime [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100057-9",
+        "display": "Prothionamide [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18918-3",
+        "display": "Enoxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73590-2",
+        "display": "Razupenem [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30298-4",
+        "display": "lamiVUDine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41730-3",
+        "display": "cefOXitin+Clavulanate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55649-8",
+        "display": "cefTAZidime+Sulbactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "93701-1",
+        "display": "Colistin resistance mcr-2 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100045-4",
+        "display": "Cefozopran [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "58085-2",
+        "display": "Penicillin Parenteral [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18994-4",
+        "display": "Ticarcillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "54200-1",
+        "display": "Griseofulvin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18971-2",
+        "display": "Pivampicillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "19000-9",
+        "display": "Vancomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "265-9",
+        "display": "Ganciclovir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18896-1",
+        "display": "Cefuroxime Parenteral [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18873-0",
+        "display": "Carbenicillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "62256-3",
+        "display": "Aminoglycoside resistance aacA gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18907-6",
+        "display": "Clarithromycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73606-6",
+        "display": "Besifloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18947-2",
+        "display": "Mezlocillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18924-1",
+        "display": "Fluconazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30304-0",
+        "display": "Adefovir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "70121-9",
+        "display": "Francisella tularensis IgG Ab [Units/volume] in Serum or Plasma"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85837-3",
+        "display": "Beta-lactam resistance ESBL blaPER gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32376-6",
+        "display": "Clinafloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18959-7",
+        "display": "Ofloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100058-7",
+        "display": "Prulifloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18936-5",
+        "display": "Kanamycin.high potency [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41735-2",
+        "display": "Everninomicin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "42535-5",
+        "display": "Tipranavir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "65340-2",
+        "display": "Micafungin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35838-2",
+        "display": "Salinomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73595-1",
+        "display": "Nitazoxanide [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100046-2",
+        "display": "Cefquinome [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73596-9",
+        "display": "Marbofloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "75753-4",
+        "display": "Vancomycin resistance vanD gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18913-4",
+        "display": "Cyclacillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72870-9",
+        "display": "Mycobacterium leprae rpoB gene rifAMPin resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "54197-9",
+        "display": "Piperacillin+Sulbactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85825-8",
+        "display": "Carbapenem resistance blaOXA-23-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "19001-7",
+        "display": "Viomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94059-3",
+        "display": "Bacterial pncA gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35792-1",
+        "display": "Difloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "86930-5",
+        "display": "Carbapenemase [Presence] in Isolate"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18902-7",
+        "display": "Cephradine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18891-2",
+        "display": "Cefprozil [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18900-1",
+        "display": "Cephalothin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18946-4",
+        "display": "metroNIDAZOLE [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100059-5",
+        "display": "Rifapentine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18923-3",
+        "display": "Floxacillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30303-2",
+        "display": "Abacavir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35816-8",
+        "display": "Gemifloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85838-1",
+        "display": "Beta-lactam resistance ESBL blaSHV gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18935-7",
+        "display": "Kanamycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18958-9",
+        "display": "Nystatin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18912-6",
+        "display": "Colistin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41736-0",
+        "display": "Oritavancin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72421-1",
+        "display": "Vancomycin resistance vanB gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100047-0",
+        "display": "Cefteram [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85498-4",
+        "display": "Carbapenem resistance blaIMP gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73597-7",
+        "display": "Iclaprim [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "62261-3",
+        "display": "Vancomycin resistance vanA + vanB genes [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32377-4",
+        "display": "Cefetamet [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "50633-7",
+        "display": "cefTRIAXone [Susceptibility] for meningitis"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85826-6",
+        "display": "Carbapenem resistance blaOXA-24-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18901-9",
+        "display": "Cephapirin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18890-4",
+        "display": "Cefpodoxime [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35827-5",
+        "display": "Orbifloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73585-2",
+        "display": "Tizoxanide [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94058-5",
+        "display": "Bacterial embB gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30306-5",
+        "display": "Efavirenz [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "77735-9",
+        "display": "Mycobacterium abscessus complex clarithromycin resistance erm(41) truncated gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "51719-3",
+        "display": "Paromomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73604-1",
+        "display": "Ceftaroline+Avibactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85839-9",
+        "display": "Beta-lactam resistance ESBL blaTEM gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55696-9",
+        "display": "Oxolinate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "63072-3",
+        "display": "Mycobacterium tuberculosis inhA gene isoniazid low level resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "31039-1",
+        "display": "Moxifloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41733-7",
+        "display": "Clavulanate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "20629-2",
+        "display": "levoFLOXacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32603-3",
+        "display": "Itraconazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18881-3",
+        "display": "Cefmetazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "99281-8",
+        "display": "Lefamulin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18915-9",
+        "display": "Demeclocycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35813-5",
+        "display": "Garenoxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "52128-6",
+        "display": "Cefotaxime [Susceptibility] for meningitis"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18938-1",
+        "display": "Lincomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "86713-5",
+        "display": "Carbapenem resistance blaOXA-134-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "20389-3",
+        "display": "Mupirocin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32378-2",
+        "display": "Caspofungin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18991-0",
+        "display": "Temocillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55292-7",
+        "display": "Linopristin+Flopristin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55706-6",
+        "display": "Piromidate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85827-4",
+        "display": "Carbapenem resistance bla OXA-48-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "51698-9",
+        "display": "Dapsone [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18893-8",
+        "display": "cefTAZidime [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18927-4",
+        "display": "Fusidate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18870-6",
+        "display": "Bacitracin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18904-3",
+        "display": "Chlortetracycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100048-8",
+        "display": "Clarithromycin+Ethambutol [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "87798-5",
+        "display": "Tulathromycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30305-7",
+        "display": "Delavirdine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73605-8",
+        "display": "Ceftaroline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18948-0",
+        "display": "Minocycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "77736-7",
+        "display": "Mycobacterium abscessus complex clarithromycin resistance erm(41) gene [Interpretation] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "54194-6",
+        "display": "Mezlocillin+Sulbactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "31038-3",
+        "display": "Gatifloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41734-5",
+        "display": "Dalbavancin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18880-5",
+        "display": "Cefixime [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "7889-9",
+        "display": "Francisella tularensis IgG Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18937-3",
+        "display": "Ketoconazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73594-4",
+        "display": "Omadacycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55717-3",
+        "display": "Ticarcillin+Sulbactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "1-8",
+        "display": "Acyclovir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18914-2",
+        "display": "cycloSERINE [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "86712-7",
+        "display": "Carbapenem resistance blaOXA gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "20388-5",
+        "display": "Nitrofurazone [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32379-0",
+        "display": "Voriconazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "54908-9",
+        "display": "Cefminox [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "75756-7",
-        "display": "Bacteria identified in Isolate by MS.MALDI-TOF",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Bakterien identifiziert in Isolat mit MS.MALDI-TOF"
-        } ]
-      }, {
-        "code": "91895-3",
-        "display": "Bacterial strain [Type] in Isolate by Sequencing",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Bakterienstamm [Typ] in Isolat mit Sequenzierung"
-        } ]
-      }, {
-        "code": "90246-0",
-        "display": "Bacterial whole genome [Nucleotide sequence] in Isolate by Sequencing",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Bakterielles Gesamtgenom [Nukleotidsequenz] in Isolat mit Sequenzierung"
-        } ]
-      } ]
-    }, {
-      "valueSet": [ "https://demis.rki.de/fhir/ValueSet/resistance" ]
-    } ]
+        "display": "Bacteria identified in Isolate by MS.MALDI-TOF"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18990-2",
+        "display": "Temafloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23640-6",
+        "display": "Quinupristin+Dalfopristin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85828-2",
+        "display": "Carbapenem resistance blaOXA-58-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "46732-4",
+        "display": "Francisella tularensis subtype [Identifier] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100049-6",
+        "display": "Eravacycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18903-5",
+        "display": "Chloramphenicol [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18926-6",
+        "display": "Framycetin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35848-1",
+        "display": "Tiamulin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "87797-7",
+        "display": "Sulfathiazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18949-8",
+        "display": "Miocamycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18892-0",
+        "display": "Cefsulodin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35802-8",
+        "display": "Ertapenem [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "88885-9",
+        "display": "Delafloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18943-1",
+        "display": "Meropenem [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18989-4",
+        "display": "Teicoplanin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73588-6",
+        "display": "Sarafloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94055-1",
+        "display": "Bacterial inhA gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18966-2",
+        "display": "Penicillin V [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30300-8",
+        "display": "Didanosine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "93850-6",
+        "display": "Pretomanid [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35762-4",
+        "display": "Cefditoren [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72863-4",
+        "display": "Mycobacterium leprae gyrB gene fluoroquinolone resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "89372-7",
+        "display": "Mycobacterium tuberculosis complex rpoB gene rifAMPin resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18868-0",
+        "display": "Aztreonam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41739-4",
+        "display": "Sulbactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "99034-1",
+        "display": "Trimethoprim resistance dfrA1 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94274-8",
+        "display": "Bedaquiline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18978-7",
+        "display": "Roxithromycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18955-5",
+        "display": "Nitrofurantoin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "99035-8",
+        "display": "Trimethoprim resistance dfrA5 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "19149-4",
+        "display": "Rifabutin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18932-4",
+        "display": "Imipenem [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "93390-3",
+        "display": "Carbapenem resistance blaOXA-23-like+blaOXA-48-like genes [Presence] in Isolate or Specimen by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30311-5",
+        "display": "Nevirapine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "54166-4",
+        "display": "Cefoperazone+Sulbactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18869-8",
+        "display": "Bacampicillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23638-0",
+        "display": "Grepafloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "57896-3",
+        "display": "Influenza virus A 2009 H1N1v.neuraminidase inhibitor resistance [Susceptibility] in Specimen by Genotype method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41727-9",
+        "display": "Aztreonam+Clavulanate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85829-0",
+        "display": "Carbapenem resistance blaSPM gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18857-3",
+        "display": "Almecillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "33627-1",
+        "display": "Tenofovir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18944-9",
+        "display": "Methacycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "63368-5",
+        "display": "Carbapenem resistance genes [Identifier] by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "61188-9",
+        "display": "Clindamycin.induced [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "88462-7",
+        "display": "Carbapenem [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18965-4",
+        "display": "Penicillin G [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35861-4",
+        "display": "Virginiamycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18942-3",
+        "display": "Meclocycline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18988-6",
+        "display": "Talampicillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94054-4",
+        "display": "Bacterial katG gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73589-4",
+        "display": "rifAXIMin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23627-3",
+        "display": "Clofazimine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18879-7",
+        "display": "Cefepime [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "77734-2",
+        "display": "Mycobacterium abscessus complex clarithromycin resistance erm(41) full length gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72887-3",
+        "display": "Staphylococcus aureus methicillin resistance SCCmec [Presence] in Nose by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "93851-4",
+        "display": "Delamanid [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72864-2",
+        "display": "Mycobacterium tuberculosis rpsL+rrs genes aminoglycoside resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18867-2",
+        "display": "Azlocillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18954-8",
+        "display": "Netilmicin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18977-9",
+        "display": "Rosoxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18931-6",
+        "display": "Hetacillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "86714-3",
+        "display": "Carbapenem resistance blaOXA-51-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94065-0",
+        "display": "Bacterial rpoB gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30310-7",
+        "display": "Saquinavir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41728-7",
+        "display": "Biapenem [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "33628-9",
+        "display": "Cidofovir [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18920-9",
+        "display": "Erythromycin+Sulfisoxazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "531-4",
+        "display": "Zidovudine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "60535-2",
+        "display": "Doripenem [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "48816-3",
+        "display": "Staphylococcus aureus Panton-Valentine leukocidin gene [Presence] in Isolate or Specimen by Molecular genetics method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "48813-0",
+        "display": "Methicillin resistance mecA gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18922-5",
+        "display": "Ethionamide [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101123-8",
+        "display": "Bacterial carbapenem resistance blaIMI gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30302-4",
+        "display": "Stavudine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55631-6",
+        "display": "Cephalothin+Sulbactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18859-9",
+        "display": "Amdinocillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23628-1",
+        "display": "Sparfloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "97941-9",
+        "display": "Cycloheximide [Susceptibility] in Isolate Qualitative"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41737-8",
+        "display": "Ramoplanin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "54188-8",
+        "display": "Posaconazole [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35783-0",
+        "display": "Cefuroxime Oral [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "16878-1",
+        "display": "Francisella tularensis IgM Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72865-9",
+        "display": "Mycobacterium tuberculosis ethB gene ethionamide resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18911-8",
+        "display": "Colistimethate"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18957-1",
+        "display": "Novobiocin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18934-0",
+        "display": "Isoniazid [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73598-5",
+        "display": "Finafloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "62260-5",
+        "display": "Tetracycline resistance tetK + tetM genes [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85786-2",
+        "display": "Methicillin resistance mecA gene [Presence] by NAA with non-probe detection in Positive blood culture"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "25597-6",
+        "display": "Josamycine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "55676-1",
+        "display": "Flumequine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "25608-1",
+        "display": "Nitroxoline [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35771-5",
+        "display": "Cefotaxime+Clavulanate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "93699-7",
+        "display": "Beta-lactam resistance AmpC blaCMY-2 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "86221-9",
+        "display": "Colistin resistance mcr-1 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35805-1",
+        "display": "Bambermycins [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73586-0",
+        "display": "Tedizolid [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18969-6",
+        "display": "Piperacillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "51694-8",
+        "display": "Carumonam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94057-7",
+        "display": "Bacterial ahpC gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23629-9",
+        "display": "Para aminosalicylate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18921-7",
+        "display": "Ethambutol [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73587-8",
+        "display": "Solithromycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18967-0",
+        "display": "Phenethicillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30301-6",
+        "display": "Zalcitabine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "57095-2",
+        "display": "Anidulafungin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41738-6",
+        "display": "Rosamicin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "95809-0",
+        "display": "Carbapenem resistance genes [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "103672-2",
+        "display": "Amoxicillin+Clavulanate [Susceptibility] for UTI"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18979-5",
+        "display": "Sisomicin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72866-7",
+        "display": "Mycobacterium tuberculosis ethA gene ethionamide resistance mutation [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18956-3",
+        "display": "Norfloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73599-3",
+        "display": "Fidaxomicin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18910-0",
+        "display": "Cloxacillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "88892-5",
+        "display": "Meropenem+Vaborbactam [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100060-3",
+        "display": "Tildipirosin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85787-0",
+        "display": "Vancomycin resistance vanA + vanB genes [Presence] by NAA with non-probe detection in Positive blood culture"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35795-4",
+        "display": "Dirithromycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "48814-8",
+        "display": "Vancomycin resistance vanA gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41726-1",
+        "display": "ABT492 [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18945-6",
+        "display": "Methicillin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94056-9",
+        "display": "Bacterial fabG1 gene drug resistance mutation [Identifier] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18968-8",
+        "display": "Pipemidate [Susceptibility]"
+      }
+    ]
   }
 }

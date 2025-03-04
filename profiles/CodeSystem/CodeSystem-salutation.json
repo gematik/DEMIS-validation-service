@@ -2,37 +2,46 @@
   "resourceType": "CodeSystem",
   "id": "salutation",
   "url": "https://demis.rki.de/fhir/CodeSystem/salutation",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "name": "Salutation",
   "title": "Anrede",
   "status": "active",
-  "date": "2023-05-30",
+  "experimental": false,
+  "date": "2023-09-19",
+  "publisher": "Robert Koch-Institut",
   "description": "Das CodeSystem Salutation enthält die Codes der Anreden.",
   "caseSensitive": false,
   "valueSet": "https://demis.rki.de/fhir/ValueSet/salutation",
   "content": "complete",
   "count": 2,
-  "concept": [ {
-    "code": "mrs",
-    "display": "Frau",
-    "designation": [ {
-      "language": "en-US",
-      "use": {
-        "system": "http://snomed.info/sct",
-        "code": "900000000000003001"
-      },
-      "value": "Mrs."
-    } ]
-  }, {
-    "code": "mr",
-    "display": "Herr",
-    "designation": [ {
-      "language": "en-US",
-      "use": {
-        "system": "http://snomed.info/sct",
-        "code": "900000000000003001"
-      },
-      "value": "Mr."
-    } ]
-  } ]
+  "concept": [
+    {
+      "code": "mrs",
+      "display": "Frau",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mrs."
+        }
+      ]
+    },
+    {
+      "code": "mr",
+      "display": "Herr",
+      "designation": [
+        {
+          "language": "en-US",
+          "use": {
+            "system": "http://snomed.info/sct",
+            "code": "900000000000003001"
+          },
+          "value": "Mr."
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,3816 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetCountry",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetCountry",
+  "version": "1.4.1",
+  "name": "AnswerSetCountry",
+  "title": "Anwort Country mit staatenlos und Ausland",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-09-02",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet answerSetCountry enthält die Codes der Antwortmöglichkeiten für Country mit staatenlos und Ausland.",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:iso:std:iso:3166",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 253
+              }
+            ],
+            "code": "AD",
+            "display": "Andorra"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 25
+              }
+            ],
+            "code": "AE",
+            "display": "United Arab Emirates"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 257
+              }
+            ],
+            "code": "AF",
+            "display": "Afghanistan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 249
+              }
+            ],
+            "code": "AG",
+            "display": "Antigua and Barbuda"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 251
+              }
+            ],
+            "code": "AI",
+            "display": "Anguilla"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 256
+              }
+            ],
+            "code": "AL",
+            "display": "Albania"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 247
+              }
+            ],
+            "code": "AM",
+            "display": "Armenia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 252
+              }
+            ],
+            "code": "AO",
+            "display": "Angola"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 250
+              }
+            ],
+            "code": "AQ",
+            "display": "Antarctica"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 248
+              }
+            ],
+            "code": "AR",
+            "display": "Argentina"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 254
+              }
+            ],
+            "code": "AS",
+            "display": "American Samoa"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 244
+              }
+            ],
+            "code": "AT",
+            "display": "Austria"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 245
+              }
+            ],
+            "code": "AU",
+            "display": "Australia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 246
+              }
+            ],
+            "code": "AW",
+            "display": "Aruba"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 191
+              }
+            ],
+            "code": "AX",
+            "display": "Eland Islands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 243
+              }
+            ],
+            "code": "AZ",
+            "display": "Azerbaijan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 230
+              }
+            ],
+            "code": "BA",
+            "display": "Bosnia and Herzegovina"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 239
+              }
+            ],
+            "code": "BB",
+            "display": "Barbados"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 240
+              }
+            ],
+            "code": "BD",
+            "display": "Bangladesh"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 237
+              }
+            ],
+            "code": "BE",
+            "display": "Belgium"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 223
+              }
+            ],
+            "code": "BF",
+            "display": "Burkina Faso"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 224
+              }
+            ],
+            "code": "BG",
+            "display": "Bulgaria"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 241
+              }
+            ],
+            "code": "BH",
+            "display": "Bahrain"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 222
+              }
+            ],
+            "code": "BI",
+            "display": "Burundi"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 235
+              }
+            ],
+            "code": "BJ",
+            "display": "Benin"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 74
+              }
+            ],
+            "code": "BL",
+            "display": "Saint Barthilemy"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 234
+              }
+            ],
+            "code": "BM",
+            "display": "Bermuda"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 225
+              }
+            ],
+            "code": "BN",
+            "display": "Brunei Darussalam"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 232
+              }
+            ],
+            "code": "BO",
+            "display": "Bolivia, Plurinational State of"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 231
+              }
+            ],
+            "code": "BQ",
+            "display": "Bonaire, Sint Eustatius and Saba"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 227
+              }
+            ],
+            "code": "BR",
+            "display": "Brazil"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 242
+              }
+            ],
+            "code": "BS",
+            "display": "Bahamas"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 233
+              }
+            ],
+            "code": "BT",
+            "display": "Bhutan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 228
+              }
+            ],
+            "code": "BV",
+            "display": "Bouvet Island"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 229
+              }
+            ],
+            "code": "BW",
+            "display": "Botswana"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 238
+              }
+            ],
+            "code": "BY",
+            "display": "Belarus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 236
+              }
+            ],
+            "code": "BZ",
+            "display": "Belize"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 218
+              }
+            ],
+            "code": "CA",
+            "display": "Canada"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 211
+              }
+            ],
+            "code": "CC",
+            "display": "Cocos (Keeling) Islands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 207
+              }
+            ],
+            "code": "CD",
+            "display": "Congo, the Democratic Republic of the"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 216
+              }
+            ],
+            "code": "CF",
+            "display": "Central African Republic"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 208
+              }
+            ],
+            "code": "CG",
+            "display": "Congo"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 43
+              }
+            ],
+            "code": "CH",
+            "display": "Switzerland"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 203
+              }
+            ],
+            "code": "CI",
+            "display": "Ctte d'Ivoire"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 206
+              }
+            ],
+            "code": "CK",
+            "display": "Cook Islands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 214
+              }
+            ],
+            "code": "CL",
+            "display": "Chile"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 219
+              }
+            ],
+            "code": "CM",
+            "display": "Cameroon"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 213
+              }
+            ],
+            "code": "CN",
+            "display": "China"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 210
+              }
+            ],
+            "code": "CO",
+            "display": "Colombia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 205
+              }
+            ],
+            "code": "CR",
+            "display": "Costa Rica"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 202
+              }
+            ],
+            "code": "CU",
+            "display": "Cuba"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 221
+              }
+            ],
+            "code": "CV",
+            "display": "Cabo Verde"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 201
+              }
+            ],
+            "code": "CW",
+            "display": "Curagao"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 212
+              }
+            ],
+            "code": "CX",
+            "display": "Christmas Island"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 200
+              }
+            ],
+            "code": "CY",
+            "display": "Cyprus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 199
+              }
+            ],
+            "code": "CZ",
+            "display": "Czechia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 996
+              }
+            ],
+            "code": "DE",
+            "display": "Germany"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 197
+              }
+            ],
+            "code": "DJ",
+            "display": "Djibouti"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 198
+              }
+            ],
+            "code": "DK",
+            "display": "Denmark"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 196
+              }
+            ],
+            "code": "DM",
+            "display": "Dominica"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 195
+              }
+            ],
+            "code": "DO",
+            "display": "Dominican Republic"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 255
+              }
+            ],
+            "code": "DZ",
+            "display": "Algeria"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 194
+              }
+            ],
+            "code": "EC",
+            "display": "Ecuador"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 188
+              }
+            ],
+            "code": "EE",
+            "display": "Estonia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 193
+              }
+            ],
+            "code": "EG",
+            "display": "Egypt"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 13
+              }
+            ],
+            "code": "EH",
+            "display": "Western Sahara"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 189
+              }
+            ],
+            "code": "ER",
+            "display": "Eritrea"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 50
+              }
+            ],
+            "code": "ES",
+            "display": "Spain"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 187
+              }
+            ],
+            "code": "ET",
+            "display": "Ethiopia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 183
+              }
+            ],
+            "code": "FI",
+            "display": "Finland"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 184
+              }
+            ],
+            "code": "FJ",
+            "display": "Fiji"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 186
+              }
+            ],
+            "code": "FK",
+            "display": "Falkland Islands (Malvinas)"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 114
+              }
+            ],
+            "code": "FM",
+            "display": "Micronesia, Federated States of"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 185
+              }
+            ],
+            "code": "FO",
+            "display": "Faroe Islands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 182
+              }
+            ],
+            "code": "FR",
+            "display": "France"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 178
+              }
+            ],
+            "code": "GA",
+            "display": "Gabon"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 24
+              }
+            ],
+            "code": "GB",
+            "display": "United Kingdom of Great Britain and Northern Ireland"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 171
+              }
+            ],
+            "code": "GD",
+            "display": "Grenada"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 176
+              }
+            ],
+            "code": "GE",
+            "display": "Georgia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 181
+              }
+            ],
+            "code": "GF",
+            "display": "French Guiana"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 167
+              }
+            ],
+            "code": "GG",
+            "display": "Guernsey"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 175
+              }
+            ],
+            "code": "GH",
+            "display": "Ghana"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 174
+              }
+            ],
+            "code": "GI",
+            "display": "Gibraltar"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 172
+              }
+            ],
+            "code": "GL",
+            "display": "Greenland"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 177
+              }
+            ],
+            "code": "GM",
+            "display": "Gambia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 166
+              }
+            ],
+            "code": "GN",
+            "display": "Guinea"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 170
+              }
+            ],
+            "code": "GP",
+            "display": "Guadeloupe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 190
+              }
+            ],
+            "code": "GQ",
+            "display": "Equatorial Guinea"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 173
+              }
+            ],
+            "code": "GR",
+            "display": "Greece"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 52
+              }
+            ],
+            "code": "GS",
+            "display": "South Georgia and the South Sandwich Islands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 168
+              }
+            ],
+            "code": "GT",
+            "display": "Guatemala"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 169
+              }
+            ],
+            "code": "GU",
+            "display": "Guam"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 165
+              }
+            ],
+            "code": "GW",
+            "display": "Guinea-Bissau"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 164
+              }
+            ],
+            "code": "GY",
+            "display": "Guyana"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 159
+              }
+            ],
+            "code": "HK",
+            "display": "Hong Kong"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 162
+              }
+            ],
+            "code": "HM",
+            "display": "Heard Island and McDonald Islands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 160
+              }
+            ],
+            "code": "HN",
+            "display": "Honduras"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 204
+              }
+            ],
+            "code": "HR",
+            "display": "Croatia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 163
+              }
+            ],
+            "code": "HT",
+            "display": "Haiti"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 158
+              }
+            ],
+            "code": "HU",
+            "display": "Hungary"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 155
+              }
+            ],
+            "code": "ID",
+            "display": "Indonesia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 152
+              }
+            ],
+            "code": "IE",
+            "display": "Ireland"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 150
+              }
+            ],
+            "code": "IL",
+            "display": "Israel"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 151
+              }
+            ],
+            "code": "IM",
+            "display": "Isle of Man"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 156
+              }
+            ],
+            "code": "IN",
+            "display": "India"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 226
+              }
+            ],
+            "code": "IO",
+            "display": "British Indian Ocean Territory"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 153
+              }
+            ],
+            "code": "IQ",
+            "display": "Iraq"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 154
+              }
+            ],
+            "code": "IR",
+            "display": "Iran, Islamic Republic of"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 157
+              }
+            ],
+            "code": "IS",
+            "display": "Iceland"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 149
+              }
+            ],
+            "code": "IT",
+            "display": "Italy"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 146
+              }
+            ],
+            "code": "JE",
+            "display": "Jersey"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 148
+              }
+            ],
+            "code": "JM",
+            "display": "Jamaica"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 145
+              }
+            ],
+            "code": "JO",
+            "display": "Jordan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 147
+              }
+            ],
+            "code": "JP",
+            "display": "Japan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 143
+              }
+            ],
+            "code": "KE",
+            "display": "Kenya"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 138
+              }
+            ],
+            "code": "KG",
+            "display": "Kyrgyzstan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 220
+              }
+            ],
+            "code": "KH",
+            "display": "Cambodia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 142
+              }
+            ],
+            "code": "KI",
+            "display": "Kiribati"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 209
+              }
+            ],
+            "code": "KM",
+            "display": "Comoros"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 72
+              }
+            ],
+            "code": "KN",
+            "display": "Saint Kitts and Nevis"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 141
+              }
+            ],
+            "code": "KP",
+            "display": "Korea, Democratic People's Republic of"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 140
+              }
+            ],
+            "code": "KR",
+            "display": "Korea, Republic of"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 139
+              }
+            ],
+            "code": "KW",
+            "display": "Kuwait"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 217
+              }
+            ],
+            "code": "KY",
+            "display": "Cayman Islands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 144
+              }
+            ],
+            "code": "KZ",
+            "display": "Kazakhstan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 137
+              }
+            ],
+            "code": "LA",
+            "display": "Lao People's Democratic Republic"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 135
+              }
+            ],
+            "code": "LB",
+            "display": "Lebanon"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 71
+              }
+            ],
+            "code": "LC",
+            "display": "Saint Lucia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 131
+              }
+            ],
+            "code": "LI",
+            "display": "Liechtenstein"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 49
+              }
+            ],
+            "code": "LK",
+            "display": "Sri Lanka"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 133
+              }
+            ],
+            "code": "LR",
+            "display": "Liberia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 134
+              }
+            ],
+            "code": "LS",
+            "display": "Lesotho"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 130
+              }
+            ],
+            "code": "LT",
+            "display": "Lithuania"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 129
+              }
+            ],
+            "code": "LU",
+            "display": "Luxembourg"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 136
+              }
+            ],
+            "code": "LV",
+            "display": "Latvia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 132
+              }
+            ],
+            "code": "LY",
+            "display": "Libya"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 108
+              }
+            ],
+            "code": "MA",
+            "display": "Morocco"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 112
+              }
+            ],
+            "code": "MC",
+            "display": "Monaco"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 113
+              }
+            ],
+            "code": "MD",
+            "display": "Moldova, Republic of"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 110
+              }
+            ],
+            "code": "ME",
+            "display": "Montenegro"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 70
+              }
+            ],
+            "code": "MF",
+            "display": "Saint Martin (French part)"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 126
+              }
+            ],
+            "code": "MG",
+            "display": "Madagascar"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 120
+              }
+            ],
+            "code": "MH",
+            "display": "Marshall Islands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 127
+              }
+            ],
+            "code": "MK",
+            "display": "Macedonia, the former Yugoslav Republic of"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 122
+              }
+            ],
+            "code": "ML",
+            "display": "Mali"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 106
+              }
+            ],
+            "code": "MM",
+            "display": "Myanmar"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 111
+              }
+            ],
+            "code": "MN",
+            "display": "Mongolia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 128
+              }
+            ],
+            "code": "MO",
+            "display": "Macao"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 94
+              }
+            ],
+            "code": "MP",
+            "display": "Northern Mariana Islands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 119
+              }
+            ],
+            "code": "MQ",
+            "display": "Martinique"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 118
+              }
+            ],
+            "code": "MR",
+            "display": "Mauritania"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 109
+              }
+            ],
+            "code": "MS",
+            "display": "Montserrat"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 121
+              }
+            ],
+            "code": "MT",
+            "display": "Malta"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 117
+              }
+            ],
+            "code": "MU",
+            "display": "Mauritius"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 123
+              }
+            ],
+            "code": "MV",
+            "display": "Maldives"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 125
+              }
+            ],
+            "code": "MW",
+            "display": "Malawi"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 115
+              }
+            ],
+            "code": "MX",
+            "display": "Mexico"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 124
+              }
+            ],
+            "code": "MY",
+            "display": "Malaysia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 107
+              }
+            ],
+            "code": "MZ",
+            "display": "Mozambique"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 105
+              }
+            ],
+            "code": "NA",
+            "display": "Namibia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 101
+              }
+            ],
+            "code": "NC",
+            "display": "New Caledonia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 98
+              }
+            ],
+            "code": "NE",
+            "display": "Niger"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 95
+              }
+            ],
+            "code": "NF",
+            "display": "Norfolk Island"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 97
+              }
+            ],
+            "code": "NG",
+            "display": "Nigeria"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 99
+              }
+            ],
+            "code": "NI",
+            "display": "Nicaragua"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 102
+              }
+            ],
+            "code": "NL",
+            "display": "Netherlands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 93
+              }
+            ],
+            "code": "NO",
+            "display": "Norway"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 103
+              }
+            ],
+            "code": "NP",
+            "display": "Nepal"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 104
+              }
+            ],
+            "code": "NR",
+            "display": "Nauru"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 96
+              }
+            ],
+            "code": "NU",
+            "display": "Niue"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "NZ",
+            "display": "New Zealand"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 92
+              }
+            ],
+            "code": "OM",
+            "display": "Oman"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 88
+              }
+            ],
+            "code": "PA",
+            "display": "Panama"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 85
+              }
+            ],
+            "code": "PE",
+            "display": "Peru"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 180
+              }
+            ],
+            "code": "PF",
+            "display": "French Polynesia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 87
+              }
+            ],
+            "code": "PG",
+            "display": "Papua New Guinea"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 84
+              }
+            ],
+            "code": "PH",
+            "display": "Philippines"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 91
+              }
+            ],
+            "code": "PK",
+            "display": "Pakistan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 82
+              }
+            ],
+            "code": "PL",
+            "display": "Poland"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 69
+              }
+            ],
+            "code": "PM",
+            "display": "Saint Pierre and Miquelon"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 83
+              }
+            ],
+            "code": "PN",
+            "display": "Pitcairn"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 80
+              }
+            ],
+            "code": "PR",
+            "display": "Puerto Rico"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 89
+              }
+            ],
+            "code": "PS",
+            "display": "Palestine, State of"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 81
+              }
+            ],
+            "code": "PT",
+            "display": "Portugal"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "PW",
+            "display": "Palau"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 86
+              }
+            ],
+            "code": "PY",
+            "display": "Paraguay"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 79
+              }
+            ],
+            "code": "QA",
+            "display": "Qatar"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 78
+              }
+            ],
+            "code": "RE",
+            "display": "Riunion"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 77
+              }
+            ],
+            "code": "RO",
+            "display": "Romania"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 62
+              }
+            ],
+            "code": "RS",
+            "display": "Serbia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 76
+              }
+            ],
+            "code": "RU",
+            "display": "Russian Federation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 75
+              }
+            ],
+            "code": "RW",
+            "display": "Rwanda"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 64
+              }
+            ],
+            "code": "SA",
+            "display": "Saudi Arabia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 55
+              }
+            ],
+            "code": "SB",
+            "display": "Solomon Islands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 61
+              }
+            ],
+            "code": "SC",
+            "display": "Seychelles"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 48
+              }
+            ],
+            "code": "SD",
+            "display": "Sudan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 44
+              }
+            ],
+            "code": "SE",
+            "display": "Sweden"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 59
+              }
+            ],
+            "code": "SG",
+            "display": "Singapore"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 73
+              }
+            ],
+            "code": "SH",
+            "display": "Saint Helena, Ascension and Tristan da Cunha"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 56
+              }
+            ],
+            "code": "SI",
+            "display": "Slovenia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 46
+              }
+            ],
+            "code": "SJ",
+            "display": "Svalbard and Jan Mayen"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 57
+              }
+            ],
+            "code": "SK",
+            "display": "Slovakia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 60
+              }
+            ],
+            "code": "SL",
+            "display": "Sierra Leone"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 66
+              }
+            ],
+            "code": "SM",
+            "display": "San Marino"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 63
+              }
+            ],
+            "code": "SN",
+            "display": "Senegal"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 54
+              }
+            ],
+            "code": "SO",
+            "display": "Somalia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 47
+              }
+            ],
+            "code": "SR",
+            "display": "Suriname"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 51
+              }
+            ],
+            "code": "SS",
+            "display": "South Sudan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 65
+              }
+            ],
+            "code": "ST",
+            "display": "Sao Tome and Principe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 192
+              }
+            ],
+            "code": "SV",
+            "display": "El Salvador"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 58
+              }
+            ],
+            "code": "SX",
+            "display": "Sint Maarten (Dutch part)"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 42
+              }
+            ],
+            "code": "SY",
+            "display": "Syrian Arab Republic"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 45
+              }
+            ],
+            "code": "SZ",
+            "display": "Swaziland"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 29
+              }
+            ],
+            "code": "TC",
+            "display": "Turks and Caicos Islands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 215
+              }
+            ],
+            "code": "TD",
+            "display": "Chad"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 179
+              }
+            ],
+            "code": "TF",
+            "display": "French Southern Territories"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 36
+              }
+            ],
+            "code": "TG",
+            "display": "Togo"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 38
+              }
+            ],
+            "code": "TH",
+            "display": "Thailand"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 40
+              }
+            ],
+            "code": "TJ",
+            "display": "Tajikistan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 35
+              }
+            ],
+            "code": "TK",
+            "display": "Tokelau"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 37
+              }
+            ],
+            "code": "TL",
+            "display": "Timor-Leste"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 30
+              }
+            ],
+            "code": "TM",
+            "display": "Turkmenistan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 32
+              }
+            ],
+            "code": "TN",
+            "display": "Tunisia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 34
+              }
+            ],
+            "code": "TO",
+            "display": "Tonga"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 31
+              }
+            ],
+            "code": "TR",
+            "display": "Turkey"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 33
+              }
+            ],
+            "code": "TT",
+            "display": "Trinidad and Tobago"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 28
+              }
+            ],
+            "code": "TV",
+            "display": "Tuvalu"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 41
+              }
+            ],
+            "code": "TW",
+            "display": "Taiwan, Province of China"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 39
+              }
+            ],
+            "code": "TZ",
+            "display": "Tanzania, United Republic of"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 26
+              }
+            ],
+            "code": "UA",
+            "display": "Ukraine"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 27
+              }
+            ],
+            "code": "UG",
+            "display": "Uganda"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 23
+              }
+            ],
+            "code": "UM",
+            "display": "United States Minor Outlying Islands"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 22
+              }
+            ],
+            "code": "US",
+            "display": "United States of America"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 21
+              }
+            ],
+            "code": "UY",
+            "display": "Uruguay"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 20
+              }
+            ],
+            "code": "UZ",
+            "display": "Uzbekistan"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 161
+              }
+            ],
+            "code": "VA",
+            "display": "Holy See"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 68
+              }
+            ],
+            "code": "VC",
+            "display": "Saint Vincent and the Grenadines"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 18
+              }
+            ],
+            "code": "VE",
+            "display": "Venezuela, Bolivarian Republic of"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 15
+              }
+            ],
+            "code": "VG",
+            "display": "Virgin Islands, British"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 16
+              }
+            ],
+            "code": "VI",
+            "display": "Virgin Islands,"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 17
+              }
+            ],
+            "code": "VN",
+            "display": "Viet Nam"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 19
+              }
+            ],
+            "code": "VU",
+            "display": "Vanuatu"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 14
+              }
+            ],
+            "code": "WF",
+            "display": "Wallis and Futuna"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 67
+              }
+            ],
+            "code": "WS",
+            "display": "Samoa"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 12
+              }
+            ],
+            "code": "YE",
+            "display": "Yemen"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 116
+              }
+            ],
+            "code": "YT",
+            "display": "Mayotte"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 53
+              }
+            ],
+            "code": "ZA",
+            "display": "South Africa"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 11
+              }
+            ],
+            "code": "ZM",
+            "display": "Zambia"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 10
+              }
+            ],
+            "code": "ZW",
+            "display": "Zimbabwe"
+          }
+        ]
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/noCountry",
+        "version": "1.1.0"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 999
+              }
+            ],
+            "code": "ASKU",
+            "display": "asked but unknown"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1000
+              }
+            ],
+            "code": "NASK",
+            "display": "not asked"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-02T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "HM",
+        "display": "Heard & McDonald Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "HN",
+        "display": "Honduras"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "HK",
+        "display": "Hong Kong SAR China"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "HU",
+        "display": "Hungary"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "HT",
+        "display": "Haiti"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "YE",
+        "display": "Yemen"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "HR",
+        "display": "Croatia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GY",
+        "display": "Guyana"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GW",
+        "display": "Guinea-Bissau"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GL",
+        "display": "Greenland"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GM",
+        "display": "Gambia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GH",
+        "display": "Ghana"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GI",
+        "display": "Gibraltar"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GF",
+        "display": "French Guiana"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GG",
+        "display": "Guernsey"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GT",
+        "display": "Guatemala"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GU",
+        "display": "Guam"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GR",
+        "display": "Greece"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GS",
+        "display": "South Georgia & South Sandwich Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GP",
+        "display": "Guadeloupe"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GQ",
+        "display": "Equatorial Guinea"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GN",
+        "display": "Guinea"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "WF",
+        "display": "Wallis & Futuna"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GD",
+        "display": "Grenada"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GE",
+        "display": "Georgia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GB",
+        "display": "United Kingdom"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "WS",
+        "display": "Samoa"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "GA",
+        "display": "Gabon"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "JO",
+        "display": "Jordan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "JP",
+        "display": "Japan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "JM",
+        "display": "Jamaica"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "ZM",
+        "display": "Zambia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "ZW",
+        "display": "Zimbabwe"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "JE",
+        "display": "Jersey"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "IN",
+        "display": "India"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "IO",
+        "display": "British Indian Ocean Territory"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "IL",
+        "display": "Israel"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "IM",
+        "display": "Isle of Man"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "IT",
+        "display": "Italy"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "IR",
+        "display": "Iran"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "IS",
+        "display": "Iceland"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "ZA",
+        "display": "South Africa"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "IQ",
+        "display": "Iraq"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "ID",
+        "display": "Indonesia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "YT",
+        "display": "Mayotte"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "IE",
+        "display": "Ireland"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "LR",
+        "display": "Liberia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "LK",
+        "display": "Sri Lanka"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "LY",
+        "display": "Libya"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "LU",
+        "display": "Luxembourg"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "LV",
+        "display": "Latvia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "LS",
+        "display": "Lesotho"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "LT",
+        "display": "Lithuania"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "LA",
+        "display": "Laos"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "LB",
+        "display": "Lebanon"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "KZ",
+        "display": "Kazakhstan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "LI",
+        "display": "Liechtenstein"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "LC",
+        "display": "St. Lucia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "KP",
+        "display": "North Korea"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "KN",
+        "display": "St. Kitts & Nevis"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "KM",
+        "display": "Comoros"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "KY",
+        "display": "Cayman Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "KW",
+        "display": "Kuwait"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "KR",
+        "display": "South Korea"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "KH",
+        "display": "Cambodia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "KI",
+        "display": "Kiribati"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "KG",
+        "display": "Kyrgyzstan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "KE",
+        "display": "Kenya"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NR",
+        "display": "Nauru"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NO",
+        "display": "Norway"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NP",
+        "display": "Nepal"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NZ",
+        "display": "New Zealand"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NU",
+        "display": "Niue"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NC",
+        "display": "New Caledonia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NA",
+        "display": "Namibia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NL",
+        "display": "Netherlands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NI",
+        "display": "Nicaragua"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NG",
+        "display": "Nigeria"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NE",
+        "display": "Niger"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "NF",
+        "display": "Norfolk Island"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MR",
+        "display": "Mauritania"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MS",
+        "display": "Montserrat"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MP",
+        "display": "Northern Mariana Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MQ",
+        "display": "Martinique"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MN",
+        "display": "Mongolia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MO",
+        "display": "Macao SAR China"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "ML",
+        "display": "Mali"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MM",
+        "display": "Myanmar (Burma)"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MZ",
+        "display": "Mozambique"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MX",
+        "display": "Mexico"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MY",
+        "display": "Malaysia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MV",
+        "display": "Maldives"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MW",
+        "display": "Malawi"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MT",
+        "display": "Malta"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MU",
+        "display": "Mauritius"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MC",
+        "display": "Monaco"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MA",
+        "display": "Morocco"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MK",
+        "display": "North Macedonia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MH",
+        "display": "Marshall Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MF",
+        "display": "St. Martin"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MG",
+        "display": "Madagascar"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "MD",
+        "display": "Moldova"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "ME",
+        "display": "Montenegro"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PS",
+        "display": "Palestinian Territories"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PT",
+        "display": "Portugal"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PR",
+        "display": "Puerto Rico"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PY",
+        "display": "Paraguay"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PW",
+        "display": "Palau"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PE",
+        "display": "Peru"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PF",
+        "display": "French Polynesia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PA",
+        "display": "Panama"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PM",
+        "display": "St. Pierre & Miquelon"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PN",
+        "display": "Pitcairn Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PK",
+        "display": "Pakistan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PL",
+        "display": "Poland"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PG",
+        "display": "Papua New Guinea"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "PH",
+        "display": "Philippines"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "OM",
+        "display": "Oman"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BG",
+        "display": "Bulgaria"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "RW",
+        "display": "Rwanda"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BH",
+        "display": "Bahrain"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BE",
+        "display": "Belgium"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "RU",
+        "display": "Russia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BF",
+        "display": "Burkina Faso"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "RS",
+        "display": "Serbia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BD",
+        "display": "Bangladesh"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BA",
+        "display": "Bosnia & Herzegovina"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BB",
+        "display": "Barbados"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BO",
+        "display": "Bolivia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SA",
+        "display": "Saudi Arabia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BM",
+        "display": "Bermuda"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BN",
+        "display": "Brunei"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BL",
+        "display": "St. Barthélemy"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BI",
+        "display": "Burundi"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BJ",
+        "display": "Benin"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AW",
+        "display": "Aruba"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AT",
+        "display": "Austria"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "RE",
+        "display": "Réunion"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AU",
+        "display": "Australia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AR",
+        "display": "Argentina"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AS",
+        "display": "American Samoa"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AQ",
+        "display": "Antarctica"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "RO",
+        "display": "Romania"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "code": "ASKU",
+        "display": "asked but unknown"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AZ",
+        "display": "Azerbaijan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AX",
+        "display": "Åland Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AF",
+        "display": "Afghanistan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AG",
+        "display": "Antigua & Barbuda"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AD",
+        "display": "Andorra"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AE",
+        "display": "United Arab Emirates"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "code": "NASK",
+        "display": "not asked"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AO",
+        "display": "Angola"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AL",
+        "display": "Albania"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AM",
+        "display": "Armenia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "AI",
+        "display": "Anguilla"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "QA",
+        "display": "Qatar"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "DJ",
+        "display": "Djibouti"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TZ",
+        "display": "Tanzania"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TW",
+        "display": "Taiwan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "DE",
+        "display": "Germany"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TV",
+        "display": "Tuvalu"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TT",
+        "display": "Trinidad & Tobago"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "DO",
+        "display": "Dominican Republic"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "UA",
+        "display": "Ukraine"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "DM",
+        "display": "Dominica"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "DK",
+        "display": "Denmark"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CX",
+        "display": "Christmas Island"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CY",
+        "display": "Cyprus"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TJ",
+        "display": "Tajikistan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CV",
+        "display": "Cape Verde"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TG",
+        "display": "Togo"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CW",
+        "display": "Curaçao"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TH",
+        "display": "Thailand"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CU",
+        "display": "Cuba"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TF",
+        "display": "French Southern Territories"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CR",
+        "display": "Costa Rica"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TC",
+        "display": "Turks & Caicos Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TD",
+        "display": "Chad"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TR",
+        "display": "Turkey"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TO",
+        "display": "Tonga"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TM",
+        "display": "Turkmenistan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TN",
+        "display": "Tunisia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CZ",
+        "display": "Czechia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TK",
+        "display": "Tokelau"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "TL",
+        "display": "Timor-Leste"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CH",
+        "display": "Switzerland"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SX",
+        "display": "Sint Maarten"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CI",
+        "display": "Côte d’Ivoire"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SY",
+        "display": "Syria"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CF",
+        "display": "Central African Republic"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SV",
+        "display": "El Salvador"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CG",
+        "display": "Congo - Brazzaville"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CD",
+        "display": "Congo - Kinshasa"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "ST",
+        "display": "São Tomé & Príncipe"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SR",
+        "display": "Suriname"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CC",
+        "display": "Cocos (Keeling) Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SS",
+        "display": "South Sudan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/noCountry",
+        "version": "1.1.0",
+        "code": "31099997",
+        "display": "staatenlos"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CN",
+        "display": "China"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CO",
+        "display": "Colombia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CL",
+        "display": "Chile"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CM",
+        "display": "Cameroon"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SZ",
+        "display": "Eswatini"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CK",
+        "display": "Cook Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BW",
+        "display": "Botswana"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SH",
+        "display": "St. Helena"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SI",
+        "display": "Slovenia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BV",
+        "display": "Bouvet Island"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SG",
+        "display": "Singapore"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BS",
+        "display": "Bahamas"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SD",
+        "display": "Sudan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BT",
+        "display": "Bhutan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SE",
+        "display": "Sweden"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BQ",
+        "display": "Caribbean Netherlands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SB",
+        "display": "Solomon Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BR",
+        "display": "Brazil"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SC",
+        "display": "Seychelles"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "CA",
+        "display": "Canada"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SN",
+        "display": "Senegal"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SO",
+        "display": "Somalia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SL",
+        "display": "Sierra Leone"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SM",
+        "display": "San Marino"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BY",
+        "display": "Belarus"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SJ",
+        "display": "Svalbard & Jan Mayen"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "BZ",
+        "display": "Belize"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "SK",
+        "display": "Slovakia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "FK",
+        "display": "Falkland Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "FI",
+        "display": "Finland"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "FJ",
+        "display": "Fiji"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "VU",
+        "display": "Vanuatu"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "FR",
+        "display": "France"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "FO",
+        "display": "Faroe Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "FM",
+        "display": "Micronesia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "VI",
+        "display": "U.S. Virgin Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "VG",
+        "display": "British Virgin Islands"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "ET",
+        "display": "Ethiopia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "VE",
+        "display": "Venezuela"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/noCountry",
+        "version": "1.1.0",
+        "code": "31099999",
+        "display": "Ausland (Land unbekannt)"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "VN",
+        "display": "Vietnam"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "UZ",
+        "display": "Uzbekistan"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "EH",
+        "display": "Western Sahara"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "UY",
+        "display": "Uruguay"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "EG",
+        "display": "Egypt"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "EE",
+        "display": "Estonia"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "ER",
+        "display": "Eritrea"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "VC",
+        "display": "St. Vincent & Grenadines"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "ES",
+        "display": "Spain"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "VA",
+        "display": "Vatican City"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "DZ",
+        "display": "Algeria"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "UG",
+        "display": "Uganda"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "EC",
+        "display": "Ecuador"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "US",
+        "display": "United States"
+      },
+      {
+        "system": "urn:iso:std:iso:3166",
+        "code": "UM",
+        "display": "U.S. Outlying Islands"
+      }
+    ]
+  }
+}

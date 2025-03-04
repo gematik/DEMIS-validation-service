@@ -1,0 +1,320 @@
+{
+  "resourceType": "ValueSet",
+  "id": "notificationDiseaseCategory",
+  "url": "https://demis.rki.de/fhir/ValueSet/notificationDiseaseCategory",
+  "version": "2.0.0",
+  "name": "NotificationDiseaseCategory",
+  "title": "Meldetatbestand",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-01-29",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet NotificationDiseaseCategory enthält die Codes der Meldetatbestände.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0"
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2025-01-29T00:00:00+01:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "cjkd",
+        "display": "Creutzfeldt-Jakob-Krankheit (CJK)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "clod",
+        "display": "Botulismus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hxxd",
+        "display": "Akute Virushepatitis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "sxxd",
+        "display": "Paratyphus/Typhus, nicht differenziert"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "opxd",
+        "display": "Orthopocken, andere"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "vzwd",
+        "display": "Windpocken"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "neid",
+        "display": "Meningokokken, invasive Erkrankung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "mpvd",
+        "display": "Mumps"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "dend",
+        "display": "Denguefieber"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hivd",
+        "display": "Humanes Immundefizienz-Virus (HIV)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hevd",
+        "display": "Hepatitis E"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "mytd",
+        "display": "Tuberkulose"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hcvd",
+        "display": "Hepatitis C"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "izvd",
+        "display": "Zoonotische Influenza"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "havd",
+        "display": "Hepatitis A"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "vchd",
+        "display": "Cholera"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hfad",
+        "display": "Hämorrhagisches Fieber"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "husd",
+        "display": "Hämolytisch-urämisches Syndrom (HUS)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "pkvd",
+        "display": "Pocken"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "cord",
+        "display": "Diphtherie"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "bpsd",
+        "display": "Keuchhusten"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "echd",
+        "display": "Echinococcus sp."
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "povd",
+        "display": "Poliomyelitis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "mybd",
+        "display": "Tuberkulose, bei Behandlungsabbruch"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "trpd",
+        "display": "Treponema pallidum"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "vzzd",
+        "display": "Herpes Zoster"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "chtd",
+        "display": "Chlamydia trachomatis, sofern es sich um einen der Serotypen L1 bis L3 handelt"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "lsvd",
+        "display": "Lassafieber"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "ebvd",
+        "display": "Ebolafieber"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "mbvd",
+        "display": "Marburgfieber"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "htvd",
+        "display": "Hantavirus-Erkrankung, hämorrhagischer Verlauf"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "mpxd",
+        "display": "Mpox"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "band",
+        "display": "Milzbrand"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "msvd",
+        "display": "Masern"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "cvdd",
+        "display": "Coronavirus-Krankheit-2019 (COVID-19)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "negd",
+        "display": "Neisseria gonorrhoeae"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "sspd",
+        "display": "Subakute sklerosierende Panenzephalitis (SSPE)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hdvd",
+        "display": "Hepatitis D"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "rbvd",
+        "display": "Tollwut"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hbvd",
+        "display": "Hepatitis B"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "ypsd",
+        "display": "Pest"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "cdfd",
+        "display": "Clostridioides-difficile-Erkrankung, schwere Verlaufsform"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "toxd",
+        "display": "Toxoplasma gondii; Meldepflicht nur bei konnatalen Infektionen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "ruvd",
+        "display": "Röteln, postnatal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "styd",
+        "display": "Typhus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "ttvd",
+        "display": "Tollwutexpositionsverdacht"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "rund",
+        "display": "Röteln, konnatal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "gfvd",
+        "display": "Gelbfieber"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "spad",
+        "display": "Paratyphus"
+      }
+    ]
+  }
+}

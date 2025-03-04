@@ -1,0 +1,185 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "translationNullFlavor",
+  "url": "https://demis.rki.de/fhir/CodeSystem/translationNullFlavor",
+  "version": "1.0.0",
+  "name": "TranslationNullFlavor",
+  "title": "Übersetzung NullFlavor",
+  "status": "active",
+  "date": "2022-01-18",
+  "description": "Das CodeSystem translationNullFlavor enthält die deutschen Displays der HL7 NullFlavor-Codes.",
+  "content": "supplement",
+  "supplements": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+  "concept": [
+    {
+      "code": "NI",
+      "display": "NoInformation",
+      "designation": [
+        {
+          "language": "de",
+          "value": "keine Information"
+        }
+      ]
+    },
+    {
+      "code": "INV",
+      "display": "invalid",
+      "designation": [
+        {
+          "language": "de",
+          "value": "ungültig"
+        }
+      ]
+    },
+    {
+      "code": "DER",
+      "display": "derived",
+      "designation": [
+        {
+          "language": "de",
+          "value": "abgeleitet"
+        }
+      ]
+    },
+    {
+      "code": "OTH",
+      "display": "other",
+      "designation": [
+        {
+          "language": "de",
+          "value": "andere"
+        }
+      ]
+    },
+    {
+      "code": "NINF",
+      "display": "negative infinity",
+      "designation": [
+        {
+          "language": "de",
+          "value": "negative Unendlichkeit"
+        }
+      ]
+    },
+    {
+      "code": "PINF",
+      "display": "positive infinity",
+      "designation": [
+        {
+          "language": "de",
+          "value": "positive Unendlichkeit"
+        }
+      ]
+    },
+    {
+      "code": "UNC",
+      "display": "un-encoded",
+      "designation": [
+        {
+          "language": "de",
+          "value": "unkodiert"
+        }
+      ]
+    },
+    {
+      "code": "MSK",
+      "display": "masked",
+      "designation": [
+        {
+          "language": "de",
+          "value": "maskiert"
+        }
+      ]
+    },
+    {
+      "code": "NA",
+      "display": "not applicable",
+      "designation": [
+        {
+          "language": "de",
+          "value": "nicht anwendbar"
+        }
+      ]
+    },
+    {
+      "code": "UNK",
+      "display": "unknown",
+      "designation": [
+        {
+          "language": "de",
+          "value": "unbekannt"
+        }
+      ]
+    },
+    {
+      "code": "ASKU",
+      "display": "asked but unknown",
+      "designation": [
+        {
+          "language": "de",
+          "value": "nicht ermittelbar"
+        }
+      ]
+    },
+    {
+      "code": "NAV",
+      "display": "temporarily unavailable",
+      "designation": [
+        {
+          "language": "de",
+          "value": "zeitweilig nicht verfügbar"
+        }
+      ]
+    },
+    {
+      "code": "NASK",
+      "display": "not asked",
+      "designation": [
+        {
+          "language": "de",
+          "value": "nicht erhoben"
+        }
+      ]
+    },
+    {
+      "code": "NAVU",
+      "display": "Not available",
+      "designation": [
+        {
+          "language": "de",
+          "value": "nicht verfügbar"
+        }
+      ]
+    },
+    {
+      "code": "QS",
+      "display": "Sufficient Quantity",
+      "designation": [
+        {
+          "language": "de",
+          "value": "ausreichende Menge"
+        }
+      ]
+    },
+    {
+      "code": "TRC",
+      "display": "trace",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Spuren"
+        }
+      ]
+    },
+    {
+      "code": "NP",
+      "display": "not present",
+      "designation": [
+        {
+          "language": "de",
+          "value": "nicht vorhanden"
+        }
+      ]
+    }
+  ]
+}

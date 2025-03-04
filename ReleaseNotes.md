@@ -2,6 +2,33 @@
 
 # Release Validation-Service
 
+## Release 2.6.0
+### fixed
+- Dependency-Updates (CVEs et al.)
+
+### changed
+- First official GitHub-Release
+- Update Base-Image to OSADL
+
+## Release 2.5.0
+
+### fixed
+- CVEs
+
+### changed
+- Upgraded SpringBoot to 3.3.5
+- Upgraded HAPI FHIR to 7.4.5
+- Updated Profiles from RKI
+- Upgraded Docker Base Image to Eclipse-Temurin JRE 21.0.5
+- Stricter validation of the notification
+
+## Release 2.1.0
+
+### fixed
+- CVEs
+- Upgraded SpringBoot to 3.2.0 
+
+
 ## Release 2.0.1
 
 ### fixed

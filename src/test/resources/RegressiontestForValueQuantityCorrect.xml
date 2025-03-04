@@ -1,0 +1,430 @@
+<!--
+  #%L
+  validation-service
+  %%
+  Copyright (C) 2025 gematik GmbH
+  %%
+  Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
+  European Commission – subsequent versions of the EUPL (the "Licence").
+  You may not use this work except in compliance with the Licence.
+  
+  You find a copy of the Licence in the "Licence" file or at
+  https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+  
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the Licence is distributed on an "AS IS" basis,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expressed or implied.
+  In case of changes by gematik find details in the "Readme" file.
+  
+  See the Licence for the specific language governing permissions and limitations under the Licence.
+  #L%
+  -->
+<Bundle xmlns="http://hl7.org/fhir">
+    <meta>
+        <lastUpdated value="2022-02-25T02:27:01.000+01:00"></lastUpdated>
+        <profile value="https://demis.rki.de/fhir/StructureDefinition/NotificationBundleLaboratory"></profile>
+        <tag>
+            <system value="https://demis.rki.de/fhir/CodeSystem/ResponsibleDepartment"></system>
+            <code value="1.11.0.11.09."></code>
+            <display value="Zuständiges Gesundheitsamt: 1.11.0.11.09."></display>
+        </tag>
+        <tag>
+            <system value="https://demis.rki.de/fhir/CodeSystem/ResponsibleDepartmentSubmitter"></system>
+            <code value="1.11.0.11.09."></code>
+            <display value="Gesundheitsamt des Einsenders: 1.11.0.11.09."></display>
+        </tag>
+        <tag>
+            <system value="https://demis.rki.de/fhir/CodeSystem/ResponsibleDepartmentNotifier"></system>
+            <code value="1.11.0.11.09."></code>
+            <display value="Gesundheitsamt des Melders: 1.11.0.11.09."></display>
+        </tag>
+        <tag>
+            <system value="https://demis.rki.de/fhir/CodeSystem/ResponsibleDepartmentPrimaryAddress"></system>
+            <code value="1.11.0.11.09."></code>
+            <display value="Patient primary address department: 1.11.0.11.09."></display>
+        </tag>
+    </meta>
+    <identifier>
+        <system value="https://demis.rki.de/fhir/NamingSystem/NotificationBundleId"></system>
+        <value value="64cc9eba-a274-394f-8e99-4eec4f735b73"></value>
+    </identifier>
+    <type value="document"></type>
+    <timestamp value="2022-02-25T02:27:01.000+01:00"></timestamp>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/Composition/064776ca-52da-3c02-9dda-dc0782319a98"></fullUrl>
+        <resource>
+            <Composition xmlns="http://hl7.org/fhir">
+                <id value="064776ca-52da-3c02-9dda-dc0782319a98"></id>
+                <meta>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/NotificationLaboratory"></profile>
+                </meta>
+                <extension url="https://demis.rki.de/fhir/StructureDefinition/ReceptionTimeStampType">
+                    <valueDateTime value="2022-02-25T03:27:01.000+01:00"></valueDateTime>
+                </extension>
+                <identifier>
+                    <system value="https://demis.rki.de/fhir/NamingSystem/NotificationId"></system>
+                    <value value="84f22513-ef55-4914-a082-947c186757f3"></value>
+                </identifier>
+                <status value="final"></status>
+                <type>
+                    <coding>
+                        <system value="http://loinc.org"></system>
+                        <code value="34782-3"></code>
+                        <display value="Infectious disease Note"></display>
+                    </coding>
+                </type>
+                <category>
+                    <coding>
+                        <system value="http://loinc.org"></system>
+                        <code value="11502-2"></code>
+                        <display value="Laboratory report"></display>
+                    </coding>
+                </category>
+                <subject>
+                    <reference value="Patient/8c655848-6484-3550-8d61-d6078ef48186"></reference>
+                </subject>
+                <date value="2022-02-25T02:27:00.000+01:00"></date>
+                <author>
+                    <reference value="PractitionerRole/b08d0cbb-4860-37b9-a543-3b66fd30e883"></reference>
+                </author>
+                <title value="Erregernachweismeldung"></title>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="http://loinc.org"></system>
+                            <code value="11502-2"></code>
+                            <display value="Laboratory report"></display>
+                        </coding>
+                    </code>
+                    <entry>
+                        <reference value="DiagnosticReport/89ea6794-f81b-3eaf-904d-ff8cf00a955c"></reference>
+                    </entry>
+                </section>
+            </Composition>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/Patient/8c655848-6484-3550-8d61-d6078ef48186"></fullUrl>
+        <resource>
+            <Patient xmlns="http://hl7.org/fhir">
+                <id value="8c655848-6484-3550-8d61-d6078ef48186"></id>
+                <meta>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/NotifiedPerson"></profile>
+                </meta>
+                <extension url="https://demis.rki.de/fhir/StructureDefinition/PseudonymRecordType">
+                    <valueBase64Binary
+                            value="eyJmYW1pbHlOYW1lIjpbIkZBQ0FBaUFGZ1FBQ0FBRU9BR1JkQUNBd0FBQUFBSUdBRUJBV0FBQkFDQUFRQW9TQUlBaUFEY2lBQUJxaWdDeUVBRWlJQUt5Z0NBalZoWUJDRndBSUFBS0lBSUFBQUFLQUFjVUFBQUlUQ2trQXBBR2d4QUFFT0FBZ1dBZ0FDQlFCSENBZ1Ywa0VJOHFBSUtCTVFBS3dFQ0FTbUNFRGlnQWdCQWtDQm9RQUNnST0iXSwiZmlyc3ROYW1lIjpbIkJBQ2lBQ0FWZ1FBQ0FBUU1DRFlJQVNFUUlBQUFBQUNnRWhBbUFBQUlHQ0JRQWlTQ0FBbUFoTWlDWUFxQ0FDNkVJRWlJQUs2Z0FBaWhnSUJDQndBSVFtQ0FBSUFBQVFBQUlVUUdBQUFDSWtnQ0pBQkFCQUlsR2dBZ0dBb0FCRFFCR0NBZ0FrZ0VJb2dDSklBTVlBS0FFQ0FDbUNFaWhnSWdCQWtHQ3FJQUNDST0iXSwiZGF0ZU9mQmlydGgiOiJnQVJha3NSNmlDUXVqVUpLa0FDSzRBZ0l5bWN3b2dVQUNBZ0lLS0pRSUFsYlpndVpBUUdjTGFRUmNxb3hoVHBDSkVKRUJBWUpBQ0FNaDdBeVM0QmtmQT09IiwiZGlzZWFzZUNvZGUiOiJHU0QvZndBSkN3QVZvVElBQXdNWUN3RURJRERJQVFpREMwaUlKQ2dJQ0N0RE1RREFDZ0FOQVEzbENFVGlCQ2hBQVEwR0FlS0NDQ1J4Q1lJaEFLT0ppQT09In0="></valueBase64Binary>
+                </extension>
+                <name>
+                    <use value="official"></use>
+                    <family value="Langhorst"></family>
+                    <given value="Norbert"></given>
+                </name>
+                <telecom>
+                    <system value="phone"></system>
+                    <value value="+49 30 22332233229"></value>
+                </telecom>
+                <telecom>
+                    <system value="email"></system>
+                    <value value="nolanghorst@domain.de"></value>
+                </telecom>
+                <gender value="male"></gender>
+                <birthDate value="1960-11-22"></birthDate>
+                <address>
+                    <extension url="https://demis.rki.de/fhir/StructureDefinition/AddressUse">
+                        <valueCoding>
+                            <system value="https://demis.rki.de/fhir/CodeSystem/addressUse"></system>
+                            <code value="primary"></code>
+                        </valueCoding>
+                    </extension>
+                    <line value="Bismarkstr. 151"></line>
+                    <city value="Berlin"></city>
+                    <postalCode value="21481"></postalCode>
+                    <country value="DE"></country>
+                </address>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/PractitionerRole/b08d0cbb-4860-37b9-a543-3b66fd30e883"></fullUrl>
+        <resource>
+            <PractitionerRole xmlns="http://hl7.org/fhir">
+                <id value="b08d0cbb-4860-37b9-a543-3b66fd30e883"></id>
+                <meta>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/NotifierRole"></profile>
+                </meta>
+                <organization>
+                    <reference value="Organization/a64e8db3-8827-320d-bd29-d12871d4f0ba"></reference>
+                </organization>
+            </PractitionerRole>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/Organization/a64e8db3-8827-320d-bd29-d12871d4f0ba"></fullUrl>
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="a64e8db3-8827-320d-bd29-d12871d4f0ba"></id>
+                <meta>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/NotifierFacility"></profile>
+                </meta>
+                <identifier>
+                    <system value="https://demis.rki.de/fhir/NamingSystem/DemisLaboratoryId"></system>
+                    <value value="12345"></value>
+                </identifier>
+                <identifier>
+                    <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"></system>
+                    <value value="987654300"></value>
+                </identifier>
+                <identifier>
+                    <system value="https://demis.rki.de/fhir/NamingSystem/SendingServiceProvider"></system>
+                    <value value="12345"></value>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="https://demis.rki.de/fhir/CodeSystem/organizationType"></system>
+                        <code value="laboratory"></code>
+                        <display value="Erregerdiagnostische Untersuchungsstelle"></display>
+                    </coding>
+                </type>
+                <name value="Primärlabor"></name>
+                <telecom>
+                    <system value="phone"></system>
+                    <value value="0309876543210"></value>
+                    <use value="work"></use>
+                </telecom>
+                <address>
+                    <line value="Dingsweg 321"></line>
+                    <city value="Berlin"></city>
+                    <postalCode value="21481"></postalCode>
+                    <country value="DE"></country>
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/PractitionerRole/31da5ba2-72fc-34af-b06a-a4b2944d8508"></fullUrl>
+        <resource>
+            <PractitionerRole xmlns="http://hl7.org/fhir">
+                <id value="31da5ba2-72fc-34af-b06a-a4b2944d8508"></id>
+                <meta>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/SubmittingRole"></profile>
+                </meta>
+                <organization>
+                    <reference value="Organization/9deb207c-7d85-3cde-9890-9e7ab9990087"></reference>
+                </organization>
+            </PractitionerRole>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/Organization/9deb207c-7d85-3cde-9890-9e7ab9990087"></fullUrl>
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="9deb207c-7d85-3cde-9890-9e7ab9990087"></id>
+                <meta>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/SubmittingFacility"></profile>
+                </meta>
+                <identifier>
+                    <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"></system>
+                    <value value="123456780"></value>
+                </identifier>
+                <name value="Einsendepraxis ABC"></name>
+                <telecom>
+                    <system value="phone"></system>
+                    <value value="030 1234567890"></value>
+                    <use value="work"></use>
+                </telecom>
+                <address>
+                    <line value="Teststr. 123"></line>
+                    <city value="Berlin"></city>
+                    <postalCode value="21481"></postalCode>
+                    <country value="DE"></country>
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/DiagnosticReport/89ea6794-f81b-3eaf-904d-ff8cf00a955c"></fullUrl>
+        <resource>
+            <DiagnosticReport xmlns="http://hl7.org/fhir">
+                <id value="89ea6794-f81b-3eaf-904d-ff8cf00a955c"></id>
+                <meta>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportHCVP"></profile>
+                </meta>
+                <basedOn>
+                    <type value="ServiceRequest"></type>
+                    <identifier>
+                        <system value="https://demis.rki.de/fhir/NamingSystem/ServiceRequestId"></system>
+                        <value value="2022-033155300"></value>
+                    </identifier>
+                </basedOn>
+                <status value="final"></status>
+                <code>
+                    <coding>
+                        <system value="https://demis.rki.de/fhir/CodeSystem/notificationCategory"></system>
+                        <code value="hcvp"></code>
+                        <display value="Hepatitis-C-Virus; Meldepflicht für alle Nachweise"></display>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/8c655848-6484-3550-8d61-d6078ef48186"></reference>
+                </subject>
+                <issued value="2022-02-25T02:26:00.000+01:00"></issued>
+                <result>
+                    <reference value="Observation/118cfd0d-adac-3394-90c8-dee62090b488"></reference>
+                </result>
+                <result>
+                    <reference value="Observation/300ece47-81ff-3c7e-b11e-523da1e59f3d"></reference>
+                </result>
+                <conclusion value="Ich bin die textuelle Conclusion ..."></conclusion>
+                <conclusionCode>
+                    <coding>
+                        <system value="https://demis.rki.de/fhir/CodeSystem/conclusionCode"></system>
+                        <code value="pathogenDetected"></code>
+                        <display value="Meldepflichtiger Erreger nachgewiesen"></display>
+                    </coding>
+                </conclusionCode>
+            </DiagnosticReport>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/Observation/118cfd0d-adac-3394-90c8-dee62090b488"></fullUrl>
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="118cfd0d-adac-3394-90c8-dee62090b488"></id>
+                <meta>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/PathogenDetectionHCVP"></profile>
+                </meta>
+                <status value="final"></status>
+                <category>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/observation-category"></system>
+                        <code value="laboratory"></code>
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"></system>
+                        <code value="16128-1"></code>
+                        <display value="Hepatitis C virus Ab [Presence] in Serum"></display>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/8c655848-6484-3550-8d61-d6078ef48186"></reference>
+                </subject>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://loinc.org"></system>
+                        <code value="LA6576-8"></code>
+                        <display value="Positive"></display>
+                    </coding>
+                </valueCodeableConcept>
+                <interpretation>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"></system>
+                        <code value="POS"></code>
+                        <display value="Positive"></display>
+                    </coding>
+                </interpretation>
+                <note>
+                    <text value="Nette Zusatzinformation"></text>
+                </note>
+                <method>
+                    <coding>
+                        <system value="http://snomed.info/sct"></system>
+                        <code value="414111007"></code>
+                        <display value="Enzyme immunoassay method (procedure)"></display>
+                    </coding>
+                </method>
+                <specimen>
+                    <reference value="Specimen/878d12e8-ffc6-33a1-b61b-8c65638c1936"></reference>
+                </specimen>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/Observation/300ece47-81ff-3c7e-b11e-523da1e59f3d"></fullUrl>
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="300ece47-81ff-3c7e-b11e-523da1e59f3d"></id>
+                <meta>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/PathogenDetectionHCVP"></profile>
+                </meta>
+                <status value="final"></status>
+                <category>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/observation-category"></system>
+                        <code value="laboratory"></code>
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"></system>
+                        <code value="11011-4"></code>
+                        <display
+                                value="Hepatitis C virus RNA [Units/volume] (viral load) in Serum or Plasma by NAA with probe detection"></display>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/8c655848-6484-3550-8d61-d6078ef48186"></reference>
+                </subject>
+                <valueQuantity>
+                    <value value="29.07"></value>
+                    <system value="http://unitsofmeasure.org"></system>
+                    <code value="CT-Wert"></code>
+                </valueQuantity>
+                <interpretation>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"></system>
+                        <code value="POS"></code>
+                        <display value="Positive"></display>
+                    </coding>
+                </interpretation>
+                <note>
+                    <text value="Nette Zusatzinformation"></text>
+                </note>
+                <method>
+                    <coding>
+                        <system value="http://snomed.info/sct"></system>
+                        <code value="117244003"></code>
+                        <display value="Nucleic acid probe method with amplification (procedure)"></display>
+                    </coding>
+                </method>
+                <specimen>
+                    <reference value="Specimen/878d12e8-ffc6-33a1-b61b-8c65638c1936"></reference>
+                </specimen>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/Specimen/878d12e8-ffc6-33a1-b61b-8c65638c1936"></fullUrl>
+        <resource>
+            <Specimen xmlns="http://hl7.org/fhir">
+                <id value="878d12e8-ffc6-33a1-b61b-8c65638c1936"></id>
+                <meta>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/SpecimenHCVP"></profile>
+                </meta>
+                <status value="available"></status>
+                <type>
+                    <coding>
+                        <system value="http://snomed.info/sct"></system>
+                        <code value="119364003"></code>
+                        <display value="Serum specimen (specimen)"></display>
+                    </coding>
+                </type>
+                <subject>
+                    <reference value="Patient/8c655848-6484-3550-8d61-d6078ef48186"></reference>
+                </subject>
+                <receivedTime value="2022-02-24T21:01:00.000+01:00"></receivedTime>
+                <collection>
+                    <collector>
+                        <reference value="PractitionerRole/31da5ba2-72fc-34af-b06a-a4b2944d8508"></reference>
+                    </collector>
+                    <collectedDateTime value="2022-02-24T16:01:00.000+01:00"></collectedDateTime>
+                </collection>
+                <note>
+                    <text value="Ich bin eine interessante Zusatzinformation ..."></text>
+                </note>
+            </Specimen>
+        </resource>
+    </entry>
+</Bundle>

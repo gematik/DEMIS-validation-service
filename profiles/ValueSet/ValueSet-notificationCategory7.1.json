@@ -1,0 +1,1898 @@
+{
+  "resourceType": "ValueSet",
+  "id": "notificationCategory7.1",
+  "url": "https://demis.rki.de/fhir/ValueSet/notificationCategory7.1",
+  "version": "1.0.0",
+  "name": "NotificationCategory7.1",
+  "title": "Meldetatbestand",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-01-29",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet NotificationCategory7.1 enthält die Codes der Meldetatbestände.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1000
+              }
+            ],
+            "code": "acbp",
+            "display": "Acinetobacter spp. bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Acinetobacter spp., Carbapenem"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 990
+              }
+            ],
+            "code": "advp",
+            "display": "Adenoviren; Meldepflicht nur für den direkten Nachweis im Konjunktivalabstrich",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Adenoviren, Konjunktivalabstrich"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 980
+              }
+            ],
+            "code": "adep",
+            "display": "Adenoviren; Meldepflicht bei akuter Infektion für Nachweise aus allen Körpermaterialien",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Adenoviren, alle Materialien"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 970
+              }
+            ],
+            "code": "eahp",
+            "display": "Amoebiasis, Entamoeba histolytica",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Entamoeba histolytica"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 960
+              }
+            ],
+            "code": "abvp",
+            "display": "Arboviren (sonstige)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Arboviren, sonstige"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 950
+              }
+            ],
+            "code": "astp",
+            "display": "Astroviren",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Astroviren"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 940
+              }
+            ],
+            "code": "banp",
+            "display": "Bacillus anthracis",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Bacillus anthracis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 930
+              }
+            ],
+            "code": "bpsp",
+            "display": "Bordetella pertussis, Bordetella parapertussis",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Bordetella pertussis/parapertussis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 920
+              }
+            ],
+            "code": "bovp",
+            "display": "humanpathogene Bornaviren; Meldepflicht nur für den direkten Nachweis",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Bornaviren"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 910
+              }
+            ],
+            "code": "borp",
+            "display": "Borrelia recurrentis",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Borrelia recurrentis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 900
+              }
+            ],
+            "code": "bobp",
+            "display": "(Lyme-) Borreliose, Borrelia burgdorferi",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Borrelia burgdorferi"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 890
+              }
+            ],
+            "code": "brup",
+            "display": "Brucella sp.",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Brucella sp."
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 880
+              }
+            ],
+            "code": "camp",
+            "display": "Campylobacter spp. (darmpathogen)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Campylobacter spp., darmpathogen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 870
+              }
+            ],
+            "code": "caup",
+            "display": "Candida auris; Meldepflicht nur für den direkten Nachweis",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Candida auris"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 860
+              }
+            ],
+            "code": "ckvp",
+            "display": "Chikungunya-Virus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Chikungunya-Virus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 850
+              }
+            ],
+            "code": "chlp",
+            "display": "Chlamydia psittaci",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Chlamydia psittaci"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 840
+              }
+            ],
+            "code": "clop",
+            "display": "Clostridium botulinum oder Toxinnachweis",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Clostridium botulinum"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 830
+              }
+            ],
+            "code": "corp",
+            "display": "Corynebacterium spp. (Toxin bildend)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Corynebacterium spp., Toxin bildend"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 820
+              }
+            ],
+            "code": "coxp",
+            "display": "Coxiella burnetii",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Coxiella burnetii"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 810
+              }
+            ],
+            "code": "cryp",
+            "display": "humanpathogene Cryptosporidium sp.",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Cryptosporidium sp., humanpathogen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 800
+              }
+            ],
+            "code": "cymp",
+            "display": "Cytomegalie, Cytomegalievirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Cytomegalievirus (CMV)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 790
+              }
+            ],
+            "code": "denp",
+            "display": "Denguevirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Denguevirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 780
+              }
+            ],
+            "code": "ecop",
+            "display": "Escherichia coli (sonstige darmpathogene Stämme)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "E. coli, sonstige"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 770
+              }
+            ],
+            "code": "ebvp",
+            "display": "Ebolavirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Ebolavirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 760
+              }
+            ],
+            "code": "ebcp",
+            "display": "Enterobacterales bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Enterobacterales, Carbapenem"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 750
+              }
+            ],
+            "code": "etvp",
+            "display": "Enteroviren",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Enteroviren"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 740
+              }
+            ],
+            "code": "hfap",
+            "display": "Andere Erreger hämorrhagischer Fieber",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Erreger hämorrhagischer Fieber"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 730
+              }
+            ],
+            "code": "ehcp",
+            "display": "Escherichia coli (enterohämorrhagische Stämme) (EHEC)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "E. coli, enterohämorrhagisch"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 720
+              }
+            ],
+            "code": "frtp",
+            "display": "Francisella tularensis",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Francisella tularensis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 710
+              }
+            ],
+            "code": "fsvp",
+            "display": "FSME-Virus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "FSME-Virus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 700
+              }
+            ],
+            "code": "gbsp",
+            "display": "Gruppe-B-Streptokokken (GBS); Meldepflicht nur für den direkten Nachweis bei Schwangeren und Neugeborenen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Gruppe-B-Streptokokken (GBS)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 690
+              }
+            ],
+            "code": "gfvp",
+            "display": "Gelbfiebervirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Gelbfiebervirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 680
+              }
+            ],
+            "code": "gilp",
+            "display": "Giardia lamblia",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Giardia lamblia"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 670
+              }
+            ],
+            "code": "hinp",
+            "display": "Haemophilus influenzae; Meldepflicht nur für den direkten Nachweis aus Liquor oder Blut",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Haemophilus influenzae"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 650
+              }
+            ],
+            "code": "htvp",
+            "display": "Hantavirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hantavirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 640
+              }
+            ],
+            "code": "havp",
+            "display": "Hepatitis-A-Virus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hepatitis-A-Virus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 630
+              }
+            ],
+            "code": "hbvp",
+            "display": "Hepatitis-B-Virus; Meldepflicht für alle Nachweise",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hepatitis-B-Virus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 620
+              }
+            ],
+            "code": "hcvp",
+            "display": "Hepatitis-C-Virus; Meldepflicht für alle Nachweise",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hepatitis-C-Virus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 610
+              }
+            ],
+            "code": "hdvp",
+            "display": "Hepatitis-D-Virus; Meldepflicht für alle Nachweise",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hepatitis-D-Virus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 600
+              }
+            ],
+            "code": "hevp",
+            "display": "Hepatitis-E-Virus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hepatitis-E-Virus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 590
+              }
+            ],
+            "code": "invp",
+            "display": "Influenzavirus; Meldepflicht nur für den direkten Nachweis",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Influenzavirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 580
+              }
+            ],
+            "code": "lsvp",
+            "display": "Lassavirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Lassavirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 570
+              }
+            ],
+            "code": "legp",
+            "display": "Legionella sp.",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Legionella sp."
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 560
+              }
+            ],
+            "code": "lepp",
+            "display": "humanpathogene Leptospira sp.",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Leptospira sp., humanpathogen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 550
+              }
+            ],
+            "code": "lisp",
+            "display": "Listeria monocytogenes; Meldepflicht nur für den direkten Nachweis aus Blut, Liquor oder anderen normalerweise sterilen Substraten sowie aus Abstrichen von Neugeborenen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Listeria monocytogenes"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 540
+              }
+            ],
+            "code": "plap",
+            "display": "Plasmodium spp. (Malaria)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Malaria"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 530
+              }
+            ],
+            "code": "mbvp",
+            "display": "Marburgvirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Marburgvirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 520
+              }
+            ],
+            "code": "msvp",
+            "display": "Masernvirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Masernvirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 510
+              }
+            ],
+            "code": "mrsp",
+            "display": "Middle-East-Respiratory-Syndrome-Coronavirus (MERS-CoV)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "MERS-CoV"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 500
+              }
+            ],
+            "code": "mpxp",
+            "display": "Orthopockenviren (Mpoxvirus)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Mpoxvirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 490
+              }
+            ],
+            "code": "mrap",
+            "display": "Staphylococcus aureus (Methicillin-resistente Stämme); Meldepflicht nur für den Nachweis aus Blut oder Liquor",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "MRSA"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 480
+              }
+            ],
+            "code": "mpvp",
+            "display": "Mumpsvirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Mumpsvirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 470
+              }
+            ],
+            "code": "mylp",
+            "display": "Mycobacterium leprae",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium leprae"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 460
+              }
+            ],
+            "code": "mytp",
+            "display": "Mycobacterium tuberculosis, Mycobacterium africanum, Mycobacterium bovis; Meldepflicht für den direkten Erregernachweis sowie nachfolgend für das Ergebnis der Resistenzbestimmung; vorab auch für den Nachweis säurefester Stäbchen im Sputum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium tuberculosis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 450
+              }
+            ],
+            "code": "mpmp",
+            "display": "Mycoplasmen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Mycoplasmen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 440
+              }
+            ],
+            "code": "neip",
+            "display": "Neisseria meningitidis; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, hämorrhagischen Hautinfiltraten oder anderen normalerweise sterilen Substraten",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 430
+              }
+            ],
+            "code": "novp",
+            "display": "Norovirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Norovirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 420
+              }
+            ],
+            "code": "opxp",
+            "display": "Orthopockenviren (sonstige Orthopockenviren)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Orthopockenvirus, sonstige"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 410
+              }
+            ],
+            "code": "pinp",
+            "display": "Parainfluenzavirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Parainfluenza"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 400
+              }
+            ],
+            "code": "povp",
+            "display": "Poliovirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Poliovirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 390
+              }
+            ],
+            "code": "rbvp",
+            "display": "Rabiesvirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Rabiesvirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 380
+              }
+            ],
+            "code": "ricp",
+            "display": "Rickettsia prowazekii",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Rickettsia prowazekii"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 370
+              }
+            ],
+            "code": "pvbp",
+            "display": "Ringelröteln, Parvovirus B 19",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Parvovirus B 19"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 360
+              }
+            ],
+            "code": "rtvp",
+            "display": "Rotavirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Rotavirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 350
+              }
+            ],
+            "code": "rsvp",
+            "display": "Respiratorisches-Synzytial-Virus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "RSV"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 340
+              }
+            ],
+            "code": "ruvp",
+            "display": "Rubellavirus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Rubellavirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 330
+              }
+            ],
+            "code": "spap",
+            "display": "Salmonella Paratyphi; Meldepflicht für alle direkten Nachweise",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Salmonella Paratyphi"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 320
+              }
+            ],
+            "code": "styp",
+            "display": "Salmonella Typhi; Meldepflicht für alle direkten Nachweise",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Salmonella Typhi"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 310
+              }
+            ],
+            "code": "salp",
+            "display": "Salmonella (sonstige)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Salmonella, sonstige"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 300
+              }
+            ],
+            "code": "cvsp",
+            "display": "Severe-Acute-Respiratory-Syndrome-Coronavirus-1 (SARS-CoV-1) (2003)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "SARS-CoV-1 (2003)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 290
+              }
+            ],
+            "code": "cvdp",
+            "display": "Severe-Acute-Respiratory-Syndrome-Coronavirus-2 (SARS-CoV-2)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "SARS-CoV-2"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 280
+              }
+            ],
+            "code": "spyp",
+            "display": "Scharlach, Beta-hämolysierenden Streptokokken der Gruppe A",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Streptokokken der Gruppe A (GAS)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 270
+              }
+            ],
+            "code": "ship",
+            "display": "Shigella sp.",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Shigella sp."
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 260
+              }
+            ],
+            "code": "spnp",
+            "display": "Streptococcus pneumoniae; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, Gelenkpunktat oder anderen normalerweise sterilen Substraten",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Streptococcus pneumoniae"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 250
+              }
+            ],
+            "code": "cltp",
+            "display": "Tetanus, Clostridium tetani",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Clostridium tetani"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 240
+              }
+            ],
+            "code": "trip",
+            "display": "Trichinella spiralis",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Trichinella spiralis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 230
+              }
+            ],
+            "code": "pkvp",
+            "display": "Orthopockenviren (Variolavirus)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Variolavirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 220
+              }
+            ],
+            "code": "vzvp",
+            "display": "Varizella-Zoster-Virus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Varizella-Zoster-Virus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 210
+              }
+            ],
+            "code": "vchp",
+            "display": "Vibrio cholerae",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 200
+              }
+            ],
+            "code": "ncvp",
+            "display": "Vibrio spp., humanpathogen (außer Erreger der Cholera); soweit ausschließlich eine Ohrinfektion vorliegt, nur bei Vibrio cholerae non O1/non-O139",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Vibrio spp. (außer Erreger der Cholera)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 190
+              }
+            ],
+            "code": "wbkp",
+            "display": "Krankheitserreger unter Berücksichtigung der Art der Krankheitserreger und der Häufigkeit ihres Nachweises wenn Hinweise auf eine schwerwiegende Gefahr für die Allgemeinheit bestehen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Weitere bedrohliche Erreger"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 180
+              }
+            ],
+            "code": "wnvp",
+            "display": "West-Nil-Virus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "West-Nil-Virus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 170
+              }
+            ],
+            "code": "ypsp",
+            "display": "Yersinia pestis",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Yersinia pestis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 160
+              }
+            ],
+            "code": "yenp",
+            "display": "Yersinia spp. (darmpathogen)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Yersinia spp., darmpathogen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 150
+              }
+            ],
+            "code": "zkvp",
+            "display": "Zika-Virus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Zika-Virus"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2025-01-29T00:00:00+01:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "bovp",
+        "display": "humanpathogene Bornaviren; Meldepflicht nur für den direkten Nachweis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "wnvp",
+        "display": "West-Nil-Virus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "frtp",
+        "display": "Francisella tularensis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "cryp",
+        "display": "humanpathogene Cryptosporidium sp."
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "fsvp",
+        "display": "FSME-Virus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "yenp",
+        "display": "Yersinia spp. (darmpathogen)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "spap",
+        "display": "Salmonella Paratyphi; Meldepflicht für alle direkten Nachweise"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "ehcp",
+        "display": "Escherichia coli (enterohämorrhagische Stämme) (EHEC)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "mrsp",
+        "display": "Middle-East-Respiratory-Syndrome-Coronavirus (MERS-CoV)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "borp",
+        "display": "Borrelia recurrentis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "htvp",
+        "display": "Hantavirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "ebcp",
+        "display": "Enterobacterales bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "novp",
+        "display": "Norovirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "rsvp",
+        "display": "Respiratorisches-Synzytial-Virus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "ruvp",
+        "display": "Rubellavirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "ship",
+        "display": "Shigella sp."
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "banp",
+        "display": "Bacillus anthracis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "hbvp",
+        "display": "Hepatitis-B-Virus; Meldepflicht für alle Nachweise"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "styp",
+        "display": "Salmonella Typhi; Meldepflicht für alle direkten Nachweise"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "cvdp",
+        "display": "Severe-Acute-Respiratory-Syndrome-Coronavirus-2 (SARS-CoV-2)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "hdvp",
+        "display": "Hepatitis-D-Virus; Meldepflicht für alle Nachweise"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "lepp",
+        "display": "humanpathogene Leptospira sp."
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "spyp",
+        "display": "Scharlach, Beta-hämolysierenden Streptokokken der Gruppe A"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "wbkp",
+        "display": "Krankheitserreger unter Berücksichtigung der Art der Krankheitserreger und der Häufigkeit ihres Nachweises wenn Hinweise auf eine schwerwiegende Gefahr für die Allgemeinheit bestehen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "ypsp",
+        "display": "Yersinia pestis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "gilp",
+        "display": "Giardia lamblia"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "coxp",
+        "display": "Coxiella burnetii"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "rbvp",
+        "display": "Rabiesvirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "acbp",
+        "display": "Acinetobacter spp. bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "brup",
+        "display": "Brucella sp."
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "ricp",
+        "display": "Rickettsia prowazekii"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "gfvp",
+        "display": "Gelbfiebervirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "spnp",
+        "display": "Streptococcus pneumoniae; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, Gelenkpunktat oder anderen normalerweise sterilen Substraten"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "mpxp",
+        "display": "Orthopockenviren (Mpoxvirus)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "msvp",
+        "display": "Masernvirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "bobp",
+        "display": "(Lyme-) Borreliose, Borrelia burgdorferi"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "salp",
+        "display": "Salmonella (sonstige)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "pvbp",
+        "display": "Ringelröteln, Parvovirus B 19"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "denp",
+        "display": "Denguevirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "mbvp",
+        "display": "Marburgvirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "adep",
+        "display": "Adenoviren; Meldepflicht bei akuter Infektion für Nachweise aus allen Körpermaterialien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "cvsp",
+        "display": "Severe-Acute-Respiratory-Syndrome-Coronavirus-1 (SARS-CoV-1) (2003)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "hinp",
+        "display": "Haemophilus influenzae; Meldepflicht nur für den direkten Nachweis aus Liquor oder Blut"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "clop",
+        "display": "Clostridium botulinum oder Toxinnachweis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "mpmp",
+        "display": "Mycoplasmen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "gbsp",
+        "display": "Gruppe-B-Streptokokken (GBS); Meldepflicht nur für den direkten Nachweis bei Schwangeren und Neugeborenen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "caup",
+        "display": "Candida auris; Meldepflicht nur für den direkten Nachweis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "pinp",
+        "display": "Parainfluenzavirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "vzvp",
+        "display": "Varizella-Zoster-Virus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "lsvp",
+        "display": "Lassavirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "rtvp",
+        "display": "Rotavirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "pkvp",
+        "display": "Orthopockenviren (Variolavirus)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "havp",
+        "display": "Hepatitis-A-Virus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "zkvp",
+        "display": "Zika-Virus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "camp",
+        "display": "Campylobacter spp. (darmpathogen)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "ecop",
+        "display": "Escherichia coli (sonstige darmpathogene Stämme)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "hcvp",
+        "display": "Hepatitis-C-Virus; Meldepflicht für alle Nachweise"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "povp",
+        "display": "Poliovirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "hevp",
+        "display": "Hepatitis-E-Virus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "vchp",
+        "display": "Vibrio cholerae"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "etvp",
+        "display": "Enteroviren"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "chlp",
+        "display": "Chlamydia psittaci"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "plap",
+        "display": "Plasmodium spp. (Malaria)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "hfap",
+        "display": "Andere Erreger hämorrhagischer Fieber"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "eahp",
+        "display": "Amoebiasis, Entamoeba histolytica"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "mylp",
+        "display": "Mycobacterium leprae"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "ckvp",
+        "display": "Chikungunya-Virus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "cltp",
+        "display": "Tetanus, Clostridium tetani"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "ncvp",
+        "display": "Vibrio spp., humanpathogen (außer Erreger der Cholera); soweit ausschließlich eine Ohrinfektion vorliegt, nur bei Vibrio cholerae non O1/non-O139"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "astp",
+        "display": "Astroviren"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "legp",
+        "display": "Legionella sp."
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "bpsp",
+        "display": "Bordetella pertussis, Bordetella parapertussis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "mytp",
+        "display": "Mycobacterium tuberculosis, Mycobacterium africanum, Mycobacterium bovis; Meldepflicht für den direkten Erregernachweis sowie nachfolgend für das Ergebnis der Resistenzbestimmung; vorab auch für den Nachweis säurefester Stäbchen im Sputum"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "corp",
+        "display": "Corynebacterium spp. (Toxin bildend)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "trip",
+        "display": "Trichinella spiralis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "cymp",
+        "display": "Cytomegalie, Cytomegalievirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "mpvp",
+        "display": "Mumpsvirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "lisp",
+        "display": "Listeria monocytogenes; Meldepflicht nur für den direkten Nachweis aus Blut, Liquor oder anderen normalerweise sterilen Substraten sowie aus Abstrichen von Neugeborenen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "ebvp",
+        "display": "Ebolavirus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "invp",
+        "display": "Influenzavirus; Meldepflicht nur für den direkten Nachweis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "neip",
+        "display": "Neisseria meningitidis; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, hämorrhagischen Hautinfiltraten oder anderen normalerweise sterilen Substraten"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "mrap",
+        "display": "Staphylococcus aureus (Methicillin-resistente Stämme); Meldepflicht nur für den Nachweis aus Blut oder Liquor"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "opxp",
+        "display": "Orthopockenviren (sonstige Orthopockenviren)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "abvp",
+        "display": "Arboviren (sonstige)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+        "version": "2.0.0",
+        "code": "advp",
+        "display": "Adenoviren; Meldepflicht nur für den direkten Nachweis im Konjunktivalabstrich"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{{- if and (.Values.istio.enable) (hasKey .Values.istio "virtualService") (hasKey .Values.istio.virtualService "gateways") (gt (len .Values.istio.virtualService.gateways) 0) }}
+{{- if .Values.istio.enable -}}
+{{- $name := .Values.fullName }}
+{{- $namespace := .Release.Namespace }}
+{{- $url := printf "%s.%s.svc.cluster.local" $name .Release.Namespace }}
+
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: "{{ $name }}-virtual-service-external"
+spec:
+  {{- if .Values.istio.virtualService.gateways }}
+  gateways:
+    {{- toYaml .Values.istio.virtualService.gateways | nindent 4 }}
+  {{- end}}
+  {{- if .Values.istio.virtualService.hosts }}
+  hosts:
+    {{- toYaml .Values.istio.virtualService.hosts | nindent 4 }}
+  {{- end}}
+  http:
+  {{- range .Values.istio.virtualService.http }}
+    - match:
+        {{- toYaml .match | nindent 6 }}
+      delegate:
+        name: "{{ .delegate.name }}-virtual-service"
+        namespace: {{ $namespace }}
+    {{- end }}
+{{- end }}
+{{- end }}

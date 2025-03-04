@@ -2,251 +2,434 @@
   "resourceType": "ValueSet",
   "id": "answerSetMPVP",
   "url": "https://demis.rki.de/fhir/ValueSet/answerSetMPVP",
-  "version": "1.1.0",
+  "version": "1.4.0",
   "name": "AnswerSetMPVP",
   "title": "AnswerSet für Mumpsvirus",
   "status": "active",
-  "date": "2023-05-30",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet AnswerSetMPVP enthält die Codes der Answer-Codes für Mumpsvirus.",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
   "compose": {
-    "include": [ {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
-      "concept": [ {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "725448009",
-        "display": "Mumps genotype G (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "50384007",
+            "display": "Mumps orthorubulavirus (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps-Virus"
+              }
+            ]
           },
-          "value": "Mumps genotype G (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps, Genotyp G"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "725451002",
-        "display": "Mumps genotype J (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "725443000",
+            "display": "Mumps orthorubulavirus genotype A (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus genotype A (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps, Genotyp A"
+              }
+            ]
           },
-          "value": "Mumps genotype J (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps, Genotyp J"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "725453004",
-        "display": "Mumps genotype L (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "725444006",
+            "display": "Mumps orthorubulavirus genotype B (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus genotype B (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps, Genotyp B"
+              }
+            ]
           },
-          "value": "Mumps genotype L (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps, Genotyp L"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "725447004",
-        "display": "Mumps genotype F (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "725445007",
+            "display": "Mumps orthorubulavirus genotype C (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus genotype C (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps, Genotyp C"
+              }
+            ]
           },
-          "value": "Mumps genotype F (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps, Genotyp F"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "725445007",
-        "display": "Mumps genotype C (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "725446008",
+            "display": "Mumps orthorubulavirus genotype D (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus genotype D (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps, Genotyp D"
+              }
+            ]
           },
-          "value": "Mumps genotype C (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps, Genotyp C"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "725450001",
-        "display": "Mumps genotype I (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "725447004",
+            "display": "Mumps orthorubulavirus genotype F (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus genotype F (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps, Genotyp F"
+              }
+            ]
           },
-          "value": "Mumps genotype I (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps, Genotyp I"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "725452009",
-        "display": "Mumps genotype K (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "725448009",
+            "display": "Mumps orthorubulavirus genotype G (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus genotype G (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps, Genotyp G"
+              }
+            ]
           },
-          "value": "Mumps genotype K (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps, Genotyp K"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "725444006",
-        "display": "Mumps genotype B (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "725449001",
+            "display": "Mumps orthorubulavirus genotype H (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus genotype H (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps, Genotyp H"
+              }
+            ]
           },
-          "value": "Mumps genotype B (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps, Genotyp B"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "725454005",
-        "display": "Mumps genotype N (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "725450001",
+            "display": "Mumps orthorubulavirus genotype I (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus genotype I (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps, Genotyp I"
+              }
+            ]
           },
-          "value": "Mumps genotype N (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps, Genotyp N"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "725446008",
-        "display": "Mumps genotype D (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "725451002",
+            "display": "Mumps orthorubulavirus genotype J (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus genotype J (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps, Genotyp J"
+              }
+            ]
           },
-          "value": "Mumps genotype D (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps, Genotyp D"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "725449001",
-        "display": "Mumps genotype H (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "725452009",
+            "display": "Mumps orthorubulavirus genotype K (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus genotype K (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps, Genotyp K"
+              }
+            ]
           },
-          "value": "Mumps genotype H (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps, Genotyp H"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "725453004",
+            "display": "Mumps orthorubulavirus genotype L (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus genotype L (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps, Genotyp L"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "725454005",
+            "display": "Mumps orthorubulavirus genotype N (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mumps orthorubulavirus genotype N (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mumps, Genotyp N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetLaboratoryTest-SNOMED"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetResistance-SNOMED"
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "50384007",
-        "display": "Mumps virus (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mumps virus (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps-Virus"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+        "display": "Mumps orthorubulavirus (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "725449001",
+        "display": "Mumps orthorubulavirus genotype H (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "11896004",
+        "display": "Intermediate (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "725450001",
+        "display": "Mumps orthorubulavirus genotype I (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "725451002",
+        "display": "Mumps orthorubulavirus genotype J (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "725453004",
+        "display": "Mumps orthorubulavirus genotype L (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "725454005",
+        "display": "Mumps orthorubulavirus genotype N (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "725452009",
+        "display": "Mumps orthorubulavirus genotype K (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "725447004",
+        "display": "Mumps orthorubulavirus genotype F (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "725443000",
-        "display": "Mumps genotype A (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mumps genotype A (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mumps, Genotyp A"
-        } ]
-      } ]
-    } ]
+        "display": "Mumps orthorubulavirus genotype A (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "725444006",
+        "display": "Mumps orthorubulavirus genotype B (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "725445007",
+        "display": "Mumps orthorubulavirus genotype C (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "725446008",
+        "display": "Mumps orthorubulavirus genotype D (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "725448009",
+        "display": "Mumps orthorubulavirus genotype G (organism)"
+      }
+    ]
   }
 }

@@ -2,278 +2,128 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestEAHP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestEAHP",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "name": "LaboratoryTestEAHP",
   "title": "Labortest für Amoebiasis, Entamoeba histolytica",
   "status": "active",
-  "date": "2023-05-03",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestEAHP enthält die Codes der Labortests für Amoebiasis, Entamoeba histolytica.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "14125-9",
-        "display": "Entamoeba histolytica [Presence] in Stool by Trichrome stain",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "10704-5",
+            "display": "Ova and parasites identified in Stool by Light microscopy",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Wurmeier und Parasiten identifiziert in Stuhl mittels Lichtmikroskopie"
+              }
+            ]
           },
-          "value": "Entamoeba histolytica [Nachweis] in Stuhl mit Trichrom-Färbung"
-        } ]
-      }, {
-        "code": "16817-9",
-        "display": "Entamoeba histolytica Ab [Presence] in Serum by Immune diffusion (ID)",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "31812-1",
+            "display": "Entamoeba histolytica Ag [Units/volume] in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Entamoeba histolytica Antigen [Einheiten/Volumen] in Probenmaterial"
+              }
+            ]
           },
-          "value": "Entamoeba histolytica-Antikörper [Nachweis] in Serum mit Immundiffusion"
-        } ]
-      }, {
-        "code": "16818-7",
-        "display": "Entamoeba histolytica Ab [Units/volume] in Cerebral spinal fluid"
-      }, {
-        "code": "16819-5",
-        "display": "Entamoeba histolytica Ab [Units/volume] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
           },
-          "value": "Entamoeba histolytica-Antikörper [Einheiten/Volumen] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "16820-3",
-        "display": "Entamoeba histolytica Ab [Units/volume] in Serum by Complement fixation"
-      }, {
-        "code": "21259-7",
-        "display": "Entamoeba histolytica Ab [Titer] in Serum by Hemagglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "6396-6",
+            "display": "Entamoeba histolytica DNA [Presence] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Entamoeba histolytica DNA [Nachweis] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "Entamoeba histolytica-Antikörper [Titer] in Serum mit Hämagglutinationstest"
-        } ]
-      }, {
-        "code": "22285-1",
-        "display": "Entamoeba histolytica Ab [Presence] in Serum"
-      }, {
-        "code": "22286-9",
-        "display": "Entamoeba histolytica Ab [Titer] in Serum"
-      }, {
-        "code": "22287-7",
-        "display": "Entamoeba histolytica IgA Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Entamoeba histolytica-IgA-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "22288-5",
-        "display": "Entamoeba histolytica IgG Ab [Units/volume] in Serum"
-      }, {
-        "code": "22289-3",
-        "display": "Entamoeba histolytica IgM Ab [Units/volume] in Serum"
-      }, {
-        "code": "25400-3",
-        "display": "Entamoeba histolytica Ab [Titer] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Entamoeba histolytica-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "27090-0",
-        "display": "Entamoeba histolytica IgA Ab [Presence] in Saliva (oral fluid)"
-      }, {
-        "code": "29905-7",
-        "display": "Entamoeba histolytica Ag [Presence] in Stool by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Entamoeba histolytica-Antigen [Nachweis] in Stuhl mit Immunoassay"
-        } ]
-      }, {
-        "code": "31810-5",
-        "display": "Entamoeba histolytica Ag [Units/volume] in Serum"
-      }, {
-        "code": "31811-3",
-        "display": "Entamoeba histolytica Ag [Units/volume] in Stool"
-      }, {
+          {
+            "code": "7880-8",
+            "display": "Entamoeba histolytica Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Entamoeba histolytica Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "7880-8",
+        "display": "Entamoeba histolytica Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "31812-1",
         "display": "Entamoeba histolytica Ag [Units/volume] in Specimen"
-      }, {
-        "code": "47406-4",
-        "display": "Entamoeba histolytica Ab [Presence] in Cerebral spinal fluid"
-      }, {
-        "code": "5150-8",
-        "display": "Entamoeba histolytica Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Entamoeba histolytica-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "5151-6",
-        "display": "Entamoeba histolytica Ab [Units/volume] in Serum by Hemagglutination"
-      }, {
-        "code": "56921-0",
-        "display": "Entamoeba histolytica Ab [Presence] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Entamoeba histolytica-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "56922-8",
-        "display": "Entamoeba histolytica IgG Ab [Presence] in Serum by Immunoassay"
-      }, {
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "6396-6",
         "display": "Entamoeba histolytica DNA [Presence] in Specimen by NAA with probe detection"
-      }, {
-        "code": "6397-4",
-        "display": "Entamoeba histolytica Ag [Units/volume] in Serum by Immunoassay"
-      }, {
-        "code": "6398-2",
-        "display": "Entamoeba histolytica Ag [Units/volume] in Stool by Immunoassay"
-      }, {
-        "code": "6399-0",
-        "display": "Entamoeba histolytica Ag [Units/volume] in Specimen by Immunoassay"
-      }, {
-        "code": "7880-8",
-        "display": "Entamoeba histolytica Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Entamoeba histolytica-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "80682-8",
-        "display": "Entamoeba histolytica 18S rRNA [Presence] in Stool by NAA with probe detection"
-      }, {
-        "code": "82207-2",
-        "display": "Entamoeba histolytica DNA [Presence] in Stool by NAA with non-probe detection"
-      }, {
-        "code": "90297-3",
-        "display": "Entamoeba histolytica Ab [Presence] in Serum by Immunoassay"
-      }, {
-        "code": "91766-6",
-        "display": "Entamoeba histolytica DNA [Presence] in Aspirate by NAA with probe detection"
-      }, {
-        "code": "92689-9",
-        "display": "Entamoeba histolytica DNA [Presence] in Stool by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Entamoeba histolytica-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "9420-1",
-        "display": "Entamoeba histolytica Ab [Titer] in Serum by Complement fixation",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Entamoeba histolytica-Antikörper [Titer] in Serum mit Komplementbindungsreaktion"
-        } ]
-      }, {
-        "code": "9421-9",
-        "display": "Entamoeba histolytica Ab [Units/volume] in Serum by Immune diffusion (ID)",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Entamoeba histolytica-Antikörper [Einheiten/Volumen] in Serum mit Immundiffusion"
-        } ]
-      }, {
-        "code": "9521-6",
-        "display": "Entamoeba histolytica IgA Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Entamoeba histolytica-IgA-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "9522-4",
-        "display": "Entamoeba histolytica IgG Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Entamoeba histolytica-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "9523-2",
-        "display": "Entamoeba histolytica IgM Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Entamoeba histolytica-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "10704-5",
-        "display": "Ova and parasites identified in Stool by Light microscopy",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Wurmeier und Parasiten identifiziert in Stuhl mit Lichtmikroskopie"
-        } ]
-      }, {
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "41852-5",
-        "display": "Microorganism or agent identified in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
-        } ]
-      } ]
-    } ]
+        "display": "Microorganism or agent identified in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "10704-5",
+        "display": "Ova and parasites identified in Stool by Light microscopy"
+      }
+    ]
   }
 }

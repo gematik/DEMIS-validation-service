@@ -2,325 +2,218 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestHDVP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestHDVP",
-  "version": "1.2.0",
+  "version": "1.5.0",
   "name": "LaboratoryTestHDVP",
   "title": "Labortest für Hepatitis-D-Virus; Meldepflicht für alle Nachweise",
   "status": "active",
-  "date": "2023-05-04",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestHDVP enthält die Codes der Labortests für Hepatitis-D-Virus; Meldepflicht für alle Nachweise.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "33464-9",
-        "display": "Hepatitis D virus Ag [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "10735-9",
+            "display": "Viral sequencing [Identifier] in Serum by Sequencing"
           },
-          "value": "Hepatitis-D-Virus-Antigen [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "34597-5",
-        "display": "Hepatitis D virus IgM Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "13248-0",
+            "display": "Hepatitis D virus Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-D-Virus Antikörper [Nachweis] in Serum"
+              }
+            ]
           },
-          "value": "Hepatitis-D-Virus-IgM-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "43280-7",
-        "display": "Hepatitis D virus Ag [Mass/volume] in Urine",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "22330-5",
+            "display": "Hepatitis D virus Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-D-Virus Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
           },
-          "value": "Hepatitis-D-Virus-Antigen [Masse/Volumen] in Urin"
-        } ]
-      }, {
-        "code": "43281-5",
-        "display": "Hepatitis D virus Ag [Mass/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "33464-9",
+            "display": "Hepatitis D virus Ag [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-D-Virus Antigen [Nachweis] in Serum"
+              }
+            ]
           },
-          "value": "Hepatitis-D-Virus-Antigen [Masse/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "44754-0",
-        "display": "Hepatitis D virus Ag [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "40727-0",
+            "display": "Hepatitis D virus Ab [Presence] in Serum by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-D-Virus Antikörper [Nachweis] in Serum mittels Immunoassay"
+              }
+            ]
           },
-          "value": "Hepatitis-D-Virus-Antigen [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "44755-7",
-        "display": "Hepatitis D virus Ag [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
           },
-          "value": "Hepatitis-D-Virus-Antigen [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "44826-6",
-        "display": "Hepatitis D virus IgM Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "72606-7",
+            "display": "Hepatitis D virus genotype [Identifier] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-D-Virus Genotyp [Nachweis oder Identität] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "Hepatitis-D-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "44938-9",
-        "display": "Hepatitis D virus IgM Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "7906-1",
+            "display": "Hepatitis D virus RNA [Presence] in Serum by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-D-Virus RNA [Nachweis] in Serum mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "Hepatitis-D-Virus-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "45159-1",
-        "display": "Hepatitis B virus and Hepatitis D virus Ab [Interpretation] in Serum Narrative",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "80426-0",
+            "display": "Hepatitis D virus RNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-D-Virus RNA [#/Volumen] (Viruslast) in Serum oder Plasma mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "Hepatitis-B-Virus and Hepatitis-D-Virus-Antikörper [Interpretation] in Serum - Freitext"
-        } ]
-      }, {
-        "code": "72606-7",
-        "display": "Hepatitis D virus genotype [Identifier] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-Genotyp [Nachweis oder Identität] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "7906-1",
-        "display": "Hepatitis D virus RNA [Presence] in Serum by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-RNA [Nachweis] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "80426-0",
-        "display": "Hepatitis D virus RNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-RNA [#/Volumen] (Viruslast) in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "85512-2",
-        "display": "Hepatitis D virus RNA [Units/volume] (viral load) in Serum by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-RNA [Einheiten/Volumen] (Viruslast) in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "85513-0",
-        "display": "Hepatitis D virus RNA [log units/volume] (viral load) in Serum by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-RNA [log Einheiten/Volumen] (Viruslast) in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "9525-7",
-        "display": "Hepatitis D virus IgM Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "13248-0",
-        "display": "Hepatitis D virus Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
+          {
+            "code": "85512-2",
+            "display": "Hepatitis D virus RNA [Units/volume] (viral load) in Serum or Plasma by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-D-Virus RNA [Einheiten/Volumen] (Viruslast) in Serum oder Plasma mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "10735-9",
+        "display": "Viral sequencing [Identifier] in Serum by Sequencing"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "22330-5",
-        "display": "Hepatitis D virus Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "35273-2",
-        "display": "Hepatitis D virus IgG Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "35283-1",
-        "display": "Hepatitis D virus IgG Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-IgG-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
+        "display": "Hepatitis D virus Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "7906-1",
+        "display": "Hepatitis D virus RNA [Presence] in Serum by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "33464-9",
+        "display": "Hepatitis D virus Ag [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "72606-7",
+        "display": "Hepatitis D virus genotype [Identifier] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "13248-0",
+        "display": "Hepatitis D virus Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "40727-0",
-        "display": "Hepatitis D virus Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "49775-0",
-        "display": "Hepatitis D virus IgG Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "51458-8",
-        "display": "Hepatitis D virus IgG Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "51654-2",
-        "display": "Hepatitis D virus Ab [Presence] in Body fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-Antikörper [Nachweis] in Körperflüssigkeit"
-        } ]
-      }, {
-        "code": "5200-1",
-        "display": "Hepatitis D virus Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "5201-9",
-        "display": "Hepatitis D virus Ab [Units/volume] in Serum by Radioimmunoassay (RIA)",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-Antikörper [Einheiten/Volumen] in Serum mit Radioimmunoassay"
-        } ]
-      }, {
-        "code": "95238-2",
-        "display": "Hepatitis D virus Ab [Interpretation] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-D-Virus-Antikörper [Interpretation] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "41461-5",
-        "display": "Virus identified in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Virus identifiziert in Probenmaterial"
-        } ]
-      }, {
-        "code": "92253-4",
-        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
-        } ]
-      } ]
-    } ]
+        "display": "Hepatitis D virus Ab [Presence] in Serum by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85512-2",
+        "display": "Hepatitis D virus RNA [Units/volume] (viral load) in Serum or Plasma by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "80426-0",
+        "display": "Hepatitis D virus RNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection"
+      }
+    ]
   }
 }

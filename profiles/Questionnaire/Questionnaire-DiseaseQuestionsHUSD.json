@@ -1,0 +1,324 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DiseaseQuestionsHUSD",
+  "url": "https://demis.rki.de/fhir/Questionnaire/DiseaseQuestionsHUSD",
+  "version": "1.2.1",
+  "name": "DiseaseQuestionsHUSD",
+  "title": "Hämolytisch-urämisches Syndrom (HUS): spezifische klinische und epidemiologische Angaben",
+  "status": "active",
+  "date": "2024-07-22",
+  "description": "Hämolytisch-urämisches Syndrom (HUS) spezifische Informationsbedarfe werden in diesem meldetatbestandsspezifischen Fragebogen zusammengestellt. Dieser manifestiert sich als entsprechende QuestionnaireResponse innerhalb der Meldung.",
+  "item": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "infectionPathKind",
+      "text": "Auf welchem Weg hat sich die betroffene Person wahrscheinlich infiziert?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetInfectionPathHUSD",
+      "initial": [
+        {
+          "valueCoding": {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+            "code": "NASK",
+            "display": "not asked"
+          }
+        }
+      ],
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "gtable",
+                    "display": "Group Table"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "infectionPathGroup",
+          "type": "group",
+          "enableWhen": [
+            {
+              "question": "infectionPathKind",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "409496000:{704319004=303071001}{704326004=62315008}"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "infectionPathWho",
+              "text": "Bei wem?",
+              "type": "choice",
+              "required": true,
+              "repeats": false,
+              "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetInfectionPathWhoHUSD",
+              "initial": [
+                {
+                  "valueCoding": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                    "code": "NASK",
+                    "display": "not asked"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "infectionPathWhen",
+              "text": "Wann?",
+              "type": "date",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "onsetOfDiseaseHUS",
+      "text": "Datum des Auftretens des HUS-Vollbildes",
+      "type": "date",
+      "required": false,
+      "repeats": false
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "infectionRisk",
+      "text": "Lag ein Risiko bei der betroffenen Person in den zwei Wochen vor Erkrankungsbeginn vor? (Tierkontakt)",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation",
+      "initial": [
+        {
+          "valueCoding": {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+            "code": "NASK",
+            "display": "not asked"
+          }
+        }
+      ],
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "gtable",
+                    "display": "Group Table"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "infectionRiskGroup",
+          "type": "group",
+          "enableWhen": [
+            {
+              "question": "infectionRisk",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+                "code": "yes"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "infectionRiskKindAnimal",
+              "text": "Welches Tier?",
+              "type": "choice",
+              "required": true,
+              "repeats": false,
+              "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetInfectionRiskAnimalHUSD",
+              "initial": [
+                {
+                  "valueCoding": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                    "code": "NASK",
+                    "display": "not asked"
+                  }
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "infectionAnimalWhere",
+              "text": "Wo fand der Kontakt statt?",
+              "type": "choice",
+              "required": true,
+              "repeats": false,
+              "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetInfectionAnimalWhereHUSD",
+              "initial": [
+                {
+                  "valueCoding": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                    "code": "NASK",
+                    "display": "not asked"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "infectionAnimalWhen",
+              "text": "Wann fand der Kontakt statt?",
+              "type": "date",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "outbreak",
+      "text": "Kann der gemeldete Fall einem Ausbruch zugeordnet werden?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation",
+      "initial": [
+        {
+          "valueCoding": {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+            "code": "NASK",
+            "display": "not asked"
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "outbreakNote",
+          "text": "Fallbezogene Zusatzinformationen zum Ausbruch",
+          "type": "text",
+          "enableWhen": [
+            {
+              "question": "outbreak",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+                "code": "yes"
+              }
+            }
+          ],
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "outbreakNotificationId",
+          "text": "Notification-Id der zugehörigen Ausbruchsmeldung",
+          "type": "reference",
+          "enableWhen": [
+            {
+              "question": "outbreak",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+                "code": "yes"
+              }
+            }
+          ],
+          "required": false,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

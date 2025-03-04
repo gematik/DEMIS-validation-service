@@ -2,204 +2,88 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestMRSP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestMRSP",
-  "version": "1.4.0",
+  "version": "1.7.0",
   "name": "LaboratoryTestMRSP",
   "title": "Labortest für Middle-East-Respiratory-Syndrome-Coronavirus (MERS-CoV)",
   "status": "active",
-  "date": "2023-05-04",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestMRSP enthält die Codes der Labortests für Middle-East-Respiratory-Syndrome-Coronavirus (MERS-CoV).",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "74472-2",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) N3 gene RNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
           },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV) N3-Gen-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "74473-0",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) N2 gene RNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "88197-9",
+            "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Nasopharynx by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Probenmaterial vom Nasopharynx mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV) N2-Gen-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "74474-8",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) upE gene RNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV) upE-Gen-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "74475-5",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Interpretation] in Specimen Qualitative by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV)-RNA [Interpretation] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "86578-2",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Blood by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV)-RNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "86579-0",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Urine by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV)-RNA [Nachweis] in Urin mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "88196-1",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Stool by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV)-RNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
+          {
+            "code": "94501-4",
+            "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Respiratory system specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV) RNA [Nachweis] in Probenmaterial vom Respirationstrakt mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "88197-9",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Nasopharynx by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV)-RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "88198-7",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Cornea or Conjunctiva by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV)-RNA [Nachweis] in Kornea bzw. Konjunktiva mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "88199-5",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Aspirate by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV)-RNA [Nachweis] in Aspirat mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "88889-1",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Nasopharynx by NAA with non-probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV)-RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
-        } ]
-      }, {
-        "code": "91807-8",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Upper respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV)-RNA [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "91830-0",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Lower respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV)-RNA [Nachweis] in Probenmaterial aus dem unteren Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "92967-9",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Lower respiratory specimen by NAA with non-probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV)-RNA [Nachweis] in Probenmaterial aus dem unteren Respirationstrakt mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
-        } ]
-      }, {
+        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Nasopharynx by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "94501-4",
-        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Middle East respiratory syndrome-Coronavirus (MERS-CoV)-RNA [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "41461-5",
-        "display": "Virus identified in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Virus identifiziert in Probenmaterial"
-        } ]
-      }, {
-        "code": "92253-4",
-        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
-        } ]
-      } ]
-    } ]
+        "display": "Middle East respiratory syndrome coronavirus (MERS-CoV) RNA [Presence] in Respiratory system specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      }
+    ]
   }
 }

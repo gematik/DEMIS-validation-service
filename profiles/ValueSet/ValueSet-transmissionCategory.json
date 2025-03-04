@@ -1,0 +1,511 @@
+{
+  "resourceType": "ValueSet",
+  "id": "transmissionCategory",
+  "url": "https://demis.rki.de/fhir/ValueSet/transmissionCategory",
+  "version": "2.0.0",
+  "name": "TransmissionCategory",
+  "title": "SurvNet-Übermittlungskategorie",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-12-27",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet TransmissionCategory enthält die 3-Buchstaben-Codes der Übermittlungskategorien aus SurvNet.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0"
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-12-27T00:00:00+01:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "mrs"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "rtv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "izv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "zkv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "ebc"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "hxx"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "cvs"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "ncv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "rsv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "pov"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "vch"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "mra"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "cvd"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "rbv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "myt"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "fsv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "eah"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "myl"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "mpx"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "vzz"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "myb"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "sty"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "yps"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "vzv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "mpv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "vzw"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "bru"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "cdf"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "clo"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "frt"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "mpm"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "clt"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "ehc"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "hfa"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "lep"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "hev"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "pvb"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "den"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "ckv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "leg"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "ban"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "ssp"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "hus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "ric"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "wbk"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "ttv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "gbs"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "hdv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "inv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "bps"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "pla"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "cry"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "htv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "sal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "yen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "cjk"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "nov"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "cau"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "hcv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "pkv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "cam"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "lsv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "bor"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "bov"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "gil"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "bob"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "opx"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "cym"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "spy"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "hbv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "spn"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "adv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "shi"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "sxx"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "chl"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "etv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "tri"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "hav"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "ade"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "spa"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "pin"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "lis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "hin"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "msv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "eco"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "nei"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "ruv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "cor"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "run"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "cox"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "wnv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "acb"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "mbv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "ast"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "abv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "gfv"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+        "version": "2.0.0",
+        "code": "ebv"
+      }
+    ]
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "resourceType": "ValueSet",
+  "id": "laboratoryTestTRPP",
+  "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestTRPP",
+  "version": "1.0.0",
+  "name": "LaboratoryTestTRPP",
+  "title": "Labortest für Treponema pallidum",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-01-24",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet LaboratoryTestTRPP enthält die Codes der Labortests für  Treponema pallidum.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "104478-3",
+            "display": "Treponema pallidum ITpA-index [Relative Ratio] in Serum and CSF"
+          },
+          {
+            "code": "22587-0",
+            "display": "Treponema pallidum Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Treponema pallidum Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "22592-0",
+            "display": "Treponema pallidum IgG Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Treponema pallidum IgG-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "22594-6",
+            "display": "Treponema pallidum IgM Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Treponema pallidum IgM-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "29310-0",
+            "display": "Treponema pallidum [Presence] in Specimen by Immunofluorescence",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Treponema pallidum [Nachweis] in Probenmaterial mittels Immunfluoreszenztest"
+              }
+            ]
+          },
+          {
+            "code": "41122-3",
+            "display": "Treponema pallidum Ab [Units/volume] in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Treponema pallidum Antikörper [Einheiten/Volumen] in Probenmaterial"
+              }
+            ]
+          },
+          {
+            "code": "41163-7",
+            "display": "Treponema pallidum DNA [Presence] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Treponema pallidum DNA [Nachweis] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
+          },
+          {
+            "code": "47476-7",
+            "display": "Reagin Ab [Titer] in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Reagin Antikörper [Titer] in Probenmaterial"
+              }
+            ]
+          },
+          {
+            "code": "6561-5",
+            "display": "Treponema pallidum IgG Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Treponema pallidum IgG-Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "6562-3",
+            "display": "Treponema pallidum IgM Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Treponema pallidum IgM-Antikörper [Nachweis] in Serum"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2025-01-24T00:00:00+01:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "29310-0",
+        "display": "Treponema pallidum [Presence] in Specimen by Immunofluorescence"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22594-6",
+        "display": "Treponema pallidum IgM Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41163-7",
+        "display": "Treponema pallidum DNA [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41122-3",
+        "display": "Treponema pallidum Ab [Units/volume] in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22587-0",
+        "display": "Treponema pallidum Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "47476-7",
+        "display": "Reagin Ab [Titer] in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22592-0",
+        "display": "Treponema pallidum IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "104478-3",
+        "display": "Treponema pallidum ITpA-index [Relative Ratio] in Serum and CSF"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "6562-3",
+        "display": "Treponema pallidum IgM Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "6561-5",
+        "display": "Treponema pallidum IgG Ab [Presence] in Serum"
+      }
+    ]
+  }
+}

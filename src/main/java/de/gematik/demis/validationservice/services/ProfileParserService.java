@@ -1,22 +1,26 @@
-/*
- * Copyright [2023], gematik GmbH
- *
- * Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the
+package de.gematik.demis.validationservice.services;
+
+/*-
+ * #%L
+ * validation-service
+ * %%
+ * Copyright (C) 2025 gematik GmbH
+ * %%
+ * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
- *
  * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
  *
+ * You find a copy of the Licence in the "Licence" file or at
  * https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
  *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR
- * CONDITIONS OF ANY KIND, either expressed or implied.
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the Licence is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expressed or implied.
+ * In case of changes by gematik find details in the "Readme" file.
  *
  * See the Licence for the specific language governing permissions and limitations under the Licence.
- *
+ * #L%
  */
-
-package de.gematik.demis.validationservice.services;
 
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.parser.IParser;
@@ -33,7 +37,6 @@ import java.util.stream.Stream;
 import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.instance.model.api.IBaseResource;
 import org.hl7.fhir.r4.model.*;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.PathResource;
 import org.springframework.stereotype.Service;
@@ -41,7 +44,7 @@ import org.springframework.stereotype.Service;
 /** Service that parses and stores the profile in memory. */
 @Service
 @Slf4j
-public class ProfileParserService implements InitializingBean {
+public class ProfileParserService {
 
   private static final int MAX_FOLDER_DEPTH = 5;
   private static final EnumSet<ResourceType> VERSIONED_TYPES =
@@ -54,13 +57,14 @@ public class ProfileParserService implements InitializingBean {
           "ValueSet", ValueSet.class);
   private final String profileResource;
   private final FhirContext fhirContext;
-  private Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> parsedProfile;
+  private final Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> parsedProfile;
 
   public ProfileParserService(
       final FhirContext fhirContext,
       @Value("${demis.validation-service.profileResourcePath}") final String profileResource) {
     this.fhirContext = fhirContext;
     this.profileResource = profileResource;
+    this.parsedProfile = parseProfile();
   }
 
   private static Map<String, IBaseResource> parseFilesInDirectory(
@@ -107,9 +111,9 @@ public class ProfileParserService implements InitializingBean {
       throws IOException {
     log.info("Loading profiles from folder {}", folderPath);
     Path folderPathAsPath = Paths.get(folderPath);
-    if(!Files.exists(folderPathAsPath)) {
+    if (!Files.exists(folderPathAsPath)) {
       log.warn("Folder {} not present", folderPath);
-      
+
       return Collections.emptySet();
     }
     try (final Stream<Path> stream = Files.walk(folderPathAsPath, MAX_FOLDER_DEPTH)) {
@@ -124,7 +128,7 @@ public class ProfileParserService implements InitializingBean {
     return this.parsedProfile;
   }
 
-  private void parseProfile() {
+  private Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> parseProfile() {
     log.info("Start parsing Profiles");
     final Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> profile =
         new HashMap<>();
@@ -136,17 +140,13 @@ public class ProfileParserService implements InitializingBean {
         final Map<String, IBaseResource> resourcesMap =
             parseFilesInDirectory(parser, profilePart, path);
         profile.put(profilePart.getValue(), ImmutableMap.copyOf(resourcesMap));
-        log.info(String.format("Loaded %s: %s ", profilePart.getKey(), resourcesMap.size()));
+        log.info("Loaded {}: {} ", profilePart.getKey(), resourcesMap.size());
       } catch (final IOException e) {
         throw new UncheckedIOException(e);
       }
     }
-    this.parsedProfile = ImmutableMap.copyOf(profile);
-    log.info("Finish parsing Profiles");
-  }
 
-  @Override
-  public void afterPropertiesSet() throws Exception {
-    parseProfile();
+    log.info("Finish parsing Profiles");
+    return Collections.unmodifiableMap(profile);
   }
 }

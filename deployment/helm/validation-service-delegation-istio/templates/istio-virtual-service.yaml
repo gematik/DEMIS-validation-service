@@ -1,0 +1,21 @@
+{{- if .Values.istio.enable -}}
+{{- $name := .Values.fullName }}
+{{- $namespace := .Release.Namespace }}
+{{- $url := printf "%s.%s.svc.cluster.local" $name .Release.Namespace }}
+
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: "{{ $name }}-virtual-service"
+spec:
+  hosts:
+    - {{ $url }}
+  http:
+  {{- range .Values.istio.virtualService.http }}
+    - match:
+        {{- toYaml .match | nindent 6 }}
+      delegate:
+        name: "{{ .delegate.name }}-virtual-service"
+        namespace: {{ $namespace }}
+    {{- end }}
+{{- end }}

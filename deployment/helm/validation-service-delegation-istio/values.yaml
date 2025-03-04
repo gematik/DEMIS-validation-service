@@ -1,0 +1,32 @@
+fullName: validation-service
+service:
+  type: ClusterIP
+  ports:
+    http: 8080
+istio:
+  enable: true
+  virtualService:
+    gateways: {}
+    http:
+      - match:
+          - uri:
+              prefix: /
+            headers:
+              fhirProfile:
+                exact: "igs-profile-snapshots"
+        delegate:
+          name: "validation-service-igs"
+      - match:
+          - uri:
+              prefix: /
+            headers:
+              fhirProfile:
+                exact: "fhir-profile-snapshots"
+        delegate:
+          name: "validation-service-core"
+      - match:
+          - uri:
+              prefix: /
+        delegate:
+          name: "validation-service-core"
+    hosts: {}

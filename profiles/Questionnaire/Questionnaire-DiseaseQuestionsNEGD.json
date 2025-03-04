@@ -1,0 +1,324 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DiseaseQuestionsNEGD",
+  "url": "https://demis.rki.de/fhir/Questionnaire/DiseaseQuestionsNEGD",
+  "version": "1.0.0",
+  "name": "DiseaseQuestionsNEGD",
+  "title": "Neisseria gonorrhoeae: spezifische klinische und epidemiologische Angaben",
+  "status": "active",
+  "date": "2024-11-22",
+  "description": "Neisseria gonorrhoeae spezifische Informationsbedarfe werden in diesem meldetatbestandsspezifischen Fragebogen zusammengestellt. Dieser manifestiert sich als entsprechende QuestionnaireResponse innerhalb der Meldung.",
+  "item": [
+    {
+      "linkId": "timeOfInfection",
+      "text": "Wahrscheinlicher Infektionszeitpunkt",
+      "type": "date",
+      "required": true,
+      "repeats": false
+    },
+    {
+      "linkId": "swabRegion",
+      "text": "Abstrichregion",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetSwabRegion",
+      "item": [
+        {
+          "linkId": "swabRegionOther",
+          "text": "Bitte näher erläutern",
+          "type": "text",
+          "enableWhen": [
+            {
+              "question": "swabRegion",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "74964007"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "therapyCeftriaxon",
+      "text": "Therapie mit Ceftriaxon",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation-SNOMED",
+      "item": [
+        {
+          "linkId": "therapyPeriodCeftriaxon",
+          "text": "Behandlungsdauer",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "therapyCeftriaxon",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "373066001"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetTherapyPeriod"
+        }
+      ]
+    },
+    {
+      "linkId": "therapyCefixim",
+      "text": "Therapie mit Cefixim",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation-SNOMED",
+      "item": [
+        {
+          "linkId": "therapyPeriodCefixim",
+          "text": "Behandlungsdauer",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "therapyCefixim",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "373066001"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetTherapyPeriod"
+        }
+      ]
+    },
+    {
+      "linkId": "therapyAzithromycin",
+      "text": "Therapie mit Azithromycin",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation-SNOMED",
+      "item": [
+        {
+          "linkId": "therapyPeriodAzithromycin",
+          "text": "Behandlungsdauer",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "therapyAzithromycin",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "373066001"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetTherapyPeriod"
+        }
+      ]
+    },
+    {
+      "linkId": "therapyOther",
+      "text": "Therapie mit anderen Antibiotika",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation-SNOMED",
+      "item": [
+        {
+          "linkId": "medicationOther",
+          "text": "Mit welchem Antibiotikum wurde behandelt?",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "therapyOther",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "373066001"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": true,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetMedicationOther"
+        },
+        {
+          "linkId": "therapyPeriodOther",
+          "text": "Behandlungsdauer des gegebenen Antibiotikums",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "therapyOther",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "373066001"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetTherapyOtherPeriod"
+        }
+      ]
+    },
+    {
+      "linkId": "priorAntibioTreatment",
+      "text": "Antibiotikavorbehandlung (letze 6 Monate)",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation-SNOMED",
+      "item": [
+        {
+          "linkId": "priorTherapy",
+          "text": "Vorhergehende Therapie der Infektion",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "priorAntibioTreatment",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "373066001"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": true,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetPriorTherapy",
+          "item": [
+            {
+              "linkId": "priorTherapyOther",
+              "text": "Bitter erläutern",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "priorTherapy",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "74964007"
+                  }
+                }
+              ],
+              "required": true,
+              "repeats": false,
+              "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetMedicationOther"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "statusInfection",
+      "text": "Klinische Beurteilung: Es handelt sich um:",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetStatusInfection",
+      "item": [
+        {
+          "linkId": "statusInfectionNote",
+          "text": "Bitte näher erläutern",
+          "type": "text",
+          "enableWhen": [
+            {
+              "question": "statusInfection",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "255230006"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "coinfectionNEGD",
+      "text": "Sind aus den letzten 12 Monaten Konfektionen bekannt?",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetCoinfectionNEGD"
+    },
+    {
+      "linkId": "hiv-PrEPStatus",
+      "text": "Wurde zum Zeitpunkt der Gonokokken-Infektion eine HIV-PrEP eingenommen?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation-SNOMED"
+    },
+    {
+      "linkId": "sti-ProphylaxisStatus",
+      "text": "Wurde zum Zeitpunkt der Gonokokken-Infektion eine antibiotische STI-Prophylaxe eingenommen (z.B. Doxy-PEP)?",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetSTIProphylaxis"
+    },
+    {
+      "linkId": "infectionPathKindRisk",
+      "text": "Angaben zum wahrscheinlichen Infektionsweg / Infektionsrisiko",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetInfectPathKindRiskSTI"
+    },
+    {
+      "linkId": "sexWork",
+      "text": "Inanspruchnahme oder Ausübung von Sexarbeit?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetSexWork"
+    },
+    {
+      "linkId": "partnerNotified",
+      "text": "Benachrichtigung von (Sexual)Partner*innen",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetPartnerNotified"
+    },
+    {
+      "linkId": "countryOfInfection",
+      "text": "Wahrscheinliches Infektionsland",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetCountry"
+    },
+    {
+      "linkId": "countryOfBirth",
+      "text": "Herkunftsland der untersuchten Person",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetCountry"
+    },
+    {
+      "linkId": "genderDefintion",
+      "text": "Zusatzangabe zur geschlechtlichen selbstdefinition der betr. Person",
+      "type": "choice",
+      "required": false,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetGenderDefinition"
+    }
+  ]
+}

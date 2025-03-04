@@ -1,0 +1,1600 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetInfectionEnvironmentSettingCVDD",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetInfectionEnvironmentSettingCVDD",
+  "version": "1.3.2",
+  "name": "AnswerSetInfectionEnvironmentSettingCVDD",
+  "title": "Antwortmöglichkeiten zur Angabe des Infektionsumfelds bei dem Meldetatbestand \"Coronavirus-Krankheit-2019 (COVID-19)\"",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-10-10",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet AnswerSetInfectionEnvironmentSettingCVDD enthält die kodierten Antwortmöglichkeiten zur Angabe des Infektionsumfelds bei dem Meldetatbestand  \"Coronavirus-Krankheit-2019 (COVID-19)\".",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 45
+              }
+            ],
+            "code": "108344006",
+            "display": "ambulanter Pflegedienst",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Nursing home AND/OR ambulatory care site (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 16
+              }
+            ],
+            "code": "1348009",
+            "display": "teilstationäre Einrichtung für ältere, behinderte oder pflegebedürftige Menschen (z.B. Seniorentagesstätte)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Day care center (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 17
+              }
+            ],
+            "code": "14468000",
+            "display": "Sport",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Sports activity (observable entity)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 11
+              }
+            ],
+            "code": "161093007",
+            "display": "Zeltplatz, Campingplatz",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Camping vacation (finding)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 39
+              }
+            ],
+            "code": "21753002",
+            "display": "Flugzeug",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Aircraft, device (physical object)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 30
+              }
+            ],
+            "code": "22232009",
+            "display": "Krankenhaus",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Hospital (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 20
+              }
+            ],
+            "code": "224673002",
+            "display": "Schiff",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Ship (physical object)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 32
+              }
+            ],
+            "code": "224683003",
+            "display": "Kaserne",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Military accommodation (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 14
+              }
+            ],
+            "code": "224871002",
+            "display": "Universität",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "University (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 41
+              }
+            ],
+            "code": "22674006",
+            "display": "Fernbus",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Motor bus, device (physical object)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 40
+              }
+            ],
+            "code": "257562009",
+            "display": "Flughafen",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Airport (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 18
+              }
+            ],
+            "code": "257603009",
+            "display": "sonstige Bildungs-/Betreuungseinrichtung",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Educational establishment (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 35
+              }
+            ],
+            "code": "257621007",
+            "display": "Hafen",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Harbor (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 27
+              }
+            ],
+            "code": "257622000",
+            "display": "medizinische Einrichtung (außer Krankenhaus)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Healthcare facility (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 24
+              }
+            ],
+            "code": "257628001",
+            "display": "Pension, Herberge",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Hostel (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 34
+              }
+            ],
+            "code": "257629009",
+            "display": "Hotel",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Hotel (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 33
+              }
+            ],
+            "code": "257656006",
+            "display": "Justizvollzugsanstalt",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Penal institution (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 26
+              }
+            ],
+            "code": "257658007",
+            "display": "Musikveranstaltung/Konzert",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Entertainment establishment (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 21
+              }
+            ],
+            "code": "257659004",
+            "display": "religiöse Veranstaltung (z.B. Gottesdienst)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Place of worship (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 37
+              }
+            ],
+            "code": "257689006",
+            "display": "Gastronomie (Speisegaststätte/Kantine/Imbiss/Restaurant)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Restaurant (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 12
+              }
+            ],
+            "code": "257692005",
+            "display": "Wohnheim (Kinder-, Jugend-, Studierenden-)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Rooming house (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 19
+              }
+            ],
+            "code": "257698009",
+            "display": "Schule",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "School (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 42
+              }
+            ],
+            "code": "257701001",
+            "display": "Einzelhandel",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Shop (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 28
+              }
+            ],
+            "code": "261904005",
+            "display": "Labor",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Laboratory (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 29
+              }
+            ],
+            "code": "262044003",
+            "display": "Kreuzfahrtschiff",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Passenger vessel (physical object)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 15
+              }
+            ],
+            "code": "284555002",
+            "display": "Tiergarten, Zoo, Tierpark",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Zoo - place (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 44
+              }
+            ],
+            "code": "285141008",
+            "display": "Arbeitsplatz",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Work environment (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 23
+              }
+            ],
+            "code": "310205006",
+            "display": "privater Haushalt",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Private residential home (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 46
+              }
+            ],
+            "code": "394777002",
+            "display": "Ambulante Behandlungseinrichtung (Praxis, andere)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Health encounter sites (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 38
+              }
+            ],
+            "code": "405081003",
+            "display": "Freizeitaktivitäten",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leisure behavior (observable entity)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 31
+              }
+            ],
+            "code": "413817003",
+            "display": "Kita",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Child day care center (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 13
+              }
+            ],
+            "code": "42665001",
+            "display": "vollstationäre Einrichtung für ältere, behinderte oder pflegebedürftige Menschen (z.B. Alten-/Pflegeheim)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Nursing home (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 36
+              }
+            ],
+            "code": "5549007",
+            "display": "Gemeinschaftsunterkünfte (z.B. Flüchtlings-, Asylbewerberheim)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Living in temporary quarters (finding)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 10
+              }
+            ],
+            "code": "62193008",
+            "display": "Zug",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Railway train, device (physical object)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 43
+              }
+            ],
+            "code": "702703009",
+            "display": "Demonstration/Kundgebung",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Outdoor public site (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 22
+              }
+            ],
+            "code": "702916001",
+            "display": "Reha-Einrichtung",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Rehabilitation clinic (environment)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 25
+              }
+            ],
+            "code": "716367000",
+            "display": "öffentlicher Nahverkehr",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Transportation by public transport (procedure)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "74964007",
+            "display": "andere/sonstige",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Other (qualifier value)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 999
+              }
+            ],
+            "code": "ASKU",
+            "display": "asked but unknown"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1000
+              }
+            ],
+            "code": "NASK",
+            "display": "not asked"
+          }
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/infectionEnvironmentSetting"
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-10-10T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "394777002",
+        "display": "Ambulante Behandlungseinrichtung (Praxis, andere)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "405081003",
+        "display": "Freizeitaktivitäten"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "321",
+        "display": "Erzieher/-in, Ausbilder/-in, Betreuer/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "200",
+        "display": "Patient/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "320",
+        "display": "Betreute/-r"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257701001",
+        "display": "Einzelhandel"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "204",
+        "display": "Besucher/-in"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "224673002",
+        "display": "Schiff"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "203",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "324",
+        "display": "Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "202",
+        "display": "Pflegepersonal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "323",
+        "display": "Passagier/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "322",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "201",
+        "display": "medizinisches Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "162",
+        "display": "Verein"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "161",
+        "display": "Chor"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "160",
+        "display": "Sport"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "702916001",
+        "display": "Reha-Einrichtung"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "108344006",
+        "display": "ambulanter Pflegedienst"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "5549007",
+        "display": "Gemeinschaftsunterkünfte (z.B. Flüchtlings-, Asylbewerberheim)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "310",
+        "display": "Schüler/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "313",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "312",
+        "display": "Eltern"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "311",
+        "display": "Lehrkraft"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "151",
+        "display": "als Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "150",
+        "display": "als Kunde"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257656006",
+        "display": "Justizvollzugsanstalt"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257629009",
+        "display": "Hotel"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "21753002",
+        "display": "Flugzeug"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257621007",
+        "display": "Hafen"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "262044003",
+        "display": "Kreuzfahrtschiff"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "1348009",
+        "display": "teilstationäre Einrichtung für ältere, behinderte oder pflegebedürftige Menschen (z.B. Seniorentagesstätte)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257562009",
+        "display": "Flughafen"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "62193008",
+        "display": "Zug"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "143",
+        "display": "Betreute/-r"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "263",
+        "display": "Zeltplatz, Campingplatz"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "22674006",
+        "display": "Fernbus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "303",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "302",
+        "display": "Eltern"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "301",
+        "display": "Erzieher/-in, Betreuer/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "300",
+        "display": "Betreute/-r"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "14468000",
+        "display": "Sport"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "262",
+        "display": "Kreuzfahrtschiff"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "261",
+        "display": "Hotel, Pension, Herberge"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "260",
+        "display": "Übernachtung"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "code": "ASKU",
+        "display": "asked but unknown"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257622000",
+        "display": "medizinische Einrichtung (außer Krankenhaus)"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "code": "NASK",
+        "display": "not asked"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "255",
+        "display": "Flüchtlings-, Asylbewerberheim"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "254",
+        "display": "Justizvollzugsanstalt"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "253",
+        "display": "Kaserne"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257689006",
+        "display": "Restaurant"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "252",
+        "display": "Wohnheim (Kinder-, Jugend-, Studierenden-)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "413817003",
+        "display": "Kita"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "251",
+        "display": "Alten-/Pflegeheim"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "250",
+        "display": "Wohnstätten"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257658007",
+        "display": "Musikveranstaltung/Konzert"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257692005",
+        "display": "Wohnheim (Kinder-, Jugend-, Studierenden-)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "161093007",
+        "display": "Zeltplatz, Campingplatz"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "310205006",
+        "display": "Haushalt"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "9",
+        "display": "Transportmittel"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "8",
+        "display": "Veranstaltung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "7",
+        "display": "Gastronomie"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "2",
+        "display": "Bildungs-/Betreuungseinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "365",
+        "display": "Pflegepersonal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "123",
+        "display": "Labor"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "1",
+        "display": "Arbeitsplatz, andere"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "122",
+        "display": "ambulanter Pflegedienst"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "364",
+        "display": "medizinisches Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "121",
+        "display": "Pflegeeinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "363",
+        "display": "Besucher/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "120",
+        "display": "medizinische Einrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "241",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "362",
+        "display": "Patient/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "6",
+        "display": "Freizeit"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "5",
+        "display": "Einzelhandel"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "4",
+        "display": "privater Haushalt"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "3",
+        "display": "Gesundheitseinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "124",
+        "display": "Reha-Einrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "366",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "240",
+        "display": "Pflegepersonal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "361",
+        "display": "Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "360",
+        "display": "Passagier/-in"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "224683003",
+        "display": "Kaserne"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "10",
+        "display": "sonstiges"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "285141008",
+        "display": "Arbeitsplatz"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "22232009",
+        "display": "Krankenhaus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "112",
+        "display": "Baugewerbe"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "111",
+        "display": "Lebensmittelbereich"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257628001",
+        "display": "Pension, Herberge"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "110",
+        "display": "Großraumbüro"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "351",
+        "display": "Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "113",
+        "display": "Logistikzentrum"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "192",
+        "display": "Zug/Bahnhof"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "191",
+        "display": "Schiff/Hafen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "190",
+        "display": "Flugzeug/Flughafen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "350",
+        "display": "Passagier/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "194",
+        "display": "öffentlicher Nahverkehr"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "193",
+        "display": "Fernbus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "702703009",
+        "display": "Demonstration/Kundgebung"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257698009",
+        "display": "Schule"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "101",
+        "display": "Kita"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "222",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "221",
+        "display": "Pflegepersonal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "220",
+        "display": "Betreute/-r"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "341",
+        "display": "Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "186",
+        "display": "Messe"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "340",
+        "display": "Passagier/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "104",
+        "display": "Universität"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "103",
+        "display": "sonstige Bildungs-/Betreuungseinrichtung"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "74964007",
+        "display": "andere/sonstige"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "102",
+        "display": "Schule"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "223",
+        "display": "Besucher/-in"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257659004",
+        "display": "religiöse Veranstaltung (z.B. Gottesdienst)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "181",
+        "display": "Sportveranstaltung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "180",
+        "display": "private Feier/Treffen"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "284555002",
+        "display": "Streichelzoo"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "185",
+        "display": "Karneval"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "184",
+        "display": "Demonstration/Kundgebung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "183",
+        "display": "religiöse Veranstaltung (z.B. Gottesdienst)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "182",
+        "display": "Musikveranstaltung/Konzert"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "42665001",
+        "display": "vollstationäre Einrichtung für ältere, behinderte oder pflegebedürftige Menschen (z.B. Alten-/Pflegeheim)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "716367000",
+        "display": "öffentlicher Nahverkehr"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "257603009",
+        "display": "sonstige Bildungs-/Betreuungseinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "331",
+        "display": "Personal"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "261904005",
+        "display": "Labor"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "330",
+        "display": "Passagier/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "170",
+        "display": "als Gast"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "224871002",
+        "display": "Universität"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "171",
+        "display": "als Personal"
+      }
+    ]
+  }
+}

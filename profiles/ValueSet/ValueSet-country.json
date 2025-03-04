@@ -2,16 +2,1213 @@
   "resourceType": "ValueSet",
   "id": "country",
   "url": "https://demis.rki.de/fhir/ValueSet/country",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "name": "Country",
   "title": "Land",
   "status": "active",
-  "date": "2023-02-09",
+  "experimental": false,
+  "date": "2023-09-19",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet Country enthält die Codes der Länder.",
   "compose": {
-    "include": [ {
-      "system": "https://demis.rki.de/fhir/CodeSystem/country",
-      "version": "1.0.0"
-    } ]
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0"
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2023-09-19T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20417",
+        "display": "Mikronesien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18218",
+        "display": "Kap Verde"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20415",
+        "display": "Marshallinseln"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19308",
+        "display": "Paraguay"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20413",
+        "display": "Samoa"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20411",
+        "display": "Tonga"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20096",
+        "display": "Korea, Republik"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17240",
+        "display": "Irland"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18450",
+        "display": "Südafrika (Staat)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18334",
+        "display": "Mali"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17363",
+        "display": "Liechtenstein"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17937",
+        "display": "Weißrussland"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19559",
+        "display": "Bahrain"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20422",
+        "display": "Deutschland"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17491",
+        "display": "Norwegen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18460",
+        "display": "Ruanda"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18466",
+        "display": "Namibia"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18106",
+        "display": "Dschibuti"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18583",
+        "display": "Äquatorialguinea"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17132",
+        "display": "Estland"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17375",
+        "display": "Litauen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19796",
+        "display": "Irak"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18344",
+        "display": "Marokko"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18911",
+        "display": "Argentinien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17945",
+        "display": "Serbien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20315",
+        "display": "Timor-Leste"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18591",
+        "display": "Sudan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17268",
+        "display": "Island"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17148",
+        "display": "Finnland"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19326",
+        "display": "Peru"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17386",
+        "display": "Luxemburg"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18233",
+        "display": "Kenia"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18112",
+        "display": "Elfenbeinküste (Côte d'Ivoire)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20329",
+        "display": "Australien (Land)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18480",
+        "display": "São Tomé und Príncipe"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17392",
+        "display": "Malta"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18361",
+        "display": "Mauritius"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19572",
+        "display": "Aserbaidschan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18483",
+        "display": "Senegal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17390",
+        "display": "Mazedonien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18246",
+        "display": "Kongo"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19214",
+        "display": "Kuba"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18127",
+        "display": "Nigeria"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18242",
+        "display": "Komoren"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17033",
+        "display": "Albanien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17155",
+        "display": "Frankreich"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18899",
+        "display": "Barbados"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19627",
+        "display": "Georgien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20299",
+        "display": "Malaysia"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20055",
+        "display": "Nepal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20172",
+        "display": "Thailand"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18890",
+        "display": "Antigua und Barbuda"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19065",
+        "display": "Ecuador"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19180",
+        "display": "Kolumbien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18093",
+        "display": "Benin"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19622",
+        "display": "Brunei Darussalam"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18654",
+        "display": "Togo"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19987",
+        "display": "Kirgisistan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17562",
+        "display": "Rumänien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20063",
+        "display": "Bangladesch"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20061",
+        "display": "Palästinensische Gebiete"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19512",
+        "display": "Armenien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17213",
+        "display": "Slowenien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19995",
+        "display": "Libanon"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18660",
+        "display": "Tschad"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18420",
+        "display": "Guinea-Bissau"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18559",
+        "display": "Sierra Leone"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18439",
+        "display": "Kamerun"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19091",
+        "display": "El Salvador"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20078",
+        "display": "Philippinen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17460",
+        "display": "Moldau"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20071",
+        "display": "Pakistan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17226",
+        "display": "Griechenland"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19524",
+        "display": "Afghanistan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19640",
+        "display": "Sri Lanka"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17341",
+        "display": "Montenegro"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18430",
+        "display": "Guinea"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18311",
+        "display": "Madagaskar"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19762",
+        "display": "Indonesien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17914",
+        "display": "Vereinigtes Königreich"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20409",
+        "display": "Tuvalu"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17912",
+        "display": "Vatikanstadt"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17114",
+        "display": "Dänemark"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18204",
+        "display": "Mauretanien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19899",
+        "display": "Kasachstan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18689",
+        "display": "Tunesien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17472",
+        "display": "Monaco"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19650",
+        "display": "Vietnam"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17474",
+        "display": "Niederlande"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19411",
+        "display": "Vereinigte Staaten"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18564",
+        "display": "Somalia"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18618",
+        "display": "Swasiland"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18977",
+        "display": "Guyana"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17526",
+        "display": "Polen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20133",
+        "display": "Saudi-Arabien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18051",
+        "display": "Eritrea"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19383",
+        "display": "St. Lucia"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17085",
+        "display": "Bulgarien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19385",
+        "display": "Venezuela"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19263",
+        "display": "Nicaragua"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17081",
+        "display": "Belgien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18059",
+        "display": "Äthiopien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17886",
+        "display": "Ukraine"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18854",
+        "display": "Zentralafrikanische Republik"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18176",
+        "display": "Gabun"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19024",
+        "display": "Costa Rica"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19147",
+        "display": "Honduras"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18988",
+        "display": "Belize"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19715",
+        "display": "Korea, Demokratische Volksrepublik"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20147",
+        "display": "Singapur"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20388",
+        "display": "Papua-Neuguinea"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20386",
+        "display": "Palau"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20023",
+        "display": "Oman"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20264",
+        "display": "China"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18186",
+        "display": "Gambia"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19032",
+        "display": "Dominikanische Republik"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17775",
+        "display": "Türkei"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18623",
+        "display": "Tansania"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19953",
+        "display": "Katar"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19604",
+        "display": "Myanmar"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19969",
+        "display": "Laos"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19727",
+        "display": "Indien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20157",
+        "display": "Syrien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20032",
+        "display": "Mongolei"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18071",
+        "display": "Lesotho"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18193",
+        "display": "Ghana"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19281",
+        "display": "Jamaika"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19963",
+        "display": "Kuwait"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17664",
+        "display": "Russische Föderation"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17543",
+        "display": "Portugal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18995",
+        "display": "Chile"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19844",
+        "display": "Israel"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19166",
+        "display": "Kanada"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18872",
+        "display": "Burundi"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18406",
+        "display": "Burkina Faso"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19295",
+        "display": "Panama"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18082",
+        "display": "Botsuana"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17314",
+        "display": "Lettland"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19851",
+        "display": "Japan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18937",
+        "display": "Bahamas"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18939",
+        "display": "Bolivien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17604",
+        "display": "Slowakei"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18371",
+        "display": "Mosambik"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19583",
+        "display": "Bhutan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18257",
+        "display": "Kongo, Demokratische Republik"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19106",
+        "display": "Grenada"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18498",
+        "display": "Seychellen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18826",
+        "display": "Ägypten"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19915",
+        "display": "Jordanien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18949",
+        "display": "Brasilien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17613",
+        "display": "San Marino"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17976",
+        "display": "Zypern"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17856",
+        "display": "Tschechische Republik"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20349",
+        "display": "Fidschi"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17615",
+        "display": "Schweden"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20347",
+        "display": "Salomonen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17293",
+        "display": "Italien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19470",
+        "display": "St. Vincent und die Grenadinen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18383",
+        "display": "Niger"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19352",
+        "display": "Suriname"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19472",
+        "display": "St. Kitts und Nevis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19230",
+        "display": "Mexiko"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18269",
+        "display": "Liberia"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19474",
+        "display": "Trinidad und Tobago"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19113",
+        "display": "Guatemala"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19928",
+        "display": "Kambodscha"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17865",
+        "display": "Ungarn"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18714",
+        "display": "Uganda"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20358",
+        "display": "Nauru"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20356",
+        "display": "Kiribati"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20354",
+        "display": "Cookinseln"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20112",
+        "display": "Vereinigte Arabische Emirate"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18392",
+        "display": "Malawi"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19363",
+        "display": "Uruguay"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18032",
+        "display": "Angola"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17983",
+        "display": "Algerien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18396",
+        "display": "Sambia"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18607",
+        "display": "Südsudan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17514",
+        "display": "Kosovo"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19815",
+        "display": "Iran"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17516",
+        "display": "Österreich"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17637",
+        "display": "Schweiz"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20249",
+        "display": "Usbekistan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20369",
+        "display": "Neuseeland"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20127",
+        "display": "Turkmenistan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20367",
+        "display": "Niue"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20002",
+        "display": "Malediven"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20122",
+        "display": "Tadschikistan"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17073",
+        "display": "Andorra"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "20360",
+        "display": "Vanuatu"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18285",
+        "display": "Libyen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17191",
+        "display": "Kroatien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17070",
+        "display": "Bosnien und Herzegowina"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19490",
+        "display": "Jemen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "17754",
+        "display": "Spanien"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "18165",
+        "display": "Simbabwe"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19013",
+        "display": "Dominica"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/country",
+        "version": "1.1.0",
+        "code": "19136",
+        "display": "Haiti"
+      }
+    ]
   }
 }

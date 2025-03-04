@@ -8,8 +8,16 @@ spec:
   host: {{ $name }}.{{ .Release.Namespace }}.svc.cluster.local
   subsets:
     {{- range $k, $v := .Values.istio.subsets }}
+    {{- if (and (hasKey $v "fhirProfile") (hasKey $v "fhirProfileVersion") ) }}
+    - name: {{ regexReplaceAll "\\.+" $v.version "-" }}-{{ regexReplaceAll "\\.+" $v.fhirProfile "-" }}-{{ regexReplaceAll "\\.+" $v.fhirProfileVersion "-" }}
+      labels:
+        version: {{ $v.version }}
+        fhirProfile: {{ $v.fhirProfile }}
+        fhirProfileVersion: {{ $v.fhirProfileVersion }}
+    {{- else }}
     - name: {{ regexReplaceAll "\\.+" $v.version "-" }}
       labels:
         version: {{ $v.version }}
+    {{- end }}
     {{- end }}
 {{- end }}

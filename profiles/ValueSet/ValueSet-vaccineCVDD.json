@@ -1,0 +1,146 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vaccineCVDD",
+  "url": "https://demis.rki.de/fhir/ValueSet/vaccineCVDD",
+  "version": "1.4.2",
+  "name": "VaccineCVDD",
+  "title": "Antwortmöglichkeiten für die Angabe des Impfstoffs in Bezug auf den Meldetatbestand \"Coronavirus-Krankheit-2019 (COVID-19)\" als EMA-Code",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-10-10",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet VaccineCVDD enthält die kodierten Antwortmöglichkeiten für die Angabe des Impfstoffs in Bezug auf den Meldetatbestand \"Coronavirus-Krankheit-2019 (COVID-19)\" als EMA-Code.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://ec.europa.eu/health/documents/community-register/html/",
+        "version": "1.0.0",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 12
+              }
+            ],
+            "code": "EU/1/20/1507",
+            "display": "Spikevax (COVID-19 Vaccine Moderna)"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 14
+              }
+            ],
+            "code": "EU/1/20/1525",
+            "display": "COVID-19 Vaccine Janssen"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 15
+              }
+            ],
+            "code": "EU/1/20/1528",
+            "display": "Comirnaty"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 10
+              }
+            ],
+            "code": "EU/1/21/1529",
+            "display": "Vaxzevria (COVID-19 Vaccine AstraZeneca)"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 13
+              }
+            ],
+            "code": "EU/1/21/1618",
+            "display": "Nuvaxovid (NVX-CoV2373)"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 11
+              }
+            ],
+            "code": "EU/1/21/1624",
+            "display": "Valneva"
+          }
+        ]
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/vaccine",
+        "version": "1.0.0",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "otherVaccine",
+            "display": "Anderer Impfstoff"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-10-10T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "https://ec.europa.eu/health/documents/community-register/html/",
+        "version": "1.0.0",
+        "code": "EU/1/20/1525",
+        "display": "JCOVDEN"
+      },
+      {
+        "system": "https://ec.europa.eu/health/documents/community-register/html/",
+        "version": "1.0.0",
+        "code": "EU/1/21/1618",
+        "display": "Nuvaxovid"
+      },
+      {
+        "system": "https://ec.europa.eu/health/documents/community-register/html/",
+        "version": "1.0.0",
+        "code": "EU/1/21/1529",
+        "display": "Vaxzevria"
+      },
+      {
+        "system": "https://ec.europa.eu/health/documents/community-register/html/",
+        "version": "1.0.0",
+        "code": "EU/1/20/1507",
+        "display": "Spikevax"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/vaccine",
+        "version": "1.0.0",
+        "code": "otherVaccine",
+        "display": "Anderer Impfstoff"
+      },
+      {
+        "system": "https://ec.europa.eu/health/documents/community-register/html/",
+        "version": "1.0.0",
+        "code": "EU/1/21/1624",
+        "display": "COVID-19 Vaccine (inactivated, adjuvanted) Valneva"
+      },
+      {
+        "system": "https://ec.europa.eu/health/documents/community-register/html/",
+        "version": "1.0.0",
+        "code": "EU/1/20/1528",
+        "display": "Comirnaty"
+      }
+    ]
+  }
+}

@@ -2,897 +2,2444 @@
   "resourceType": "ValueSet",
   "id": "answerSetETVP",
   "url": "https://demis.rki.de/fhir/ValueSet/answerSetETVP",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "name": "AnswerSetETVP",
   "title": "AnswerSet für Enteroviren",
   "status": "active",
-  "date": "2023-05-03",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet AnswerSetETVP enthält die Codes der Answer-Codes für Enteroviren.",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
   "compose": {
-    "include": [ {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
-      "concept": [ {
-        "code": "69239002",
-        "display": "Human enterovirus (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus (organism)"
-        } ]
-      }, {
-        "code": "12997006",
-        "display": "Human enterovirus 68 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus 68 (organism)"
-        } ]
-      }, {
-        "code": "78434004",
-        "display": "Human enterovirus 69 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus 69 (organism)"
-        } ]
-      }, {
-        "code": "90779008",
-        "display": "Human enterovirus 70 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus 70 (organism)"
-        } ]
-      }, {
-        "code": "68874003",
-        "display": "Human enterovirus 71 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus 71 (organism)"
-        } ]
-      }, {
-        "code": "421603003",
-        "display": "Human enterovirus 73 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus 73 (organism)"
-        } ]
-      }, {
-        "code": "421124007",
-        "display": "Human enterovirus 75 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus 75 (organism)"
-        } ]
-      }, {
-        "code": "421887001",
-        "display": "Human enterovirus 76 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus 76 (organism)"
-        } ]
-      }, {
-        "code": "420441008",
-        "display": "Human enterovirus 77 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus 77 (organism)"
-        } ]
-      }, {
-        "code": "421170000",
-        "display": "Human enterovirus 78 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus 78 (organism)"
-        } ]
-      }, {
-        "code": "423043004",
-        "display": "Human enterovirus A (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus A (organism)"
-        } ]
-      }, {
-        "code": "422793002",
-        "display": "Human enterovirus B (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus B (organism)"
-        } ]
-      }, {
-        "code": "422982005",
-        "display": "Human enterovirus C (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus C (organism)"
-        } ]
-      }, {
-        "code": "428234001",
-        "display": "Human enterovirus D (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human enterovirus D (organism)"
-        } ]
-      }, {
-        "code": "39164004",
-        "display": "Human echovirus (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus (organism)"
-        } ]
-      }, {
-        "code": "36204005",
-        "display": "Human echovirus 1 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 1 (organism)"
-        } ]
-      }, {
-        "code": "716253006",
-        "display": "Human echovirus 10 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 10 (organism)"
-        } ]
-      }, {
-        "code": "37870004",
-        "display": "Human echovirus 11 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 11 (organism)"
-        } ]
-      }, {
-        "code": "58657002",
-        "display": "Human echovirus 12 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 12 (organism)"
-        } ]
-      }, {
-        "code": "15652005",
-        "display": "Human echovirus 13 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 13 (organism)"
-        } ]
-      }, {
-        "code": "74305002",
-        "display": "Human echovirus 14 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 14 (organism)"
-        } ]
-      }, {
-        "code": "50346001",
-        "display": "Human echovirus 15 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 15 (organism)"
-        } ]
-      }, {
-        "code": "70855006",
-        "display": "Human echovirus 16 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 16 (organism)"
-        } ]
-      }, {
-        "code": "21813007",
-        "display": "Human echovirus 17 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 17 (organism)"
-        } ]
-      }, {
-        "code": "19319001",
-        "display": "Human echovirus 18 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 18 (organism)"
-        } ]
-      }, {
-        "code": "82519006",
-        "display": "Human echovirus 19 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 19 (organism)"
-        } ]
-      }, {
-        "code": "21206001",
-        "display": "Human echovirus 2 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 2 (organism)"
-        } ]
-      }, {
-        "code": "74533001",
-        "display": "Human echovirus 20 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 20 (organism)"
-        } ]
-      }, {
-        "code": "12842000",
-        "display": "Human echovirus 21 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 21 (organism)"
-        } ]
-      }, {
-        "code": "716254000",
-        "display": "Human echovirus 22 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 22 (organism)"
-        } ]
-      }, {
-        "code": "716255004",
-        "display": "Human echovirus 23 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 23 (organism)"
-        } ]
-      }, {
-        "code": "7746003",
-        "display": "Human echovirus 24 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 24 (organism)"
-        } ]
-      }, {
-        "code": "75565006",
-        "display": "Human echovirus 25 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 25 (organism)"
-        } ]
-      }, {
-        "code": "91072000",
-        "display": "Human echovirus 26 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 26 (organism)"
-        } ]
-      }, {
-        "code": "34632007",
-        "display": "Human echovirus 27 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 27 (organism)"
-        } ]
-      }, {
-        "code": "30154001",
-        "display": "Human echovirus 29 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 29 (organism)"
-        } ]
-      }, {
-        "code": "43794009",
-        "display": "Human echovirus 3 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 3 (organism)"
-        } ]
-      }, {
-        "code": "31183009",
-        "display": "Human echovirus 30 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 30 (organism)"
-        } ]
-      }, {
-        "code": "17833003",
-        "display": "Human echovirus 31 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 31 (organism)"
-        } ]
-      }, {
-        "code": "59056002",
-        "display": "Human echovirus 32 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 32 (organism)"
-        } ]
-      }, {
-        "code": "79968007",
-        "display": "Human echovirus 33 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 33 (organism)"
-        } ]
-      }, {
-        "code": "60066004",
-        "display": "Human echovirus 34 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 34 (organism)"
-        } ]
-      }, {
-        "code": "427004",
-        "display": "Human echovirus 4 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 4 (organism)"
-        } ]
-      }, {
-        "code": "16815003",
-        "display": "Human echovirus 5 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 5 (organism)"
-        } ]
-      }, {
-        "code": "4433000",
-        "display": "Human echovirus 6 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 6 (organism)"
-        } ]
-      }, {
-        "code": "46506009",
-        "display": "Human echovirus 7 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 7 (organism)"
-        } ]
-      }, {
-        "code": "53038008",
-        "display": "Human echovirus 8 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 8 (organism)"
-        } ]
-      }, {
-        "code": "66619009",
-        "display": "Human echovirus 9 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human echovirus 9 (organism)"
-        } ]
-      }, {
-        "code": "53744000",
-        "display": "Human coxsackievirus A (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A (organism)"
-        } ]
-      }, {
-        "code": "72254008",
-        "display": "Human coxsackievirus A1 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A1 (organism)"
-        } ]
-      }, {
-        "code": "38203008",
-        "display": "Human coxsackievirus A10 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A10 (organism)"
-        } ]
-      }, {
-        "code": "52657009",
-        "display": "Human coxsackievirus A11 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A11 (organism)"
-        } ]
-      }, {
-        "code": "2793000",
-        "display": "Human coxsackievirus A12 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A12 (organism)"
-        } ]
-      }, {
-        "code": "7543009",
-        "display": "Human coxsackievirus A13 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A13 (organism)"
-        } ]
-      }, {
-        "code": "24747003",
-        "display": "Human coxsackievirus A14 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A14 (organism)"
-        } ]
-      }, {
-        "code": "72593000",
-        "display": "Human coxsackievirus A15 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A15 (organism)"
-        } ]
-      }, {
-        "code": "42067008",
-        "display": "Human coxsackievirus A16 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A16 (organism)"
-        } ]
-      }, {
-        "code": "58445002",
-        "display": "Human coxsackievirus A17 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A17 (organism)"
-        } ]
-      }, {
-        "code": "30840007",
-        "display": "Human coxsackievirus A18 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A18 (organism)"
-        } ]
-      }, {
-        "code": "38889001",
-        "display": "Human coxsackievirus A19 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A19 (organism)"
-        } ]
-      }, {
-        "code": "23831003",
-        "display": "Human coxsackievirus A2 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A2 (organism)"
-        } ]
-      }, {
-        "code": "6771007",
-        "display": "Human coxsackievirus A20 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A20 (organism)"
-        } ]
-      }, {
-        "code": "72597004",
-        "display": "Human coxsackievirus A21 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A21 (organism)"
-        } ]
-      }, {
-        "code": "83593001",
-        "display": "Human coxsackievirus A22 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A22 (organism)"
-        } ]
-      }, {
-        "code": "72877003",
-        "display": "Human coxsackievirus A24 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A24 (organism)"
-        } ]
-      }, {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "12842000",
+            "display": "Human echovirus 21 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 21 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 21"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "1293004",
+            "display": "Human coxsackievirus A8 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A8 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A8"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "12997006",
+            "display": "Human enterovirus 68 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus 68 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus 68"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "15652005",
+            "display": "Human echovirus 13 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 13 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 13"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "16815003",
+            "display": "Human echovirus 5 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 5 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 5"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "17833003",
+            "display": "Human echovirus 31 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 31 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 31"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "19319001",
+            "display": "Human echovirus 18 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 18 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 18"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "21206001",
+            "display": "Human echovirus 2 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 2 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 2"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "21813007",
+            "display": "Human echovirus 17 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 17 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 17"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "23831003",
+            "display": "Human coxsackievirus A2 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A2 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A2"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "24071003",
+            "display": "Human coxsackievirus A6 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A6 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A6"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "24747003",
+            "display": "Human coxsackievirus A14 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A14 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A14"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "27555004",
+            "display": "Human coxsackievirus B2 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus B2 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus B2"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "2793000",
+            "display": "Human coxsackievirus A12 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A12 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A12"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "30154001",
+            "display": "Human echovirus 29 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 29 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 29"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "30840007",
+            "display": "Human coxsackievirus A18 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A18 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A18"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "3096006",
+            "display": "Human coxsackievirus A9 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A9 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A9"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "31183009",
+            "display": "Human echovirus 30 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 30 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 30"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "34632007",
+            "display": "Human echovirus 27 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 27 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 27"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "36204005",
+            "display": "Human echovirus 1 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 1 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 1"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "37870004",
+            "display": "Human echovirus 11 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 11 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 11"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "38203008",
+            "display": "Human coxsackievirus A10 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A10 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A10"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "38219001",
+            "display": "Human coxsackievirus A5 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A5 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A5"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "38889001",
+            "display": "Human coxsackievirus A19 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A19 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A19"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "39164004",
+            "display": "Human echovirus (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "41988004",
+            "display": "Human coxsackievirus B4 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus B4 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus B4"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "420441008",
+            "display": "Human enterovirus 77 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus 77 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus 77"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "42067008",
+            "display": "Human coxsackievirus A16 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A16 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A16"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "421124007",
+            "display": "Human enterovirus 75 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus 75 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus 75"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "421170000",
+            "display": "Human enterovirus 78 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus 78 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus 78"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "421603003",
+            "display": "Human enterovirus 73 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus 73 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus 73"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "421887001",
+            "display": "Human enterovirus 76 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus 76 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus 76"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "422793002",
+            "display": "Human enterovirus B (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus B (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus B"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "422982005",
+            "display": "Human enterovirus C (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus C (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus C"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "423043004",
+            "display": "Human enterovirus A (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus A (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus A"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "427004",
+            "display": "Human echovirus 4 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 4 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 4"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "428234001",
+            "display": "Human enterovirus D (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus D (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus D"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "43794009",
+            "display": "Human echovirus 3 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 3 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 3"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "4433000",
+            "display": "Human echovirus 6 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 6 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 6"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "46506009",
+            "display": "Human echovirus 7 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 7 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 7"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "48171002",
+            "display": "Human coxsackievirus B6 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus B6 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus B6"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "49018005",
+            "display": "Human coxsackievirus B (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus B (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus B"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "50346001",
+            "display": "Human echovirus 15 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 15 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 15"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "52657009",
+            "display": "Human coxsackievirus A11 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A11 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A11"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "53038008",
+            "display": "Human echovirus 8 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 8 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 8"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "53744000",
+            "display": "Human coxsackievirus A (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "55982000",
+            "display": "Human coxsackievirus A3 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A3 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A3"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "58445002",
+            "display": "Human coxsackievirus A17 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A17 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A17"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "58657002",
+            "display": "Human echovirus 12 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 12 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 12"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "59056002",
+            "display": "Human echovirus 32 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 32 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 32"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "60066004",
+            "display": "Human echovirus 34 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 34 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 34"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "62408001",
+            "display": "Human coxsackievirus B5 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus B5 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus B5"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "66619009",
+            "display": "Human echovirus 9 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 9 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 9"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "6771007",
+            "display": "Human coxsackievirus A20 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A20 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A20"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "68874003",
+            "display": "Human enterovirus 71 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus 71 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus 71"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "69239002",
+            "display": "Human enterovirus (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698222005",
+            "display": "Human coxsackievirus A24 variant (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A24 variant (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A24-Variante"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "70855006",
+            "display": "Human echovirus 16 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 16 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 16"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "716253006",
+            "display": "Human echovirus 10 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 10 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 10"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "716254000",
+            "display": "Human echovirus 22 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 22 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 22"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "716255004",
+            "display": "Human echovirus 23 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 23 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 23"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "72254008",
+            "display": "Human coxsackievirus A1 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A1 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A1"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "72593000",
+            "display": "Human coxsackievirus A15 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A15 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A15"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "72597004",
+            "display": "Human coxsackievirus A21 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A21 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A21"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "72877003",
+            "display": "Human coxsackievirus A24 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A24 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A24"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "74305002",
+            "display": "Human echovirus 14 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 14 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 14"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "74533001",
+            "display": "Human echovirus 20 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 20 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 20"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "74924008",
+            "display": "Human coxsackievirus A7 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A7 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A7"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "7543009",
+            "display": "Human coxsackievirus A13 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A13 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A13"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "75565006",
+            "display": "Human echovirus 25 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 25 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 25"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "7746003",
+            "display": "Human echovirus 24 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 24 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 24"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "78434004",
+            "display": "Human enterovirus 69 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus 69 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus 69"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "79968007",
+            "display": "Human echovirus 33 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 33 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 33"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "82059001",
+            "display": "Human coxsackievirus B1 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus B1 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus B1"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "82519006",
+            "display": "Human echovirus 19 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 19 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 19"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "83593001",
+            "display": "Human coxsackievirus A22 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A22 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A22"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "86886003",
+            "display": "Human coxsackievirus A4 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus A4 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus A4"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "89585007",
+            "display": "Human coxsackievirus B3 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human coxsackievirus B3 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Coxsackie-Virus B3"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "90779008",
+            "display": "Human enterovirus 70 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human enterovirus 70 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Enterovirus 70"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "91072000",
+            "display": "Human echovirus 26 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Human echovirus 26 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Humanes Echovirus 26"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetLaboratoryTest-SNOMED"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetResistance-SNOMED"
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "698222005",
-        "display": "Human coxsackievirus A24 variant (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A24 variant (organism)"
-        } ]
-      }, {
-        "code": "55982000",
-        "display": "Human coxsackievirus A3 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A3 (organism)"
-        } ]
-      }, {
-        "code": "86886003",
-        "display": "Human coxsackievirus A4 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A4 (organism)"
-        } ]
-      }, {
-        "code": "38219001",
-        "display": "Human coxsackievirus A5 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A5 (organism)"
-        } ]
-      }, {
-        "code": "24071003",
-        "display": "Human coxsackievirus A6 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A6 (organism)"
-        } ]
-      }, {
+        "display": "Human coxsackievirus A24 variant (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "427004",
+        "display": "Human echovirus 4 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "12842000",
+        "display": "Human echovirus 21 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "52657009",
+        "display": "Human coxsackievirus A11 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "74924008",
-        "display": "Human coxsackievirus A7 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A7 (organism)"
-        } ]
-      }, {
-        "code": "1293004",
-        "display": "Human coxsackievirus A8 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A8 (organism)"
-        } ]
-      }, {
-        "code": "3096006",
-        "display": "Human coxsackievirus A9 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus A9 (organism)"
-        } ]
-      }, {
+        "display": "Human coxsackievirus A7 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "716255004",
+        "display": "Human echovirus 23 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "38889001",
+        "display": "Human coxsackievirus A19 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "42067008",
+        "display": "Human coxsackievirus A16 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "49018005",
-        "display": "Human coxsackievirus B (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus B (organism)"
-        } ]
-      }, {
-        "code": "82059001",
-        "display": "Human coxsackievirus B1 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus B1 (organism)"
-        } ]
-      }, {
+        "display": "Human coxsackievirus B (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "79968007",
+        "display": "Human echovirus 33 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "43794009",
+        "display": "Human echovirus 3 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "421124007",
+        "display": "Human enterovirus 75 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "74305002",
+        "display": "Human echovirus 14 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "34632007",
+        "display": "Human echovirus 27 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "6771007",
+        "display": "Human coxsackievirus A20 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "27555004",
-        "display": "Human coxsackievirus B2 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus B2 (organism)"
-        } ]
-      }, {
+        "display": "Human coxsackievirus B2 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "89585007",
-        "display": "Human coxsackievirus B3 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus B3 (organism)"
-        } ]
-      }, {
-        "code": "41988004",
-        "display": "Human coxsackievirus B4 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus B4 (organism)"
-        } ]
-      }, {
-        "code": "62408001",
-        "display": "Human coxsackievirus B5 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus B5 (organism)"
-        } ]
-      }, {
+        "display": "Human coxsackievirus B3 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "421887001",
+        "display": "Human enterovirus 76 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "46506009",
+        "display": "Human echovirus 7 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "24071003",
+        "display": "Human coxsackievirus A6 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "66619009",
+        "display": "Human echovirus 9 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "11896004",
+        "display": "Intermediate (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "36204005",
+        "display": "Human echovirus 1 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "74533001",
+        "display": "Human echovirus 20 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "31183009",
+        "display": "Human echovirus 30 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "90779008",
+        "display": "Human enterovirus 70 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "48171002",
-        "display": "Human coxsackievirus B6 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Human coxsackievirus B6 (organism)"
-        } ]
-      } ]
-    } ]
+        "display": "Human coxsackievirus B6 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "58445002",
+        "display": "Human coxsackievirus A17 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "75565006",
+        "display": "Human echovirus 25 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "53038008",
+        "display": "Human echovirus 8 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "421603003",
+        "display": "Human enterovirus 73 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "58657002",
+        "display": "Human echovirus 12 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "72593000",
+        "display": "Human coxsackievirus A15 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "72597004",
+        "display": "Human coxsackievirus A21 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "422793002",
+        "display": "Human enterovirus B (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "82519006",
+        "display": "Human echovirus 19 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "30154001",
+        "display": "Human echovirus 29 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "37870004",
+        "display": "Human echovirus 11 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "428234001",
+        "display": "Human enterovirus D (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "78434004",
+        "display": "Human enterovirus 69 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "62408001",
+        "display": "Human coxsackievirus B5 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "3096006",
+        "display": "Human coxsackievirus A9 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "38203008",
+        "display": "Human coxsackievirus A10 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "15652005",
+        "display": "Human echovirus 13 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "55982000",
+        "display": "Human coxsackievirus A3 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "39164004",
+        "display": "Human echovirus (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "1293004",
+        "display": "Human coxsackievirus A8 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "423043004",
+        "display": "Human enterovirus A (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "7746003",
+        "display": "Human echovirus 24 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "50346001",
+        "display": "Human echovirus 15 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "82059001",
+        "display": "Human coxsackievirus B1 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "83593001",
+        "display": "Human coxsackievirus A22 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "72254008",
+        "display": "Human coxsackievirus A1 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "72877003",
+        "display": "Human coxsackievirus A24 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "19319001",
+        "display": "Human echovirus 18 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "716254000",
+        "display": "Human echovirus 22 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "16815003",
+        "display": "Human echovirus 5 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "21813007",
+        "display": "Human echovirus 17 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "24747003",
+        "display": "Human coxsackievirus A14 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "53744000",
+        "display": "Human coxsackievirus A (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "68874003",
+        "display": "Human enterovirus 71 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "86886003",
+        "display": "Human coxsackievirus A4 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "17833003",
+        "display": "Human echovirus 31 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "421170000",
+        "display": "Human enterovirus 78 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "7543009",
+        "display": "Human coxsackievirus A13 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "69239002",
+        "display": "Human enterovirus (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "2793000",
+        "display": "Human coxsackievirus A12 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "70855006",
+        "display": "Human echovirus 16 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "41988004",
+        "display": "Human coxsackievirus B4 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "59056002",
+        "display": "Human echovirus 32 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "21206001",
+        "display": "Human echovirus 2 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "38219001",
+        "display": "Human coxsackievirus A5 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "420441008",
+        "display": "Human enterovirus 77 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "91072000",
+        "display": "Human echovirus 26 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "4433000",
+        "display": "Human echovirus 6 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "23831003",
+        "display": "Human coxsackievirus A2 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "716253006",
+        "display": "Human echovirus 10 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "12997006",
+        "display": "Human enterovirus 68 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "422982005",
+        "display": "Human enterovirus C (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "30840007",
+        "display": "Human coxsackievirus A18 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "60066004",
+        "display": "Human echovirus 34 (organism)"
+      }
+    ]
   }
 }

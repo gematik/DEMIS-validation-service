@@ -1,0 +1,566 @@
+{
+  "resourceType": "ValueSet",
+  "id": "infectionEnvironmentSetting",
+  "url": "https://demis.rki.de/fhir/ValueSet/infectionEnvironmentSetting",
+  "version": "1.1.1",
+  "name": "InfectionEnvironmentSetting",
+  "title": "Infektionsumfeld",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-09-02",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet InfectionEnvironmentSetting enthält die Codes zur Angabe des Infektionsumfeldes.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0"
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-02T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "9",
+        "display": "Transportmittel"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "8",
+        "display": "Veranstaltung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "7",
+        "display": "Gastronomie"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "2",
+        "display": "Bildungs-/Betreuungseinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "321",
+        "display": "Erzieher/-in, Ausbilder/-in, Betreuer/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "200",
+        "display": "Patient/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "365",
+        "display": "Pflegepersonal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "123",
+        "display": "Labor"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "1",
+        "display": "Arbeitsplatz, andere"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "320",
+        "display": "Betreute/-r"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "122",
+        "display": "ambulanter Pflegedienst"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "364",
+        "display": "medizinisches Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "121",
+        "display": "Pflegeeinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "363",
+        "display": "Besucher/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "120",
+        "display": "medizinische Einrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "241",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "362",
+        "display": "Patient/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "204",
+        "display": "Besucher/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "6",
+        "display": "Freizeit"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "203",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "5",
+        "display": "Einzelhandel"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "324",
+        "display": "Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "202",
+        "display": "Pflegepersonal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "4",
+        "display": "privater Haushalt"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "323",
+        "display": "Passagier/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "322",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "3",
+        "display": "Gesundheitseinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "201",
+        "display": "medizinisches Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "124",
+        "display": "Reha-Einrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "366",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "240",
+        "display": "Pflegepersonal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "361",
+        "display": "Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "162",
+        "display": "Verein"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "360",
+        "display": "Passagier/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "161",
+        "display": "Chor"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "160",
+        "display": "Sport"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "10",
+        "display": "sonstiges"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "112",
+        "display": "Baugewerbe"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "310",
+        "display": "Schüler/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "111",
+        "display": "Lebensmittelbereich"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "110",
+        "display": "Großraumbüro"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "351",
+        "display": "Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "313",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "312",
+        "display": "Eltern"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "113",
+        "display": "Logistikzentrum"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "311",
+        "display": "Lehrkraft"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "192",
+        "display": "Zug/Bahnhof"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "191",
+        "display": "Schiff/Hafen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "190",
+        "display": "Flugzeug/Flughafen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "350",
+        "display": "Passagier/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "151",
+        "display": "als Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "150",
+        "display": "als Kunde"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "194",
+        "display": "öffentlicher Nahverkehr"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "193",
+        "display": "Fernbus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "101",
+        "display": "Kita"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "222",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "221",
+        "display": "Pflegepersonal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "220",
+        "display": "Betreute/-r"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "143",
+        "display": "Betreute/-r"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "341",
+        "display": "Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "186",
+        "display": "Messe"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "340",
+        "display": "Passagier/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "263",
+        "display": "Zeltplatz, Campingplatz"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "303",
+        "display": "sonstiges Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "302",
+        "display": "Eltern"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "104",
+        "display": "Universität"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "301",
+        "display": "Erzieher/-in, Betreuer/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "103",
+        "display": "sonstige Bildungs-/Betreuungseinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "300",
+        "display": "Betreute/-r"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "102",
+        "display": "Schule"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "223",
+        "display": "Besucher/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "181",
+        "display": "Sportveranstaltung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "180",
+        "display": "private Feier/Treffen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "185",
+        "display": "Karneval"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "262",
+        "display": "Kreuzfahrtschiff"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "184",
+        "display": "Demonstration/Kundgebung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "261",
+        "display": "Hotel, Pension, Herberge"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "183",
+        "display": "religiöse Veranstaltung (z.B. Gottesdienst)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "260",
+        "display": "Übernachtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "182",
+        "display": "Musikveranstaltung/Konzert"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "255",
+        "display": "Flüchtlings-, Asylbewerberheim"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "331",
+        "display": "Personal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "254",
+        "display": "Justizvollzugsanstalt"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "330",
+        "display": "Passagier/-in"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "253",
+        "display": "Kaserne"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "252",
+        "display": "Wohnheim (Kinder-, Jugend-, Studierenden-)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "170",
+        "display": "als Gast"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "251",
+        "display": "Alten-/Pflegeheim"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "250",
+        "display": "Wohnstätten"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/infectionEnvironmentSetting",
+        "version": "1.0.0",
+        "code": "171",
+        "display": "als Personal"
+      }
+    ]
+  }
+}

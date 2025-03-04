@@ -2,336 +2,448 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestRUVP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestRUVP",
-  "version": "1.4.0",
+  "version": "1.7.0",
   "name": "LaboratoryTestRUVP",
   "title": "Labortest für Rubellavirus",
   "status": "active",
-  "date": "2023-05-04",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestRUVP enthält die Codes der Labortests für Rubellavirus.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "100341-7",
-        "display": "Rubella virus IgG Ab index [Units/volume] in Serum and CSF",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "100341-7",
+            "display": "Rubella virus IgG Ab index [Units/volume] in Serum and CSF",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgG-Antikörperindex [Einheiten/Volumen] in Serum und Liquor"
+              }
+            ]
           },
-          "value": "Röteln-Virus-IgG-Antikörperindex [Einheiten/Volumen] in Serum und Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "12251-5",
-        "display": "Rubella virus Ag [Presence] in Specimen by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "13281-1",
+            "display": "Rubella virus IgG Ab [Units/volume] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgG-Antikörper [Einheiten/Volumen] in Liquor"
+              }
+            ]
           },
-          "value": "Röteln-Virus-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "13279-5",
-        "display": "Rubella virus IgG Ab [Units/volume] in Serum --1st specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "13282-9",
+            "display": "Rubella virus IgM Ab [Units/volume] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgM-Antikörper [Einheiten/Volumen] in Liquor"
+              }
+            ]
           },
-          "value": "Röteln-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum --1. Probenmaterial"
-        } ]
-      }, {
-        "code": "13280-3",
-        "display": "Rubella virus IgG Ab [Units/volume] in Serum --2nd specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "17551-3",
+            "display": "Rubella virus IgG Ab [Units/volume] in Cerebral spinal fluid by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgG-Antikörper [Einheiten/Volumen] in Liquor mittels Immunoassay"
+              }
+            ]
           },
-          "value": "Röteln-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum --2. Probenmaterial"
-        } ]
-      }, {
-        "code": "13282-9",
-        "display": "Rubella virus IgM Ab [Units/volume] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "17552-1",
+            "display": "Rubella virus IgM Ab [Presence] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgM-Antikörper [Nachweis] in Liquor"
+              }
+            ]
           },
-          "value": "Röteln-Virus-IgM-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "17551-3",
-        "display": "Rubella virus IgG Ab [Units/volume] in Cerebral spinal fluid by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "24116-6",
+            "display": "Rubella virus IgM Ab [Presence] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgM-Antikörper [Nachweis] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
           },
-          "value": "Röteln-Virus-IgG-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit mit Immunoassay"
-        } ]
-      }, {
-        "code": "24116-6",
-        "display": "Rubella virus IgM Ab [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "25514-1",
+            "display": "Rubella virus IgG Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgG-Antikörper [Nachweis] in Serum"
+              }
+            ]
           },
-          "value": "Röteln-Virus-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "25298-1",
-        "display": "Rubella virus IgG Ab [Ratio] in Serum --1st specimen/2nd specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "31616-6",
+            "display": "Rubella virus IgM Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgM-Antikörper [Nachweis] in Serum"
+              }
+            ]
           },
-          "value": "Röteln-Virus-IgG-Antikörper [Verhältnis] in Serum --1. Probenmaterial/2. Probenmaterial"
-        } ]
-      }, {
-        "code": "25420-1",
-        "display": "Rubella virus IgM Ab [Presence] in Serum by Latex agglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "31966-5",
+            "display": "Rubella virus Ag [Presence] in Specimen"
           },
-          "value": "Röteln-Virus-IgM-Antikörper [Nachweis] in Serum mit Latexagglutination"
-        } ]
-      }, {
+          {
+            "code": "34421-8",
+            "display": "Rubella virus IgG Ab avidity [Ratio] in Serum"
+          },
+          {
+            "code": "39013-8",
+            "display": "Rubella virus IgG Ab [Presence] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgG-Antikörper [Nachweis] in Liquor"
+              }
+            ]
+          },
+          {
+            "code": "40667-8",
+            "display": "Rubella virus IgG Ab [Presence] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgG-Antikörper [Nachweis] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
+          },
+          {
+            "code": "41763-4",
+            "display": "Rubella virus IgG Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgG-Antikörper [Titer] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
+          },
+          {
+            "code": "46109-5",
+            "display": "Rubella virus IgM Ab [Titer] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgM-Antikörper [Titer] in Liquor"
+              }
+            ]
+          },
+          {
+            "code": "46110-3",
+            "display": "Rubella virus IgG Ab [Titer] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgG-Antikörper [Titer] in Liquor"
+              }
+            ]
+          },
+          {
+            "code": "49107-6",
+            "display": "Rubella virus IgM Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgM-Antikörper [Titer] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "5334-8",
+            "display": "Rubella virus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
+          },
+          {
+            "code": "5335-5",
+            "display": "Rubella virus IgM Ab [Units/volume] in Serum by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgM-Antikörper [Einheiten/Volumen] in Serum mittels Immunoassay"
+              }
+            ]
+          },
+          {
+            "code": "54091-4",
+            "display": "Rubella virus RNA [Presence] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus RNA [Nachweis] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "8014-3",
+            "display": "Rubella virus IgG Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgG-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "8015-0",
+            "display": "Rubella virus IgM Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Röteln-Virus IgM-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "31616-6",
-        "display": "Rubella virus IgM Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-IgM-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
+        "display": "Rubella virus IgM Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "13281-1",
+        "display": "Rubella virus IgG Ab [Units/volume] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "41763-4",
-        "display": "Rubella virus IgG Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-IgG-Antikörper [Titer] in Serum"
-        } ]
-      }, {
-        "code": "46109-5",
-        "display": "Rubella virus IgM Ab [Titer] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-IgM-Antikörper [Titer] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
+        "display": "Rubella virus IgG Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "39013-8",
+        "display": "Rubella virus IgG Ab [Presence] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "13282-9",
+        "display": "Rubella virus IgM Ab [Units/volume] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "8015-0",
+        "display": "Rubella virus IgM Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "46110-3",
-        "display": "Rubella virus IgG Ab [Titer] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-IgG-Antikörper [Titer] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
+        "display": "Rubella virus IgG Ab [Titer] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "34421-8",
+        "display": "Rubella virus IgG Ab avidity [Ratio] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "8014-3",
+        "display": "Rubella virus IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "31966-5",
+        "display": "Rubella virus Ag [Presence] in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "49107-6",
-        "display": "Rubella virus IgM Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-IgM-Antikörper [Titer] in Serum"
-        } ]
-      }, {
-        "code": "52986-7",
-        "display": "Rubella virus IgG Ab avidity [Ratio] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-IgG-Antikörperavidität [Verhältnis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "5334-8",
-        "display": "Rubella virus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "5335-5",
-        "display": "Rubella virus IgM Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
+        "display": "Rubella virus IgM Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "54091-4",
-        "display": "Rubella virus RNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "60274-8",
-        "display": "Rubella virus RNA [Presence] in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-RNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "6548-2",
-        "display": "Rubella virus identified in Serum by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus identifiziert in Serum mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "69765-6",
-        "display": "Rubella virus IgM Ab [Presence] in Body fluid by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-IgM-Antikörper [Nachweis] in Körperflüssigkeit mit Immunoassay"
-        } ]
-      }, {
-        "code": "74415-1",
-        "display": "Rubella virus IgG Ab [Presence] in Body fluid by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-IgG-Antikörper [Nachweis] in Körperflüssigkeit mit Immunoassay"
-        } ]
-      }, {
-        "code": "85690-6",
-        "display": "Rubella virus genotype in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-Genotyp in Probenmaterial"
-        } ]
-      }, {
-        "code": "85796-1",
-        "display": "Rubella virus E1 gene [Cycle Threshold #] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus E1-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "86589-9",
-        "display": "Rubella virus RNA [Presence] in Urine by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-RNA [Nachweis] in Urin mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "91792-2",
-        "display": "Rubella virus RNA [Presence] in Upper respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-RNA [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "91823-5",
-        "display": "Rubella virus RNA [Presence] in Lower respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Röteln-Virus-RNA [Nachweis] in Probenmaterial aus dem unteren Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "41461-5",
-        "display": "Virus identified in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Virus identifiziert in Probenmaterial"
-        } ]
-      }, {
-        "code": "92253-4",
-        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
-        } ]
-      } ]
-    } ]
+        "display": "Rubella virus RNA [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "25514-1",
+        "display": "Rubella virus IgG Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "40667-8",
+        "display": "Rubella virus IgG Ab [Presence] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "46109-5",
+        "display": "Rubella virus IgM Ab [Titer] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "5334-8",
+        "display": "Rubella virus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "17552-1",
+        "display": "Rubella virus IgM Ab [Presence] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "5335-5",
+        "display": "Rubella virus IgM Ab [Units/volume] in Serum by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "17551-3",
+        "display": "Rubella virus IgG Ab [Units/volume] in Cerebral spinal fluid by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "24116-6",
+        "display": "Rubella virus IgM Ab [Presence] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100341-7",
+        "display": "Rubella virus IgG Ab index [Units/volume] in Serum and CSF"
+      }
+    ]
   }
 }

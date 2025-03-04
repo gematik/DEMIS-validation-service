@@ -2,473 +2,248 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestPVBP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestPVBP",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "name": "LaboratoryTestPVBP",
   "title": "Labortest für Ringelröteln, Parvovirus B 19",
   "status": "active",
-  "date": "2023-05-03",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestPVBP enthält die Codes der Labortests für Ringelröteln, Parvovirus B 19.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "100981-0",
-        "display": "Parvovirus B19 DNA [Log #/volume] (viral load) in Specimen by NAA with probe detection"
-      }, {
-        "code": "100688-1",
-        "display": "Parvovirus B19 DNA [Log #/volume] (viral load) in Blood by NAA with probe detection"
-      }, {
-        "code": "17422-7",
-        "display": "Parvovirus B19 IgG+IgM Ab [Units/volume] in Serum"
-      }, {
-        "code": "25630-5",
-        "display": "Parvovirus B19 IgG Ab [Titer] in Serum"
-      }, {
-        "code": "25631-3",
-        "display": "Parvovirus B19 IgM Ab [Titer] in Serum"
-      }, {
-        "code": "25729-5",
-        "display": "Parvovirus B19 IgG Ab [Titer] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "25630-5",
+            "display": "Parvovirus B19 IgG Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Parvovirus B19 IgG-Antikörper [Titer] in Serum"
+              }
+            ]
           },
-          "value": "Parvovirus B19-IgG-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "25730-3",
-        "display": "Parvovirus B19 IgM Ab [Titer] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "25631-3",
+            "display": "Parvovirus B19 IgM Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Parvovirus B19 IgM-Antikörper [Titer] in Serum"
+              }
+            ]
           },
-          "value": "Parvovirus B19-IgM-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "27095-9",
-        "display": "Parvovirus B19 IgG Ab [Titer] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "27095-9",
+            "display": "Parvovirus B19 IgG Ab [Titer] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Parvovirus B19 IgG-Antikörper [Titer] in Liquor"
+              }
+            ]
           },
-          "value": "Parvovirus B19-IgG-Antikörper [Titer] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "27115-5",
-        "display": "Parvovirus B19 IgM Ab [Titer] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "27115-5",
+            "display": "Parvovirus B19 IgM Ab [Titer] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Parvovirus B19 IgM-Antikörper [Titer] in Liquor"
+              }
+            ]
           },
-          "value": "Parvovirus B19-IgM-Antikörper [Titer] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "29660-8",
-        "display": "Parvovirus B19 IgG Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "29675-6",
+            "display": "Parvovirus B19 IgG Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Parvovirus B19 IgG-Antikörper [Nachweis] in Serum"
+              }
+            ]
           },
-          "value": "Parvovirus B19-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "29675-6",
-        "display": "Parvovirus B19 IgG Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
           },
-          "value": "Parvovirus B19-IgG-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "31557-2",
-        "display": "Parvovirus B19 IgG Ab [Units/volume] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "49432-8",
+            "display": "Parvovirus B19 DNA [#/volume] (viral load) in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Parvovirus B19 DNA [#/Volumen] (Viruslast) in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "Parvovirus B19-IgG-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "31558-0",
-        "display": "Parvovirus B19 IgM Ab [Units/volume] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "7981-4",
+            "display": "Parvovirus B19 IgM Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Parvovirus B19 IgM-Antikörper [Nachweis] in Serum"
+              }
+            ]
           },
-          "value": "Parvovirus B19-IgM-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "32792-4",
-        "display": "Parvovirus B19 IgG Ab [Units/volume] in Serum by Immunoassay --2nd specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "7983-0",
+            "display": "Parvovirus B19 IgG Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Parvovirus B19 IgG-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
           },
-          "value": "Parvovirus B19-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay --2. Probenmaterial"
-        } ]
-      }, {
-        "code": "32793-2",
-        "display": "Parvovirus B19 IgG Ab [Ratio] in Serum by Immunoassay --1st specimen/2nd specimen"
-      }, {
-        "code": "32794-0",
-        "display": "Parvovirus B19 IgM Ab [Units/volume] in Serum by Immunoassay --1st specimen"
-      }, {
-        "code": "32795-7",
-        "display": "Parvovirus B19 IgM Ab [Units/volume] in Serum by Immunoassay --2nd specimen"
-      }, {
-        "code": "32796-5",
-        "display": "Parvovirus B19 IgM Ab [Ratio] in Serum by Immunoassay --1st specimen/2nd specimen"
-      }, {
-        "code": "32826-0",
-        "display": "Parvovirus B19 IgG Ab [Units/volume] in Serum by Immunoassay --1st specimen"
-      }, {
-        "code": "32836-9",
-        "display": "Parvovirus B19 IgG Ab [Units/volume] in Serum --1st specimen"
-      }, {
-        "code": "32837-7",
-        "display": "Parvovirus B19 IgG Ab [Units/volume] in Serum --2nd specimen"
-      }, {
-        "code": "32838-5",
-        "display": "Parvovirus B19 IgG Ab [Ratio] in Serum --1st specimen/2nd specimen"
-      }, {
-        "code": "32839-3",
-        "display": "Parvovirus B19 IgM Ab [Units/volume] in Serum --2nd specimen"
-      }, {
-        "code": "32840-1",
-        "display": "Parvovirus B19 IgM Ab [Ratio] in Serum --1st specimen/2nd specimen"
-      }, {
-        "code": "40657-9",
-        "display": "Parvovirus B19 IgG Ab [Presence] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "7984-8",
+            "display": "Parvovirus B19 IgM Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Parvovirus B19 IgM-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
           },
-          "value": "Parvovirus B19-IgG-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "40658-7",
-        "display": "Parvovirus B19 IgM Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "40659-5",
-        "display": "Parvovirus B19 IgM Ab [Presence] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-IgM-Antikörper [Nachweis] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "41129-8",
-        "display": "Parvovirus B19 IgM Ab [Units/volume] in Serum --1st specimen"
-      }, {
-        "code": "49427-8",
-        "display": "Parvovirus B19 DNA [#/volume] (viral load) in Amniotic fluid by NAA with probe detection"
-      }, {
-        "code": "49428-6",
-        "display": "Parvovirus B19 DNA [#/volume] (viral load) in Bronchoalveolar lavage by NAA with probe detection"
-      }, {
-        "code": "49429-4",
-        "display": "Parvovirus B19 DNA [#/volume] (viral load) in Bone marrow by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-DNA [#/Volumen] (Viruslast) in Knochenmark mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49430-2",
-        "display": "Parvovirus B19 DNA [#/volume] (viral load) in Cerebral spinal fluid by NAA with probe detection"
-      }, {
-        "code": "49431-0",
-        "display": "Parvovirus B19 DNA [#/volume] (viral load) in Blood by NAA with probe detection"
-      }, {
+          {
+            "code": "9571-1",
+            "display": "Parvovirus B19 DNA [Presence] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Parvovirus B19 DNA [Nachweis] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "49432-8",
-        "display": "Parvovirus B19 DNA [#/volume] (viral load) in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-DNA [#/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49433-6",
-        "display": "Parvovirus B19 DNA [#/volume] (viral load) in Urine by NAA with probe detection"
-      }, {
-        "code": "49434-4",
-        "display": "Parvovirus B19 DNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection"
-      }, {
-        "code": "49435-1",
-        "display": "Parvovirus B19 DNA [#/volume] (viral load) in Tissue by NAA with probe detection"
-      }, {
-        "code": "5030-2",
-        "display": "Parvovirus B19 RNA [Presence] in Blood by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-RNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "5031-0",
-        "display": "Parvovirus B19 RNA [Presence] in Tissue by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-RNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "5032-8",
-        "display": "Parvovirus B19 RNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "50344-1",
-        "display": "Parvovirus B19 DNA [Presence] in Body fluid by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-DNA [Nachweis] in Körperflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "50345-8",
-        "display": "Parvovirus B19 DNA [Presence] in Urine by NAA with probe detection"
-      }, {
-        "code": "50346-6",
-        "display": "Parvovirus B19 DNA [Presence] in Cerebral spinal fluid by NAA with probe detection"
-      }, {
-        "code": "50347-4",
-        "display": "Parvovirus B19 DNA [Presence] in Bone marrow by NAA with probe detection"
-      }, {
-        "code": "50348-2",
-        "display": "Parvovirus B19 DNA [Presence] in Blood by NAA with probe detection"
-      }, {
-        "code": "50349-0",
-        "display": "Parvovirus B19 DNA [Presence] in Amniotic fluid by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-DNA [Nachweis] in Amnionflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "5272-0",
-        "display": "Parvovirus B19 Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "5273-8",
-        "display": "Parvovirus B19 IgG Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "5274-6",
-        "display": "Parvovirus B19 IgM Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "53885-0",
-        "display": "Parvovirus B19 IgG Ab [Units/volume] in Body fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-IgG-Antikörper [Einheiten/Volumen] in Körperflüssigkeit"
-        } ]
-      }, {
-        "code": "53886-8",
-        "display": "Parvovirus B19 IgM Ab [Units/volume] in Body fluid"
-      }, {
-        "code": "58737-8",
-        "display": "Parvovirus B19 IgG and IgM [Interpretation] in Serum"
-      }, {
-        "code": "58756-8",
-        "display": "Parvovirus B19 IgM Ab [Units/volume] in Cerebral spinal fluid by Immunoassay"
-      }, {
-        "code": "58757-6",
-        "display": "Parvovirus B19 IgG Ab [Units/volume] in Cerebral spinal fluid by Immunoassay"
-      }, {
-        "code": "6517-7",
-        "display": "Parvovirus B19 IgM Ab [Presence] in Serum by Immunoblot",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-IgM-Antikörper [Nachweis] in Serum mit Immunoblot"
-        } ]
-      }, {
-        "code": "69355-6",
-        "display": "Parvovirus B19 DNA [Log #/volume] (viral load) in Serum or Plasma by NAA with probe detection"
-      }, {
-        "code": "74419-3",
-        "display": "Parvovirus B19 DNA [log units/volume] (viral load) in Serum or Plasma by NAA with probe detection"
-      }, {
-        "code": "74420-1",
-        "display": "Parvovirus B19 DNA [Units/volume] (viral load) in Serum or Plasma by NAA with probe detection"
-      }, {
-        "code": "75541-3",
-        "display": "Parvovirus B19 DNA [log units/volume] (viral load) in Plasma from Donor by NAA with probe detection"
-      }, {
-        "code": "75543-9",
-        "display": "Parvovirus B19 DNA [Presence] in Plasma from Donor by NAA with probe detection"
-      }, {
+        "display": "Parvovirus B19 DNA [#/volume] (viral load) in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "7981-4",
         "display": "Parvovirus B19 IgM Ab [Presence] in Serum"
-      }, {
-        "code": "7982-2",
-        "display": "Parvovirus B19 Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "25631-3",
+        "display": "Parvovirus B19 IgM Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "7983-0",
-        "display": "Parvovirus B19 IgG Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-IgG-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "7984-8",
-        "display": "Parvovirus B19 IgM Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-IgM-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "91796-3",
-        "display": "Parvovirus B19 DNA [Presence] in Upper respiratory specimen by NAA with probe detection"
-      }, {
-        "code": "91797-1",
-        "display": "Parvovirus B19 DNA [#/volume] (viral load) in Upper respiratory specimen by NAA with probe detection"
-      }, {
-        "code": "94824-0",
-        "display": "Parvovirus B19 DNA [Units/volume] (viral load) in Amniotic fluid by NAA with probe detection"
-      }, {
-        "code": "94825-7",
-        "display": "Parvovirus B19 DNA [log units/volume] (viral load) in Amniotic fluid by NAA with probe detection"
-      }, {
-        "code": "94826-5",
-        "display": "Parvovirus B19 DNA [Log #/volume] (viral load) in Amniotic fluid by NAA with probe detection"
-      }, {
+        "display": "Parvovirus B19 IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "25630-5",
+        "display": "Parvovirus B19 IgG Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "9571-1",
-        "display": "Parvovirus B19 DNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "9572-9",
-        "display": "Parvovirus B19 DNA [Presence] in Serum by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Parvovirus B19-DNA [Nachweis] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "5883-4",
-        "display": "Virus identified in Blood by Culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Virus identifiziert in Blut mit Kultur"
-        } ]
-      } ]
-    } ]
+        "display": "Parvovirus B19 DNA [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "27095-9",
+        "display": "Parvovirus B19 IgG Ab [Titer] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "27115-5",
+        "display": "Parvovirus B19 IgM Ab [Titer] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "29675-6",
+        "display": "Parvovirus B19 IgG Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "7984-8",
+        "display": "Parvovirus B19 IgM Ab [Units/volume] in Serum"
+      }
+    ]
   }
 }

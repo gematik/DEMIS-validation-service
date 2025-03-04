@@ -1,0 +1,21 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "vaccine",
+  "url": "https://demis.rki.de/fhir/CodeSystem/vaccine",
+  "version": "1.0.0",
+  "name": "Vaccine",
+  "title": "Impfstoff",
+  "status": "retired",
+  "date": "2023-06-22",
+  "description": "Das CodeSystem Vaccine enthält die Codes der Impfstoffe.",
+  "caseSensitive": false,
+  "valueSet": "https://demis.rki.de/fhir/ValueSet/vaccine",
+  "content": "fragment",
+  "count": 1,
+  "concept": [
+    {
+      "code": "otherVaccine",
+      "display": "Anderer Impfstoff"
+    }
+  ]
+}

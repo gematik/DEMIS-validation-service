@@ -1,0 +1,98 @@
+{
+  "resourceType": "ValueSet",
+  "id": "yesOrNoOrNoInformation",
+  "url": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation",
+  "version": "1.2.1",
+  "name": "YesOrNoOrNoInformation",
+  "title": "Anwort Ja/Nein/nicht erhoben/nicht ermittelbar",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-09-03",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet YesOrNoOrNoInformation enthält die Codes für die Antwortenmöglichkeiten Ja, Nein, nicht erhoben und nicht ermittelbar.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+        "version": "1.0.0",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 400
+              }
+            ],
+            "code": "no",
+            "display": "Nein"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 300
+              }
+            ],
+            "code": "yes",
+            "display": "Ja"
+          }
+        ]
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 999
+              }
+            ],
+            "code": "ASKU",
+            "display": "asked but unknown"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1000
+              }
+            ],
+            "code": "NASK",
+            "display": "not asked"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-03T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+        "version": "1.0.0",
+        "code": "yes",
+        "display": "Ja"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "code": "NASK",
+        "display": "not asked"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+        "version": "1.0.0",
+        "code": "no",
+        "display": "Nein"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "code": "ASKU",
+        "display": "asked but unknown"
+      }
+    ]
+  }
+}

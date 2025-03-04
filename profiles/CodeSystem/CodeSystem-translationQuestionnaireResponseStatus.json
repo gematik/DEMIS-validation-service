@@ -1,0 +1,72 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "translationQuestionnaireResponseStatus",
+  "url": "https://demis.rki.de/fhir/CodeSystem/translationQuestionnaireResponseStatus",
+  "version": "1.0.0",
+  "name": "TranslationQuestionnaireResponseStatus",
+  "title": "Übersetzungen FHIR CodeSystem QuestionnaireResponseStatus",
+  "status": "draft",
+  "date": "2024-03-14",
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "description": "Beinhaltet die Übersetzungen für das FHIR CodeSystem QuestionnaireResponseStatus",
+  "content": "supplement",
+  "supplements": "http://hl7.org/fhir/questionnaire-answers-status|4.0.1",
+  "concept": [
+    {
+      "code": "in-progress",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Im Gange"
+        }
+      ]
+    },
+    {
+      "code": "completed",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Abgeschlossen"
+        }
+      ]
+    },
+    {
+      "code": "amended",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Geändert"
+        }
+      ]
+    },
+    {
+      "code": "entered-in-error",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Irrtümliche Eingabe"
+        }
+      ]
+    },
+    {
+      "code": "stopped",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Gestoppt"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "resourceType": "ValueSet",
+  "id": "notificationType",
+  "url": "https://demis.rki.de/fhir/ValueSet/notificationType",
+  "version": "1.3.0",
+  "name": "NotificationType",
+  "title": "Typ der Meldung",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-01-30",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet NotificationType enthält die Codes für den Typ der Meldung.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationType",
+        "version": "1.2.0"
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2025-01-30T00:00:00+01:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationType",
+        "version": "1.2.0",
+        "code": "6.3",
+        "display": "Meldung gemäß IfSG §6 Absatz 3"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationType",
+        "version": "1.2.0",
+        "code": "7.3",
+        "display": "Meldung gemäß IfSG §7 Absatz 3"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationType",
+        "version": "1.2.0",
+        "code": "6.1_2",
+        "display": "Meldung gemäß IfSG §6 Absatz 1, 2"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationType",
+        "version": "1.2.0",
+        "code": "34_36",
+        "display": "Benachrichtigung gemäß IfSG §34, §36"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationType",
+        "version": "1.2.0",
+        "code": "13_5",
+        "display": "Benachrichtigung gemäß IfSG §13 Absatz 5"
+      }
+    ]
+  }
+}

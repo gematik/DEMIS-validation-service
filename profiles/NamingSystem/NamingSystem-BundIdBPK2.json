@@ -1,0 +1,16 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "BundIdBPK2",
+  "name": "BundIdBPK2",
+  "status": "active",
+  "kind": "identifier",
+  "date": "2024-02-23",
+  "description": "Das bereichsspezifische Personenkennzeichen (2. Version) ist eine eindeutige Referenz für den jeweiligen Service Provider (hier: DEMIS) auf das aktuelle verwendete BundID-Konto",
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "https://demis.rki.de/fhir/sid/BundIdBPK2",
+      "preferred": true
+    }
+  ]
+}

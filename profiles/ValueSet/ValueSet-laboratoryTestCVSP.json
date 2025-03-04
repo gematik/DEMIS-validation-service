@@ -2,160 +2,118 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestCVSP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestCVSP",
-  "version": "1.2.0",
+  "version": "1.5.0",
   "name": "LaboratoryTestCVSP",
-  "title": "Labortest für Severe-Acute-Respiratory-Syndrome-Coronavirus (SARS-CoV)",
+  "title": "Labortest für Severe-Acute-Respiratory-Syndrome-Coronavirus-1 (SARS-CoV-1) (2003)",
   "status": "active",
-  "date": "2023-05-04",
-  "description": "Das ValueSet LaboratoryTestCVSP enthält die Codes der Labortests für Severe-Acute-Respiratory-Syndrome-Coronavirus (SARS-CoV).",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet LaboratoryTestCVSP enthält die Codes der Labortests für Severe-Acute-Respiratory-Syndrome-Coronavirus-1 (SARS-CoV-1) (2003).",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "33964-8",
-        "display": "SARS coronavirus Urbani RNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "33964-8",
+            "display": "SARS coronavirus Urbani RNA [Presence] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-Coronavirus Urbani RNA [Nachweis] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-Coronavirus Urbani-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "33965-5",
-        "display": "SARS coronavirus Urbani RNA [Presence] in Stool by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "41458-1",
+            "display": "SARS coronavirus RNA [Presence] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-Coronavirus RNA [Nachweis] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-Coronavirus Urbani-RNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "33966-3",
-        "display": "SARS coronavirus Urbani RNA [Presence] in Nose by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
           },
-          "value": "SARS-Coronavirus Urbani-RNA [Nachweis] in Nase mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "33967-1",
-        "display": "SARS coronavirus Urbani RNA [Presence] in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "42956-3",
+            "display": "SARS coronavirus IgM Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-Coronavirus IgM-Antikörper [Nachweis] in Serum"
+              }
+            ]
           },
-          "value": "SARS-Coronavirus Urbani-RNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "33975-4",
-        "display": "SARS coronavirus Urbani RNA [Presence] in Sputum by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-Coronavirus Urbani-RNA [Nachweis] in Sputum mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
+          {
+            "code": "42957-1",
+            "display": "SARS coronavirus IgG Ab [Presence] in Serum"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "41458-1",
-        "display": "SARS coronavirus RNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-Coronavirus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "41459-9",
-        "display": "SARS coronavirus [Presence] in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-Coronavirus [Nachweis] in Probenmaterial"
-        } ]
-      }, {
-        "code": "41991-1",
-        "display": "SARS coronavirus IgM Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-Coronavirus-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
+        "display": "SARS coronavirus RNA [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "42957-1",
+        "display": "SARS coronavirus IgG Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "33964-8",
+        "display": "SARS coronavirus Urbani RNA [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "42956-3",
-        "display": "SARS coronavirus IgM Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-Coronavirus-IgM-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "60275-5",
-        "display": "SARS coronavirus RNA [Presence] in Isolate by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-Coronavirus-RNA [Nachweis] in Isolat mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "60534-5",
-        "display": "SARS coronavirus RNA [Presence] in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-Coronavirus-RNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "41461-5",
-        "display": "Virus identified in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Virus identifiziert in Probenmaterial"
-        } ]
-      }, {
-        "code": "92253-4",
-        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
-        } ]
-      } ]
-    } ]
+        "display": "SARS coronavirus IgM Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      }
+    ]
   }
 }

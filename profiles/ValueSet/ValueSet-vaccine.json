@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vaccine",
+  "url": "https://demis.rki.de/fhir/ValueSet/vaccine",
+  "version": "1.0.0",
+  "name": "Vaccine",
+  "title": "Impfstoff",
+  "status": "retired",
+  "date": "2023-06-22",
+  "description": "Das ValueSet Vaccine enthält die Codes der Impfstoffe.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/vaccine",
+        "version": "1.0.0"
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2023-06-22T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/vaccine",
+        "version": "1.0.0",
+        "code": "otherVaccine",
+        "display": "Anderer Impfstoff"
+      }
+    ]
+  }
+}

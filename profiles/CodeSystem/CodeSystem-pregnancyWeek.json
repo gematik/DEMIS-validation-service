@@ -1,0 +1,507 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "pregnancyWeek",
+  "url": "https://demis.rki.de/fhir/CodeSystem/pregnancyWeek",
+  "version": "1.1.0",
+  "name": "PregnancyWeek",
+  "title": "Schwangerschaftswoche",
+  "status": "active",
+  "date": "2024-05-28",
+  "description": "Das CodeSystem PregnancyWeek enthält die Codes zur Angabe der Schwangerschaftswoche.",
+  "caseSensitive": false,
+  "valueSet": "https://demis.rki.de/fhir/ValueSet/pregnancyWeek",
+  "content": "complete",
+  "count": 49,
+  "concept": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 50
+        }
+      ],
+      "code": "1",
+      "display": "1"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 49
+        }
+      ],
+      "code": "2",
+      "display": "2"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 48
+        }
+      ],
+      "code": "3",
+      "display": "3"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 47
+        }
+      ],
+      "code": "4",
+      "display": "4"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 46
+        }
+      ],
+      "code": "5",
+      "display": "5"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 45
+        }
+      ],
+      "code": "6",
+      "display": "6"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 44
+        }
+      ],
+      "code": "7",
+      "display": "7"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 43
+        }
+      ],
+      "code": "8",
+      "display": "8"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 42
+        }
+      ],
+      "code": "9",
+      "display": "9"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 41
+        }
+      ],
+      "code": "10",
+      "display": "10"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 40
+        }
+      ],
+      "code": "11",
+      "display": "11"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 39
+        }
+      ],
+      "code": "12",
+      "display": "12"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 38
+        }
+      ],
+      "code": "13",
+      "display": "13"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 37
+        }
+      ],
+      "code": "14",
+      "display": "14"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 36
+        }
+      ],
+      "code": "15",
+      "display": "15"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 35
+        }
+      ],
+      "code": "16",
+      "display": "16"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 34
+        }
+      ],
+      "code": "17",
+      "display": "17"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 33
+        }
+      ],
+      "code": "18",
+      "display": "18"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 32
+        }
+      ],
+      "code": "19",
+      "display": "19"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 31
+        }
+      ],
+      "code": "20",
+      "display": "20"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 30
+        }
+      ],
+      "code": "21",
+      "display": "21"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 29
+        }
+      ],
+      "code": "22",
+      "display": "22"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 28
+        }
+      ],
+      "code": "23",
+      "display": "23"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 27
+        }
+      ],
+      "code": "24",
+      "display": "24"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 26
+        }
+      ],
+      "code": "25",
+      "display": "25"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 25
+        }
+      ],
+      "code": "26",
+      "display": "26"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 24
+        }
+      ],
+      "code": "27",
+      "display": "27"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 23
+        }
+      ],
+      "code": "28",
+      "display": "28"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 22
+        }
+      ],
+      "code": "29",
+      "display": "29"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 21
+        }
+      ],
+      "code": "30",
+      "display": "30"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 20
+        }
+      ],
+      "code": "31",
+      "display": "31"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 19
+        }
+      ],
+      "code": "32",
+      "display": "32"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 18
+        }
+      ],
+      "code": "33",
+      "display": "33"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 17
+        }
+      ],
+      "code": "34",
+      "display": "34"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 16
+        }
+      ],
+      "code": "35",
+      "display": "35"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 15
+        }
+      ],
+      "code": "36",
+      "display": "36"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 14
+        }
+      ],
+      "code": "37",
+      "display": "37"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 13
+        }
+      ],
+      "code": "38",
+      "display": "38"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 12
+        }
+      ],
+      "code": "39",
+      "display": "39"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 11
+        }
+      ],
+      "code": "40",
+      "display": "40"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 10
+        }
+      ],
+      "code": "41",
+      "display": "41"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 9
+        }
+      ],
+      "code": "42",
+      "display": "42"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 8
+        }
+      ],
+      "code": "43",
+      "display": "43"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 7
+        }
+      ],
+      "code": "44",
+      "display": "44"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 6
+        }
+      ],
+      "code": "45",
+      "display": "45"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 5
+        }
+      ],
+      "code": "46",
+      "display": "46"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 4
+        }
+      ],
+      "code": "47",
+      "display": "47"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 3
+        }
+      ],
+      "code": "48",
+      "display": "48"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/codesystem-conceptOrder",
+          "valueInteger": 2
+        }
+      ],
+      "code": "49",
+      "display": "49"
+    }
+  ]
+}

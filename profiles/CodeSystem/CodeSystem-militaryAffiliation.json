@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "militaryAffiliation",
+  "url": "https://demis.rki.de/fhir/CodeSystem/militaryAffiliation",
+  "version": "1.0.0",
+  "name": "MilitaryAffiliation",
+  "title": "Zugehörigkeit zur Bundeswehr",
+  "status": "active",
+  "date": "2022-01-18",
+  "description": "Das CodeSystem MilitaryAffiliation enthält die Codes zur Angabe der Zugehörigkeit zur Bundeswehr.",
+  "caseSensitive": false,
+  "valueSet": "https://demis.rki.de/fhir/ValueSet/militaryAffiliation",
+  "content": "complete",
+  "count": 3,
+  "concept": [
+    {
+      "code": "noReferenceToBundeswehr",
+      "display": "Kein Bezug zur BW"
+    },
+    {
+      "code": "civilPersonActiveInBundeswehr",
+      "display": "Zivilperson tätig/untergebracht in Einrichtung der BW"
+    },
+    {
+      "code": "memberOfBundeswehr",
+      "display": "Soldat/BW-Angehöriger"
+    }
+  ]
+}

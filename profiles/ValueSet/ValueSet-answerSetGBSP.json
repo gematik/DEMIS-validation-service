@@ -2,237 +2,644 @@
   "resourceType": "ValueSet",
   "id": "answerSetGBSP",
   "url": "https://demis.rki.de/fhir/ValueSet/answerSetGBSP",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "name": "AnswerSetGBSP",
   "title": "AnswerSet für Gruppe-B-Streptokokken (GBS); Meldepflicht nur für den direkten Nachweis bei Schwangeren und Neugeborenen",
   "status": "active",
-  "date": "2023-05-03",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet AnswerSetGBSP enthält die Codes der Answer-Codes für Gruppe-B-Streptokokken (GBS); Meldepflicht nur für den direkten Nachweis bei Schwangeren und Neugeborenen.",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
   "compose": {
-    "include": [ {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
-      "concept": [ {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "413643004",
+            "display": "Beta-hemolytic Streptococcus, group A (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Beta-hemolytic Streptococcus, group A (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Beta-hämolytischer Streptococcus, Gruppe A"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "43492007",
+            "display": "Streptococcus agalactiae (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Gruppe-B-Streptococcus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698164000",
+            "display": "Streptococcus agalactiae serotype Ia (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype Ia (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp Ia"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698165004",
+            "display": "Streptococcus agalactiae serotype Ia/c (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype Ia/c (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp Ia/c"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698166003",
+            "display": "Streptococcus agalactiae serotype Ib (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype Ib (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp Ib"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698167007",
+            "display": "Streptococcus agalactiae serotype Ib/c (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype Ib/c (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp Ib/c"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698168002",
+            "display": "Streptococcus agalactiae serotype II (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype II (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp II"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698169005",
+            "display": "Streptococcus agalactiae serotype II/c (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype II/c (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp II/c"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698170006",
+            "display": "Streptococcus agalactiae serotype II/R (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype II/R (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp II/R"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698171005",
+            "display": "Streptococcus agalactiae serotype III (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype III (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp III"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698172003",
+            "display": "Streptococcus agalactiae serotype III/c (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype III/c (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp III/c"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698173008",
+            "display": "Streptococcus agalactiae serotype III/R (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype III/R (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp III/R"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698174002",
+            "display": "Streptococcus agalactiae serotype IV (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype IV (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp IV"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698177009",
+            "display": "Streptococcus agalactiae serotype V (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype V (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp V"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698178004",
+            "display": "Streptococcus agalactiae serotype V/c (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype V/c (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp V/c"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698179007",
+            "display": "Streptococcus agalactiae serotype V/R (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype V/R (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp V/R"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698180005",
+            "display": "Streptococcus agalactiae serotype VII (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype VII (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp VII"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698181009",
+            "display": "Streptococcus agalactiae serotype VIII (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype VIII (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp VIII"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "715357003",
+            "display": "Streptococcus agalactiae serotype VI (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype VI (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp VI"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "715358008",
+            "display": "Streptococcus agalactiae serotype IX (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Streptococcus agalactiae serotype IX (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Streptococcus agalactiae, Serotyp IX"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetLaboratoryTest-SNOMED"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetResistance-SNOMED"
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "413643004",
-        "display": "Beta-hemolytic Streptococcus, group A (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Beta-hemolytic Streptococcus, group A (organism)"
-        } ]
-      }, {
-        "code": "43492007",
-        "display": "Streptococcus agalactiae (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae (organism)"
-        } ]
-      }, {
+        "display": "Beta-hemolytic Streptococcus, group A (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "698164000",
-        "display": "Streptococcus agalactiae serotype Ia (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype Ia (organism)"
-        } ]
-      }, {
-        "code": "698165004",
-        "display": "Streptococcus agalactiae serotype Ia/c (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype Ia/c (organism)"
-        } ]
-      }, {
+        "display": "Streptococcus agalactiae serotype Ia (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "698166003",
-        "display": "Streptococcus agalactiae serotype Ib (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype Ib (organism)"
-        } ]
-      }, {
-        "code": "698167007",
-        "display": "Streptococcus agalactiae serotype Ib/c (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype Ib/c (organism)"
-        } ]
-      }, {
-        "code": "698168002",
-        "display": "Streptococcus agalactiae serotype II (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype II (organism)"
-        } ]
-      }, {
-        "code": "698169005",
-        "display": "Streptococcus agalactiae serotype II/c (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype II/c (organism)"
-        } ]
-      }, {
-        "code": "698170006",
-        "display": "Streptococcus agalactiae serotype II/R (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype II/R (organism)"
-        } ]
-      }, {
-        "code": "698171005",
-        "display": "Streptococcus agalactiae serotype III (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype III (organism)"
-        } ]
-      }, {
-        "code": "698172003",
-        "display": "Streptococcus agalactiae serotype III/c (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype III/c (organism)"
-        } ]
-      }, {
-        "code": "698173008",
-        "display": "Streptococcus agalactiae serotype III/R (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype III/R (organism)"
-        } ]
-      }, {
-        "code": "698174002",
-        "display": "Streptococcus agalactiae serotype IV (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype IV (organism)"
-        } ]
-      }, {
-        "code": "715358008",
-        "display": "Streptococcus agalactiae serotype IX (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype IX (organism)"
-        } ]
-      }, {
-        "code": "698177009",
-        "display": "Streptococcus agalactiae serotype V (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype V (organism)"
-        } ]
-      }, {
-        "code": "698178004",
-        "display": "Streptococcus agalactiae serotype V/c (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype V/c (organism)"
-        } ]
-      }, {
-        "code": "698179007",
-        "display": "Streptococcus agalactiae serotype V/R (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype V/R (organism)"
-        } ]
-      }, {
-        "code": "715357003",
-        "display": "Streptococcus agalactiae serotype VI (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype VI (organism)"
-        } ]
-      }, {
+        "display": "Streptococcus agalactiae serotype Ib (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "11896004",
+        "display": "Intermediate (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "698180005",
-        "display": "Streptococcus agalactiae serotype VII (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype VII (organism)"
-        } ]
-      }, {
+        "display": "Streptococcus agalactiae serotype VII (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "715357003",
+        "display": "Streptococcus agalactiae serotype VI (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "43492007",
+        "display": "Streptococcus agalactiae (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698168002",
+        "display": "Streptococcus agalactiae serotype II (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698167007",
+        "display": "Streptococcus agalactiae serotype Ib/c (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698165004",
+        "display": "Streptococcus agalactiae serotype Ia/c (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698169005",
+        "display": "Streptococcus agalactiae serotype II/c (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698177009",
+        "display": "Streptococcus agalactiae serotype V (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698173008",
+        "display": "Streptococcus agalactiae serotype III/R (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "698181009",
-        "display": "Streptococcus agalactiae serotype VIII (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Streptococcus agalactiae serotype VIII (organism)"
-        } ]
-      } ]
-    } ]
+        "display": "Streptococcus agalactiae serotype VIII (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698178004",
+        "display": "Streptococcus agalactiae serotype V/c (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "715358008",
+        "display": "Streptococcus agalactiae serotype IX (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698170006",
+        "display": "Streptococcus agalactiae serotype II/R (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698171005",
+        "display": "Streptococcus agalactiae serotype III (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698174002",
+        "display": "Streptococcus agalactiae serotype IV (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698172003",
+        "display": "Streptococcus agalactiae serotype III/c (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698179007",
+        "display": "Streptococcus agalactiae serotype V/R (organism)"
+      }
+    ]
   }
 }

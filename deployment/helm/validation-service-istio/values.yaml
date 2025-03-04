@@ -5,18 +5,28 @@ service:
     http: 8080
 istio:
   enable: true
+  useDelegationService: "false"
   virtualService:
     gateways: {}
     http:
-      uri:
-        prefix: /
+      match:
+        - uri:
+            prefix: /
       rewrite:
         uri: /
+#      timeout: 15s
+      retries:
+        enable: true
+        attempts: 3
+        perTryTimeout: 5s
+#        retryOn: 503
     hosts: {}
   subsets:
     main:
       version: 1.0.0
       weight: "100"
+      fhirProfile: fhir-profile-snapshots
+      fhirProfileVersion: 2.5.1-b44
 # activate Traffic mirroring, also called shadowing with the following lines
 #      mirror:
 #        version: 1.1.0

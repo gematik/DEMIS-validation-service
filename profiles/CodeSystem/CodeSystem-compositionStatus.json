@@ -1,0 +1,63 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "compositionStatus",
+  "url": "https://demis.rki.de/fhir/CodeSystem/translationCompositionStatus",
+  "version": "1.0.0",
+  "name": "TranslationCompositionStatus",
+  "title": "Übersetzungen FHIR CodeSystem CompositionStatus",
+  "status": "draft",
+  "date": "2024-03-14",
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "description": "Beinhaltet die Übersetzungen für das  FHIR CodeSystem CompositionStatus",
+  "content": "supplement",
+  "supplements": "http://hl7.org/fhir/composition-status|4.0.1",
+  "concept": [
+    {
+      "code": "preliminary",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Vorläufig"
+        }
+      ]
+    },
+    {
+      "code": "final",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Abgeschlossen"
+        }
+      ]
+    },
+    {
+      "code": "amended",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Geändert"
+        }
+      ]
+    },
+    {
+      "code": "entered-in-error",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Irrtümliche Eingabe"
+        }
+      ]
+    }
+  ]
+}

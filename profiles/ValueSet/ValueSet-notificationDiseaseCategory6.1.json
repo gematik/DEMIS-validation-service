@@ -1,0 +1,974 @@
+{
+  "resourceType": "ValueSet",
+  "id": "notificationDiseaseCategory6.1",
+  "url": "https://demis.rki.de/fhir/ValueSet/notificationDiseaseCategory6.1",
+  "version": "1.0.0",
+  "name": "NotificationDiseaseCategory6.1",
+  "title": "Meldetatbestand",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-01-29",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet NotificationDiseaseCategory6.1 enthält die Codes der Meldetatbestände.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 430
+              }
+            ],
+            "code": "clod",
+            "display": "Botulismus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Botulismus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 420
+              }
+            ],
+            "code": "vchd",
+            "display": "Cholera",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Cholera"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 410
+              }
+            ],
+            "code": "cdfd",
+            "display": "Clostridioides-difficile-Erkrankung, schwere Verlaufsform",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Clostridioides-difficile-Erkrankung, schwere Verlaufsform"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 400
+              }
+            ],
+            "code": "cvdd",
+            "display": "Coronavirus-Krankheit-2019 (COVID-19)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Coronavirus-Krankheit-2019 (COVID-19)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 390
+              }
+            ],
+            "code": "cjkd",
+            "display": "Creutzfeldt-Jakob-Krankheit (CJK)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Creutzfeldt-Jakob-Krankheit (CJK)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 380
+              }
+            ],
+            "code": "dend",
+            "display": "Denguefieber",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Denguefieber"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 370
+              }
+            ],
+            "code": "cord",
+            "display": "Diphtherie",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Diphtherie"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 360
+              }
+            ],
+            "code": "ebvd",
+            "display": "Ebolafieber",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Ebolafieber"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 350
+              }
+            ],
+            "code": "gfvd",
+            "display": "Gelbfieber",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Gelbfieber"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 340
+              }
+            ],
+            "code": "husd",
+            "display": "Hämolytisch-urämisches Syndrom (HUS)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hämolytisch-urämisches Syndrom (HUS)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 330
+              }
+            ],
+            "code": "hfad",
+            "display": "Hämorrhagisches Fieber",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hämorrhagisches Fieber"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 320
+              }
+            ],
+            "code": "htvd",
+            "display": "Hantavirus-Erkrankung, hämorrhagischer Verlauf",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hantavirus-Erkrankung, hämorrhagischer Verlauf"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 310
+              }
+            ],
+            "code": "hxxd",
+            "display": "Akute Virushepatitis",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Akute Virushepatitis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 300
+              }
+            ],
+            "code": "havd",
+            "display": "Hepatitis A",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hepatitis A"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 290
+              }
+            ],
+            "code": "hbvd",
+            "display": "Hepatitis B",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hepatitis B"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 280
+              }
+            ],
+            "code": "hcvd",
+            "display": "Hepatitis C",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hepatitis C"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 270
+              }
+            ],
+            "code": "hdvd",
+            "display": "Hepatitis D",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hepatitis D"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 260
+              }
+            ],
+            "code": "hevd",
+            "display": "Hepatitis E",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Hepatitis E"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 250
+              }
+            ],
+            "code": "vzzd",
+            "display": "Herpes Zoster",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Herpes Zoster"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 240
+              }
+            ],
+            "code": "bpsd",
+            "display": "Keuchhusten",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Keuchhusten"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 230
+              }
+            ],
+            "code": "lsvd",
+            "display": "Lassafieber",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Lassafieber"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 220
+              }
+            ],
+            "code": "mbvd",
+            "display": "Marburgfieber",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Marburgfieber"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 210
+              }
+            ],
+            "code": "msvd",
+            "display": "Masern",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Masern"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 200
+              }
+            ],
+            "code": "neid",
+            "display": "Meningokokken, invasive Erkrankung",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Meningokokken, invasive Erkrankung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 190
+              }
+            ],
+            "code": "band",
+            "display": "Milzbrand",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Milzbrand"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 180
+              }
+            ],
+            "code": "mpxd",
+            "display": "Mpox",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Mpox"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 170
+              }
+            ],
+            "code": "mpvd",
+            "display": "Mumps",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Mumps"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 160
+              }
+            ],
+            "code": "opxd",
+            "display": "Orthopocken, andere",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Orthopocken, andere"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 150
+              }
+            ],
+            "code": "spad",
+            "display": "Paratyphus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Paratyphus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 140
+              }
+            ],
+            "code": "sxxd",
+            "display": "Paratyphus/Typhus, nicht differenziert",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Paratyphus/Typhus, nicht differenziert"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 130
+              }
+            ],
+            "code": "ypsd",
+            "display": "Pest",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Pest"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 120
+              }
+            ],
+            "code": "pkvd",
+            "display": "Pocken",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Pocken"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 110
+              }
+            ],
+            "code": "povd",
+            "display": "Poliomyelitis",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Poliomyelitis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "rund",
+            "display": "Röteln, konnatal",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Röteln, konnatal"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "ruvd",
+            "display": "Röteln, postnatal",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Röteln, postnatal"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 80
+              }
+            ],
+            "code": "sspd",
+            "display": "Subakute sklerosierende Panenzephalitis (SSPE)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Subakute sklerosierende Panenzephalitis (SSPE)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 70
+              }
+            ],
+            "code": "rbvd",
+            "display": "Tollwut",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Tollwut"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 60
+              }
+            ],
+            "code": "ttvd",
+            "display": "Tollwutexpositionsverdacht",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Tollwutexpositionsverdacht"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 50
+              }
+            ],
+            "code": "mytd",
+            "display": "Tuberkulose",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Tuberkulose"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 40
+              }
+            ],
+            "code": "mybd",
+            "display": "Tuberkulose, bei Behandlungsabbruch",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Tuberkulose, bei Behandlungsabbruch"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 30
+              }
+            ],
+            "code": "styd",
+            "display": "Typhus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Typhus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 20
+              }
+            ],
+            "code": "vzwd",
+            "display": "Windpocken",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Windpocken"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 10
+              }
+            ],
+            "code": "izvd",
+            "display": "Zoonotische Influenza",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Zoonotische Influenza"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2025-01-29T00:00:00+01:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "cjkd",
+        "display": "Creutzfeldt-Jakob-Krankheit (CJK)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "clod",
+        "display": "Botulismus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hxxd",
+        "display": "Akute Virushepatitis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "htvd",
+        "display": "Hantavirus-Erkrankung, hämorrhagischer Verlauf"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "sxxd",
+        "display": "Paratyphus/Typhus, nicht differenziert"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "mpxd",
+        "display": "Mpox"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "opxd",
+        "display": "Orthopocken, andere"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "vzwd",
+        "display": "Windpocken"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "neid",
+        "display": "Meningokokken, invasive Erkrankung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "mpvd",
+        "display": "Mumps"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "band",
+        "display": "Milzbrand"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "dend",
+        "display": "Denguefieber"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "msvd",
+        "display": "Masern"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "cvdd",
+        "display": "Coronavirus-Krankheit-2019 (COVID-19)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "sspd",
+        "display": "Subakute sklerosierende Panenzephalitis (SSPE)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hevd",
+        "display": "Hepatitis E"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hdvd",
+        "display": "Hepatitis D"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "rbvd",
+        "display": "Tollwut"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "mytd",
+        "display": "Tuberkulose"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hcvd",
+        "display": "Hepatitis C"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hbvd",
+        "display": "Hepatitis B"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "izvd",
+        "display": "Zoonotische Influenza"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "havd",
+        "display": "Hepatitis A"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "vchd",
+        "display": "Cholera"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "hfad",
+        "display": "Hämorrhagisches Fieber"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "ypsd",
+        "display": "Pest"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "husd",
+        "display": "Hämolytisch-urämisches Syndrom (HUS)"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "cdfd",
+        "display": "Clostridioides-difficile-Erkrankung, schwere Verlaufsform"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "pkvd",
+        "display": "Pocken"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "cord",
+        "display": "Diphtherie"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "bpsd",
+        "display": "Keuchhusten"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "ruvd",
+        "display": "Röteln, postnatal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "povd",
+        "display": "Poliomyelitis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "mybd",
+        "display": "Tuberkulose, bei Behandlungsabbruch"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "vzzd",
+        "display": "Herpes Zoster"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "styd",
+        "display": "Typhus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "ttvd",
+        "display": "Tollwutexpositionsverdacht"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "lsvd",
+        "display": "Lassafieber"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "rund",
+        "display": "Röteln, konnatal"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "gfvd",
+        "display": "Gelbfieber"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "spad",
+        "display": "Paratyphus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "ebvd",
+        "display": "Ebolafieber"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+        "version": "2.0.0",
+        "code": "mbvd",
+        "display": "Marburgfieber"
+      }
+    ]
+  }
+}

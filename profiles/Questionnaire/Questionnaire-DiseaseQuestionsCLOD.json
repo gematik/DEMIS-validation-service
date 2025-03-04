@@ -1,0 +1,372 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DiseaseQuestionsCLOD",
+  "url": "https://demis.rki.de/fhir/Questionnaire/DiseaseQuestionsCLOD",
+  "version": "1.2.1",
+  "name": "DiseaseQuestionsCLOD",
+  "title": "Botulismus: spezifische klinische und epidemiologische Angaben",
+  "status": "active",
+  "date": "2024-07-22",
+  "description": "Botulismus spezifische Informationsbedarfe werden in diesem meldetatbestandsspezifischen Fragebogen zusammengestellt. Dieser manifestiert sich als entsprechende QuestionnaireResponse innerhalb der Meldung.",
+  "item": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "form",
+      "text": "Welche Krankheitsform liegt vor?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetFormCLOD",
+      "initial": [
+        {
+          "valueCoding": {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+            "code": "NASK",
+            "display": "not asked"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "infectionPathKindGroup",
+      "text": "Auf welchem Weg hat sich die betroffene Person wahrscheinlich infiziert?",
+      "type": "group",
+      "enableWhen": [
+        {
+          "question": "form",
+          "operator": "=",
+          "answerCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "414488002"
+          }
+        },
+        {
+          "question": "form",
+          "operator": "=",
+          "answerCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "398530003"
+          }
+        },
+        {
+          "question": "form",
+          "operator": "=",
+          "answerCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "398523009"
+          }
+        }
+      ],
+      "enableBehavior": "any",
+      "required": true,
+      "repeats": false,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "honey",
+          "text": "Hat der Säugling Honig verzehrt?",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "form",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "414488002"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation",
+          "initial": [
+            {
+              "valueCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "code": "NASK",
+                "display": "not asked"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "drugs",
+          "text": "Konsumiert die betroffene Person intravenöse Drogen?",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "form",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "398530003"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation",
+          "initial": [
+            {
+              "valueCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "code": "NASK",
+                "display": "not asked"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "gtable",
+                    "display": "Group Table"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "foodGroup",
+          "type": "group",
+          "enableWhen": [
+            {
+              "question": "form",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "398523009"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "item": [
+            {
+              "linkId": "food",
+              "text": "Welches Lebensmittel hat wahrscheinlich die Infektion verursacht?",
+              "type": "choice",
+              "required": true,
+              "repeats": false,
+              "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetFoodCLOD",
+              "initial": [
+                {
+                  "valueCoding": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                    "code": "NASK",
+                    "display": "not asked"
+                  }
+                }
+              ],
+              "item": [
+                {
+                  "linkId": "otherfood",
+                  "text": "Welches andere Lebensmittel hat wahrscheinlich die Infektion verursacht?",
+                  "type": "text",
+                  "enableWhen": [
+                    {
+                      "question": "food",
+                      "operator": "=",
+                      "answerCoding": {
+                        "system": "http://snomed.info/sct",
+                        "code": "346602001"
+                      }
+                    }
+                  ],
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "linkId": "consumptionWhen",
+              "text": "Verzehr am?",
+              "type": "date",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "consumptionWhere",
+              "text": "Verzehr wo?",
+              "type": "choice",
+              "required": true,
+              "repeats": false,
+              "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetConsumptionCLOD",
+              "initial": [
+                {
+                  "valueCoding": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                    "code": "NASK",
+                    "display": "not asked"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "conservation",
+              "text": "Auf welche Art wurde das Lebensmittel konserviert?",
+              "type": "choice",
+              "required": true,
+              "repeats": false,
+              "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetConservationCLOD",
+              "initial": [
+                {
+                  "valueCoding": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                    "code": "NASK",
+                    "display": "not asked"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "manufacturing",
+              "text": "Aus welcher Herstellung stammt das Lebensmittel?",
+              "type": "choice",
+              "required": true,
+              "repeats": false,
+              "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetManufacturingCLOD",
+              "initial": [
+                {
+                  "valueCoding": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                    "code": "NASK",
+                    "display": "not asked"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "toxinInFood",
+              "text": "Wurde das Toxin im Lebensmittel nachgewiesen?",
+              "type": "choice",
+              "required": true,
+              "repeats": false,
+              "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation",
+              "initial": [
+                {
+                  "valueCoding": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                    "code": "NASK",
+                    "display": "not asked"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "outbreak",
+      "text": "Kann der gemeldete Fall einem Ausbruch zugeordnet werden?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation",
+      "initial": [
+        {
+          "valueCoding": {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+            "code": "NASK",
+            "display": "not asked"
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "outbreakNote",
+          "text": "Fallbezogene Zusatzinformationen zum Ausbruch",
+          "type": "text",
+          "enableWhen": [
+            {
+              "question": "outbreak",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+                "code": "yes"
+              }
+            }
+          ],
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "outbreakNotificationId",
+          "text": "Notification-Id der zugehörigen Ausbruchsmeldung",
+          "type": "reference",
+          "enableWhen": [
+            {
+              "question": "outbreak",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+                "code": "yes"
+              }
+            }
+          ],
+          "required": false,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

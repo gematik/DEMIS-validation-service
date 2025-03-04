@@ -2,251 +2,434 @@
   "resourceType": "ValueSet",
   "id": "answerSetNEIP",
   "url": "https://demis.rki.de/fhir/ValueSet/answerSetNEIP",
-  "version": "1.4.0",
+  "version": "1.7.1",
   "name": "AnswerSetNEIP",
   "title": "AnswerSet für Neisseria meningitidis; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, hämorrhagischen Hautinfiltraten oder anderen normalerweise sterilen Substraten",
   "status": "active",
-  "date": "2023-05-30",
+  "experimental": false,
+  "date": "2024-09-09",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet AnswerSetNEIP enthält die Codes der Answer-Codes für Neisseria meningitidis; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, hämorrhagischen Hautinfiltraten oder anderen normalerweise sterilen Substraten.",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
   "compose": {
-    "include": [ {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
-      "concept": [ {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "722355003",
-        "display": "Neisseria meningitidis, beta lactamase negative (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "103479006",
+            "display": "Neisseria meningitidis serogroup A (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Neisseria meningitidis serogroup A (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis, Serogruppe A"
+              }
+            ]
           },
-          "value": "Neisseria meningitidis, beta lactamase negative (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Neisseria meningitidis, Beta-Laktamase-negativ"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "722356002",
-        "display": "Neisseria meningitidis, beta lactamase positive (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "103480009",
+            "display": "Neisseria meningitidis serogroup B (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Neisseria meningitidis serogroup B (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis, Serogruppe B"
+              }
+            ]
           },
-          "value": "Neisseria meningitidis, beta lactamase positive (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Neisseria meningitidis, Beta-Laktamase-positiv"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "17872004",
-        "display": "Neisseria meningitidis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "103481008",
+            "display": "Neisseria meningitidis serogroup C (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Neisseria meningitidis serogroup C (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis, Serogruppe C"
+              }
+            ]
           },
-          "value": "Neisseria meningitidis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Neisseria meningitidis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "414810006",
-        "display": "Neisseria meningitidis non-groupable (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "103482001",
+            "display": "Neisseria meningitidis serogroup Y (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Neisseria meningitidis serogroup Y (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis, Serogruppe Y"
+              }
+            ]
           },
-          "value": "Neisseria meningitidis non-groupable (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Neisseria meningitidis, nicht-gruppierbar"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "103479006",
-        "display": "Neisseria meningitidis serogroup A (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "103483006",
+            "display": "Neisseria meningitidis serogroup W (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Neisseria meningitidis serogroup W (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis, Serogruppe W"
+              }
+            ]
           },
-          "value": "Neisseria meningitidis serogroup A (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Neisseria meningitidis, Serogruppe A"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "103480009",
-        "display": "Neisseria meningitidis serogroup B (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "125041003",
+            "display": "Neisseria meningitidis serogroup X (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Neisseria meningitidis serogroup X (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis, Serogruppe X"
+              }
+            ]
           },
-          "value": "Neisseria meningitidis serogroup B (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Neisseria meningitidis, Serogruppe B"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "103481008",
-        "display": "Neisseria meningitidis serogroup C (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "125042005",
+            "display": "Neisseria meningitidis serogroup Z (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Neisseria meningitidis serogroup Z (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis, Serogruppe Z"
+              }
+            ]
           },
-          "value": "Neisseria meningitidis serogroup C (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Neisseria meningitidis, Serogruppe C"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "698162001",
-        "display": "Neisseria meningitidis serogroup E (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "17872004",
+            "display": "Neisseria meningitidis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Neisseria meningitidis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis"
+              }
+            ]
           },
-          "value": "Neisseria meningitidis serogroup E (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Neisseria meningitidis, Serogruppe E"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "103483006",
-        "display": "Neisseria meningitidis serogroup W (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "414810006",
+            "display": "Neisseria meningitidis non-groupable (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Neisseria meningitidis non-groupable (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis, nicht-gruppierbar"
+              }
+            ]
           },
-          "value": "Neisseria meningitidis serogroup W (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Neisseria meningitidis, Serogruppe W"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "125041003",
-        "display": "Neisseria meningitidis serogroup X (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "698162001",
+            "display": "Neisseria meningitidis serogroup E (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Neisseria meningitidis serogroup E (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis, Serogruppe E"
+              }
+            ]
           },
-          "value": "Neisseria meningitidis serogroup X (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Neisseria meningitidis, Serogruppe X"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "103482001",
-        "display": "Neisseria meningitidis serogroup Y (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "722355003",
+            "display": "Neisseria meningitidis, beta lactamase negative (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Neisseria meningitidis, beta lactamase negative (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis, Beta-Laktamase-negativ"
+              }
+            ]
           },
-          "value": "Neisseria meningitidis serogroup Y (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Neisseria meningitidis, Serogruppe Y"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "722356002",
+            "display": "Neisseria meningitidis, beta lactamase positive (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Neisseria meningitidis, beta lactamase positive (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Neisseria meningitidis, Beta-Laktamase-positiv"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "83410001",
+            "display": "Gram-negative diplococcus (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Gram-negative diplococcus (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Gram-negativer Diplococcus"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetLaboratoryTest-SNOMED"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetResistance-SNOMED"
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-09T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "125042005",
-        "display": "Neisseria meningitidis serogroup Z (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Neisseria meningitidis serogroup Z (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Neisseria meningitidis, Serogruppe Z"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+        "display": "Neisseria meningitidis serogroup Z (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "125041003",
+        "display": "Neisseria meningitidis serogroup X (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "103483006",
+        "display": "Neisseria meningitidis serogroup W (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "103482001",
+        "display": "Neisseria meningitidis serogroup Y (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "11896004",
+        "display": "Intermediate (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "414810006",
+        "display": "Neisseria meningitidis non-groupable (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "698162001",
+        "display": "Neisseria meningitidis serogroup E (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "103480009",
+        "display": "Neisseria meningitidis serogroup B (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "103481008",
+        "display": "Neisseria meningitidis serogroup C (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "83410001",
-        "display": "Gram-negative diplococcus (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Gram-negative diplococcus (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Gram-negativer Diplococcus"
-        } ]
-      } ]
-    } ]
+        "display": "Gram-negative diplococcus (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "103479006",
+        "display": "Neisseria meningitidis serogroup A (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "17872004",
+        "display": "Neisseria meningitidis (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "722356002",
+        "display": "Neisseria meningitidis, beta lactamase positive (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "722355003",
+        "display": "Neisseria meningitidis, beta lactamase negative (organism)"
+      }
+    ]
   }
 }

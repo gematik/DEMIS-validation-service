@@ -1,0 +1,81 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "translationConditionClinicalStatusCodes",
+  "url": "https://demis.rki.de/fhir/CodeSystem/translationConditionClinicalStatusCodes",
+  "version": "1.1.0",
+  "name": "TranslationConditionClinicalStatusCodes",
+  "title": "Übersetzungen FHIR CodeSystem ConditionClinicalStatusCodes",
+  "status": "draft",
+  "date": "2024-12-17",
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "name": "Robert Koch-Institut",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://rki.de"
+        }
+      ]
+    }
+  ],
+  "description": "Beinhaltet die Übersetzungen für das  FHIR CodeSystem ConditionClinicalStatusCodes",
+  "content": "supplement",
+  "supplements": "http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0",
+  "concept": [
+    {
+      "code": "active",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Aktiv"
+        }
+      ]
+    },
+    {
+      "code": "recurrence",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Wiederauftreten"
+        }
+      ]
+    },
+    {
+      "code": "relapse",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Rezidiv"
+        }
+      ]
+    },
+    {
+      "code": "inactive",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Inaktiv"
+        }
+      ]
+    },
+    {
+      "code": "remission",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Remission"
+        }
+      ]
+    },
+    {
+      "code": "resolved",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Behoben"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DiseaseQuestionsHBVD",
+  "url": "https://demis.rki.de/fhir/Questionnaire/DiseaseQuestionsHBVD",
+  "version": "1.4.0",
+  "name": "DiseaseQuestionsHBVD",
+  "title": "Hepatitis B: spezifische klinische und epidemiologische Angaben",
+  "status": "active",
+  "date": "2024-12-13",
+  "description": "Hepatitis B spezifische Informationsbedarfe werden in diesem meldetatbestandsspezifischen Fragebogen zusammengestellt. Dieser manifestiert sich als entsprechende QuestionnaireResponse innerhalb der Meldung.",
+  "item": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "immunization",
+      "text": "Wurde die betroffene Person jemals in Bezug auf die Krankheit geimpft?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation",
+      "initial": [
+        {
+          "valueCoding": {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+            "code": "NASK",
+            "display": "not asked"
+          }
+        }
+      ],
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile",
+              "valueCanonical": "https://demis.rki.de/fhir/StructureDefinition/ImmunizationInformationHBVD"
+            }
+          ],
+          "linkId": "immunizationRef",
+          "text": "Impfinformationen",
+          "type": "reference",
+          "enableWhen": [
+            {
+              "question": "immunization",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+                "code": "yes"
+              }
+            }
+          ],
+          "required": false,
+          "repeats": true
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "gtable",
+                "display": "Group Table"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "nationalityGroup",
+      "type": "group",
+      "required": true,
+      "repeats": false,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "nationality",
+          "text": "Welche Staatsangehörigkeit hat die betroffene Person?",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetCountry",
+          "initial": [
+            {
+              "valueCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "code": "NASK",
+                "display": "not asked"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "countryOfBirth",
+          "text": "Welcher ist der Geburtsstaat der betroffenen Person?",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetCountry",
+          "initial": [
+            {
+              "valueCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "code": "NASK",
+                "display": "not asked"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "yearOfEntry",
+          "text": "Jahr der Einreise in Deutschland",
+          "type": "date",
+          "enableWhen": [
+            {
+              "question": "countryOfBirth",
+              "operator": "!=",
+              "answerCoding": {
+                "system": "urn:iso:std:iso:3166",
+                "code": "DE"
+              }
+            },
+            {
+              "question": "countryOfBirth",
+              "operator": "!=",
+              "answerCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "code": "ASKU"
+              }
+            },
+            {
+              "question": "countryOfBirth",
+              "operator": "!=",
+              "answerCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "code": "NASK"
+              }
+            }
+          ],
+          "enableBehavior": "all",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "stadium",
+      "text": "Welches Stadium der Infektion liegt vor?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetStadiumHBVD",
+      "initial": [
+        {
+          "valueCoding": {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+            "code": "NASK",
+            "display": "not asked"
+          }
+        }
+      ],
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "acute",
+          "text": "Akute Infektion aufgrund",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "stadium",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "37871000"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetAcuteHBVD",
+          "initial": [
+            {
+              "valueCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "code": "NASK",
+                "display": "not asked"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "infectionPathKind",
+      "text": "Auf welchem Weg hat sich die betroffene Person wahrscheinlich infiziert?",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetInfectionPathHBVD",
+      "initial": [
+        {
+          "valueCoding": {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+            "code": "NASK",
+            "display": "not asked"
+          }
+        }
+      ],
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "inPrison",
+          "text": "Während eines Haftaufenthaltes?",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "infectionPathKind",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "409496000:{704326004=365984004}"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation",
+          "initial": [
+            {
+              "valueCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "code": "NASK",
+                "display": "not asked"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "sexualContact",
+          "text": "War der Sexualpartner/die Sexualpartnerin bekanntermaßen Hepatitis B infiziert?",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "infectionPathKind",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "409496000:{704326004=225531006}"
+              }
+            },
+            {
+              "question": "infectionPathKind",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "409496000:{704326004=1288017002}"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation",
+          "initial": [
+            {
+              "valueCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "code": "NASK",
+                "display": "not asked"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "transmissionKind",
+          "text": "Welche Form der nosokomialen Übertragung ist der wahrscheinliche Infektionsweg?",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "infectionPathKind",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "409496000:{704326004=408678008}"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": true,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetTransmissionKindHBVD",
+          "initial": [
+            {
+              "valueCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "code": "NASK",
+                "display": "not asked"
+              }
+            }
+          ],
+          "item": [
+            {
+              "linkId": "receiptBloodProductsDate",
+              "text": "Jahr und Monat des Erhalts von Blutprodukten",
+              "type": "date",
+              "enableWhen": [
+                {
+                  "question": "transmissionKind",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "409496000:{704326004=5447007}"
+                  }
+                }
+              ],
+              "required": false,
+              "repeats": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "outbreak",
+      "text": "Kann der gemeldete Fall einem Ausbruch zugeordnet werden?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation",
+      "initial": [
+        {
+          "valueCoding": {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+            "code": "NASK",
+            "display": "not asked"
+          }
+        }
+      ],
+      "item": [
+        {
+          "linkId": "outbreakNote",
+          "text": "Fallbezogene Zusatzinformationen zum Ausbruch",
+          "type": "text",
+          "enableWhen": [
+            {
+              "question": "outbreak",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+                "code": "yes"
+              }
+            }
+          ],
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "outbreakNotificationId",
+          "text": "Notification-Id der zugehörigen Ausbruchsmeldung",
+          "type": "reference",
+          "enableWhen": [
+            {
+              "question": "outbreak",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+                "code": "yes"
+              }
+            }
+          ],
+          "required": false,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

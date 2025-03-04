@@ -2,809 +2,1364 @@
   "resourceType": "ValueSet",
   "id": "answerSetLEPP",
   "url": "https://demis.rki.de/fhir/ValueSet/answerSetLEPP",
-  "version": "1.4.0",
+  "version": "1.7.1",
   "name": "AnswerSetLEPP",
   "title": "AnswerSet für humanpathogene Leptospira sp.",
   "status": "active",
-  "date": "2023-05-30",
+  "experimental": false,
+  "date": "2024-09-09",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet AnswerSetLEPP enthält die Codes der Answer-Codes für humanpathogene Leptospira sp..",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
   "compose": {
-    "include": [ {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
-      "concept": [ {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "115069005",
-        "display": "Family Leptospiraceae (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "103472002",
+            "display": "Leptospira interrogans var. bufonis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans var. bufonis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Variante bufonis"
+              }
+            ]
           },
-          "value": "Family Leptospiraceae (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Familie Leptospiraceae"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "26764003",
-        "display": "Genus Leptospira (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "103473007",
+            "display": "Leptospira interrogans var. ranarum (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans var. ranarum (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Variante ranarum"
+              }
+            ]
           },
-          "value": "Genus Leptospira (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Gattung Leptospira"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "432579003",
-        "display": "Leptospira alexanderi (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "113809009",
+            "display": "Leptospira borgpetersenii (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira borgpetersenii (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira borgpetersenii"
+              }
+            ]
           },
-          "value": "Leptospira alexanderi (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira alexanderi"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "116402004",
-        "display": "Leptospira biflexa (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "113810004",
+            "display": "Leptospira inadai (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira inadai (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira inadai"
+              }
+            ]
           },
-          "value": "Leptospira biflexa (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira biflexa"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "113809009",
-        "display": "Leptospira borgpetersenii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "113811000",
+            "display": "Leptospira kirschneri (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira kirschneri (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira kirschneri"
+              }
+            ]
           },
-          "value": "Leptospira borgpetersenii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira borgpetersenii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "370579003",
-        "display": "Leptospira bratislava (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "113812007",
+            "display": "Leptospira meyeri (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira meyeri (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira meyeri"
+              }
+            ]
           },
-          "value": "Leptospira bratislava (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira bratislava"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "432580000",
-        "display": "Leptospira fainei (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "113813002",
+            "display": "Leptospira noguchii (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira noguchii (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira noguchii"
+              }
+            ]
           },
-          "value": "Leptospira fainei (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira fainei"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "113810004",
-        "display": "Leptospira inadai (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "113814008",
+            "display": "Leptospira parva (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira parva (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira parva"
+              }
+            ]
           },
-          "value": "Leptospira inadai (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira inadai"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "116401006",
-        "display": "Leptospira interrogans (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "113815009",
+            "display": "Leptospira santarosai (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira santarosai (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira santarosai"
+              }
+            ]
           },
-          "value": "Leptospira interrogans (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "58373001",
-        "display": "Leptospira interrogans biflexa (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "113816005",
+            "display": "Leptospira weilii (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira weilii (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira weilii"
+              }
+            ]
           },
-          "value": "Leptospira interrogans biflexa (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans biflexa"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "59217001",
-        "display": "Leptospira interrogans serogroup Ballum (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "113817001",
+            "display": "Leptospira wolbachii (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira wolbachii (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira wolbachii"
+              }
+            ]
           },
-          "value": "Leptospira interrogans serogroup Ballum (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Ballum"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "302609005",
-        "display": "Leptospira interrogans serovar Buccalis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "115069005",
+            "display": "Family Leptospiraceae (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Family Leptospiraceae (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Familie Leptospiraceae"
+              }
+            ]
           },
-          "value": "Leptospira interrogans serovar Buccalis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serovar Buccalis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "302610000",
-        "display": "Leptospira interrogans serovar Pomona (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "116401006",
+            "display": "Leptospira interrogans (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans"
+              }
+            ]
           },
-          "value": "Leptospira interrogans serovar Pomona (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serovar Pomona"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "302611001",
-        "display": "Leptospira interrogans serovar Saxkoebing (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "116402004",
+            "display": "Leptospira biflexa (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira biflexa (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira biflexa"
+              }
+            ]
           },
-          "value": "Leptospira interrogans serovar Saxkoebing (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serovar Saxkoebing"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "103472002",
-        "display": "Leptospira interrogans var. bufonis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "12154002",
+            "display": "Leptospira interrogans, serogroup Louisiana (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Louisiana (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Louisiana"
+              }
+            ]
           },
-          "value": "Leptospira interrogans var. bufonis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Variante bufonis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "103473007",
-        "display": "Leptospira interrogans var. ranarum (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "14677002",
+            "display": "Leptospira interrogans, serogroup Mini (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Mini (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Mini"
+              }
+            ]
           },
-          "value": "Leptospira interrogans var. ranarum (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Variante ranarum"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "5555002",
-        "display": "Leptospira interrogans, serogroup Australis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "19251003",
+            "display": "Leptospira interrogans, serogroup Icterohemorrhagiae (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Icterohemorrhagiae (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Icterohemorrhagiae"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Australis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Australis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "45882007",
-        "display": "Leptospira interrogans, serogroup Autumnalis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "26615002",
+            "display": "Leptospira interrogans, serogroup Grippotyphosa (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Grippotyphosa (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Grippotyphosa"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Autumnalis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Autumnalis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "26870001",
-        "display": "Leptospira interrogans, serogroup Bataviae (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "26764003",
+            "display": "Genus Leptospira (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Genus Leptospira (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Gattung Leptospira"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Bataviae (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Bataviae"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "54933006",
-        "display": "Leptospira interrogans, serogroup Canicola (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "26870001",
+            "display": "Leptospira interrogans, serogroup Bataviae (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Bataviae (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Bataviae"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Canicola (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Canicola"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "86248004",
-        "display": "Leptospira interrogans, serogroup Celledoni (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "302609005",
+            "display": "Leptospira interrogans serovar Buccalis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans serovar Buccalis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serovar Buccalis"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Celledoni (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Celledoni"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "58542001",
-        "display": "Leptospira interrogans, serogroup Copenhageni (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "302610000",
+            "display": "Leptospira interrogans serovar Pomona (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans serovar Pomona (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serovar Pomona"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Copenhageni (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Copenhageni"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "44425008",
-        "display": "Leptospira interrogans, serogroup cynopteri (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "302611001",
+            "display": "Leptospira interrogans serovar Saxkoebing (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans serovar Saxkoebing (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serovar Saxkoebing"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup cynopteri (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe cynopteri"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "8472006",
-        "display": "Leptospira interrogans, serogroup Djasiman (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "33525000",
+            "display": "Leptospira interrogans, serogroup Hebdomadis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Hebdomadis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Hebdomadis"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Djasiman (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Djasiman"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "26615002",
-        "display": "Leptospira interrogans, serogroup Grippotyphosa (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "37044004",
+            "display": "Leptospira interrogans, serogroup Tarassovi (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Tarassovi (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Tarassovi"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Grippotyphosa (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Grippotyphosa"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "53343008",
-        "display": "Leptospira interrogans, serogroup hardjo (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "370579003",
+            "display": "Leptospira bratislava (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira bratislava (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira bratislava"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup hardjo (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe hardjo"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "33525000",
-        "display": "Leptospira interrogans, serogroup Hebdomadis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "41938007",
+            "display": "Leptospira interrogans, serogroup Sejroe (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Sejroe (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Sejroe"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Hebdomadis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Hebdomadis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "19251003",
-        "display": "Leptospira interrogans, serogroup Icterohemorrhagiae (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "432579003",
+            "display": "Leptospira alexanderi (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira alexanderi (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira alexanderi"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Icterohemorrhagiae (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Icterohemorrhagiae"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "90646001",
-        "display": "Leptospira interrogans, serogroup javanica (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "432580000",
+            "display": "Leptospira fainei (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira fainei (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira fainei"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup javanica (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe javanica"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "12154002",
-        "display": "Leptospira interrogans, serogroup Louisiana (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "44425008",
+            "display": "Leptospira interrogans, serogroup cynopteri (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup cynopteri (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe cynopteri"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Louisiana (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Louisiana"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "14677002",
-        "display": "Leptospira interrogans, serogroup Mini (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "45882007",
+            "display": "Leptospira interrogans, serogroup Autumnalis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Autumnalis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Autumnalis"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Mini (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Mini"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "83247003",
-        "display": "Leptospira interrogans, serogroup panama (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "47840007",
+            "display": "Leptospira interrogans, serogroup Pomona (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Pomona (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Pomona"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup panama (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe panama"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "47840007",
-        "display": "Leptospira interrogans, serogroup Pomona (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "53343008",
+            "display": "Leptospira interrogans, serogroup hardjo (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup hardjo (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe hardjo"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Pomona (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Pomona"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "83409006",
-        "display": "Leptospira interrogans, serogroup Pyrogenes (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "54933006",
+            "display": "Leptospira interrogans, serogroup Canicola (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Canicola (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Canicola"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Pyrogenes (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Pyrogenes"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "41938007",
-        "display": "Leptospira interrogans, serogroup Sejroe (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "5555002",
+            "display": "Leptospira interrogans, serogroup Australis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Australis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Australis"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Sejroe (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Sejroe"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "55585006",
-        "display": "Leptospira interrogans, serogroup shermani (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "55585006",
+            "display": "Leptospira interrogans, serogroup shermani (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup shermani (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe shermani"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup shermani (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe shermani"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "37044004",
-        "display": "Leptospira interrogans, serogroup Tarassovi (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "58373001",
+            "display": "Leptospira interrogans biflexa (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans biflexa (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans biflexa"
+              }
+            ]
           },
-          "value": "Leptospira interrogans, serogroup Tarassovi (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira interrogans, Serogruppe Tarassovi"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "113811000",
-        "display": "Leptospira kirschneri (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "58542001",
+            "display": "Leptospira interrogans, serogroup Copenhageni (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Copenhageni (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Copenhageni"
+              }
+            ]
           },
-          "value": "Leptospira kirschneri (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira kirschneri"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "113812007",
-        "display": "Leptospira meyeri (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "59217001",
+            "display": "Leptospira interrogans serogroup Ballum (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans serogroup Ballum (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Ballum"
+              }
+            ]
           },
-          "value": "Leptospira meyeri (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira meyeri"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "83247003",
+            "display": "Leptospira interrogans, serogroup panama (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup panama (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe panama"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "83409006",
+            "display": "Leptospira interrogans, serogroup Pyrogenes (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Pyrogenes (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Pyrogenes"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "8472006",
+            "display": "Leptospira interrogans, serogroup Djasiman (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Djasiman (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Djasiman"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "86248004",
+            "display": "Leptospira interrogans, serogroup Celledoni (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup Celledoni (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe Celledoni"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "90646001",
+            "display": "Leptospira interrogans, serogroup javanica (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Leptospira interrogans, serogroup javanica (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Leptospira interrogans, Serogruppe javanica"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetLaboratoryTest-SNOMED"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetResistance-SNOMED"
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-09T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "113813002",
-        "display": "Leptospira noguchii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Leptospira noguchii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira noguchii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "113814008",
-        "display": "Leptospira parva (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Leptospira parva (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira parva"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "113815009",
-        "display": "Leptospira santarosai (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Leptospira santarosai (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira santarosai"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "113816005",
-        "display": "Leptospira weilii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Leptospira weilii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira weilii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+        "display": "Leptospira noguchii (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "113811000",
+        "display": "Leptospira kirschneri (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "432579003",
+        "display": "Leptospira alexanderi (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "55585006",
+        "display": "Leptospira interrogans, serogroup shermani (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "116401006",
+        "display": "Leptospira interrogans (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "59217001",
+        "display": "Leptospira interrogans serogroup Ballum (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "83409006",
+        "display": "Leptospira interrogans, serogroup Pyrogenes (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "37044004",
+        "display": "Leptospira interrogans, serogroup Tarassovi (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "8472006",
+        "display": "Leptospira interrogans, serogroup Djasiman (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "113817001",
-        "display": "Leptospira wolbachii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Leptospira wolbachii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Leptospira wolbachii"
-        } ]
-      } ]
-    } ]
+        "display": "Leptospira wolbachii (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "113815009",
+        "display": "Leptospira santarosai (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "44425008",
+        "display": "Leptospira interrogans, serogroup cynopteri (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "47840007",
+        "display": "Leptospira interrogans, serogroup Pomona (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "302611001",
+        "display": "Leptospira interrogans serovar Saxkoebing (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "83247003",
+        "display": "Leptospira interrogans, serogroup panama (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "26870001",
+        "display": "Leptospira interrogans, serogroup Bataviae (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "302609005",
+        "display": "Leptospira interrogans serovar Buccalis (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "103472002",
+        "display": "Leptospira interrogans var. bufonis (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "5555002",
+        "display": "Leptospira interrogans, serogroup Australis (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "370579003",
+        "display": "Leptospira bratislava (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "113809009",
+        "display": "Leptospira borgpetersenii (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "58373001",
+        "display": "Leptospira interrogans biflexa (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "26615002",
+        "display": "Leptospira interrogans, serogroup Grippotyphosa (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "86248004",
+        "display": "Leptospira interrogans, serogroup Celledoni (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "432580000",
+        "display": "Leptospira fainei (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "58542001",
+        "display": "Leptospira interrogans, serogroup Copenhageni (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "19251003",
+        "display": "Leptospira interrogans, serogroup Icterohemorrhagiae (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "41938007",
+        "display": "Leptospira interrogans, serogroup Sejroe (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "115069005",
+        "display": "Family Leptospiraceae (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "116402004",
+        "display": "Leptospira biflexa (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "11896004",
+        "display": "Intermediate (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "113810004",
+        "display": "Leptospira inadai (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "90646001",
+        "display": "Leptospira interrogans, serogroup javanica (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "113812007",
+        "display": "Leptospira meyeri (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "113814008",
+        "display": "Leptospira parva (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "26764003",
+        "display": "Genus Leptospira (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "113816005",
+        "display": "Leptospira weilii (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "103473007",
+        "display": "Leptospira interrogans var. ranarum (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "12154002",
+        "display": "Leptospira interrogans, serogroup Louisiana (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "302610000",
+        "display": "Leptospira interrogans serovar Pomona (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "54933006",
+        "display": "Leptospira interrogans, serogroup Canicola (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "33525000",
+        "display": "Leptospira interrogans, serogroup Hebdomadis (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "53343008",
+        "display": "Leptospira interrogans, serogroup hardjo (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "14677002",
+        "display": "Leptospira interrogans, serogroup Mini (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "45882007",
+        "display": "Leptospira interrogans, serogroup Autumnalis (organism)"
+      }
+    ]
   }
 }

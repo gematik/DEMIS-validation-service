@@ -1,0 +1,179 @@
+{
+  "resourceType": "ValueSet",
+  "id": "methodCVDP",
+  "url": "https://demis.rki.de/fhir/ValueSet/methodCVDP",
+  "version": "1.0.1",
+  "name": "MethodCVDP",
+  "title": "Nachweismethode für SARS-CoV-2",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-09-06",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet MethodCVDP enthält die Codes der Nachweismethoden für SARS-CoV-2.",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "117040002",
+            "display": "Nucleic acid sequencing (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Nucleic acid sequencing (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "DNA-Sequenzierung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "1259932009",
+            "display": "Loop-mediated isothermal amplification technique (qualifier value)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Loop-mediated isothermal amplification technique (qualifier value)"
+              },
+              {
+                "language": "de-DE",
+                "value": "PCR-Schnelltest"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "398545005",
+            "display": "Nucleic acid assay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Nucleic acid assay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Nukleinsäurenachweis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "61594008",
+            "display": "Microbial culture (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Microbial culture (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mikrobielle Kultur"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "708099001",
+            "display": "Rapid immunoassay technique (qualifier value)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Rapid immunoassay technique (qualifier value)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Antigenschnelltest"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-06T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "708099001",
+        "display": "Rapid immunoassay technique (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "1259932009",
+        "display": "Loop-mediated isothermal amplification technique (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "61594008",
+        "display": "Microbial culture (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "117040002",
+        "display": "Nucleic acid sequencing (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "398545005",
+        "display": "Nucleic acid assay (procedure)"
+      }
+    ]
+  }
+}

@@ -2,380 +2,418 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestMPVP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestMPVP",
-  "version": "1.3.0",
+  "version": "1.6.0",
   "name": "LaboratoryTestMPVP",
   "title": "Labortest für Mumpsvirus",
   "status": "active",
-  "date": "2023-05-04",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestMPVP enthält die Codes der Labortests für Mumpsvirus.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "13267-0",
-        "display": "Mumps virus IgM Ab [Units/volume] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "101202-0",
+            "display": "Mumps virus IgG Ab index [Units/volume] in Serum and CSF",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgG-Antikörperindex [Einheiten/Volumen] in Serum und Liquor"
+              }
+            ]
           },
-          "value": "Mumps-Virus-IgM-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "13921-2",
-        "display": "Mumps virus [Presence] in Specimen by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "13266-2",
+            "display": "Mumps virus IgG Ab [Units/volume] in Cerebral spinal fluid"
           },
-          "value": "Mumps-Virus [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "21402-3",
-        "display": "Mumps virus IgM Ab [Titer] in Cerebral spinal fluid by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "13267-0",
+            "display": "Mumps virus IgM Ab [Units/volume] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgM-Antikörper [Einheiten/Volumen] in Liquor"
+              }
+            ]
           },
-          "value": "Mumps-Virus-IgM-Antikörper [Titer] in Zerebrospinalflüssigkeit mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "22416-2",
-        "display": "Mumps virus IgG Ab [Titer] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "22415-4",
+            "display": "Mumps virus IgG Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgG-Antikörper [Nachweis] in Serum"
+              }
+            ]
           },
-          "value": "Mumps-Virus-IgG-Antikörper [Titer] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "22418-8",
-        "display": "Mumps virus IgM Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "22416-2",
+            "display": "Mumps virus IgG Ab [Titer] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgG-Antikörper [Titer] in Liquor"
+              }
+            ]
           },
-          "value": "Mumps-Virus-IgM-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "22419-6",
-        "display": "Mumps virus IgM Ab [Titer] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "22417-0",
+            "display": "Mumps virus IgG Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgG-Antikörper [Titer] in Serum"
+              }
+            ]
           },
-          "value": "Mumps-Virus-IgM-Antikörper [Titer] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
+          {
+            "code": "22418-8",
+            "display": "Mumps virus IgM Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgM-Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "22419-6",
+            "display": "Mumps virus IgM Ab [Titer] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgM-Antikörper [Titer] in Liquor"
+              }
+            ]
+          },
+          {
+            "code": "22420-4",
+            "display": "Mumps virus IgM Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgM-Antikörper [Titer] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "25418-5",
+            "display": "Mumps virus IgG Ab [Units/volume] in Serum by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgG-Antikörper [Einheiten/Volumen] in Serum mittels Immunoassay"
+              }
+            ]
+          },
+          {
+            "code": "25419-3",
+            "display": "Mumps virus IgM Ab [Units/volume] in Serum by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgM-Antikörper [Einheiten/Volumen] in Serum mittels Immunoassay"
+              }
+            ]
+          },
+          {
+            "code": "31900-4",
+            "display": "Mumps virus Ag [Presence] in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus Antigen [Nachweis] in Probenmaterial"
+              }
+            ]
+          },
+          {
+            "code": "39011-2",
+            "display": "Mumps virus IgG Ab [Presence] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgG-Antikörper [Nachweis] in Liquor"
+              }
+            ]
+          },
+          {
+            "code": "41131-4",
+            "display": "Mumps virus IgM Ab [Presence] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgM-Antikörper [Nachweis] in Liquor"
+              }
+            ]
+          },
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
+          },
+          {
+            "code": "47532-7",
+            "display": "Mumps virus RNA [Presence] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus RNA [Nachweis] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "6478-2",
+            "display": "Mumps virus IgM Ab [Presence] in Serum by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgM-Antikörper [Nachweis] in Serum mittels Immunoassay"
+              }
+            ]
+          },
+          {
+            "code": "7966-5",
+            "display": "Mumps virus IgG Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgG-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "7967-3",
+            "display": "Mumps virus IgM Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus IgM-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "85807-6",
+            "display": "Mumps virus genotype in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mumps-Virus Genotyp in Probenmaterial"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "22420-4",
-        "display": "Mumps virus IgM Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgM-Antikörper [Titer] in Serum"
-        } ]
-      }, {
-        "code": "21401-5",
-        "display": "Mumps virus IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgG-Antikörper [Titer] in Zerebrospinalflüssigkeit mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "22417-0",
-        "display": "Mumps virus IgG Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgG-Antikörper [Titer] in Serum"
-        } ]
-      }, {
-        "code": "6477-4",
-        "display": "Mumps virus IgG Ab [Titer] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgG-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "25419-3",
-        "display": "Mumps virus IgM Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "31900-4",
-        "display": "Mumps virus Ag [Presence] in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-Antigen [Nachweis] in Probenmaterial"
-        } ]
-      }, {
-        "code": "40738-7",
-        "display": "Mumps virus IgM Ab [Presence] in Cerebral spinal fluid by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgM-Antikörper [Nachweis] in Zerebrospinalflüssigkeit mit Immunoassay"
-        } ]
-      }, {
-        "code": "41131-4",
-        "display": "Mumps virus IgM Ab [Presence] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgM-Antikörper [Nachweis] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "47532-7",
-        "display": "Mumps virus RNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "53603-7",
-        "display": "Mumps virus RNA [Presence] in Serum by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-RNA [Nachweis] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "24240-4",
-        "display": "Mumps virus IgG Ab [Units/volume] in Serum --1st specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum --1. Probenmaterial"
-        } ]
-      }, {
-        "code": "24241-2",
-        "display": "Mumps virus IgG Ab [Units/volume] in Serum --2nd specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum --2. Probenmaterial"
-        } ]
-      }, {
-        "code": "6478-2",
-        "display": "Mumps virus IgM Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "6479-0",
-        "display": "Mumps virus IgM Ab [Titer] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgM-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "6480-8",
-        "display": "Mumps virus Ag [Presence] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-Antigen [Nachweis] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "25418-5",
-        "display": "Mumps virus IgG Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "7967-3",
-        "display": "Mumps virus IgM Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "7968-1",
-        "display": "Mumps virus RNA [Presence] in Cerebral spinal fluid by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-RNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "85800-1",
-        "display": "Mumps virus SH gene [Cycle Threshold #] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus SH-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "85807-6",
-        "display": "Mumps virus genotype in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-Genotyp in Probenmaterial"
-        } ]
-      }, {
-        "code": "86580-8",
-        "display": "Mumps virus RNA [Presence] in Urine by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-RNA [Nachweis] in Urin mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "91787-2",
-        "display": "Mumps virus [Presence] in Upper respiratory specimen by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "91806-0",
-        "display": "Mumps virus RNA [Presence] in Upper respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus-RNA [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "93749-0",
-        "display": "Mumps virus N gene [Cycle Threshold #] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus N-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "41461-5",
-        "display": "Virus identified in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Virus identifiziert in Probenmaterial"
-        } ]
-      }, {
-        "code": "92253-4",
-        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
-        } ]
-      }, {
+        "display": "Mumps virus IgM Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "13266-2",
+        "display": "Mumps virus IgG Ab [Units/volume] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "13267-0",
+        "display": "Mumps virus IgM Ab [Units/volume] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "39011-2",
+        "display": "Mumps virus IgG Ab [Presence] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "101202-0",
-        "display": "Mumps virus IgG Ab index [Units/volume] in Serum and CSF",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mumps-Virus IgG-Antikörperindex [Einheiten/Volumen] in Serum und Zerebrospinalflüssigkeit"
-        } ]
-      } ]
-    } ]
+        "display": "Mumps virus IgG Ab index [Units/volume] in Serum and CSF"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "31900-4",
+        "display": "Mumps virus Ag [Presence] in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "6478-2",
+        "display": "Mumps virus IgM Ab [Presence] in Serum by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22419-6",
+        "display": "Mumps virus IgM Ab [Titer] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41131-4",
+        "display": "Mumps virus IgM Ab [Presence] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22418-8",
+        "display": "Mumps virus IgM Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85807-6",
+        "display": "Mumps virus genotype in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "25419-3",
+        "display": "Mumps virus IgM Ab [Units/volume] in Serum by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "7966-5",
+        "display": "Mumps virus IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "7967-3",
+        "display": "Mumps virus IgM Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22417-0",
+        "display": "Mumps virus IgG Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22415-4",
+        "display": "Mumps virus IgG Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22416-2",
+        "display": "Mumps virus IgG Ab [Titer] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "25418-5",
+        "display": "Mumps virus IgG Ab [Units/volume] in Serum by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "47532-7",
+        "display": "Mumps virus RNA [Presence] in Specimen by NAA with probe detection"
+      }
+    ]
   }
 }

@@ -1,0 +1,249 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetMethodCDFD",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetMethodCDFD",
+  "version": "1.2.3",
+  "name": "AnswerSetMethodCDFD",
+  "title": "Antwortmöglichkeiten für die Angabe der Nachweismethode der Clostridioides-difficile-Erkrankung, schwere Verlaufsform",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-10-10",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet AnswerSetMethodCDFD enthält die kodierten Antwortmöglichkeiten für die Nachweismethode der Clostridioides-difficile-Erkrankung, schwere Verlaufsform.",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 13
+              }
+            ],
+            "code": "117963005:{363701004=386126001}",
+            "display": "Nachweis von C.-difficile-Toxin A und/oder B aus dem Isolat",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "1119454002"
+                },
+                "value": "117963005 | Clostridium difficile toxin A AND B assay (procedure) | : {363701004 | Direct substance (attribute) | = 386126001 | Microbial isolate (substance) |}"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 12
+              }
+            ],
+            "code": "117963005:{363701004=39477002}",
+            "display": "Nachweis von C.-difficile-Toxin A und/oder B aus Stuhl",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "1119454002"
+                },
+                "value": "117963005 | Clostridium difficile toxin A AND B assay (procedure) | : {363701004 | Direct substance (attribute) | = 39477002 | Feces (substance) |}"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 11
+              }
+            ],
+            "code": "117963005+398545005:{363701004=386126001}",
+            "display": "Nukleinsäure-Nachweis des C.-difficile-Toxin A- und/oder B-Gens aus dem Isolat",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "1119454002"
+                },
+                "value": "117963005 | Clostridium difficile toxin A AND B assay (procedure) | + 398545005 | Nucleic acid assay (procedure) | : {363701004 | Direct substance (attribute) | = 386126001 | Microbial isolate (substance) |}"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 10
+              }
+            ],
+            "code": "117963005+398545005:{363701004=39477002}",
+            "display": "Nukleinsäure-Nachweis des C.-difficile-Toxin A- und/oder B-Gens aus Stuhl",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "1119454002"
+                },
+                "value": "117963005 | Clostridium difficile toxin A AND B assay (procedure) | + 398545005 | Nucleic acid assay (procedure) | : {363701004 | Direct substance (attribute) | = 39477002 | Feces (substance) |}"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 15
+              }
+            ],
+            "code": "423590009:{418775008=423827005}",
+            "display": "Endoskopischer Nachweis einer pseudomembranösen Kolitis",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "1119454002"
+                },
+                "value": "423590009 | Clostridium difficile colitis (disorder) | : {418775008 | Finding method (attribute) | = 423827005 | Endoscopy (procedure) |}"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 14
+              }
+            ],
+            "code": "714797009",
+            "display": "Histologischer Nachweis einer C.-difficile-Infektion aus Gewebe (Endoskopie, Kolektomie oder Autopsie)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Histologic test (procedure)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "74964007",
+            "display": "andere Labormethode",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Other (qualifier value)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 999
+              }
+            ],
+            "code": "ASKU",
+            "display": "asked but unknown"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1000
+              }
+            ],
+            "code": "NASK",
+            "display": "not asked"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-10-10T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "117963005:{363701004=386126001}",
+        "display": "Nachweis von C.-difficile-Toxin A und/oder B aus dem Isolat"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "117963005+398545005:{363701004=39477002}",
+        "display": "Nukleinsäure-Nachweis des C.-difficile-Toxin A- und/oder B-Gens aus Stuhl"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "code": "NASK",
+        "display": "not asked"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "423590009:{418775008=423827005}",
+        "display": "Endoskopischer Nachweis einer pseudomembranösen Kolitis"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "code": "ASKU",
+        "display": "asked but unknown"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "117963005+398545005:{363701004=386126001}",
+        "display": "Nukleinsäure-Nachweis des C.-difficile-Toxin A- und/oder B-Gens aus dem Isolat"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "117963005:{363701004=39477002}",
+        "display": "Nachweis von C.-difficile-Toxin A und/oder B aus Stuhl"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "714797009",
+        "display": "Histologischer Nachweis einer C.-difficile-Infektion aus Gewebe (Endoskopie, Kolektomie oder Autopsie)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "74964007",
+        "display": "andere/sonstige"
+      }
+    ]
+  }
+}

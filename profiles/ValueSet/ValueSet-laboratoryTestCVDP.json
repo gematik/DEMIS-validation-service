@@ -2,1197 +2,488 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestCVDP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestCVDP",
-  "version": "1.6.0",
+  "version": "1.9.0",
   "name": "LaboratoryTestCVDP",
   "title": "Labortest für Severe-Acute-Respiratory-Syndrome-Coronavirus-2 (SARS-CoV-2)",
   "status": "active",
-  "date": "2023-05-04",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestCVDP enthält die Codes der Labortests für Severe-Acute-Respiratory-Syndrome-Coronavirus-2 (SARS-CoV-2).",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "101289-7",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Throat by NAA with non-probe detection"
-      }, {
-        "code": "100156-9",
-        "display": "SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19)-Variante [Typ] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "100157-7",
-        "display": "SARS-CoV-2 (COVID-19) lineage [Type] in Specimen by Sequencing",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94309-2",
+            "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) RNA [Nachweis] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) S-Abstammungslinie [Typ] in Probenmaterial mit Sequenzierung"
-        } ]
-      }, {
-        "code": "99314-7",
-        "display": "SARS-CoV-2 (COVID-19) RdRp gene mutation detected [Identifier] in Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94500-6",
+            "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory system specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) RNA [Nachweis] in Probenmaterial vom Respirationstrakt mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) RdRp-Genmutation entdeckt [Nachweis oder Identität] in Probenmaterial, molekulargenetisch"
-        } ]
-      }, {
-        "code": "96751-3",
-        "display": "SARS-CoV-2 (COVID-19) S gene mutation detected [Identifier] in Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94510-5",
+            "display": "SARS-CoV-2 (COVID-19) N gene [Cycle Threshold #] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) N-Gen [Schwellenwertzyklus] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) S-Gen-Mutation festgestellt [Nachweis oder Identität] in Probenmaterial, molekulargenetisch"
-        } ]
-      }, {
-        "code": "96752-1",
-        "display": "SARS-CoV-2 (COVID-19) S gene mutation [Presence] in Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94511-3",
+            "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Cycle Threshold #] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) ORF1ab-Region [Schwellenwertzyklus] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) S-Gen-Mutation [Nachweis] in Probenmaterial, molekulargenetisch"
-        } ]
-      }, {
-        "code": "96755-4",
-        "display": "SARS-CoV-2 (COVID-19) variant interpretation in Specimen Narrative",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94533-7",
+            "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Respiratory system specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Probenmaterial vom Respirationstrakt mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19)-Varianteninterpretation in Probenmaterial - Freitext"
-        } ]
-      }, {
-        "code": "96756-2",
-        "display": "SARS-CoV-2 (COVID-19) S gene codon N501= [Presence] in Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94534-5",
+            "display": "SARS-CoV-2 (COVID-19) RdRp gene [Presence] in Respiratory system specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) RdRp-Gen [Nachweis] in Probenmaterial vom Respirationstrakt mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) S-Gene Codon N501= [Nachweis] in Probenmaterial, molekulargenetisch"
-        } ]
-      }, {
-        "code": "96757-0",
-        "display": "SARS-CoV-2 (COVID-19) S gene codon N501Y [Presence] in Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94558-4",
+            "display": "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory system specimen by Rapid immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) Antigen [Nachweis] in Probenmaterial vom Respirationstrakt mittels Immunoassay-Schnelltest"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) S-Gene Codon N501Y [Nachweis] in Probenmaterial, molekulargenetisch"
-        } ]
-      }, {
-        "code": "96763-8",
-        "display": "SARS-CoV-2 (COVID-19) E gene [Presence] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94559-2",
+            "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Presence] in Respiratory system specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) ORF1ab-Region [Nachweis] in Probenmaterial vom Respirationstrakt mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) E-Gen [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96764-6",
-        "display": "SARS-CoV-2 (COVID-19) E gene [Cycle Threshold #] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94562-6",
+            "display": "SARS-CoV-2 (COVID-19) IgA Ab [Presence] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) IgA-Antikörper [Nachweis] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) E-Gen [Zyklusschwellenwert #] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96765-3",
-        "display": "SARS-CoV-2 (COVID-19) S gene [Presence] in Saliva (oral fluid) by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94563-4",
+            "display": "SARS-CoV-2 (COVID-19) IgG Ab [Presence] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) IgG-Antikörper [Nachweis] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) S-Gen [Nachweis] in Speichel mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96797-6",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Oropharyngeal wash by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94564-2",
+            "display": "SARS-CoV-2 (COVID-19) IgM Ab [Presence] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) IgM-Antikörper [Nachweis] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Nachweis] in oropharyngealer Lavage mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96829-7",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Specimen from Donor by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94644-2",
+            "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Cycle Threshold #] in Respiratory system specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) ORF1ab-Region [Schwellenwertzyklus] in Probenmaterial vom Respirationstrakt mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Nachweis] in Probenmaterial von Donor mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96895-8",
-        "display": "SARS-CoV-2 (COVID-19) lineage [Identifier] in Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94646-7",
+            "display": "SARS-CoV-2 (COVID-19) RdRp gene [Cycle Threshold #] in Respiratory system specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) RdRp-Gen [Schwellenwertzyklus] in Probenmaterial vom Respirationstrakt mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) S-Abstammungslinie [Nachweis oder Identität] in Probenmaterial, molekulargenetisch"
-        } ]
-      }, {
-        "code": "96896-6",
-        "display": "SARS-CoV-2 (COVID-19) clade [Type] in Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94745-7",
+            "display": "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory system specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) RNA [Schwellenwertzyklus] in Probenmaterial vom Respirationstrakt mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19)-Klade [Typ] in Probenmaterial, molekulargenetisch"
-        } ]
-      }, {
-        "code": "96898-2",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Cycle Threshold #] in Oropharyngeal wash by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94746-5",
+            "display": "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) RNA [Schwellenwertzyklus] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Zyklusschwellenwert #] in oropharyngealer Lavage mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96899-0",
-        "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Cycle Threshold #] in Oropharyngeal wash by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "94759-8",
+            "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Nasopharynx by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) RNA [Nachweis] in Probenmaterial vom Nasopharynx mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) ORF1ab-Region [Zyklusschwellenwert #] in oropharyngealer Lavage mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96900-6",
-        "display": "SARS-CoV-2 (COVID-19) S gene [Cycle Threshold #] in Oropharyngeal wash by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "95406-5",
+            "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Nose by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) RNA [Nachweis] in Probenmaterial von der Nase mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) S-Gen [Zyklusschwellenwert #] in oropharyngealer Lavage mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96957-6",
-        "display": "SARS-CoV-2 (COVID-19) M gene [Presence] in Upper respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "96119-3",
+            "display": "SARS-CoV-2 (COVID-19) Ag [Presence] in Upper respiratory specimen by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) Antigen [Nachweis] in Probenmaterial vom oberen Respirationstrakt mittels Immunoassay"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) M-Gen [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96958-4",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Saliva (oral fluid) by Nucleic acid amplification using CDC primer-probe set N2",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "96741-4",
+            "display": "SARS-CoV-2 (COVID-19) variant [Type] in Specimen by Sequencing",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19)-Variante [Typ] in Probenmaterial mittels Sequenzierung"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Speichel mit Nukleinsäureamplifikation mit Sondendetektion mit CDC Primer-Sondenset N2"
-        } ]
-      }, {
-        "code": "96986-5",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Nose by NAA with non-probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "96763-8",
+            "display": "SARS-CoV-2 (COVID-19) E gene [Presence] in Respiratory system specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) E-Gen [Nachweis] in Probenmaterial vom Respirationstrakt mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Nase mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
-        } ]
-      }, {
-        "code": "97097-0",
-        "display": "SARS-CoV-2 (COVID-19) Ag [Presence] in Upper respiratory specimen by Rapid immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "96764-6",
+            "display": "SARS-CoV-2 (COVID-19) E gene [Cycle Threshold #] in Respiratory system specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) E-Gen [Schwellenwertzyklus] in Probenmaterial vom Respirationstrakt mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "SARS-CoV-2 (COVID-19)-Antigen [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit Immunoassay-Schnelltest"
-        } ]
-      }, {
-        "code": "97098-8",
-        "display": "SARS-CoV-2 (COVID-19) Nsp2 gene [Presence] in Upper respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) Nsp2-Gen [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "97104-4",
-        "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Units/volume] (viral load) in Upper respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) ORF1ab-Region [Einheiten/Volumen] (Viruslast) in Probenmaterial aus dem oberem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "98069-8",
-        "display": "SARS-CoV-2 (COVID-19) Ab [Presence] in Saliva (oral fluid) by Rapid immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-Antikörper [Nachweis] in Speichel mit Immunoassay-Schnelltest"
-        } ]
-      }, {
-        "code": "98131-6",
-        "display": "SARS-CoV-2 (COVID-19) ORF1b region [Presence] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) ORF1b-Region [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "98132-4",
-        "display": "SARS-CoV-2 (COVID-19) ORF1a region [Presence] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) ORF1a-Region [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "98493-0",
-        "display": "SARS-CoV-2 (COVID-19) ORF1b region [Presence] in Saliva (oral fluid) by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) ORF1b-Region [Nachweis] in Speichel mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "98494-8",
-        "display": "SARS-CoV-2 (COVID-19) ORF1a region [Presence] in Saliva (oral fluid) by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) ORF1a-Region [Nachweis] in Speichel mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "95423-0",
-        "display": "Influenza virus A and B and SARS-CoV-2 (COVID-19) identified in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Influenza-Virus A und Influenza-Virus B und SARS-CoV-2 (COVID-19) identifiziert in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94763-0",
-        "display": "SARS-CoV-2 (COVID-19) [Presence] in Specimen by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "94661-6",
-        "display": "SARS-CoV-2 (COVID-19) Ab [Interpretation] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-Antikörper [Interpretation] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "95825-6",
-        "display": "SARS-CoV-2 (COVID-19) Ab [Presence] in DBS by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-Antikörper [Nachweis] in Trockenblut mit Immunoassay"
-        } ]
-      }, {
-        "code": "94762-2",
-        "display": "SARS-CoV-2 (COVID-19) Ab [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "94769-7",
-        "display": "SARS-CoV-2 (COVID-19) Ab [Units/volume] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "94558-4",
-        "display": "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-Antigen [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Immunoassay-Schnelltest"
-        } ]
-      }, {
-        "code": "96119-3",
-        "display": "SARS-CoV-2 (COVID-19) Ag [Presence] in Upper respiratory specimen by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-Antigen [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit Immunoassay"
-        } ]
-      }, {
-        "code": "94562-6",
-        "display": "SARS-CoV-2 (COVID-19) IgA Ab [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgA-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "94768-9",
-        "display": "SARS-CoV-2 (COVID-19) IgA Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgA-Antikörper [Nachweis] in Serum, Plasma oder Blut mit Immunoassay-Schnelltest"
-        } ]
-      }, {
-        "code": "95427-1",
-        "display": "SARS-CoV-2 (COVID-19) IgA Ab [Titer] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgA-Antikörper [Titer] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "94720-0",
-        "display": "SARS-CoV-2 (COVID-19) IgA Ab [Units/volume] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgA-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "95125-1",
-        "display": "SARS-CoV-2 (COVID-19) IgA+IgM [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgA-und IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "96742-2",
-        "display": "SARS-CoV-2 (COVID-19) IgG Ab [Mass/volume] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgG-Antikörper [Masse/Volumen] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "94761-4",
-        "display": "SARS-CoV-2 (COVID-19) IgG Ab [Presence] in DBS by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgG-Antikörper [Nachweis] in Trockenblut mit Immunoassay"
-        } ]
-      }, {
+          {
+            "code": "97097-0",
+            "display": "SARS-CoV-2 (COVID-19) Ag [Presence] in Upper respiratory specimen by Rapid immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "SARS-CoV-2 (COVID-19) Antigen [Nachweis] in Probenmaterial vom oberen Respirationstrakt mittels Immunoassay-Schnelltest"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "94563-4",
-        "display": "SARS-CoV-2 (COVID-19) IgG Ab [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgG-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "94507-1",
-        "display": "SARS-CoV-2 (COVID-19) IgG Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgG-Antikörper [Nachweis] in Serum, Plasma oder Blut mit Immunoassay-Schnelltest"
-        } ]
-      }, {
-        "code": "95429-7",
-        "display": "SARS-CoV-2 (COVID-19) IgG Ab [Titer] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgG-Antikörper [Titer] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "94505-5",
-        "display": "SARS-CoV-2 (COVID-19) IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "94547-7",
-        "display": "SARS-CoV-2 (COVID-19) IgG+IgM Ab [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgG+IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "95542-7",
-        "display": "SARS-CoV-2 (COVID-19) Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-Antikörper [Nachweis] in Serum, Plasma oder Blut mit Immunoassay-Schnelltest"
-        } ]
-      }, {
-        "code": "95416-4",
-        "display": "SARS-CoV-2 (COVID-19) IgM Ab [Presence] in DBS by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgM-Antikörper [Nachweis] in Trockenblut mit Immunoassay"
-        } ]
-      }, {
+        "display": "SARS-CoV-2 (COVID-19) IgG Ab [Presence] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94562-6",
+        "display": "SARS-CoV-2 (COVID-19) IgA Ab [Presence] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "94564-2",
-        "display": "SARS-CoV-2 (COVID-19) IgM Ab [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "94508-9",
-        "display": "SARS-CoV-2 (COVID-19) IgM Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgM-Antikörper [Nachweis] in Serum, Plasma oder Blut mit Immunoassay-Schnelltest"
-        } ]
-      }, {
-        "code": "95428-9",
-        "display": "SARS-CoV-2 (COVID-19) IgM Ab [Titer] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgM-Antikörper [Titer] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "94506-3",
-        "display": "SARS-CoV-2 (COVID-19) IgM Ab [Units/volume] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-IgM-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "95521-1",
-        "display": "SARS-CoV-2 (COVID-19) N gene [#/volume] (viral load) in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [#/Volumen] (Viruslast) in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94510-5",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Cycle Threshold #] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94311-8",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Cycle Threshold #] in Specimen by Nucleic acid amplification using CDC primer-probe set N1",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion mit CDC Primer-Sondenset N1"
-        } ]
-      }, {
-        "code": "94312-6",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Cycle Threshold #] in Specimen by Nucleic acid amplification using CDC primer-probe set N2",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion mit CDC Primer-Sondenset N2"
-        } ]
-      }, {
-        "code": "95522-9",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Log #/volume] (viral load) in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [log #/Volumen] (Viruslast) in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94760-6",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Nasopharynx by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "95409-9",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Nose by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Nase mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94533-7",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94756-4",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Respiratory specimen by Nucleic acid amplification using CDC primer-probe set N1",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion mit CDC Primer-Sondenset N1"
-        } ]
-      }, {
-        "code": "94757-2",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Respiratory specimen by Nucleic acid amplification using CDC primer-probe set N2",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion mit CDC Primer-Sondenset N2"
-        } ]
-      }, {
-        "code": "95425-5",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Saliva (oral fluid) by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Speichel mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96448-6",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Saliva (oral fluid) by Nucleic acid amplification using CDC primer-probe set N1",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Speichel mit Nukleinsäureamplifikation mit Sondendetektion mit CDC Primer-Sondenset N1"
-        } ]
-      }, {
-        "code": "94766-3",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94316-7",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94307-6",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Specimen by Nucleic acid amplification using CDC primer-probe set N1",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion mit CDC Primer-Sondenset N1"
-        } ]
-      }, {
-        "code": "94308-4",
-        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Specimen by Nucleic acid amplification using CDC primer-probe set N2",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion mit CDC Primer-Sondenset N2"
-        } ]
-      }, {
-        "code": "95411-5",
-        "display": "SARS-CoV-2 (COVID-19) neutralizing antibody [Presence] in Serum by pVNT",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-neutralisierender Antikörper [Nachweis] in Serum mit Pseudovirus-Neutralisationstest"
-        } ]
-      }, {
-        "code": "95410-7",
-        "display": "SARS-CoV-2 (COVID-19) neutralizing antibody [Titer] in Serum by pVNT",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-neutralisierender Antikörper [Titer] in Serum mit Pseudovirus-Neutralisationstest"
-        } ]
-      }, {
-        "code": "94644-2",
-        "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Cycle Threshold #] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) ORF1ab-Region [Zyklusschwellenwert #] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
+        "display": "SARS-CoV-2 (COVID-19) IgM Ab [Presence] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "94511-3",
-        "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Cycle Threshold #] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) ORF1ab-Region [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94559-2",
-        "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Presence] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) ORF1ab-Region [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "95824-9",
-        "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Presence] in Saliva (oral fluid) by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) ORF1ab-Region [Nachweis] in Speichel mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94639-2",
-        "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) ORF1ab-Region [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
+        "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Cycle Threshold #] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "94646-7",
-        "display": "SARS-CoV-2 (COVID-19) RdRp gene [Cycle Threshold #] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) RdRp-Gen [Zyklusschwellenwert #] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94645-9",
-        "display": "SARS-CoV-2 (COVID-19) RdRp gene [Cycle Threshold #] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) RdRp-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96120-1",
-        "display": "SARS-CoV-2 (COVID-19) RdRp gene [Presence] in Lower respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) RdRp-Gen [Nachweis] in Probenmaterial aus dem unteren Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94534-5",
-        "display": "SARS-CoV-2 (COVID-19) RdRp gene [Presence] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) RdRp-Gen [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96091-4",
-        "display": "SARS-CoV-2 (COVID-19) RdRp gene [Presence] in Saliva (oral fluid) by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) RdRp-Gen [Nachweis] in Speichel mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94314-2",
-        "display": "SARS-CoV-2 (COVID-19) RdRp gene [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) RdRp-Gen [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96123-5",
-        "display": "SARS-CoV-2 (COVID-19) RdRp gene [Presence] in Upper respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) RdRp-Gen [Nachweis] in Probenmaterial aus dem oberem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94745-7",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Zyklusschwellenwert #] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94746-5",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94819-0",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Log #/volume] (viral load) in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [log #/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94565-9",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Nasopharynx by NAA with non-probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
-        } ]
-      }, {
-        "code": "94759-8",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Nasopharynx by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Nachweis] in Nasopharynx mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "95406-5",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Nose by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Nachweis] in Nase mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "95608-6",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory specimen by NAA with non-probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
-        } ]
-      }, {
-        "code": "94500-6",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "95424-8",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory specimen by Sequencing",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Sequenzierung"
-        } ]
-      }, {
-        "code": "94845-5",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Saliva (oral fluid) by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Nachweis] in Speichel mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94822-4",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Saliva (oral fluid) by Sequencing",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Nachweis] in Speichel mit Sequenzierung"
-        } ]
-      }, {
-        "code": "94660-8",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94309-2",
-        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94642-6",
-        "display": "SARS-CoV-2 (COVID-19) S gene [Cycle Threshold #] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) S-Gen [Zyklusschwellenwert #] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94643-4",
-        "display": "SARS-CoV-2 (COVID-19) S gene [Cycle Threshold #] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) S-Gen [Zyklusschwellenwert #] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94640-0",
-        "display": "SARS-CoV-2 (COVID-19) S gene [Presence] in Respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) S-Gen [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "95609-4",
-        "display": "SARS-CoV-2 (COVID-19) S gene [Presence] in Respiratory specimen by Sequencing",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) S-Gen [Nachweis] in Probenmaterial aus dem Respirationstrakt mit Sequenzierung"
-        } ]
-      }, {
-        "code": "94767-1",
-        "display": "SARS-CoV-2 (COVID-19) S gene [Presence] in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) S-Gen [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94641-8",
-        "display": "SARS-CoV-2 (COVID-19) S gene [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) S-Gen [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "96603-6",
-        "display": "SARS-CoV-2 (COVID-19) S protein RBD neutralizing antibody [Presence] in Serum or Plasma by sVNT",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-Spike-Protein RBD-neutralisierender Antikörper.neutralisierend [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
+        "display": "SARS-CoV-2 (COVID-19) RdRp gene [Cycle Threshold #] in Respiratory system specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94510-5",
+        "display": "SARS-CoV-2 (COVID-19) N gene [Cycle Threshold #] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94559-2",
+        "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Presence] in Respiratory system specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "96741-4",
-        "display": "SARS-CoV-2 (COVID-19) variant [Type] in Specimen by Sequencing",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19)-Variante [Typ] in Probenmaterial mit Sequenzierung"
-        } ]
-      }, {
-        "code": "94764-8",
-        "display": "SARS-CoV-2 (COVID-19) whole genome [Nucleotide sequence] in Isolate or Specimen by Sequencing",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "SARS-CoV-2 (COVID-19) Gesamtgenom [Nukleotidsequenz] in Isolat oder Probenmaterial mit Sequenzierung"
-        } ]
-      } ]
-    } ]
+        "display": "SARS-CoV-2 (COVID-19) variant [Type] in Specimen by Sequencing"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94534-5",
+        "display": "SARS-CoV-2 (COVID-19) RdRp gene [Presence] in Respiratory system specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94309-2",
+        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94533-7",
+        "display": "SARS-CoV-2 (COVID-19) N gene [Presence] in Respiratory system specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94558-4",
+        "display": "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory system specimen by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94644-2",
+        "display": "SARS-CoV-2 (COVID-19) ORF1ab region [Cycle Threshold #] in Respiratory system specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "97097-0",
+        "display": "SARS-CoV-2 (COVID-19) Ag [Presence] in Upper respiratory specimen by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "95406-5",
+        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Nose by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "96764-6",
+        "display": "SARS-CoV-2 (COVID-19) E gene [Cycle Threshold #] in Respiratory system specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "96763-8",
+        "display": "SARS-CoV-2 (COVID-19) E gene [Presence] in Respiratory system specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94759-8",
+        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Nasopharynx by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94746-5",
+        "display": "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94745-7",
+        "display": "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory system specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "96119-3",
+        "display": "SARS-CoV-2 (COVID-19) Ag [Presence] in Upper respiratory specimen by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94500-6",
+        "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory system specimen by NAA with probe detection"
+      }
+    ]
   }
 }

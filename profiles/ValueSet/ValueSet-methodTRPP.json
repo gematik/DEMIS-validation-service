@@ -1,0 +1,287 @@
+{
+  "resourceType": "ValueSet",
+  "id": "methodTRPP",
+  "url": "https://demis.rki.de/fhir/ValueSet/methodTRPP",
+  "version": "1.0.0",
+  "name": "MethodTRPP",
+  "title": "Nachweismethode für Treponema pallidum (Syphilis)",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-02-06",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet MethodTRPP enthält die Codes der Nachweismethoden für Treponema pallidum (Syphilis).",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "118119003",
+            "display": "Measurement of microbial antibody (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Measurement of microbial antibody (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Antikörpernachweis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "19869000",
+            "display": "Rapid plasma reagin test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Rapid plasma reagin test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "RPR-Test"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "250507002",
+            "display": "Antibody titer measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Antibody titer measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Antikörper-Titer-Bestimmung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "258099003",
+            "display": "Fluorescence microscopy technique (qualifier value)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Fluorescence microscopy technique (qualifier value)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Fluoreszenzmikroskopie"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "315204007",
+            "display": "Venereal Disease Research Laboratory titer (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Venereal Disease Research Laboratory titer (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "VDRL-Test"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "37310002",
+            "display": "Immunoblot assay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunoblot assay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Immunoblot"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "398545005",
+            "display": "Nucleic acid assay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Nucleic acid assay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Nukleinsäure-Assay"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "414111007",
+            "display": "Enzyme immunoassay method (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Enzyme immunoassay method (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Enzymimmunoassay"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "45293001",
+            "display": "Immunoglobulin G measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunoglobulin G measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Immunglobulin-G (IgG)-Bestimmung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "45764000",
+            "display": "Immunoglobulin M measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunoglobulin M measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Immunglobulin-M (IgM)-Bestimmung"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2025-02-06T00:00:00+01:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "19869000",
+        "display": "Rapid plasma reagin test (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "315204007",
+        "display": "Venereal Disease Research Laboratory titer (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "258099003",
+        "display": "Fluorescence microscopy technique (qualifier value)"
+      }
+    ]
+  }
+}

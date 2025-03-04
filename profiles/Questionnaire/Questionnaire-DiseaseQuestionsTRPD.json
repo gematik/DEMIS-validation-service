@@ -1,0 +1,136 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DiseaseQuestionsTRPD",
+  "url": "https://demis.rki.de/fhir/Questionnaire/DiseaseQuestionsTRPD",
+  "version": "1.0.0",
+  "name": "DiseaseQuestionsTRPD",
+  "title": "Treponema pallidum: spezifische klinische und epidemiologische Angaben",
+  "status": "active",
+  "date": "2024-11-25",
+  "description": "Treponema pallidum (Syphilis) spezifische Informationsbedarfe werden in diesem meldetatbestandsspezifischen Fragebogen zusammengestellt. Dieser manifestiert sich als entsprechende QuestionnaireResponse innerhalb der Meldung.",
+  "item": [
+    {
+      "linkId": "timeOfInfection",
+      "text": "Wahrscheinlicher Infektionszeitpunkt",
+      "type": "date",
+      "required": true,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "localizationPrimaryEf",
+          "text": "Lokalisation des Primäraffekts (Wenn es eine primäry Syphilis ist)",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetLocalizationPrimaryEf",
+          "item": [
+            {
+              "linkId": "localizationPrimaryOtherNote",
+              "text": "Bitte erläutern",
+              "type": "text",
+              "enableWhen": [
+                {
+                  "question": "localizationPrimaryEf",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "74964007"
+                  }
+                }
+              ],
+              "required": true,
+              "repeats": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "clinicalFindingTRPD",
+      "text": "Klinische Beurteilung",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetClinicalFindingTRPD"
+    },
+    {
+      "linkId": "coinfection",
+      "text": "Ist eine Koinfektion bekannt",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetCoinfectionTRPD"
+    },
+    {
+      "linkId": "hivPrEPStatus",
+      "text": "Wurde zum Zeitpunkt der Syphilis-Infektion eine HIV-PrEP eingenommen?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation-SNOMED"
+    },
+    {
+      "linkId": "stiProphylaxisStatus",
+      "text": "Wurde zum Zeitpunkt der Syphilis-Infektion eine antibiotische STI-Prophylaxe eingenommen (z.B. Doxy-PEP)?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetSTIProphylaxis"
+    },
+    {
+      "linkId": "infectionPathKindRisk",
+      "text": "Angaben zum wahrscheinlichen Infektionsweg / Infektionsrisiko",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetInfectPathKindRiskSTI"
+    },
+    {
+      "linkId": "connatalTiter",
+      "text": "mütterlicher VDRL/RPR-Titer",
+      "type": "quantity",
+      "required": true,
+      "repeats": false
+    },
+    {
+      "linkId": "sexWork",
+      "text": "Inanspruchnahme oder Ausübung von Sexarbeit?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetSexWork"
+    },
+    {
+      "linkId": "partnerNotified",
+      "text": "Benachrichtigung von (Sexual)Partner*innen",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetPartnerNotified"
+    },
+    {
+      "linkId": "countryOfInfection",
+      "text": "Wahrscheinliches Infektionsland",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetCountry"
+    },
+    {
+      "linkId": "countryOfBirth",
+      "text": "Herkunftsland der untersuchten Person",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetCountry"
+    },
+    {
+      "linkId": "genderDefintion",
+      "text": "Zusatzangabe zur geschlechtlichen selbstdefinition der betr. Person",
+      "type": "choice",
+      "required": false,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetGenderDefinition"
+    }
+  ]
+}

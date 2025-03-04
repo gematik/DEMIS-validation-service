@@ -2,1493 +2,2758 @@
   "resourceType": "ValueSet",
   "id": "method",
   "url": "https://demis.rki.de/fhir/ValueSet/method",
-  "version": "1.7.0",
+  "version": "1.12.0",
   "name": "Method",
   "title": "Nachweismethode",
   "status": "active",
-  "date": "2023-05-30",
+  "experimental": false,
+  "date": "2024-09-09",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet Method enthält die Codes der Nachweismethoden.",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
   "compose": {
-    "include": [ {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
-      "concept": [ {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "67122001",
-        "display": "Acid fast stain method (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "104157003",
+            "display": "Light microscopy (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Light microscopy (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Lichtmikroskopie"
+              }
+            ]
           },
-          "value": "Acid fast stain method (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Ziehl-Neelsen-Färbung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "127785005",
-        "display": "Administration of substance to produce immunity, either active or passive (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "104172004",
+            "display": "Organism specific culture (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Organism specific culture (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mikroorganismusspezifische Kultur"
+              }
+            ]
           },
-          "value": "Administration of substance to produce immunity, either active or passive (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Aktive oder passive Immunisierung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "409611004",
-        "display": "Aerobic blood culture (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "104178000",
+            "display": "Bacterial culture (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Bacterial culture (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Bakterielle Kultur"
+              }
+            ]
           },
-          "value": "Aerobic blood culture (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Aerobe Blutkultur"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "117033003",
-        "display": "Aerobic microbial culture (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "104191004",
+            "display": "Stool culture for bacteria (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Stool culture for bacteria (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Stuhlkultur"
+              }
+            ]
           },
-          "value": "Aerobic microbial culture (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Aerobe Kultur"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "88221005",
-        "display": "Affinity chromatography measurement (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "104208006",
+            "display": "Giemsa stain method (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Giemsa stain method (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Giemsa-Färbung"
+              }
+            ]
           },
-          "value": "Affinity chromatography measurement (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Affinitätschromatografie"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "88629000",
-        "display": "Agar dilution minimum inhibitory concentration susceptibility test for anaerobes (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "104232004",
+            "display": "Antibiotic sensitivity, agar diffusion method (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Antibiotic sensitivity, agar diffusion method (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Antimikrobielle Empfindlichkeitsprüfung, Agardiffusionstest"
+              }
+            ]
           },
-          "value": "Agar dilution minimum inhibitory concentration susceptibility test for anaerobes (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Bestimmung der minimalen Hemmkonzentration (MHK) für Anaerobier nach der Agar-Dilutionsmethode"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "359821004",
-        "display": "Agglutination assay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "104233009",
+            "display": "Antiviral susceptibility test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Antiviral susceptibility test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Empfindlichkeitstestung von Viren"
+              }
+            ]
           },
-          "value": "Agglutination assay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Agglutinationsassay"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "409612006",
-        "display": "Anaerobic blood culture (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "104234003",
+            "display": "Gradient strip susceptibility test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Gradient strip susceptibility test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Bestimmung der Antibiotikaempfindlichkeit via Gradienten-Diffusionstest"
+              }
+            ]
           },
-          "value": "Anaerobic blood culture (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Anaerobe Blutkultur"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "117034009",
-        "display": "Anaerobic microbial culture (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "104257009",
+            "display": "Microbial antigen assay by enzyme immunoassay method (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Microbial antigen assay by enzyme immunoassay method (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Antigenassay mittels ELISA"
+              }
+            ]
           },
-          "value": "Anaerobic microbial culture (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Anaerobe Kultur"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "104232004",
-        "display": "Antibiotic sensitivity, agar diffusion method (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "104336004",
+            "display": "Complement component, antigen measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Complement component, antigen measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Bestimmung von Komplementfaktoren"
+              }
+            ]
           },
-          "value": "Antibiotic sensitivity, agar diffusion method (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Antimikrobielle Empfindlichkeitsprüfung, Agardiffusionstest"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "359867004",
-        "display": "Antibiotic sensitivity, disk method (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "115418004",
+            "display": "Viral Sequencing (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Viral Sequencing (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Virusgenom-Sequenzierung"
+              }
+            ]
           },
-          "value": "Antibiotic sensitivity, disk method (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Antimirobielle Empfindlichkeitsprüfung, Plattendiffusionstest"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "250507002",
-        "display": "Antibody titer measurement (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "116148004",
+            "display": "Molecular genetics procedure (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Molecular genetics procedure (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Molekulargenetischer Nachweis"
+              }
+            ]
           },
-          "value": "Antibody titer measurement (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Antikörper-Titer-Bestimmung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "121276004",
-        "display": "Antigen assay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "117033003",
+            "display": "Aerobic microbial culture (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Aerobic microbial culture (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Aerobe Kultur"
+              }
+            ]
           },
-          "value": "Antigen assay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Antigenassay"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "14788002",
-        "display": "Antimicrobial susceptibility test (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "117034009",
+            "display": "Anaerobic microbial culture (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Anaerobic microbial culture (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Anaerobe Kultur"
+              }
+            ]
           },
-          "value": "Antimicrobial susceptibility test (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Antimikrobielle Empfindlichkeitsprüfung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "359788000",
-        "display": "Antinuclear antibody measurement (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "117040002",
+            "display": "Nucleic acid sequencing (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Nucleic acid sequencing (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "DNA-Sequenzierung"
+              }
+            ]
           },
-          "value": "Antinuclear antibody measurement (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Bestimmung der antinukleaären Antikörper"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "104233009",
-        "display": "Antiviral susceptibility test (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "117245002",
+            "display": "Nucleic acid probe method with target amplification (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Nucleic acid probe method with target amplification (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Nukleinsäuresondentest mit  Zielsequenz-Amplifikation"
+              }
+            ]
           },
-          "value": "Antiviral susceptibility test (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Empfindlichkeitstestung von Viren"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "22642004",
-        "display": "Bacterial bacteriophage typing (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "117259009",
+            "display": "Microscopy (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Microscopy (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mikroskopie"
+              }
+            ]
           },
-          "value": "Bacterial bacteriophage typing (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Phagentypisierung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "104178000",
-        "display": "Bacterial culture (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "117321004",
+            "display": "Orcein stain method (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Orcein stain method (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Orcein-Färbung"
+              }
+            ]
           },
-          "value": "Bacterial culture (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Bakterielle Kultur"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "58779000",
-        "display": "Bioassay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "117617002",
+            "display": "Immunohistochemistry procedure (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunohistochemistry procedure (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Immunhistochemie"
+              }
+            ]
           },
-          "value": "Bioassay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Bioassay"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "39334004",
-        "display": "Broth microdilution susceptibility test (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "118119003",
+            "display": "Measurement of microbial antibody (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Measurement of microbial antibody (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Antikörpernachweis"
+              }
+            ]
           },
-          "value": "Broth microdilution susceptibility test (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Bouillon-Mikrodilutionstests"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "121898003",
-        "display": "Coliform bacteria viability count (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "121240000",
+            "display": "Malaria thick smear (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Malaria thick smear (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Dicker Tropfen"
+              }
+            ]
           },
-          "value": "Coliform bacteria viability count (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Quantifizierung coliformer Bakterien"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "29703006",
-        "display": "Complement assay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "121276004",
+            "display": "Antigen assay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Antigen assay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Antigennachweis"
+              }
+            ]
           },
-          "value": "Complement assay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Komplement-Assay"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "104336004",
-        "display": "Complement component, antigen measurement (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "121898003",
+            "display": "Coliform bacteria viability count (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Coliform bacteria viability count (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Quantifizierung coliformer Bakterien"
+              }
+            ]
           },
-          "value": "Complement component, antigen measurement (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Bestimmung von Komplementfaktoren"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "69207009",
-        "display": "Complement fixation test (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "122443003",
+            "display": "Toxin assay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Toxin assay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Toxinnachweis"
+              }
+            ]
           },
-          "value": "Complement fixation test (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Komplementfixation"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "703690001",
-        "display": "Confirmatory technique (qualifier value)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "1259932009",
+            "display": "Loop-mediated isothermal amplification technique (qualifier value)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Loop-mediated isothermal amplification technique (qualifier value)"
+              },
+              {
+                "language": "de-DE",
+                "value": "PCR-Schnelltest"
+              }
+            ]
           },
-          "value": "Confirmatory technique (qualifier value)"
-        }, {
-          "language": "de-DE",
-          "value": "Bestätigungstest"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "165771000",
-        "display": "Coombs test - anti-human globulin (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "12717000",
+            "display": "Viral culture (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Viral culture (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Viruskultur"
+              }
+            ]
           },
-          "value": "Coombs test - anti-human globulin (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Coombs-Test"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "37586002",
-        "display": "Counterimmunoelectrophoresis measurement (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "127785005",
+            "display": "Administration to produce immunity, either active or passive (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Administration to produce immunity, either active or passive (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Aktive oder passive Immunisierung"
+              }
+            ]
           },
-          "value": "Counterimmunoelectrophoresis measurement (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Counter-Immunelektrophorese"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "359872008",
-        "display": "Disk diffusion susceptibility test (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "127790008",
+            "display": "Staining method (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Staining method (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Färbemethode"
+              }
+            ]
           },
-          "value": "Disk diffusion susceptibility test (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Agar-Diffusionstest"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "73512001",
-        "display": "Electron microscopic study (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "13269000",
+            "display": "Immunocytochemical stain (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunocytochemical stain (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Immunhistologische Färbung"
+              }
+            ]
           },
-          "value": "Electron microscopic study (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Elektronenmikroskopische Untersuchung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "252395007",
-        "display": "Electron microscopy of feces (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "14788002",
+            "display": "Antimicrobial susceptibility test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Antimicrobial susceptibility test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Antimikrobielle Empfindlichkeitsprüfung"
+              }
+            ]
           },
-          "value": "Electron microscopy of feces (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Elektronenmikroskopie von Stuhl"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "426053009",
-        "display": "Elek test (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "165771000",
+            "display": "Coombs test - anti-human globulin (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Coombs test - anti-human globulin (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Coombs-Test"
+              }
+            ]
           },
-          "value": "Elek test (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Elek-Test"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "414111007",
-        "display": "Enzyme immunoassay method (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "22642004",
+            "display": "Bacterial bacteriophage typing (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Bacterial bacteriophage typing (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Phagentypisierung"
+              }
+            ]
           },
-          "value": "Enzyme immunoassay method (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Enzymimmunoassay"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "76978006",
-        "display": "Enzyme-linked immunosorbent assay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "250507002",
+            "display": "Antibody titer measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Antibody titer measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Antikörper-Titer-Bestimmung"
+              }
+            ]
           },
-          "value": "Enzyme-linked immunosorbent assay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Enzyme-linked Immunosorbent Assay"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "250758002",
+            "display": "Immunoglobulin G index measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunoglobulin G index measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Liquor/Serum-Antikörperindex"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "252326002",
+            "display": "Polyacrylamide gel electrophoresis (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Polyacrylamide gel electrophoresis (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Polyacrylamid-Gelelektrophorese"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "252395007",
+            "display": "Electron microscopy of feces (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Electron microscopy of feces (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Elektronenmikroskopie von Stuhl"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "252403005",
+            "display": "Toxin detection (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Toxin detection (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Toxinnachweis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "29703006",
+            "display": "Complement assay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Complement assay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Komplement-Assay"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "30662005",
+            "display": "Fluorescent immunoassay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Fluorescent immunoassay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Fluoreszenz-Immunoassay"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "313406008",
+            "display": "Fatty acid measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Fatty acid measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Fettsäurebestimmung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "31651002",
+            "display": "Immunoglobulin A measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunoglobulin A measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Immunglobulin-A (IgA)-Bestimmung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "32623009",
+            "display": "Immunodiffusion measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunodiffusion measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Immundiffusion"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "34146008",
+            "display": "Mouse toxin neutralization test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mouse toxin neutralization test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Toxin-Neutralisationstest in der Maus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "34733005",
+            "display": "Hemagglutination inhibition assay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Hemagglutination inhibition assay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Hämagglutinations-Hemm-Test"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "359788000",
+            "display": "Antinuclear antibody measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Antinuclear antibody measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Bestimmung der antinukleaären Antikörper"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "359821004",
+            "display": "Agglutination assay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Agglutination assay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Agglutinationsassay"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "359867004",
+            "display": "Antibiotic sensitivity, disk method (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Antibiotic sensitivity, disk method (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Antimirobielle Empfindlichkeitsprüfung, Plattendiffusionstest"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "359872008",
+            "display": "Disk diffusion susceptibility test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Disk diffusion susceptibility test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Agar-Diffusionstest"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "363778006",
+            "display": "Phenotype determination (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Phenotype determination (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Phänotypbestimmung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "363779003",
+            "display": "Genotype determination (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Genotype determination (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Genotypbestimmung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "37310002",
+            "display": "Immunoblot assay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunoblot assay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Immunoblot"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "37586002",
+            "display": "Counterimmunoelectrophoresis measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Counterimmunoelectrophoresis measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Counter-Immunelektrophorese"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "384715000",
+            "display": "Nucleic acid hybridization procedure (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Nucleic acid hybridization procedure (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "DNA-Hybridisierung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "39334004",
+            "display": "Broth microdilution susceptibility test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Broth microdilution susceptibility test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Bouillon-Mikrodilutionstests"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "39624002",
+            "display": "Viral neutralization test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Viral neutralization test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Virusneutralisationstest"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "3967008",
+            "display": "Fluorescence polarization immunoassay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Fluorescence polarization immunoassay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Fluoreszenzpolarisations-Immunoassay"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "398545005",
+            "display": "Nucleic acid assay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Nucleic acid assay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Nukleinsäurenachweis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "405262001",
+            "display": "Point of care testing (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Point of care testing (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Point-of-Care-Diagnostik (POCT)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "406867009",
+            "display": "Immunofluorescent stain method (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunofluorescent stain method (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Immunfluoreszenz"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "409611004",
+            "display": "Aerobic blood culture (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Aerobic blood culture (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Aerobe Blutkultur"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "409612006",
+            "display": "Anaerobic blood culture (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Anaerobic blood culture (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Anaerobe Blutkultur"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "414111007",
+            "display": "Enzyme immunoassay method (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Enzyme immunoassay method (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Enzymimmunoassay"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "414464004",
+            "display": "Immunoassay method (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunoassay method (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Immunoassay"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "420848008",
+            "display": "Administration of prophylactic antimalarial (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Administration of prophylactic antimalarial (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Malaria-Prophylaxe"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "426053009",
+            "display": "Elek test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Elek test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Elek-Test"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "426329006",
+            "display": "Fluorescence in situ hybridization (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Fluorescence in situ hybridization (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Fluoreszenz-in- situ-Hybridisierung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "43657008",
+            "display": "Latex agglutination test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Latex agglutination test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Latexagglutination"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "444091001",
+            "display": "Analysis using multiplex polymerase chain reaction technique (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Analysis using multiplex polymerase chain reaction technique (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Multiplex/Panel-PCR"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "45293001",
+            "display": "Immunoglobulin G measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunoglobulin G measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Immunglobulin-G (IgG)-Bestimmung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "45764000",
+            "display": "Immunoglobulin M measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Immunoglobulin M measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Immunglobulin-M (IgM)-Bestimmung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "4613005",
+            "display": "Radioimmunoassay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Radioimmunoassay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Radioimmunoassay"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "56857008",
+            "display": "Serum neutralization test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Serum neutralization test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Serumneutralisationstest"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "58779000",
+            "display": "Bioassay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Bioassay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Bioassay"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "61594008",
+            "display": "Microbial culture (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Microbial culture (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mikrobielle Kultur"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "67122001",
+            "display": "Acid fast stain method (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Acid fast stain method (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Ziehl-Neelsen-Färbung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "69207009",
+            "display": "Complement fixation test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Complement fixation test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Komplementfixation"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "69363007",
+            "display": "Nucleic acid amplification (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Nucleic acid amplification (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Nukleinsäure-Amplifikations-Technologie"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "703690001",
+            "display": "Confirmatory technique (qualifier value)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Confirmatory technique (qualifier value)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Bestätigungstest"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "708073008",
+            "display": "Minimum inhibitory concentration susceptibility test technique (qualifier value)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Minimum inhibitory concentration susceptibility test technique (qualifier value)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Minimale Hemmstoffkonzentration - Empfindlichkeitstestverfahren"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "708099001",
+            "display": "Rapid immunoassay technique (qualifier value)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Rapid immunoassay technique (qualifier value)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Antigenschnelltest"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "714797009",
+            "display": "Histologic test (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Histologic test (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Histologische Untersuchung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "73512001",
+            "display": "Electron microscopic study (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Electron microscopic study (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Elektronenmikroskopische Untersuchung"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "76978006",
+            "display": "Enzyme-linked immunosorbent assay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Enzyme-linked immunosorbent assay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Enzyme-linked Immunosorbent Assay"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "782518009",
+            "display": "Modified carbapenem inactivation technique (qualifier value)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Modified carbapenem inactivation technique (qualifier value)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Modifizierte Carbapenem-Inaktivierungsmethode (m)CIM"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "83581000052107",
+            "display": "Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)"
+              },
+              {
+                "language": "de-DE",
+                "value": "MALDI-TOF"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "85000002",
+            "display": "Hemagglutination assay (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Hemagglutination assay (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Hamagglutinations-Assay"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "88221005",
+            "display": "Affinity chromatography measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Affinity chromatography measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Affinitätschromatografie"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "88629000",
+            "display": "Agar dilution minimum inhibitory concentration susceptibility test for anaerobes (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Agar dilution minimum inhibitory concentration susceptibility test for anaerobes (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Bestimmung der minimalen Hemmkonzentration (MHK) für Anaerobier nach der Agar-Dilutionsmethode"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "8959002",
+            "display": "Mass spectrometry measurement (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mass spectrometry measurement (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Massenspektrometrie"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "90603004",
+            "display": "Restriction fragment length polymorphism analysis (procedure)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Restriction fragment length polymorphism analysis (procedure)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Restriktionsfragmentlängenpolymorphismus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "91454002",
+            "display": "Pleocytosis of cerebrospinal fluid (finding)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Pleocytosis of cerebrospinal fluid (finding)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Nachweis einer Pleozytose im Liquor"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-09T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "313406008",
-        "display": "Fatty acid measurement (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Fatty acid measurement (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Fettsäurebestimmung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "426329006",
-        "display": "Fluorescence in situ hybridization (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Fluorescence in situ hybridization (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Fluoreszenz in- situ-Hybridisierung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "3967008",
-        "display": "Fluorescence polarization immunoassay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Fluorescence polarization immunoassay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Fluoreszenzpolarisations-Immunoassay"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "30662005",
-        "display": "Fluorescent immunoassay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Fluorescent immunoassay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Fluoreszenz-Immunoassay"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "363779003",
-        "display": "Genotype determination (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Genotype determination (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Genotypbestimmung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "104208006",
-        "display": "Giemsa stain method (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Giemsa stain method (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Giemsa-Färbung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "104234003",
-        "display": "Gradient strip susceptibility test (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Gradient strip susceptibility test (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Bestimmung der Antibiotikaempfindlichkeit via Gradienten-Diffusionstest "
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "85000002",
-        "display": "Hemagglutination assay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Hemagglutination assay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Hamagglutinations-Assay"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "34733005",
-        "display": "Hemagglutination inhibition assay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Hemagglutination inhibition assay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Hämagglutinations-Hemm-Test"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "714797009",
-        "display": "Histologic test (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Histologic test (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Histologische Untersuchung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "414464004",
-        "display": "Immunoassay method (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Immunoassay method (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Immunoassay"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "37310002",
-        "display": "Immunoblot assay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Immunoblot assay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Immunoblot"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "13269000",
-        "display": "Immunocytochemical stain (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Immunocytochemical stain (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Immunhistologische Färbung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "32623009",
-        "display": "Immunodiffusion measurement (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Immunodiffusion measurement (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Immundiffusion"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "406867009",
-        "display": "Immunofluorescent stain method (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Immunofluorescent stain method (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Immunfluoreszenz"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "31651002",
-        "display": "Immunoglobulin A measurement (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Immunoglobulin A measurement (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Immunglobulin-A-Bestimmung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "250758002",
-        "display": "Immunoglobulin G index measurement (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Immunoglobulin G index measurement (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Immunglobulin-G-Antikörperindex"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "45293001",
-        "display": "Immunoglobulin G measurement (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Immunoglobulin G measurement (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Immunglobulin-G-Bestimmung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "45764000",
-        "display": "Immunoglobulin M measurement (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Immunoglobulin M measurement (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Immunglobulin-M-Bestimmung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "117617002",
-        "display": "Immunohistochemistry procedure (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Immunohistochemistry procedure (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Immunhistochemie"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "43657008",
-        "display": "Latex agglutination test (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Latex agglutination test (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Latexagglutination"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "104157003",
-        "display": "Light microscopy (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Light microscopy (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Lichtmikroskopie"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "8959002",
-        "display": "Mass spectrometry measurement (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mass spectrometry measurement (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Massenspektrometrie"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "118119003",
-        "display": "Measurement of microbial antibody (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Measurement of microbial antibody (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Bestimmung Mikrobielle Antikörperbestimmung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "61594008",
-        "display": "Microbial culture (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Microbial culture (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Mikrobielle Kultur"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "117259009",
-        "display": "Microscopy (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Microscopy (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Mikroskopie"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "782518009",
-        "display": "Modified carbapenem inactivation technique (qualifier value)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Modified carbapenem inactivation technique (qualifier value)"
-        }, {
-          "language": "de-DE",
-          "value": "Modifizierte Carbapenem-Inaktivierungsmethode (m)CIM "
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "116148004",
-        "display": "Molecular genetics procedure (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Molecular genetics procedure (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Molekulargenetik"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "34146008",
-        "display": "Mouse toxin neutralization test (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mouse toxin neutralization test (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Toxin Neutralisationstest in der Maus"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "69363007",
-        "display": "Nucleic acid amplification (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Nucleic acid amplification (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Nukleinsäure-Amplifikations-Technologie"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "398545005",
-        "display": "Nucleic acid assay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Nucleic acid assay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Nukleinsäure-Nachweisverfahren"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "384715000",
-        "display": "Nucleic acid hybridization procedure (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Nucleic acid hybridization procedure (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "DNA-Hybridisierung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "117245002",
-        "display": "Nucleic acid probe method with target amplification (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Nucleic acid probe method with target amplification (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Nukleinsäuresondentest mit  Zielsequenz-Amplifikation"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "117040002",
-        "display": "Nucleic acid sequencing (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Nucleic acid sequencing (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "DNA-Sequenzierung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "117321004",
-        "display": "Orcein stain method (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Orcein stain method (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Orcein-Färbung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "104172004",
-        "display": "Organism specific culture (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Organism specific culture (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Mikroorganismusspezifische Kultur"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "363778006",
-        "display": "Phenotype determination (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Phenotype determination (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Phänotypbestimmung"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "405262001",
-        "display": "Point of care testing (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Point of care testing (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Point-of-Care-Diagnostik (POCT)"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "252326002",
-        "display": "Polyacrylamide gel electrophoresis (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Polyacrylamide gel electrophoresis (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Polyacrylamid-Gelelektrophorese"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "4613005",
-        "display": "Radioimmunoassay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Radioimmunoassay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Radioimmunoassay"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "708099001",
-        "display": "Rapid immunoassay technique (qualifier value)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rapid immunoassay technique (qualifier value)"
-        }, {
-          "language": "de-DE",
-          "value": "Antigenschnelltest"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
+        "display": "Fatty acid measurement (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "90603004",
-        "display": "Restriction fragment length polymorphism analysis (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Restriction fragment length polymorphism analysis (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Restriktionsfragmentlängenpolymorphismus"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "56857008",
-        "display": "Serum neutralization test (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Serum neutralization test (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Serumneutralisationstest"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "127790008",
-        "display": "Staining method (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Staining method (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Färbemethode"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "122443003",
-        "display": "Toxin assay (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Toxin assay (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Toxinassay"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "252403005",
-        "display": "Toxin detection (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Toxin detection (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Toxinnachweis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "12717000",
-        "display": "Viral culture (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Viral culture (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Viruskultur"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+        "display": "Restriction fragment length polymorphism analysis (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "117033003",
+        "display": "Aerobic microbial culture (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "39624002",
-        "display": "Viral neutralization test (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Viral neutralization test (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Virusneutralisationstest"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+        "display": "Viral neutralization test (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "127790008",
+        "display": "Staining method (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "121240000",
+        "display": "Malaria thick smear (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "398545005",
+        "display": "Nucleic acid assay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "8959002",
+        "display": "Mass spectrometry measurement (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "117259009",
+        "display": "Microscopy (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "359872008",
+        "display": "Disk diffusion susceptibility test (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "67122001",
+        "display": "Acid fast stain method (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "118119003",
+        "display": "Measurement of microbial antibody (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "121276004",
+        "display": "Antigen assay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "127785005",
+        "display": "Administration to produce immunity, either active or passive (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "363778006",
+        "display": "Phenotype determination (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "104232004",
+        "display": "Antibiotic sensitivity, agar diffusion method (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "117617002",
+        "display": "Immunohistochemistry procedure (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "414111007",
+        "display": "Enzyme immunoassay method (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "714797009",
+        "display": "Histologischer Nachweis einer C.-difficile-Infektion aus Gewebe (Endoskopie, Kolektomie oder Autopsie)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "250758002",
+        "display": "Immunoglobulin G index measurement (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "30662005",
+        "display": "Fluorescent immunoassay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "420848008",
+        "display": "Administration of prophylactic antimalarial (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "88221005",
+        "display": "Affinity chromatography measurement (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "61594008",
+        "display": "Microbial culture (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "782518009",
+        "display": "Modified carbapenem inactivation technique (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "117034009",
+        "display": "Anaerobic microbial culture (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "29703006",
+        "display": "Complement assay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "69363007",
+        "display": "Nucleic acid amplification (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "104233009",
+        "display": "Antiviral susceptibility test (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "104172004",
+        "display": "Organism specific culture (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "45764000",
+        "display": "Immunoglobulin M measurement (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "117040002",
+        "display": "Nucleic acid sequencing (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "409611004",
+        "display": "Aerobic blood culture (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "43657008",
+        "display": "Latex agglutination test (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "3967008",
+        "display": "Fluorescence polarization immunoassay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "363779003",
+        "display": "Genotype determination (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "117245002",
+        "display": "Nucleic acid probe method with target amplification (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "37310002",
+        "display": "Immunoblot assay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "703690001",
+        "display": "Confirmatory technique (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "252403005",
+        "display": "Toxin detection (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "56857008",
+        "display": "Serum neutralization test (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "104157003",
+        "display": "Light microscopy (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "121898003",
+        "display": "Coliform bacteria viability count (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "34733005",
+        "display": "Hemagglutination inhibition assay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "426053009",
+        "display": "Elek test (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "73512001",
+        "display": "Electron microscopic study (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "39334004",
+        "display": "Broth microdilution susceptibility test (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "359867004",
+        "display": "Antibiotic sensitivity, disk method (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "104208006",
+        "display": "Giemsa stain method (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "104336004",
+        "display": "Complement component, antigen measurement (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "708099001",
+        "display": "Rapid immunoassay technique (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "32623009",
+        "display": "Immunodiffusion measurement (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "22642004",
+        "display": "Bacterial bacteriophage typing (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "122443003",
+        "display": "Toxin assay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "252326002",
+        "display": "Polyacrylamide gel electrophoresis (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "409612006",
+        "display": "Anaerobic blood culture (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "85000002",
+        "display": "Hemagglutination assay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "104234003",
+        "display": "Gradient strip susceptibility test (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "91454002",
+        "display": "Pleocytosis of cerebrospinal fluid (finding)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "4613005",
+        "display": "Radioimmunoassay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "104257009",
+        "display": "Microbial antigen assay by enzyme immunoassay method (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "13269000",
+        "display": "Immunocytochemical stain (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "252395007",
+        "display": "Electron microscopy of feces (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "426329006",
+        "display": "Fluorescence in situ hybridization (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "12717000",
+        "display": "Viral culture (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "76978006",
+        "display": "Enzyme-linked immunosorbent assay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "116148004",
+        "display": "Molecular genetics procedure (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "359788000",
+        "display": "Antinuclear antibody measurement (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "58779000",
+        "display": "Bioassay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "115418004",
-        "display": "Viral Sequencing (procedure)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Viral Sequencing (procedure)"
-        }, {
-          "language": "de-DE",
-          "value": "Virusgenom-Sequenzierung"
-        } ]
-      } ]
-    } ]
+        "display": "Viral Sequencing (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "384715000",
+        "display": "Nucleic acid hybridization procedure (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "708073008",
+        "display": "Minimum inhibitory concentration susceptibility test technique (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "31651002",
+        "display": "Immunoglobulin A measurement (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "250507002",
+        "display": "Antibody titer measurement (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "34146008",
+        "display": "Mouse toxin neutralization test (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "405262001",
+        "display": "Point of care testing (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "69207009",
+        "display": "Complement fixation test (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "117321004",
+        "display": "Orcein stain method (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "37586002",
+        "display": "Counterimmunoelectrophoresis measurement (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "45293001",
+        "display": "Immunoglobulin G measurement (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "88629000",
+        "display": "Agar dilution minimum inhibitory concentration susceptibility test for anaerobes (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "104191004",
+        "display": "Stool culture for bacteria (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "1259932009",
+        "display": "Loop-mediated isothermal amplification technique (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "359821004",
+        "display": "Agglutination assay (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "414464004",
+        "display": "Immunoassay method (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "14788002",
+        "display": "Antimicrobial susceptibility test (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "406867009",
+        "display": "Immunofluorescent stain method (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "165771000",
+        "display": "Coombs test - anti-human globulin (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "104178000",
+        "display": "Bacterial culture (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "444091001",
+        "display": "Analysis using multiplex polymerase chain reaction technique (procedure)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "83581000052107",
+        "display": "Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)"
+      }
+    ]
   }
 }

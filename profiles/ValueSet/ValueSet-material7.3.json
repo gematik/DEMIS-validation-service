@@ -1,0 +1,160 @@
+{
+  "resourceType": "ValueSet",
+  "id": "material7.3",
+  "url": "https://demis.rki.de/fhir/ValueSet/material7.3",
+  "version": "1.0.0",
+  "name": "Material7.3",
+  "title": "Material7.3",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-01-24",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet Material7.3 enthält die Codes der Materialien.",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/materialCHTP"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/materialECHP"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/materialHIVP"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/materialNEGP"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/materialTOXP"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/materialTRPP"
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2025-01-24T00:00:00+01:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "16215931000119102",
+        "display": "Specimen from cyst obtained by fine needle aspiration (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "258527002",
+        "display": "Analabstrich"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "128168004",
+        "display": "Tissue specimen from liver (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "258524009",
+        "display": "Zervixabstrich"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "119396006",
+        "display": "Specimen from endometrium (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "119395005",
+        "display": "Specimen from uterine cervix (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "258523003",
+        "display": "Vulval swab (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "445369009",
+        "display": "Swab of endometrium (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "258436001",
+        "display": "Umbilical cord tissue specimen (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "258520000",
+        "display": "Vaginalabstrich"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "258530009",
+        "display": "Urethralabstrich"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "122556008",
+        "display": "Cord blood specimen (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "122575003",
+        "display": "Urinprobe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "472881004",
+        "display": "Abstrich aus Pharynx"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "258519006",
+        "display": "Female genital swab (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "258511009",
+        "display": "Penile urethral swab (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "119369008",
+        "display": "Specimen from ulcer (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "258498002",
+        "display": "Konjunktivalabstrich"
+      }
+    ]
+  }
+}

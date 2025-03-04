@@ -2,899 +2,368 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestCYMP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestCYMP",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "name": "LaboratoryTestCYMP",
   "title": "Labortest für Cytomegalie, Cytomegalievirus",
   "status": "active",
-  "date": "2023-05-03",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestCYMP enthält die Codes der Labortests für Cytomegalie, Cytomegalievirus.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "45326-6",
-        "display": "Cytomegalovirus IgG Ab avidity [Ratio] in Serum or Plasma"
-      }, {
-        "code": "34201-4",
-        "display": "Cytomegalovirus [Presence] in Amniotic fluid by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "13226-6",
+            "display": "Cytomegalovirus IgM Ab [Units/volume] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus IgM-Antikörper [Einheiten/Volumen] in Liquor"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus [Nachweis] in Amnionflüssigkeit mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "88624-2",
-        "display": "Cytomegalovirus [Presence] in Amniotic fluid by Shell vial culture"
-      }, {
-        "code": "43706-1",
-        "display": "Cytomegalovirus [Presence] in Anal by Shell vial culture"
-      }, {
-        "code": "5835-4",
-        "display": "Cytomegalovirus [Presence] in Blood by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "22239-8",
+            "display": "Cytomegalovirus Ab [Presence] in Serum or Plasma",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus Antikörper [Nachweis] in Serum oder Plasma"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus [Nachweis] in Blut mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "43703-8",
-        "display": "Cytomegalovirus [Presence] in Blood by Shell vial culture"
-      }, {
-        "code": "43704-6",
-        "display": "Cytomegalovirus [Presence] in Body fluid by Shell vial culture"
-      }, {
-        "code": "88564-0",
-        "display": "Cytomegalovirus [Presence] in Bone marrow by Organism specific culture"
-      }, {
-        "code": "43705-3",
-        "display": "Cytomegalovirus [Presence] in Bone marrow by Shell vial culture"
-      }, {
-        "code": "32675-1",
-        "display": "Cytomegalovirus [Presence] in Bronchial specimen by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "22243-0",
+            "display": "Cytomegalovirus IgG Ab [Units/volume] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus IgG-Antikörper [Einheiten/Volumen] in Liquor"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus [Nachweis] in Probenmaterial aus dem Bronchialtrakt mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "88623-4",
-        "display": "Cytomegalovirus [Presence] in Cerebral spinal fluid by Organism specific culture"
-      }, {
-        "code": "43702-0",
-        "display": "Cytomegalovirus [Presence] in Cerebral spinal fluid by Shell vial culture"
-      }, {
-        "code": "91783-1",
-        "display": "Cytomegalovirus [Presence] in Lower respiratory specimen by Organism specific culture"
-      }, {
-        "code": "81328-7",
-        "display": "Cytomegalovirus [Presence] in Lower respiratory specimen by Shell vial culture"
-      }, {
-        "code": "88625-9",
-        "display": "Cytomegalovirus [Presence] in Ocular fluid by Organism specific culture"
-      }, {
-        "code": "88622-6",
-        "display": "Cytomegalovirus [Presence] in Ocular fluid by Shell vial culture"
-      }, {
-        "code": "5838-8",
-        "display": "Cytomegalovirus [Presence] in Specimen by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "22244-8",
+            "display": "Cytomegalovirus IgG Ab [Presence] in Serum or Plasma",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus IgG-Antikörper [Nachweis] in Serum oder Plasma"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus [Nachweis] in Probenmaterial mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "43701-2",
-        "display": "Cytomegalovirus [Presence] in Specimen by Shell vial culture"
-      }, {
-        "code": "5836-2",
-        "display": "Cytomegalovirus [Presence] in Tissue by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "24119-0",
+            "display": "Cytomegalovirus IgM Ab [Presence] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus IgM-Antikörper [Nachweis] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus [Nachweis] in Gewebe mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "43707-9",
-        "display": "Cytomegalovirus [Presence] in Tissue by Shell vial culture"
-      }, {
-        "code": "5837-0",
-        "display": "Cytomegalovirus [Presence] in Urine by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "30325-5",
+            "display": "Cytomegalovirus IgM Ab [Presence] in Serum or Plasma",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus IgM-Antikörper [Nachweis] in Serum oder Plasma"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus [Nachweis] in Urin mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "43700-4",
-        "display": "Cytomegalovirus [Presence] in Urine by Shell vial culture"
-      }, {
-        "code": "15377-5",
-        "display": "Cytomegalovirus Ab [Presence] in Serum by Latex agglutination",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "31797-4",
+            "display": "Cytomegalovirus Ag [Presence] in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus Antigen [Nachweis] in Probenmaterial"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus-Antikörper [Nachweis] in Serum mit Latexagglutination"
-        } ]
-      }, {
-        "code": "47363-7",
-        "display": "Cytomegalovirus Ab [Presence] in Serum from Donor by Hemagglutination"
-      }, {
-        "code": "22239-8",
-        "display": "Cytomegalovirus Ab [Presence] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "34720-3",
+            "display": "Cytomegalovirus DNA [Units/volume] (viral load) in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus DNA [Einheiten/Volumen] (Viruslast) in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus-Antikörper [Nachweis] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "59838-3",
-        "display": "Cytomegalovirus Ab [Presence] in Serum or Plasma by Latex agglutination"
-      }, {
-        "code": "47430-4",
-        "display": "Cytomegalovirus Ab [Presence] in Serum or Plasma from Donor"
-      }, {
-        "code": "22240-6",
-        "display": "Cytomegalovirus Ab [Titer] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus-Antikörper [Titer] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "9514-1",
-        "display": "Cytomegalovirus Ab [Titer] in Cerebral spinal fluid by Complement fixation"
-      }, {
-        "code": "9513-3",
-        "display": "Cytomegalovirus Ab [Titer] in Serum by Complement fixation",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "43045-4",
+            "display": "Cytomegalovirus IgM Ab [Presence] in Cerebral spinal fluid",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus IgM-Antikörper [Nachweis] in Liquor"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus-Antikörper [Titer] in Serum mit Komplementbindungsreaktion"
-        } ]
-      }, {
-        "code": "22241-4",
-        "display": "Cytomegalovirus Ab [Titer] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "47307-4",
+            "display": "Cytomegalovirus IgG Ab index [Units/volume] in Serum and CSF",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus IgG-Antikörperindex [Einheiten/Volumen] in Serum und Liquor"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus-Antikörper [Titer] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "32170-3",
-        "display": "Cytomegalovirus Ab [Titer] in Serum or Plasma by Immunofluorescence"
-      }, {
-        "code": "5121-9",
-        "display": "Cytomegalovirus Ab [Titer] in Serum or Plasma by Latex agglutination"
-      }, {
-        "code": "16712-2",
-        "display": "Cytomegalovirus Ab [Units/volume] in Body fluid"
-      }, {
-        "code": "16713-0",
-        "display": "Cytomegalovirus Ab [Units/volume] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "5000-5",
+            "display": "Cytomegalovirus DNA [Presence] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus DNA [Nachweis] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "52976-8",
-        "display": "Cytomegalovirus Ab [Units/volume] in Serum by Complement fixation"
-      }, {
-        "code": "16714-8",
-        "display": "Cytomegalovirus Ab [Units/volume] in Serum by Latex agglutination"
-      }, {
-        "code": "7851-9",
-        "display": "Cytomegalovirus Ab [Units/volume] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "5124-3",
+            "display": "Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus-Antikörper [Einheiten/Volumen] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "5122-7",
-        "display": "Cytomegalovirus Ab [Units/volume] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "5126-8",
+            "display": "Cytomegalovirus IgM Ab [Units/volume] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus IgM-Antikörper [Einheiten/Volumen] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "42336-8",
-        "display": "Cytomegalovirus Ag [#/area] in Specimen"
-      }, {
-        "code": "16718-9",
-        "display": "Cytomegalovirus Ag [Presence] in Blood",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "78445-4",
+            "display": "Cytomegalovirus IgG Ab avidity [Presence] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus IgG-Antikörperavidität [Nachweis] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus-Antigen [Nachweis] in Blut"
-        } ]
-      }, {
-        "code": "88566-5",
-        "display": "Cytomegalovirus Ag [Presence] in Bone marrow by Immunofluorescence"
-      }, {
-        "code": "77388-7",
-        "display": "Cytomegalovirus Ag [Presence] in Bronchoalveolar lavage by Immunofluorescence"
-      }, {
-        "code": "89583-9",
-        "display": "Cytomegalovirus Ag [Presence] in Cerebral spinal fluid by Immunofluorescence"
-      }, {
-        "code": "67805-2",
-        "display": "Cytomegalovirus Ag [Presence] in Isolate by Immunofluorescence"
-      }, {
-        "code": "31795-8",
-        "display": "Cytomegalovirus Ag [Presence] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "7852-7",
+            "display": "Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma"
+              }
+            ]
           },
-          "value": "Cytomegalie-Virus-Antigen [Nachweis] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "6376-8",
-        "display": "Cytomegalovirus Ag [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-Antigen [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "6377-6",
-        "display": "Cytomegalovirus Ag [Presence] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-Antigen [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "31797-4",
-        "display": "Cytomegalovirus Ag [Presence] in Specimen"
-      }, {
-        "code": "6379-2",
-        "display": "Cytomegalovirus Ag [Presence] in Specimen by Immunoassay"
-      }, {
-        "code": "6381-8",
-        "display": "Cytomegalovirus Ag [Presence] in Specimen by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "10660-9",
-        "display": "Cytomegalovirus Ag [Presence] in Tissue by Immune stain"
-      }, {
-        "code": "86517-0",
-        "display": "Cytomegalovirus Ag [Presence] in Tissue by Immunofluorescence"
-      }, {
-        "code": "31796-6",
-        "display": "Cytomegalovirus Ag [Presence] in Urine",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-Antigen [Nachweis] in Urin"
-        } ]
-      }, {
-        "code": "16717-1",
-        "display": "Cytomegalovirus Ag [Presence] in Urine by Immunoassay"
-      }, {
-        "code": "49348-6",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in Amniotic fluid by NAA with probe detection"
-      }, {
-        "code": "29604-6",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in Blood by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [#/Volumen] (Viruslast) in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49350-2",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in Bone marrow by NAA with probe detection"
-      }, {
-        "code": "49349-4",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in Bronchoalveolar lavage by NAA with probe detection"
-      }, {
-        "code": "39003-9",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in Cerebral spinal fluid by NAA with probe detection"
-      }, {
-        "code": "88545-9",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in DBS by NAA with probe detection"
-      }, {
-        "code": "88130-0",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in Ocular fluid by NAA with probe detection"
-      }, {
-        "code": "98081-3",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in Saliva (oral fluid) by NAA with probe detection"
-      }, {
-        "code": "30247-1",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection"
-      }, {
-        "code": "33006-8",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [#/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49351-0",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in Tissue by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [#/Volumen] (Viruslast) in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49347-8",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in Urine by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [#/Volumen] (Viruslast) in Urin mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "54163-1",
-        "display": "Cytomegalovirus DNA [#/volume] (viral load) in Urine by Probe and target amplification method detection limit = 200 copies/ml"
-      }, {
-        "code": "94823-2",
-        "display": "Cytomegalovirus DNA [Log #/volume] (viral load) in Amniotic fluid by NAA with probe detection"
-      }, {
-        "code": "54206-8",
-        "display": "Cytomegalovirus DNA [Log #/volume] (viral load) in Serum or Plasma by NAA with probe detection"
-      }, {
-        "code": "53763-9",
-        "display": "Cytomegalovirus DNA [Log #/volume] (viral load) in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [log #/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "100676-6",
-        "display": "Cytomegalovirus DNA [log units/volume] (viral load) in Blood by NAA with probe detection"
-      }, {
-        "code": "72494-8",
-        "display": "Cytomegalovirus DNA [log units/volume] (viral load) in Serum or Plasma by NAA with probe detection"
-      }, {
-        "code": "96396-7",
-        "display": "Cytomegalovirus DNA [log units/volume] (viral load) in Specimen by NAA with probe detection"
-      }, {
-        "code": "29590-7",
-        "display": "Cytomegalovirus DNA [Mass/volume] (viral load) in Blood by Probe"
-      }, {
-        "code": "34719-5",
-        "display": "Cytomegalovirus DNA [Presence] in Amniotic fluid by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [Nachweis] in Amnionflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "4996-5",
-        "display": "Cytomegalovirus DNA [Presence] in Blood by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "28008-1",
-        "display": "Cytomegalovirus DNA [Presence] in Blood by Probe with signal amplification",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [Nachweis] in Blut mit Sondendetektion mit Signalamplifikation"
-        } ]
-      }, {
-        "code": "88567-3",
-        "display": "Cytomegalovirus DNA [Presence] in Bone marrow by NAA with probe detection"
-      }, {
-        "code": "35401-9",
-        "display": "Cytomegalovirus DNA [Presence] in Bronchial specimen by NAA with probe detection"
-      }, {
-        "code": "82189-2",
-        "display": "Cytomegalovirus DNA [Presence] in Cerebral spinal fluid by NAA with non-probe detection"
-      }, {
-        "code": "30326-3",
-        "display": "Cytomegalovirus DNA [Presence] in Cerebral spinal fluid by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "88535-0",
-        "display": "Cytomegalovirus DNA [Presence] in DBS by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [Nachweis] in Trockenblut mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "88558-2",
-        "display": "Cytomegalovirus DNA [Presence] in Lower respiratory specimen by NAA with probe detection"
-      }, {
-        "code": "88131-8",
-        "display": "Cytomegalovirus DNA [Presence] in Ocular fluid by NAA with probe detection"
-      }, {
-        "code": "83065-3",
-        "display": "Cytomegalovirus DNA [Presence] in Saliva (oral fluid) by NAA with probe detection"
-      }, {
-        "code": "30246-3",
-        "display": "Cytomegalovirus DNA [Presence] in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "5000-5",
-        "display": "Cytomegalovirus DNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "4998-1",
-        "display": "Cytomegalovirus DNA [Presence] in Tissue by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "4997-3",
-        "display": "Cytomegalovirus DNA [Presence] in Tissue by Probe"
-      }, {
-        "code": "4999-9",
-        "display": "Cytomegalovirus DNA [Presence] in Urine by NAA with probe detection"
-      }, {
-        "code": "100675-8",
-        "display": "Cytomegalovirus DNA [Units/volume] (viral load) in Blood by NAA with probe detection"
-      }, {
-        "code": "72493-0",
-        "display": "Cytomegalovirus DNA [Units/volume] (viral load) in Serum or Plasma by NAA with probe detection"
-      }, {
-        "code": "34720-3",
-        "display": "Cytomegalovirus DNA [Units/volume] (viral load) in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [Einheiten/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "24041-6",
-        "display": "Cytomegalovirus DNA [Units/volume] (viral load) in Specimen by Probe with signal amplification",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-DNA [Einheiten/Volumen] (Viruslast) in Probenmaterial mit Sondendetektion mit Signalamplifikation"
-        } ]
-      }, {
-        "code": "60541-0",
-        "display": "Cytomegalovirus early Ag [Presence] in Specimen"
-      }, {
-        "code": "33616-4",
-        "display": "Cytomegalovirus early Ag [Presence] in Urine",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus early-Antigen [Nachweis] in Urin"
-        } ]
-      }, {
-        "code": "72605-9",
-        "display": "Cytomegalovirus glycoprotein genotype in Specimen by NAA with probe detection"
-      }, {
-        "code": "45286-2",
-        "display": "Cytomegalovirus IgA Ab [Presence] in Body fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgA-Antikörper [Nachweis] in Körperflüssigkeit"
-        } ]
-      }, {
-        "code": "20475-0",
-        "display": "Cytomegalovirus IgG Ab [Interpretation] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörper [Interpretation] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "50018-1",
-        "display": "Cytomegalovirus IgG Ab [Presence] in Body fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörper [Nachweis] in Körperflüssigkeit"
-        } ]
-      }, {
-        "code": "42495-2",
-        "display": "Cytomegalovirus IgG Ab [Presence] in Cerebral spinal fluid"
-      }, {
-        "code": "95527-8",
-        "display": "Cytomegalovirus IgG Ab [Presence] in Saliva (oral fluid) by Immunoassay"
-      }, {
+          {
+            "code": "7853-5",
+            "display": "Cytomegalovirus IgM Ab [Units/volume] in Serum or Plasma",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Cytomegalie-Virus IgM-Antikörper [Einheiten/Volumen] in Serum oder Plasma"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "47307-4",
+        "display": "Cytomegalovirus IgG Ab index [Units/volume] in Serum and CSF"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "24119-0",
+        "display": "Cytomegalovirus IgM Ab [Presence] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "22244-8",
-        "display": "Cytomegalovirus IgG Ab [Presence] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörper [Nachweis] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "13949-3",
-        "display": "Cytomegalovirus IgG Ab [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "87726-6",
-        "display": "Cytomegalovirus IgG Ab [Presence] in Serum or Plasma from Donor by Immunoassay"
-      }, {
-        "code": "32835-1",
-        "display": "Cytomegalovirus IgG Ab [Ratio] in Serum or Plasma --1st specimen/2nd specimen"
-      }, {
-        "code": "32791-6",
-        "display": "Cytomegalovirus IgG Ab [Ratio] in Serum or Plasma by Immunoassay --1st specimen/2nd specimen"
-      }, {
-        "code": "22245-5",
-        "display": "Cytomegalovirus IgG Ab [Titer] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörper [Titer] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "11008-0",
-        "display": "Cytomegalovirus IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence"
-      }, {
-        "code": "22246-3",
-        "display": "Cytomegalovirus IgG Ab [Titer] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörper [Titer] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "5125-0",
-        "display": "Cytomegalovirus IgG Ab [Titer] in Serum or Plasma by Immunofluorescence"
-      }, {
-        "code": "22243-0",
-        "display": "Cytomegalovirus IgG Ab [Units/volume] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "6921-1",
-        "display": "Cytomegalovirus IgG Ab [Units/volume] in Cerebral spinal fluid by Immunoassay"
-      }, {
-        "code": "7852-7",
-        "display": "Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "13225-8",
-        "display": "Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma --1st specimen"
-      }, {
-        "code": "22247-1",
-        "display": "Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma --2nd specimen"
-      }, {
-        "code": "5124-3",
-        "display": "Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "16716-3",
-        "display": "Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay --2nd specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay --2. Probenmaterial"
-        } ]
-      }, {
-        "code": "16715-5",
-        "display": "Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
+        "display": "Cytomegalovirus IgG Ab [Presence] in Serum or Plasma"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "78445-4",
         "display": "Cytomegalovirus IgG Ab avidity [Presence] in Serum or Plasma by Immunoassay"
-      }, {
-        "code": "52984-2",
-        "display": "Cytomegalovirus IgG Ab avidity [Ratio] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörperavidität [Verhältnis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "47307-4",
-        "display": "Cytomegalovirus IgG Ab index [Units/volume] in Serum and CSF",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgG-Antikörperindex [Einheiten/Volumen] in Serum und Zerebrospinalflüssigkeit"
-        } ]
-      }, {
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22239-8",
+        "display": "Cytomegalovirus Ab [Presence] in Serum or Plasma"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "34720-3",
+        "display": "Cytomegalovirus DNA [Units/volume] (viral load) in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "7852-7",
+        "display": "Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "5000-5",
+        "display": "Cytomegalovirus DNA [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "7853-5",
+        "display": "Cytomegalovirus IgM Ab [Units/volume] in Serum or Plasma"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "13226-6",
+        "display": "Cytomegalovirus IgM Ab [Units/volume] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "30325-5",
+        "display": "Cytomegalovirus IgM Ab [Presence] in Serum or Plasma"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "5124-3",
+        "display": "Cytomegalovirus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "5126-8",
+        "display": "Cytomegalovirus IgM Ab [Units/volume] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22243-0",
+        "display": "Cytomegalovirus IgG Ab [Units/volume] in Cerebral spinal fluid"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "43045-4",
         "display": "Cytomegalovirus IgM Ab [Presence] in Cerebral spinal fluid"
-      }, {
-        "code": "42899-5",
-        "display": "Cytomegalovirus IgM Ab [Presence] in Cerebral spinal fluid by Immunofluorescence"
-      }, {
-        "code": "30325-5",
-        "display": "Cytomegalovirus IgM Ab [Presence] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgM-Antikörper [Nachweis] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "24119-0",
-        "display": "Cytomegalovirus IgM Ab [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "49539-0",
-        "display": "Cytomegalovirus IgM Ab [Presence] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "87725-8",
-        "display": "Cytomegalovirus IgM Ab [Presence] in Serum or Plasma from Donor by Immunoassay"
-      }, {
-        "code": "22248-9",
-        "display": "Cytomegalovirus IgM Ab [Titer] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgM-Antikörper [Titer] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "21237-3",
-        "display": "Cytomegalovirus IgM Ab [Titer] in Cerebral spinal fluid by Immunofluorescence"
-      }, {
-        "code": "22249-7",
-        "display": "Cytomegalovirus IgM Ab [Titer] in Serum or Plasma"
-      }, {
-        "code": "5127-6",
-        "display": "Cytomegalovirus IgM Ab [Titer] in Serum or Plasma by Immunofluorescence"
-      }, {
-        "code": "41155-3",
-        "display": "Cytomegalovirus IgM Ab [Units/volume] in Body fluid"
-      }, {
-        "code": "33285-8",
-        "display": "Cytomegalovirus IgM Ab [Units/volume] in Body fluid by Immunoassay"
-      }, {
-        "code": "13226-6",
-        "display": "Cytomegalovirus IgM Ab [Units/volume] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgM-Antikörper [Einheiten/Volumen] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "44817-5",
-        "display": "Cytomegalovirus IgM Ab [Units/volume] in Cerebral spinal fluid by Immunoassay"
-      }, {
-        "code": "7853-5",
-        "display": "Cytomegalovirus IgM Ab [Units/volume] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "5126-8",
-        "display": "Cytomegalovirus IgM Ab [Units/volume] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Cytomegalie-Virus-IgM-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "54164-9",
-        "display": "Cytomegalovirus immediate-early Ag [Presence] in Blood"
-      }, {
-        "code": "16719-7",
-        "display": "Cytomegalovirus inclusion bodies [Presence] in Urine by Microscopic observation"
-      }, {
-        "code": "78001-5",
-        "display": "Cytomegalovirus pp65 Ag/100000 PMN cells in Blood by Immunofluorescence"
-      } ]
-    } ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "31797-4",
+        "display": "Cytomegalovirus Ag [Presence] in Specimen"
+      }
+    ]
   }
 }

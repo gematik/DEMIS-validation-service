@@ -1,0 +1,389 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetNCVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetNCVP",
+  "version": "1.0.0",
+  "name": "AnswerSetNCVP",
+  "title": "AnswerSet für Vibrio spp., humanpathogen (außer Erreger der Cholera); soweit ausschließlich eine Ohrinfektion vorliegt, nur bei Vibrio cholerae non O1/non-O139",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-09-09",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet AnswerSetNCVP enthält die Codes der Answer-Codes für Vibrio spp., humanpathogen (außer Erreger der Cholera); soweit ausschließlich eine Ohrinfektion vorliegt, nur bei Vibrio cholerae non O1/non-O139 .",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 81
+              }
+            ],
+            "code": "115061008",
+            "display": "Vibrio navarrensis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio navarrensis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio navarrensis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 80
+              }
+            ],
+            "code": "11736008",
+            "display": "Vibrio parahaemolyticus (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio parahaemolyticus (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio parahaemolyticus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 82
+              }
+            ],
+            "code": "11776003",
+            "display": "Vibrio mimicus (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio mimicus (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio mimicus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 83
+              }
+            ],
+            "code": "28382009",
+            "display": "Vibrio metschnikovii (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio metschnikovii (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio metschnikovii"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "34872001",
+            "display": "Genus Vibrio (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Genus Vibrio (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Gattung Vibrio"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 87
+              }
+            ],
+            "code": "36764009",
+            "display": "Vibrio cincinnatiensis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cincinnatiensis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cincinnatiensis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 88
+              }
+            ],
+            "code": "415819003",
+            "display": "Vibrio cholerae, non-O1/non-O139 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cholerae, non-O1/non-O139 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae, nicht O1/nicht O139"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 86
+              }
+            ],
+            "code": "43199008",
+            "display": "Vibrio fluvialis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio fluvialis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio fluvialis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 89
+              }
+            ],
+            "code": "45749000",
+            "display": "Vibrio alginolyticus (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio alginolyticus (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio alginolyticus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 79
+              }
+            ],
+            "code": "55905000",
+            "display": "Vibrio vulnificus (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio vulnificus (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio vulnificus"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 85
+              }
+            ],
+            "code": "6387008",
+            "display": "Vibrio furnissii (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio furnissii (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio furnissii"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 84
+              }
+            ],
+            "code": "84003007",
+            "display": "Vibrio harveyi (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio harveyi (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio harveyi"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-09T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "43199008",
+        "display": "Vibrio fluvialis (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "34872001",
+        "display": "Genus Vibrio (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "11736008",
+        "display": "Vibrio parahaemolyticus (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "415819003",
+        "display": "Vibrio cholerae, non-O1/non-O139 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "45749000",
+        "display": "Vibrio alginolyticus (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "36764009",
+        "display": "Vibrio cincinnatiensis (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "55905000",
+        "display": "Vibrio vulnificus (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "28382009",
+        "display": "Vibrio metschnikovii (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "6387008",
+        "display": "Vibrio furnissii (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "11776003",
+        "display": "Vibrio mimicus (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "84003007",
+        "display": "Vibrio harveyi (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "115061008",
+        "display": "Vibrio navarrensis (organism)"
+      }
+    ]
+  }
+}

@@ -2,270 +2,428 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestGILP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestGILP",
-  "version": "1.3.0",
+  "version": "1.6.0",
   "name": "LaboratoryTestGILP",
   "title": "Labortest für Giardia lamblia",
   "status": "active",
-  "date": "2023-05-04",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestGILP enthält die Codes der Labortests für Giardia lamblia.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "100864-8",
-        "display": "Giardia lamblia bg gene [Genotype] in Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "104404-9",
+            "display": "Giardia lamblia cysts [Presence] in Stool by Microscopy",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia-lamblia-Zysten [Nachweis] in Stuhl mittels Mikroskopie"
+              }
+            ]
           },
-          "value": "Giardia lamblia bg-Gen [Genotyp] in Probenmaterial, molekulargenetisch"
-        } ]
-      }, {
-        "code": "100871-3",
-        "display": "Giardia lamblia gdh gene [Genotype] in Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "104405-6",
+            "display": "Giardia lamblia trophozoites [Presence] in Stool by Microscopy",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia-lamblia-Trophozoiten [Nachweis] in Stuhl mittels Mikroskopie"
+              }
+            ]
           },
-          "value": "Giardia lamblia gdh-Gen [Genotyp] in Probenmaterial, molekulargenetisch"
-        } ]
-      }, {
-        "code": "100873-9",
-        "display": "Giardia lamblia tpi gene [Genotype] in Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "10670-8",
+            "display": "Giardia lamblia [Presence] in Stool by Organism specific culture",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia [Nachweis] in Stuhl mittels erregerspezifischer Kultur"
+              }
+            ]
           },
-          "value": "Giardia lamblia tpi-Gen [Genotyp] in Probenmaterial, molekulargenetisch"
-        } ]
-      }, {
-        "code": "10670-8",
-        "display": "Giardia lamblia [Presence] in Stool by Organism specific culture",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "14210-9",
+            "display": "Giardia lamblia Ag [Presence] in Stool by Immunofluorescence",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia Antigen [Nachweis] in Stuhl mittels Immunfluoreszenztest"
+              }
+            ]
           },
-          "value": "Giardia lamblia [Nachweis] in Stuhl mit erregerspezifischer Kultur"
-        } ]
-      }, {
-        "code": "14210-9",
-        "display": "Giardia lamblia Ag [Presence] in Stool by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "16899-7",
+            "display": "Giardia lamblia Ag [Presence] in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia Antigen [Nachweis] in Probenmaterial"
+              }
+            ]
           },
-          "value": "Giardia lamblia-Antigen [Nachweis] in Stuhl mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "16898-9",
-        "display": "Giardia lamblia 65 Ag [Presence] in Stool",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "31830-3",
+            "display": "Giardia lamblia Ag [Presence] in Stool",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia Antigen [Nachweis] in Stuhl"
+              }
+            ]
           },
-          "value": "Giardia lamblia 65-Antigen [Nachweis] in Stuhl"
-        } ]
-      }, {
-        "code": "16899-7",
-        "display": "Giardia lamblia Ag [Presence] in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "41153-8",
+            "display": "Giardia lamblia IgM Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia IgM-Antikörper [Nachweis] in Serum"
+              }
+            ]
           },
-          "value": "Giardia lamblia-Antigen [Nachweis] in Probenmaterial"
-        } ]
-      }, {
-        "code": "21302-5",
-        "display": "Giardia lamblia Ag [Presence] in Stool by Immunoassay --2nd specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "41154-6",
+            "display": "Giardia lamblia IgG Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia IgG-Antikörper [Nachweis] in Serum"
+              }
+            ]
           },
-          "value": "Giardia lamblia-Antigen [Nachweis] in Stuhl mit Immunoassay --2. Probenmaterial"
-        } ]
-      }, {
-        "code": "21303-3",
-        "display": "Giardia lamblia Ag [Presence] in Stool by Immunoassay --3rd specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
           },
-          "value": "Giardia lamblia-Antigen [Nachweis] in Stuhl mit Immunoassay --3. Probenmaterial"
-        } ]
-      }, {
-        "code": "23744-6",
-        "display": "Giardia lamblia Ag [Presence] in Specimen by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "60544-4",
+            "display": "Giardia lamblia DNA [Presence] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia DNA [Nachweis] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "Giardia lamblia-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "31830-3",
-        "display": "Giardia lamblia Ag [Presence] in Stool",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "6412-1",
+            "display": "Giardia lamblia Ag [Presence] in Stool by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia Antigen [Nachweis] in Stuhl mittels Immunoassay"
+              }
+            ]
           },
-          "value": "Giardia lamblia-Antigen [Nachweis] in Stuhl"
-        } ]
-      }, {
-        "code": "31831-1",
-        "display": "Giardia lamblia Ag [Presence] in Stool --2nd specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "6413-9",
+            "display": "Giardia lamblia Ag [Presence] in Specimen by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia Antigen [Nachweis] in Probenmaterial mittels Immunoassay"
+              }
+            ]
           },
-          "value": "Giardia lamblia-Antigen [Nachweis] in Stuhl --2. Probenmaterial"
-        } ]
-      }, {
-        "code": "31832-9",
-        "display": "Giardia lamblia Ag [Presence] in Stool --3rd specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "673-4",
+            "display": "Ova and parasites identified in Specimen by Light microscopy",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Wurmeier und Parasiten identifiziert in Probenmaterial mittels Lichtmikroskopie"
+              }
+            ]
           },
-          "value": "Giardia lamblia-Antigen [Nachweis] in Stuhl --3. Probenmaterial"
-        } ]
-      }, {
-        "code": "34470-5",
-        "display": "Giardia lamblia Ag [Presence] in Bile fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "7891-5",
+            "display": "Giardia lamblia IgG Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia IgG-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
           },
-          "value": "Giardia lamblia-Antigen [Nachweis] in Gallenflüssigkeit"
-        } ]
-      }, {
-        "code": "60544-4",
-        "display": "Giardia lamblia DNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "7892-3",
+            "display": "Giardia lamblia IgM Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia IgM-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
           },
-          "value": "Giardia lamblia-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "6412-1",
-        "display": "Giardia lamblia Ag [Presence] in Stool by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "80683-6",
+            "display": "Giardia lamblia 18S rRNA [Presence] in Stool by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia 18S rRNA [Nachweis] in Stuhl mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
           },
-          "value": "Giardia lamblia-Antigen [Nachweis] in Stuhl mit Immunoassay"
-        } ]
-      }, {
-        "code": "6413-9",
-        "display": "Giardia lamblia Ag [Presence] in Specimen by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "82208-0",
+            "display": "Giardia lamblia DNA [Presence] in Stool by NAA with non-probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia DNA [Nachweis] in Stuhl mittels Nukleinsäureamplifikation mit Detektion ohne Sonde"
+              }
+            ]
           },
-          "value": "Giardia lamblia-Antigen [Nachweis] in Probenmaterial mit Immunoassay"
-        } ]
-      }, {
-        "code": "80683-6",
-        "display": "Giardia lamblia 18S rRNA [Presence] in Stool by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
+          {
+            "code": "91676-7",
+            "display": "Giardia lamblia Ag [Presence] in Stool by Rapid immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia Antigen [Nachweis] in Stuhl mittels Immunoassay-Schnelltest"
+              }
+            ]
           },
-          "value": "Giardia lamblia 18S-rRNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
+          {
+            "code": "92687-3",
+            "display": "Giardia lamblia DNA [Presence] in Stool by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia DNA [Nachweis] in Stuhl mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "9658-6",
+            "display": "Giardia lamblia IgA Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Giardia lamblia IgA-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "104404-9",
+        "display": "Giardia lamblia cysts [Presence] in Stool by Microscopy"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "104405-6",
+        "display": "Giardia lamblia trophozoites [Presence] in Stool by Microscopy"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "82208-0",
-        "display": "Giardia lamblia DNA [Presence] in Stool by NAA with non-probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Giardia lamblia-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Detektion ohne Sonde"
-        } ]
-      }, {
-        "code": "91676-7",
-        "display": "Giardia lamblia Ag [Presence] in Stool by Rapid immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Giardia lamblia-Antigen [Nachweis] in Stuhl mit Immunoassay-Schnelltest"
-        } ]
-      }, {
+        "display": "Giardia lamblia DNA [Presence] in Stool by NAA with non-probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "31830-3",
+        "display": "Giardia lamblia Ag [Presence] in Stool"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "16899-7",
+        "display": "Giardia lamblia Ag [Presence] in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "6413-9",
+        "display": "Giardia lamblia Ag [Presence] in Specimen by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41154-6",
+        "display": "Giardia lamblia IgG Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "7891-5",
+        "display": "Giardia lamblia IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41153-8",
+        "display": "Giardia lamblia IgM Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "7892-3",
+        "display": "Giardia lamblia IgM Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "92687-3",
-        "display": "Giardia lamblia DNA [Presence] in Stool by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Giardia lamblia-DNA [Nachweis] in Stuhl mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
+        "display": "Giardia lamblia DNA [Presence] in Stool by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "673-4",
-        "display": "Ova and parasites identified in Specimen by Light microscopy",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Wurmeier und Parasiten identifiziert in Probenmaterial mit Lichtmikroskopie"
-        } ]
-      }, {
-        "code": "92253-4",
-        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
-        } ]
-      } ]
-    } ]
+        "display": "Ova and parasites identified in Specimen by Light microscopy"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "10670-8",
+        "display": "Giardia lamblia [Presence] in Stool by Organism specific culture"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "9658-6",
+        "display": "Giardia lamblia IgA Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "91676-7",
+        "display": "Giardia lamblia Ag [Presence] in Stool by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "14210-9",
+        "display": "Giardia lamblia Ag [Presence] in Stool by Immunofluorescence"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "60544-4",
+        "display": "Giardia lamblia DNA [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "80683-6",
+        "display": "Giardia lamblia 18S rRNA [Presence] in Stool by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "6412-1",
+        "display": "Giardia lamblia Ag [Presence] in Stool by Immunoassay"
+      }
+    ]
   }
 }

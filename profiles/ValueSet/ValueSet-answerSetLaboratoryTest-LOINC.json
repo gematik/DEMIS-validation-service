@@ -1,0 +1,141 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetLaboratoryTest-LOINC",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetLaboratoryTest-LOINC",
+  "version": "1.0.1",
+  "name": "AnswerSetLaboratoryTest-LOINC",
+  "title": "LOINC-AnswerSet für Labortest",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-08-27",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet AnswerSetLaboratoryTest-LOINC enthält die LOINC-Answer-Codes für Labortests.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "LA11882-0",
+            "display": "Detected",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Nachgewiesen"
+              }
+            ]
+          },
+          {
+            "code": "LA11883-8",
+            "display": "Not detected",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Nicht nachgewiesen"
+              }
+            ]
+          },
+          {
+            "code": "LA11884-6",
+            "display": "Indeterminate",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Uneindeutig"
+              }
+            ]
+          },
+          {
+            "code": "LA11885-3",
+            "display": "Equivocal",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Grenzwertig"
+              }
+            ]
+          },
+          {
+            "code": "LA19422-7",
+            "display": "Weak positive",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Schwach positiv"
+              }
+            ]
+          },
+          {
+            "code": "LA6576-8",
+            "display": "Positive",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Positiv"
+              }
+            ]
+          },
+          {
+            "code": "LA6577-6",
+            "display": "Negative",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Negative"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-27T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "LA11885-3",
+        "display": "Equivocal"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "LA19422-7",
+        "display": "Weak positive"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "LA11884-6",
+        "display": "Indeterminate"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "LA11883-8",
+        "display": "Not detected"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "LA6577-6",
+        "display": "Negative"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "LA6576-8",
+        "display": "Positive"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "LA11882-0",
+        "display": "Detected"
+      }
+    ]
+  }
+}

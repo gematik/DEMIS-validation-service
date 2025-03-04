@@ -1,0 +1,549 @@
+{
+  "resourceType": "ValueSet",
+  "id": "resistanceMYTP",
+  "url": "https://demis.rki.de/fhir/ValueSet/resistanceMYTP",
+  "version": "1.0.3",
+  "name": "ResistanceMYTP",
+  "title": "Resistenz für Mycobacterium tuberculosis, Mycobacterium africanum, Mycobacterium bovis; Meldepflicht für den direkten Erregernachweis sowie nachfolgend für das Ergebnis der Resistenzbestimmung; vorab auch für den Nachweis säurefester Stäbchen im Sputum",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-10-14",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet ResistanceMYTP enthält die Codes der Resistenz für Mycobacterium tuberculosis, Mycobacterium africanum, Mycobacterium bovis; Meldepflicht für den direkten Erregernachweis sowie nachfolgend für das Ergebnis der Resistenzbestimmung; vorab auch für den Nachweis säurefester Stäbchen im Sputum.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "100057-9",
+            "display": "Prothionamide [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Prothionamid"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "18860-7",
+            "display": "Amikacin [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Amikacin"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "18872-2",
+            "display": "Capreomycin [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Capreomycin"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "18914-2",
+            "display": "cycloSERINE [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Cycloserin"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "18921-7",
+            "display": "Ethambutol [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Ethambutol"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "18934-0",
+            "display": "Isoniazid [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Isoniazid"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "18935-7",
+            "display": "Kanamycin [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Kanamycin"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "18959-7",
+            "display": "Ofloxacin [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Ofloxacin"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "18973-8",
+            "display": "Pyrazinamide [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Pyrazinamid"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "18974-6",
+            "display": "rifAMPin [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Rifampicin"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "18982-9",
+            "display": "Streptomycin [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Streptomycin"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "19149-4",
+            "display": "Rifabutin [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Rifabutin"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "20629-2",
+            "display": "levoFLOXacin [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Levofloxacin"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "23627-3",
+            "display": "Clofazimine [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Clofazimin"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "23629-9",
+            "display": "Para aminosalicylate [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Para-Aminosalicylat"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "29258-1",
+            "display": "Linezolid [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Linezolid"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "31039-1",
+            "display": "Moxifloxacin [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Moxifloxacin"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "93850-6",
+            "display": "Pretomanid [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Pretomanid"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "93851-4",
+            "display": "Delamanid [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Delamanid"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "94274-8",
+            "display": "Bedaquiline [Susceptibility]",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bedaquilin"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-10-14T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18973-8",
+        "display": "Pyrazinamide [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18934-0",
+        "display": "Isoniazid [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18974-6",
+        "display": "rifAMPin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18982-9",
+        "display": "Streptomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23629-9",
+        "display": "Para aminosalicylate [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "29258-1",
+        "display": "Linezolid [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18914-2",
+        "display": "cycloSERINE [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18921-7",
+        "display": "Ethambutol [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "19149-4",
+        "display": "Rifabutin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23627-3",
+        "display": "Clofazimine [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "93850-6",
+        "display": "Pretomanid [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "93851-4",
+        "display": "Delamanid [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18860-7",
+        "display": "Amikacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "31039-1",
+        "display": "Moxifloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "100057-9",
+        "display": "Prothionamide [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18959-7",
+        "display": "Ofloxacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "20629-2",
+        "display": "levoFLOXacin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18935-7",
+        "display": "Kanamycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "18872-2",
+        "display": "Capreomycin [Susceptibility]"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94274-8",
+        "display": "Bedaquiline [Susceptibility]"
+      }
+    ]
+  }
+}

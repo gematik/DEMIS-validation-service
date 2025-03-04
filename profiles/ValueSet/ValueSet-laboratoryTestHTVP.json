@@ -2,558 +2,638 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestHTVP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestHTVP",
-  "version": "1.3.0",
+  "version": "1.6.0",
   "name": "LaboratoryTestHTVP",
   "title": "Labortest für Hantavirus",
   "status": "active",
-  "date": "2023-05-04",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestHTVP enthält die Codes der Labortests für Hantavirus.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "101210-3",
-        "display": "Hantavirus puumala IgG Ab [Presence] in Serum or Plasma by Line blot"
-      }, {
-        "code": "101211-1",
-        "display": "Hantavirus sin nombre IgG Ab [Presence] in Serum or Plasma by Line blot"
-      }, {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "101210-3",
+            "display": "Hantavirus puumala IgG Ab [Presence] in Serum or Plasma by Line blot",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Puumala IgG-Antikörper [Nachweis] in Serum oder Plasma mittels Line-Blot"
+              }
+            ]
+          },
+          {
+            "code": "101212-9",
+            "display": "Hantavirus hantaan IgG Ab [Presence] in Serum or Plasma by Line blot",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Hantaan IgG-Antikörper [Nachweis] in Serum oder Plasma mittels Line-Blot"
+              }
+            ]
+          },
+          {
+            "code": "101215-2",
+            "display": "Hantavirus puumala IgM Ab [Presence] in Serum or Plasma by Line blot",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Puumala IgM-Antikörper [Nachweis] in Serum oder Plasma mittels Line-Blot"
+              }
+            ]
+          },
+          {
+            "code": "101217-8",
+            "display": "Hantavirus hantaan IgM Ab [Presence] in Serum or Plasma by Line blot",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Hantaan IgM-Antikörper [Nachweis] in Serum oder Plasma mittels Line-Blot"
+              }
+            ]
+          },
+          {
+            "code": "104662-2",
+            "display": "Hantavirus seoul IgM Ab [Presence] in Serum or Plasma by Immunoassay"
+          },
+          {
+            "code": "22308-1",
+            "display": "Hantavirus puumala IgG Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Puumala IgG-Antikörper [Titer] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "22309-9",
+            "display": "Hantavirus puumala IgM Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Puumala IgM-Antikörper [Titer] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "23867-5",
+            "display": "Hantavirus sin nombre IgG Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Sin Nombre IgG-Antikörper [Titer] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "23868-3",
+            "display": "Hantavirus sin nombre IgM Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Sin Nombre IgM-Antikörper [Titer] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "26620-5",
+            "display": "Hantavirus IgG Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus IgG-Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "26650-2",
+            "display": "Hantavirus sin nombre IgM Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Sin Nombre IgM-Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "26654-4",
+            "display": "Hantavirus sin nombre IgG Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Sin Nombre IgG-Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "32131-5",
+            "display": "Hantavirus IgM Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus IgM-Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "35392-0",
+            "display": "Hantavirus IgG Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus IgG-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "35393-8",
+            "display": "Hantavirus IgM Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus IgM-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
+          },
+          {
+            "code": "42503-3",
+            "display": "Hantavirus Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "70052-6",
+            "display": "Hantavirus hantaan IgG Ab [Presence] in Serum or Plasma by Immunofluorescence",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Hantaan IgG-Antikörper [Nachweis] in Serum oder Plasma mittels Immunfluoreszenztest"
+              }
+            ]
+          },
+          {
+            "code": "70053-4",
+            "display": "Hantavirus hantaan IgM Ab [Presence] in Serum or Plasma by Immunofluorescence",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Hantaan IgM-Antikörper [Nachweis] in Serum oder Plasma mittels Immunfluoreszenztest"
+              }
+            ]
+          },
+          {
+            "code": "70054-2",
+            "display": "Hantavirus dobrova IgM Ab [Presence] in Serum or Plasma by Immunofluorescence",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Dobrova IgM-Antikörper [Nachweis] in Serum oder Plasma mittels Immunfluoreszenztest"
+              }
+            ]
+          },
+          {
+            "code": "70055-9",
+            "display": "Hantavirus dobrova IgG Ab [Presence] in Serum or Plasma by Immunofluorescence",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Dobrova IgG-Antikörper [Nachweis] in Serum oder Plasma mittels Immunfluoreszenztest"
+              }
+            ]
+          },
+          {
+            "code": "70056-7",
+            "display": "Hantavirus saaremaa IgG Ab [Presence] in Serum or Plasma by Immunofluorescence",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Saaremaa IgG-Antikörper [Nachweis] in Serum oder Plasma mittels Immunfluoreszenztest"
+              }
+            ]
+          },
+          {
+            "code": "70057-5",
+            "display": "Hantavirus saaremaa IgM Ab [Presence] in Serum or Plasma by Immunofluorescence",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Saaremaa IgM-Antikörper [Nachweis] in Serum oder Plasma mittels Immunfluoreszenztest"
+              }
+            ]
+          },
+          {
+            "code": "70058-3",
+            "display": "Hantavirus puumala IgM Ab [Presence] in Serum or Plasma by Immunofluorescence",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Puumala IgM-Antikörper [Nachweis] in Serum oder Plasma mittels Immunfluoreszenztest"
+              }
+            ]
+          },
+          {
+            "code": "70059-1",
+            "display": "Hantavirus puumala IgG Ab [Presence] in Serum or Plasma by Immunofluorescence",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Puumala IgG-Antikörper [Nachweis] in Serum oder Plasma mittels Immunfluoreszenztest"
+              }
+            ]
+          },
+          {
+            "code": "70060-9",
+            "display": "Hantavirus seoul IgG Ab [Presence] in Serum or Plasma by Immunofluorescence",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Seoul IgG-Antikörper [Nachweis] in Serum oder Plasma mittels Immunfluoreszenztest"
+              }
+            ]
+          },
+          {
+            "code": "7896-4",
+            "display": "Hantavirus hantaan IgM Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Hantaan IgM-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "7899-8",
+            "display": "Hantavirus RNA [Presence] in Serum by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus RNA [Nachweis] in Serum mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "86520-4",
+            "display": "Hantavirus RNA [Presence] in Blood by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus RNA [Nachweis] in Blut mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "94100-5",
+            "display": "Hantavirus seoul IgM Ab [Presence] in Serum or Plasma by Line blot",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Seoul IgM-Antikörper [Nachweis] in Serum oder Plasma mittels Line-Blot"
+              }
+            ]
+          },
+          {
+            "code": "94101-3",
+            "display": "Hantavirus seoul IgG Ab [Presence] in Serum or Plasma by Line blot",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hantavirus Typ Seoul IgG-Antikörper [Nachweis] in Serum oder Plasma mittels Line-Blot"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22309-9",
+        "display": "Hantavirus puumala IgM Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32131-5",
+        "display": "Hantavirus IgM Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22308-1",
+        "display": "Hantavirus puumala IgG Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "26654-4",
+        "display": "Hantavirus sin nombre IgG Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "104662-2",
+        "display": "Hantavirus seoul IgM Ab [Presence] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "26650-2",
+        "display": "Hantavirus sin nombre IgM Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "70058-3",
+        "display": "Hantavirus puumala IgM Ab [Presence] in Serum or Plasma by Immunofluorescence"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "70057-5",
+        "display": "Hantavirus saaremaa IgM Ab [Presence] in Serum or Plasma by Immunofluorescence"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "70052-6",
+        "display": "Hantavirus hantaan IgG Ab [Presence] in Serum or Plasma by Immunofluorescence"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "70053-4",
+        "display": "Hantavirus hantaan IgM Ab [Presence] in Serum or Plasma by Immunofluorescence"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "70055-9",
+        "display": "Hantavirus dobrova IgG Ab [Presence] in Serum or Plasma by Immunofluorescence"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "70056-7",
+        "display": "Hantavirus saaremaa IgG Ab [Presence] in Serum or Plasma by Immunofluorescence"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "70059-1",
+        "display": "Hantavirus puumala IgG Ab [Presence] in Serum or Plasma by Immunofluorescence"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "7896-4",
+        "display": "Hantavirus hantaan IgM Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "70054-2",
+        "display": "Hantavirus dobrova IgM Ab [Presence] in Serum or Plasma by Immunofluorescence"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "86520-4",
+        "display": "Hantavirus RNA [Presence] in Blood by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94100-5",
+        "display": "Hantavirus seoul IgM Ab [Presence] in Serum or Plasma by Line blot"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "35392-0",
+        "display": "Hantavirus IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "94101-3",
+        "display": "Hantavirus seoul IgG Ab [Presence] in Serum or Plasma by Line blot"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "101212-9",
         "display": "Hantavirus hantaan IgG Ab [Presence] in Serum or Plasma by Line blot"
-      }, {
-        "code": "101213-7",
-        "display": "Hantavirus dobrava [Presence] in Serum or Plasma by Line blot"
-      }, {
-        "code": "101215-2",
-        "display": "Hantavirus puumala IgM Ab [Presence] in Serum or Plasma by Line blot"
-      }, {
-        "code": "101216-0",
-        "display": "Hantavirus sin nombre IgM Ab [Presence] in Serum or Plasma by Line blot"
-      }, {
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23867-5",
+        "display": "Hantavirus sin nombre IgG Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "101217-8",
         "display": "Hantavirus hantaan IgM Ab [Presence] in Serum or Plasma by Line blot"
-      }, {
-        "code": "101218-6",
-        "display": "Hantavirus dobrava IgM Ab [Presence] in Serum or Plasma by Line blot"
-      }, {
-        "code": "13289-4",
-        "display": "Hantavirus hantaan Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Hantaan-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "16928-4",
-        "display": "Hantavirus puumala IgG+IgM Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Puumala-IgG+IgM-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "21322-3",
-        "display": "Hantavirus puumala IgG Ab [Titer] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Puumala-IgG-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "21323-1",
-        "display": "Hantavirus puumala IgM Ab [Titer] in Serum by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Puumala-IgM-Antikörper [Titer] in Serum mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "22308-1",
-        "display": "Hantavirus puumala IgG Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Puumala-IgG-Antikörper [Titer] in Serum"
-        } ]
-      }, {
-        "code": "22309-9",
-        "display": "Hantavirus puumala IgM Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Puumala-IgM-Antikörper [Titer] in Serum"
-        } ]
-      }, {
-        "code": "23867-5",
-        "display": "Hantavirus sin nombre IgG Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Sin Nombre-IgG-Antikörper [Titer] in Serum"
-        } ]
-      }, {
-        "code": "23868-3",
-        "display": "Hantavirus sin nombre IgM Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Sin Nombre-IgM-Antikörper [Titer] in Serum"
-        } ]
-      }, {
-        "code": "26620-5",
-        "display": "Hantavirus IgG Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-IgG-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "26650-2",
-        "display": "Hantavirus sin nombre IgM Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Sin Nombre-IgM-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "26654-4",
-        "display": "Hantavirus sin nombre IgG Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Sin Nombre-IgG-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "31408-8",
-        "display": "Hantavirus sin nombre IgG Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Sin Nombre-IgG-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "31409-6",
-        "display": "Hantavirus sin nombre IgM Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Sin Nombre-IgM-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "32131-5",
-        "display": "Hantavirus IgM Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-IgM-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "33549-7",
-        "display": "Hantavirus sin nombre Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Sin Nombre-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "35392-0",
-        "display": "Hantavirus IgG Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-IgG-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "35393-8",
-        "display": "Hantavirus IgM Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-IgM-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
+        "display": "Hantavirus IgM Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "23868-3",
+        "display": "Hantavirus sin nombre IgM Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101210-3",
+        "display": "Hantavirus puumala IgG Ab [Presence] in Serum or Plasma by Line blot"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "26620-5",
+        "display": "Hantavirus IgG Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "42503-3",
-        "display": "Hantavirus Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "5046-8",
-        "display": "Hantavirus Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "60264-9",
-        "display": "Hantavirus Ab [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-Antikörper [Titer] in Serum"
-        } ]
-      }, {
-        "code": "65762-7",
-        "display": "Hantavirus Ag [Presence] in Tissue by Immune stain",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-Antigen [Nachweis] in Gewebe mit Immunfärbung"
-        } ]
-      }, {
-        "code": "70052-6",
-        "display": "Hantavirus hantaan IgG Ab [Presence] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Hantaan-IgG-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "70053-4",
-        "display": "Hantavirus hantaan IgM Ab [Presence] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Hantaan-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "70054-2",
-        "display": "Hantavirus dobrova IgM Ab [Presence] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Dobrova-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "70055-9",
-        "display": "Hantavirus dobrova IgG Ab [Presence] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Dobrova-IgG-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "70056-7",
-        "display": "Hantavirus saaremaa IgG Ab [Presence] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Saaremaa-IgG-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "70057-5",
-        "display": "Hantavirus saaremaa IgM Ab [Presence] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Saaremaa-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "70058-3",
-        "display": "Hantavirus puumala IgM Ab [Presence] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Puumala-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "70059-1",
-        "display": "Hantavirus puumala IgG Ab [Presence] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Puumala-IgG-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "70060-9",
-        "display": "Hantavirus seoul IgG Ab [Presence] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Seoul-IgG-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "7895-6",
-        "display": "Hantavirus hantaan IgG Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Hantaan-IgG-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "7896-4",
-        "display": "Hantavirus hantaan IgM Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Hantaan-IgM-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "7897-2",
-        "display": "Hantavirus puumala IgG Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Puumala-IgG-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "7898-0",
-        "display": "Hantavirus puumala IgM Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Puumala-IgM-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
+        "display": "Hantavirus Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101215-2",
+        "display": "Hantavirus puumala IgM Ab [Presence] in Serum or Plasma by Line blot"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "7899-8",
-        "display": "Hantavirus RNA [Presence] in Serum by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-RNA [Nachweis] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "86520-4",
-        "display": "Hantavirus RNA [Presence] in Blood by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-RNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "86536-0",
-        "display": "Hantavirus RNA [Presence] in Cerebral spinal fluid by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-RNA [Nachweis] in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "86537-8",
-        "display": "Hantavirus RNA [Presence] in Tissue by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-RNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "86538-6",
-        "display": "Hantavirus RNA [Presence] in Urine by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-RNA [Nachweis] in Urin mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "88216-7",
-        "display": "Hantavirus puumala RNA [Presence] in Urine by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Puumala-RNA [Nachweis] in Urin mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "88220-9",
-        "display": "Hantavirus puumala RNA [Presence] in Blood by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Puumala-RNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "91130-5",
-        "display": "Hantavirus RNA [Presence] in Lower respiratory specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-RNA [Nachweis] in Probenmaterial aus dem unteren Respirationstrakt mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "94099-9",
-        "display": "Hantavirus IgM Ab [Presence] in Serum or Plasma by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "94100-5",
-        "display": "Hantavirus seoul IgM Ab [Presence] in Serum or Plasma by Line blot",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Seoul-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Line-Blot"
-        } ]
-      }, {
-        "code": "94101-3",
-        "display": "Hantavirus seoul IgG Ab [Presence] in Serum or Plasma by Line blot",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hantavirus Typ Seoul-IgG-Antikörper [Nachweis] in Serum oder Plasma mit Line-Blot"
-        } ]
-      }, {
-        "code": "41461-5",
-        "display": "Virus identified in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Virus identifiziert in Probenmaterial"
-        } ]
-      }, {
-        "code": "92253-4",
-        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
-        } ]
-      } ]
-    } ]
+        "display": "Hantavirus RNA [Presence] in Serum by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "70060-9",
+        "display": "Hantavirus seoul IgG Ab [Presence] in Serum or Plasma by Immunofluorescence"
+      }
+    ]
   }
 }

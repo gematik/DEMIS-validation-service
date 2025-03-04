@@ -2,259 +2,48 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestHFAP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestHFAP",
-  "version": "1.4.0",
+  "version": "1.7.0",
   "name": "LaboratoryTestHFAP",
   "title": "Labortest für Andere Erreger hämorrhagischer Fieber",
   "status": "active",
-  "date": "2023-05-04",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestHFAP enthält die Codes der Labortests für Andere Erreger hämorrhagischer Fieber.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "41621-4",
-        "display": "Arenavirus RNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Arenavirus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "88190-4",
-        "display": "Crimean-Congo hemorrhagic fever virus IgM Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Krim-Kongo-Hämorrhagisches-Fieber-Virus-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "88191-2",
-        "display": "Crimean-Congo hemorrhagic fever virus IgG Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Krim-Kongo-Hämorrhagisches-Fieber-Virus-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "88192-0",
-        "display": "Crimean-Congo hemorrhagic fever virus RNA [Presence] in Serum by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Krim-Kongo-Hämorrhagisches-Fieber-Virus-RNA [Nachweis] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "23396-5",
-        "display": "Rift valley fever virus neutralizing antibody [Titer] in Serum by Neutralization test",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-neutralisierender Antikörper [Titer] in Serum mit Neutralisationstest"
-        } ]
-      }, {
-        "code": "23401-3",
-        "display": "Rift valley fever virus Ag [Presence] in Tissue by Neutralization test",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-Antigen [Nachweis] in Gewebe mit Neutralisationstest"
-        } ]
-      }, {
-        "code": "23402-1",
-        "display": "Rift valley fever virus Ag [Presence] in Blood by Neutralization test",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-Antigen [Nachweis] in Blut mit Neutralisationstest"
-        } ]
-      }, {
-        "code": "23403-9",
-        "display": "Rift valley fever virus Ag [Presence] in Specimen by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-Antigen [Nachweis] in Probenmaterial mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "23404-7",
-        "display": "Rift valley fever virus Ag [Presence] in Tissue by Immunofluorescence",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-Antigen [Nachweis] in Gewebe mit Immunfluoreszenztest"
-        } ]
-      }, {
-        "code": "23405-4",
-        "display": "Rift valley fever virus Ag [Presence] in Tissue by Immune diffusion (ID)",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-Antigen [Nachweis] in Gewebe mit Immundiffusion"
-        } ]
-      }, {
-        "code": "23406-2",
-        "display": "Rift valley fever virus Ag [Presence] in Serum by Immune diffusion (ID)",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-Antigen [Nachweis] in Serum mit Immundiffusion"
-        } ]
-      }, {
-        "code": "31951-7",
-        "display": "Rift valley fever virus Ag [Presence] in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-Antigen [Nachweis] in Probenmaterial"
-        } ]
-      }, {
-        "code": "71778-5",
-        "display": "Rift valley fever virus Ag [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-Antigen [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "71779-3",
-        "display": "Rift valley fever virus IgM Ab [Titer] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-IgM-Antikörper [Titer] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "71780-1",
-        "display": "Rift valley fever virus IgG Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "71781-9",
-        "display": "Rift valley fever virus IgM Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-IgM-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "71784-3",
-        "display": "Rift valley fever virus IgG Ab [Titer] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-IgG-Antikörper [Titer] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "96512-9",
-        "display": "Rift valley fever virus IgG Ab [Presence] in Specimen by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-IgG-Antikörper [Nachweis] in Probenmaterial mit Immunoassay"
-        } ]
-      }, {
-        "code": "96532-7",
-        "display": "Rift valley fever virus IgM Ab [Presence] in Specimen by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-IgM-Antikörper [Nachweis] in Probenmaterial mit Immunoassay"
-        } ]
-      }, {
-        "code": "97918-7",
-        "display": "Rift valley fever virus RNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Rift-Valley-Fieber-Virus-RNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "41461-5",
-        "display": "Virus identified in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Virus identifiziert in Probenmaterial"
-        } ]
-      }, {
-        "code": "92253-4",
-        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
-        } ]
-      } ]
-    } ]
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      }
+    ]
   }
 }

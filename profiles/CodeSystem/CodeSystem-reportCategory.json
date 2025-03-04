@@ -12,8 +12,10 @@
   "valueSet": "https://demis.rki.de/fhir/ValueSet/reportCategory",
   "content": "complete",
   "count": 1,
-  "concept": [ {
-    "code": "bedOccupancyReport",
-    "display": "Bettenbelegungsstatistik"
-  } ]
+  "concept": [
+    {
+      "code": "bedOccupancyReport",
+      "display": "Bettenbelegungsstatistik"
+    }
+  ]
 }

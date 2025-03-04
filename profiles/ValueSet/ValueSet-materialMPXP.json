@@ -2,251 +2,322 @@
   "resourceType": "ValueSet",
   "id": "materialMPXP",
   "url": "https://demis.rki.de/fhir/ValueSet/materialMPXP",
-  "version": "1.2.0",
+  "version": "1.6.1",
   "name": "MaterialMPXP",
   "title": "Material für Orthopockenviren (Mpoxvirus)",
   "status": "active",
-  "date": "2023-05-30",
+  "experimental": false,
+  "date": "2024-09-09",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet MaterialMPXP enthält die Codes der Materialien für Orthopockenviren (Mpoxvirus).",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
   "compose": {
-    "include": [ {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
-      "concept": [ {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "119364003",
-        "display": "Serum specimen (specimen)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "119342007",
+            "display": "Saliva specimen (specimen)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Saliva specimen (specimen)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Speichel"
+              }
+            ]
           },
-          "value": "Serum specimen (specimen)"
-        }, {
-          "language": "de-DE",
-          "value": "Serum"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "122592007",
-        "display": "Acellular blood (serum or plasma) specimen (specimen)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "119376003",
+            "display": "Tissue specimen (specimen)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Tissue specimen (specimen)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Gewebeprobe"
+              }
+            ]
           },
-          "value": "Acellular blood (serum or plasma) specimen (specimen)"
-        }, {
-          "language": "de-DE",
-          "value": "Blut, azellulär (Serum oder Plasma)"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "119361006",
-        "display": "Plasma specimen (specimen)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "122575003",
+            "display": "Urine specimen (specimen)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Urine specimen (specimen)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Urin"
+              }
+            ]
           },
-          "value": "Plasma specimen (specimen)"
-        }, {
-          "language": "de-DE",
-          "value": "Plasma"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "119297000",
-        "display": "Blood specimen (specimen)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "123038009",
+            "display": "Specimen (specimen)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Specimen (specimen)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Anderes Untersuchungsmaterial"
+              }
+            ]
           },
-          "value": "Blood specimen (specimen)"
-        }, {
-          "language": "de-DE",
-          "value": "Blut"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "257261003",
+            "display": "Swab (specimen)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Swab (specimen)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Abstrich"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "258482009",
+            "display": "Vesicle fluid specimen (specimen)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vesicle fluid specimen (specimen)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Bläschenflüssigkeit"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "258559009",
+            "display": "Gingivocrevicular fluid specimen (specimen)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Gingivocrevicular fluid specimen (specimen)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Zahntaschenflüssigkeit"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "309066003",
+            "display": "Skin biopsy specimen (specimen)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Skin biopsy specimen (specimen)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Hautbiopsie"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "472862007",
+            "display": "Swab from lesion of skin (specimen)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Swab from lesion of skin (specimen)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Hautläsionsabstrich"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "69640009",
+            "display": "Crust (morphologic abnormality)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Crust (morphologic abnormality)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Krusten (Hauteffloreszenz)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-09T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "258482009",
-        "display": "Vesicle fluid specimen (specimen)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vesicle fluid specimen (specimen)"
-        }, {
-          "language": "de-DE",
-          "value": "Bläschenflüssigkeit"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+        "display": "Vesicle fluid specimen (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "472862007",
-        "display": "Swab from lesion of skin (specimen)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Swab from lesion of skin (specimen)"
-        }, {
-          "language": "de-DE",
-          "value": "Hautläsion Abstrich"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "309066003",
-        "display": "Skin biopsy specimen (specimen)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Skin biopsy specimen (specimen)"
-        }, {
-          "language": "de-DE",
-          "value": "Hautbiopsie"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "258529004",
-        "display": "Throat swab (specimen)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Throat swab (specimen)"
-        }, {
-          "language": "de-DE",
-          "value": "Rachenabstrich"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "69640009",
-        "display": "Crust (morphologic abnormality)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Crust (morphologic abnormality)"
-        }, {
-          "language": "de-DE",
-          "value": "Krusten (Hauteffloreszenz)"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 0
-        } ],
-        "code": "122575003",
-        "display": "Urine specimen (specimen)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Urine specimen (specimen)"
-        }, {
-          "language": "de-DE",
-          "value": "Urin"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "119376003",
-        "display": "Tissue specimen (specimen)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Tissue specimen (specimen)"
-        }, {
-          "language": "de-DE",
-          "value": "Gewebe"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+        "display": "Swab from lesion of skin (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "119342007",
+        "display": "Saliva specimen (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "257261003",
-        "display": "Swab (specimen)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Swab (specimen)"
-        }, {
-          "language": "de-DE",
-          "value": "Abstrich"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+        "display": "Swab (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "258559009",
+        "display": "Gingivocrevicular fluid specimen (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "123038009",
-        "display": "Specimen (specimen)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Specimen (specimen)"
-        }, {
-          "language": "de-DE",
-          "value": "Anderes Untersuchungsmaterial"
-        } ]
-      } ]
-    } ]
+        "display": "Specimen (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "69640009",
+        "display": "Crust (morphologic abnormality)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "119376003",
+        "display": "Tissue specimen (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "309066003",
+        "display": "Skin biopsy specimen (specimen)"
+      }
+    ]
   }
 }

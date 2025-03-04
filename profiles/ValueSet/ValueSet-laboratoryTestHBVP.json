@@ -2,1557 +2,668 @@
   "resourceType": "ValueSet",
   "id": "laboratoryTestHBVP",
   "url": "https://demis.rki.de/fhir/ValueSet/laboratoryTestHBVP",
-  "version": "1.3.0",
+  "version": "1.6.0",
   "name": "LaboratoryTestHBVP",
   "title": "Labortest für Hepatitis-B-Virus; Meldepflicht für alle Nachweise",
   "status": "active",
-  "date": "2023-05-04",
+  "experimental": false,
+  "date": "2024-08-26",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet LaboratoryTestHBVP enthält die Codes der Labortests für Hepatitis-B-Virus; Meldepflicht für alle Nachweise.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "concept": [ {
-        "code": "99385-7",
-        "display": "Hepatitis B virus surface Ag [log units/volume] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [log Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "10673-2",
-        "display": "Hepatitis B virus core Ag [Presence] in Tissue by Immune stain",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-Antigen [Nachweis] in Gewebe mit Immunfärbung"
-        } ]
-      }, {
-        "code": "10674-0",
-        "display": "Hepatitis B virus surface Ag [Presence] in Tissue by Immune stain",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Nachweis] in Gewebe mit Immunfärbung"
-        } ]
-      }, {
-        "code": "10675-7",
-        "display": "Hepatitis B virus surface Ag [Presence] in Tissue by Orcein stain",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Nachweis] in Gewebe mit Orcein-Färbung"
-        } ]
-      }, {
-        "code": "11258-1",
-        "display": "Hepatitis B virus DNA [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "13919-6",
-        "display": "Hepatitis B virus core IgG Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-IgG-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "13952-7",
-        "display": "Hepatitis B virus core Ab [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "13953-5",
-        "display": "Hepatitis B virus e Ab [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "13954-3",
-        "display": "Hepatitis B virus e Ag [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antigen [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "16933-4",
-        "display": "Hepatitis B virus core Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "16934-2",
-        "display": "Hepatitis B virus polymerase DNA [Presence] in Blood by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Polymerase-DNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "20442-0",
-        "display": "Hepatitis B virus DNA [#/volume] (viral load) in Serum by Probe with signal amplification",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [#/Volumen] (Viruslast) in Serum mit Sondendetektion mit Signalamplifikation"
-        } ]
-      }, {
-        "code": "21005-4",
-        "display": "Hepatitis B virus core Ab [Units/volume] in Serum from Donor by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-Antikörper [Einheiten/Volumen] in Serum von Donor mit Immunoassay"
-        } ]
-      }, {
-        "code": "22316-4",
-        "display": "Hepatitis B virus core Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "22317-2",
-        "display": "Hepatitis B virus core Ab [Units/volume] in Serum from Donor",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-Antikörper [Einheiten/Volumen] in Serum von Donor"
-        } ]
-      }, {
-        "code": "22318-0",
-        "display": "Hepatitis B virus core IgG Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-IgG-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "22319-8",
-        "display": "Hepatitis B virus core IgM Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-IgM-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "22320-6",
-        "display": "Hepatitis B virus e Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "22321-4",
-        "display": "Hepatitis B virus e Ab [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antikörper [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "23869-1",
-        "display": "Hepatitis B virus DNA [Mass/volume] (viral load) in Serum by Probe",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Masse/Volumen] (Viruslast) in Serum mit Sonde"
-        } ]
-      }, {
-        "code": "24113-3",
-        "display": "Hepatitis B virus core IgM Ab [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-IgM-Antikörper [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "29610-3",
-        "display": "Hepatitis B virus DNA [Presence] in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "29615-2",
-        "display": "Hepatitis B virus DNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [#/Volumen] (Viruslast) in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "29900-8",
-        "display": "Hepatitis B virus DNA [Mass/volume] (viral load) in Serum by Probe with signal amplification",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Masse/Volumen] (Viruslast) in Serum mit Sondendetektion mit Signalamplifikation"
-        } ]
-      }, {
-        "code": "31204-1",
-        "display": "Hepatitis B virus core IgM Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-IgM-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "31844-4",
-        "display": "Hepatitis B virus e Ag [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antigen [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "31845-1",
-        "display": "Hepatitis B virus e Ag [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antigen [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "32178-6",
-        "display": "Hepatitis B virus e Ag [Titer] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antigen [Titer] in Serum"
-        } ]
-      }, {
-        "code": "32366-7",
-        "display": "Hepatitis B virus genotype [Identifier] in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Genotyp [Nachweis oder Identität] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "32685-0",
-        "display": "Hepatitis B virus core IgG Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-IgG-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "32686-8",
-        "display": "Hepatitis B virus DNA [Mass/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Masse/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "33463-1",
-        "display": "Hepatitis B virus e IgG Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "33629-7",
-        "display": "Hepatitis B virus sequencing [Identifier] in Serum by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Sequenzierung [Nachweis oder Identität] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "33633-9",
-        "display": "Hepatitis B virus precore TAG [Presence] in Serum by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Precore TAG-Mutation [Nachweis] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "39005-4",
-        "display": "Hepatitis B virus core Ab [Presence] in Body fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-Antikörper [Nachweis] in Körperflüssigkeit"
-        } ]
-      }, {
-        "code": "39006-2",
-        "display": "Hepatitis B virus e Ab [Presence] in Body fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antikörper [Nachweis] in Körperflüssigkeit"
-        } ]
-      }, {
-        "code": "39007-0",
-        "display": "Hepatitis B virus e Ag [Presence] in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antigen [Nachweis] in Probenmaterial"
-        } ]
-      }, {
-        "code": "40459-0",
-        "display": "Hepatitis B virus DNA [Log #/volume] (viral load) in Serum by Probe with signal amplification",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [log #/Volumen] (Viruslast) in Serum mit Sondendetektion mit Signalamplifikation"
-        } ]
-      }, {
-        "code": "40725-4",
-        "display": "Hepatitis B virus core IgG Ab [Presence] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-IgG-Antikörper [Nachweis] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "41151-2",
-        "display": "Hepatitis B virus e IgG Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-IgG-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "42322-8",
-        "display": "Hepatitis B virus S+pol gene [Identifier] in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus S+pol-Gen [Nachweis oder Identität] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "42595-9",
-        "display": "Hepatitis B virus DNA [Units/volume] (viral load) in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Einheiten/Volumen] (Viruslast) in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "43279-9",
-        "display": "Hepatitis B Virus YMDD [Presence] in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus YMDD [Nachweis] in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "45161-7",
-        "display": "Hepatitis B virus DNA [Log #/volume] (viral load) in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [log #/Volumen] (Viruslast) in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "47216-7",
-        "display": "Hepatitis B virus DNA [#/volume] (viral load) in Serum or Plasma by Probe and target amplification method detection limit = 200 copies/ml",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [#/Volumen] (Viruslast) in Serum oder Plasma mit Zielfragmentamplifikation Nachweisgrenze = 200 Kopien/ml"
-        } ]
-      }, {
-        "code": "47358-7",
-        "display": "Hepatitis B virus core Ab [Presence] in Serum from Donor by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-Antikörper [Nachweis] in Serum von Donor mit Immunoassay"
-        } ]
-      }, {
-        "code": "47364-5",
-        "display": "Hepatitis B virus surface Ag [Presence] in Serum from Donor by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Nachweis] in Serum von Donor mit Immunoassay"
-        } ]
-      }, {
-        "code": "47440-3",
-        "display": "Hepatitis B virus core Ab [Presence] in Serum from Donor",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-Antikörper [Nachweis] in Serum von Donor"
-        } ]
-      }, {
-        "code": "48398-2",
-        "display": "Hepatitis B virus DNA [log units/volume] (viral load) in Serum or Plasma by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [log Einheiten/Volumen] (Viruslast) in Serum oder Plasma mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "48650-6",
-        "display": "Hepatitis B virus DNA [#/volume] (viral load) in Serum or Plasma by Probe and target amplification method detection limit = 500 copies/mL",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [#/Volumen] (Viruslast) in Serum oder Plasma mit Zielfragmentamplifikation Nachweisgrenze = 500 Kopien/ml"
-        } ]
-      }, {
-        "code": "49357-7",
-        "display": "Hepatitis B virus DNA [Units/volume] (viral load) in Cerebral spinal fluid by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Einheiten/Volumen] (Viruslast) in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49358-5",
-        "display": "Hepatitis B virus DNA [Units/volume] (viral load) in Bone marrow by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Einheiten/Volumen] (Viruslast) in Knochenmark mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49359-3",
-        "display": "Hepatitis B virus DNA [Log #/volume] (viral load) in Bone marrow by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [log #/Volumen] (Viruslast) in Knochenmark mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49360-1",
-        "display": "Hepatitis B virus DNA [Units/volume] (viral load) in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Einheiten/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49361-9",
-        "display": "Hepatitis B virus DNA [Log #/volume] (viral load) in Tissue by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [log #/Volumen] (Viruslast) in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49362-7",
-        "display": "Hepatitis B virus DNA [#/volume] (viral load) in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [#/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49363-5",
-        "display": "Hepatitis B virus DNA [#/volume] (viral load) in Cerebral spinal fluid by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [#/Volumen] (Viruslast) in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49364-3",
-        "display": "Hepatitis B virus DNA [#/volume] (viral load) in Bone marrow by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [#/Volumen] (Viruslast) in Knochenmark mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49365-0",
-        "display": "Hepatitis B virus DNA [#/volume] (viral load) in Tissue by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [#/Volumen] (Viruslast) in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49366-8",
-        "display": "Hepatitis B virus DNA [Log #/volume] (viral load) in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [log #/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49367-6",
-        "display": "Hepatitis B virus DNA [Log #/volume] (viral load) in Cerebral spinal fluid by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [log #/Volumen] (Viruslast) in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49368-4",
-        "display": "Hepatitis B virus DNA [Units/volume] (viral load) in Tissue by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Einheiten/Volumen] (Viruslast) in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49600-0",
-        "display": "Hepatitis B virus DNA [log units/volume] (viral load) in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [log Einheiten/Volumen] (Viruslast) in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49601-8",
-        "display": "Hepatitis B virus DNA [log units/volume] (viral load) in Cerebral spinal fluid by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [log Einheiten/Volumen] (Viruslast) in Zerebrospinalflüssigkeit mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49602-6",
-        "display": "Hepatitis B virus DNA [log units/volume] (viral load) in Bone marrow by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [log Einheiten/Volumen] (Viruslast) in Knochenmark mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49606-7",
-        "display": "Hepatitis B virus DNA [log units/volume] (viral load) in Tissue by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [log Einheiten/Volumen] (Viruslast) in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "49877-4",
-        "display": "Hepatitis B virus codon 173 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus codon 173 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "49878-2",
-        "display": "Hepatitis B virus codon 180 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus codon 180 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "49879-0",
-        "display": "Hepatitis B virus codon 181 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus codon 181 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "49880-8",
-        "display": "Hepatitis B virus codon 204 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus codon 204 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "49881-6",
-        "display": "Hepatitis B virus codon 236 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus codon 236 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "49882-4",
-        "display": "Hepatitis B virus codon 80 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus codon 80 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "5007-0",
-        "display": "Hepatitis B virus DNA [Presence] in Blood by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Nachweis] in Blut mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "5008-8",
-        "display": "Hepatitis B virus DNA [Presence] in Tissue by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Nachweis] in Gewebe mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "5009-6",
-        "display": "Hepatitis B virus DNA [Presence] in Specimen by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Nachweis] in Probenmaterial mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "50967-9",
-        "display": "Hepatitis B virus surface Ag [Presence] in Blood from Donor by Neutralization test",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Nachweis] in Blut von Donor mit Neutralisationstest"
-        } ]
-      }, {
-        "code": "51658-3",
-        "display": "Hepatitis B virus core IgM Ab [Presence] in Body fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-IgM-Antikörper [Nachweis] in Körperflüssigkeit"
-        } ]
-      }, {
-        "code": "51659-1",
-        "display": "Hepatitis B virus surface Ag [Presence] in Body fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Nachweis] in Körperflüssigkeit"
-        } ]
-      }, {
-        "code": "5185-4",
-        "display": "Hepatitis B virus core IgM Ab [Units/volume] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-IgM-Antikörper [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "5186-2",
-        "display": "Hepatitis B virus core IgM Ab [Units/volume] in Serum by Radioimmunoassay (RIA)",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-IgM-Antikörper [Einheiten/Volumen] in Serum mit Radioimmunoassay"
-        } ]
-      }, {
-        "code": "5187-0",
-        "display": "Hepatitis B virus core Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "5188-8",
-        "display": "Hepatitis B virus core Ab [Units/volume] in Serum by Radioimmunoassay (RIA)",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-Antikörper [Einheiten/Volumen] in Serum mit Radioimmunoassay"
-        } ]
-      }, {
-        "code": "5189-6",
-        "display": "Hepatitis B virus e Ab [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antikörper [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "5190-4",
-        "display": "Hepatitis B virus e Ab [Units/volume] in Serum by Radioimmunoassay (RIA)",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antikörper [Einheiten/Volumen] in Serum mit Radioimmunoassay"
-        } ]
-      }, {
-        "code": "5191-2",
-        "display": "Hepatitis B virus e Ag [Units/volume] in Serum by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antigen [Einheiten/Volumen] in Serum mit Immunoassay"
-        } ]
-      }, {
-        "code": "51914-0",
-        "display": "Hepatitis B virus core IgG+IgM Ab [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-IgG+IgM-Antikörper [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "5192-0",
-        "display": "Hepatitis B virus e Ag [Presence] in Serum by Radioimmunoassay (RIA)",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antigen [Nachweis] in Serum mit Radioimmunoassay"
-        } ]
-      }, {
-        "code": "5195-3",
-        "display": "Hepatitis B virus surface Ag [Presence] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Nachweis] in Serum"
-        } ]
-      }, {
-        "code": "5196-1",
-        "display": "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Nachweis] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "5197-9",
-        "display": "Hepatitis B virus surface Ag [Presence] in Serum by Radioimmunoassay (RIA)",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Nachweis] in Serum mit Radioimmunoassay"
-        } ]
-      }, {
-        "code": "54210-0",
-        "display": "Hepatitis B virus basal core promoter mutation [Identifier] in Serum by NAA with probe detection",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus basale Kernpromoter-Mutation [Nachweis oder Identität] in Serum mit Nukleinsäureamplifikation mit Sondendetektion"
-        } ]
-      }, {
-        "code": "58452-4",
-        "display": "Hepatitis B virus surface Ag [Units/volume] in Serum",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Einheiten/Volumen] in Serum"
-        } ]
-      }, {
-        "code": "61154-1",
-        "display": "Hepatitis B virus codon L180M [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon L180M [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61155-8",
-        "display": "Hepatitis B virus codon L80V [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon L80V [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61156-6",
-        "display": "Hepatitis B virus codon V173L [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon V173L [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61157-4",
-        "display": "Hepatitis B virus codon M204V [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon M204V [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61158-2",
-        "display": "Hepatitis B virus codon M204I [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon M204I [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61159-0",
-        "display": "Hepatitis B virus codon M204S [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon M204S [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61160-8",
-        "display": "Hepatitis B virus codon A181V [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon A181V [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61161-6",
-        "display": "Hepatitis B virus codon A181T [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon A181T [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61162-4",
-        "display": "Hepatitis B virus codon N236T [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon N236T [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61163-2",
-        "display": "Hepatitis B virus codon A194T [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon A194T [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61164-0",
-        "display": "Hepatitis B virus codon T184S [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon T184S [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61165-7",
-        "display": "Hepatitis B virus codon T184I [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon T184I [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61166-5",
-        "display": "Hepatitis B virus codon S202G [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon S202G [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61167-3",
-        "display": "Hepatitis B virus codon S202C [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon S202C [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61168-1",
-        "display": "Hepatitis B virus codon S202I [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon S202I [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61169-9",
-        "display": "Hepatitis B virus codon I233V [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon I233V [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61170-7",
-        "display": "Hepatitis B virus codon M250V [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon M250V [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61171-5",
-        "display": "Hepatitis B virus codon M250I [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon M250I [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61172-3",
-        "display": "Hepatitis B virus codon M250L [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon M250L [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "61173-1",
-        "display": "Hepatitis B virus codon L80I [Presence] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon L80I [Nachweis] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "63557-3",
-        "display": "Hepatitis B virus surface Ag [Units/volume] in Serum or Plasma by Immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Einheiten/Volumen] in Serum oder Plasma mit Immunoassay"
-        } ]
-      }, {
-        "code": "6421-2",
-        "display": "Hepatitis B virus rRNA [Presence] in Specimen by Probe",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-rRNA [Nachweis] in Probenmaterial mit Sonde"
-        } ]
-      }, {
-        "code": "65633-0",
-        "display": "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Confirmatory method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Nachweis] in Serum oder Plasma mit Bestätigungstest"
-        } ]
-      }, {
-        "code": "70154-0",
-        "display": "Hepatitis B virus surface Ag in Serum or Plasma by Confirmatory method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen in Serum oder Plasma mit Bestätigungstest"
-        } ]
-      }, {
-        "code": "72840-2",
-        "display": "Hepatitis B virus codon 250 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon 250 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "72841-0",
-        "display": "Hepatitis B virus codon 237 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon 237 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "72842-8",
-        "display": "Hepatitis B virus codon 233 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon 233 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "72843-6",
-        "display": "Hepatitis B virus codon 215 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon 215 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "72844-4",
-        "display": "Hepatitis B virus codon 214 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon 214 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "72845-1",
-        "display": "Hepatitis B virus codon 202 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon 202 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "72846-9",
-        "display": "Hepatitis B virus codon 194 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon 194 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "72847-7",
-        "display": "Hepatitis B virus codon 191 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon 191 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "72848-5",
-        "display": "Hepatitis B virus codon 184 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon 184 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "72849-3",
-        "display": "Hepatitis B virus codon 169 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon 169 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "72850-1",
-        "display": "Hepatitis B virus codon 85 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon 85 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "72851-9",
-        "display": "Hepatitis B virus codon 84 [Identifier] by Genotype method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus Codon 84 [Nachweis oder Identität] mit genotypischer Methode"
-        } ]
-      }, {
-        "code": "75378-0",
-        "display": "Hepatitis B virus core Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Core-Antikörper [Nachweis] in Serum, Plasma oder Blut mit Immunoassay-Schnelltest"
-        } ]
-      }, {
-        "code": "75407-7",
-        "display": "Hepatitis B virus e Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antikörper [Nachweis] in Serum, Plasma oder Blut mit Immunoassay-Schnelltest"
-        } ]
-      }, {
-        "code": "75408-5",
-        "display": "Hepatitis B virus e Ag [Presence] in Serum, Plasma or Blood by Rapid immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus e-Antigen [Nachweis] in Serum, Plasma oder Blut mit Immunoassay-Schnelltest"
-        } ]
-      }, {
-        "code": "75410-1",
-        "display": "Hepatitis B virus surface Ag [Presence] in Serum, Plasma or Blood by Rapid immunoassay",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Nachweis] in Serum, Plasma oder Blut mit Immunoassay-Schnelltest"
-        } ]
-      }, {
-        "code": "95235-8",
-        "display": "Hepatitis B virus Ab [Interpretation] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Antikörper [Interpretation] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "95236-6",
-        "display": "Hepatitis B virus DNA [Interpretation] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-DNA [Interpretation] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "42505-8",
-        "display": "Hepatitis B virus surface Ag [Presence] in Cerebral spinal fluid",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Nachweis] in Zerebrospinalflüssigkeit"
-        } ]
-      }, {
-        "code": "77739-1",
-        "display": "Mother's Hepatitis B virus surface Ag status",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen von der Mutter"
-        } ]
-      }, {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "code": "11258-1",
+            "display": "Hepatitis B virus DNA [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus DNA [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "13952-7",
+            "display": "Hepatitis B virus core Ab [Presence] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-Core Antikörper [Nachweis] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
+          },
+          {
+            "code": "13953-5",
+            "display": "Hepatitis B virus e Ab [Presence] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus e Antikörper [Nachweis] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
+          },
+          {
+            "code": "13954-3",
+            "display": "Hepatitis B virus e Ag [Presence] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus e Antigen [Nachweis] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
+          },
+          {
+            "code": "16933-4",
+            "display": "Hepatitis B virus core Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-Core Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "16935-9",
+            "display": "Hepatitis B virus surface Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-surface Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "22318-0",
+            "display": "Hepatitis B virus core IgG Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-Core IgG-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "22319-8",
+            "display": "Hepatitis B virus core IgM Ab [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-Core IgM-Antikörper [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "22320-6",
+            "display": "Hepatitis B virus e Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus e Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "22322-2",
+            "display": "Hepatitis B virus surface Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-surface Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "24113-3",
+            "display": "Hepatitis B virus core IgM Ab [Presence] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-Core IgM-Antikörper [Nachweis] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
+          },
+          {
+            "code": "29610-3",
+            "display": "Hepatitis B virus DNA [Presence] in Serum or Plasma by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus DNA [Nachweis] in Serum oder Plasma mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "29615-2",
+            "display": "Hepatitis B virus DNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus DNA [#/Volumen] (Viruslast) in Serum oder Plasma mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "31204-1",
+            "display": "Hepatitis B virus core IgM Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-Core IgM-Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "31844-4",
+            "display": "Hepatitis B virus e Ag [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus e Antigen [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "31845-1",
+            "display": "Hepatitis B virus e Ag [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus e Antigen [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "32019-2",
+            "display": "Hepatitis B virus surface Ab [Titer] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-surface Antikörper [Titer] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "32366-7",
+            "display": "Hepatitis B virus genotype [Identifier] in Serum or Plasma by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus Genotyp [Nachweis oder Identität] in Serum oder Plasma mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "32685-0",
+            "display": "Hepatitis B virus core IgG Ab [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-Core IgG-Antikörper [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "39007-0",
+            "display": "Hepatitis B virus e Ag [Presence] in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus e Antigen [Nachweis] in Probenmaterial"
+              }
+            ]
+          },
+          {
+            "code": "41852-5",
+            "display": "Microorganism or agent identified in Specimen",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Mikroorganismus oder Erreger identifiziert in Probenmaterial"
+              }
+            ]
+          },
+          {
+            "code": "42595-9",
+            "display": "Hepatitis B virus DNA [Units/volume] (viral load) in Serum or Plasma by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus DNA [Einheiten/Volumen] (Viruslast) in Serum oder Plasma mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "49360-1",
+            "display": "Hepatitis B virus DNA [Units/volume] (viral load) in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus DNA [Einheiten/Volumen] (Viruslast) in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "49362-7",
+            "display": "Hepatitis B virus DNA [#/volume] (viral load) in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus DNA [#/Volumen] (Viruslast) in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "5009-6",
+            "display": "Hepatitis B virus DNA [Presence] in Specimen by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus DNA [Nachweis] in Probenmaterial mittels Nukleinsäureamplifikation mit Sondendetektion"
+              }
+            ]
+          },
+          {
+            "code": "5195-3",
+            "display": "Hepatitis B virus surface Ag [Presence] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-surface Antigen [Nachweis] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "5196-1",
+            "display": "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-surface Antigen [Nachweis] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
+          },
+          {
+            "code": "58452-4",
+            "display": "Hepatitis B virus surface Ag [Units/volume] in Serum",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-surface Antigen [Einheiten/Volumen] in Serum"
+              }
+            ]
+          },
+          {
+            "code": "63557-3",
+            "display": "Hepatitis B virus surface Ag [Units/volume] in Serum or Plasma by Immunoassay",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-surface Antigen [Einheiten/Volumen] in Serum oder Plasma mittels Immunoassay"
+              }
+            ]
+          },
+          {
+            "code": "65633-0",
+            "display": "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Confirmatory method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-surface Antigen [Nachweis] in Serum oder Plasma mittels Bestätigungstest"
+              }
+            ]
+          },
+          {
+            "code": "70154-0",
+            "display": "Hepatitis B virus surface Ag in Serum or Plasma by Confirmatory method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-surface Antigen in Serum oder Plasma mittels Bestätigungstest"
+              }
+            ]
+          },
+          {
+            "code": "7905-3",
+            "display": "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Neutralization test",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "LONG_COMMON_NAME"
+                },
+                "value": "Hepatitis-B-Virus-surface Antigen [Nachweis] in Serum oder Plasma mittels Neutralisationstest"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
         "code": "7905-3",
-        "display": "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Neutralization test",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Nachweis] in Serum oder Plasma mit Neutralisationstest"
-        } ]
-      }, {
-        "code": "95234-1",
-        "display": "Hepatitis B virus surface Ag [Interpretation] in Serum or Plasma",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Hepatitis-B-Virus-Oberflächenantigen [Interpretation] in Serum oder Plasma"
-        } ]
-      }, {
-        "code": "41461-5",
-        "display": "Virus identified in Specimen",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Virus identifiziert in Probenmaterial"
-        } ]
-      }, {
-        "code": "92253-4",
-        "display": "Microorganism identified in Isolate or Specimen by Molecular genetics method",
-        "designation": [ {
-          "language": "de-DE",
-          "use": {
-            "system": "http://loinc.org",
-            "code": "LONG_COMMON_NAME"
-          },
-          "value": "Mikroorganismus identifiziert in Isolat oder Probenmaterial, molekulargenetisch"
-        } ]
-      } ]
-    } ]
+        "display": "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Neutralization test"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "24113-3",
+        "display": "Hepatitis B virus core IgM Ab [Presence] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "16933-4",
+        "display": "Hepatitis B virus core Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "65633-0",
+        "display": "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "31204-1",
+        "display": "Hepatitis B virus core IgM Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "29610-3",
+        "display": "Hepatitis B virus DNA [Presence] in Serum or Plasma by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "70154-0",
+        "display": "Hepatitis B virus surface Ag in Serum or Plasma by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "29615-2",
+        "display": "Hepatitis B virus DNA [#/volume] (viral load) in Serum or Plasma by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "49362-7",
+        "display": "Hepatitis B virus DNA [#/volume] (viral load) in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "58452-4",
+        "display": "Hepatitis B virus surface Ag [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "42595-9",
+        "display": "Hepatitis B virus DNA [Units/volume] (viral load) in Serum or Plasma by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32685-0",
+        "display": "Hepatitis B virus core IgG Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "11258-1",
+        "display": "Hepatitis B virus DNA [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "5196-1",
+        "display": "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "49360-1",
+        "display": "Hepatitis B virus DNA [Units/volume] (viral load) in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "5195-3",
+        "display": "Hepatitis B virus surface Ag [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "39007-0",
+        "display": "Hepatitis B virus e Ag [Presence] in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22319-8",
+        "display": "Hepatitis B virus core IgM Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32019-2",
+        "display": "Hepatitis B virus surface Ab [Titer] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "41852-5",
+        "display": "Microorganism or agent identified in Specimen"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "31845-1",
+        "display": "Hepatitis B virus e Ag [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "31844-4",
+        "display": "Hepatitis B virus e Ag [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22318-0",
+        "display": "Hepatitis B virus core IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "13952-7",
+        "display": "Hepatitis B virus core Ab [Presence] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22320-6",
+        "display": "Hepatitis B virus e Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "13953-5",
+        "display": "Hepatitis B virus e Ab [Presence] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "13954-3",
+        "display": "Hepatitis B virus e Ag [Presence] in Serum or Plasma by Immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "22322-2",
+        "display": "Hepatitis B virus surface Ab [Presence] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "32366-7",
+        "display": "Hepatitis B virus genotype [Identifier] in Serum or Plasma by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "16935-9",
+        "display": "Hepatitis B virus surface Ab [Units/volume] in Serum"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "5009-6",
+        "display": "Hepatitis B virus DNA [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "63557-3",
+        "display": "Hepatitis B virus surface Ag [Units/volume] in Serum or Plasma by Immunoassay"
+      }
+    ]
   }
 }

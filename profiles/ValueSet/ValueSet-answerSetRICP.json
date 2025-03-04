@@ -2,485 +2,74 @@
   "resourceType": "ValueSet",
   "id": "answerSetRICP",
   "url": "https://demis.rki.de/fhir/ValueSet/answerSetRICP",
-  "version": "1.1.0",
+  "version": "1.5.0",
   "name": "AnswerSetRICP",
   "title": "AnswerSet für Rickettsia prowazekii",
   "status": "active",
-  "date": "2023-05-30",
+  "experimental": false,
+  "date": "2024-09-09",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet AnswerSetRICP enthält die Codes der Answer-Codes für Rickettsia prowazekii.",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
   "compose": {
-    "include": [ {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
-      "concept": [ {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "114217004",
-        "display": "Rickettsia aeschlimannii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia aeschlimannii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia aeschlimannii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "114218009",
-        "display": "Rickettsia africae (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia africae (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia africae"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "30769009",
-        "display": "Rickettsia akari (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia akari (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia akari"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "53447008",
-        "display": "Rickettsia australis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia australis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia australis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "76776000",
-        "display": "Rickettsia bellii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia bellii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia bellii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "30974007",
-        "display": "Rickettsia canadensis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia canadensis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia canadensis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "32691002",
-        "display": "Rickettsia conorii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia conorii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia conorii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "415341005",
-        "display": "Rickettsia felis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia felis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia felis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "472821001",
-        "display": "Rickettsia heilongjiangensis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia heilongjiangensis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia heilongjiangensis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "114219001",
-        "display": "Rickettsia helvetica (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia helvetica (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia helvetica"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "437822006",
-        "display": "Rickettsia honei (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia honei (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia honei"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "114220007",
-        "display": "Rickettsia japonica (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia japonica (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia japonica"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "114221006",
-        "display": "Rickettsia massiliae (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia massiliae (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia massiliae"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "77199003",
-        "display": "Rickettsia montanensis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia montanensis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia montanensis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "85738007",
-        "display": "Rickettsia parkeri (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia parkeri (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia parkeri"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "312330004",
-        "display": "Rickettsia peacockii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia peacockii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia peacockii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "28499009",
+            "display": "Rickettsia prowazekii (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Rickettsia prowazekii (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Rickettsia prowazekii"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetLaboratoryTest-SNOMED"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetResistance-SNOMED"
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-09T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "11896004",
+        "display": "Intermediate (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "28499009",
-        "display": "Rickettsia prowazekii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia prowazekii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia prowazekii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "79437004",
-        "display": "Rickettsia rhipicephali (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia rhipicephali (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia rhipicephali"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "18054009",
-        "display": "Rickettsia rickettsii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia rickettsii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia rickettsii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "85288000",
-        "display": "Rickettsia sibirica (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia sibirica (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia sibirica"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "437823001",
-        "display": "Rickettsia slovaca (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia slovaca (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia slovaca"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "698215002",
-        "display": "Rickettsia species 364D (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia species 364D (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia Species 364D"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "79284001",
-        "display": "Rickettsia typhi (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia typhi (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia typhi"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "415342003",
-        "display": "Rickettsia, spotted fever group (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia, spotted fever group (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia, Fleckfieber-Gruppe"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "415343008",
-        "display": "Rickettsia, typhus group (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Rickettsia, typhus group (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Rickettsia, Typhus-Gruppe"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "62065006",
-        "display": "Genus Rickettsia (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Genus Rickettsia (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Gattung Rickettsia"
-        } ]
-      } ]
-    } ]
+        "display": "Rickettsia prowazekii (organism)"
+      }
+    ]
   }
 }

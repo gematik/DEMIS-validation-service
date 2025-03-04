@@ -1,0 +1,25 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "beforeOrAfter1991",
+  "url": "https://demis.rki.de/fhir/CodeSystem/beforeOrAfter1991",
+  "version": "1.0.0",
+  "name": "BeforeOrAfter1991",
+  "title": "Vor oder nach 1991",
+  "status": "active",
+  "date": "2023-04-25",
+  "description": "Das CodeSystem BeforeOrAfter1991 enthält die Codes zur Angabe für vor 1991 und für 1991 und später.",
+  "caseSensitive": false,
+  "valueSet": "https://demis.rki.de/fhir/ValueSet/beforeOrAfter1991",
+  "content": "complete",
+  "count": 2,
+  "concept": [
+    {
+      "code": "128522",
+      "display": "vor 1991"
+    },
+    {
+      "code": "128523",
+      "display": "1991 und später"
+    }
+  ]
+}

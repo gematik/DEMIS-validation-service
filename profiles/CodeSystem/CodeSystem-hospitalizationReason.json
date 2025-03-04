@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "hospitalizationReason",
+  "url": "https://demis.rki.de/fhir/CodeSystem/hospitalizationReason",
+  "version": "1.0.0",
+  "name": "HospitalizationReason",
+  "title": "Hospitalisierungsgrund",
+  "status": "active",
+  "date": "2022-08-12",
+  "description": "Das CodeSystem HospitalizationReason enthält die Codes zur Angabe des Hospitalisierungsgrundes.",
+  "caseSensitive": false,
+  "valueSet": "https://demis.rki.de/fhir/ValueSet/hospitalizationReason",
+  "content": "complete",
+  "count": 3,
+  "concept": [
+    {
+      "code": "becauseOfDisease",
+      "display": "Hospitalisiert aufgrund der gemeldeten Krankheit"
+    },
+    {
+      "code": "becauseOfOtherReason",
+      "display": "Hospitalisiert aufgrund einer anderen Ursache als der gemeldeten Krankheit"
+    },
+    {
+      "code": "forIsolation",
+      "display": "Hospitalisiert zur Isolierung"
+    }
+  ]
+}

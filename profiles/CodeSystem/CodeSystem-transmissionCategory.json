@@ -1,0 +1,310 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "transmissionCategory",
+  "url": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+  "version": "2.0.0",
+  "name": "TransmissionCategory",
+  "title": "SurvNet-Übermittlungskategorie",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-12-27",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das CodeSystem TransmissionCategory enthält die 3-Buchstaben-Codes der Übermittlungskategorien aus SurvNet.",
+  "caseSensitive": false,
+  "valueSet": "https://demis.rki.de/fhir/ValueSet/transmissionCategory",
+  "content": "complete",
+  "count": 97,
+  "concept": [
+    {
+      "code": "adv"
+    },
+    {
+      "code": "ban"
+    },
+    {
+      "code": "bps"
+    },
+    {
+      "code": "bov"
+    },
+    {
+      "code": "bor"
+    },
+    {
+      "code": "bru"
+    },
+    {
+      "code": "cam"
+    },
+    {
+      "code": "ckv"
+    },
+    {
+      "code": "chl"
+    },
+    {
+      "code": "clo"
+    },
+    {
+      "code": "cor"
+    },
+    {
+      "code": "cox"
+    },
+    {
+      "code": "den"
+    },
+    {
+      "code": "cry"
+    },
+    {
+      "code": "ebv"
+    },
+    {
+      "code": "ehc"
+    },
+    {
+      "code": "eco"
+    },
+    {
+      "code": "frt"
+    },
+    {
+      "code": "fsv"
+    },
+    {
+      "code": "gfv"
+    },
+    {
+      "code": "gil"
+    },
+    {
+      "code": "hin"
+    },
+    {
+      "code": "hav"
+    },
+    {
+      "code": "hbv"
+    },
+    {
+      "code": "hcv"
+    },
+    {
+      "code": "hdv"
+    },
+    {
+      "code": "hev"
+    },
+    {
+      "code": "htv"
+    },
+    {
+      "code": "inv"
+    },
+    {
+      "code": "lsv"
+    },
+    {
+      "code": "leg"
+    },
+    {
+      "code": "lep"
+    },
+    {
+      "code": "lis"
+    },
+    {
+      "code": "mbv"
+    },
+    {
+      "code": "msv"
+    },
+    {
+      "code": "mrs"
+    },
+    {
+      "code": "mpv"
+    },
+    {
+      "code": "mpx"
+    },
+    {
+      "code": "myl"
+    },
+    {
+      "code": "myt"
+    },
+    {
+      "code": "nei"
+    },
+    {
+      "code": "nov"
+    },
+    {
+      "code": "opx"
+    },
+    {
+      "code": "pov"
+    },
+    {
+      "code": "rbv"
+    },
+    {
+      "code": "ric"
+    },
+    {
+      "code": "rtv"
+    },
+    {
+      "code": "ruv"
+    },
+    {
+      "code": "spa"
+    },
+    {
+      "code": "sty"
+    },
+    {
+      "code": "sal"
+    },
+    {
+      "code": "cvd"
+    },
+    {
+      "code": "cvs"
+    },
+    {
+      "code": "shi"
+    },
+    {
+      "code": "spn"
+    },
+    {
+      "code": "tri"
+    },
+    {
+      "code": "vzv"
+    },
+    {
+      "code": "vch"
+    },
+    {
+      "code": "wnv"
+    },
+    {
+      "code": "yps"
+    },
+    {
+      "code": "yen"
+    },
+    {
+      "code": "zkv"
+    },
+    {
+      "code": "abv"
+    },
+    {
+      "code": "hfa"
+    },
+    {
+      "code": "mra"
+    },
+    {
+      "code": "ebc"
+    },
+    {
+      "code": "acb"
+    },
+    {
+      "code": "wbk"
+    },
+    {
+      "code": "pkv"
+    },
+    {
+      "code": "rsv"
+    },
+    {
+      "code": "ast"
+    },
+    {
+      "code": "bob"
+    },
+    {
+      "code": "clt"
+    },
+    {
+      "code": "cym"
+    },
+    {
+      "code": "eah"
+    },
+    {
+      "code": "etv"
+    },
+    {
+      "code": "gbs"
+    },
+    {
+      "code": "mpm"
+    },
+    {
+      "code": "pin"
+    },
+    {
+      "code": "pvb"
+    },
+    {
+      "code": "spy"
+    },
+    {
+      "code": "ade"
+    },
+    {
+      "code": "cau"
+    },
+    {
+      "code": "pla"
+    },
+    {
+      "code": "cdf"
+    },
+    {
+      "code": "cjk"
+    },
+    {
+      "code": "hus"
+    },
+    {
+      "code": "hxx"
+    },
+    {
+      "code": "izv"
+    },
+    {
+      "code": "myb"
+    },
+    {
+      "code": "run"
+    },
+    {
+      "code": "sxx"
+    },
+    {
+      "code": "ttv"
+    },
+    {
+      "code": "vzw"
+    },
+    {
+      "code": "vzz"
+    },
+    {
+      "code": "ssp"
+    },
+    {
+      "code": "ncv"
+    }
+  ]
+}

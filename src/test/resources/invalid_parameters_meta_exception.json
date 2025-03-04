@@ -1,0 +1,9 @@
+{
+  "resourceType": "Parameters",
+  "meta": [
+    {
+      "profile": "https://demis.rki.de/fhir/StructureDefinition/ProcessNotificationRequestParameters"
+    }
+  ],
+  "parameter": []
+}

@@ -1,0 +1,871 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "NotificationCategoryToTransmissionCategory",
+  "url": "https://demis.rki.de/fhir/ConceptMap/NotificationCategoryToTransmissionCategory",
+  "version": "2.0.0",
+  "name": "NotificationCategoryToTransmissionCategory",
+  "title": "NotificationCategoryToTransmissionCategory",
+  "status": "active",
+  "date": "2024-12-27",
+  "description": "Die ConceptMap NotificationCategoryToTransmissionCategory ordnet die Meldetatbestände der Erregernachweismeldung den 3-Buchstaben-Codes der Übermittlungskategorien aus SurvNet zu.",
+  "sourceUri": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+  "targetUri": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+  "group": [
+    {
+      "source": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+      "target": "https://demis.rki.de/fhir/CodeSystem/transmissionCategory",
+      "element": [
+        {
+          "code": "advp",
+          "display": "Adenoviren; Meldepflicht nur für den direkten Nachweis im Konjunktivalabstrich",
+          "target": [
+            {
+              "code": "adv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "banp",
+          "display": "Bacillus anthracis",
+          "target": [
+            {
+              "code": "ban",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "bpsp",
+          "display": "Bordetella pertussis, Bordetella parapertussis",
+          "target": [
+            {
+              "code": "bps",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "bovp",
+          "display": "humanpathogene Bornaviren; Meldepflicht nur für den direkten Nachweis",
+          "target": [
+            {
+              "code": "bov",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "borp",
+          "display": "Borrelia recurrentis",
+          "target": [
+            {
+              "code": "bor",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "brup",
+          "display": "Brucella sp.",
+          "target": [
+            {
+              "code": "bru",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "camp",
+          "display": "Campylobacter spp. (darmpathogen)",
+          "target": [
+            {
+              "code": "cam",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "ckvp",
+          "display": "Chikungunya-Virus",
+          "target": [
+            {
+              "code": "ckv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "chlp",
+          "display": "Chlamydia psittaci",
+          "target": [
+            {
+              "code": "chl",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "clop",
+          "display": "Clostridium botulinum oder Toxinnachweis",
+          "target": [
+            {
+              "code": "clo",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "corp",
+          "display": "Corynebacterium spp. (Toxin bildend)",
+          "target": [
+            {
+              "code": "cor",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "coxp",
+          "display": "Coxiella burnetii",
+          "target": [
+            {
+              "code": "cox",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "denp",
+          "display": "Denguevirus",
+          "target": [
+            {
+              "code": "den",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "cryp",
+          "display": "humanpathogene Cryptosporidium sp.",
+          "target": [
+            {
+              "code": "cry",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "ebvp",
+          "display": "Ebolavirus",
+          "target": [
+            {
+              "code": "ebv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "ehcp",
+          "display": "Escherichia coli (enterohämorrhagische Stämme) (EHEC)",
+          "target": [
+            {
+              "code": "ehc",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "ecop",
+          "display": "Escherichia coli (sonstige darmpathogene Stämme)",
+          "target": [
+            {
+              "code": "eco",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "frtp",
+          "display": "Francisella tularensis",
+          "target": [
+            {
+              "code": "frt",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "fsvp",
+          "display": "FSME-Virus",
+          "target": [
+            {
+              "code": "fsv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "gfvp",
+          "display": "Gelbfiebervirus",
+          "target": [
+            {
+              "code": "gfv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "gilp",
+          "display": "Giardia lamblia",
+          "target": [
+            {
+              "code": "gil",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "hinp",
+          "display": "Haemophilus influenzae; Meldepflicht nur für den direkten Nachweis aus Liquor oder Blut",
+          "target": [
+            {
+              "code": "hin",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "havp",
+          "display": "Hepatitis-A-Virus",
+          "target": [
+            {
+              "code": "hav",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "hbvp",
+          "display": "Hepatitis-B-Virus; Meldepflicht für alle Nachweise",
+          "target": [
+            {
+              "code": "hbv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "hcvp",
+          "display": "Hepatitis-C-Virus; Meldepflicht für alle Nachweise",
+          "target": [
+            {
+              "code": "hcv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "hdvp",
+          "display": "Hepatitis-D-Virus; Meldepflicht für alle Nachweise",
+          "target": [
+            {
+              "code": "hdv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "hevp",
+          "display": "Hepatitis-E-Virus",
+          "target": [
+            {
+              "code": "hev",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "htvp",
+          "display": "Hantavirus",
+          "target": [
+            {
+              "code": "htv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "invp",
+          "display": "Influenzavirus; Meldepflicht nur für den direkten Nachweis",
+          "target": [
+            {
+              "code": "inv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "lsvp",
+          "display": "Lassavirus",
+          "target": [
+            {
+              "code": "lsv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "legp",
+          "display": "Legionella sp.",
+          "target": [
+            {
+              "code": "leg",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "lepp",
+          "display": "humanpathogene Leptospira sp.",
+          "target": [
+            {
+              "code": "lep",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "lisp",
+          "display": "Listeria monocytogenes; Meldepflicht nur für den direkten Nachweis aus Blut, Liquor oder anderen normalerweise sterilen Substraten sowie aus Abstrichen von Neugeborenen",
+          "target": [
+            {
+              "code": "lis",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "mbvp",
+          "display": "Marburgvirus",
+          "target": [
+            {
+              "code": "mbv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "msvp",
+          "display": "Masernvirus",
+          "target": [
+            {
+              "code": "msv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "mrsp",
+          "display": "Middle-East-Respiratory-Syndrome-Coronavirus (MERS-CoV)",
+          "target": [
+            {
+              "code": "mrs",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "mpvp",
+          "display": "Mumpsvirus",
+          "target": [
+            {
+              "code": "mpv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "mpxp",
+          "display": "Orthopockenviren (Mpoxvirus)",
+          "target": [
+            {
+              "code": "mpx",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "mylp",
+          "display": "Mycobacterium leprae",
+          "target": [
+            {
+              "code": "myl",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "mytp",
+          "display": "Mycobacterium tuberculosis, Mycobacterium africanum, Mycobacterium bovis; Meldepflicht für den direkten Erregernachweis sowie nachfolgend für das Ergebnis der Resistenzbestimmung; vorab auch für den Nachweis säurefester Stäbchen im Sputum",
+          "target": [
+            {
+              "code": "myt",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "neip",
+          "display": "Neisseria meningitidis; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, hämorrhagischen Hautinfiltraten oder anderen normalerweise sterilen Substraten",
+          "target": [
+            {
+              "code": "nei",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "novp",
+          "display": "Norovirus",
+          "target": [
+            {
+              "code": "nov",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "opxp",
+          "display": "Orthopockenviren (sonstige Orthopockenviren)",
+          "target": [
+            {
+              "code": "opx",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "povp",
+          "display": "Poliovirus",
+          "target": [
+            {
+              "code": "pov",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "rbvp",
+          "display": "Rabiesvirus",
+          "target": [
+            {
+              "code": "rbv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "ricp",
+          "display": "Rickettsia prowazekii",
+          "target": [
+            {
+              "code": "ric",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "rtvp",
+          "display": "Rotavirus",
+          "target": [
+            {
+              "code": "rtv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "ruvp",
+          "display": "Rubellavirus",
+          "target": [
+            {
+              "code": "ruv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "spap",
+          "display": "Salmonella Paratyphi; Meldepflicht für alle direkten Nachweise",
+          "target": [
+            {
+              "code": "spa",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "styp",
+          "display": "Salmonella Typhi; Meldepflicht für alle direkten Nachweise",
+          "target": [
+            {
+              "code": "sty",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "salp",
+          "display": "Salmonella (sonstige)",
+          "target": [
+            {
+              "code": "sal",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "cvdp",
+          "display": "Severe-Acute-Respiratory-Syndrome-Coronavirus-2 (SARS-CoV-2)",
+          "target": [
+            {
+              "code": "cvd",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "cvsp",
+          "display": "Severe-Acute-Respiratory-Syndrome-Coronavirus-1 (SARS-CoV-1) (2003)",
+          "target": [
+            {
+              "code": "cvs",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "ship",
+          "display": "Shigella sp.",
+          "target": [
+            {
+              "code": "shi",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "spnp",
+          "display": "Streptococcus pneumoniae; Meldepflicht nur für den direkten Nachweis aus Liquor, Blut, Gelenkpunktat oder anderen normalerweise sterilen Substraten",
+          "target": [
+            {
+              "code": "spn",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "trip",
+          "display": "Trichinella spiralis",
+          "target": [
+            {
+              "code": "tri",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "vzvp",
+          "display": "Varizella-Zoster-Virus",
+          "target": [
+            {
+              "code": "vzv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "vchp",
+          "display": "Vibrio cholerae",
+          "target": [
+            {
+              "code": "vch",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "wnvp",
+          "display": "West-Nil-Virus",
+          "target": [
+            {
+              "code": "wnv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "ypsp",
+          "display": "Yersinia pestis",
+          "target": [
+            {
+              "code": "yps",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "yenp",
+          "display": "Yersinia spp. (darmpathogen)",
+          "target": [
+            {
+              "code": "yen",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "zkvp",
+          "display": "Zika-Virus",
+          "target": [
+            {
+              "code": "zkv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "abvp",
+          "display": "Arboviren (sonstige)",
+          "target": [
+            {
+              "code": "abv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "hfap",
+          "display": "Andere Erreger hämorrhagischer Fieber",
+          "target": [
+            {
+              "code": "hfa",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "mrap",
+          "display": "Staphylococcus aureus (Methicillin-resistente Stämme); Meldepflicht nur für den Nachweis aus Blut oder Liquor",
+          "target": [
+            {
+              "code": "mra",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "ebcp",
+          "display": "Enterobacterales bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation",
+          "target": [
+            {
+              "code": "ebc",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "acbp",
+          "display": "Acinetobacter spp. bei Nachweis einer Carbapenemase-Determinante oder mit verminderter Empfindlichkeit gegenüber Carbapenemen außer bei natürlicher Resistenz; Meldepflicht nur bei Infektion oder Kolonisation",
+          "target": [
+            {
+              "code": "acb",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "wbkp",
+          "display": "Krankheitserreger unter Berücksichtigung der Art der Krankheitserreger und der Häufigkeit ihres Nachweises wenn Hinweise auf eine schwerwiegende Gefahr für die Allgemeinheit bestehen",
+          "target": [
+            {
+              "code": "wbk",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "pkvp",
+          "display": "Orthopockenviren (Variolavirus)",
+          "target": [
+            {
+              "code": "pkv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "rsvp",
+          "display": "Respiratorisches-Synzytial-Virus",
+          "target": [
+            {
+              "code": "rsv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "astp",
+          "display": "Astroviren",
+          "target": [
+            {
+              "code": "ast",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "bobp",
+          "display": "(Lyme-) Borreliose, Borrelia burgdorferi",
+          "target": [
+            {
+              "code": "bob",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "cltp",
+          "display": "Tetanus, Clostridium tetani",
+          "target": [
+            {
+              "code": "clt",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "cymp",
+          "display": "Cytomegalie, Cytomegalievirus",
+          "target": [
+            {
+              "code": "cym",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "eahp",
+          "display": "Amoebiasis, Entamoeba histolytica",
+          "target": [
+            {
+              "code": "eah",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "etvp",
+          "display": "Enteroviren",
+          "target": [
+            {
+              "code": "etv",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "gbsp",
+          "display": "Gruppe-B-Streptokokken (GBS); Meldepflicht nur für den direkten Nachweis bei Schwangeren und Neugeborenen",
+          "target": [
+            {
+              "code": "gbs",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "mpmp",
+          "display": "Mycoplasmen",
+          "target": [
+            {
+              "code": "mpm",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "pinp",
+          "display": "Parainfluenzavirus",
+          "target": [
+            {
+              "code": "pin",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "pvbp",
+          "display": "Ringelröteln, Parvovirus B 19",
+          "target": [
+            {
+              "code": "pvb",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "spyp",
+          "display": "Scharlach, Beta-hämolysierenden Streptokokken der Gruppe A",
+          "target": [
+            {
+              "code": "spy",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "adep",
+          "display": "Adenoviren; Meldepflicht bei akuter Infektion für Nachweise aus allen Körpermaterialien",
+          "target": [
+            {
+              "code": "ade",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "caup",
+          "display": "Candida auris; Meldepflicht nur für den direkten Nachweis",
+          "target": [
+            {
+              "code": "cau",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "plap",
+          "display": "Plasmodium spp. (Malaria)",
+          "target": [
+            {
+              "code": "pla",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "ncvp",
+          "display": "Vibrio spp., humanpathogen (außer Erreger der Cholera); soweit ausschließlich eine Ohrinfektion vorliegt, nur bei Vibrio cholerae non O1/non-O139",
+          "target": [
+            {
+              "code": "ncv",
+              "equivalence": "relatedto"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

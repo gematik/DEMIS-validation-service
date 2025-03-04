@@ -1,0 +1,291 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DiseaseQuestionsHIVD",
+  "url": "https://demis.rki.de/fhir/Questionnaire/DiseaseQuestionsHIVD",
+  "version": "1.0.0",
+  "name": "DiseaseQuestionsHIVD",
+  "title": "Humanes Immundefizienz-Virus (HIV): spezifische klinische und epidemiologische Angaben",
+  "status": "active",
+  "date": "2024-11-25",
+  "description": "HIV spezifische Informationsbedarfe werden in diesem meldetatbestandsspezifischen Fragebogen zusammengestellt. Dieser manifestiert sich als entsprechende QuestionnaireResponse innerhalb der Meldung.",
+  "item": [
+    {
+      "linkId": "firstDiagnosisGER",
+      "text": "Ist dies der erste erfolgte Nachweis der HIV-Infektion in Deutschland?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation-SNOMED",
+      "item": [
+        {
+          "linkId": "lastNegTest",
+          "text": "Letzter negativer HIV-Test",
+          "type": "date",
+          "enableWhen": [
+            {
+              "question": "firstDiagnosisGER",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "373066001"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "maxLength": 7
+        },
+        {
+          "linkId": "firstPosTest",
+          "text": "erster bestätigt positiver HIV-Test",
+          "type": "date",
+          "enableWhen": [
+            {
+              "question": "firstDiagnosisGER",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "373067005"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "maxLength": 7
+        }
+      ]
+    },
+    {
+      "linkId": "firstDiagnosisAbroad",
+      "text": "Positiver Test im Ausland durchgeführt?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation-SNOMED",
+      "item": [
+        {
+          "linkId": "firstDiagnosisCountry",
+          "text": "In welchem Land?",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "firstDiagnosisAbroad",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "373066001"
+              }
+            }
+          ],
+          "required": false,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetCountry"
+        }
+      ]
+    },
+    {
+      "linkId": "countryOrigin",
+      "text": "Herkunftsland der betroffenen Person",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetCountry",
+      "item": [
+        {
+          "linkId": "countryOriginOfInfection",
+          "text": "Ist dies auch das Land, in dem die Infektion stattfand?",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation-SNOMED",
+          "item": [
+            {
+              "linkId": "countryInfection",
+              "text": "Welches ist das Land, in dem die Infektion stattfand?",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "countryOriginOfInfection",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373067005"
+                  }
+                }
+              ],
+              "required": true,
+              "repeats": false,
+              "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetCountry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "indicatorDiseaseHIVD",
+      "text": "Welche Indikatorerkrankungen liegen vor?",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetIndicatorDisease"
+    },
+    {
+      "linkId": "otherClinicalInfo",
+      "text": "Andere klinische Angaben",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetOtherClinicalInfo",
+      "item": [
+        {
+          "linkId": "coinfectionHIVD",
+          "text": "Konfektionen",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "otherClinicalInfo",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "186708007"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": true,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetCoinfectionHIVD"
+        }
+      ]
+    },
+    {
+      "linkId": "hivPrEPStatus",
+      "text": "HIV-PrEP Gebrauch innerhalb der letzten 12 Monate vor HIV-Erstdiagnose",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation-SNOMED"
+    },
+    {
+      "linkId": "sexWork",
+      "text": "Inanspruchnahme oder Ausübung von Sexarbeit?",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetSexWork"
+    },
+    {
+      "linkId": "infectionPathKindRisk",
+      "text": "Angaben zum wahrscheinlichen Infektionsweg / Infektionsrisiko",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetinfectPathKindRiskSTI",
+      "item": [
+        {
+          "linkId": "iatrogenInfectionDate",
+          "text": "Wann fand die iatrogene Infektion statt?",
+          "type": "date",
+          "enableWhen": [
+            {
+              "question": "infectionPathKindRisk",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "12456005"
+              }
+            }
+          ],
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "iatrogenInfectionNote",
+          "text": "Bitte näher erläutern",
+          "type": "text",
+          "enableWhen": [
+            {
+              "question": "infectionPathKindRisk",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "12456005"
+              }
+            }
+          ],
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "medicinalWorkerNote",
+          "text": "Bitte näher erläutern",
+          "type": "text",
+          "enableWhen": [
+            {
+              "question": "infectionPathKindRisk",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "16090731000119102:{42752001=373655009}"
+              }
+            }
+          ],
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "otherNote",
+          "text": "Bitte näher erläutern",
+          "type": "text",
+          "enableWhen": [
+            {
+              "question": "infectionPathKindRisk",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "74964007"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "infectionSource",
+          "text": "Auf welchem Wege hat sich die Person infiziert, die als Infektiuonsquelle vermutet wird?",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "infectionPathKindRisk",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "20430005+228453005"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": true,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/answerSetInfectionSource"
+        },
+        {
+          "linkId": "infectionSourceSecure",
+          "text": "HIV-Infektion der Infektionsquelle gesichert?",
+          "type": "choice",
+          "enableWhen": [
+            {
+              "question": "infectionPathKindRisk",
+              "operator": "=",
+              "answerCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "20430005+228453005"
+              }
+            }
+          ],
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoOrNoInformation-SNOMED"
+        }
+      ]
+    }
+  ]
+}

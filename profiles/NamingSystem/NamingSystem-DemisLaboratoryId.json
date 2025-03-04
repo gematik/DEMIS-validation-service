@@ -1,0 +1,16 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "DemisLaboratoryId",
+  "name": "DemisLaboratoryId",
+  "status": "active",
+  "kind": "identifier",
+  "date": "2021-03-26",
+  "description": "Die DemisLaboratoryId ist das NamingSystem um den von DEMIS vergebenen Identifier (DEMIS-Labornummer) des Melders anzugeben.",
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "https://demis.rki.de/fhir/NamingSystem/DemisLaboratoryId",
+      "preferred": true
+    }
+  ]
+}

@@ -1,68 +1,88 @@
-/*
- * Copyright [2023], gematik GmbH
- *
- * Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the
+package de.gematik.demis.validationservice.services.validation;
+
+/*-
+ * #%L
+ * validation-service
+ * %%
+ * Copyright (C) 2025 gematik GmbH
+ * %%
+ * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
- *
  * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
  *
+ * You find a copy of the Licence in the "Licence" file or at
  * https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
  *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR
- * CONDITIONS OF ANY KIND, either expressed or implied.
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the Licence is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expressed or implied.
+ * In case of changes by gematik find details in the "Readme" file.
  *
  * See the Licence for the specific language governing permissions and limitations under the Licence.
- *
+ * #L%
  */
-
-package de.gematik.demis.validationservice.services.validation;
 
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.validation.FhirValidator;
 import ca.uhn.fhir.validation.ResultSeverityEnum;
 import ca.uhn.fhir.validation.SingleValidationMessage;
 import ca.uhn.fhir.validation.ValidationResult;
-import de.gematik.demis.validationservice.services.ProfileParserService;
+import io.micrometer.observation.annotation.Observed;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
+import java.util.UUID;
 import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.r4.model.OperationOutcome;
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /** Service holds a Fhir validator with the given profile. */
 @Service
 @Slf4j
-public class ValidationService implements InitializingBean {
+public class ValidationService {
   private static final SeverityComparator SEVERITY_COMPARATOR = new SeverityComparator();
 
-  private final ProfileParserService profileParserService;
   private final FhirContext fhirContext;
-  private final String locale;
-  private final String minSeverityOutcomeText;
-
-  private FhirValidator validator;
-  private ResultSeverityEnum minSeverityOutcome;
-  private Set<String> filteredMessagePrefixes;
+  private final FhirValidator validator;
+  private final ResultSeverityEnum minSeverityOutcome;
+  private final Set<String> filteredMessagePrefixes;
 
   ValidationService(
-      final ProfileParserService profileParserService,
       final FhirContext fhirContext,
-      @Value("${demis.validation-service.locale}") String locale,
-      @Value("${demis.validation-service.minSeverityOutcome}") final String minSeverityOutcome) {
-    this.profileParserService = profileParserService;
+      final FhirValidatorFactory fhirValidatorFactory,
+      final MinSeverityFactory minSeverityFactory,
+      final FilteredMessagePrefixesFactory filteredMessagePrefixesFactory) {
     this.fhirContext = fhirContext;
-    this.locale = locale;
-    this.minSeverityOutcomeText = minSeverityOutcome;
+    this.validator = fhirValidatorFactory.get();
+    this.minSeverityOutcome = minSeverityFactory.get();
+    this.filteredMessagePrefixes = filteredMessagePrefixesFactory.get();
   }
 
+  @Observed(
+      name = "validate",
+      contextualName = "validate",
+      lowCardinalityKeyValues = {"notification", "fhir"})
   public OperationOutcome validate(final String content) {
-    final ValidationResult validationResult = this.validator.validateWithResult(content);
-    log.info("Validation successful: {}", validationResult.isSuccessful());
-    return toOperationOutcome(validationResult);
+    try {
+      final ValidationResult validationResult = validator.validateWithResult(content);
+      log.info("Validation successful: {}", validationResult.isSuccessful());
+      return toOperationOutcome(validationResult);
+    } catch (final Exception e) {
+      return handleException(e);
+    }
+  }
+
+  private OperationOutcome handleException(final Exception e) {
+    final String errorId = UUID.randomUUID().toString();
+    log.error("{} - exception in validation", errorId, e);
+
+    final OperationOutcome operationOutcome = new OperationOutcome();
+    operationOutcome
+        .addIssue()
+        .setSeverity(OperationOutcome.IssueSeverity.FATAL)
+        .setCode(OperationOutcome.IssueType.EXCEPTION)
+        .setDiagnostics("exception in validation")
+        .addLocation(errorId);
+    return operationOutcome;
   }
 
   private OperationOutcome toOperationOutcome(final ValidationResult validationResult) {
@@ -79,33 +99,10 @@ public class ValidationService implements InitializingBean {
   }
 
   private boolean checkFilters(SingleValidationMessage message) {
-    return this.filteredMessagePrefixes.stream().noneMatch(message.getMessage()::startsWith);
+    return filteredMessagePrefixes.stream().noneMatch(message.getMessage()::startsWith);
   }
 
   private boolean checkSeverity(SingleValidationMessage message) {
-    return SEVERITY_COMPARATOR.compare(message.getSeverity(), this.minSeverityOutcome) >= 0;
-  }
-
-  @Override
-  public void afterPropertiesSet() {
-    Locale configuredLocale = ConfiguredLocaleExecutor.getLocale(this.locale);
-    initializeMinSeverityOutcome();
-    initializeFhirValidator(configuredLocale);
-    initializeFilteredMessagePrefixes(configuredLocale);
-  }
-
-  private void initializeMinSeverityOutcome() {
-    this.minSeverityOutcome = new MinSeverityFactory(this.minSeverityOutcomeText).get();
-  }
-
-  private void initializeFilteredMessagePrefixes(Locale configuredLocale) {
-    this.filteredMessagePrefixes =
-        new FilteredMessagePrefixesFactory(this.fhirContext, configuredLocale).get();
-  }
-
-  private void initializeFhirValidator(Locale configuredLocale) {
-    this.validator =
-        new FhirValidatorFactory(this.profileParserService, this.fhirContext, configuredLocale)
-            .get();
+    return SEVERITY_COMPARATOR.compare(message.getSeverity(), minSeverityOutcome) >= 0;
   }
 }

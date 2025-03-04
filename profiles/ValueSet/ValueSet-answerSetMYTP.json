@@ -2,305 +2,524 @@
   "resourceType": "ValueSet",
   "id": "answerSetMYTP",
   "url": "https://demis.rki.de/fhir/ValueSet/answerSetMYTP",
-  "version": "1.4.0",
+  "version": "1.7.1",
   "name": "AnswerSetMYTP",
   "title": "AnswerSet für Mycobacterium tuberculosis, Mycobacterium africanum, Mycobacterium bovis; Meldepflicht für den direkten Erregernachweis sowie nachfolgend für das Ergebnis der Resistenzbestimmung; vorab auch für den Nachweis säurefester Stäbchen im Sputum",
   "status": "active",
-  "date": "2023-05-30",
+  "experimental": false,
+  "date": "2024-09-09",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet AnswerSetMYTP enthält die Codes der Answer-Codes für Mycobacterium tuberculosis, Mycobacterium africanum, Mycobacterium bovis; Meldepflicht für den direkten Erregernachweis sowie nachfolgend für das Ergebnis der Resistenzbestimmung; vorab auch für den Nachweis säurefester Stäbchen im Sputum.",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
   "compose": {
-    "include": [ {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
-      "concept": [ {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "110379001",
-        "display": "Mycobacterium, non-tuberculosis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "110379001",
+            "display": "Mycobacterium, non-tuberculosis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium, non-tuberculosis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium, nicht tuberculosis"
+              }
+            ]
           },
-          "value": "Mycobacterium, non-tuberculosis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium, nicht tuberculosis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "51320008",
-        "display": "Mycobacterium africanum (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 89
+              }
+            ],
+            "code": "113858008",
+            "display": "Mycobacterium tuberculosis complex (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium tuberculosis complex (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium-tuberculosis-Komplex"
+              }
+            ]
           },
-          "value": "Mycobacterium africanum (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium africanum"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "27142009",
-        "display": "Mycobacterium bovis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "113861009",
+            "display": "Mycobacterium tuberculosis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium tuberculosis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium tuberculosis"
+              }
+            ]
           },
-          "value": "Mycobacterium bovis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium bovis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "832924651000087107",
-        "display": "Mycobacterium bovis subspecies bovis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 88
+              }
+            ],
+            "code": "243365003",
+            "display": "Acid-fast bacillus (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Acid-fast bacillus (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Säure-fester Bacillus"
+              }
+            ]
           },
-          "value": "Mycobacterium bovis subspecies bovis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium bovis Subspecies bovis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "414789006",
-        "display": "Mycobacterium canettii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "243370005",
+            "display": "Mycobacterium tuberculosis classical variant (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium tuberculosis classical variant (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium tuberculosis, klassische Variante"
+              }
+            ]
           },
-          "value": "Mycobacterium canettii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium canettii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "430579009",
-        "display": "Mycobacterium caprae (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "243371009",
+            "display": "Mycobacterium tuberculosis Asian variant (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium tuberculosis Asian variant (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium tuberculosis, asiatische Variante"
+              }
+            ]
           },
-          "value": "Mycobacterium caprae (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium caprae"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "243372002",
+            "display": "Mycobacterium tuberculosis African I variant (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium tuberculosis African I variant (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium tuberculosis, afrikanische Variante I"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "243373007",
+            "display": "Mycobacterium tuberculosis African II variant (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium tuberculosis African II variant (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium tuberculosis, afrikanische Variante II"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "27142009",
+            "display": "Mycobacterium bovis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium bovis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium bovis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "36354002",
+            "display": "Mycobacterium tuberculosis hominis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium tuberculosis hominis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium tuberculosis hominis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "414789006",
+            "display": "Mycobacterium canettii (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium canettii (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium canettii"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "430579009",
+            "display": "Mycobacterium caprae (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium caprae (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium caprae"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "430914003",
+            "display": "Mycobacterium pinnipedii (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium pinnipedii (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium pinnipedii"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "51320008",
+            "display": "Mycobacterium africanum (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium africanum (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium africanum"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "70801007",
+            "display": "Mycobacterium microti (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium microti (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium microti"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "832924651000087107",
+            "display": "Mycobacterium bovis subspecies bovis (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Mycobacterium bovis subspecies bovis (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Mycobacterium bovis Subspecies bovis"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetLaboratoryTest-SNOMED"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetResistance-SNOMED"
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-09T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "70801007",
-        "display": "Mycobacterium microti (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mycobacterium microti (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium microti"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "430914003",
-        "display": "Mycobacterium pinnipedii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mycobacterium pinnipedii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium pinnipedii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "113861009",
-        "display": "Mycobacterium tuberculosis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mycobacterium tuberculosis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium tuberculosis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "243372002",
-        "display": "Mycobacterium tuberculosis African I variant (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mycobacterium tuberculosis African I variant (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium tuberculosis, afrikanische Variante I"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "243373007",
-        "display": "Mycobacterium tuberculosis African II variant (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mycobacterium tuberculosis African II variant (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium tuberculosis, afrikanische Variante II"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "243371009",
-        "display": "Mycobacterium tuberculosis Asian variant (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mycobacterium tuberculosis Asian variant (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium tuberculosis, asiatische Variante"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "243370005",
-        "display": "Mycobacterium tuberculosis classical variant (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mycobacterium tuberculosis classical variant (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium tuberculosis, klassische Variante"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "113858008",
-        "display": "Mycobacterium tuberculosis complex (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mycobacterium tuberculosis complex (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium-tuberculosis-Komplex"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "36354002",
-        "display": "Mycobacterium tuberculosis hominis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Mycobacterium tuberculosis hominis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Mycobacterium tuberculosis hominis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+        "display": "Mycobacterium microti (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "243365003",
-        "display": "Acid-fast bacillus (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Acid-fast bacillus (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Säure-fester Bacillus"
-        } ]
-      } ]
-    } ]
+        "display": "Acid-fast bacillus (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "243371009",
+        "display": "Mycobacterium tuberculosis Asian variant (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "11896004",
+        "display": "Intermediate (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "110379001",
+        "display": "Mycobacterium, non-tuberculosis (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "243372002",
+        "display": "Mycobacterium tuberculosis African I variant (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "36354002",
+        "display": "Mycobacterium tuberculosis hominis (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "113858008",
+        "display": "Mycobacterium tuberculosis complex (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "243373007",
+        "display": "Mycobacterium tuberculosis African II variant (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "243370005",
+        "display": "Mycobacterium tuberculosis classical variant (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "430579009",
+        "display": "Mycobacterium caprae (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "832924651000087107",
+        "display": "Mycobacterium bovis subspecies bovis (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "27142009",
+        "display": "Mycobacterium bovis (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "51320008",
+        "display": "Mycobacterium africanum (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "113861009",
+        "display": "Mycobacterium tuberculosis (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "414789006",
+        "display": "Mycobacterium canettii (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "430914003",
+        "display": "Mycobacterium pinnipedii (organism)"
+      }
+    ]
   }
 }

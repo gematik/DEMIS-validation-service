@@ -1,0 +1,76 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetBeforeOrAfter1991",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetBeforeOrAfter1991",
+  "version": "1.0.1",
+  "name": "AnswerSetBeforeOrAfter1991",
+  "title": "Anwort Vor oder nach 1991",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-09-02",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet AnswerSetBeforeOrAfter1991 enthält die Codes der Antwortmöglichkeiten für vor 1991 und für 1991 und später.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/beforeOrAfter1991",
+        "version": "1.0.0"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 999
+              }
+            ],
+            "code": "ASKU",
+            "display": "asked but unknown"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1000
+              }
+            ],
+            "code": "NASK",
+            "display": "not asked"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-02T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/beforeOrAfter1991",
+        "version": "1.0.0",
+        "code": "128523",
+        "display": "1991 und später"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/beforeOrAfter1991",
+        "version": "1.0.0",
+        "code": "128522",
+        "display": "vor 1991"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "code": "NASK",
+        "display": "not asked"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "version": "2.1.0",
+        "code": "ASKU",
+        "display": "asked but unknown"
+      }
+    ]
+  }
+}

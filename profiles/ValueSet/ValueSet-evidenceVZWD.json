@@ -1,0 +1,289 @@
+{
+  "resourceType": "ValueSet",
+  "id": "evidenceVZWD",
+  "url": "https://demis.rki.de/fhir/ValueSet/evidenceVZWD",
+  "version": "1.3.2",
+  "name": "EvidenceVZWD",
+  "title": "Symptome und Manifestationen in Bezug auf den Meldetatbestand \"Windpocken\"",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-10-10",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet EvidenceVZWD enthält die kodierten Angaben zu Symptomen und Manifestationen in Bezug auf den Meldetatbestand \"Windpocken\".",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 15
+              }
+            ],
+            "code": "193198003",
+            "display": "bakterielle Superinfektion",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Superimposed infection (disorder)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 10
+              }
+            ],
+            "code": "233604007",
+            "display": "Lungenentzündung (Pneumonie)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Pneumonia (disorder)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 18
+              }
+            ],
+            "code": "271807003:{116676008=112629002}",
+            "display": "Ausschlag an Haut oder Schleimhaut mit Flecken (makulös)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "1119454002"
+                },
+                "value": "271807003 | Eruption of skin (disorder) | : {116676008 | Associated morphology (attribute) | = 112629002 | Macule (morphologic abnormality) |}"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 19
+              }
+            ],
+            "code": "271807003:{116676008=339008}",
+            "display": "Ausschlag an Haut oder Schleimhaut mit Bläschen (vesikulös)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "1119454002"
+                },
+                "value": "271807003 | Eruption of skin (disorder) | : {116676008 | Associated morphology (attribute) | = 339008 | Blister (morphologic abnormality) |}"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 16
+              }
+            ],
+            "code": "271807003:{116676008=47002008}",
+            "display": "Ausschlag an Haut oder Schleimhaut mit Pusteln (pustulös)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "1119454002"
+                },
+                "value": "271807003 | Eruption of skin (disorder) | : {116676008 | Associated morphology (attribute) | = 47002008 | Pustule (morphologic abnormality) |}"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 17
+              }
+            ],
+            "code": "423333008",
+            "display": "Ausschlag an Haut oder Schleimhaut mit gleichzeitig vorhandenen Papeln, Bläschen bzw. Pusteln und Schorf (sog. Sternenhimmel)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Exanthem due to varicella (disorder)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 12
+              }
+            ],
+            "code": "45170000",
+            "display": "Gehirnentzündung (Enzephalitis)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Encephalitis (disorder)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 14
+              }
+            ],
+            "code": "65363002",
+            "display": "Entzündung des Mittelohrs (Otitis media)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Otitis media (disorder)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 13
+              }
+            ],
+            "code": "715223009",
+            "display": "Fetales (kongenitales) Varizellensyndrom",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Fetal varicella syndrome (disorder)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 11
+              }
+            ],
+            "code": "7180009",
+            "display": "Hirnhautentzündung (Meningitis)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Meningitis (disorder)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-10-10T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "271807003:{116676008=47002008}",
+        "display": "Ausschlag an Haut oder Schleimhaut mit Pusteln (pustulös)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "65363002",
+        "display": "Entzündung des Mittelohrs (Otitis media)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "715223009",
+        "display": "Fetales (kongenitales) Varizellensyndrom"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "271807003:{116676008=339008}",
+        "display": "Ausschlag an Haut oder Schleimhaut mit Bläschen (vesikulös)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "193198003",
+        "display": "bakterielle Superinfektion"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "271807003:{116676008=112629002}",
+        "display": "Ausschlag an Haut oder Schleimhaut mit Flecken (makulös)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "233604007",
+        "display": "Lungenentzündung (Pneumonie)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "45170000",
+        "display": "Gehirnentzündung (Enzephalitis)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "423333008",
+        "display": "Ausschlag an Haut oder Schleimhaut mit gleichzeitig vorhandenen Papeln, Bläschen bzw. Pusteln und Schorf (sog. Sternenhimmel)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "7180009",
+        "display": "Hirnhautentzündung (Meningitis)"
+      }
+    ]
+  }
+}

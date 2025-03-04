@@ -2,12 +2,20 @@
 {{- $dockerRepository := .Values.required.image.repository | required ".Values.required.image.repository is required." -}}
 {{- $dockerImage := .Values.required.image.name | required ".Values.required.image.name is required." -}}
 {{- $dockerTag := .Values.required.image.tag | default .Chart.AppVersion -}}
+{{- $customEnvVars := .Values.customEnvVars -}}
+{{- $dockerProfilesRepository := .Values.required.profiles.repository | required ".Values.required.profiles.repository is required." -}}
+{{- $profilesName := .Values.required.profiles.name | required ".Values.required.profiles.name is required." -}}
+{{- $profilesVersion := .Values.required.profiles.version | required ".Values.required.profiles.version is required." -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "validation-service.fullversionname" . }}
   labels:
     {{- include "validation-service.labels" . | nindent 4 }}
+  {{- with .Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -23,9 +31,10 @@ spec:
       {{- end }}
       labels:
         {{- include "validation-service.selectorLabels" . | nindent 8 }}
+        {{- include "validation-service.deploymentLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
-      imagePullSecrets: 
+      imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       serviceAccountName: {{ include "validation-service.serviceAccountName" . }}
@@ -34,21 +43,21 @@ spec:
       # Volume for Profiles
       volumes:
         - name: profiles-volume-{{ include "validation-service.fullversionname" . }}
-          emptyDir: {}
+          emptyDir: { }
         # Add writable volumes
         - name: tmp-volume
-          emptyDir: {}
+          emptyDir: { }
         {{- if .Values.debug.enable }}
         - name: jfr-volume
-          emptyDir: {}
+          emptyDir: { }
         {{- end }}
       initContainers:
         - name: {{ .Chart.Name }}-init-profiles
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ $dockerRepository }}/fhir-profile-snapshots:{{ .Values.required.profiles.version }}"
+          image: "{{ $dockerProfilesRepository }}/{{ $profilesName }}:{{ $profilesVersion }}"
           imagePullPolicy: {{ .Values.imagePullPolicy }}
-          command: 
+          command:
             - /bin/sh
             - -c
             - "rm -rf /profiles/* && cp -r /app/data/profiles/* /profiles/"
@@ -65,25 +74,25 @@ spec:
           {{- if .Values.application.entrypoint }}
           {{- if .Values.application.parameters }}
           {{- with .Values.application.entrypoint }}
-          command: 
+          command:
             {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.application.parameters }}
-          args: 
+          args:
             {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- end }}
           {{- end }}
           # Mount Volumes in container
           volumeMounts:
-          - name: profiles-volume-{{ include "validation-service.fullversionname" . }}
-            mountPath: /profiles
-            readOnly: true
-          - name: tmp-volume
-            mountPath: /tmp
+            - name: profiles-volume-{{ include "validation-service.fullversionname" . }}
+              mountPath: /profiles
+              readOnly: true
+            - name: tmp-volume
+              mountPath: /tmp
           {{- if .Values.debug.enable }}
-          - name: jfr-volume
-            mountPath: /jfrdump
+            - name: jfr-volume
+              mountPath: /jfrdump
           {{- end }}
           # Set the Environment Variables for the container
           env:
@@ -96,6 +105,13 @@ spec:
             {{- if .Values.debug.enable }}
             - name: "JAVA_TOOL_OPTIONS"
               value: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9000"
+            {{- end }}
+            {{- if $customEnvVars }}
+            # Custom Environment Variables
+            {{- range $_, $key := keys $customEnvVars | sortAlpha }}
+            - name: {{ $key | quote }}
+              value: {{ get $customEnvVars $key | quote }}
+            {{- end }}
             {{- end }}
           # Ports to be exposed from the container
           ports:
@@ -136,10 +152,28 @@ spec:
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- with .Values.affinity }}
       affinity:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - {{ include "validation-service.name" . }}
+              - key: version
+                operator: In
+                values:
+                - {{ .Chart.AppVersion | quote }}
+              - key: fhirProfile
+                operator: In
+                values:
+                  - {{ .Values.required.profiles.name | quote }}
+              - key: fhirProfileVersion
+                operator: In
+                values:
+                  - {{ .Values.required.profiles.version | quote }}
+            topologyKey: "kubernetes.io/hostname"
       {{- with .Values.tolerations }}
       tolerations:
         {{- toYaml . | nindent 8 }}

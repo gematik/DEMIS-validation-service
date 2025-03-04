@@ -1,0 +1,661 @@
+{
+  "resourceType": "ValueSet",
+  "id": "resistanceGeneWBKP",
+  "url": "https://demis.rki.de/fhir/ValueSet/resistanceGeneWBKP",
+  "version": "1.1.0",
+  "name": "ResistanceGeneWBKP",
+  "title": "Resistenzdeterminante für Krankheitserreger unter Berücksichtigung der Art der Krankheitserreger und der Häufigkeit ihres Nachweises wenn Hinweise auf eine schwerwiegende Gefahr für die Allgemeinheit bestehen",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-10-24",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet ResistanceGeneWBKP enthält die Codes der Resistenzdeterminanten für Krankheitserreger unter Berücksichtigung der Art der Krankheitserreger und der Häufigkeit ihres Nachweises wenn Hinweise auf eine schwerwiegende Gefahr für die Allgemeinheit bestehen.",
+  "copyright": "This material contains content from LOINC (http://loinc.org/). LOINC is copyright © 1995-2023, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc.\r\n\r\nDieses Material enthält Inhalte von LOINC (http://loinc.org/). LOINC ist urheberrechtlich geschützt © 1995-2023, Regenstrief Institute, Inc. und das Logical Observation Identifiers Names and Codes (LOINC) Committee und ist unter der Lizenz http://loinc.org/license kostenlos erhältlich. LOINC® ist eine eingetragene US-amerikanische Marke des Regenstrief Institute, Inc.\r\n\r\nDownloadbedingungen für LOINC-Übersetzungen für Anwendungszwecke in Deutschland\r\nÜbersetzungen in verschiedenen Sprachen werden von \"LOINC® Adopters\", meistens Behörden oder Forschungsinstituten verschiedener Länder, erstellt und an das Regenstrief Institute weitergegeben. Das Copyright für die Übersetzungen liegt beim Regenstrief Institute. Für Deutschland wird die LOINC®-Übersetzung durch das BfArM bereitgestellt. Die Übersetzungen werden durch das Regenstrief Institute als \"Linguistic Variants\" in den halbjährlichen LOINC®-Releases (Februar und August) veröffentlicht.\r\n\r\nDas Copyright für die Übersetzungen liegt beim Regenstrief Institute, 1101 W 10th St, Indianapolis, IN 46202, USA.\r\n\r\nMit dem Download von Dateien kommt ein Nutzungsvertrag zwischen Ihnen und dem Regenstrief Institute zustande. Sie verpflichten sich, die unten verlinkten Nutzungs- und Abgabebedingungen für LOINC vom Regenstrief Institute einzuhalten.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "101673-2",
+            "display": "KPC carbapenemase"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "101674-0",
+            "display": "OXA-48-like carbapenemase"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "101675-7",
+            "display": "IMP Carbapenemase"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "101676-5",
+            "display": "VIM Carbapenemase"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "101677-3",
+            "display": "NDM Carbapenemase"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "105037-6",
+            "display": "OXA-23 carbapenemase"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "105038-4",
+            "display": "OXA-40/58 carbapenemase"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "48813-0",
+            "display": "Methicillin resistance mecA gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Methicillin-Resistenz mecA-Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "48816-3",
+            "display": "Staphylococcus aureus Panton-Valentine leukocidin gene [Presence] in Isolate or Specimen by Molecular genetics method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Staphylococcus aureus Panton-Valentine-leukocidin-Gene"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "49617-4",
+            "display": "Carbapenem resistance blaKPC gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaKPC-Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "63368-5",
+            "display": "Carbapenem resistance genes [Identifier] by NAA with probe detection",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Carbapenem-Resistenzgene"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "73982-1",
+            "display": "Carbapenem resistance blaNDM gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaNDM-Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "85498-4",
+            "display": "Carbapenem resistance blaIMP gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaIMP-Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "85501-5",
+            "display": "Carbapenem resistance blaVIM gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaVIM-Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "85503-1",
+            "display": "Carbapenem resistance blaOXA-48 gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaOXA-48-Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "85823-3",
+            "display": "Carbapenem resistance blaGES gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaGES-Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "85825-8",
+            "display": "Carbapenem resistance blaOXA-23-like gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaOXA-23-ähnliches Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "85826-6",
+            "display": "Carbapenem resistance blaOXA-24-like gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaOXA-24-ähnliches Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "85827-4",
+            "display": "Carbapenem resistance bla OXA-48-like gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaOXA-48-ähnliches Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "85828-2",
+            "display": "Carbapenem resistance blaOXA-58-like gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaOXA-58-ähnliches Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "85829-0",
+            "display": "Carbapenem resistance blaSPM gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaSPM-Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "85833-2",
+            "display": "Carbapenem resistance blaGIM gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaGIM-Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "86621-0",
+            "display": "Methicillin resistance mecC gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Methicillin-Resistenz mecC-Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "86712-7",
+            "display": "Carbapenem resistance blaOXA gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaOXA-Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "86713-5",
+            "display": "Carbapenem resistance blaOXA-134-like gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaOXA-134-ähnliches Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "86714-3",
+            "display": "Carbapenem resistance blaOXA-51-like gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaOXA-51-ähnliches Gen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 100
+              }
+            ],
+            "code": "98065-6",
+            "display": "Carbapenem resistance blaOXA-143 gene [Presence] by Molecular method",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://loinc.org",
+                  "code": "COMPONENT"
+                },
+                "value": "Bakterielle Carbapenem-Resistenz blaOXA-143-Gen"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-10-24T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "48813-0",
+        "display": "Methicillin resistance mecA gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "73982-1",
+        "display": "Carbapenem resistance blaNDM gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85501-5",
+        "display": "Carbapenem resistance blaVIM gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "86621-0",
+        "display": "Methicillin resistance mecC gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85503-1",
+        "display": "Carbapenem resistance blaOXA-48 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "98065-6",
+        "display": "Carbapenem resistance blaOXA-143 gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85833-2",
+        "display": "Carbapenem resistance blaGIM gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101675-7",
+        "display": "IMP Carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85498-4",
+        "display": "Carbapenem resistance blaIMP gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "86714-3",
+        "display": "Carbapenem resistance blaOXA-51-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "86713-5",
+        "display": "Carbapenem resistance blaOXA-134-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "86712-7",
+        "display": "Carbapenem resistance blaOXA gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85829-0",
+        "display": "Carbapenem resistance blaSPM gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85827-4",
+        "display": "Carbapenem resistance bla OXA-48-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85828-2",
+        "display": "Carbapenem resistance blaOXA-58-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85825-8",
+        "display": "Carbapenem resistance blaOXA-23-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "49617-4",
+        "display": "Carbapenem resistance blaKPC gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85826-6",
+        "display": "Carbapenem resistance blaOXA-24-like gene [Presence] by Molecular method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101677-3",
+        "display": "NDM Carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "105037-6",
+        "display": "OXA-23 carbapenemase"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101676-5",
+        "display": "VIM Carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "105038-4",
+        "display": "OXA-40/58 carbapenemase"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "63368-5",
+        "display": "Carbapenem resistance genes [Identifier] by NAA with probe detection"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101674-0",
+        "display": "OXA-48-like carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "101673-2",
+        "display": "KPC carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "48816-3",
+        "display": "Staphylococcus aureus Panton-Valentine leukocidin gene [Presence] in Isolate or Specimen by Molecular genetics method"
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.78",
+        "code": "85823-3",
+        "display": "Carbapenem resistance blaGES gene [Presence] by Molecular method"
+      }
+    ]
+  }
+}

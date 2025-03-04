@@ -2,611 +2,385 @@
   "resourceType": "ValueSet",
   "id": "answerSetVCHP",
   "url": "https://demis.rki.de/fhir/ValueSet/answerSetVCHP",
-  "version": "1.4.0",
+  "version": "1.9.0",
   "name": "AnswerSetVCHP",
-  "title": "AnswerSet für Vibrio spp. (humanpathogen); soweit ausschließlich eine Ohrinfektion vorliegt nur bei Vibrio cholerae",
+  "title": "AnswerSet für Vibrio cholerae",
   "status": "active",
-  "date": "2023-05-30",
-  "description": "Das ValueSet AnswerSetVCHP enthält die Codes der Answer-Codes für Vibrio spp. (humanpathogen); soweit ausschließlich eine Ohrinfektion vorliegt nur bei Vibrio cholerae.",
+  "experimental": false,
+  "date": "2024-09-30",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet AnswerSetVCHP enthält die Codes der Answer-Codes für Vibrio cholerae.",
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
   "compose": {
-    "include": [ {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/900000000000207008/version/20230331",
-      "concept": [ {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "45749000",
-        "display": "Vibrio alginolyticus (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 88
+              }
+            ],
+            "code": "125048009",
+            "display": "Vibrio cholerae serogroup O139 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cholerae serogroup O139 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae, Serogruppe O139"
+              }
+            ]
           },
-          "value": "Vibrio alginolyticus (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio alginolyticus"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "3402008",
-        "display": "Vibrio alginolyticus ss. iophagus (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "302572009",
+            "display": "Vibrio cholerae O1 El Tor Inaba (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cholerae O1 El Tor Inaba (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae O1 El Tor Inaba"
+              }
+            ]
           },
-          "value": "Vibrio alginolyticus ss. iophagus (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio alginolyticus Subspecies iophagus"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "76436009",
-        "display": "Vibrio cholerae, classical biotype (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "302573004",
+            "display": "Vibrio cholerae O1 El Tor Ogawa (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cholerae O1 El Tor Ogawa (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae O1 El Tor Ogawa"
+              }
+            ]
           },
-          "value": "Vibrio cholerae, classical biotype (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae, klassischer Biotyp"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "302574005",
+            "display": "Vibrio cholerae O1 El Tor Hikojima (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cholerae O1 El Tor Hikojima (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae O1 El Tor Hikojima"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "302575006",
+            "display": "Vibrio cholerae O1 classical Inaba (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cholerae O1 classical Inaba (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae O1 Inaba, klassisch"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "302576007",
+            "display": "Vibrio cholerae O1 classical Ogawa (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cholerae O1 classical Ogawa (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae O1 Ogawa, klassisch"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "302577003",
+            "display": "Vibrio cholerae O1 classical Hikojima (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cholerae O1 classical Hikojima (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae O1 Hikojima, klassisch"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "58735003",
+            "display": "Vibrio cholerae, El Tor biotype (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cholerae, El Tor biotype (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae, El Tor, Biotyp"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 89
+              }
+            ],
+            "code": "62987004",
+            "display": "Vibrio cholerae, O1 (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cholerae, O1 (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae, Serogruppe O1"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "75953000",
+            "display": "Vibrio cholerae (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cholerae (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "76436009",
+            "display": "Vibrio cholerae, classical biotype (organism)",
+            "designation": [
+              {
+                "language": "en-US",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000003001"
+                },
+                "value": "Vibrio cholerae, classical biotype (organism)"
+              },
+              {
+                "language": "de-DE",
+                "value": "Vibrio cholerae, klassischer Biotyp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/substanceVCHP"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetLaboratoryTest-SNOMED"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetResistance-SNOMED"
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-30T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "58735003",
-        "display": "Vibrio cholerae, El Tor biotype (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae, El Tor biotype (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae, El Tor, Biotyp"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "398506000",
-        "display": "Vibrio cholerae, non-O1 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae, non-O1 (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae, nicht O1"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "415819003",
-        "display": "Vibrio cholerae, non-O1/non-O139 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae, non-O1/non-O139 (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae, nicht O1/nicht O139"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "415820009",
-        "display": "Vibrio cholerae, non-O139 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae, non-O139 (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae, nicht O139"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "62987004",
-        "display": "Vibrio cholerae, O1 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae, O1 (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae, O1"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "75953000",
-        "display": "Vibrio cholerae (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "302577003",
-        "display": "Vibrio cholerae O1 classical Hikojima (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae O1 classical Hikojima (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae O1 Hikojima, klassisch"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "302575006",
-        "display": "Vibrio cholerae O1 classical Inaba (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae O1 classical Inaba (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae O1 Inaba, klassisch"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "302576007",
-        "display": "Vibrio cholerae O1 classical Ogawa (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae O1 classical Ogawa (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae O1 Ogawa, klassisch"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "302574005",
-        "display": "Vibrio cholerae O1 El Tor Hikojima (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae O1 El Tor Hikojima (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae O1 El Tor Hikojima"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+        "display": "Vibrio cholerae, El Tor biotype (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "302572009",
-        "display": "Vibrio cholerae O1 El Tor Inaba (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae O1 El Tor Inaba (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae O1 El Tor Inaba"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+        "display": "Vibrio cholerae O1 El Tor Inaba (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "11896004",
+        "display": "Intermediate (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "302573004",
-        "display": "Vibrio cholerae O1 El Tor Ogawa (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae O1 El Tor Ogawa (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae O1 El Tor Ogawa"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
+        "display": "Vibrio cholerae O1 El Tor Ogawa (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "302574005",
+        "display": "Vibrio cholerae O1 El Tor Hikojima (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "302575006",
+        "display": "Vibrio cholerae O1 classical Inaba (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "302576007",
+        "display": "Vibrio cholerae O1 classical Ogawa (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "76436009",
+        "display": "Vibrio cholerae, classical biotype (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
         "code": "125048009",
-        "display": "Vibrio cholerae serogroup O139 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae serogroup O139 (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae, Serogruppe O139"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "715335005",
-        "display": "Vibrio cholerae serogroup O141 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae serogroup O141 (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae, Serogruppe O141"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "450598001",
-        "display": "Vibrio cholerae serogroup O75 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae serogroup O75 (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae, Serogruppe O75"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "24763006",
-        "display": "Vibrio cholerae serotype Hikojima (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae serotype Hikojima (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae, Serotyp Hikojima"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "112351003",
-        "display": "Vibrio cholerae serotype Inaba (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae serotype Inaba (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae, Serotyp Inaba"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "66635002",
-        "display": "Vibrio cholerae serotype Ogawa (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cholerae serotype Ogawa (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cholerae, Serotyp Ogawa"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "11776003",
-        "display": "Vibrio mimicus (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio mimicus (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio mimicus"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "43199008",
-        "display": "Vibrio fluvialis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio fluvialis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio fluvialis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "6387008",
-        "display": "Vibrio furnissii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio furnissii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio furnissii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "387799003",
-        "display": "Photobacterium damselae subsp damselae (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Photobacterium damselae subsp damselae (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Photobacterium damselae Subspecies damselae"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "28382009",
-        "display": "Vibrio metschnikovii (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio metschnikovii (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio metschnikovii"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "36764009",
-        "display": "Vibrio cincinnatiensis (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio cincinnatiensis (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio cincinnatiensis"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "55905000",
-        "display": "Vibrio vulnificus (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio vulnificus (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio vulnificus"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "722806003",
-        "display": "Vibrio vulnificus biotype 1 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio vulnificus biotype 1 (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio vulnificus, Biotyp 1"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "722807007",
-        "display": "Vibrio vulnificus biotype 2 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio vulnificus biotype 2 (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio vulnificus, Biotyp 2"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "722808002",
-        "display": "Vibrio vulnificus biotype 3 (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio vulnificus biotype 3 (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio vulnificus, Biotyp 3"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "11736008",
-        "display": "Vibrio parahaemolyticus (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio parahaemolyticus (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio parahaemolyticus"
-        } ]
-      }, {
-        "extension": [ {
-          "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
-          "valueInteger": 100
-        } ],
-        "code": "84003007",
-        "display": "Vibrio harveyi (organism)",
-        "designation": [ {
-          "language": "en-US",
-          "use": {
-            "system": "http://snomed.info/sct",
-            "code": "900000000000003001"
-          },
-          "value": "Vibrio harveyi (organism)"
-        }, {
-          "language": "de-DE",
-          "value": "Vibrio harveyi"
-        } ]
-      } ]
-    } ]
+        "display": "Vibrio cholerae serogroup O139 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "302577003",
+        "display": "Vibrio cholerae O1 classical Hikojima (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "62987004",
+        "display": "Vibrio cholerae, O1 (organism)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "255821009",
+        "display": "Cholera toxin (substance)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20240515",
+        "code": "75953000",
+        "display": "Vibrio cholerae (organism)"
+      }
+    ]
   }
 }

@@ -1,0 +1,2188 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "ISO3166CountryCodes2DEMISCountryCodes",
+  "url": "https://demis.rki.de/fhir/ConceptMap/ISO3166CountryCodes2DEMISCountryCodes",
+  "version": "1.1.1",
+  "name": "ISO3166CountryCodes2DEMISCountryCodes",
+  "title": "ISO3166CountryCodes2DEMISCountryCodes",
+  "status": "active",
+  "date": "2023-05-03",
+  "description": "Die ConceptMap ISO3166CountryCodes2DEMISCountryCodes ordnet ISO-3166-Ländercodes den DEMIS-Ländercodes zu.",
+  "sourceUri": "http://hl7.org/fhir/ValueSet/iso3166-1-2",
+  "targetUri": "https://demis.rki.de/fhir/ValueSet/country",
+  "group": [
+    {
+      "source": "urn:iso:std:iso:3166",
+      "target": "https://demis.rki.de/fhir/CodeSystem/country",
+      "element": [
+        {
+          "code": "CA",
+          "display": "Canada",
+          "target": [
+            {
+              "code": "19166",
+              "display": "Kanada",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ST",
+          "display": "Sao Tome and Principe",
+          "target": [
+            {
+              "code": "18480",
+              "display": "São Tomé und Príncipe",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TM",
+          "display": "Turkmenistan",
+          "target": [
+            {
+              "code": "20127",
+              "display": "Turkmenistan",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LT",
+          "display": "Lithuania",
+          "target": [
+            {
+              "code": "17375",
+              "display": "Litauen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ET",
+          "display": "Ethiopia",
+          "target": [
+            {
+              "code": "18059",
+              "display": "Äthiopien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SZ",
+          "display": "Swaziland",
+          "target": [
+            {
+              "code": "18618",
+              "display": "Swasiland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BZ",
+          "display": "Belize",
+          "target": [
+            {
+              "code": "18988",
+              "display": "Belize",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AR",
+          "display": "Argentina",
+          "target": [
+            {
+              "code": "18911",
+              "display": "Argentinien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CM",
+          "display": "Cameroon",
+          "target": [
+            {
+              "code": "18439",
+              "display": "Kamerun",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BF",
+          "display": "Faso Burkina Faso",
+          "target": [
+            {
+              "code": "18406",
+              "display": "Burkina Faso",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GH",
+          "display": "Ghana",
+          "target": [
+            {
+              "code": "18193",
+              "display": "Ghana",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SA",
+          "display": "Saudi Arabia",
+          "target": [
+            {
+              "code": "20133",
+              "display": "Saudi-Arabien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "JO",
+          "display": "Jordan",
+          "target": [
+            {
+              "code": "19915",
+              "display": "Jordanien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SI",
+          "display": "Slovenia",
+          "target": [
+            {
+              "code": "17213",
+              "display": "Slowenien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GT",
+          "display": "Guatemala",
+          "target": [
+            {
+              "code": "19113",
+              "display": "Guatemala",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BA",
+          "display": "Bosnia and Herzegovina",
+          "target": [
+            {
+              "code": "17070",
+              "display": "Bosnien und Herzegowina",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "KW",
+          "display": "Kuwait",
+          "target": [
+            {
+              "code": "19963",
+              "display": "Kuwait",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RU",
+          "display": "Russian Federation",
+          "target": [
+            {
+              "code": "17664",
+              "display": "Russische Föderation",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ES",
+          "display": "Spain",
+          "target": [
+            {
+              "code": "17754",
+              "display": "Spanien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LR",
+          "display": "Liberia",
+          "target": [
+            {
+              "code": "18269",
+              "display": "Liberia",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NL",
+          "display": "Netherlands",
+          "target": [
+            {
+              "code": "17474",
+              "display": "Niederlande",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PY",
+          "display": "Paraguay",
+          "target": [
+            {
+              "code": "19308",
+              "display": "Paraguay",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "JM",
+          "display": "Jamaica",
+          "target": [
+            {
+              "code": "19281",
+              "display": "Jamaika",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "OM",
+          "display": "Oman",
+          "target": [
+            {
+              "code": "20023",
+              "display": "Oman",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CR",
+          "display": "Costa Rica",
+          "target": [
+            {
+              "code": "19024",
+              "display": "Costa Rica",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GA",
+          "display": "Gabon",
+          "target": [
+            {
+              "code": "18176",
+              "display": "Gabun",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NU",
+          "display": "Niue",
+          "target": [
+            {
+              "code": "20367",
+              "display": "Niue",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MC",
+          "display": "Monaco",
+          "target": [
+            {
+              "code": "17472",
+              "display": "Monaco",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BS",
+          "display": "Bahamas",
+          "target": [
+            {
+              "code": "18937",
+              "display": "Bahamas",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NZ",
+          "display": "New Zealand",
+          "target": [
+            {
+              "code": "20369",
+              "display": "Neuseeland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "YE",
+          "display": "Yemen",
+          "target": [
+            {
+              "code": "19490",
+              "display": "Jemen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PK",
+          "display": "Pakistan",
+          "target": [
+            {
+              "code": "20071",
+              "display": "Pakistan",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AL",
+          "display": "Albania",
+          "target": [
+            {
+              "code": "17033",
+              "display": "Albanien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "WS",
+          "display": "Samoa",
+          "target": [
+            {
+              "code": "20413",
+              "display": "Samoa",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AE",
+          "display": "United Arab Emirates",
+          "target": [
+            {
+              "code": "20112",
+              "display": "Vereinigte Arabische Emirate",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "UY",
+          "display": "Uruguay",
+          "target": [
+            {
+              "code": "19363",
+              "display": "Uruguay",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IN",
+          "display": "India",
+          "target": [
+            {
+              "code": "19727",
+              "display": "Indien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AZ",
+          "display": "Azerbaijan",
+          "target": [
+            {
+              "code": "19572",
+              "display": "Aserbaidschan",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LS",
+          "display": "Lesotho",
+          "target": [
+            {
+              "code": "18071",
+              "display": "Lesotho",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "KE",
+          "display": "Kenya",
+          "target": [
+            {
+              "code": "18233",
+              "display": "Kenia",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TJ",
+          "display": "Tajikistan",
+          "target": [
+            {
+              "code": "20122",
+              "display": "Tadschikistan",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TR",
+          "display": "Turkey",
+          "target": [
+            {
+              "code": "17775",
+              "display": "Türkei",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AF",
+          "display": "Afghanistan",
+          "target": [
+            {
+              "code": "19524",
+              "display": "Afghanistan",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ER",
+          "display": "Eritrea",
+          "target": [
+            {
+              "code": "18051",
+              "display": "Eritrea",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SB",
+          "display": "Solomon Islands",
+          "target": [
+            {
+              "code": "20347",
+              "display": "Salomonen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LB",
+          "display": "Lebanon",
+          "target": [
+            {
+              "code": "19995",
+              "display": "Libanon",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SM",
+          "display": "San Marino",
+          "target": [
+            {
+              "code": "17613",
+              "display": "San Marino",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MN",
+          "display": "Mongolia",
+          "target": [
+            {
+              "code": "20032",
+              "display": "Mongolei",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "FR",
+          "display": "France",
+          "target": [
+            {
+              "code": "17155",
+              "display": "Frankreich",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RW",
+          "display": "Rwanda",
+          "target": [
+            {
+              "code": "18460",
+              "display": "Ruanda",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SK",
+          "display": "Slovakia",
+          "target": [
+            {
+              "code": "17604",
+              "display": "Slowakei",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SO",
+          "display": "Somalia",
+          "target": [
+            {
+              "code": "18564",
+              "display": "Somalia",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PE",
+          "display": "Peru",
+          "target": [
+            {
+              "code": "19326",
+              "display": "Peru",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "VU",
+          "display": "Vanuatu",
+          "target": [
+            {
+              "code": "20360",
+              "display": "Vanuatu",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NR",
+          "display": "Nauru",
+          "target": [
+            {
+              "code": "20358",
+              "display": "Nauru",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NO",
+          "display": "Norway",
+          "target": [
+            {
+              "code": "17491",
+              "display": "Norwegen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MW",
+          "display": "Malawi",
+          "target": [
+            {
+              "code": "18392",
+              "display": "Malawi",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CK",
+          "display": "Cook Islands",
+          "target": [
+            {
+              "code": "20354",
+              "display": "Cookinseln",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BJ",
+          "display": "Benin",
+          "target": [
+            {
+              "code": "18093",
+              "display": "Benin",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SG",
+          "display": "Singapore",
+          "target": [
+            {
+              "code": "20147",
+              "display": "Singapur",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ME",
+          "display": "Montenegro",
+          "target": [
+            {
+              "code": "17341",
+              "display": "Montenegro",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TG",
+          "display": "Togo",
+          "target": [
+            {
+              "code": "18654",
+              "display": "Togo",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CN",
+          "display": "China",
+          "target": [
+            {
+              "code": "20264",
+              "display": "China",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AM",
+          "display": "Armenia",
+          "target": [
+            {
+              "code": "19512",
+              "display": "Armenien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DO",
+          "display": "Dominican Republic",
+          "target": [
+            {
+              "code": "19032",
+              "display": "Dominikanische Republik",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "UA",
+          "display": "Ukraine",
+          "target": [
+            {
+              "code": "17886",
+              "display": "Ukraine",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BH",
+          "display": "Bahrain",
+          "target": [
+            {
+              "code": "19559",
+              "display": "Bahrain",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TO",
+          "display": "Tonga",
+          "target": [
+            {
+              "code": "20411",
+              "display": "Tonga",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ID",
+          "display": "Indonesia",
+          "target": [
+            {
+              "code": "19762",
+              "display": "Indonesien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LY",
+          "display": "Libya",
+          "target": [
+            {
+              "code": "18285",
+              "display": "Libyen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "FI",
+          "display": "Finland",
+          "target": [
+            {
+              "code": "17148",
+              "display": "Finnland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CF",
+          "display": "Central African Republic",
+          "target": [
+            {
+              "code": "18854",
+              "display": "Zentralafrikanische Republik",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MU",
+          "display": "Mauritius",
+          "target": [
+            {
+              "code": "18361",
+              "display": "Mauritius",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SE",
+          "display": "Sweden",
+          "target": [
+            {
+              "code": "17615",
+              "display": "Schweden",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GY",
+          "display": "Guyana",
+          "target": [
+            {
+              "code": "18977",
+              "display": "Guyana",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ML",
+          "display": "Mali",
+          "target": [
+            {
+              "code": "18334",
+              "display": "Mali",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "KH",
+          "display": "Cambodia",
+          "target": [
+            {
+              "code": "19928",
+              "display": "Kambodscha",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BG",
+          "display": "Bulgaria",
+          "target": [
+            {
+              "code": "17085",
+              "display": "Bulgarien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RO",
+          "display": "Romania",
+          "target": [
+            {
+              "code": "17562",
+              "display": "Rumänien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AO",
+          "display": "Angola",
+          "target": [
+            {
+              "code": "18032",
+              "display": "Angola",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PT",
+          "display": "Portugal",
+          "target": [
+            {
+              "code": "17543",
+              "display": "Portugal",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "FJ",
+          "display": "Fiji",
+          "target": [
+            {
+              "code": "20349",
+              "display": "Fidschi",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LI",
+          "display": "Liechtenstein",
+          "target": [
+            {
+              "code": "17363",
+              "display": "Liechtenstein",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MY",
+          "display": "Malaysia",
+          "target": [
+            {
+              "code": "20299",
+              "display": "Malaysia",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AT",
+          "display": "Austria",
+          "target": [
+            {
+              "code": "17516",
+              "display": "Österreich",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MZ",
+          "display": "Mozambique",
+          "target": [
+            {
+              "code": "18371",
+              "display": "Mosambik",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "UG",
+          "display": "Uganda",
+          "target": [
+            {
+              "code": "18714",
+              "display": "Uganda",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "HU",
+          "display": "Hungary",
+          "target": [
+            {
+              "code": "17865",
+              "display": "Ungarn",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NE",
+          "display": "Niger",
+          "target": [
+            {
+              "code": "18383",
+              "display": "Niger",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BR",
+          "display": "Brazil",
+          "target": [
+            {
+              "code": "18949",
+              "display": "Brasilien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GN",
+          "display": "Guinea",
+          "target": [
+            {
+              "code": "18430",
+              "display": "Guinea",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PA",
+          "display": "Panama",
+          "target": [
+            {
+              "code": "19295",
+              "display": "Panama",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "KR",
+          "display": "Korea, Republic of",
+          "target": [
+            {
+              "code": "20096",
+              "display": "Korea, Republik",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "QA",
+          "display": "Qatar",
+          "target": [
+            {
+              "code": "19953",
+              "display": "Katar",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LU",
+          "display": "Luxembourg",
+          "target": [
+            {
+              "code": "17386",
+              "display": "Luxemburg",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AD",
+          "display": "Andorra",
+          "target": [
+            {
+              "code": "17073",
+              "display": "Andorra",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IE",
+          "display": "Ireland",
+          "target": [
+            {
+              "code": "17240",
+              "display": "Irland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PW",
+          "display": "Palau",
+          "target": [
+            {
+              "code": "20386",
+              "display": "Palau",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NG",
+          "display": "Nigeria",
+          "target": [
+            {
+              "code": "18127",
+              "display": "Nigeria",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EC",
+          "display": "Ecuador",
+          "target": [
+            {
+              "code": "19065",
+              "display": "Ecuador",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BD",
+          "display": "Bangladesh",
+          "target": [
+            {
+              "code": "20063",
+              "display": "Bangladesch",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BY",
+          "display": "Belarus",
+          "target": [
+            {
+              "code": "17937",
+              "display": "Weißrussland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BN",
+          "display": "Brunei Darussalam",
+          "target": [
+            {
+              "code": "19622",
+              "display": "Brunei Darussalam",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DZ",
+          "display": "Algeria",
+          "target": [
+            {
+              "code": "17983",
+              "display": "Algerien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SV",
+          "display": "El Salvador",
+          "target": [
+            {
+              "code": "19091",
+              "display": "El Salvador",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TV",
+          "display": "Tuvalu",
+          "target": [
+            {
+              "code": "20409",
+              "display": "Tuvalu",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MH",
+          "display": "Marshall Islands",
+          "target": [
+            {
+              "code": "20415",
+              "display": "Marshallinseln",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CL",
+          "display": "Chile",
+          "target": [
+            {
+              "code": "18995",
+              "display": "Chile",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BE",
+          "display": "Belgium",
+          "target": [
+            {
+              "code": "17081",
+              "display": "Belgien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "KI",
+          "display": "Kiribati",
+          "target": [
+            {
+              "code": "20356",
+              "display": "Kiribati",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "HT",
+          "display": "Haiti",
+          "target": [
+            {
+              "code": "19136",
+              "display": "Haiti",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IQ",
+          "display": "Iraq",
+          "target": [
+            {
+              "code": "19796",
+              "display": "Irak",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SL",
+          "display": "Sierra Leone",
+          "target": [
+            {
+              "code": "18559",
+              "display": "Sierra Leone",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GE",
+          "display": "Georgia",
+          "target": [
+            {
+              "code": "19627",
+              "display": "Georgien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GM",
+          "display": "Gambia",
+          "target": [
+            {
+              "code": "18186",
+              "display": "Gambia",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PL",
+          "display": "Poland",
+          "target": [
+            {
+              "code": "17526",
+              "display": "Polen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MA",
+          "display": "Morocco",
+          "target": [
+            {
+              "code": "18344",
+              "display": "Marokko",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "HR",
+          "display": "Croatia",
+          "target": [
+            {
+              "code": "17191",
+              "display": "Kroatien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GW",
+          "display": "Guinea-Bissau",
+          "target": [
+            {
+              "code": "18420",
+              "display": "Guinea-Bissau",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TH",
+          "display": "Thailand",
+          "target": [
+            {
+              "code": "20172",
+              "display": "Thailand",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CH",
+          "display": "Switzerland",
+          "target": [
+            {
+              "code": "17637",
+              "display": "Schweiz",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GD",
+          "display": "Grenada",
+          "target": [
+            {
+              "code": "19106",
+              "display": "Grenada",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SC",
+          "display": "Seychelles",
+          "target": [
+            {
+              "code": "18498",
+              "display": "Seychellen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TD",
+          "display": "Chad",
+          "target": [
+            {
+              "code": "18660",
+              "display": "Tschad",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EE",
+          "display": "Estonia",
+          "target": [
+            {
+              "code": "17132",
+              "display": "Estland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MX",
+          "display": "Mexico",
+          "target": [
+            {
+              "code": "19230",
+              "display": "Mexiko",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "UZ",
+          "display": "Uzbekistan",
+          "target": [
+            {
+              "code": "20249",
+              "display": "Usbekistan",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EG",
+          "display": "Egypt",
+          "target": [
+            {
+              "code": "18826",
+              "display": "Ägypten",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DJ",
+          "display": "Djibouti",
+          "target": [
+            {
+              "code": "18106",
+              "display": "Dschibuti",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AG",
+          "display": "Antigua and Barbuda",
+          "target": [
+            {
+              "code": "18890",
+              "display": "Antigua und Barbuda",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DM",
+          "display": "Dominica",
+          "target": [
+            {
+              "code": "19013",
+              "display": "Dominica",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CO",
+          "display": "Colombia",
+          "target": [
+            {
+              "code": "19180",
+              "display": "Kolumbien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BI",
+          "display": "Burundi",
+          "target": [
+            {
+              "code": "18872",
+              "display": "Burundi",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CY",
+          "display": "Cyprus",
+          "target": [
+            {
+              "code": "17976",
+              "display": "Zypern",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BB",
+          "display": "Barbados",
+          "target": [
+            {
+              "code": "18899",
+              "display": "Barbados",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MG",
+          "display": "Madagascar",
+          "target": [
+            {
+              "code": "18311",
+              "display": "Madagaskar",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IT",
+          "display": "Italy",
+          "target": [
+            {
+              "code": "17293",
+              "display": "Italien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BT",
+          "display": "Bhutan",
+          "target": [
+            {
+              "code": "19583",
+              "display": "Bhutan",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SD",
+          "display": "Sudan",
+          "target": [
+            {
+              "code": "18591",
+              "display": "Sudan",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NP",
+          "display": "Nepal",
+          "target": [
+            {
+              "code": "20055",
+              "display": "Nepal",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MT",
+          "display": "Malta",
+          "target": [
+            {
+              "code": "17392",
+              "display": "Malta",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MV",
+          "display": "Maldives",
+          "target": [
+            {
+              "code": "20002",
+              "display": "Malediven",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SR",
+          "display": "Suriname",
+          "target": [
+            {
+              "code": "19352",
+              "display": "Suriname",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IL",
+          "display": "Israel",
+          "target": [
+            {
+              "code": "19844",
+              "display": "Israel",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IS",
+          "display": "Iceland",
+          "target": [
+            {
+              "code": "17268",
+              "display": "Island",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ZM",
+          "display": "Zambia",
+          "target": [
+            {
+              "code": "18396",
+              "display": "Sambia",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SN",
+          "display": "Senegal",
+          "target": [
+            {
+              "code": "18483",
+              "display": "Senegal",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PG",
+          "display": "Papua New Guinea",
+          "target": [
+            {
+              "code": "20388",
+              "display": "Papua-Neuguinea",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ZW",
+          "display": "Zimbabwe",
+          "target": [
+            {
+              "code": "18165",
+              "display": "Simbabwe",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DE",
+          "display": "Germany",
+          "target": [
+            {
+              "code": "20422",
+              "display": "Deutschland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DK",
+          "display": "Denmark",
+          "target": [
+            {
+              "code": "17114",
+              "display": "Dänemark",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "KZ",
+          "display": "Kazakhstan",
+          "target": [
+            {
+              "code": "19899",
+              "display": "Kasachstan",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PH",
+          "display": "Philippines",
+          "target": [
+            {
+              "code": "20078",
+              "display": "Philippinen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MR",
+          "display": "Mauritania",
+          "target": [
+            {
+              "code": "18204",
+              "display": "Mauretanien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "KG",
+          "display": "Kyrgyzstan",
+          "target": [
+            {
+              "code": "19987",
+              "display": "Kirgisistan",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TT",
+          "display": "Trinidad and Tobago",
+          "target": [
+            {
+              "code": "19474",
+              "display": "Trinidad und Tobago",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LV",
+          "display": "Latvia",
+          "target": [
+            {
+              "code": "17314",
+              "display": "Lettland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SS",
+          "display": "South Sudan",
+          "target": [
+            {
+              "code": "18607",
+              "display": "Südsudan",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "JP",
+          "display": "Japan",
+          "target": [
+            {
+              "code": "19851",
+              "display": "Japan",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "HN",
+          "display": "Honduras",
+          "target": [
+            {
+              "code": "19147",
+              "display": "Honduras",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MM",
+          "display": "Myanmar",
+          "target": [
+            {
+              "code": "19604",
+              "display": "Myanmar",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GQ",
+          "display": "Equatorial Guinea",
+          "target": [
+            {
+              "code": "18583",
+              "display": "Äquatorialguinea",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TN",
+          "display": "Tunisia",
+          "target": [
+            {
+              "code": "18689",
+              "display": "Tunesien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NI",
+          "display": "Nicaragua",
+          "target": [
+            {
+              "code": "19263",
+              "display": "Nicaragua",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CU",
+          "display": "Cuba",
+          "target": [
+            {
+              "code": "19214",
+              "display": "Kuba",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RS",
+          "display": "Serbia",
+          "target": [
+            {
+              "code": "17945",
+              "display": "Serbien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "KM",
+          "display": "Comoros",
+          "target": [
+            {
+              "code": "18242",
+              "display": "Komoren",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CG",
+          "display": "Congo",
+          "target": [
+            {
+              "code": "18246",
+              "display": "Kongo",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GR",
+          "display": "Greece",
+          "target": [
+            {
+              "code": "17226",
+              "display": "Griechenland",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LK",
+          "display": "Sri Lanka",
+          "target": [
+            {
+              "code": "19640",
+              "display": "Sri Lanka",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NA",
+          "display": "Namibia",
+          "target": [
+            {
+              "code": "18466",
+              "display": "Namibia",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BW",
+          "display": "Botswana",
+          "target": [
+            {
+              "code": "18082",
+              "display": "Botsuana",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AU",
+          "display": "Australia",
+          "target": [
+            {
+              "code": "20329",
+              "display": "Australien (Land)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CV",
+          "display": "Cabo Verde",
+          "target": [
+            {
+              "code": "18218",
+              "display": "Kap Verde",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "VA",
+          "display": "Holy See",
+          "target": [
+            {
+              "code": "17912",
+              "display": "Vatikanstadt",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LC",
+          "display": "Saint Lucia",
+          "target": [
+            {
+              "code": "19383",
+              "display": "St. Lucia",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CI",
+          "display": "Côte d''Ivoire",
+          "target": [
+            {
+              "code": "18112",
+              "display": "Elfenbeinküste (Côte d'Ivoire)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CZ",
+          "display": "Czechia",
+          "target": [
+            {
+              "code": "17856",
+              "display": "Tschechische Republik",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CD",
+          "display": "Congo, the Democratic Republic of the",
+          "target": [
+            {
+              "code": "18257",
+              "display": "Kongo, Demokratische Republik",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "VN",
+          "display": "Viet Nam",
+          "target": [
+            {
+              "code": "19650",
+              "display": "Vietnam",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "VC",
+          "display": "Saint Vincent and the Grenadines",
+          "target": [
+            {
+              "code": "19470",
+              "display": "St. Vincent und die Grenadinen",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "KN",
+          "display": "Saint Kitts and Nevis",
+          "target": [
+            {
+              "code": "19472",
+              "display": "St. Kitts und Nevis",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "KP",
+          "display": "Korea, Democratic People''s Republic of",
+          "target": [
+            {
+              "code": "19715",
+              "display": "Korea, Demokratische Volksrepublik",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ZA",
+          "display": "South Africa",
+          "target": [
+            {
+              "code": "18450",
+              "display": "Südafrika (Staat)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA",
+          "display": "Lao People''s Democratic Republic",
+          "target": [
+            {
+              "code": "19969",
+              "display": "Laos",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PS",
+          "display": "Palestine, State of",
+          "target": [
+            {
+              "code": "20061",
+              "display": "Palästinensische Gebiete",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TL",
+          "display": "Timor-Leste",
+          "target": [
+            {
+              "code": "20315",
+              "display": "Timor-Leste",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "BO",
+          "display": "Bolivia, Plurinational State of",
+          "target": [
+            {
+              "code": "18939",
+              "display": "Bolivien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TZ",
+          "display": "Tanzania, United Republic of",
+          "target": [
+            {
+              "code": "18623",
+              "display": "Tansania",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MK",
+          "display": "Macedonia, the former Yugoslav Republic of",
+          "target": [
+            {
+              "code": "17390",
+              "display": "Mazedonien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "US",
+          "display": "United States of America",
+          "target": [
+            {
+              "code": "19411",
+              "display": "Vereinigte Staaten",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IR",
+          "display": "Iran, Islamic Republic of",
+          "target": [
+            {
+              "code": "19815",
+              "display": "Iran",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MD",
+          "display": "Moldova, Republic of",
+          "target": [
+            {
+              "code": "17460",
+              "display": "Moldau",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "FM",
+          "display": "Micronesia, Federated States of",
+          "target": [
+            {
+              "code": "20417",
+              "display": "Mikronesien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "VE",
+          "display": "Venezuela, Bolivarian Republic of",
+          "target": [
+            {
+              "code": "19385",
+              "display": "Venezuela",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SY",
+          "display": "Syrian Arab Republic",
+          "target": [
+            {
+              "code": "20157",
+              "display": "Syrien",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GB",
+          "display": "United Kingdom of Great Britain and Northern Ireland",
+          "target": [
+            {
+              "code": "17914",
+              "display": "Vereinigtes Königreich",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

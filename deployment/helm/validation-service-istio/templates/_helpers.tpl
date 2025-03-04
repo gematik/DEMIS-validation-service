@@ -40,4 +40,68 @@ Selector labels
 app: {{ .Values.fullName }}
 {{- end }}
 
+{{/*
+Detect if the external routing is defined
+*/}}
+{{- define "istio.service.external.match" -}}
+{{- if (hasKey .Values.istio.virtualService "externalHttp") -}}
+{{- toYaml .Values.istio.virtualService.externalHttp.match }}
+{{- else -}}
+{{- toYaml .Values.istio.virtualService.http.match }}
+{{- end -}}
+{{- end -}}
 
+{{/*
+Detect if the external rewrite uri is defined
+*/}}
+{{- define "istio.service.external.rewrite.url" -}}
+{{- if (hasKey .Values.istio.virtualService "externalHttp") -}}
+rewrite:
+  uri: {{ .Values.istio.virtualService.externalHttp.rewrite.uri }}
+{{- else -}}
+rewrite:
+  uri: {{ .Values.istio.virtualService.http.rewrite.uri }}
+{{- end -}}
+{{- end -}}
+
+{{/*
+Detect if the external timeout is defined
+*/}}
+{{- define "istio.service.external.timeout" -}}
+{{- if (and (hasKey .Values.istio.virtualService "externalHttp") (hasKey .Values.istio.virtualService.externalHttp "timeout")) -}}
+timeout: {{ printf "%s" .Values.istio.virtualService.externalHttp.timeout }}
+{{- else if (and (hasKey .Values.istio.virtualService "http") (hasKey .Values.istio.virtualService.http "timeout")) -}}
+timeout: {{ printf "%s" .Values.istio.virtualService.http.timeout }}
+{{- end -}}
+{{- end -}}
+
+{{/*
+Detect if the external retry is defined
+*/}}
+{{- define "istio.service.external.retry" -}}
+{{- if (hasKey .Values.istio.virtualService "externalHttp") -}}
+{{- if (and (hasKey .Values.istio.virtualService.externalHttp "retries") (.Values.istio.virtualService.externalHttp.retries.enable)) -}}
+retries:
+  attempts: {{ .Values.istio.virtualService.externalHttp.retries.attempts | default 3 }}
+  perTryTimeout: {{ .Values.istio.virtualService.externalHttp.retries.perTryTimeout | default "2s" }}
+  {{- if .Values.istio.virtualService.externalHttp.retries.retryOn }}
+  retryOn: {{ .Values.istio.virtualService.externalHttp.retries.retryOn }}
+  {{- end -}}
+{{- else if (and (hasKey .Values.istio.virtualService.externalHttp "retries") (not .Values.istio.virtualService.externalHttp.retries.enable)) -}}
+retries:
+  attempts: 0
+{{- end -}}
+{{- else if (hasKey .Values.istio.virtualService "http") -}}
+{{- if (and (hasKey .Values.istio.virtualService.http "retries") (.Values.istio.virtualService.http.retries.enable)) -}}
+retries:
+  attempts: {{ .Values.istio.virtualService.http.retries.attempts | default 3 }}
+  perTryTimeout: {{ .Values.istio.virtualService.http.retries.perTryTimeout | default "2s" }}
+  {{- if .Values.istio.virtualService.http.retries.retryOn -}}
+  retryOn: {{ .Values.istio.virtualService.http.retries.retryOn }}
+  {{- end -}}
+{{- else if (and (hasKey .Values.istio.virtualService.http "retries") (not .Values.istio.virtualService.http.retries.enable)) -}}
+retries:
+  attempts: 0
+{{- end -}}
+{{- end -}}
+{{- end -}}

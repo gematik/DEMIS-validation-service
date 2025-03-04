@@ -12,8 +12,10 @@
   "valueSet": "https://demis.rki.de/fhir/ValueSet/reportSection",
   "content": "complete",
   "count": 1,
-  "concept": [ {
-    "code": "statisticInformationBedOccupancySection",
-    "display": "Abschnitt 'Statistische Informationen zur Krankenhausbettenbelegung'"
-  } ]
+  "concept": [
+    {
+      "code": "statisticInformationBedOccupancySection",
+      "display": "Abschnitt 'Statistische Informationen zur Krankenhausbettenbelegung'"
+    }
+  ]
 }

@@ -1,0 +1,171 @@
+<!--
+  #%L
+  validation-service
+  %%
+  Copyright (C) 2025 gematik GmbH
+  %%
+  Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
+  European Commission – subsequent versions of the EUPL (the "Licence").
+  You may not use this work except in compliance with the Licence.
+  
+  You find a copy of the Licence in the "Licence" file or at
+  https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+  
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the Licence is distributed on an "AS IS" basis,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expressed or implied.
+  In case of changes by gematik find details in the "Readme" file.
+  
+  See the Licence for the specific language governing permissions and limitations under the Licence.
+  #L%
+  -->
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="d41d8cd9-8f00-3204-a980-0998ecf8427e"></id>
+    <meta>
+        <lastUpdated value="2021-11-20T17:50:00.000+01:00"></lastUpdated>
+        <profile value="https://demis.rki.de/fhir/StructureDefinition/ReportBundle"></profile>
+    </meta>
+    <identifier>
+        <system value="https://demis.rki.de/fhir/NamingSystem/NotificationBundleId"></system>
+        <value value="cfcd2084-95d5-35ef-a6e7-dff9f98764da"></value>
+    </identifier>
+    <type value="document"></type>
+    <timestamp value="2021-11-20T17:50:00.000+01:00"></timestamp>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/Composition/1b22c8d8-f1cb-311a-991a-8b488979af8e"></fullUrl>
+        <resource>
+            <Composition xmlns="http://hl7.org/fhir">
+                <id value="1b22c8d8-f1cb-311a-991a-8b488979af8e"></id>
+                <meta>
+                    <lastUpdated value="2021-11-20T17:50:00.000+01:00"></lastUpdated>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/ReportBedOccupancy"></profile>
+                </meta>
+                <identifier>
+                    <system value="https://demis.rki.de/fhir/NamingSystem/NotificationId"></system>
+                    <value value="5e1e89ce-7a44-4ec1-801c-0f988992e8fe"></value>
+                </identifier>
+                <status value="final"></status>
+                <type>
+                    <coding>
+                        <system value="http://loinc.org"></system>
+                        <code value="80563-0"></code>
+                        <display value="Report"></display>
+                    </coding>
+                </type>
+                <category>
+                    <coding>
+                        <system value="https://demis.rki.de/fhir/CodeSystem/reportCategory"></system>
+                        <code value="bedOccupancyReport"></code>
+                        <display value="Bettenbelegungsstatistik"></display>
+                    </coding>
+                </category>
+                <subject>
+                    <identifier>
+                        <system value="https://demis.rki.de/fhir/NamingSystem/InekStandortId"></system>
+                        <value value="772557"></value>
+                    </identifier>
+                </subject>
+                <date value="2021-11-20T17:50:00.000+01:00"></date>
+                <author>
+                    <reference value="PractitionerRole/2b9aa7a8-0881-34cb-9b01-b79ff1a367cf"></reference>
+                </author>
+                <title value="Bericht (Krankenhausbettenbelegungsstatistik)"></title>
+                <section>
+                    <code>
+                        <coding>
+                            <system value="https://demis.rki.de/fhir/CodeSystem/reportSection"></system>
+                            <code value="statisticInformationBedOccupancySection"></code>
+                            <display
+                                    value="Abschnitt 'Statistische Informationen zur Krankenhausbettenbelegung'"></display>
+                        </coding>
+                    </code>
+                    <entry>
+                        <reference value="QuestionnaireResponse/5e1e89ce-7a44-4ec1-801c-0f988992e8fa"></reference>
+                    </entry>
+                </section>
+            </Composition>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/Organization/5e1e89ce-7a44-4ec1-801c-0f988992e8ff"></fullUrl>
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="5e1e89ce-7a44-4ec1-801c-0f988992e8ff"></id>
+                <meta>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/NotifierFacility"></profile>
+                </meta>
+                <type>
+                    <coding>
+                        <system value="https://demis.rki.de/fhir/CodeSystem/organizationType"></system>
+                        <code value="hospital"></code>
+                    </coding>
+                </type>
+                <name value="Sankt Gertrauden-Krankenhaus GmbH"></name>
+                <telecom>
+                    <system value="phone"></system>
+                    <value value="309876543210"></value>
+                    <use value="work"></use>
+                </telecom>
+                <address>
+                    <line value="Paretzer Straße 12"></line>
+                    <city value="Berlin"></city>
+                    <postalCode value="10713"></postalCode>
+                    <country value="DE"></country>
+                </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/PractitionerRole/2b9aa7a8-0881-34cb-9b01-b79ff1a367cf"></fullUrl>
+        <resource>
+            <PractitionerRole xmlns="http://hl7.org/fhir">
+                <id value="2b9aa7a8-0881-34cb-9b01-b79ff1a367cf"></id>
+                <meta>
+                    <profile value="https://demis.rki.de/fhir/StructureDefinition/NotifierRole"></profile>
+                </meta>
+                <organization>
+                    <reference value="Organization/5e1e89ce-7a44-4ec1-801c-0f988992e8ff"></reference>
+                </organization>
+            </PractitionerRole>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="https://demis.rki.de/fhir/QuestionnaireResponse/5e1e89ce-7a44-4ec1-801c-0f988992e8fa"></fullUrl>
+        <resource>
+            <QuestionnaireResponse xmlns="http://hl7.org/fhir">
+                <id value="5e1e89ce-7a44-4ec1-801c-0f988992e8fa"></id>
+                <meta>
+                    <profile
+                            value="https://demis.rki.de/fhir/StructureDefinition/StatisticInformationBedOccupancy"></profile>
+                </meta>
+                <questionnaire
+                        value="https://demis.rki.de/fhir/Questionnaire/StatisticQuestionsBedOccupancy"></questionnaire>
+                <status value="completed"></status>
+                <item>
+                    <linkId value="numberOperableBedsGeneralWardAdults"></linkId>
+                    <answer>
+                        <valueInteger value="250"></valueInteger>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="numberOccupiedBedsGeneralWardAdults"></linkId>
+                    <answer>
+                        <valueInteger value="221"></valueInteger>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="numberOperableBedsGeneralWardChildren"></linkId>
+                    <answer>
+                        <valueInteger value="50"></valueInteger>
+                    </answer>
+                </item>
+                <item>
+                    <linkId value="numberOccupiedBedsGeneralWardChildren"></linkId>
+                    <answer>
+                        <valueInteger value="37"></valueInteger>
+                    </answer>
+                </item>
+            </QuestionnaireResponse>
+        </resource>
+    </entry>
+</Bundle>

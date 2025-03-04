@@ -2,16 +2,37 @@
   "resourceType": "ValueSet",
   "id": "conclusionCode",
   "url": "https://demis.rki.de/fhir/ValueSet/conclusionCode",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "name": "ConclusionCode",
   "title": "Gesamttestergebnis-Code",
   "status": "active",
-  "date": "2023-02-09",
+  "experimental": false,
+  "date": "2023-09-19",
+  "publisher": "Robert Koch-Institut",
   "description": "Das ValueSet ConclusionCode enthält die Codes des Gesamttestergebnisses.",
   "compose": {
-    "include": [ {
-      "system": "https://demis.rki.de/fhir/CodeSystem/conclusionCode",
-      "version": "1.2.0"
-    } ]
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/conclusionCode",
+        "version": "1.3.0"
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2023-09-19T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/conclusionCode",
+        "version": "1.3.0",
+        "code": "pathogenDetected",
+        "display": "Meldepflichtiger Erreger nachgewiesen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/conclusionCode",
+        "version": "1.3.0",
+        "code": "pathogenNotDetected",
+        "display": "Meldepflichtiger Erreger nicht nachgewiesen"
+      }
+    ]
   }
 }

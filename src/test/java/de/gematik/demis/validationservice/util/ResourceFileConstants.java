@@ -34,7 +34,8 @@ public final class ResourceFileConstants {
       "./src/test/resources/invalid_report_bed_occupancy_example.json";
   public static final String INVALID_TEST_NOTIFICATION_DV_2 =
       "./src/test/resources/invalid_test_notification_dv2.json";
-
+  public static final String VALID_BUNDLE_WITH_UNDERSCORES_EXAMPLE =
+      "./src/test/resources/request_links_with_underscore.xml";
   public static final String INVALID_PARAMETERS_META_EXCEPTION =
       "./src/test/resources/invalid_parameters_meta_exception.json";
   public static final String NOT_PARSEABLE_REPORT_BED_OCCUPANCY_EXAMPLE =

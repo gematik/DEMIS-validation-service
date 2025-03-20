@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  #%L
+  validation-service
+  %%
+  Copyright (C) 2025 gematik GmbH
+  %%
+  Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
+  European Commission – subsequent versions of the EUPL (the "Licence").
+  You may not use this work except in compliance with the Licence.
+  
+  You find a copy of the Licence in the "Licence" file or at
+  https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+  
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the Licence is distributed on an "AS IS" basis,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expressed or implied.
+  In case of changes by gematik find details in the "Readme" file.
+  
+  See the Licence for the specific language governing permissions and limitations under the Licence.
+  #L%
+  -->
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <meta>
+    <profile value="https://demis.rki.de/fhir/StructureDefinition/NotificationBundleDisease"/>
+  </meta>
+  <identifier>
+    <system value="https://demis.rki.de/fhir/NamingSystem/NotificationBundleId"/>
+    <value value="92f70eb1-a199-47f3-86ca-47b38257e0b2"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2024-12-24T10:53:54.6085685+01:00"/>
+  <entry>
+    <fullUrl value="https://rd-vm01.rd.dtcs.local/iM1AS_QO999/api/v1/fhir/Composition/6e17e8b3-2acf-4a25-ab7c-1ff532815742"/>
+    <resource>
+      <Composition>
+        <id value="6e17e8b3-2acf-4a25-ab7c-1ff532815742"/>
+        <meta>
+          <lastUpdated value="2024-12-24T10:53:54.8116936+01:00"/>
+          <profile value="https://demis.rki.de/fhir/StructureDefinition/NotificationDiseaseCVDD"/>
+        </meta>
+        <identifier>
+          <system value="https://demis.rki.de/fhir/NamingSystem/NotificationId"/>
+          <value value="CVDD - 1259"/>
+        </identifier>
+        <status value="preliminary"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="34782-3"/>
+            <display value="Infectious disease Note"/>
+          </coding>
+        </type>
+        <category>
+          <coding>
+            <system value="https://demis.rki.de/fhir/CodeSystem/notificationType"/>
+            <code value="6.1_2"/>
+            <display value="Meldung gemäß IfSG §6 Absatz 1, 2"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/263778"/>
+        </subject>
+        <date value="2024-12-24T10:53:54.8116936+01:00"/>
+        <author>
+          <reference value="PractitionerRole/SanchitaM"/>
+        </author>
+        <title value="Meldung gemäß IfSG §6 Absatz 1, 2 IfSG"/>
+        <section>
+          <title value="Diagnose"/>
+          <code>
+            <coding>
+              <system value="https://demis.rki.de/fhir/CodeSystem/sectionCode"/>
+              <code value="diagnosis"/>
+              <display value="Diagnose"/>
+            </coding>
+          </code>
+          <entry>
+            <reference value="Condition/ecde719d-4484-4093-b277-3ae90d0a2de8"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Meldetatbestandsüergreifende klinische und epidemiologische Angaben"/>
+          <code>
+            <coding>
+              <system value="https://demis.rki.de/fhir/CodeSystem/sectionCode"/>
+              <code value="generalClinAndEpiInformation"/>
+              <display value="Meldetatbestandsübergreifende klinische und epidemiologische Angaben"/>
+            </coding>
+          </code>
+          <entry>
+            <reference value="QuestionnaireResponse/d6e43222-7489-43d9-a1a4-ce936d091f07"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Meldetatbestandsspezifische klinische und epidemiologische Angaben"/>
+          <code>
+            <coding>
+              <system value="https://demis.rki.de/fhir/CodeSystem/sectionCode"/>
+              <code value="specificClinAndEpiInformation"/>
+              <display value="Meldetatbestandsspezifische klinische und epidemiologische Angaben"/>
+            </coding>
+          </code>
+          <entry>
+            <reference value="QuestionnaireResponse/067af6e5-8c04-444b-87df-90f2eed1d125"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://rd-vm01.rd.dtcs.local/iM1AS_QO999/api/v1/fhir/Condition/ecde719d-4484-4093-b277-3ae90d0a2de8"/>
+    <resource>
+      <Condition>
+        <id value="ecde719d-4484-4093-b277-3ae90d0a2de8"/>
+        <meta>
+          <profile value="https://demis.rki.de/fhir/StructureDefinition/DiseaseCVDD"/>
+        </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="unconfirmed"/>
+          </coding>
+        </verificationStatus>
+        <code>
+          <coding>
+            <system value="https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory"/>
+            <code value="cvdd"/>
+            <display value="Coronavirus-Krankheit-2019 (COVID-19)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/263778"/>
+        </subject>
+        <onsetDateTime value="2024-12-14T10:51:00.0000000+01:00"/>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="409966000"/>
+              <display value="Durchfall, akut"/>
+            </coding>
+          </code>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="90834002"/>
+              <display value="Gliederschmerzen"/>
+            </coding>
+          </code>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="3424008"/>
+              <display value="Herzrhythmusstörung mit Anstieg der Herzfrequenz (Tachykardie)"/>
+            </coding>
+          </code>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="161891005"/>
+              <display value="Rückenschmerzen"/>
+            </coding>
+          </code>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="25064002"/>
+              <display value="Kopfschmerzen"/>
+            </coding>
+          </code>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="49727002"/>
+              <display value="Husten"/>
+            </coding>
+          </code>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="67782005"/>
+              <display value="akutes schweres Atemnotsyndrom (ARDS)"/>
+            </coding>
+          </code>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="68962001"/>
+              <display value="Muskelschmerzen"/>
+            </coding>
+          </code>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="271823003"/>
+              <display value="beschleunigte Atmung (Tachypnoe)"/>
+            </coding>
+          </code>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="386661006"/>
+              <display value="Fieber"/>
+            </coding>
+          </code>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="162397003"/>
+              <display value="Halsschmerzen/-entzündung"/>
+            </coding>
+          </code>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="233604007"/>
+              <display value="Lungenentzündung (Pneumonie)"/>
+            </coding>
+          </code>
+        </evidence>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="213257006:{246112005=24484000}"/>
+              <display value="schweres Krankheitsgefühl"/>
+            </coding>
+          </code>
+        </evidence>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://rd-vm01.rd.dtcs.local/iM1AS_QO999/api/v1/fhir/Encounter/1137194"/>
+    <resource>
+      <Encounter>
+        <id value="1137194"/>
+        <meta>
+          <profile value="https://demis.rki.de/fhir/StructureDefinition/Hospitalization"/>
+        </meta>
+        <status value="unknown"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="IMP"/>
+        </class>
+        <serviceType>
+          <coding>
+            <system value="https://demis.rki.de/fhir/CodeSystem/hospitalizationServiceType"/>
+            <code value="0100"/>
+            <display value="Innere Medizin"/>
+          </coding>
+        </serviceType>
+        <subject>
+          <reference value="Patient/263778"/>
+        </subject>
+        <period>
+          <start value="2024-12-24"/>
+        </period>
+        <serviceProvider>
+          <reference value="Organization/LOCATION-91"/>
+        </serviceProvider>
+      </Encounter>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://rd-vm01.rd.dtcs.local/iM1AS_QO999/api/v1/fhir/Patient/263778"/>
+    <resource>
+      <Patient>
+        <id value="263778"/>
+        <meta>
+          <profile value="https://demis.rki.de/fhir/StructureDefinition/NotifiedPerson"/>
+        </meta>
+        <active value="true"/>
+        <name>
+          <family value="DEMIS"/>
+          <given value="Specification changes"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="020-458796325"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="female"/>
+        <birthDate value="2016-12-01"/>
+        <address>
+          <extension url="https://demis.rki.de/fhir/StructureDefinition/AddressUse">
+            <valueCoding>
+              <system value="https://demis.rki.de/fhir/CodeSystem/addressUse"/>
+              <code value="primary"/>
+            </valueCoding>
+          </extension>
+          <type value="physical"/>
+          <line value="WIlhelm-Mauser 55"/>
+          <city value="Köln"/>
+          <postalCode value="50827"/>
+          <country value="DE"/>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://rd-vm01.rd.dtcs.local/iM1AS_QO999/api/v1/fhir/PractitionerRole/SanchitaM"/>
+    <resource>
+      <PractitionerRole>
+        <id value="SanchitaM"/>
+        <meta>
+          <profile value="https://demis.rki.de/fhir/StructureDefinition/NotifierRole"/>
+        </meta>
+        <practitioner>
+          <reference value="Practitioner/SanchitaM"/>
+        </practitioner>
+        <organization>
+          <reference value="Organization/LOCATION-91"/>
+        </organization>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://rd-vm01.rd.dtcs.local/iM1AS_QO999/api/v1/fhir/Organization/LOCATION-91"/>
+    <resource>
+      <Organization>
+        <id value="LOCATION-91"/>
+        <meta>
+          <profile value="https://demis.rki.de/fhir/StructureDefinition/NotifierFacility"/>
+        </meta>
+        <identifier>
+          <system value="https://demis.rki.de/fhir/NamingSystem/InekStandortId"/>
+          <value value="773271000"/>
+        </identifier>
+        <type>
+          <coding>
+            <system value="https://demis.rki.de/fhir/CodeSystem/organizationType"/>
+            <code value="hospital"/>
+          </coding>
+        </type>
+        <name value="Neuer Standort 91"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="020896545781"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="sanchi@demis.com"/>
+          <use value="work"/>
+        </telecom>
+        <address>
+          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+            <valueString value="Köln"/>
+          </extension>
+          <type value="physical"/>
+          <line value="Wilhelm-Mauser  wilhelm-Mauser">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+              <valueString value="Wilhelm-Mauser"/>
+            </extension>
+          </line>
+          <city value="Köln"/>
+          <postalCode value="50676"/>
+          <country value="DE"/>
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://rd-vm01.rd.dtcs.local/iM1AS_QO999/api/v1/fhir/Practitioner/SanchitaM"/>
+    <resource>
+      <Practitioner>
+        <id value="SanchitaM"/>
+        <meta>
+          <profile value="https://demis.rki.de/fhir/StructureDefinition/Notifier"/>
+        </meta>
+        <extension url="https://demis.rki.de/fhir/StructureDefinition/Salutation">
+          <valueCoding>
+            <system value="https://demis.rki.de/fhir/CodeSystem/salutation"/>
+            <code value="mr"/>
+          </valueCoding>
+        </extension>
+        <name>
+          <use value="official"/>
+          <family value="Sanchita"/>
+          <given value="Mankar"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="020-459876523"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="sanchi@demis.com"/>
+          <use value="home"/>
+        </telecom>
+        <address>
+          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+            <valueString value="Berlin"/>
+          </extension>
+          <type value="physical"/>
+          <line value="Alexanderplatz 10">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+              <valueString value="Alexanderplatz 10"/>
+            </extension>
+          </line>
+          <city value="Berlin"/>
+          <postalCode value="50827"/>
+          <country value="DE"/>
+        </address>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://rd-vm01.rd.dtcs.local/iM1AS_QO999/api/v1/fhir/QuestionnaireResponse/d6e43222-7489-43d9-a1a4-ce936d091f07"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="d6e43222-7489-43d9-a1a4-ce936d091f07"/>
+        <meta>
+          <profile value="https://demis.rki.de/fhir/StructureDefinition/DiseaseInformationCommon"/>
+        </meta>
+        <questionnaire value="https://demis.rki.de/fhir/Questionnaire/DiseaseQuestionsCommon"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/263778"/>
+        </subject>
+        <item>
+          <linkId value="isDead"/>
+          <answer>
+            <valueCoding>
+              <system value="https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer"/>
+              <code value="no"/>
+              <display value="Nein"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="militaryAffiliation"/>
+          <answer>
+            <valueCoding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+              <code value="NASK"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="labSpecimenTaken"/>
+          <answer>
+            <valueCoding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+              <code value="NASK"/>
+              <display value="not asked"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="hospitalized"/>
+          <answer>
+            <valueCoding>
+              <system value="https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer"/>
+              <code value="yes"/>
+              <display value="Ja"/>
+            </valueCoding>
+            <item>
+              <linkId value="hospitalizedGroup"/>
+              <item>
+                <linkId value="hospitalizedEncounter"/>
+                <answer>
+                  <valueReference>
+                    <reference value="Encounter/1137194"/>
+                  </valueReference>
+                </answer>
+              </item>
+            </item>
+          </answer>
+        </item>
+        <item>
+          <linkId value="infectProtectFacility"/>
+          <answer>
+            <valueCoding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+              <code value="NASK"/>
+              <display value="not asked"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="placeExposure"/>
+          <answer>
+            <valueCoding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+              <code value="NASK"/>
+              <display value="not asked"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="organDonation"/>
+          <answer>
+            <valueCoding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+              <code value="NASK"/>
+              <display value="not asked"/>
+            </valueCoding>
+          </answer>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl
+      value="https://rd-vm01.rd.dtcs.local/iM1AS_QO999/api/v1/fhir/QuestionnaireResponse/067af6e5-8c04-444b-87df-90f2eed1d125"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="067af6e5-8c04-444b-87df-90f2eed1d125"/>
+        <meta>
+          <profile value="https://demis.rki.de/fhir/StructureDefinition/DiseaseInformationCVDD"/>
+        </meta>
+        <questionnaire value="https://demis.rki.de/fhir/Questionnaire/DiseaseQuestionsCVDD"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/263778"/>
+        </subject>
+        <item>
+          <linkId value="infectionSource"/>
+          <answer>
+            <valueCoding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+              <code value="NASK"/>
+              <display value="not asked"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="infectionEnvironmentSetting"/>
+          <answer>
+            <valueCoding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+              <code value="NASK"/>
+              <display value="not asked"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="immunization"/>
+          <answer>
+            <valueCoding>
+              <system value="https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer"/>
+              <code value="no"/>
+              <display value="Nein"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="infectionRiskKind"/>
+          <answer>
+            <valueCoding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+              <code value="NASK"/>
+              <display value="Nicht erhoben"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="outbreak"/>
+          <answer>
+            <valueCoding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+              <code value="NASK"/>
+              <display value="not asked"/>
+            </valueCoding>
+          </answer>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+</Bundle>

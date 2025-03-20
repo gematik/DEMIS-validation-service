@@ -37,7 +37,7 @@ public final class FilteredMessagePrefixesFactory implements Supplier<Set<String
   private static final Set<String> FILTERED_MESSAGES_KEYS =
       Set.of(
           "Reference_REF_CantMatchChoice",
-          "BUNDLE_BUNDLE_ENTRY_MULTIPLE_PROFILES_NO_MATCH_REASON",
+          "BUNDLE_BUNDLE_ENTRY_MULTIPLE_PROFILES_other",
           "Validation_VAL_Profile_NoMatch",
           "This_element_does_not_match_any_known_slice_");
   private final Set<String> messages;

@@ -257,6 +257,26 @@ class ValidationServiceTest {
         .returns(OperationOutcome.IssueType.EXCEPTION, OperationOutcomeIssueComponent::getCode);
   }
 
+  @Test
+  void validateNotificationsWithUnderscoresAllowed() throws IOException {
+    initializeValidationService(DEFAULT_LOCALE_STRING, "error", true);
+    final String validFileContent =
+        FileTestUtil.readFileIntoString(
+            ResourceFileConstants.VALID_BUNDLE_WITH_UNDERSCORES_EXAMPLE);
+
+    final OperationOutcome operationOutcome = validationService.validate(validFileContent);
+    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
+        ValidationServiceTest.getErrorOrFatalIssue(operationOutcome);
+
+    operationOutcome
+        .getIssue()
+        .forEach(
+            operationOutcomeIssueComponent ->
+                log.info(operationOutcomeIssueComponent.getDiagnostics()));
+
+    assertTrue(errorsOrFatalIssues.isEmpty());
+  }
+
   private Locale createLocale(final String locale) {
     final var localization = LocaleUtils.toLocale(locale);
     Locale.setDefault(localization);

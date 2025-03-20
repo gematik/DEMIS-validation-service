@@ -14,15 +14,15 @@ See the Licence for the specific language governing permissions and limitations 
 
 This project includes:
   AOP alliance under Public Domain
+  Apache Commons BeanUtils under Apache License, Version 2.0
   Apache Commons Codec under Apache-2.0
+  Apache Commons Collections under Apache License, Version 2.0
   Apache Commons Compress under Apache-2.0
   Apache Commons IO under Apache-2.0
   Apache Commons Lang under Apache-2.0
   Apache Commons Logging under The Apache Software License, Version 2.0
   Apache Commons Text under Apache-2.0
   Apache HttpClient under Apache License, Version 2.0
-  Apache HttpComponents Core HTTP/1.1 under Apache License, Version 2.0
-  Apache HttpComponents Core HTTP/2 under Apache License, Version 2.0
   Apache HttpCore under Apache License, Version 2.0
   Apache Log4j API under Apache-2.0
   asm under BSD-3-Clause
@@ -96,7 +96,6 @@ This project includes:
   micrometer-tracing-bridge-otel under The Apache Software License, Version 2.0
   mockito-core under MIT
   mockito-junit-jupiter under MIT
-  Nimbus JOSE+JWT under The Apache Software License, Version 2.0
   Objenesis under Apache License, Version 2.0
   OGNL - Object Graph Navigation Library under The Apache Software License, Version 2.0
   OpenTelemetry Instrumentation for Java under The Apache License, Version 2.0
@@ -166,7 +165,6 @@ This project includes:
   unbescape under The Apache Software License, Version 2.0
   validation-service under Licensed under the EUPL 1.2
   webjars-locator-lite under MIT
-  XML Resolver under Apache License version 2.0
   XPP3 under The Apache Software License, Version 2.0
 
 

@@ -68,10 +68,10 @@ rewrite:
 Detect if the external timeout is defined
 */}}
 {{- define "istio.service.external.timeout" -}}
-{{- if (and (hasKey .Values.istio.virtualService "externalHttp") (hasKey .Values.istio.virtualService.externalHttp "timeout")) -}}
-timeout: {{ printf "%s" .Values.istio.virtualService.externalHttp.timeout }}
-{{- else if (and (hasKey .Values.istio.virtualService "http") (hasKey .Values.istio.virtualService.http "timeout")) -}}
-timeout: {{ printf "%s" .Values.istio.virtualService.http.timeout }}
+{{- if (and (hasKey .Values.istio.virtualService "externalHttp") (.Values.istio.virtualService.externalHttp.timeout)) -}}
+timeout: {{ .Values.istio.virtualService.externalHttp.timeout }}
+{{- else if (and (hasKey .Values.istio.virtualService "http") (.Values.istio.virtualService.http.timeout)) -}}
+timeout: {{ .Values.istio.virtualService.http.timeout }}
 {{- end -}}
 {{- end -}}
 
@@ -82,8 +82,10 @@ Detect if the external retry is defined
 {{- if (hasKey .Values.istio.virtualService "externalHttp") -}}
 {{- if (and (hasKey .Values.istio.virtualService.externalHttp "retries") (.Values.istio.virtualService.externalHttp.retries.enable)) -}}
 retries:
-  attempts: {{ .Values.istio.virtualService.externalHttp.retries.attempts | default 3 }}
-  perTryTimeout: {{ .Values.istio.virtualService.externalHttp.retries.perTryTimeout | default "2s" }}
+  attempts: {{ .Values.istio.virtualService.externalHttp.retries.attempts | default 0 }}
+  {{- if .Values.istio.virtualService.http.retries.perTryTimeout }}
+  perTryTimeout: {{ .Values.istio.virtualService.http.retries.perTryTimeout }}
+  {{- end }}
   {{- if .Values.istio.virtualService.externalHttp.retries.retryOn }}
   retryOn: {{ .Values.istio.virtualService.externalHttp.retries.retryOn }}
   {{- end -}}
@@ -94,8 +96,10 @@ retries:
 {{- else if (hasKey .Values.istio.virtualService "http") -}}
 {{- if (and (hasKey .Values.istio.virtualService.http "retries") (.Values.istio.virtualService.http.retries.enable)) -}}
 retries:
-  attempts: {{ .Values.istio.virtualService.http.retries.attempts | default 3 }}
-  perTryTimeout: {{ .Values.istio.virtualService.http.retries.perTryTimeout | default "2s" }}
+  attempts: {{ .Values.istio.virtualService.http.retries.attempts | default 0 }}
+  {{- if .Values.istio.virtualService.http.retries.perTryTimeout }}
+  perTryTimeout: {{ .Values.istio.virtualService.http.retries.perTryTimeout }}
+  {{- end }}
   {{- if .Values.istio.virtualService.http.retries.retryOn -}}
   retryOn: {{ .Values.istio.virtualService.http.retries.retryOn }}
   {{- end -}}
@@ -104,4 +108,21 @@ retries:
   attempts: 0
 {{- end -}}
 {{- end -}}
+{{- end -}}
+
+{{/*
+generate subset name from subset
+*/}}
+{{- define "istio.generate-subset-name" -}}
+{{- if (and (hasKey . "fhirProfile") (hasKey . "fhirProfileVersion") ) }}
+{{- $profileVersionNames := regexSplit "_" .fhirProfileVersion -1 }}
+{{- $profileVersionName := regexReplaceAll "(\\.|_)+" (first $profileVersionNames) "-" }}
+{{- $profileVersionSuffix := "" }}
+{{- if ( gt (len $profileVersionNames) 1 ) }}
+{{- $profileVersionSuffix = join "" (rest (regexSplit "_" .fhirProfileVersion -1)) | sha256sum | trunc 10 }}
+{{- end }}
+{{- printf "%s-%s-%s-%s" (regexReplaceAll "(\\.|_)+" .version "-") (regexReplaceAll "(\\.|_)+" .fhirProfile "-") $profileVersionName $profileVersionSuffix | trunc 63 | trimSuffix "-" }}
+{{- else }}
+{{- regexReplaceAll "(\\.|_)+" .version "-" | trunc 63 | trimSuffix "-" }}
+{{- end}}
 {{- end -}}

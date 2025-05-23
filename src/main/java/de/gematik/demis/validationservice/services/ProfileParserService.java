@@ -19,6 +19,10 @@ package de.gematik.demis.validationservice.services;
  * In case of changes by gematik find details in the "Readme" file.
  *
  * See the Licence for the specific language governing permissions and limitations under the Licence.
+ *
+ * *******
+ *
+ * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
  * #L%
  */
 
@@ -29,50 +33,43 @@ import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.instance.model.api.IBaseResource;
 import org.hl7.fhir.r4.model.*;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.PathResource;
 import org.springframework.stereotype.Service;
 
 /** Service that parses and stores the profile in memory. */
 @Service
+@RequiredArgsConstructor
 @Slf4j
 public class ProfileParserService {
 
   private static final int MAX_FOLDER_DEPTH = 5;
+
   private static final EnumSet<ResourceType> VERSIONED_TYPES =
       EnumSet.of(ResourceType.CodeSystem, ResourceType.ValueSet);
-  private final Map<String, Class<? extends MetadataResource>> profileParts =
-      Map.of(
+
+  private static final Map<String, Class<? extends MetadataResource>> PROFILE_PARTS =
+      java.util.Map.of(
           "CodeSystem", CodeSystem.class,
           "Questionnaire", Questionnaire.class,
           "StructureDefinition", StructureDefinition.class,
           "ValueSet", ValueSet.class);
-  private final String profileResource;
-  private final FhirContext fhirContext;
-  private final Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> parsedProfile;
 
-  public ProfileParserService(
-      final FhirContext fhirContext,
-      @Value("${demis.validation-service.profileResourcePath}") final String profileResource) {
-    this.fhirContext = fhirContext;
-    this.profileResource = profileResource;
-    this.parsedProfile = parseProfile();
-  }
+  private final FhirContext fhirContext;
 
   private static Map<String, IBaseResource> parseFilesInDirectory(
       final IParser parser,
       final Entry<String, Class<? extends MetadataResource>> profilePart,
       final Path path)
       throws IOException {
-    final var profileResources = getProfilesAsResources(path.toString());
+    final var profileResources = getProfilesAsResources(path);
     final var result = new HashMap<String, IBaseResource>();
     for (final var resource : profileResources) {
       parseProfileResource(parser, profilePart, result, resource);
@@ -107,16 +104,15 @@ public class ProfileParserService {
     return VERSIONED_TYPES.contains(resource.getResourceType());
   }
 
-  private static Set<PathResource> getProfilesAsResources(final String folderPath)
+  private static Set<PathResource> getProfilesAsResources(final Path folderPath)
       throws IOException {
     log.info("Loading profiles from folder {}", folderPath);
-    Path folderPathAsPath = Paths.get(folderPath);
-    if (!Files.exists(folderPathAsPath)) {
+    if (!Files.exists(folderPath)) {
       log.warn("Folder {} not present", folderPath);
 
       return Collections.emptySet();
     }
-    try (final Stream<Path> stream = Files.walk(folderPathAsPath, MAX_FOLDER_DEPTH)) {
+    try (final Stream<Path> stream = Files.walk(folderPath, MAX_FOLDER_DEPTH)) {
       return stream
           .filter(file -> !Files.isDirectory(file))
           .map(path -> new PathResource(path.toAbsolutePath().toString()))
@@ -124,18 +120,18 @@ public class ProfileParserService {
     }
   }
 
-  public Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> getParseProfiles() {
-    return this.parsedProfile;
-  }
-
-  private Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> parseProfile() {
-    log.info("Start parsing Profiles");
+  public Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> parseProfile(
+      final Path profileSnapshotsPath) {
+    log.info("Start parsing Profiles {}", profileSnapshotsPath);
+    if (!Files.exists(profileSnapshotsPath)) {
+      throw new IllegalArgumentException("Profiles path " + profileSnapshotsPath + " not present");
+    }
     final Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> profile =
         new HashMap<>();
     final IParser parser = fhirContext.newJsonParser();
     for (final Entry<String, Class<? extends MetadataResource>> profilePart :
-        profileParts.entrySet()) {
-      final Path path = Path.of(profileResource, profilePart.getKey());
+        PROFILE_PARTS.entrySet()) {
+      final Path path = profileSnapshotsPath.resolve(profilePart.getKey());
       try {
         final Map<String, IBaseResource> resourcesMap =
             parseFilesInDirectory(parser, profilePart, path);
@@ -146,7 +142,11 @@ public class ProfileParserService {
       }
     }
 
-    log.info("Finish parsing Profiles");
+    if (profile.values().stream().allMatch(Map::isEmpty)) {
+      throw new IllegalStateException("No profiles files found in " + profileSnapshotsPath);
+    }
+
+    log.info("Finish parsing Profiles {}", profileSnapshotsPath);
     return Collections.unmodifiableMap(profile);
   }
 }

@@ -19,61 +19,57 @@ package de.gematik.demis.validationservice.services;
  * In case of changes by gematik find details in the "Readme" file.
  *
  * See the Licence for the specific language governing permissions and limitations under the Licence.
+ *
+ * *******
+ *
+ * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
  * #L%
  */
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import ca.uhn.fhir.context.FhirContext;
-import de.gematik.demis.validationservice.util.ResourceFileConstants;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Map;
 import org.hl7.fhir.instance.model.api.IBaseResource;
-import org.hl7.fhir.r4.model.CodeSystem;
 import org.hl7.fhir.r4.model.MetadataResource;
-import org.hl7.fhir.r4.model.Questionnaire;
 import org.hl7.fhir.r4.model.StructureDefinition;
-import org.hl7.fhir.r4.model.ValueSet;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 class ProfileParserServiceTest {
 
-  private static Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> parsedProfile;
+  private static final Path MINIMLAL_PROFILES_PATH =
+      Paths.get("src/test/resources/profiles/minimal");
+  private static final Path EMPTY_PROFILES_PATH = Paths.get("src/test/resources/profiles/empty");
+  private static final Path NOT_EXISTING_PROFILES_PATH =
+      Paths.get("src/test/resources/profiles/not_exists");
 
-  @BeforeAll
-  static void parseProfile() {
-    final ProfileParserService service =
-        new ProfileParserService(FhirContext.forR4(), ResourceFileConstants.PROFILE_RESOURCE_PATH);
-    parsedProfile = service.getParseProfiles();
+  private final ProfileParserService profileParserService =
+      new ProfileParserService(FhirContext.forR4Cached());
+
+  @Test
+  void okay() {
+    final Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> result =
+        profileParserService.parseProfile(MINIMLAL_PROFILES_PATH);
+    assertThat(result).isNotNull();
+    final var structureDefinitions = result.get(StructureDefinition.class);
+    assertThat(structureDefinitions)
+        .isNotNull()
+        .hasSize(1)
+        .containsKey("https://demis.rki.de/fhir/StructureDefinition/DemisProvenance");
   }
 
   @Test
-  void checkThereAreFourResourceMaps() {
-    assertEquals(4, parsedProfile.size());
+  void emptyDirectoryThrowsException() {
+    assertThatThrownBy(() -> profileParserService.parseProfile(EMPTY_PROFILES_PATH))
+        .isInstanceOf(IllegalStateException.class);
   }
 
   @Test
-  void checkNumberOfCodeSystems() {
-    Map<String, IBaseResource> codeSystems = parsedProfile.get(CodeSystem.class);
-    assertThat(codeSystems).as("versioned and non-versioned code systems").hasSize(89);
-  }
-
-  @Test
-  void checkNumberOfQuestionnaires() {
-    Map<String, IBaseResource> questionnaires = parsedProfile.get(Questionnaire.class);
-    assertThat(questionnaires).as("non-versioned questionnaires").hasSize(50);
-  }
-
-  @Test
-  void checkNumberOfStructureDefinitions() {
-    Map<String, IBaseResource> structureDefinitions = parsedProfile.get(StructureDefinition.class);
-    assertThat(structureDefinitions).as("non-versioned structure definitions").hasSize(522);
-  }
-
-  @Test
-  void checkNumberOfValueSets() {
-    Map<String, IBaseResource> valueSets = parsedProfile.get(ValueSet.class);
-    assertThat(valueSets).as("versioned and non-versioned value sets").hasSize(1222);
+  void notExistingProfilesDirectoryThrowsException() {
+    assertThatThrownBy(() -> profileParserService.parseProfile(NOT_EXISTING_PROFILES_PATH))
+        .isInstanceOf(IllegalArgumentException.class);
   }
 }

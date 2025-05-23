@@ -17,13 +17,15 @@ spec:
         {{- toYaml .Values.istio.virtualService.http.match | nindent 6 }}
       rewrite:
         uri: {{ .Values.istio.virtualService.http.rewrite.uri }}
-      {{- if (and (hasKey .Values.istio.virtualService "http") (hasKey .Values.istio.virtualService.http "timeout")) }}
+      {{- if (and (hasKey .Values.istio.virtualService "http") (hasKey .Values.istio.virtualService.http "timeout") (.Values.istio.virtualService.http.timeout)) }}
       timeout: {{ .Values.istio.virtualService.http.timeout }}
       {{- end }}
       {{- if (and (hasKey .Values.istio.virtualService "http") (hasKey .Values.istio.virtualService.http "retries") (.Values.istio.virtualService.http.retries.enable)) }}
       retries:
-        attempts: {{ .Values.istio.virtualService.http.retries.attempts | default 3 }}
-        perTryTimeout: {{ .Values.istio.virtualService.http.retries.perTryTimeout | default "2s" }}
+        attempts: {{ .Values.istio.virtualService.http.retries.attempts | default 0 }}
+        {{- if .Values.istio.virtualService.http.retries.perTryTimeout }}
+        perTryTimeout: {{ .Values.istio.virtualService.http.retries.perTryTimeout }}
+        {{- end }}
         {{- if .Values.istio.virtualService.http.retries.retryOn }}
         retryOn: {{ .Values.istio.virtualService.http.retries.retryOn }}
         {{- end }}
@@ -35,22 +37,14 @@ spec:
         {{- range $k, $v := .Values.istio.subsets }}
         - destination:
             host: {{ $url }}
-            {{- if (and (hasKey $v "fhirProfile") (hasKey $v "fhirProfileVersion") ) }}
-            subset: {{ regexReplaceAll "\\.+" $v.version "-" }}-{{ regexReplaceAll "\\.+" $v.fhirProfile "-" }}-{{ regexReplaceAll "\\.+" $v.fhirProfileVersion "-" }}
-            {{- else }}
-            subset: {{ regexReplaceAll "\\.+" $v.version "-" }}
-            {{- end }}
+            subset: {{ include "istio.generate-subset-name" $v }}
             port:
               number: {{ $port }}
           weight: {{ $v.weight }}
           {{- if $v.mirror }}
           mirror:
             host: {{ $url }}
-            {{- if (and (hasKey $v.mirror "fhirProfile") (hasKey $v.mirror "fhirProfileVersion") ) }}
-            subset: {{ regexReplaceAll "\\.+" $v.mirror.version "-" }}-{{ regexReplaceAll "\\.+" $v.mirror.fhirProfile "-" }}-{{ regexReplaceAll "\\.+" $v.mirror.fhirProfileVersion "-" }}
-            {{- else }}
-            subset: {{ regexReplaceAll "\\.+" $v.mirror.version "-" }}
-            {{- end }}
+            subset: {{ include "istio.generate-subset-name" $v.mirror }}
             mirrorPercentage:
               value: {{ $v.mirror.mirrorPercentage }}
           {{- end }}

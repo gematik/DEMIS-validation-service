@@ -40,7 +40,7 @@ Commit the changes once you are happy with them.
 - When you're finished with the changes, create a pull request, also known as a PR.
 - Fill the pull request template so that we can review your PR. This template helps reviewers to understand your changes as well as the purpose of your pull request.
 - Don't forget to [link the PR to the issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) if you are solving one.
-- Update the [README.md](../README.md), the documentation and the [ReleaseRotes.md](../ReleaseNotes.md) with all details to document the changes made by this PR.
+- Update the [README.md](../README.md), the documentation and the [ReleaseNotes.md](../ReleaseNotes.md) with all details to document the changes made by this PR.
 - Increase the version numbers in any necessary files and the [readme](../README.md) to the new version that this
   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
 - Once you submit your PR, a project team member will review your proposal. We may ask questions or request additional information.

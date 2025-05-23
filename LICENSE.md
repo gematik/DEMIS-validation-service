@@ -1,4 +1,3 @@
-
 EUROPEAN UNION PUBLIC LICENCE v. 1.2
 ====================================
 

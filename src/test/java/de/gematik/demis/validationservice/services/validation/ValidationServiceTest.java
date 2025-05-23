@@ -19,279 +19,252 @@ package de.gematik.demis.validationservice.services.validation;
  * In case of changes by gematik find details in the "Readme" file.
  *
  * See the Licence for the specific language governing permissions and limitations under the Licence.
+ *
+ * *******
+ *
+ * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
  * #L%
  */
 
+import static ca.uhn.fhir.validation.ResultSeverityEnum.WARNING;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.FATAL;
+import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.INFORMATION;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verifyNoInteractions;
+import static org.mockito.Mockito.when;
 
 import ca.uhn.fhir.context.FhirContext;
-import de.gematik.demis.validationservice.services.ProfileParserService;
-import de.gematik.demis.validationservice.util.FileTestUtil;
-import de.gematik.demis.validationservice.util.ResourceFileConstants;
-import java.io.IOException;
+import ca.uhn.fhir.validation.FhirValidator;
+import ca.uhn.fhir.validation.ResultSeverityEnum;
+import ca.uhn.fhir.validation.SingleValidationMessage;
+import ca.uhn.fhir.validation.ValidationResult;
+import de.gematik.demis.validationservice.config.ValidationConfigProperties;
+import de.gematik.demis.validationservice.services.ValidationMetrics;
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.Tags;
+import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import java.util.List;
 import java.util.Locale;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.LocaleUtils;
+import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity;
-import org.hl7.fhir.r4.model.OperationOutcome.OperationOutcomeIssueComponent;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 
-@Slf4j
-@ExtendWith(MockitoExtension.class)
 class ValidationServiceTest {
-  private static final String SEVERITY_ERROR = "error";
-  private static final String DEFAULT_LOCALE_STRING = "en_US";
-  private static final String GERMAN_LOCALE_STRING = "de_DE";
-  private final FhirContext fhirContext = FhirContext.forR4();
-  private final Locale defaultLocale = Locale.getDefault();
-  private final ProfileParserService profileParserService =
-      new ProfileParserService(fhirContext, ResourceFileConstants.PROFILE_RESOURCE_PATH);
-  private ValidationService validationService;
 
-  private static List<OperationOutcomeIssueComponent> getErrorOrFatalIssue(
-      final OperationOutcome operationOutcome) {
-    return operationOutcome.getIssue().stream()
-        .filter(
-            issue ->
-                issue.getSeverity() == IssueSeverity.ERROR
-                    || issue.getSeverity() == IssueSeverity.FATAL)
-        .toList();
+  private static final String CONTENT = "Some Fhir bundle";
+  private static final String IGNORED_VALIDATION_ERROR = "IGNORE_THIS_ERROR";
+  private static final String VALID_INFO_MESSAGE = "No issues detected during validation";
+  private static final String EXCEPTION_MESSAGE = "exception in validation";
+
+  private final FhirContext fhirContext = FhirContext.forR4Cached();
+  private final MeterRegistry meterRegistry = new SimpleMeterRegistry();
+  private FhirValidatorManager fhirValidatorManagerMock;
+
+  private ValidationService underTest;
+
+  private static SingleValidationMessage createValidationMessage(
+      final ResultSeverityEnum severity, final String message) {
+    final SingleValidationMessage validationMessage = new SingleValidationMessage();
+    validationMessage.setSeverity(severity);
+    validationMessage.setMessage(message);
+    return validationMessage;
+  }
+
+  private static Tags tags(final String version, final boolean success) {
+    return Tags.of("profiles_version", version, "success", String.valueOf(success));
   }
 
   @BeforeEach
-  void setupValidationService() {
-    initializeValidationService(DEFAULT_LOCALE_STRING, "information", true);
+  void setUp() {
+    fhirValidatorManagerMock = mock(FhirValidatorManager.class);
+
+    meterRegistry.clear();
+    final var validationMetrics = new ValidationMetrics(meterRegistry);
+
+    final var filteredMessagePrefixesFactoryMock = mock(FilteredMessagePrefixesFactory.class);
+    when(filteredMessagePrefixesFactoryMock.get()).thenReturn(Set.of(IGNORED_VALIDATION_ERROR));
+
+    final ValidationConfigProperties props =
+        new ValidationConfigProperties(null, Locale.getDefault(), ResultSeverityEnum.WARNING, 1);
+
+    underTest =
+        new ValidationService(
+            fhirContext,
+            fhirValidatorManagerMock,
+            validationMetrics,
+            props,
+            filteredMessagePrefixesFactoryMock);
   }
 
-  @AfterEach
-  void tearDown() {
-    // reset global locale to avoid side effects
-    Locale.setDefault(defaultLocale);
-  }
-
-  @Test
-  void validateValidFileAndCheckThereIsNoErrorOrFatal() throws IOException {
-    final String validFileContent =
-        FileTestUtil.readFileIntoString(
-            ResourceFileConstants.VALID_REPORT_BED_OCCUPANCY_JSON_EXAMPLE);
-
-    final OperationOutcome operationOutcome = validationService.validate(validFileContent);
-
-    final var issues =
-        operationOutcome.getIssue().stream()
-            .filter(
-                issue ->
-                    !issue.getSeverity().equals(IssueSeverity.INFORMATION)
-                        && !issue.getSeverity().equals(IssueSeverity.WARNING));
-    assertThat(issues)
-        .as("There should be nothing else than information in the issue list")
-        .isEmpty();
-
-    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
-        ValidationServiceTest.getErrorOrFatalIssue(operationOutcome);
-    assertThat(errorsOrFatalIssues).as("There are Errors or Fatal issues in outcome").isEmpty();
-  }
-
-  @Test
-  void validateInvalidFileAndCheckThereIsOneErrorWithMissingAnswer() throws IOException {
-    final String invalidFileContent =
-        FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_REPORT_BED_OCCUPANCY_EXAMPLE);
-
-    final OperationOutcome operationOutcome = validationService.validate(invalidFileContent);
-
-    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
-        ValidationServiceTest.getErrorOrFatalIssue(operationOutcome);
-    assertFalse(errorsOrFatalIssues.isEmpty());
-    final String diagnosticsOfOnlyError = errorsOrFatalIssues.getFirst().getDiagnostics();
-    assertEquals(
-        "No response answer found for required item 'numberOccupiedBedsGeneralWardChildren'",
-        diagnosticsOfOnlyError);
-  }
-
-  @Test
-  void expectNoValidFamilyNameErrorFoundInInvalidNotificationDV2() throws IOException {
-
-    // GIVEN an invalid file with different invalid values
-    final String invalidFileContent =
-        FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_TEST_NOTIFICATION_DV_2);
-
-    // WHEN it's validated
-    final OperationOutcome operationOutcome = validationService.validate(invalidFileContent);
-
-    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
-        ValidationServiceTest.getErrorOrFatalIssue(operationOutcome);
-
-    // THEN at least "noNumbersInFamilyName is found across one or multiple errors found
-    System.out.println(errorsOrFatalIssues.getFirst().getDiagnostics());
-    final List<String> diagnostics =
-        errorsOrFatalIssues.stream().map(OperationOutcomeIssueComponent::getDiagnostics).toList();
-    assertTrue(diagnostics.stream().anyMatch(s -> s.contains("validFamilyName")));
-  }
-
-  @Test
-  void validateInvalidDv2FileWithFollowupsAndCheckThereIsSlicedMessageAndMultipleProfilesMessage()
-      throws IOException {
-    final String invalidFileContent =
-        FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_TEST_NOTIFICATION_DV_2);
-
-    final OperationOutcome operationOutcome = validationService.validate(invalidFileContent);
-
-    final List<String> diagnostics =
-        operationOutcome.getIssue().stream()
-            .map(OperationOutcomeIssueComponent::getDiagnostics)
-            .toList();
-    assertTrue(diagnostics.stream().anyMatch(s -> !s.contains("Multiple profiles")));
-    assertTrue(diagnostics.stream().anyMatch(s -> !s.contains("known slice defined")));
-  }
-
-  @Test
-  void validateNotParsableFileAndCheckThereAreTenErrorAndFatalIssues() throws IOException {
-    final String validFileContent =
-        FileTestUtil.readFileIntoString(
-            ResourceFileConstants.NOT_PARSEABLE_REPORT_BED_OCCUPANCY_EXAMPLE);
-
-    final OperationOutcome operationOutcome = validationService.validate(validFileContent);
-
-    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
-        ValidationServiceTest.getErrorOrFatalIssue(operationOutcome);
-    assertFalse(errorsOrFatalIssues.isEmpty());
-  }
-
-  @Test
-  void validateValidFileForErrorsAndCheckThereIsOnlyOneIssue() throws IOException {
-    initializeValidationService(DEFAULT_LOCALE_STRING, "error", true);
-
-    final String validFileContent =
-        FileTestUtil.readFileIntoString(
-            ResourceFileConstants.VALID_REPORT_BED_OCCUPANCY_JSON_EXAMPLE);
-
-    final OperationOutcome operationOutcome = validationService.validate(validFileContent);
-
-    operationOutcome
-        .getIssue()
-        .forEach(
-            operationOutcomeIssueComponent ->
-                log.info(operationOutcomeIssueComponent.getDiagnostics()));
-
-    assertThat(operationOutcome.getIssue()).as("There still more issues in outcome").hasSize(1);
-  }
-
-  @Test
-  void validateValidFileForErrorsAndCheckThereIsOnlyOneIssueREGRESSION() throws IOException {
-    initializeValidationService(DEFAULT_LOCALE_STRING, SEVERITY_ERROR, false);
-    final String validFileContent =
-        FileTestUtil.readFileIntoString(
-            ResourceFileConstants.VALID_REPORT_BED_OCCUPANCY_JSON_EXAMPLE);
-
-    final OperationOutcome operationOutcome = validationService.validate(validFileContent);
-
-    operationOutcome
-        .getIssue()
-        .forEach(
-            operationOutcomeIssueComponent ->
-                log.info(operationOutcomeIssueComponent.getDiagnostics()));
-
-    final long issueCount = operationOutcome.getIssue().size();
-    assertEquals(1, issueCount, "Too many issues in outcome");
-  }
-
-  @Test
-  void setValidationServiceToGermanAndValidateInvalidFileAndCheckThereIsOneErrorWithAGermanAnswer()
-      throws IOException {
-    initializeValidationService(GERMAN_LOCALE_STRING, SEVERITY_ERROR, true);
-
-    final String invalidFileContent =
-        FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_REPORT_BED_OCCUPANCY_EXAMPLE);
-
-    final OperationOutcome operationOutcome = validationService.validate(invalidFileContent);
-
-    final Locale parsedLocale = LocaleUtils.toLocale(DEFAULT_LOCALE_STRING);
-    Locale.setDefault(parsedLocale); // Set back global locale
-    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
-        ValidationServiceTest.getErrorOrFatalIssue(operationOutcome);
-    assertFalse(errorsOrFatalIssues.isEmpty());
-    final String diagnosticsOfOnlyError = errorsOrFatalIssues.getFirst().getDiagnostics();
-    assertEquals(
-        "Keine Antwort für das erforderliche Element gefunden numberOccupiedBedsGeneralWardChildren",
-        diagnosticsOfOnlyError);
-  }
-
-  @Test
-  void validateInvalidFileAndCheckThereIsOneErrorWithAGermanAnswerREGRESSION() throws IOException {
-    initializeValidationService(GERMAN_LOCALE_STRING, SEVERITY_ERROR, true);
-
-    final String invalidFileContent =
-        FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_REPORT_BED_OCCUPANCY_EXAMPLE);
-
-    final OperationOutcome operationOutcome = validationService.validate(invalidFileContent);
-
-    final Locale parsedLocale = LocaleUtils.toLocale(DEFAULT_LOCALE_STRING);
-    Locale.setDefault(parsedLocale); // Set back global locale
-    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
-        ValidationServiceTest.getErrorOrFatalIssue(operationOutcome);
-    assertFalse(errorsOrFatalIssues.isEmpty());
-    final String diagnosticsOfOnlyError = errorsOrFatalIssues.getFirst().getDiagnostics();
-    assertEquals(
-        "Keine Antwort für das erforderliche Element gefunden numberOccupiedBedsGeneralWardChildren",
-        diagnosticsOfOnlyError);
-  }
-
-  @Test
-  void catchBugInHapiValidator() throws IOException {
-    final String invalidFileContent =
-        FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_PARAMETERS_META_EXCEPTION);
-    final OperationOutcome result = validationService.validate(invalidFileContent);
+  private void assertOperationOutcome(
+      final OperationOutcome result,
+      final IssueSeverity expectedSeverity,
+      final String expectedMessage) {
     assertThat(result).isNotNull();
     assertThat(result.getIssue()).hasSize(1);
-    assertThat(result.getIssueFirstRep())
-        .returns(IssueSeverity.FATAL, OperationOutcomeIssueComponent::getSeverity)
-        .returns(OperationOutcome.IssueType.EXCEPTION, OperationOutcomeIssueComponent::getCode);
+    final var issue = result.getIssue().getFirst();
+    assertThat(issue.getSeverity()).isEqualTo(expectedSeverity);
+    assertThat(issue.getDiagnostics()).isEqualTo(expectedMessage);
   }
 
-  @Test
-  void validateNotificationsWithUnderscoresAllowed() throws IOException {
-    initializeValidationService(DEFAULT_LOCALE_STRING, "error", true);
-    final String validFileContent =
-        FileTestUtil.readFileIntoString(
-            ResourceFileConstants.VALID_BUNDLE_WITH_UNDERSCORES_EXAMPLE);
-
-    final OperationOutcome operationOutcome = validationService.validate(validFileContent);
-    final List<OperationOutcomeIssueComponent> errorsOrFatalIssues =
-        ValidationServiceTest.getErrorOrFatalIssue(operationOutcome);
-
-    operationOutcome
-        .getIssue()
-        .forEach(
-            operationOutcomeIssueComponent ->
-                log.info(operationOutcomeIssueComponent.getDiagnostics()));
-
-    assertTrue(errorsOrFatalIssues.isEmpty());
+  private void assertMetrics(final Tags... expectedTags) {
+    final Map<Tags, Double> expectedCounters =
+        Stream.of(expectedTags).collect(Collectors.toMap(Function.identity(), t -> 1.0d));
+    final Map<Tags, Double> actualCounters = getCounters();
+    assertThat(actualCounters).isEqualTo(expectedCounters);
   }
 
-  private Locale createLocale(final String locale) {
-    final var localization = LocaleUtils.toLocale(locale);
-    Locale.setDefault(localization);
-    return localization;
+  private Map<Tags, Double> getCounters() {
+    return meterRegistry.find("DEMIS_COUNTER_VALIDATION").counters().stream()
+        .collect(Collectors.toMap(c -> Tags.of(c.getId().getTags()), Counter::count));
   }
 
-  private void initializeValidationService(
-      final String locale, final String severity, boolean terminologyServiceActive) {
-    final Locale currentLocale = createLocale(locale);
-    final var filteredMessagePrefixesFactory = new FilteredMessagePrefixesFactory(currentLocale);
-    final var fhirValidatorFactory =
-        new FhirValidatorFactory(profileParserService, fhirContext, 5, terminologyServiceActive);
-    final var minSeverityFactory = new MinSeverityFactory(severity);
-    validationService =
-        new ValidationService(
-            fhirContext, fhirValidatorFactory, minSeverityFactory, filteredMessagePrefixesFactory);
+  @Nested
+  class OneProfilesVersion {
+
+    private static final String PROFILES_VERSION = "1.0.0";
+
+    private FhirValidator fhirValidatorMock;
+
+    @BeforeEach
+    void setUp() {
+      when(fhirValidatorManagerMock.getVersions()).thenReturn(List.of(PROFILES_VERSION));
+
+      fhirValidatorMock = mock(FhirValidator.class);
+      when(fhirValidatorManagerMock.getFhirValidator(PROFILES_VERSION))
+          .thenReturn(Optional.of(fhirValidatorMock));
+    }
+
+    @Test
+    void valid() {
+      when(fhirValidatorMock.validateWithResult(CONTENT))
+          .thenReturn(new ValidationResult(fhirContext, List.of()));
+
+      final OperationOutcome result = underTest.validate(CONTENT);
+
+      assertOperationOutcome(result, INFORMATION, VALID_INFO_MESSAGE);
+      assertMetrics(tags(PROFILES_VERSION, true));
+    }
+
+    @Test
+    void invalid() {
+      final var errorMsg =
+          createValidationMessage(ResultSeverityEnum.ERROR, "some validation error");
+      when(fhirValidatorMock.validateWithResult(CONTENT))
+          .thenReturn(new ValidationResult(fhirContext, List.of(errorMsg)));
+
+      final OperationOutcome result = underTest.validate(CONTENT);
+
+      assertOperationOutcome(result, IssueSeverity.ERROR, errorMsg.getMessage());
+      assertMetrics(tags(PROFILES_VERSION, false));
+    }
+
+    @Test
+    void filterValidationErrors() {
+      final var errorMsg =
+          createValidationMessage(ResultSeverityEnum.ERROR, IGNORED_VALIDATION_ERROR);
+      when(fhirValidatorMock.validateWithResult(CONTENT))
+          .thenReturn(new ValidationResult(fhirContext, List.of(errorMsg)));
+
+      final OperationOutcome result = underTest.validate(CONTENT);
+
+      assertOperationOutcome(result, INFORMATION, VALID_INFO_MESSAGE);
+      assertMetrics(tags(PROFILES_VERSION, true));
+    }
+
+    @Test
+    void exceptionInHapiFhirValidator() {
+      when(fhirValidatorMock.validateWithResult(CONTENT))
+          .thenThrow(new NullPointerException("just for testing"));
+
+      final OperationOutcome result = underTest.validate(CONTENT);
+
+      assertOperationOutcome(result, FATAL, EXCEPTION_MESSAGE);
+      assertMetrics();
+    }
+  }
+
+  @Nested
+  class TwoProfilesVersions {
+    private static final String NEW_VERSION = "2.0.0";
+    private static final String OLD_VERSION = "1.0.0";
+
+    private FhirValidator newProfilesVersionFhirValidatorMock;
+    private FhirValidator oldProfilesVersionFhirValidatorMock;
+
+    @BeforeEach
+    void setUp() {
+      when(fhirValidatorManagerMock.getVersions()).thenReturn(List.of(NEW_VERSION, OLD_VERSION));
+
+      newProfilesVersionFhirValidatorMock = mock(FhirValidator.class);
+      when(fhirValidatorManagerMock.getFhirValidator(NEW_VERSION))
+          .thenReturn(Optional.of(newProfilesVersionFhirValidatorMock));
+
+      oldProfilesVersionFhirValidatorMock = mock(FhirValidator.class);
+      when(fhirValidatorManagerMock.getFhirValidator(OLD_VERSION))
+          .thenReturn(Optional.of(oldProfilesVersionFhirValidatorMock));
+    }
+
+    @Test
+    void validWithNewestVersion() {
+      when(newProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
+          .thenReturn(new ValidationResult(fhirContext, List.of()));
+
+      final OperationOutcome result = underTest.validate(CONTENT);
+
+      assertOperationOutcome(result, INFORMATION, VALID_INFO_MESSAGE);
+      assertMetrics(tags(NEW_VERSION, true));
+
+      verifyNoInteractions(oldProfilesVersionFhirValidatorMock);
+    }
+
+    @Test
+    void invalidWithNewestVersionButValidWithOlderVersion() {
+      final SingleValidationMessage errorMsg =
+          createValidationMessage(
+              ResultSeverityEnum.ERROR, "some validation error from newest version");
+
+      when(newProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
+          .thenReturn(new ValidationResult(fhirContext, List.of(errorMsg)));
+      when(oldProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
+          .thenReturn(
+              new ValidationResult(
+                  fhirContext, List.of(createValidationMessage(WARNING, "is ignored"))));
+
+      final OperationOutcome result = underTest.validate(CONTENT);
+
+      assertOperationOutcome(result, IssueSeverity.WARNING, errorMsg.getMessage());
+      assertMetrics(tags(NEW_VERSION, false), tags(OLD_VERSION, true));
+    }
+
+    @Test
+    void invalidWithAllVersions() {
+      final SingleValidationMessage errorMsg =
+          createValidationMessage(
+              ResultSeverityEnum.ERROR, "some validation error from newest version");
+
+      when(newProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
+          .thenReturn(new ValidationResult(fhirContext, List.of(errorMsg)));
+      when(oldProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
+          .thenReturn(
+              new ValidationResult(
+                  fhirContext,
+                  List.of(createValidationMessage(ResultSeverityEnum.ERROR, "is ignored"))));
+
+      final OperationOutcome result = underTest.validate(CONTENT);
+
+      assertOperationOutcome(result, IssueSeverity.ERROR, errorMsg.getMessage());
+      assertMetrics(tags(NEW_VERSION, false), tags(OLD_VERSION, false));
+    }
   }
 }

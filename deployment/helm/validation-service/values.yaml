@@ -22,8 +22,11 @@ required:
   profiles:
     repository: europe-west3-docker.pkg.dev/gematik-all-infra-prod/demis-dev
     name: fhir-profile-snapshots
-    version: 2.5.1-b44
-
+    # For backward compatibility reasons, this version is used if the version list is not set
+    version: "TagOfProfileSnapshotsImage"
+    # list of versions (Image Tags).
+    # order is important! against the first version entry is validated first
+    versions: null
 
 # Extra Labels to be added
 # E.g.
@@ -43,7 +46,7 @@ deploymentLabels: {}
 # If not given, the Entrypoint defined in Dockerfile will be used
 application:
   entrypoint: ["java"]
-  parameters: ["-XX:ActiveProcessorCount=2", "-XX:MaxRAMPercentage=95.0", "-XX:+TieredCompilation", "-XX:+UseSerialGC", "-jar", "-Xmx1G", "/app.jar"]
+  parameters: ["-XX:ActiveProcessorCount=2", "-XX:MaxRAMPercentage=80.0", "-XX:+TieredCompilation", "-jar", "/app.jar"]
 
 imagePullPolicy: IfNotPresent
 # Define Image Pull Secrets if using private registry
@@ -64,7 +67,10 @@ serviceAccount:
 annotations: {}
 
 # Annotations for Pods
-podAnnotations: {}
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/path: "/actuator/prometheus"
+  prometheus.io/port: "8080"
 
 # Pod Security Context - applies to all containers in a Pod
 podSecurityContext:
@@ -111,11 +117,10 @@ service:
 # Default Resources
 resources:
   limits:
-    cpu: "1000m"
-    memory: "2Gi"
+    memory: "2750Mi"
   requests:
-    cpu: "200m"
-    memory: "1Gi"
+    cpu: "2.0"
+    memory: "2750Mi"
 
 autoscaling:
   enabled: false

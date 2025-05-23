@@ -27,22 +27,14 @@ spec:
         {{- range $k, $v := .Values.istio.subsets }}
         - destination:
             host: {{ $url }}
-            {{- if (and (hasKey $v "fhirProfile") (hasKey $v "fhirProfileVersion") ) }}
-            subset: {{ regexReplaceAll "\\.+" $v.version "-" }}-{{ regexReplaceAll "\\.+" $v.fhirProfile "-" }}-{{ regexReplaceAll "\\.+" $v.fhirProfileVersion "-" }}
-            {{- else }}
-            subset: {{ regexReplaceAll "\\.+" $v.version "-" }}
-            {{- end }}
+            subset: {{ include "istio.generate-subset-name" $v }}
             port:
               number: {{ $port }}
           weight: {{ $v.weight }}
           {{- if $v.mirror }}
           mirror:
             host: {{ $url }}
-            {{- if (and (hasKey $v.mirror "fhirProfile") (hasKey $v.mirror "fhirProfileVersion") ) }}
-            subset: {{ regexReplaceAll "\\.+" $v.mirror.version "-" }}-{{ regexReplaceAll "\\.+" $v.mirror.fhirProfile "-" }}-{{ regexReplaceAll "\\.+" $v.mirror.fhirProfileVersion "-" }}
-            {{- else }}
-            subset: {{ regexReplaceAll "\\.+" $v.mirror.version "-" }}
-            {{- end }}
+            subset: {{ include "istio.generate-subset-name" $v.mirror }}
             mirrorPercentage:
               value: {{ $v.mirror.mirrorPercentage }}
           {{- end }}

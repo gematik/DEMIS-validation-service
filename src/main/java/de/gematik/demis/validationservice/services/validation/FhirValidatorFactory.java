@@ -19,6 +19,10 @@ package de.gematik.demis.validationservice.services.validation;
  * In case of changes by gematik find details in the "Readme" file.
  *
  * See the Licence for the specific language governing permissions and limitations under the Licence.
+ *
+ * *******
+ *
+ * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
  * #L%
  */
 
@@ -26,9 +30,11 @@ import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.context.support.DefaultProfileValidationSupport;
 import ca.uhn.fhir.context.support.IValidationSupport;
 import ca.uhn.fhir.validation.FhirValidator;
+import de.gematik.demis.validationservice.config.ValidationConfigProperties;
 import de.gematik.demis.validationservice.services.ProfileParserService;
+import java.nio.file.Path;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Supplier;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 import org.hl7.fhir.common.hapi.validation.support.CachingValidationSupport;
@@ -43,51 +49,41 @@ import org.hl7.fhir.r4.model.Observation;
 import org.hl7.fhir.r4.model.Questionnaire;
 import org.hl7.fhir.r4.model.StructureDefinition;
 import org.hl7.fhir.r4.model.ValueSet;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
+@RequiredArgsConstructor
 @Slf4j
-public final class FhirValidatorFactory implements Supplier<FhirValidator> {
+final class FhirValidatorFactory {
 
   private final ProfileParserService profileParserService;
   private final FhirContext fhirContext;
-  private final long cacheExpireAfterAccessTimeoutMins;
-  private final boolean isCommonCodeSystemTerminologyActive;
-  private FhirValidator validator;
+  private final ValidationConfigProperties configProperties;
 
-  public FhirValidatorFactory(
-      ProfileParserService profileParserService,
-      FhirContext fhirContext,
-      long cacheExpireAfterAccessTimeoutMins,
-      boolean isCommonCodeSystemTerminologyActive) {
-    this.profileParserService = profileParserService;
-    this.fhirContext = fhirContext;
-    this.cacheExpireAfterAccessTimeoutMins = cacheExpireAfterAccessTimeoutMins;
-    this.isCommonCodeSystemTerminologyActive = isCommonCodeSystemTerminologyActive;
-  }
+  @Value("${feature.flag.common.code.system.terminology.enabled}")
+  private boolean featureFlagCommonCodeSystemsTerminologyEnabled;
 
-  @Override
-  public FhirValidator get() {
-    log.debug("Start creating and initializing fhir validator");
-    createAndInitialize();
+  public FhirValidator createFhirValidator(final Path profilesPath) {
+    log.info("Start creating and initializing fhir validator for profiles path {}", profilesPath);
+    final var validator = create(profilesPath);
+    initialize(validator);
     log.info("Finished creating and initializing fhir validator");
-    return this.validator;
+    return validator;
   }
 
-  private void createAndInitialize() {
-    create();
-    initialize();
-  }
-
-  private void create() {
-    final IValidationSupport validationSupport = createValidationSupport();
+  private FhirValidator create(final Path profilesPath) {
+    final IValidationSupport validationSupport = createValidationSupport(profilesPath);
     final FhirInstanceValidator fhirModule = new FhirInstanceValidator(validationSupport);
     fhirModule.setErrorForUnknownProfiles(true);
-    this.validator = this.fhirContext.newValidator();
-    this.validator.registerValidatorModule(fhirModule);
+    final var validator = fhirContext.newValidator();
+    validator.registerValidatorModule(fhirModule);
+    return validator;
   }
 
-  private IValidationSupport createValidationSupport() {
+  private IValidationSupport createValidationSupport(final Path profilesPath) {
     final ValidationSupportChain chain = new ValidationSupportChain();
-    addDemisPrePopulatedValidation(chain);
+    addDemisPrePopulatedValidation(chain, profilesPath);
     addDefaultProfileValidation(chain);
     addExpandedValueSetsValidation(chain);
     addInMemoryTerminologyServerValidation(chain);
@@ -96,15 +92,16 @@ public final class FhirValidatorFactory implements Supplier<FhirValidator> {
     return chain;
   }
 
-  private void addDemisPrePopulatedValidation(ValidationSupportChain chain) {
-    final var profiles = this.profileParserService.getParseProfiles();
+  private void addDemisPrePopulatedValidation(
+      final ValidationSupportChain chain, final Path profilesPath) {
+    final var profiles = profileParserService.parseProfile(profilesPath);
     final var structureDefinitions = profiles.get(StructureDefinition.class);
     final var valueSets = profiles.get(ValueSet.class);
     final var codeSystems = profiles.get(CodeSystem.class);
     final var questionnaires = profiles.get(Questionnaire.class);
     chain.addValidationSupport(
         new DemisPrePopulatedValidationSupportHapi4(
-            this.fhirContext, structureDefinitions, valueSets, codeSystems, questionnaires));
+            fhirContext, structureDefinitions, valueSets, codeSystems, questionnaires));
   }
 
   private void addDefaultProfileValidation(ValidationSupportChain chain) {
@@ -123,7 +120,8 @@ public final class FhirValidatorFactory implements Supplier<FhirValidator> {
   }
 
   private CachingValidationSupport.CacheTimeouts createTerminologyServerCacheTimeouts() {
-    final long millis = TimeUnit.MINUTES.toMillis(this.cacheExpireAfterAccessTimeoutMins);
+    final long millis =
+        TimeUnit.MINUTES.toMillis(configProperties.cacheExpireAfterAccessTimeoutMins());
     if (log.isInfoEnabled()) {
       log.info(
           "Creating in-memory terminology server cache timeouts. ExpireAfterAccessTimeout: {}",
@@ -142,7 +140,7 @@ public final class FhirValidatorFactory implements Supplier<FhirValidator> {
   }
 
   private void addCommonCodeSystemsValidation(ValidationSupportChain chain) {
-    if (isCommonCodeSystemTerminologyActive) {
+    if (featureFlagCommonCodeSystemsTerminologyEnabled) {
       chain.addValidationSupport(new CommonCodeSystemsTerminologyService(this.fhirContext));
     }
   }
@@ -150,7 +148,7 @@ public final class FhirValidatorFactory implements Supplier<FhirValidator> {
   /**
    * Does one validation with a code system, so DefaultProfileValidationSupport loads all resources.
    */
-  private void initialize() {
+  private void initialize(final FhirValidator validator) {
     final Observation observation = new Observation();
     observation.setStatus(Observation.ObservationStatus.FINAL);
     observation
@@ -166,6 +164,6 @@ public final class FhirValidatorFactory implements Supplier<FhirValidator> {
         .getRequest()
         .setUrl("Observation")
         .setMethod(Bundle.HTTPVerb.POST);
-    this.validator.validateWithResult(bundle);
+    validator.validateWithResult(bundle);
   }
 }

@@ -14,12 +14,10 @@ istio:
             prefix: /
       rewrite:
         uri: /
-#      timeout: 15s
+      timeout: 5s
       retries:
         enable: true
-        attempts: 3
-        perTryTimeout: 5s
-#        retryOn: 503
+        attempts: 1
     hosts: {}
   subsets:
     main:

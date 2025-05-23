@@ -5,13 +5,16 @@
 {{- $customEnvVars := .Values.customEnvVars -}}
 {{- $dockerProfilesRepository := .Values.required.profiles.repository | required ".Values.required.profiles.repository is required." -}}
 {{- $profilesName := .Values.required.profiles.name | required ".Values.required.profiles.name is required." -}}
-{{- $profilesVersion := .Values.required.profiles.version | required ".Values.required.profiles.version is required." -}}
+{{- $profilesVersions := .Values.required.profiles.versions | default (list (.Values.required.profiles.version | required ".Values.required.profiles.versions xor .Values.required.profiles.version is required")) -}}
+{{- $profilesVersionsLabel := join "_" $profilesVersions | quote }}
+{{- $fullVersionName := include "validation-service.fullversionname" . -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "validation-service.fullversionname" . }}
+  name: {{ $fullVersionName }}
   labels:
     {{- include "validation-service.labels" . | nindent 4 }}
+    fhirProfileVersion: {{ $profilesVersionsLabel }}
   {{- with .Values.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
@@ -31,6 +34,7 @@ spec:
       {{- end }}
       labels:
         {{- include "validation-service.selectorLabels" . | nindent 8 }}
+        fhirProfileVersion: {{ $profilesVersionsLabel }}
         {{- include "validation-service.deploymentLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
@@ -42,7 +46,7 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       # Volume for Profiles
       volumes:
-        - name: profiles-volume-{{ include "validation-service.fullversionname" . }}
+        - name: profiles-volume-{{ $fullVersionName }}
           emptyDir: { }
         # Add writable volumes
         - name: tmp-volume
@@ -52,18 +56,20 @@ spec:
           emptyDir: { }
         {{- end }}
       initContainers:
-        - name: {{ .Chart.Name }}-init-profiles
+        {{- range $index, $profilesVersion := $profilesVersions }}
+        - name: {{ $.Chart.Name }}-init-profiles-{{ $index }}
           securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
+            {{- toYaml $.Values.securityContext | nindent 12 }}
           image: "{{ $dockerProfilesRepository }}/{{ $profilesName }}:{{ $profilesVersion }}"
-          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          imagePullPolicy: {{ $.Values.imagePullPolicy }}
           command:
             - /bin/sh
             - -c
-            - "rm -rf /profiles/* && cp -r /app/data/profiles/* /profiles/"
+            - "rm -rf /profiles/{{ $profilesVersion }} && mkdir -p /profiles/{{ $profilesVersion }} && cp -r /app/data/profiles/* /profiles/{{ $profilesVersion }}"
           volumeMounts:
-            - name: profiles-volume-{{ include "validation-service.fullversionname" . }}
+            - name: profiles-volume-{{ $fullVersionName }}
               mountPath: "/profiles"
+        {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
@@ -85,7 +91,7 @@ spec:
           {{- end }}
           # Mount Volumes in container
           volumeMounts:
-            - name: profiles-volume-{{ include "validation-service.fullversionname" . }}
+            - name: profiles-volume-{{ $fullVersionName }}
               mountPath: /profiles
               readOnly: true
             - name: tmp-volume
@@ -100,8 +106,10 @@ spec:
               value: "8080"
             - name: "TZ"
               value: "Europe/Berlin"
-            - name: "FHIR_PROFILES_PATH"
-              value: "/profiles/Fhir"
+            - name: "FHIR_PROFILES_BASEPATH"
+              value: "/profiles"
+            - name: "FHIR_PROFILES_VERSIONS"
+              value: "{{ range $index, $profilesVersion := $profilesVersions }}{{ if $index }},{{ end }}{{ $profilesVersion }}{{ end }}"
             {{- if .Values.debug.enable }}
             - name: "JAVA_TOOL_OPTIONS"
               value: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9000"
@@ -168,11 +176,11 @@ spec:
               - key: fhirProfile
                 operator: In
                 values:
-                  - {{ .Values.required.profiles.name | quote }}
+                  - {{ $profilesName | quote }}
               - key: fhirProfileVersion
                 operator: In
                 values:
-                  - {{ .Values.required.profiles.version | quote }}
+                  - {{ $profilesVersionsLabel }}
             topologyKey: "kubernetes.io/hostname"
       {{- with .Values.tolerations }}
       tolerations:

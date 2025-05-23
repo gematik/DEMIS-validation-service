@@ -9,15 +9,13 @@ spec:
   subsets:
     {{- range $k, $v := .Values.istio.subsets }}
     {{- if (and (hasKey $v "fhirProfile") (hasKey $v "fhirProfileVersion") ) }}
-    - name: {{ regexReplaceAll "\\.+" $v.version "-" }}-{{ regexReplaceAll "\\.+" $v.fhirProfile "-" }}-{{ regexReplaceAll "\\.+" $v.fhirProfileVersion "-" }}
+    - name: {{ include "istio.generate-subset-name" $v }}
       labels:
         version: {{ $v.version }}
+     {{- if (and (hasKey $v "fhirProfile") (hasKey $v "fhirProfileVersion") ) }}        
         fhirProfile: {{ $v.fhirProfile }}
         fhirProfileVersion: {{ $v.fhirProfileVersion }}
-    {{- else }}
-    - name: {{ regexReplaceAll "\\.+" $v.version "-" }}
-      labels:
-        version: {{ $v.version }}
+    {{- end }}
     {{- end }}
     {{- end }}
 {{- end }}

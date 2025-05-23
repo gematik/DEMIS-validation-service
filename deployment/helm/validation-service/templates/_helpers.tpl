@@ -46,7 +46,6 @@ Common labels
 {{- define "validation-service.labels" -}}
 helm.sh/chart: {{ include "validation-service.chart" . }}
 {{ include "validation-service.selectorLabels" . }}
-fhirProfileVersion: {{ .Values.required.profiles.version | quote }}
 {{ if .Chart.AppVersion -}}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{ end -}}
@@ -72,7 +71,6 @@ Deployment labels
 */}}
 {{- define "validation-service.deploymentLabels" -}}
 istio-validate-jwt: "{{ .Values.istio.validateJwt | required ".Values.istio.validateJwt is required" }}"
-fhirProfileVersion: {{ .Values.required.profiles.version | quote }}
 {{- with .Values.deploymentLabels }}
 {{ toYaml . }}
 {{- end }}

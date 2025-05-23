@@ -21,6 +21,14 @@ istio:
               prefix: /
             headers:
               fhirProfile:
+                exact: "ars-profile-snapshots"
+        delegate:
+          name: "validation-service-ars"
+      - match:
+          - uri:
+              prefix: /
+            headers:
+              fhirProfile:
                 exact: "fhir-profile-snapshots"
         delegate:
           name: "validation-service-core"

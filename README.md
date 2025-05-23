@@ -40,8 +40,8 @@
 
 The Validation Service is responsible for validating FHIR resources according to the HL7 FHIR specification, based on 
 predefined FHIR profiles, provided from RKI (Robert Koch Institute). These profiles are loaded from the file system 
-during the service startup phase. In a Kubernetes environment, the FHIR profiles are mounted to the service's file 
-system from a dedicated OCI container image.
+during the service startup phase. Please note that the profiles are not part of this repository. In a Kubernetes 
+environment, the FHIR profiles are mounted to the service's file system from a dedicated OCI container image.
 
 This service is a Spring Boot-based application that processes HTTP requests and leverages appropriate HAPI FHIR library
 methods to perform the following tasks:
@@ -59,9 +59,10 @@ See [ReleaseNotes](ReleaseNotes.md) for all information regarding the (newest) r
 The application requires the DEMIS FHIR Profiles. This image is maintained in DockerHub:
 [demis-profile-snapshots](https://hub.docker.com/repository/docker/gematik1/demis-fhir-profile-snapshots/general).
 
-The profiles are require to execute the unit and integration tests included in this repository. At runtime execution the
-profile files must be available in a folder and this folder must be specified through the environment
-variable `FHIR_PROFILES_PATH`.
+The profiles are require to execute the integration profile tests included in this repository. With -PskipProfileTests
+you can skip these tests if you don't have profiles locally.
+At runtime execution the profile files must be available in a folder and this folder must be specified through the
+environment variable `FHIR_PROFILES_BASEPATH`.
 
 ### Installation
 
@@ -82,21 +83,22 @@ docker build -t validation-service:latest .
 The Docker Image associated to the service can be built alternatively with the extra profile `docker`:
 
 ```docker
-mvn -e clean install -Pdownload-profile -Pdocker
+mvn -e clean install -Pdocker
+```
+or if you don't have the profiles
+```docker
+mvn -e clean install -PskipProfileTests -Pdocker
 ```
 
-Without Profiles
-```sh
-mvn -e clean install -DskipTests=true -Pdocker
-```
-
-The application can be started as Docker container with the following commands:
+The application can be started as Docker container with the following commands assuming that the profile snapshots are 
+located in directory /profiles/5.2.0/Fhir
 
 ```shell
 docker run --rm --name validation-service \
     -v $(pwd)/profiles:/profiles \
     -p 8080:8080 \
-    -e FHIR_PROFILES_PATH=/profiles \
+    -e FHIR_PROFILES_BASEPATH=/profiles \
+    -e FHIR_PROFILES_VERSIONS=5.2.0 \
     validation-service:latest
 ```
 ## Kubernetes
@@ -121,11 +123,13 @@ aus IntelliJ als SpringBoot Application starten
 
 ## Properties
 
-| Property                                     | Default Value | Description                                                                                                                 |
-|----------------------------------------------|---------------|-----------------------------------------------------------------------------------------------------------------------------|
-| demis.validation-service.profileResourcePath | `/profile`    | Path to the DEMIS profiles inside the resources.                                                                            |
-| demis.validation-service.locale              | `en_US`       | Locale for the HAPI-FHIR context and validator. The language of diagnostics of the outcome is dependent on this locale.     |
-| demis.validation-service.minSeverityOutcome  | `information` | Minimal severity that will not be filtered out in the Outcome. Possible values: `information`, `warning`, `error`, `fatal`. |
+| Property                                    | Default Value | Environment Variable    | Environment Variable  Description                                                                                           |
+|---------------------------------------------|---------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| demis.validation-service.profiles.basepath  |               | FHIR_PROFILES_BASEPATH  | Path to base directory with all profiles versions                                                                           |
+| demis.validation-service.profiles.fhirpath  | Fhir          |                         | Path inside of a profiles versions directory to the resources.                                                              |
+| demis.validation-service.profiles.versions  |               | FHIR_PROFILES_VERSIONS  | List of versions. Must match the directory names under the base path.                                                       |
+| demis.validation-service.locale             | `en_US`       |                         | Locale for the HAPI-FHIR context and validator. The language of diagnostics of the outcome is dependent on this locale.     |
+| demis.validation-service.minSeverityOutcome | `information` |                         | Minimal severity that will not be filtered out in the Outcome. Possible values: `information`, `warning`, `error`, `fatal`. |
 
 
 
@@ -148,7 +152,6 @@ Check the server with: `curl -v localhost:8080/actuator/health`
 ## Security Policy
 If you want to see the security policy, please check our [SECURITY.md](.github/SECURITY.md).
 
-
 ## Contributing
 If you want to contribute, please check our [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
@@ -157,9 +160,17 @@ EUROPEAN UNION PUBLIC LICENCE v. 1.2
 
 EUPL © the European Union 2007, 2016
 
-Copyright (c) 2023 gematik GmbH
+## Additional Notes and Disclaimer from gematik GmbH
 
-See [LICENSE](./LICENSE.md).
+1. Copyright notice: Each published work result is accompanied by an explicit statement of the license conditions for use. These are regularly typical conditions in connection with open source or free software. Programs described/provided/linked here are free software, unless otherwise stated.
+2. Permission notice: Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions::
+    1. The copyright notice (Item 1) and the permission notice (Item 2) shall be included in all copies or substantial portions of the Software.
+    2. The software is provided "as is" without warranty of any kind, either express or implied, including, but not limited to, the warranties of fitness for a particular purpose, merchantability, and/or non-infringement. The authors or copyright holders shall not be liable in any manner whatsoever for any damages or other claims arising from, out of or in connection with the software or the use or other dealings with the software, whether in an action of contract, tort, or otherwise.
+    3. The software is the result of research and development activities, therefore not necessarily quality assured and without the character of a liable product. For this reason, gematik does not provide any support or other user assistance (unless otherwise stated in individual cases and without justification of a legal obligation). Furthermore, there is no claim to further development and adaptation of the results to a more current state of the art.
+3. Gematik may remove published results temporarily or permanently from the place of publication at any time without prior notice or justification.
+4. Please note: Parts of this code may have been generated using AI-supported technology.’ Please take this into account, especially when troubleshooting, for security analyses and possible adjustments.
+
+See [LICENSE](LICENSE.md).
 
 ## Contact
 E-Mail to [DEMIS Entwicklung](mailto:demis-entwicklung@gematik.de?subject=[GitHub]%20Validation-Service)

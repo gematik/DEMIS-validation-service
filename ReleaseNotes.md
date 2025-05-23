@@ -2,6 +2,19 @@
 
 # Release Validation-Service
 
+## Release 2.7.0
+### changed
+- support for multiple profile snapshots versions: Breaking Change in Environment Variables.
+- updated dependencies
+
+## Release 2.6.2
+- Updated ospo-resources for adding additional notes and disclaimer
+- setting new resources in helm chart
+- setting new timeouts and retries in helm chart
+
+## Release 2.6.1
+- Rollback HAPI-FHIR to 7.2.2
+
 ## Release 2.6.0
 ### fixed
 - Dependency-Updates (CVEs et al.)

@@ -19,6 +19,10 @@ package de.gematik.demis.validationservice.services.validation;
  * In case of changes by gematik find details in the "Readme" file.
  *
  * See the Licence for the specific language governing permissions and limitations under the Licence.
+ *
+ * *******
+ *
+ * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
  * #L%
  */
 
@@ -27,6 +31,8 @@ import ca.uhn.fhir.validation.FhirValidator;
 import ca.uhn.fhir.validation.ResultSeverityEnum;
 import ca.uhn.fhir.validation.SingleValidationMessage;
 import ca.uhn.fhir.validation.ValidationResult;
+import de.gematik.demis.validationservice.config.ValidationConfigProperties;
+import de.gematik.demis.validationservice.services.ValidationMetrics;
 import io.micrometer.observation.annotation.Observed;
 import java.util.List;
 import java.util.Set;
@@ -42,19 +48,31 @@ public class ValidationService {
   private static final SeverityComparator SEVERITY_COMPARATOR = new SeverityComparator();
 
   private final FhirContext fhirContext;
-  private final FhirValidator validator;
+  private final FhirValidatorManager validatorManager;
+  private final ValidationMetrics validationMetrics;
   private final ResultSeverityEnum minSeverityOutcome;
   private final Set<String> filteredMessagePrefixes;
 
   ValidationService(
       final FhirContext fhirContext,
-      final FhirValidatorFactory fhirValidatorFactory,
-      final MinSeverityFactory minSeverityFactory,
+      final FhirValidatorManager validatorManager,
+      final ValidationMetrics validationMetrics,
+      final ValidationConfigProperties configProperties,
       final FilteredMessagePrefixesFactory filteredMessagePrefixesFactory) {
     this.fhirContext = fhirContext;
-    this.validator = fhirValidatorFactory.get();
-    this.minSeverityOutcome = minSeverityFactory.get();
+    this.validatorManager = validatorManager;
+    this.validationMetrics = validationMetrics;
+    this.minSeverityOutcome = configProperties.minSeverityOutcome();
     this.filteredMessagePrefixes = filteredMessagePrefixesFactory.get();
+  }
+
+  private static void reduceIssuesSeverityToWarn(final OperationOutcome operationOutcome) {
+    operationOutcome.getIssue().stream()
+        .filter(
+            issue ->
+                issue.getSeverity() == OperationOutcome.IssueSeverity.FATAL
+                    || issue.getSeverity() == OperationOutcome.IssueSeverity.ERROR)
+        .forEach(issue -> issue.setSeverity(OperationOutcome.IssueSeverity.WARNING));
   }
 
   @Observed(
@@ -62,13 +80,82 @@ public class ValidationService {
       contextualName = "validate",
       lowCardinalityKeyValues = {"notification", "fhir"})
   public OperationOutcome validate(final String content) {
-    try {
-      final ValidationResult validationResult = validator.validateWithResult(content);
-      log.info("Validation successful: {}", validationResult.isSuccessful());
-      return toOperationOutcome(validationResult);
-    } catch (final Exception e) {
-      return handleException(e);
+    final var versions = validatorManager.getVersions().iterator();
+
+    String version;
+    ValidationResult validationResult;
+    ValidationResult firstValidationResult = null;
+
+    do {
+      version = versions.next();
+      try {
+        validationResult = validateContentWithProfileVersion(content, version);
+      } catch (final Exception e) {
+        return handleException(e);
+      }
+
+      if (firstValidationResult == null) {
+        firstValidationResult = validationResult;
+      }
+
+    } while (!validationResult.isSuccessful() && versions.hasNext());
+
+    // TODO muss noch mit RKI geklärt werden
+    // we always return the validation messages of the newest profiles
+    final OperationOutcome operationOutcome = toOperationOutcome(firstValidationResult);
+    // In case the content is valid just with older profiles, we reduce the severity of the error
+    // issues to warn
+    if (validationResult.isSuccessful() && validationResult != firstValidationResult) {
+      reduceIssuesSeverityToWarn(operationOutcome);
     }
+    // TODO wollen wir noch die Version zurückgeben oder ins OperationOutcome schreiben?
+    return operationOutcome;
+  }
+
+  private ValidationResult validateContentWithProfileVersion(
+      final String content, final String version) {
+    final long startTime = System.currentTimeMillis();
+
+    final FhirValidator validator =
+        validatorManager
+            .getFhirValidator(version)
+            .orElseThrow(
+                () -> new IllegalStateException("No validator found for version " + version));
+
+    final ValidationResult result = filterValidationResult(validator.validateWithResult(content));
+
+    log.info(
+        "Validation with version {} successful: {} time: {}ms",
+        version,
+        result.isSuccessful(),
+        System.currentTimeMillis() - startTime);
+
+    validationMetrics.incValidationCount(version, result.isSuccessful());
+
+    return result;
+  }
+
+  private ValidationResult filterValidationResult(final ValidationResult validationResult) {
+    final List<SingleValidationMessage> collect =
+        validationResult.getMessages().stream()
+            .filter(this::checkFilters)
+            .filter(this::checkSeverity)
+            .toList();
+    return new ValidationResult(fhirContext, collect);
+  }
+
+  private OperationOutcome toOperationOutcome(final ValidationResult validationResult) {
+    final OperationOutcome outcome = new OperationOutcome();
+    validationResult.populateOperationOutcome(outcome);
+    return outcome;
+  }
+
+  private boolean checkFilters(SingleValidationMessage message) {
+    return filteredMessagePrefixes.stream().noneMatch(message.getMessage()::startsWith);
+  }
+
+  private boolean checkSeverity(SingleValidationMessage message) {
+    return SEVERITY_COMPARATOR.compare(message.getSeverity(), minSeverityOutcome) >= 0;
   }
 
   private OperationOutcome handleException(final Exception e) {
@@ -83,26 +170,5 @@ public class ValidationService {
         .setDiagnostics("exception in validation")
         .addLocation(errorId);
     return operationOutcome;
-  }
-
-  private OperationOutcome toOperationOutcome(final ValidationResult validationResult) {
-    final List<SingleValidationMessage> collect =
-        validationResult.getMessages().stream()
-            .filter(this::checkFilters)
-            .filter(this::checkSeverity)
-            .toList();
-    final ValidationResult filteredValidationResult =
-        new ValidationResult(this.fhirContext, collect);
-    final OperationOutcome outcome = new OperationOutcome();
-    filteredValidationResult.populateOperationOutcome(outcome);
-    return outcome;
-  }
-
-  private boolean checkFilters(SingleValidationMessage message) {
-    return filteredMessagePrefixes.stream().noneMatch(message.getMessage()::startsWith);
-  }
-
-  private boolean checkSeverity(SingleValidationMessage message) {
-    return SEVERITY_COMPARATOR.compare(message.getSeverity(), minSeverityOutcome) >= 0;
   }
 }

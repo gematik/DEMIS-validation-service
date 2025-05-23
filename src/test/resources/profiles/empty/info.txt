@@ -1,0 +1,1 @@
+This directory has no profiles data. Needed for unit test.

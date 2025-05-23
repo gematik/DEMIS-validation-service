@@ -19,18 +19,22 @@ package de.gematik.demis.validationservice.services.validation;
  * In case of changes by gematik find details in the "Readme" file.
  *
  * See the Licence for the specific language governing permissions and limitations under the Licence.
+ *
+ * *******
+ *
+ * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
  * #L%
  */
 
-import java.util.Locale;
+import de.gematik.demis.validationservice.config.ValidationConfigProperties;
 import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
-@RequiredArgsConstructor
+@Component
 @Slf4j
 public final class FilteredMessagePrefixesFactory implements Supplier<Set<String>> {
 
@@ -42,8 +46,8 @@ public final class FilteredMessagePrefixesFactory implements Supplier<Set<String
           "This_element_does_not_match_any_known_slice_");
   private final Set<String> messages;
 
-  public FilteredMessagePrefixesFactory(final Locale locale) {
-    final var resourceBundle = ResourceBundle.getBundle("Messages", locale);
+  public FilteredMessagePrefixesFactory(final ValidationConfigProperties configProperties) {
+    final var resourceBundle = ResourceBundle.getBundle("Messages", configProperties.locale());
     messages =
         FILTERED_MESSAGES_KEYS.stream()
             .map(resourceBundle::getString)

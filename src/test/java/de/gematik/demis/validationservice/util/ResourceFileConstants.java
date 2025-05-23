@@ -19,6 +19,10 @@ package de.gematik.demis.validationservice.util;
  * In case of changes by gematik find details in the "Readme" file.
  *
  * See the Licence for the specific language governing permissions and limitations under the Licence.
+ *
+ * *******
+ *
+ * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
  * #L%
  */
 
@@ -27,6 +31,8 @@ public final class ResourceFileConstants {
 
   public static final String VALID_REPORT_BED_OCCUPANCY_JSON_EXAMPLE =
       "./src/test/resources/valid_report_bed_occupancy_example.json";
+  public static final String VALID_REPORT_BED_OCCUPANCY_6_0_0 =
+      "./src/test/resources/valid_report_bed_occupancy_example_6_0_0.json";
 
   public static final String VALID_REPORT_BED_OCCUPANCY_XML_EXAMPLE =
       "./src/test/resources/valid_report_bed_occupancy_example.xml";
@@ -40,7 +46,7 @@ public final class ResourceFileConstants {
       "./src/test/resources/invalid_parameters_meta_exception.json";
   public static final String NOT_PARSEABLE_REPORT_BED_OCCUPANCY_EXAMPLE =
       "./src/test/resources/not_parseable_report_bed_occupancy_example.json";
-  public static final String PROFILE_RESOURCE_PATH = "./profiles";
+  public static final String PROFILE_RESOURCE_PATH = "./profiles/5.2.0/Fhir";
 
   private ResourceFileConstants() {}
 }

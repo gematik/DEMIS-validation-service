@@ -39,6 +39,7 @@ import java.util.Set;
 import java.util.UUID;
 import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.r4.model.OperationOutcome;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /** Service holds a Fhir validator with the given profile. */
@@ -46,24 +47,35 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class ValidationService {
   private static final SeverityComparator SEVERITY_COMPARATOR = new SeverityComparator();
+  public static final String
+      THIS_WARNING_WILL_BE_TREATED_AS_ERROR_BY_08_31_2025_PLEASE_CHECK_YOUR_NOTIFICATION_COMPOSITION =
+          "This warning will be treated as error by 08/31/2025. Please check your notification composition";
 
   private final FhirContext fhirContext;
   private final FhirValidatorManager validatorManager;
   private final ValidationMetrics validationMetrics;
   private final ResultSeverityEnum minSeverityOutcome;
   private final Set<String> filteredMessagePrefixes;
+  private final boolean isFilteringOfErrorsDisabled;
+  private final boolean isFilteredErrorsAsWarningsDisabled;
 
   ValidationService(
       final FhirContext fhirContext,
       final FhirValidatorManager validatorManager,
       final ValidationMetrics validationMetrics,
       final ValidationConfigProperties configProperties,
-      final FilteredMessagePrefixesFactory filteredMessagePrefixesFactory) {
+      final FilteredMessagePrefixesFactory filteredMessagePrefixesFactory,
+      @Value("${feature.flag.filtered.validation.errors.disabled}")
+          final boolean isFilteringOfErrorsDisabled,
+      @Value("${feature.flag.filtered.errors.as.warnings.disabled}")
+          final boolean isFilteredErrorsAsWarwningsDisabled) {
     this.fhirContext = fhirContext;
     this.validatorManager = validatorManager;
     this.validationMetrics = validationMetrics;
     this.minSeverityOutcome = configProperties.minSeverityOutcome();
     this.filteredMessagePrefixes = filteredMessagePrefixesFactory.get();
+    this.isFilteringOfErrorsDisabled = isFilteringOfErrorsDisabled;
+    this.isFilteredErrorsAsWarningsDisabled = isFilteredErrorsAsWarwningsDisabled;
   }
 
   private static void reduceIssuesSeverityToWarn(final OperationOutcome operationOutcome) {
@@ -136,12 +148,28 @@ public class ValidationService {
   }
 
   private ValidationResult filterValidationResult(final ValidationResult validationResult) {
-    final List<SingleValidationMessage> collect =
-        validationResult.getMessages().stream()
-            .filter(this::checkFilters)
-            .filter(this::checkSeverity)
-            .toList();
-    return new ValidationResult(fhirContext, collect);
+    List<SingleValidationMessage> resultList = validationResult.getMessages();
+    if (!isFilteringOfErrorsDisabled) {
+      resultList = resultList.stream().filter(this::checkFilters).toList();
+    }
+    if (!isFilteredErrorsAsWarningsDisabled) {
+      resultList.forEach(this::process);
+    }
+
+    final List<SingleValidationMessage> result =
+        resultList.stream().filter(this::checkSeverity).toList();
+    return new ValidationResult(fhirContext, result);
+  }
+
+  private void process(SingleValidationMessage message) {
+    if (filteredMessagePrefixes.stream().anyMatch(message.getMessage()::startsWith)) {
+      message.setSeverity(ResultSeverityEnum.WARNING);
+      message.setMessage(
+          message.getMessage()
+              + " "
+              + THIS_WARNING_WILL_BE_TREATED_AS_ERROR_BY_08_31_2025_PLEASE_CHECK_YOUR_NOTIFICATION_COMPOSITION);
+      log.info("");
+    }
   }
 
   private OperationOutcome toOperationOutcome(final ValidationResult validationResult) {

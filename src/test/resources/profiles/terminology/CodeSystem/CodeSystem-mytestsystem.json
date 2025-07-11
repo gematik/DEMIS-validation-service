@@ -1,0 +1,38 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "myTestSystem",
+  "url": "https://demis.rki.de/fhir/CodeSystem/myTestSystem",
+  "array": [
+    {
+      "version": "wrong"
+    },
+    {
+      "url": "wrong"
+    }
+
+  ],
+  "nestedObject": {
+    "url": "wrong",
+    "version": "wrong"
+  },
+  "version": "3.0.0",
+  "name": "YesOrNoAnswer",
+  "title": "Ja/Nein-Antwort",
+  "status": "active",
+  "date": "2022-01-18",
+  "description": "Das CodeSystem YesOrNoAnswer enthält die Codes für Ja/Nein-Antworten.",
+  "caseSensitive": false,
+  "valueSet": "https://demis.rki.de/fhir/ValueSet/yesOrNoAnswer",
+  "content": "complete",
+  "count": 2,
+  "concept": [
+    {
+      "code": "yes",
+      "display": "Ja"
+    },
+    {
+      "code": "no",
+      "display": "Nein"
+    }
+  ]
+}

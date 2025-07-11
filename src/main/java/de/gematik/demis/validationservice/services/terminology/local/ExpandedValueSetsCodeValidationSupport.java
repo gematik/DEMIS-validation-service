@@ -1,4 +1,4 @@
-package de.gematik.demis.validationservice.services.validation;
+package de.gematik.demis.validationservice.services.terminology.local;
 
 /*-
  * #%L

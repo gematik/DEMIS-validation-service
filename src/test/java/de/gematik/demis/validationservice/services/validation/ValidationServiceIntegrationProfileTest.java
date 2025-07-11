@@ -76,7 +76,12 @@ class ValidationServiceIntegrationProfileTest {
   }
 
   @Nested
-  @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
+  @SpringBootTest(
+      webEnvironment = SpringBootTest.WebEnvironment.NONE,
+      properties = {
+        "feature.flag.filtered.validation.errors.disabled=true",
+        "feature.flag.filtered.errors.as.warnings.disabled=true"
+      })
   @ActiveProfiles("test")
   class ValidationWithDefaults {
 
@@ -200,7 +205,12 @@ class ValidationServiceIntegrationProfileTest {
   @Nested
   @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
   @ActiveProfiles("test")
-  @TestPropertySource(properties = {"demis.validation-service.locale=de_DE"})
+  @TestPropertySource(
+      properties = {
+        "demis.validation-service.locale=de_DE",
+        "feature.flag.filtered.validation.errors.disabled=true",
+        "feature.flag.filtered.errors.as.warnings.disabled=false"
+      })
   class ValidationGerman {
 
     @Autowired private ValidationService validationService;
@@ -226,7 +236,12 @@ class ValidationServiceIntegrationProfileTest {
   @Nested
   @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
   @ActiveProfiles("test")
-  @TestPropertySource(properties = {"demis.validation-service.profiles.versions=6.0.0,5.2.0"})
+  @TestPropertySource(
+      properties = {
+        "demis.validation-service.profiles.versions=6.0.6,5.3.1",
+        "feature.flag.filtered.validation.errors.disabled=true",
+        "feature.flag.filtered.errors.as.warnings.disabled=true"
+      })
   class ValidationWithMultipleProfilesVersions {
 
     @Autowired private ValidationService validationService;

@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "id": "mytest",
+  "url": "https://demis.rki.de/fhir/ValueSet/mytest",
+  "array": [
+    {
+      "version": "wrong"
+    },
+    {
+      "url": "wrong"
+    }
+
+  ],
+  "nestedObject": {
+    "url": "wrong",
+    "version": "wrong"
+  },
+  "version": "2.0.2",
+  "name": "YesOrNoAnswer",
+  "title": "Ja/Nein-Antwort",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-09-03",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet YesOrNoAnswer enthält die Codes für Ja/Nein-Antworten."
+}

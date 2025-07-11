@@ -32,34 +32,31 @@ import ca.uhn.fhir.context.support.IValidationSupport;
 import ca.uhn.fhir.validation.FhirValidator;
 import de.gematik.demis.validationservice.config.ValidationConfigProperties;
 import de.gematik.demis.validationservice.services.ProfileParserService;
+import de.gematik.demis.validationservice.services.terminology.TerminologyValidationProvider;
 import java.nio.file.Path;
 import java.util.concurrent.TimeUnit;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DurationFormatUtils;
-import org.hl7.fhir.common.hapi.validation.support.CachingValidationSupport;
+import org.hl7.fhir.common.hapi.validation.support.CachingValidationSupport.CacheTimeouts;
 import org.hl7.fhir.common.hapi.validation.support.CommonCodeSystemsTerminologyService;
-import org.hl7.fhir.common.hapi.validation.support.InMemoryTerminologyServerValidationSupport;
 import org.hl7.fhir.common.hapi.validation.support.SnapshotGeneratingValidationSupport;
 import org.hl7.fhir.common.hapi.validation.support.ValidationSupportChain;
 import org.hl7.fhir.common.hapi.validation.validator.FhirInstanceValidator;
 import org.hl7.fhir.r4.model.Bundle;
-import org.hl7.fhir.r4.model.CodeSystem;
 import org.hl7.fhir.r4.model.Observation;
-import org.hl7.fhir.r4.model.Questionnaire;
-import org.hl7.fhir.r4.model.StructureDefinition;
-import org.hl7.fhir.r4.model.ValueSet;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
 @Slf4j
-final class FhirValidatorFactory {
+public final class FhirValidatorFactory {
 
   private final ProfileParserService profileParserService;
   private final FhirContext fhirContext;
   private final ValidationConfigProperties configProperties;
+  private final TerminologyValidationProvider terminologyValidationProvider;
 
   @Value("${feature.flag.common.code.system.terminology.enabled}")
   private boolean featureFlagCommonCodeSystemsTerminologyEnabled;
@@ -85,8 +82,8 @@ final class FhirValidatorFactory {
     final ValidationSupportChain chain = new ValidationSupportChain();
     addDemisPrePopulatedValidation(chain, profilesPath);
     addDefaultProfileValidation(chain);
-    addExpandedValueSetsValidation(chain);
-    addInMemoryTerminologyServerValidation(chain);
+    terminologyValidationProvider.addTerminologyValidationSupport(
+        chain, createTerminologyServerCacheTimeouts(), profilesPath);
     addSnapshotGeneratingValidation(chain);
     addCommonCodeSystemsValidation(chain);
     return chain;
@@ -94,40 +91,24 @@ final class FhirValidatorFactory {
 
   private void addDemisPrePopulatedValidation(
       final ValidationSupportChain chain, final Path profilesPath) {
-    final var profiles = profileParserService.parseProfile(profilesPath);
-    final var structureDefinitions = profiles.get(StructureDefinition.class);
-    final var valueSets = profiles.get(ValueSet.class);
-    final var codeSystems = profiles.get(CodeSystem.class);
-    final var questionnaires = profiles.get(Questionnaire.class);
+    final var profileSnapshot = profileParserService.parseProfile(profilesPath);
     chain.addValidationSupport(
-        new DemisPrePopulatedValidationSupportHapi4(
-            fhirContext, structureDefinitions, valueSets, codeSystems, questionnaires));
+        new DemisPrePopulatedValidationSupportHapi4(fhirContext, profileSnapshot));
   }
 
   private void addDefaultProfileValidation(ValidationSupportChain chain) {
     chain.addValidationSupport(new DefaultProfileValidationSupport(this.fhirContext));
   }
 
-  private void addExpandedValueSetsValidation(ValidationSupportChain chain) {
-    chain.addValidationSupport(new ExpandedValueSetsCodeValidationSupport(this.fhirContext));
-  }
-
-  private void addInMemoryTerminologyServerValidation(ValidationSupportChain chain) {
-    chain.addValidationSupport(
-        new CachingValidationSupport(
-            new InMemoryTerminologyServerValidationSupport(this.fhirContext),
-            createTerminologyServerCacheTimeouts()));
-  }
-
-  private CachingValidationSupport.CacheTimeouts createTerminologyServerCacheTimeouts() {
+  private CacheTimeouts createTerminologyServerCacheTimeouts() {
     final long millis =
         TimeUnit.MINUTES.toMillis(configProperties.cacheExpireAfterAccessTimeoutMins());
     if (log.isInfoEnabled()) {
       log.info(
-          "Creating in-memory terminology server cache timeouts. ExpireAfterAccessTimeout: {}",
+          "Creating terminology server cache timeouts. ExpireAfterAccessTimeout: {}",
           DurationFormatUtils.formatDurationHMS(millis));
     }
-    return (new CachingValidationSupport.CacheTimeouts())
+    return new CacheTimeouts()
         .setLookupCodeMillis(millis)
         .setExpandValueSetMillis(millis)
         .setTranslateCodeMillis(millis)

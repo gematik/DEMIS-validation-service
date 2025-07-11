@@ -23,12 +23,14 @@ This project includes:
   Apache Commons Logging under The Apache Software License, Version 2.0
   Apache Commons Text under Apache-2.0
   Apache HttpClient under Apache License, Version 2.0
+  Apache HttpComponents Core HTTP/1.1 under Apache License, Version 2.0
+  Apache HttpComponents Core HTTP/2 under Apache License, Version 2.0
   Apache HttpCore under Apache License, Version 2.0
   Apache Log4j API under Apache-2.0
   asm under BSD-3-Clause
   ASM based accessors helper used by json-smart under The Apache Software License, Version 2.0
   AspectJ Weaver under Eclipse Public License - v 2.0
-  AssertJ Core under Apache License, Version 2.0
+  AssertJ Core under Apache-2.0
   attoparser under The Apache Software License, Version 2.0
   Awaitility under Apache 2.0
   Byte Buddy (without dependencies) under Apache License, Version 2.0
@@ -42,7 +44,8 @@ This project includes:
   Guava InternalFutureFailureAccess and InternalFutures under Apache License, Version 2.0
   Guava ListenableFuture only under The Apache Software License, Version 2.0
   Guava: Google Core Libraries for Java under Apache License, Version 2.0
-  Hamcrest under BSD License 3
+  Hamcrest under BSD-3-Clause
+  HAPI FHIR - Client Framework under Apache Software License 2.0
   HAPI FHIR - Converter under Apache Software License 2.0
   HAPI FHIR - Core Library under Apache Software License 2.0
   HAPI FHIR - ServiceLoaders - Caching API under Apache Software License 2.0
@@ -67,6 +70,7 @@ This project includes:
   Jakarta XML Binding API under Eclipse Distribution License - v 1.0
   jakarta-regexp under Apache License, Version 2.0
   Javassist under MPL 1.1 or LGPL 2.1 or Apache License 2.0
+  javax.inject under The Apache Software License, Version 2.0
   JBoss Logging 3 under Apache License 2.0
   JCL 1.2 implemented over SLF4J under Apache-2.0
   JSON library from Android SDK under Apache License 2.0
@@ -86,6 +90,19 @@ This project includes:
   Logback Classic Module under Eclipse Public License - v 1.0 or GNU Lesser General Public License
   Logback Core Module under Eclipse Public License - v 1.0 or GNU Lesser General Public License
   Logstash Logback Encoder under Apache License, Version 2.0 or MIT License
+  Maven Artifact under Apache-2.0
+  Maven Artifact Resolver API under Apache-2.0
+  Maven Artifact Resolver Connector Basic under Apache-2.0
+  Maven Artifact Resolver Implementation under Apache-2.0
+  Maven Artifact Resolver Named Locks under Apache-2.0
+  Maven Artifact Resolver Provider under Apache-2.0
+  Maven Artifact Resolver SPI under Apache-2.0
+  Maven Artifact Resolver Transport HTTP under Apache-2.0
+  Maven Artifact Resolver Utilities under Apache-2.0
+  Maven Builder Support under Apache-2.0
+  Maven Model under Apache-2.0
+  Maven Model Builder under Apache-2.0
+  Maven Repository Metadata Model under Apache-2.0
   micrometer-commons under The Apache Software License, Version 2.0
   micrometer-core under The Apache Software License, Version 2.0
   micrometer-jakarta9 under The Apache Software License, Version 2.0
@@ -101,6 +118,7 @@ This project includes:
   OpenTelemetry Java under The Apache License, Version 2.0
   OpenTelemetry Semantic Conventions Java under The Apache License, Version 2.0
   org.apiguardian:apiguardian-api under The Apache License, Version 2.0
+  org.eclipse.sisu.inject under Eclipse Public License, Version 2.0
   org.hl7.fhir.convertors under Apache Software License 2.0
   org.hl7.fhir.dstu2 under Apache Software License 2.0
   org.hl7.fhir.dstu2016may under Apache Software License 2.0
@@ -113,13 +131,17 @@ This project includes:
   org.opentest4j:opentest4j under The Apache License, Version 2.0
   org.xmlunit:xmlunit-core under The Apache Software License, Version 2.0
   PlantUML under MIT License
+  Plexus Common Utilities under Apache License, Version 2.0
+  Plexus Interpolation API under Apache License, Version 2.0
   Project Lombok under The MIT License
   Prometheus Metrics Config under The Apache Software License, Version 2.0
   Prometheus Metrics Core under The Apache Software License, Version 2.0
   Prometheus Metrics Exposition Formats under The Apache Software License, Version 2.0
+  Prometheus Metrics Exposition Formats no protobuf under The Apache Software License, Version 2.0
   Prometheus Metrics Exposition Text Formats under The Apache Software License, Version 2.0
   Prometheus Metrics Model under The Apache Software License, Version 2.0
   Prometheus Metrics Tracer Common under The Apache Software License, Version 2.0
+  Protocol Buffers [Core] under BSD-3-Clause
   Saxon-HE under Mozilla Public License Version 2.0
   service-base under Licensed under the EUPL 1.2
   SLF4J API Module under MIT
@@ -148,6 +170,8 @@ This project includes:
   spring-boot-starter-web under Apache License, Version 2.0
   spring-boot-test under Apache License, Version 2.0
   spring-boot-test-autoconfigure under Apache License, Version 2.0
+  spring-cloud-contract-wiremock under Apache License, Version 2.0
+  spring-cloud-test-support under Apache License, Version 2.0
   spring-parent under Licensed under the EUPL 1.2
   springdoc-openapi-starter-common under The Apache License, Version 2.0
   springdoc-openapi-starter-webmvc-api under The Apache License, Version 2.0
@@ -165,6 +189,7 @@ This project includes:
   unbescape under The Apache Software License, Version 2.0
   validation-service under Licensed under the EUPL 1.2
   webjars-locator-lite under MIT
+  WireMock under The Apache Software License, Version 2.0
   XPP3 under The Apache Software License, Version 2.0
 
 

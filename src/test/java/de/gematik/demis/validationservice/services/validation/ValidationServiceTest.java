@@ -28,6 +28,7 @@ package de.gematik.demis.validationservice.services.validation;
 
 import static ca.uhn.fhir.validation.ResultSeverityEnum.WARNING;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.ERROR;
 import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.FATAL;
 import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.INFORMATION;
 import static org.mockito.Mockito.mock;
@@ -91,11 +92,12 @@ class ValidationServiceTest {
     meterRegistry.clear();
     final var validationMetrics = new ValidationMetrics(meterRegistry);
 
-    final var filteredMessagePrefixesFactoryMock = mock(FilteredMessagePrefixesFactory.class);
-    when(filteredMessagePrefixesFactoryMock.get()).thenReturn(Set.of(IGNORED_VALIDATION_ERROR));
-
     final ValidationConfigProperties props =
         new ValidationConfigProperties(null, Locale.getDefault(), ResultSeverityEnum.WARNING, 1);
+
+    final FilteredMessagePrefixesFactory filteredMessagePrefixesFactory =
+        mock(FilteredMessagePrefixesFactory.class);
+    when(filteredMessagePrefixesFactory.get()).thenReturn(Set.of(IGNORED_VALIDATION_ERROR));
 
     underTest =
         new ValidationService(
@@ -103,7 +105,9 @@ class ValidationServiceTest {
             fhirValidatorManagerMock,
             validationMetrics,
             props,
-            filteredMessagePrefixesFactoryMock);
+            filteredMessagePrefixesFactory,
+            true,
+            true);
   }
 
   private void assertOperationOutcome(
@@ -165,12 +169,12 @@ class ValidationServiceTest {
 
       final OperationOutcome result = underTest.validate(CONTENT);
 
-      assertOperationOutcome(result, IssueSeverity.ERROR, errorMsg.getMessage());
+      assertOperationOutcome(result, ERROR, errorMsg.getMessage());
       assertMetrics(tags(PROFILES_VERSION, false));
     }
 
     @Test
-    void filterValidationErrors() {
+    void validationErrorsAreNotFiltered() {
       final var errorMsg =
           createValidationMessage(ResultSeverityEnum.ERROR, IGNORED_VALIDATION_ERROR);
       when(fhirValidatorMock.validateWithResult(CONTENT))
@@ -178,8 +182,8 @@ class ValidationServiceTest {
 
       final OperationOutcome result = underTest.validate(CONTENT);
 
-      assertOperationOutcome(result, INFORMATION, VALID_INFO_MESSAGE);
-      assertMetrics(tags(PROFILES_VERSION, true));
+      assertOperationOutcome(result, ERROR, IGNORED_VALIDATION_ERROR);
+      assertMetrics(tags(PROFILES_VERSION, false));
     }
 
     @Test
@@ -263,7 +267,7 @@ class ValidationServiceTest {
 
       final OperationOutcome result = underTest.validate(CONTENT);
 
-      assertOperationOutcome(result, IssueSeverity.ERROR, errorMsg.getMessage());
+      assertOperationOutcome(result, ERROR, errorMsg.getMessage());
       assertMetrics(tags(NEW_VERSION, false), tags(OLD_VERSION, false));
     }
   }

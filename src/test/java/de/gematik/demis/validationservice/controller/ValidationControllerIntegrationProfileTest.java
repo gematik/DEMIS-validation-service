@@ -26,8 +26,7 @@ package de.gematik.demis.validationservice.controller;
  * #L%
  */
 
-import static org.hamcrest.Matchers.everyItem;
-import static org.hamcrest.Matchers.not;
+import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.startsWith;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.http.MediaType.APPLICATION_XML_VALUE;
@@ -45,13 +44,19 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.env.Environment;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 @ActiveProfiles(value = {"test"})
-@SpringBootTest(classes = {ValidationServiceApplication.class})
+@SpringBootTest(
+    classes = {ValidationServiceApplication.class},
+    properties = {
+      "feature.flag.filtered.validation.errors.disabled=true",
+      "feature.flag.filtered.errors.as.warnings.disabled=true"
+    })
 class ValidationControllerIntegrationProfileTest {
   @Autowired private WebApplicationContext webApplicationContext;
   private MockMvc mockMvc;
@@ -60,6 +65,8 @@ class ValidationControllerIntegrationProfileTest {
   void setUp() {
     mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
   }
+
+  @Autowired Environment env;
 
   @Test
   void shouldReturn() throws Exception {
@@ -136,7 +143,7 @@ class ValidationControllerIntegrationProfileTest {
   }
 
   @Test
-  void passInvalidDv2MessageAndCheckMatchingProfileIssuesAreFiltered() throws Exception {
+  void passInvalidDv2MessageAndCheckMatchingProfileIssuesAreNotFiltered() throws Exception {
     final String invalidFileContent =
         FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_TEST_NOTIFICATION_DV_2);
     mockMvc
@@ -146,28 +153,7 @@ class ValidationControllerIntegrationProfileTest {
         .andExpect(
             jsonPath(
                 "$..issue[*].diagnostics",
-                everyItem(not(startsWith("Unable to find a match for profile")))))
-        .andExpect(
-            jsonPath(
-                "$..issue[*].diagnostics",
-                everyItem(
-                    not(
-                        startsWith(
-                            "Unable to find a match for the specified profile among choices")))))
-        .andExpect(
-            jsonPath(
-                "$..issue[*].diagnostics",
-                everyItem(
-                    not(
-                        startsWith(
-                            "Multiple profiles found for entry resource. This is not supported at this time")))))
-        .andExpect(
-            jsonPath(
-                "$..issue[*].diagnostics",
-                everyItem(
-                    not(
-                        startsWith(
-                            "This element does not match any known slice defined in the profile")))));
+                hasItems(startsWith("Unable to find a match for profile"))));
   }
 
   @Test

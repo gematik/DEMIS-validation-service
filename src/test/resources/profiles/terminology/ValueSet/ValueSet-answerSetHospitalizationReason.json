@@ -1,0 +1,7 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetHospitalizationReason",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetHospitalizationReason",
+  "version": "2.3.5",
+  "name": "AnswerSetHospitalizationReason"
+}

@@ -27,11 +27,15 @@ package de.gematik.demis.validationservice;
  */
 
 import de.gematik.demis.validationservice.config.ValidationConfigProperties;
+import de.gematik.demis.validationservice.services.terminology.remote.TerminologyServerConfigProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
-@EnableConfigurationProperties(ValidationConfigProperties.class)
+@EnableConfigurationProperties({
+  ValidationConfigProperties.class,
+  TerminologyServerConfigProperties.class
+})
 @SpringBootApplication
 public class ValidationServiceApplication {
 

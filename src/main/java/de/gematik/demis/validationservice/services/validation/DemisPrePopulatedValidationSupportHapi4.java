@@ -27,6 +27,7 @@ package de.gematik.demis.validationservice.services.validation;
  */
 
 import ca.uhn.fhir.context.FhirContext;
+import de.gematik.demis.validationservice.services.ProfileSnapshot;
 import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -43,13 +44,13 @@ class DemisPrePopulatedValidationSupportHapi4 extends PrePopulatedValidationSupp
   private final Map<String, IBaseResource> myQuestionnaireSets;
 
   DemisPrePopulatedValidationSupportHapi4(
-      FhirContext context,
-      Map<String, IBaseResource> theStructureDefinitions,
-      Map<String, IBaseResource> theValueSets,
-      Map<String, IBaseResource> theCodeSystems,
-      Map<String, IBaseResource> theQuestionnaires) {
-    super(context, theStructureDefinitions, theValueSets, theCodeSystems);
-    this.myQuestionnaireSets = theQuestionnaires;
+      final FhirContext context, final ProfileSnapshot profileSnapshot) {
+    super(
+        context,
+        profileSnapshot.structureDefinitions(),
+        profileSnapshot.valueSets(),
+        profileSnapshot.codeSystems());
+    this.myQuestionnaireSets = profileSnapshot.questionnaires();
   }
 
   @Override

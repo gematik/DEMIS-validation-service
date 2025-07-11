@@ -26,35 +26,30 @@ package de.gematik.demis.validationservice.services;
  * #L%
  */
 
+import static de.gematik.demis.validationservice.util.ResourceFileConstants.EMPTY_PROFILES_PATH;
+import static de.gematik.demis.validationservice.util.ResourceFileConstants.MINIMLAL_PROFILES_PATH;
+import static de.gematik.demis.validationservice.util.ResourceFileConstants.NOT_EXISTING_PROFILES_PATH;
+import static de.gematik.demis.validationservice.util.ResourceFileConstants.TERMINOLOGY_PROFILES_PATH;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import ca.uhn.fhir.context.FhirContext;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Map;
-import org.hl7.fhir.instance.model.api.IBaseResource;
-import org.hl7.fhir.r4.model.MetadataResource;
-import org.hl7.fhir.r4.model.StructureDefinition;
+import de.gematik.demis.validationservice.services.terminology.remote.TerminologyServerConfigProperties;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 class ProfileParserServiceTest {
 
-  private static final Path MINIMLAL_PROFILES_PATH =
-      Paths.get("src/test/resources/profiles/minimal");
-  private static final Path EMPTY_PROFILES_PATH = Paths.get("src/test/resources/profiles/empty");
-  private static final Path NOT_EXISTING_PROFILES_PATH =
-      Paths.get("src/test/resources/profiles/not_exists");
-
+  private final TerminologyServerConfigProperties terminologyServerConfigProperties =
+      Mockito.mock(TerminologyServerConfigProperties.class);
   private final ProfileParserService profileParserService =
-      new ProfileParserService(FhirContext.forR4Cached());
+      new ProfileParserService(FhirContext.forR4Cached(), terminologyServerConfigProperties);
 
   @Test
   void okay() {
-    final Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> result =
-        profileParserService.parseProfile(MINIMLAL_PROFILES_PATH);
+    final var result = profileParserService.parseProfile(MINIMLAL_PROFILES_PATH);
     assertThat(result).isNotNull();
-    final var structureDefinitions = result.get(StructureDefinition.class);
+    final var structureDefinitions = result.structureDefinitions();
     assertThat(structureDefinitions)
         .isNotNull()
         .hasSize(1)
@@ -71,5 +66,26 @@ class ProfileParserServiceTest {
   void notExistingProfilesDirectoryThrowsException() {
     assertThatThrownBy(() -> profileParserService.parseProfile(NOT_EXISTING_PROFILES_PATH))
         .isInstanceOf(IllegalArgumentException.class);
+  }
+
+  @Test
+  void featureFlagRemoteTerminologyServerEnabled() {
+    Mockito.when(terminologyServerConfigProperties.enabled()).thenReturn(true);
+    final var result = profileParserService.parseProfile(TERMINOLOGY_PROFILES_PATH);
+    assertThat(result).isNotNull();
+    final var structureDefinitions = result.structureDefinitions();
+    assertThat(structureDefinitions).isNotNull().hasSize(1);
+    assertThat(result.valueSets()).isEmpty();
+    assertThat(result.codeSystems()).isEmpty();
+    assertThat(result.withTerminologyResources()).isFalse();
+  }
+
+  @Test
+  void featureFlagRemoteTerminologyServerDisabled() {
+    Mockito.when(terminologyServerConfigProperties.enabled()).thenReturn(false);
+    final var result = profileParserService.parseProfile(TERMINOLOGY_PROFILES_PATH);
+    assertThat(result.valueSets()).isNotNull().isNotEmpty();
+    assertThat(result.codeSystems()).isNotNull().isNotEmpty();
+    assertThat(result.withTerminologyResources()).isTrue();
   }
 }

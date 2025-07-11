@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "id": "yesOrNoAnswer",
+  "url": "https://demis.rki.de/fhir/ValueSet/yesOrNoAnswer",
+  "version": "1.1.2",
+  "name": "YesOrNoAnswer",
+  "title": "Ja/Nein-Antwort",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-09-03",
+  "publisher": "Robert Koch-Institut",
+  "description": "Das ValueSet YesOrNoAnswer enthält die Codes für Ja/Nein-Antworten.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+        "version": "1.0.0"
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-03T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+        "version": "1.0.0",
+        "code": "yes",
+        "display": "Ja"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/yesOrNoAnswer",
+        "version": "1.0.0",
+        "code": "no",
+        "display": "Nein"
+      }
+    ]
+  }
+}

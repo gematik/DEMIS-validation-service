@@ -28,13 +28,17 @@ package de.gematik.demis.validationservice.services;
 
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.parser.IParser;
-import com.google.common.collect.ImmutableMap;
+import de.gematik.demis.validationservice.services.ProfileSnapshot.ProfileSnapshotBuilder;
+import de.gematik.demis.validationservice.services.terminology.remote.TerminologyServerConfigProperties;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.*;
-import java.util.Map.Entry;
+import java.util.Collections;
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
@@ -50,47 +54,17 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class ProfileParserService {
 
-  private static final int MAX_FOLDER_DEPTH = 5;
+  public static final int MAX_FOLDER_DEPTH = 5;
+  public static final String FOLDER_CODESYSTEM = "CodeSystem";
+  public static final String FOLDER_VALUE_SET = "ValueSet";
+  private static final String FOLDER_STRUCTURE_DEFINITION = "StructureDefinition";
+  private static final String FOLDER_QUESTIONNAIRE = "Questionnaire";
 
   private static final EnumSet<ResourceType> VERSIONED_TYPES =
       EnumSet.of(ResourceType.CodeSystem, ResourceType.ValueSet);
 
-  private static final Map<String, Class<? extends MetadataResource>> PROFILE_PARTS =
-      java.util.Map.of(
-          "CodeSystem", CodeSystem.class,
-          "Questionnaire", Questionnaire.class,
-          "StructureDefinition", StructureDefinition.class,
-          "ValueSet", ValueSet.class);
-
   private final FhirContext fhirContext;
-
-  private static Map<String, IBaseResource> parseFilesInDirectory(
-      final IParser parser,
-      final Entry<String, Class<? extends MetadataResource>> profilePart,
-      final Path path)
-      throws IOException {
-    final var profileResources = getProfilesAsResources(path);
-    final var result = new HashMap<String, IBaseResource>();
-    for (final var resource : profileResources) {
-      parseProfileResource(parser, profilePart, result, resource);
-    }
-    return result;
-  }
-
-  private static void parseProfileResource(
-      IParser parser,
-      Entry<String, Class<? extends MetadataResource>> profilePart,
-      HashMap<String, IBaseResource> result,
-      PathResource resource)
-      throws IOException {
-    final MetadataResource parsedResource =
-        parser.parseResource(profilePart.getValue(), resource.getInputStream());
-    final String url = parsedResource.getUrl();
-    result.put(url, parsedResource);
-    if (versionedLookup(parsedResource)) {
-      result.put(url + "|" + parsedResource.getVersion(), parsedResource);
-    }
-  }
+  private final TerminologyServerConfigProperties terminologyServerConfigProperties;
 
   /**
    * With FHIR snapshot 09.05.2023 code systems and value sets can be looked up old style without
@@ -120,33 +94,75 @@ public class ProfileParserService {
     }
   }
 
-  public Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> parseProfile(
-      final Path profileSnapshotsPath) {
+  public ProfileSnapshot parseProfile(final Path profileSnapshotsPath) {
     log.info("Start parsing Profiles {}", profileSnapshotsPath);
     if (!Files.exists(profileSnapshotsPath)) {
       throw new IllegalArgumentException("Profiles path " + profileSnapshotsPath + " not present");
     }
-    final Map<Class<? extends MetadataResource>, Map<String, IBaseResource>> profile =
-        new HashMap<>();
+
+    final ProfileSnapshotLoader loader = new ProfileSnapshotLoader(profileSnapshotsPath);
+
+    final ProfileSnapshotBuilder profileSnapshotBuilder = ProfileSnapshot.builder();
+    profileSnapshotBuilder
+        .name(profileSnapshotsPath.getFileName().toString())
+        .structureDefinitions(
+            loader.loadResources(StructureDefinition.class, FOLDER_STRUCTURE_DEFINITION))
+        .questionnaires(loader.loadResources(Questionnaire.class, FOLDER_QUESTIONNAIRE));
+    if (terminologyServerConfigProperties.enabled()) {
+      profileSnapshotBuilder
+          .withTerminologyResources(false)
+          .codeSystems(Map.of())
+          .valueSets(Map.of());
+    } else {
+      profileSnapshotBuilder
+          .withTerminologyResources(true)
+          .codeSystems(loader.loadResources(CodeSystem.class, FOLDER_CODESYSTEM))
+          .valueSets(loader.loadResources(ValueSet.class, FOLDER_VALUE_SET));
+    }
+
+    final ProfileSnapshot profileSnapshot = profileSnapshotBuilder.build();
+
+    if (profileSnapshot.getTotalCount() == 0) {
+      throw new IllegalStateException("No profiles files found in " + profileSnapshotsPath);
+    }
+
+    log.info("Snapshot loading finished: {}", profileSnapshot);
+    return profileSnapshot;
+  }
+
+  @RequiredArgsConstructor
+  class ProfileSnapshotLoader {
     final IParser parser = fhirContext.newJsonParser();
-    for (final Entry<String, Class<? extends MetadataResource>> profilePart :
-        PROFILE_PARTS.entrySet()) {
-      final Path path = profileSnapshotsPath.resolve(profilePart.getKey());
+    final Path profileSnapshotsPath;
+
+    public Map<String, IBaseResource> loadResources(
+        final Class<? extends MetadataResource> resourceType, final String folder) {
       try {
-        final Map<String, IBaseResource> resourcesMap =
-            parseFilesInDirectory(parser, profilePart, path);
-        profile.put(profilePart.getValue(), ImmutableMap.copyOf(resourcesMap));
-        log.info("Loaded {}: {} ", profilePart.getKey(), resourcesMap.size());
+        final Path path = profileSnapshotsPath.resolve(folder);
+        final var profileResources = getProfilesAsResources(path);
+        final var result = new HashMap<String, IBaseResource>();
+        for (final var resource : profileResources) {
+          parseProfileResource(resourceType, result, resource);
+        }
+        log.info("Loaded {}: {} ", folder, result.size());
+        return Map.copyOf(result);
       } catch (final IOException e) {
         throw new UncheckedIOException(e);
       }
     }
 
-    if (profile.values().stream().allMatch(Map::isEmpty)) {
-      throw new IllegalStateException("No profiles files found in " + profileSnapshotsPath);
+    private void parseProfileResource(
+        Class<? extends MetadataResource> resourceType,
+        Map<String, IBaseResource> result,
+        PathResource resource)
+        throws IOException {
+      final MetadataResource parsedResource =
+          parser.parseResource(resourceType, resource.getInputStream());
+      final String url = parsedResource.getUrl();
+      result.put(url, parsedResource);
+      if (versionedLookup(parsedResource)) {
+        result.put(url + "|" + parsedResource.getVersion(), parsedResource);
+      }
     }
-
-    log.info("Finish parsing Profiles {}", profileSnapshotsPath);
-    return Collections.unmodifiableMap(profile);
   }
 }

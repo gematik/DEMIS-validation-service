@@ -1,0 +1,7 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "hospitalizationReason",
+  "url": "https://demis.rki.de/fhir/CodeSystem/hospitalizationReason",
+  "version": "2.3.0",
+  "name": "HospitalizationReason"
+}

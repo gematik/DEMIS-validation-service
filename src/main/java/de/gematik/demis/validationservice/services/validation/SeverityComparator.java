@@ -50,6 +50,6 @@ final class SeverityComparator implements Comparator<ResultSeverityEnum> {
     Integer order1 = SEVERITY_ORDER.get(o1);
     Integer order2 = SEVERITY_ORDER.get(o2);
 
-    return order1.intValue() - order2.intValue();
+    return order1 - order2;
   }
 }

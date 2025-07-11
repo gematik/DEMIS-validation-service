@@ -38,6 +38,9 @@ customLabels: {}
 customEnvVars:
   FEATURE_FLAG_FORMAT_VALIDATION_ENABLED: "true"
   FEATURE_FLAG_COMMON_CODE_SYSTEM_TERMINOLOGY_ENABLED: "false"
+  FEATURE_FLAG_TERMINOLOGY_SERVER: "false"
+  FEATURE_FLAG_RELAXED_VALIDATION: "false"
+  CONFIG_OPTION_TERMINOLOGY_SERVER_URL: "http://terminology-server.demis.svc.cluster.local/fhir"
 
 # Extra labels for deployments
 deploymentLabels: {}

@@ -46,7 +46,7 @@ class ValidationConfigPropertiesTest {
   private static final String[] VALID_PROPERTIES = {
     "demis.validation-service.profiles.basepath=myprofiles",
     "demis.validation-service.profiles.fhirpath=Fhir",
-    "demis.validation-service.profiles.versions=6.0.0,5.2.0",
+    "demis.validation-service.profiles.versions=6.0.6,5.3.1",
     "demis.validation-service.locale=en_US",
     "demis.validation-service.minSeverityOutcome=error",
     "demis.validation-service.cache.expireAfterAccessMins=120"
@@ -77,7 +77,7 @@ class ValidationConfigPropertiesTest {
                   .isSameAs(context.getBean(ValidationConfigProperties.ProfilesProperties.class));
               assertThat(profilesProperties.basepath()).isEqualTo("myprofiles");
               assertThat(profilesProperties.fhirpath()).isEqualTo("Fhir");
-              assertThat(profilesProperties.versions()).isEqualTo(List.of("6.0.0", "5.2.0"));
+              assertThat(profilesProperties.versions()).isEqualTo(List.of("6.0.6", "5.3.1"));
             });
   }
 

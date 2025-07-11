@@ -2,6 +2,16 @@
 
 # Release Validation-Service
 
+## Release 2.8.0
+### changed
+- optional support for remote terminology server 
+- updated profiles
+- removed filter of validation errors in the notification
+- updated base image
+- add feature.flag.relaxed.validation
+### fixed
+- Dependency-Updates (CVEs et al.)
+
 ## Release 2.7.0
 ### changed
 - support for multiple profile snapshots versions: Breaking Change in Environment Variables.

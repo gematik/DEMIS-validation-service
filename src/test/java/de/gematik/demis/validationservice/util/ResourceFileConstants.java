@@ -26,6 +26,9 @@ package de.gematik.demis.validationservice.util;
  * #L%
  */
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 /** Class to hold resource paths. */
 public final class ResourceFileConstants {
 
@@ -46,7 +49,15 @@ public final class ResourceFileConstants {
       "./src/test/resources/invalid_parameters_meta_exception.json";
   public static final String NOT_PARSEABLE_REPORT_BED_OCCUPANCY_EXAMPLE =
       "./src/test/resources/not_parseable_report_bed_occupancy_example.json";
-  public static final String PROFILE_RESOURCE_PATH = "./profiles/5.2.0/Fhir";
+  public static final String PROFILE_RESOURCE_PATH = "./profiles/5.3.1/Fhir";
+
+  private static final Path TEST_RESOURCE_PATH = Paths.get("src/test/resources");
+  public static final Path MINIMLAL_PROFILES_PATH = TEST_RESOURCE_PATH.resolve("profiles/minimal");
+  public static final Path EMPTY_PROFILES_PATH = TEST_RESOURCE_PATH.resolve("profiles/empty");
+  public static final Path NOT_EXISTING_PROFILES_PATH =
+      TEST_RESOURCE_PATH.resolve("profiles/not_exists");
+  public static final Path TERMINOLOGY_PROFILES_PATH =
+      TEST_RESOURCE_PATH.resolve("profiles/terminology");
 
   private ResourceFileConstants() {}
 }

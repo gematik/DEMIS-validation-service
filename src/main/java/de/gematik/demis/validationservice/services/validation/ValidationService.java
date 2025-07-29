@@ -49,7 +49,7 @@ public class ValidationService {
   private static final SeverityComparator SEVERITY_COMPARATOR = new SeverityComparator();
   public static final String
       THIS_WARNING_WILL_BE_TREATED_AS_ERROR_BY_08_31_2025_PLEASE_CHECK_YOUR_NOTIFICATION_COMPOSITION =
-          "This warning will be treated as error by 08/31/2025. Please check your notification composition";
+          "This warning will be treated as error by 01/01/2026. Please check your notification composition";
 
   private final FhirContext fhirContext;
   private final FhirValidatorManager validatorManager;

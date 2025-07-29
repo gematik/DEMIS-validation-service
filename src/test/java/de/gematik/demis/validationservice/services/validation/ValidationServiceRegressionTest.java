@@ -186,7 +186,7 @@ class ValidationServiceRegressionTest {
           result,
           IssueSeverity.WARNING,
           IGNORED_VALIDATION_ERROR
-              + " This warning will be treated as error by 08/31/2025. Please check your notification composition");
+              + " This warning will be treated as error by 01/01/2026. Please check your notification composition");
       assertMetrics(tags(PROFILES_VERSION, true));
     }
 

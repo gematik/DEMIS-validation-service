@@ -1,3 +1,57 @@
+{{- define "hpa" }}
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "validation-service.fullversionname" . }}
+  labels:
+    {{- include "validation-service.labels" . | nindent 4 }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "validation-service.fullversionname" . }}
+  minReplicas: {{ .Values.autoscaling.minReplicas }}
+  maxReplicas: {{ .Values.autoscaling.maxReplicas }}
+  metrics:
+    {{- if .Values.autoscaling.targetCPUUtilizationPercentage }}
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: {{ .Values.autoscaling.targetCPUUtilizationPercentage }}
+    {{- end }}
+    {{- if .Values.autoscaling.targetMemoryUtilizationPercentage }}
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: {{ .Values.autoscaling.targetMemoryUtilizationPercentage }}
+    {{- end }}
+{{- end }}
+
+{{- if .Values.provisioningMode }}
+{{ $root := $ }}
+{{- include "init" $root }}
+
+{{- if .Values.autoscaling.enabled }}
+
+{{ if (or (has ($root.defaults.currentProvisioningMode) (list "distributed" "combined")) (eq (len $root.defaults.profilesVersions) 1)) }}
+{{- range $profilesVersion := $root.defaults.profilesVersions }}
+---
+{{- $distributedValues := set (deepCopy $root) "profileVersion" $profilesVersion }}
+{{- include "hpa" $distributedValues }}
+{{- end }}
+{{- end }}
+{{- if (and (has $root.defaults.currentProvisioningMode (list "dedicated" "combined")) (gt (len $root.defaults.profilesVersions) 1)) }}
+---
+{{- include "hpa" $root }}
+{{- end }}
+...
+
+{{- end }}
+{{- else }}
 {{- if .Values.autoscaling.enabled }}
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -17,12 +71,18 @@ spec:
     - type: Resource
       resource:
         name: cpu
-        targetAverageUtilization: {{ .Values.autoscaling.targetCPUUtilizationPercentage }}
+        target:
+          type: Utilization
+          averageUtilization: {{ .Values.autoscaling.targetCPUUtilizationPercentage }}
     {{- end }}
     {{- if .Values.autoscaling.targetMemoryUtilizationPercentage }}
     - type: Resource
       resource:
         name: memory
-        targetAverageUtilization: {{ .Values.autoscaling.targetMemoryUtilizationPercentage }}
+        target:
+          type: Utilization
+          averageUtilization: {{ .Values.autoscaling.targetMemoryUtilizationPercentage }}
     {{- end }}
 {{- end }}
+{{- end }}
+

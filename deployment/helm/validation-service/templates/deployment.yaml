@@ -1,3 +1,212 @@
+{{/*
+template for deployments
+*/}}
+{{- define "deployment" }}
+{{- $fullVersionName := include "validation-service.fullversionname" . }}
+{{- $profilesVersion := include "validation-service.profileVersionName" . }}
+{{- $profiles := .defaults.profilesVersions }}
+{{- if (hasKey . "profileVersion") }}
+{{- $profiles = list .profileVersion }}
+{{- end }}
+{{- $profilesVolumeName := printf "profiles-%s" $fullVersionName }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $fullVersionName }}
+  labels:
+    {{- include "validation-service.labels" . | nindent 4 }}
+  {{- with .Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "validation-service.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "validation-service.selectorLabels" . | nindent 8 }}
+        {{- include "validation-service.deploymentLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "validation-service.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      # Volume for Profiles
+      volumes:
+        - name: {{ $profilesVolumeName }}
+          emptyDir: { }
+        # Add writable volumes
+        - name: tmp-volume
+          emptyDir: { }
+        {{- if .Values.debug.enable }}
+        - name: jfr-volume
+          emptyDir: { }
+        {{- end }}
+      initContainers:
+        {{- range $index, $profilesVersion := $profiles }}
+        {{- $profilesFolder := regexFind "(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)" $profilesVersion }}
+        - name: {{ $.Chart.Name }}-init-profiles-{{ $index }}
+          securityContext:
+                    {{- toYaml $.Values.securityContext | nindent 12 }}
+          image: "{{ $.defaults.dockerProfilesRepository }}/{{ $.defaults.profilesName }}:{{ $profilesVersion }}"
+          imagePullPolicy: {{ $.Values.imagePullPolicy }}
+          command:
+            - /bin/sh
+            - -c
+            - "rm -rf /profiles/{{ $profilesFolder }} && mkdir -p /profiles/{{ $profilesFolder }} && cp -r /app/data/profiles/* /profiles/{{ $profilesFolder }}"
+          volumeMounts:
+            - name: {{ $profilesVolumeName }}
+              mountPath: "/profiles"
+        {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .defaults.dockerRepository }}/{{ .defaults.dockerImage }}:{{ .defaults.dockerTag }}"
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          {{- /* If entrypoint and parameters are both defined, configure them */ -}}
+          {{- if .Values.application.entrypoint }}
+          {{- if .Values.application.parameters }}
+          {{- with .Values.application.entrypoint }}
+          command:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.application.parameters }}
+          args:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- end }}
+          {{- end }}
+          # Mount Volumes in container
+          volumeMounts:
+            - name: {{ $profilesVolumeName }}
+              mountPath: /profiles
+              readOnly: true
+            - name: tmp-volume
+              mountPath: /tmp
+          {{- if .Values.debug.enable }}
+            - name: jfr-volume
+              mountPath: /jfrdump
+          {{- end }}
+          # Set the Environment Variables for the container
+          env:
+            - name: "SERVER_PORT"
+              value: "8080"
+            - name: "TZ"
+              value: "Europe/Berlin"
+            - name: "FHIR_PROFILES_BASEPATH"
+              value: "/profiles"
+            - name: "FHIR_PROFILES_VERSIONS"
+              value: "{{ range $index, $profilesVersion := $profiles }}{{ if $index }},{{ end }}{{ regexFind "(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)" $profilesVersion }}{{ end }}"
+            {{- if .Values.debug.enable }}
+            - name: "JAVA_TOOL_OPTIONS"
+              value: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9000"
+            {{- end }}
+            {{- if .defaults.customEnvVars }}
+            # Custom Environment Variables
+            {{- range $_, $key := keys .defaults.customEnvVars | sortAlpha }}
+            - name: {{ $key | quote }}
+              value: {{ get $.defaults.customEnvVars $key | quote }}
+            {{- end }}
+            {{- end }}
+          # Ports to be exposed from the container
+          ports:
+            - name: val-port
+              containerPort: 8080
+              protocol: TCP
+            {{- if .Values.debug.enable }}
+            - name: val-debug
+              containerPort: 9000
+              protocol: TCP
+            {{- end }}
+          # Performs checks to verify that the application is successfully started
+          # The Application is marked as failed after periodSeconds*failureThreshold seconds
+          startupProbe:
+            httpGet:
+              path: /actuator/health
+              port: val-port
+            failureThreshold: 10
+            periodSeconds: 30
+          # Use SpringBoot Actuator Liveness Chech
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: val-port
+            failureThreshold: 3
+            periodSeconds: 30
+          # Use SpringBoot Actuator Readiness Chech
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: val-port
+            failureThreshold: 5
+            periodSeconds: 10
+          # Define Limits and Requested Resources (CPU/RAM)
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - {{ include "validation-service.name" . }}
+                  - key: version
+                    operator: In
+                    values:
+                      - {{ .Chart.AppVersion | quote }}
+                  - key: fhirProfile
+                    operator: In
+                    values:
+                      - {{ .defaults.profilesName | quote }}
+                  - key: fhirProfileVersion
+                    operator: In
+                    values:
+                      - {{ $profilesVersion }}
+              topologyKey: "kubernetes.io/hostname"
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+{{- end }}
+
+{{- if .Values.provisioningMode }}
+
+{{ $root := $ }}
+{{- include "init" $root }}
+
+
+{{ if (or (has ($root.defaults.currentProvisioningMode) (list "distributed" "combined")) (eq (len $root.defaults.profilesVersions) 1)) }}
+{{- range $profilesVersion := $root.defaults.profilesVersions }}
+---
+{{- $distributedValues := set (deepCopy $root) "profileVersion" $profilesVersion }}
+{{- include "deployment" $distributedValues }}
+{{- end }}
+{{- end }}
+{{- if (and (has $root.defaults.currentProvisioningMode (list "dedicated" "combined")) (gt (len $root.defaults.profilesVersions) 1)) }}
+---
+{{- include "deployment" $root }}
+{{- end }}
+...
+{{- else }}
 {{/* Check required values and define variables */}}
 {{- $dockerRepository := .Values.required.image.repository | required ".Values.required.image.repository is required." -}}
 {{- $dockerImage := .Values.required.image.name | required ".Values.required.image.name is required." -}}
@@ -163,26 +372,27 @@ spec:
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-              - key: app
-                operator: In
-                values:
-                - {{ include "validation-service.name" . }}
-              - key: version
-                operator: In
-                values:
-                - {{ .Chart.AppVersion | quote }}
-              - key: fhirProfile
-                operator: In
-                values:
-                  - {{ $profilesName | quote }}
-              - key: fhirProfileVersion
-                operator: In
-                values:
-                  - {{ $profilesVersionsLabel }}
-            topologyKey: "kubernetes.io/hostname"
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - {{ include "validation-service.name" . }}
+                  - key: version
+                    operator: In
+                    values:
+                      - {{ .Chart.AppVersion | quote }}
+                  - key: fhirProfile
+                    operator: In
+                    values:
+                      - {{ $profilesName | quote }}
+                  - key: fhirProfileVersion
+                    operator: In
+                    values:
+                      - {{ $profilesVersionsLabel }}
+              topologyKey: "kubernetes.io/hostname"
       {{- with .Values.tolerations }}
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+{{- end }}

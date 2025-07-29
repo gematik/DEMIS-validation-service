@@ -2,9 +2,16 @@
 
 # Release Validation-Service
 
+## Release 2.8.1
+### changed
+- add default feature flags FEATURE_FLAG_FILTERED_VALIDATION_ERRORS_DISABLED, FEATURE_FLAG_FILTERED_ERRORS_AS_WARNINGS_DISABLED to values.yaml
+- removed feature flag FEATURE_FLAG_RELAXED_VALIDATION from values.yaml
+- refactor helm chart for supporting provisioning of deployment in modes "dedicated", "distributed" and "combined"
+- use spring-parent version 2.12.7
+
 ## Release 2.8.0
 ### changed
-- optional support for remote terminology server 
+- optional support for remote terminology server
 - updated profiles
 - removed filter of validation errors in the notification
 - updated base image
@@ -49,14 +56,14 @@
 
 ### fixed
 - CVEs
-- Upgraded SpringBoot to 3.2.0 
+- Upgraded SpringBoot to 3.2.0
 
 
 ## Release 2.0.1
 
 ### fixed
 - add missing License-Header
-- add checks to CI-Pipeline 
+- add checks to CI-Pipeline
 
 
 ## Release 2.0.0

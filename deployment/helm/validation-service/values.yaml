@@ -1,11 +1,19 @@
 # Default values for validation-service.
 
 # Number of Pod Replicas desired
-replicaCount: 1
+replicaCount: 2
 
 # Enables debug mode
 debug:
   enable: false
+
+# mode for profile provisioning of snapshot profiles
+# default is dedicated
+# available modes:
+# - dedicated: all profiles are provisioned in a dedicated pod
+# - distributed: one profile provisioning for one pod
+# - combined: mix of dedicated and distributed
+provisioningMode: null
 
 # Required Values for the Chart
 required:
@@ -22,6 +30,7 @@ required:
   profiles:
     repository: europe-west3-docker.pkg.dev/gematik-all-infra-prod/demis-dev
     name: fhir-profile-snapshots
+    imageName: null
     # For backward compatibility reasons, this version is used if the version list is not set
     version: "TagOfProfileSnapshotsImage"
     # list of versions (Image Tags).
@@ -39,7 +48,8 @@ customEnvVars:
   FEATURE_FLAG_FORMAT_VALIDATION_ENABLED: "true"
   FEATURE_FLAG_COMMON_CODE_SYSTEM_TERMINOLOGY_ENABLED: "false"
   FEATURE_FLAG_TERMINOLOGY_SERVER: "false"
-  FEATURE_FLAG_RELAXED_VALIDATION: "false"
+  FEATURE_FLAG_FILTERED_VALIDATION_ERRORS_DISABLED: "false"
+  FEATURE_FLAG_FILTERED_ERRORS_AS_WARNINGS_DISABLED: "false"
   CONFIG_OPTION_TERMINOLOGY_SERVER_URL: "http://terminology-server.demis.svc.cluster.local/fhir"
 
 # Extra labels for deployments
@@ -137,5 +147,4 @@ nodeSelector: {}
 tolerations: []
 
 istio:
-  enable: false
   validateJwt: false

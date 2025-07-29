@@ -24,12 +24,19 @@ If release name contains chart name it will be used as a full name.
 {{- end }}
 
 {{- define "validation-service.fullversionname" -}}
-{{- if .Values.istio.enable }}
+{{- if .Values.provisioningMode }}
+{{- $name := include "validation-service.fullname" . }}
+{{- $version := regexReplaceAll "(\\.|_)+" .Chart.Version "-" }}
+{{- $profile := ""}}
+{{- $versionSpecifier := "-v2" }}
+{{- if ( hasKey . "profileVersion" ) }}
+{{- $profile = printf "-p-%s" (regexReplaceAll "(\\.|_)+" .profileVersion "-") }}
+{{- end }}
+{{- printf "%s-%s%s%s" $name $version $profile $versionSpecifier | trunc 63 | trimSuffix "-" }}
+{{- else }}
 {{- $name := include "validation-service.fullname" . }}
 {{- $version := regexReplaceAll "\\.+" .Chart.Version "-" }}
 {{- printf "%s-%s" $name $version | trunc 63 }}
-{{- else }}
-{{- include "validation-service.fullname" . }}
 {{- end }}
 {{- end }}
 
@@ -59,11 +66,27 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 Selector labels
 */}}
 {{- define "validation-service.selectorLabels" -}}
+{{- if .Values.provisioningMode }}
+{{- $labels := dict }}
+{{- $_ := set $labels "app" (include "validation-service.name" .) }}
+{{- $_ = set $labels "version" ( .Chart.AppVersion ) }}
+{{- $_ = set $labels "app.kubernetes.io/name" (include "validation-service.name" .) }}
+{{- $_ = set $labels "app.kubernetes.io/instance" .Release.Name }}
+{{- $_ = set $labels "fhirProfileVersion" (include "validation-service.profileVersionName" . ) }}
+{{- $_ = set $labels "fhirProfile" .Values.required.profiles.name }}
+{{- if and .Values.required.profiles.versions (not (hasKey . "profileVersion")) }}
+{{- range $idx, $version := .Values.required.profiles.versions }}
+{{- $_ := set $labels (printf "fhirProfileVersions_%d" $idx) $version }}
+{{- end }}
+{{- end }}
+{{- toYaml $labels }}
+{{- else }}
 app: {{ include "validation-service.name" . }}
 version: {{ .Chart.AppVersion | quote }}
 fhirProfile: {{ .Values.required.profiles.name | quote }}
 app.kubernetes.io/name: {{ include "validation-service.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
 {{- end }}
 
 {{/*
@@ -81,8 +104,34 @@ Create the name of the service account to use
 */}}
 {{- define "validation-service.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
+{{- if .Values.provisioningMode }}
+{{- $accountData := . }}
+{{- if hasKey $accountData "profileVersion" }}
+{{- $_ := unset $accountData "profileVersion" }}
+{{- end }}
+{{- default (include "validation-service.fullversionname" $accountData) .Values.serviceAccount.name }}
+{{- else }}
 {{- default (include "validation-service.fullversionname" .) .Values.serviceAccount.name }}
+{{- end }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+
+{{/*
+generate profile version name
+*/}}
+{{- define "validation-service.profileVersionName" -}}
+{{- if and .Values.required.profiles.versions (not (hasKey . "profileVersion")) }}
+{{- $profileVersionSuffix := "" }}
+{{- if ( gt (len .Values.required.profiles.versions) 0 ) }}
+{{- $profileVersionSuffix = join "" .Values.required.profiles.versions | sha256sum | trunc 10 }}
+{{- end }}
+{{- printf "%s-%s-%s" (regexReplaceAll "(\\.|_)+" .Chart.Version "-") (regexReplaceAll "(\\.|_)+" .Values.required.profiles.name "-") $profileVersionSuffix | trunc 63 | trimSuffix "-" }}
+{{- else if (hasKey . "profileVersion") }}
+{{- .profileVersion | trunc 63 | trimSuffix "-" }}
+{{- else }}
+{{- .Values.required.profiles.version | trunc 63 | trimSuffix "-" }}
+{{- end}}
+{{- end -}}

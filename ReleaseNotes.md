@@ -2,6 +2,11 @@
 
 # Release Validation-Service
 
+## Release 2.8.2
+### changed
+- collect metrics on validation errors
+- add quantity and regex checks to validation behind FEATURE_FLAG_CUSTOM_QUANTITY_VALIDATOR_ENABLED and FEATURE_FLAG_CUSTOM_REGEX_VALIDATOR_ENABLED 
+
 ## Release 2.8.1
 ### changed
 - add default feature flags FEATURE_FLAG_FILTERED_VALIDATION_ERRORS_DISABLED, FEATURE_FLAG_FILTERED_ERRORS_AS_WARNINGS_DISABLED to values.yaml

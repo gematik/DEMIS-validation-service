@@ -112,7 +112,8 @@ class ValidationServiceIntegrationProfileFilteringResultsRegressionTest {
 
     @Test
     void expectNoValidFamilyNameErrorFoundInInvalidNotificationDV2() throws IOException {
-      // GIVEN an invalid file with different invalid values
+      // GIVEN an QuestionnaireStringResponseInvalid.json file with different
+      // QuestionnaireStringResponseInvalid.json values
       final String invalidFileContent = readFileIntoString(INVALID_TEST_NOTIFICATION_DV_2);
 
       // WHEN it's validated

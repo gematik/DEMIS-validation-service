@@ -1,0 +1,19 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "questionnaire": "http://example.org/fhir/Questionnaire/Q1",
+  "item": [
+    {
+      "linkId": "newbornWeight",
+      "answer": [
+        {
+          "valueQuantity": {
+            "value": 999,
+            "unit": "g",
+            "system": "http://unitsofmeasure.org",
+            "code": "g"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -31,9 +31,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.ERROR;
 import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.FATAL;
 import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.INFORMATION;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verifyNoInteractions;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.validation.FhirValidator;
@@ -54,6 +52,8 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import javax.annotation.CheckForNull;
+import javax.annotation.Nonnull;
 import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity;
 import org.junit.jupiter.api.BeforeEach;
@@ -72,12 +72,23 @@ class ValidationServiceRegressionTest {
   private FhirValidatorManager fhirValidatorManagerMock;
 
   private ValidationService underTest;
+  private ValidationMetrics validationMetrics;
 
   private static SingleValidationMessage createValidationMessage(
       final ResultSeverityEnum severity, final String message) {
+    return createValidationMessage(null, severity, message);
+  }
+
+  private static SingleValidationMessage createValidationMessage(
+      @CheckForNull final String id,
+      @Nonnull final ResultSeverityEnum severity,
+      @Nonnull final String message) {
     final SingleValidationMessage validationMessage = new SingleValidationMessage();
     validationMessage.setSeverity(severity);
     validationMessage.setMessage(message);
+    if (id != null) {
+      validationMessage.setMessageId(id);
+    }
     return validationMessage;
   }
 
@@ -90,7 +101,7 @@ class ValidationServiceRegressionTest {
     fhirValidatorManagerMock = mock(FhirValidatorManager.class);
 
     meterRegistry.clear();
-    final var validationMetrics = new ValidationMetrics(meterRegistry);
+    validationMetrics = spy(new ValidationMetrics(meterRegistry));
 
     final ValidationConfigProperties props =
         new ValidationConfigProperties(null, Locale.getDefault(), ResultSeverityEnum.WARNING, 1);
@@ -199,6 +210,60 @@ class ValidationServiceRegressionTest {
 
       assertOperationOutcome(result, FATAL, EXCEPTION_MESSAGE);
       assertMetrics();
+    }
+  }
+
+  @Nested
+  class IssuesPendingEscalation {
+    private static final String PROFILES_VERSION = "1.0.0";
+
+    private FhirValidator fhirValidatorMock;
+
+    @BeforeEach
+    void setUp() {
+      when(fhirValidatorManagerMock.getVersions()).thenReturn(List.of(PROFILES_VERSION));
+
+      fhirValidatorMock = mock(FhirValidator.class);
+      when(fhirValidatorManagerMock.getFhirValidator(PROFILES_VERSION))
+          .thenReturn(Optional.of(fhirValidatorMock));
+    }
+
+    @Test
+    void thatIssuesPendingEscalationAreLogged() {
+      // We don't guarantee that the issues were downgraded from error severity. If they match the
+      // predicate they are logged.
+      final SingleValidationMessage error =
+          createValidationMessage("IdError", ResultSeverityEnum.ERROR, IGNORED_VALIDATION_ERROR);
+      final SingleValidationMessage warning =
+          createValidationMessage(
+              "IdWarning", ResultSeverityEnum.WARNING, IGNORED_VALIDATION_ERROR);
+      final SingleValidationMessage info =
+          createValidationMessage(
+              "IdInfo", ResultSeverityEnum.INFORMATION, IGNORED_VALIDATION_ERROR);
+
+      when(fhirValidatorMock.validateWithResult(CONTENT))
+          .thenReturn(new ValidationResult(fhirContext, List.of(error, warning, info)));
+
+      underTest.validate(CONTENT);
+
+      verify(validationMetrics)
+          .saveValidationFindings(
+              any(), anyString(), eq(List.of("IdError", "IdWarning", "IdInfo")));
+    }
+
+    @Test
+    void thatOnlyIssuesWithIdAreLogged() {
+      final SingleValidationMessage withId =
+          createValidationMessage("WithId", ResultSeverityEnum.ERROR, IGNORED_VALIDATION_ERROR);
+      final SingleValidationMessage withoutId =
+          createValidationMessage(ResultSeverityEnum.ERROR, IGNORED_VALIDATION_ERROR);
+
+      when(fhirValidatorMock.validateWithResult(CONTENT))
+          .thenReturn(new ValidationResult(fhirContext, List.of(withId, withoutId)));
+
+      underTest.validate(CONTENT);
+
+      verify(validationMetrics).saveValidationFindings(any(), anyString(), eq(List.of("WithId")));
     }
   }
 

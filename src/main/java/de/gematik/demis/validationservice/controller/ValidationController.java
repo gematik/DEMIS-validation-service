@@ -36,6 +36,7 @@ import static org.springframework.http.MediaType.APPLICATION_XML_VALUE;
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.parser.IParser;
 import de.gematik.demis.validationservice.services.validation.ValidationService;
+import javax.annotation.CheckForNull;
 import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity;
@@ -53,6 +54,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(path = "/")
 public class ValidationController {
+  public static final String HEADER_SENDER = "x-sender";
   private final FhirContext fhirContext;
   private final ValidationService validationService;
 
@@ -88,11 +90,13 @@ public class ValidationController {
   public ResponseEntity<String> processReport(
       @RequestBody final String content,
       @RequestHeader(CONTENT_TYPE) MediaType mediaType,
-      @RequestHeader(name = ACCEPT, required = false) MediaType accept) {
+      @RequestHeader(name = ACCEPT, required = false) MediaType accept,
+      @RequestHeader(name = HEADER_SENDER, required = false) @CheckForNull
+          final String principalId) {
     if (isFormatValidationActive && !isFormatValid(content, mediaType)) {
       return operationOutcomeErrorWithNoValidJson(mediaType, accept);
     }
-    final OperationOutcome operationOutcome = validationService.validate(content);
+    final OperationOutcome operationOutcome = validationService.validate(content, principalId);
     return toResponseEntity(operationOutcome, mediaType, accept);
   }
 

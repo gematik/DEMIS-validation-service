@@ -32,7 +32,10 @@ import ca.uhn.fhir.context.support.IValidationSupport;
 import ca.uhn.fhir.validation.FhirValidator;
 import de.gematik.demis.validationservice.config.ValidationConfigProperties;
 import de.gematik.demis.validationservice.services.ProfileParserService;
+import de.gematik.demis.validationservice.services.ProfileSnapshot;
 import de.gematik.demis.validationservice.services.terminology.TerminologyValidationProvider;
+import de.gematik.demis.validationservice.services.validation.custom.CustomQuantityComparatorValidator;
+import de.gematik.demis.validationservice.services.validation.custom.CustomRegexValidator;
 import java.nio.file.Path;
 import java.util.concurrent.TimeUnit;
 import lombok.RequiredArgsConstructor;
@@ -57,9 +60,16 @@ public final class FhirValidatorFactory {
   private final FhirContext fhirContext;
   private final ValidationConfigProperties configProperties;
   private final TerminologyValidationProvider terminologyValidationProvider;
+  private ProfileSnapshot profileSnapshot;
 
   @Value("${feature.flag.common.code.system.terminology.enabled}")
   private boolean featureFlagCommonCodeSystemsTerminologyEnabled;
+
+  @Value("${feature.flag.custom.quantity.validator.enabled}")
+  private boolean featureFlagCustomQuantityValidatorEnabled;
+
+  @Value("${feature.flag.custom.regex.validator.enabled}")
+  private boolean featureFlagCustomRegexValidatorEnabled;
 
   public FhirValidator createFhirValidator(final Path profilesPath) {
     log.info("Start creating and initializing fhir validator for profiles path {}", profilesPath);
@@ -75,6 +85,13 @@ public final class FhirValidatorFactory {
     fhirModule.setErrorForUnknownProfiles(true);
     final var validator = fhirContext.newValidator();
     validator.registerValidatorModule(fhirModule);
+    if (featureFlagCustomQuantityValidatorEnabled) {
+      validator.registerValidatorModule(
+          new CustomQuantityComparatorValidator(profileSnapshot.questionnaires()));
+    }
+    if (featureFlagCustomRegexValidatorEnabled) {
+      validator.registerValidatorModule(new CustomRegexValidator(profileSnapshot.questionnaires()));
+    }
     return validator;
   }
 
@@ -91,7 +108,7 @@ public final class FhirValidatorFactory {
 
   private void addDemisPrePopulatedValidation(
       final ValidationSupportChain chain, final Path profilesPath) {
-    final var profileSnapshot = profileParserService.parseProfile(profilesPath);
+    profileSnapshot = profileParserService.parseProfile(profilesPath);
     chain.addValidationSupport(
         new DemisPrePopulatedValidationSupportHapi4(fhirContext, profileSnapshot));
   }

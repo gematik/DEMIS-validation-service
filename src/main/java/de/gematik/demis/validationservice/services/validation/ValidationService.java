@@ -31,12 +31,17 @@ import ca.uhn.fhir.validation.FhirValidator;
 import ca.uhn.fhir.validation.ResultSeverityEnum;
 import ca.uhn.fhir.validation.SingleValidationMessage;
 import ca.uhn.fhir.validation.ValidationResult;
+import com.google.common.base.Strings;
 import de.gematik.demis.validationservice.config.ValidationConfigProperties;
 import de.gematik.demis.validationservice.services.ValidationMetrics;
 import io.micrometer.observation.annotation.Observed;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
+import java.util.function.Predicate;
+import javax.annotation.CheckForNull;
+import javax.annotation.Nonnull;
 import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.r4.model.OperationOutcome;
 import org.springframework.beans.factory.annotation.Value;
@@ -56,8 +61,8 @@ public class ValidationService {
   private final ValidationMetrics validationMetrics;
   private final ResultSeverityEnum minSeverityOutcome;
   private final Set<String> filteredMessagePrefixes;
-  private final boolean isFilteringOfErrorsDisabled;
-  private final boolean isFilteredErrorsAsWarningsDisabled;
+  private final boolean isErrorFilteringEnabled;
+  private final boolean isFilteredErrorsToWarningsEnabled;
 
   ValidationService(
       final FhirContext fhirContext,
@@ -74,8 +79,8 @@ public class ValidationService {
     this.validationMetrics = validationMetrics;
     this.minSeverityOutcome = configProperties.minSeverityOutcome();
     this.filteredMessagePrefixes = filteredMessagePrefixesFactory.get();
-    this.isFilteringOfErrorsDisabled = isFilteringOfErrorsDisabled;
-    this.isFilteredErrorsAsWarningsDisabled = isFilteredErrorsAsWarwningsDisabled;
+    this.isErrorFilteringEnabled = !isFilteringOfErrorsDisabled;
+    this.isFilteredErrorsToWarningsEnabled = !isFilteredErrorsAsWarwningsDisabled;
   }
 
   private static void reduceIssuesSeverityToWarn(final OperationOutcome operationOutcome) {
@@ -92,6 +97,14 @@ public class ValidationService {
       contextualName = "validate",
       lowCardinalityKeyValues = {"notification", "fhir"})
   public OperationOutcome validate(final String content) {
+    return this.validate(content, null);
+  }
+
+  @Observed(
+      name = "validate",
+      contextualName = "validate",
+      lowCardinalityKeyValues = {"notification", "fhir"})
+  public OperationOutcome validate(final String content, @CheckForNull final String principalId) {
     final var versions = validatorManager.getVersions().iterator();
 
     String version;
@@ -101,7 +114,7 @@ public class ValidationService {
     do {
       version = versions.next();
       try {
-        validationResult = validateContentWithProfileVersion(content, version);
+        validationResult = validateContentWithProfileVersion(content, version, principalId);
       } catch (final Exception e) {
         return handleException(e);
       }
@@ -121,11 +134,12 @@ public class ValidationService {
       reduceIssuesSeverityToWarn(operationOutcome);
     }
     // TODO wollen wir noch die Version zurückgeben oder ins OperationOutcome schreiben?
+
     return operationOutcome;
   }
 
   private ValidationResult validateContentWithProfileVersion(
-      final String content, final String version) {
+      final String content, final String version, @CheckForNull final String senderId) {
     final long startTime = System.currentTimeMillis();
 
     final FhirValidator validator =
@@ -134,7 +148,8 @@ public class ValidationService {
             .orElseThrow(
                 () -> new IllegalStateException("No validator found for version " + version));
 
-    final ValidationResult result = filterValidationResult(validator.validateWithResult(content));
+    final ValidationResult result =
+        filterValidationResult(validator.validateWithResult(content), version, senderId);
 
     log.info(
         "Validation with version {} successful: {} time: {}ms",
@@ -147,29 +162,39 @@ public class ValidationService {
     return result;
   }
 
-  private ValidationResult filterValidationResult(final ValidationResult validationResult) {
+  private ValidationResult filterValidationResult(
+      final ValidationResult validationResult,
+      @Nonnull final String profileVersion,
+      @CheckForNull final String principalId) {
     List<SingleValidationMessage> resultList = validationResult.getMessages();
-    if (!isFilteringOfErrorsDisabled) {
-      resultList = resultList.stream().filter(this::checkFilters).toList();
+    if (isErrorFilteringEnabled) {
+      // remove suppressed errors from the resultList
+      resultList = resultList.stream().filter(Predicate.not(this::isSuppressedMessage)).toList();
     }
-    if (!isFilteredErrorsAsWarningsDisabled) {
-      resultList.forEach(this::process);
+    if (isFilteredErrorsToWarningsEnabled) {
+      // Mutate resultList and keep the mutated errors around to log metrics
+      final List<SingleValidationMessage> ignoredErrors =
+          resultList.stream().filter(this::isSuppressedMessage).toList();
+      for (SingleValidationMessage error : ignoredErrors) {
+        error.setSeverity(ResultSeverityEnum.WARNING);
+        error.setMessage(
+            error.getMessage()
+                + " "
+                + THIS_WARNING_WILL_BE_TREATED_AS_ERROR_BY_08_31_2025_PLEASE_CHECK_YOUR_NOTIFICATION_COMPOSITION);
+      }
+
+      final List<String> actualLoggable =
+          ignoredErrors.stream()
+              .map(SingleValidationMessage::getMessageId)
+              .filter(messageId -> !Strings.isNullOrEmpty(messageId))
+              .toList();
+      final String finalPrincipalId = Objects.requireNonNullElse(principalId, "<unknown>");
+      validationMetrics.saveValidationFindings(finalPrincipalId, profileVersion, actualLoggable);
     }
 
     final List<SingleValidationMessage> result =
         resultList.stream().filter(this::checkSeverity).toList();
     return new ValidationResult(fhirContext, result);
-  }
-
-  private void process(SingleValidationMessage message) {
-    if (filteredMessagePrefixes.stream().anyMatch(message.getMessage()::startsWith)) {
-      message.setSeverity(ResultSeverityEnum.WARNING);
-      message.setMessage(
-          message.getMessage()
-              + " "
-              + THIS_WARNING_WILL_BE_TREATED_AS_ERROR_BY_08_31_2025_PLEASE_CHECK_YOUR_NOTIFICATION_COMPOSITION);
-      log.info("");
-    }
   }
 
   private OperationOutcome toOperationOutcome(final ValidationResult validationResult) {
@@ -178,8 +203,8 @@ public class ValidationService {
     return outcome;
   }
 
-  private boolean checkFilters(SingleValidationMessage message) {
-    return filteredMessagePrefixes.stream().noneMatch(message.getMessage()::startsWith);
+  private boolean isSuppressedMessage(SingleValidationMessage message) {
+    return filteredMessagePrefixes.stream().anyMatch(message.getMessage()::startsWith);
   }
 
   private boolean checkSeverity(SingleValidationMessage message) {

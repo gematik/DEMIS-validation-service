@@ -1,0 +1,71 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DiseaseQuestionsCHTD",
+  "url": "https://demis.rki.de/fhir/Questionnaire/DiseaseQuestionsCHTD",
+  "version": "1.0.0",
+  "name": "DiseaseQuestionsCHTD",
+  "title": "Chlamydia trachomatis, sofern es sich um einen der Serotypen L1 bis L3 handelt: spezifische klinische und epidemiologische Angaben",
+  "status": "draft",
+  "date": "2025-04-25",
+  "description": "Chlamydia trachomatis (L1 bis L3) spezifische Informationsbedarfe werden in diesem meldetatbestandsspezifischen Fragebogen zusammengestellt. Dieser manifestiert sich als entsprechende QuestionnaireResponse innerhalb der Meldung.",
+  "item": [
+    {
+      "linkId": "timeOfInfection",
+      "text": "Welcher ist der wahrscheinliche Infektionszeitpunkt?",
+      "type": "date",
+      "required": false,
+      "repeats": false,
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-regex",
+          "valueString": "^\\d{4}-\\d{2}$"
+        }
+      ]
+    },
+    {
+      "linkId": "newbornWeight",
+      "text": "Welches Gewicht hatte das Neugeborene bei der Geburt (Angabe in Gramm)?",
+      "type": "quantity",
+      "required": true,
+      "repeats": false,
+      "extension": [
+        {
+          "url": "http://example.org/fhir/StructureDefinition/questionnaire-minQuantity",
+          "extension": [
+            {
+              "url": "value",
+              "valueQuantity": {
+                "value": 1000,
+                "unit": "g",
+                "system": "http://unitsofmeasure.org",
+                "code": "g"
+              }
+            },
+            {
+              "url": "comparator",
+              "valueCode": ">="
+            }
+          ]
+        },
+        {
+          "url": "http://example.org/fhir/StructureDefinition/questionnaire-maxQuantity",
+          "extension": [
+            {
+              "url": "value",
+              "valueQuantity": {
+                "value": 6000,
+                "unit": "g",
+                "system": "http://unitsofmeasure.org",
+                "code": "g"
+              }
+            },
+            {
+              "url": "comparator",
+              "valueCode": "<"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

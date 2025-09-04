@@ -137,11 +137,9 @@ This project includes:
   Prometheus Metrics Config under The Apache Software License, Version 2.0
   Prometheus Metrics Core under The Apache Software License, Version 2.0
   Prometheus Metrics Exposition Formats under The Apache Software License, Version 2.0
-  Prometheus Metrics Exposition Formats no protobuf under The Apache Software License, Version 2.0
   Prometheus Metrics Exposition Text Formats under The Apache Software License, Version 2.0
   Prometheus Metrics Model under The Apache Software License, Version 2.0
   Prometheus Metrics Tracer Common under The Apache Software License, Version 2.0
-  Protocol Buffers [Core] under BSD-3-Clause
   Saxon-HE under Mozilla Public License Version 2.0
   service-base under Licensed under the EUPL 1.2
   SLF4J API Module under MIT

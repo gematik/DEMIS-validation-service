@@ -27,7 +27,9 @@ package de.gematik.demis.validationservice.services;
  */
 
 import io.micrometer.core.instrument.MeterRegistry;
+import jakarta.annotation.Nonnull;
 import jakarta.annotation.PostConstruct;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -41,6 +43,9 @@ public class ValidationMetrics {
 
   private static final String TAG_VERSION = "profiles_version";
   private static final String TAG_SUCCESS = "success";
+  private static final String TAG_PRINCIPAL = "principal_id";
+  private static final String TAG_ERROR_TYPE = "error_type";
+  private static final String VALIDATION_ERROR_TYPE_METRIC = "validation_error_type";
 
   private final MeterRegistry meterRegistry;
 
@@ -56,6 +61,25 @@ public class ValidationMetrics {
           .increment();
     } catch (final RuntimeException e) {
       log.error("error incrementing counter", e);
+    }
+  }
+
+  /** Store the list of findings for the given sender */
+  public void saveValidationFindings(
+      @Nonnull final String senderId,
+      @Nonnull final String profileVersion,
+      @Nonnull final List<String> findings) {
+    for (final String finding : findings) {
+      meterRegistry
+          .counter(
+              VALIDATION_ERROR_TYPE_METRIC,
+              TAG_PRINCIPAL,
+              senderId,
+              TAG_VERSION,
+              profileVersion,
+              TAG_ERROR_TYPE,
+              finding)
+          .increment();
     }
   }
 }

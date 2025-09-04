@@ -1,0 +1,18 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "Q3",
+  "url": "http://example.org/fhir/Questionnaire/Q3",
+  "item": [
+    {
+      "linkId": "birthMonth",
+      "type": "date",
+      "text": "Geburtsmonat",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-regex",
+          "valueString": "^\\d{4}-\\d{2}$"
+        }
+      ]
+    }
+  ]
+}

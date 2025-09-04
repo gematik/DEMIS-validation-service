@@ -1,0 +1,12 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "questionnaire": "http://example.org/fhir/Questionnaire/Q2",
+  "item": [
+    {
+      "linkId": "email",
+      "answer": [
+        { "valueString": "test.user@example.org" }
+      ]
+    }
+  ]
+}

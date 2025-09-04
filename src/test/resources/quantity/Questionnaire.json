@@ -1,0 +1,93 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "Q1",
+  "url": "http://example.org/fhir/Questionnaire/Q1",
+  "item": [
+    {
+      "linkId": "glucose",
+      "type": "quantity",
+      "text": "Blutzucker",
+      "extension": [
+        {
+          "url": "http://example.org/fhir/StructureDefinition/questionnaire-minQuantity",
+          "extension": [
+            {
+              "url": "value",
+              "valueQuantity": {
+                "value": 70,
+                "unit": "mg/dL",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg/dL"
+              }
+            },
+            {
+              "url": "comparator",
+              "valueCode": ">="
+            }
+          ]
+        },
+        {
+          "url": "http://example.org/fhir/StructureDefinition/questionnaire-maxQuantity",
+          "extension": [
+            {
+              "url": "value",
+              "valueQuantity": {
+                "value": 110,
+                "unit": "mg/dL",
+                "system": "http://unitsofmeasure.org",
+                "code": "mg/dL"
+              }
+            },
+            {
+              "url": "comparator",
+              "valueCode": "<"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "newbornWeight",
+      "type": "quantity",
+      "text": "Welches Gewicht hatte das Neugeborene bei der Geburt (Angabe in Gramm)",
+      "extension": [
+        {
+          "url": "http://example.org/fhir/StructureDefinition/questionnaire-minQuantity",
+          "extension": [
+            {
+              "url": "value",
+              "valueQuantity": {
+                "value": 1000,
+                "unit": "g",
+                "system": "http://unitsofmeasure.org",
+                "code": "g"
+              }
+            },
+            {
+              "url": "comparator",
+              "valueCode": ">="
+            }
+          ]
+        },
+        {
+          "url": "http://example.org/fhir/StructureDefinition/questionnaire-maxQuantity",
+          "extension": [
+            {
+              "url": "value",
+              "valueQuantity": {
+                "value": 6000,
+                "unit": "g",
+                "system": "http://unitsofmeasure.org",
+                "code": "g"
+              }
+            },
+            {
+              "url": "comparator",
+              "valueCode": "<"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

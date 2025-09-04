@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 <a name="processReport"></a>
 # **processReport**
-> String processReport(Content-Type, body, Accept)
+> String processReport(Content-Type, body, Accept, x-sender)
 
 
 
@@ -20,6 +20,7 @@ All URIs are relative to *http://localhost*
 | **Content-Type** | [**MediaType**](../Models/.md)|  | [default to null] |
 | **body** | **String**|  | |
 | **Accept** | [**MediaType**](../Models/.md)|  | [optional] [default to null] |
+| **x-sender** | **String**|  | [optional] [default to null] |
 
 ### Return type
 

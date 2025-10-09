@@ -1,0 +1,60 @@
+# Common settings that generally should always be used with your language specific settings
+# Auto detect text files and perform LF normalization
+*          text=auto
+
+#
+# The above will handle all files NOT found below
+#
+# Helm/Kubernetes 
+#
+*.template      text
+*.tpl           text
+# Documents
+*.md            text
+*.html          text
+*.txt           text
+
+# Scripts
+*.bash          text eol=lf
+*.sh            text eol=lf
+# These are explicitly windows files and should use crlf
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
+
+# Serialisation
+*.csv           text
+*.json          text
+*.xml           text
+*.yaml          text
+*.yml           text
+
+# Java sources
+*.java          text diff=java
+
+# These files are text and should be normalized (Convert crlf => lf)
+*.properties    text
+
+# Keys and Archives
+*.der           binary
+*.p12           binary
+
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+*.class         binary
+*.dll           binary
+*.ear           binary
+*.jar           binary
+*.so            binary
+*.war           binary
+*.jks           binary
+
+# These are explicitly windows files and should use crlf
+*.bat           text eol=crlf
+
+# Other
+Dockerfile      text
+.owaspignore    text
+Jenkinsfile     text
+*.jenkinsfile   text
+NOTICE          text

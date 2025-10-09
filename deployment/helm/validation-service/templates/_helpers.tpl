@@ -30,7 +30,7 @@ If release name contains chart name it will be used as a full name.
 {{- $profile := ""}}
 {{- $versionSpecifier := "-v2" }}
 {{- if ( hasKey . "profileVersion" ) }}
-{{- $profile = printf "-p-%s" (regexReplaceAll "(\\.|_)+" .profileVersion "-") }}
+{{- $profile = printf "-p-%s" (regexReplaceAll "(\\.|_)+" ( regexSplit "-" .profileVersion -1 | first ) "-") }}
 {{- end }}
 {{- printf "%s-%s%s%s" $name $version $profile $versionSpecifier | trunc 63 | trimSuffix "-" }}
 {{- else }}

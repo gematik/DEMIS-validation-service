@@ -2,6 +2,10 @@
 
 # Release Validation-Service
 
+## Release 2.9.0
+- update spring-parent version to 2.13.4
+- add .gitattributes
+
 ## Release 2.8.2
 ### changed
 - collect metrics on validation errors

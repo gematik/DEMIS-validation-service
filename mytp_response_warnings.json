@@ -1,0 +1,422 @@
+{
+  "resourceType": "Parameters",
+  "meta": {
+    "profile": [
+      "https://demis.rki.de/fhir/StructureDefinition/ProcessNotificationResponseParameters"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "bundle",
+      "resource": {
+        "resourceType": "Bundle",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/ReceiptBundle"
+          ]
+        },
+        "type": "collection",
+        "entry": [
+          {
+            "fullUrl": "https://demis.rki.de/fhir/Composition/1c115827-a06c-47bb-9ff5-aff61dc8e030",
+            "resource": {
+              "resourceType": "Composition",
+              "id": "1c115827-a06c-47bb-9ff5-aff61dc8e030",
+              "meta": {
+                "profile": [
+                  "https://demis.rki.de/fhir/StructureDefinition/NotificationReceipt"
+                ]
+              },
+              "extension": [
+                {
+                  "url": "https://demis.rki.de/fhir/StructureDefinition/ReceivedNotification",
+                  "valueIdentifier": {
+                    "system": "https://demis.rki.de/fhir/NamingSystem/NotificationBundleId",
+                    "value": "50382965-59fc-5220-bba6-1e0d2fd26c70"
+                  }
+                }
+              ],
+              "status": "final",
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "77999-1",
+                    "display": "Case notification comment"
+                  }
+                ]
+              },
+              "date": "2025-09-16T10:30:33+02:00",
+              "author": [
+                {
+                  "reference": "Organization/DEMIS"
+                }
+              ],
+              "title": "Meldevorgangsquittung",
+              "relatesTo": [
+                {
+                  "code": "appends",
+                  "targetReference": {
+                    "type": "Composition",
+                    "identifier": {
+                      "system": "https://demis.rki.de/fhir/NamingSystem/NotificationId",
+                      "value": "f6628903-73f6-4edb-a008-62b363739769"
+                    }
+                  }
+                }
+              ],
+              "section": [
+                {
+                  "title": "Zuständiges Gesundheitsamt",
+                  "code": {
+                    "text": "Zuständiges Gesundheitsamt"
+                  },
+                  "entry": [
+                    {
+                      "reference": "Organization/1.01.0.53."
+                    }
+                  ]
+                },
+                {
+                  "title": "PDF Quittung",
+                  "code": {
+                    "text": "PDF Quittung"
+                  },
+                  "entry": [
+                    {
+                      "reference": "Binary/b12ef6b7-e9d3-4bc3-ac7f-cc3d07b1dce3"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "https://demis.rki.de/fhir/Organization/DEMIS",
+            "resource": {
+              "resourceType": "Organization",
+              "id": "DEMIS",
+              "name": "DEMIS",
+              "contact": [
+                {
+                  "telecom": [
+                    {
+                      "system": "email",
+                      "value": "demis-support@rki.de"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "https://demis.rki.de/fhir/Organization/1.01.0.53.",
+            "resource": {
+              "resourceType": "Organization",
+              "id": "1.01.0.53.",
+              "identifier": [
+                {
+                  "system": "https://demis.rki.de/fhir/CodeSystem/reportingSite",
+                  "value": "1.01.0.53."
+                }
+              ],
+              "name": "Kreis Herzogtum Lauenburg | Gesundheitsamt",
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "+49 4541 888-380"
+                },
+                {
+                  "system": "email",
+                  "value": "gesundheitsdienste@kreis-rz.de"
+                }
+              ],
+              "address": [
+                {
+                  "line": [
+                    "Barlachstr. 4"
+                  ],
+                  "city": "Ratzeburg",
+                  "postalCode": "23909"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "https://demis.rki.de/fhir/Binary/b12ef6b7-e9d3-4bc3-ac7f-cc3d07b1dce3",
+            "resource": {
+              "resourceType": "Binary",
+              "id": "b12ef6b7-e9d3-4bc3-ac7f-cc3d07b1dce3",
+              "contentType": "application/pdf",
+              "data": "JVBERi0xLjUKJeLjz9M.......xNgolJUVPRgo="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "operationOutcome",
+      "resource": {
+        "resourceType": "OperationOutcome",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/ProcessNotificationResponse"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"></div>"
+        },
+        "issue": [
+          {
+            "severity": "information",
+            "code": "informational",
+            "details": {
+              "text": "All OK"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 99
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 22
+              }
+            ],
+            "severity": "warning",
+            "code": "processing",
+            "diagnostics": "This element does not match any known slice defined in the profile http://fhir.de/StructureDefinition/address-de-basis|1.5.3 This warning will be treated as error by 01/01/2026. Please check your notification composition - Parameters.parameter[0].resource/*Bundle/null*/.entry[1].resource/*Patient/1993e4b9-a985-37fa-bdd9-1a198f4f740c*/.address[0].extension[0]: Does not match slice 'Stadtteil' (discriminator: ('http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct' in url))",
+            "location": [
+              "Parameters.parameter[0].resource/*Bundle/null*/.entry[1].resource/*Patient/1993e4b9-a985-37fa-bdd9-1a198f4f740c*/.address[0].extension[0]",
+              "Line[99] Col[22]"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 149
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 38
+              }
+            ],
+            "severity": "warning",
+            "code": "processing",
+            "diagnostics": "Rule bsnr-1: 'Eine BSNR muss 9-stellig numerisch sein' Failed",
+            "location": [
+              "Parameters.parameter[0].resource/*Bundle/null*/.entry[3].resource/*Organization/7e88b9a1-9dcd-3a8c-b8ac-635b40c58d3a*/.identifier[1].value",
+              "Line[149] Col[38]"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 349
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 20
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueString": "Terminology_PassThrough_TX_Message"
+              }
+            ],
+            "severity": "warning",
+            "code": "processing",
+            "details": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/java-core-messageId",
+                  "code": "Terminology_PassThrough_TX_Message"
+                }
+              ]
+            },
+            "diagnostics": "Unknown code in fragment CodeSystem 'http://snomed.info/sct#61594008' for 'http://snomed.info/sct#61594008'",
+            "location": [
+              "Parameters.parameter[0].resource/*Bundle/null*/.entry[7].resource/*Observation/cd4c07cf-dbd7-3178-b3b1-8f431f792fa5*/.method.coding[0]",
+              "Line[349] Col[20]"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 349
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 20
+              }
+            ],
+            "severity": "warning",
+            "code": "processing",
+            "diagnostics": "Unknown code in fragment CodeSystem 'http://snomed.info/sct#61594008'",
+            "location": [
+              "Parameters.parameter[0].resource/*Bundle/null*/.entry[7].resource/*Observation/cd4c07cf-dbd7-3178-b3b1-8f431f792fa5*/.method.coding[0]",
+              "Line[349] Col[20]"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 75
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 12
+              }
+            ],
+            "severity": "warning",
+            "code": "processing",
+            "diagnostics": "This element does not match any known slice defined in the profile https://demis.rki.de/fhir/StructureDefinition/NotificationBundleLaboratory|1.3.0 This warning will be treated as error by 01/01/2026. Please check your notification composition - Parameters.parameter[0].resource/*Bundle/null*/.entry[1]: Does not match slice 'notification' (discriminator: (resource is Composition))",
+            "location": [
+              "Parameters.parameter[0].resource/*Bundle/null*/.entry[1]",
+              "Line[75] Col[12]"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 117
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 12
+              }
+            ],
+            "severity": "warning",
+            "code": "processing",
+            "diagnostics": "This element does not match any known slice defined in the profile https://demis.rki.de/fhir/StructureDefinition/NotificationBundleLaboratory|1.3.0 This warning will be treated as error by 01/01/2026. Please check your notification composition - Parameters.parameter[0].resource/*Bundle/null*/.entry[2]: Does not match slice 'notification' (discriminator: (resource is Composition))",
+            "location": [
+              "Parameters.parameter[0].resource/*Bundle/null*/.entry[2]",
+              "Line[117] Col[12]"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 132
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 12
+              }
+            ],
+            "severity": "warning",
+            "code": "processing",
+            "diagnostics": "This element does not match any known slice defined in the profile https://demis.rki.de/fhir/StructureDefinition/NotificationBundleLaboratory|1.3.0 This warning will be treated as error by 01/01/2026. Please check your notification composition - Parameters.parameter[0].resource/*Bundle/null*/.entry[3]: Does not match slice 'notification' (discriminator: (resource is Composition))",
+            "location": [
+              "Parameters.parameter[0].resource/*Bundle/null*/.entry[3]",
+              "Line[132] Col[12]"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 183
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 12
+              }
+            ],
+            "severity": "warning",
+            "code": "processing",
+            "diagnostics": "This element does not match any known slice defined in the profile https://demis.rki.de/fhir/StructureDefinition/NotificationBundleLaboratory|1.3.0 This warning will be treated as error by 01/01/2026. Please check your notification composition - Parameters.parameter[0].resource/*Bundle/null*/.entry[4]: Does not match slice 'notification' (discriminator: (resource is Composition))",
+            "location": [
+              "Parameters.parameter[0].resource/*Bundle/null*/.entry[4]",
+              "Line[183] Col[12]"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 198
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 12
+              }
+            ],
+            "severity": "warning",
+            "code": "processing",
+            "diagnostics": "This element does not match any known slice defined in the profile https://demis.rki.de/fhir/StructureDefinition/NotificationBundleLaboratory|1.3.0 This warning will be treated as error by 01/01/2026. Please check your notification composition - Parameters.parameter[0].resource/*Bundle/null*/.entry[5]: Does not match slice 'notification' (discriminator: (resource is Composition))",
+            "location": [
+              "Parameters.parameter[0].resource/*Bundle/null*/.entry[5]",
+              "Line[198] Col[12]"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 234
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 12
+              }
+            ],
+            "severity": "warning",
+            "code": "processing",
+            "diagnostics": "This element does not match any known slice defined in the profile https://demis.rki.de/fhir/StructureDefinition/NotificationBundleLaboratory|1.3.0 This warning will be treated as error by 01/01/2026. Please check your notification composition - Parameters.parameter[0].resource/*Bundle/null*/.entry[6]: Does not match slice 'notification' (discriminator: (resource is Composition))",
+            "location": [
+              "Parameters.parameter[0].resource/*Bundle/null*/.entry[6]",
+              "Line[234] Col[12]"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 287
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 12
+              }
+            ],
+            "severity": "warning",
+            "code": "processing",
+            "diagnostics": "This element does not match any known slice defined in the profile https://demis.rki.de/fhir/StructureDefinition/NotificationBundleLaboratory|1.3.0 This warning will be treated as error by 01/01/2026. Please check your notification composition - Parameters.parameter[0].resource/*Bundle/null*/.entry[7]: Does not match slice 'notification' (discriminator: (resource is Composition))",
+            "location": [
+              "Parameters.parameter[0].resource/*Bundle/null*/.entry[7]",
+              "Line[287] Col[12]"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 362
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 12
+              }
+            ],
+            "severity": "warning",
+            "code": "processing",
+            "diagnostics": "This element does not match any known slice defined in the profile https://demis.rki.de/fhir/StructureDefinition/NotificationBundleLaboratory|1.3.0 This warning will be treated as error by 01/01/2026. Please check your notification composition - Parameters.parameter[0].resource/*Bundle/null*/.entry[8]: Does not match slice 'notification' (discriminator: (resource is Composition))",
+            "location": [
+              "Parameters.parameter[0].resource/*Bundle/null*/.entry[8]",
+              "Line[362] Col[12]"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

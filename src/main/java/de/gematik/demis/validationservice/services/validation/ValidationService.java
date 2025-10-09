@@ -174,7 +174,10 @@ public class ValidationService {
     if (isFilteredErrorsToWarningsEnabled) {
       // Mutate resultList and keep the mutated errors around to log metrics
       final List<SingleValidationMessage> ignoredErrors =
-          resultList.stream().filter(this::isSuppressedMessage).toList();
+          resultList.stream()
+              .filter(this::isSuppressedMessage)
+              .filter(m -> m.getSeverity().equals(ResultSeverityEnum.ERROR))
+              .toList();
       for (SingleValidationMessage error : ignoredErrors) {
         error.setSeverity(ResultSeverityEnum.WARNING);
         error.setMessage(

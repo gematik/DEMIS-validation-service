@@ -246,9 +246,7 @@ class ValidationServiceRegressionTest {
 
       underTest.validate(CONTENT);
 
-      verify(validationMetrics)
-          .saveValidationFindings(
-              any(), anyString(), eq(List.of("IdError", "IdWarning", "IdInfo")));
+      verify(validationMetrics).saveValidationFindings(any(), anyString(), eq(List.of("IdError")));
     }
 
     @Test

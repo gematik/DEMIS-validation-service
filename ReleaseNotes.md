@@ -2,6 +2,9 @@
 
 # Release Validation-Service
 
+#### Release 2.9.1
+- refactor deployment resource from helm chart for not using versions of profiles in selector
+
 ## Release 2.9.0
 - update spring-parent version to 2.13.4
 - add .gitattributes

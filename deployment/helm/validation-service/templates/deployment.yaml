@@ -33,7 +33,6 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "validation-service.selectorLabels" . | nindent 8 }}
         {{- include "validation-service.deploymentLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
@@ -242,9 +241,8 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "validation-service.selectorLabels" . | nindent 8 }}
-        fhirProfileVersion: {{ $profilesVersionsLabel }}
         {{- include "validation-service.deploymentLabels" . | nindent 8 }}
+        fhirProfileVersion: {{ $profilesVersionsLabel }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:

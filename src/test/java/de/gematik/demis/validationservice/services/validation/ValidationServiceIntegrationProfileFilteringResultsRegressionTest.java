@@ -235,7 +235,7 @@ class ValidationServiceIntegrationProfileFilteringResultsRegressionTest {
   @ActiveProfiles("test")
   @TestPropertySource(
       properties = {
-        "demis.validation-service.profiles.versions=6.0.6,5.3.1",
+        "demis.validation-service.profiles.versions=6.1.7,5.3.5",
         "feature.flag.filtered.validation.errors.disabled=false",
         "feature.flag.filtered.errors.as.warnings.disabled=true"
       })

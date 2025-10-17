@@ -52,7 +52,7 @@ Common labels
 */}}
 {{- define "validation-service.labels" -}}
 helm.sh/chart: {{ include "validation-service.chart" . }}
-{{ include "validation-service.selectorLabels" . }}
+{{- include "validation-service.versionLabels" . }}
 {{ if .Chart.AppVersion -}}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{ end -}}
@@ -63,23 +63,18 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 
 {{/*
-Selector labels
+version labels
 */}}
-{{- define "validation-service.selectorLabels" -}}
+{{- define "validation-service.versionLabels" -}}
 {{- if .Values.provisioningMode }}
-{{- $labels := dict }}
-{{- $_ := set $labels "app" (include "validation-service.name" .) }}
-{{- $_ = set $labels "version" ( .Chart.AppVersion ) }}
-{{- $_ = set $labels "app.kubernetes.io/name" (include "validation-service.name" .) }}
-{{- $_ = set $labels "app.kubernetes.io/instance" .Release.Name }}
-{{- $_ = set $labels "fhirProfileVersion" (include "validation-service.profileVersionName" . ) }}
-{{- $_ = set $labels "fhirProfile" .Values.required.profiles.name }}
+{{- $labels := merge (dict) (include "validation-service.selectorLabels" . | fromYaml) }}
+{{- $_ := set $labels "fhirProfileVersion" (include "validation-service.profileVersionName" . ) }}
 {{- if and .Values.required.profiles.versions (not (hasKey . "profileVersion")) }}
 {{- range $idx, $version := .Values.required.profiles.versions }}
 {{- $_ := set $labels (printf "fhirProfileVersions_%d" $idx) $version }}
 {{- end }}
 {{- end }}
-{{- toYaml $labels }}
+{{ toYaml $labels }}
 {{- else }}
 app: {{ include "validation-service.name" . }}
 version: {{ .Chart.AppVersion | quote }}
@@ -90,13 +85,31 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
+Selector labels
+*/}}
+{{- define "validation-service.selectorLabels" -}}
+{{- $labels := dict }}
+{{- $_ := set $labels "app" (include "validation-service.name" .) }}
+{{- $_ = set $labels "version" ( .Chart.AppVersion ) }}
+{{- $_ = set $labels "app.kubernetes.io/name" (include "validation-service.name" .) }}
+{{- $_ = set $labels "app.kubernetes.io/instance" .Release.Name }}
+{{- $_ = set $labels "fhirProfile" .Values.required.profiles.name }}
+{{- if .Values.provisioningMode }}
+{{- $_ = set $labels "fullVersionName" (include "validation-service.fullversionname" .) }}
+{{- end }}
+{{- toYaml $labels }}
+{{- end }}
+
+{{/*
 Deployment labels
 */}}
 {{- define "validation-service.deploymentLabels" -}}
-istio-validate-jwt: "{{ .Values.istio.validateJwt | required ".Values.istio.validateJwt is required" }}"
+{{- $labels := dict "istio-validate-jwt" (.Values.istio.validateJwt | required ".Values.istio.validateJwt is required" | toString) }}
+{{- $_ := mergeOverwrite $labels ( include "validation-service.versionLabels" . | fromYaml ) }}
 {{- with .Values.deploymentLabels }}
-{{ toYaml . }}
+{{- $_ := mergeOverwrite $labels . }}
 {{- end }}
+{{- toYaml $labels }}
 {{- end }}
 
 {{/*
@@ -126,9 +139,8 @@ generate profile version name
 {{- if and .Values.required.profiles.versions (not (hasKey . "profileVersion")) }}
 {{- $profileVersionSuffix := "" }}
 {{- if ( gt (len .Values.required.profiles.versions) 0 ) }}
-{{- $profileVersionSuffix = join "" .Values.required.profiles.versions | sha256sum | trunc 10 }}
 {{- end }}
-{{- printf "%s-%s-%s" (regexReplaceAll "(\\.|_)+" .Chart.Version "-") (regexReplaceAll "(\\.|_)+" .Values.required.profiles.name "-") $profileVersionSuffix | trunc 63 | trimSuffix "-" }}
+{{- printf "%s-%s" (regexReplaceAll "(\\.|_)+" .Chart.Version "-") (regexReplaceAll "(\\.|_)+" .Values.required.profiles.name "-") | trunc 63 | trimSuffix "-" }}
 {{- else if (hasKey . "profileVersion") }}
 {{- .profileVersion | trunc 63 | trimSuffix "-" }}
 {{- else }}

@@ -1,10 +1,10 @@
-[submodule "profiles/6.0.6"]
-	path = profiles/6.0.6
+[submodule "profiles/6.1.7"]
+	path = profiles/6.1.7
 	url = git@gitlab.prod.ccs.gematik.solutions:git/demis/configuration/demis-profile-snapshots.git
-	branch = 6.0.6
+	branch = 6.1.7
 	ignore = all
-[submodule "profiles/5.3.1"]
-	path = profiles/5.3.1
+[submodule "profiles/5.3.5"]
+	path = profiles/5.3.5
 	url = git@gitlab.prod.ccs.gematik.solutions:git/demis/configuration/demis-profile-snapshots.git
 	branch = main
-  ignore = all
+	ignore = all

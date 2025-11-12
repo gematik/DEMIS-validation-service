@@ -1,0 +1,40 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "Q2",
+  "url": "http://example.org/fhir/Questionnaire/Q2",
+  "item": [
+    {
+      "linkId": "glucose",
+      "type": "quantity",
+      "text": "Blutzucker",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-minQuantity",
+          "extension": [
+            {
+              "url": "value",
+              "valueQuantity": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mg/dL"
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-maxQuantity",
+          "extension": [
+            {
+              "url": "value",
+              "valueQuantity": {
+                "value": 110,
+                "system": "http://unitsofmeasure.org",
+                "code": "mg/dL"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

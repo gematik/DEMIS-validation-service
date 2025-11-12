@@ -83,7 +83,13 @@ public abstract class AbstractCustomValidator implements IValidatorModule {
       // 2. Validate all response items recursively
       validateResponseItems(response.getItem(), itemMap, ctx);
     } else if (resource instanceof Bundle bundle) {
-      bundle.getEntry().forEach(entry -> validateResource(entry.getResource(), ctx));
+      bundle.getEntry().stream()
+          .filter(entry -> entry.getResource() instanceof QuestionnaireResponse)
+          .forEach(entry -> validateResource(entry.getResource(), ctx));
+    } else if (resource instanceof Parameters parameters) {
+      parameters.getParameter().stream()
+          .filter(entry -> entry.getResource() instanceof Bundle)
+          .forEach(parameter -> validateResource(parameter.getResource(), ctx));
     }
   }
 

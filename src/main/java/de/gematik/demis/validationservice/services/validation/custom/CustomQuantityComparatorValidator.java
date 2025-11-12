@@ -49,6 +49,13 @@ public class CustomQuantityComparatorValidator extends AbstractCustomValidator
     super(questionnaireMap);
   }
 
+  /**
+   * Validates the answers of a questionnaire item if the item type is QUANTITY.
+   *
+   * @param item The response item to validate.
+   * @param qItem The corresponding questionnaire item definition.
+   * @param ctx The validation context to report validation messages.
+   */
   @Override
   protected void validateItemAnswer(
       QuestionnaireResponse.QuestionnaireResponseItemComponent item,
@@ -66,7 +73,7 @@ public class CustomQuantityComparatorValidator extends AbstractCustomValidator
   }
 
   /**
-   * Validates a quantity answer against constraints defined in the questionnaire item.
+   * Validates a quantity against the constraints defined in the corresponding questionnaire item. *
    *
    * @param answerQuantity The quantity provided in the response.
    * @param qItem The corresponding questionnaire item.
@@ -80,84 +87,53 @@ public class CustomQuantityComparatorValidator extends AbstractCustomValidator
       String linkId) {
 
     for (Extension ext : qItem.getExtension()) {
-      if (!isQuantityConstraintExtension(ext)) continue;
+      String url = ext.getUrl();
+      if (ComparatorHelper.isQuantityConstraintExtension(url)) {
 
-      Quantity refQuantity = getSubExtensionValue(ext);
-      String comparator = getSubExtensionComparator(ext);
+        Quantity refQuantity = (Quantity) ext.getValue();
+        String comparator = ComparatorHelper.getComparator(url);
 
-      if (refQuantity == null || comparator == null) continue;
+        if (refQuantity == null) continue;
 
-      if (!quantitiesHaveSameUnit(answerQuantity, refQuantity)) {
-        ctx.addValidationMessage(
-            createValidationMessage(
-                "Unit mismatch in item "
-                    + linkId
-                    + ": expected "
-                    + refQuantity.getUnit()
-                    + ", got "
-                    + answerQuantity.getUnit()));
-        return;
-      }
+        if (!ComparatorHelper.quantitiesHaveSameUnit(answerQuantity, refQuantity)) {
+          addUnitValidationMessageToContext(answerQuantity, ctx, linkId, refQuantity);
+          return;
+        }
 
-      if (!compareQuantities(answerQuantity, refQuantity, comparator)) {
-        ctx.addValidationMessage(
-            createValidationMessage(
-                "Quantity in item "
-                    + linkId
-                    + " violates constraint: "
-                    + comparator
-                    + " "
-                    + refQuantity.getValue()
-                    + " "
-                    + refQuantity.getUnit()));
+        if (!ComparatorHelper.compareQuantities(answerQuantity, refQuantity, comparator)) {
+          addQuantityValidationMessageToContext(ctx, linkId, comparator, refQuantity);
+        }
       }
     }
   }
 
-  private boolean isQuantityConstraintExtension(Extension ext) {
-    String url = ext.getUrl();
-    return url.endsWith("questionnaire-minQuantity") || url.endsWith("questionnaire-maxQuantity");
+  private static void addQuantityValidationMessageToContext(
+      IValidationContext<?> ctx, String linkId, String comparator, Quantity refQuantity) {
+    ctx.addValidationMessage(
+        createValidationMessage(
+            "Quantity in item "
+                + linkId
+                + " violates constraint: "
+                + comparator
+                + " "
+                + refQuantity.getValue()
+                + " "
+                + refQuantity.getUnit()));
   }
 
-  private Quantity getSubExtensionValue(Extension ext) {
-    return ext.getExtension().stream()
-        .filter(sub -> sub.getUrl().equals("value"))
-        .map(sub -> (Quantity) sub.getValue())
-        .findFirst()
-        .orElse(null);
-  }
-
-  private String getSubExtensionComparator(Extension ext) {
-    return ext.getExtension().stream()
-        .filter(sub -> sub.getUrl().equals("comparator"))
-        .map(sub -> sub.getValueAsPrimitive().getValueAsString())
-        .findFirst()
-        .orElse(null);
-  }
-
-  private boolean quantitiesHaveSameUnit(Quantity a, Quantity b) {
-    return Objects.equals(a.getUnit(), b.getUnit())
-        && Objects.equals(a.getSystem(), b.getSystem())
-        && Objects.equals(a.getCode(), b.getCode());
-  }
-
-  /**
-   * Compares two quantities based on a comparator.
-   *
-   * @param actual The actual quantity provided in the response.
-   * @param ref The reference quantity defined in the questionnaire.
-   * @param comparator The comparator to use for comparison (e.g., "<", "<=", ">", ">=").
-   * @return True if the comparison is valid, false otherwise.
-   */
-  private boolean compareQuantities(Quantity actual, Quantity ref, String comparator) {
-    double actualValue = actual.getValue().doubleValue();
-    double refValue = ref.getValue().doubleValue();
-    return switch (comparator) {
-      case "<" -> actualValue < refValue;
-      case "<=" -> actualValue <= refValue;
-      case ">" -> actualValue > refValue;
-      case ">=" -> actualValue >= refValue;
-      default -> true;
-    };
+  private static void addUnitValidationMessageToContext(
+      Quantity answerQuantity, IValidationContext<?> ctx, String linkId, Quantity refQuantity) {
+    ctx.addValidationMessage(
+        createValidationMessage(
+            "Unit mismatch in item "
+                + linkId
+                + ": expected "
+                + refQuantity.getSystem()
+                + "|"
+                + refQuantity.getCode()
+                + ", got "
+                + answerQuantity.getSystem()
+                + "|"
+                + answerQuantity.getCode()));
   }
 }

@@ -30,6 +30,7 @@ required:
   profiles:
     repository: europe-west3-docker.pkg.dev/gematik-all-infra-prod/demis-dev
     name: fhir-profile-snapshots
+    packageName: rki.demis.notification-api.snapshot
     imageName: null
     # For backward compatibility reasons, this version is used if the version list is not set
     version: "TagOfProfileSnapshotsImage"

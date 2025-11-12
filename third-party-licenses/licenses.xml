@@ -407,7 +407,7 @@
     <dependency>
       <groupId>com.google.errorprone</groupId>
       <artifactId>error_prone_annotations</artifactId>
-      <version>2.40.0</version>
+      <version>2.42.0</version>
       <licenses>
         <license>
           <name>Apache 2.0</name>
@@ -432,7 +432,7 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>33.4.8-jre</version>
+      <version>33.5.0-jre</version>
       <licenses>
         <license>
           <name>Apache License, Version 2.0</name>
@@ -458,7 +458,7 @@
     <dependency>
       <groupId>com.google.j2objc</groupId>
       <artifactId>j2objc-annotations</artifactId>
-      <version>3.0.0</version>
+      <version>3.1</version>
       <licenses>
         <license>
           <name>Apache License, Version 2.0</name>
@@ -575,7 +575,7 @@
     <dependency>
       <groupId>de.gematik.demis</groupId>
       <artifactId>service-base</artifactId>
-      <version>2.7.2</version>
+      <version>2.8.1</version>
       <licenses>
         <license>
           <name>Licensed under the EUPL 1.2</name>
@@ -587,7 +587,7 @@
     <dependency>
       <groupId>de.gematik.demis</groupId>
       <artifactId>spring-parent</artifactId>
-      <version>2.13.4</version>
+      <version>2.13.5</version>
       <licenses>
         <license>
           <name>Licensed under the EUPL 1.2</name>
@@ -1131,7 +1131,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-compress</artifactId>
-      <version>1.27.1</version>
+      <version>1.28.0</version>
       <licenses>
         <license>
           <name>Apache-2.0</name>
@@ -1157,7 +1157,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-text</artifactId>
-      <version>1.13.1</version>
+      <version>1.14.0</version>
       <licenses>
         <license>
           <name>Apache-2.0</name>
@@ -2337,7 +2337,7 @@
     <dependency>
       <groupId>org.xerial</groupId>
       <artifactId>sqlite-jdbc</artifactId>
-      <version>3.50.2.0</version>
+      <version>3.50.3.0</version>
       <licenses>
         <license>
           <name>The Apache Software License, Version 2.0</name>

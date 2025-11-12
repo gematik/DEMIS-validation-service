@@ -39,7 +39,10 @@ import org.hl7.fhir.r4.model.Questionnaire;
 import org.hl7.fhir.r4.model.QuestionnaireResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
+@ExtendWith(MockitoExtension.class)
 class CustomQuantityComparatorValidatorTest {
 
   private FhirContext ctx;
@@ -138,5 +141,63 @@ class CustomQuantityComparatorValidatorTest {
     assertThat(result.isSuccessful()).as("Validation should fail for unit mismatch").isFalse();
     assertThat(result.getMessages()).hasSize(1);
     assertThat(result.getMessages().getFirst().getMessage()).contains("Unit mismatch");
+  }
+
+  @Test
+  void testMissingValueInQuestionnaire() throws IOException {
+    FhirContext singleCtx = FhirContext.forR4();
+
+    String questionnaireJson =
+        Files.readString(Path.of("src/test/resources/quantity/QuestionnaireMissingRefValue.json"));
+    Questionnaire questionnaire =
+        singleCtx.newJsonParser().parseResource(Questionnaire.class, questionnaireJson);
+
+    Map<String, org.hl7.fhir.instance.model.api.IBaseResource> questionnaireMap =
+        Map.of(questionnaire.getUrl(), questionnaire);
+
+    validator = singleCtx.newValidator();
+    validator.registerValidatorModule(new CustomQuantityComparatorValidator(questionnaireMap));
+
+    String responseJson =
+        Files.readString(
+            Path.of("src/test/resources/quantity/QuestionnaireResponseValidGlucose2.json"));
+
+    QuestionnaireResponse response =
+        ctx.newJsonParser().parseResource(QuestionnaireResponse.class, responseJson);
+
+    ValidationResult result = validator.validateWithResult(response);
+
+    assertThat(result.isSuccessful())
+        .as("Missing value in Questionnaire should lead to true")
+        .isTrue();
+  }
+
+  @Test
+  void testMissingValueInQuestionnaireResponse() throws IOException {
+    FhirContext singleCtx = FhirContext.forR4();
+
+    String questionnaireJson =
+        Files.readString(Path.of("src/test/resources/quantity/Questionnaire.json"));
+    Questionnaire questionnaire =
+        singleCtx.newJsonParser().parseResource(Questionnaire.class, questionnaireJson);
+
+    Map<String, org.hl7.fhir.instance.model.api.IBaseResource> questionnaireMap =
+        Map.of(questionnaire.getUrl(), questionnaire);
+
+    validator = singleCtx.newValidator();
+    validator.registerValidatorModule(new CustomQuantityComparatorValidator(questionnaireMap));
+
+    String responseJson =
+        Files.readString(
+            Path.of("src/test/resources/quantity/QuestionnaireResponseInvalidGlucose2.json"));
+
+    QuestionnaireResponse response =
+        ctx.newJsonParser().parseResource(QuestionnaireResponse.class, responseJson);
+
+    ValidationResult result = validator.validateWithResult(response);
+
+    assertThat(result.isSuccessful())
+        .as("Missing value in QuestionnaireResponse should lead to false")
+        .isFalse();
   }
 }

@@ -31,39 +31,19 @@
       "extension": [
         {
           "url": "http://example.org/fhir/StructureDefinition/questionnaire-minQuantity",
-          "extension": [
-            {
-              "url": "value",
-              "valueQuantity": {
-                "value": 1000,
-                "unit": "g",
-                "system": "http://unitsofmeasure.org",
-                "code": "g"
-              }
-            },
-            {
-              "url": "comparator",
-              "valueCode": ">="
-            }
-          ]
+          "valueQuantity": {
+            "value": 1000,
+            "system": "http://unitsofmeasure.org",
+            "code": "g"
+          }
         },
         {
           "url": "http://example.org/fhir/StructureDefinition/questionnaire-maxQuantity",
-          "extension": [
-            {
-              "url": "value",
-              "valueQuantity": {
-                "value": 6000,
-                "unit": "g",
-                "system": "http://unitsofmeasure.org",
-                "code": "g"
-              }
-            },
-            {
-              "url": "comparator",
-              "valueCode": "<"
-            }
-          ]
+          "valueQuantity": {
+            "value": 6000,
+            "system": "http://unitsofmeasure.org",
+            "code": "g"
+          }
         }
       ]
     }

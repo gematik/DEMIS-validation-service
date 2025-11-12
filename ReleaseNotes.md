@@ -2,26 +2,36 @@
 
 # Release Validation-Service
 
-#### Release 2.9.1
+## Release 2.10.0
+- added support of FHIR packages through new Docker base image (FHIR package initializer)
+- update custom quantity validation to match profile definitions from 6.1.7 upwards
+- update dependency guava to 33.5.0
+- update dependency error prone annotation to 2.42.0
+- update dependency commons-text 1.14.0
+- update dependency commons-compress 1.28.0
+- update dependency checker-qual 3.51.0
+- update dependency sqlite-jdbc 3.50.3.0
+
+## 2.9.1
 - refactor deployment resource from helm chart for not using versions of profiles in selector
 
-## Release 2.9.0
+## 2.9.0
 - update spring-parent version to 2.13.4
 - add .gitattributes
 
-## Release 2.8.2
+## 2.8.2
 ### changed
 - collect metrics on validation errors
 - add quantity and regex checks to validation behind FEATURE_FLAG_CUSTOM_QUANTITY_VALIDATOR_ENABLED and FEATURE_FLAG_CUSTOM_REGEX_VALIDATOR_ENABLED 
 
-## Release 2.8.1
+## 2.8.1
 ### changed
 - add default feature flags FEATURE_FLAG_FILTERED_VALIDATION_ERRORS_DISABLED, FEATURE_FLAG_FILTERED_ERRORS_AS_WARNINGS_DISABLED to values.yaml
 - removed feature flag FEATURE_FLAG_RELAXED_VALIDATION from values.yaml
 - refactor helm chart for supporting provisioning of deployment in modes "dedicated", "distributed" and "combined"
 - use spring-parent version 2.12.7
 
-## Release 2.8.0
+## 2.8.0
 ### changed
 - optional support for remote terminology server
 - updated profiles
@@ -31,20 +41,20 @@
 ### fixed
 - Dependency-Updates (CVEs et al.)
 
-## Release 2.7.0
+## 2.7.0
 ### changed
 - support for multiple profile snapshots versions: Breaking Change in Environment Variables.
 - updated dependencies
 
-## Release 2.6.2
+## 2.6.2
 - Updated ospo-resources for adding additional notes and disclaimer
 - setting new resources in helm chart
 - setting new timeouts and retries in helm chart
 
-## Release 2.6.1
+## 2.6.1
 - Rollback HAPI-FHIR to 7.2.2
 
-## Release 2.6.0
+## 2.6.0
 ### fixed
 - Dependency-Updates (CVEs et al.)
 
@@ -52,7 +62,7 @@
 - First official GitHub-Release
 - Update Base-Image to OSADL
 
-## Release 2.5.0
+## 2.5.0
 
 ### fixed
 - CVEs
@@ -64,21 +74,21 @@
 - Upgraded Docker Base Image to Eclipse-Temurin JRE 21.0.5
 - Stricter validation of the notification
 
-## Release 2.1.0
+## 2.1.0
 
 ### fixed
 - CVEs
 - Upgraded SpringBoot to 3.2.0
 
 
-## Release 2.0.1
+## 2.0.1
 
 ### fixed
 - add missing License-Header
 - add checks to CI-Pipeline
 
 
-## Release 2.0.0
+## 2.0.0
 
 ### fixed
 - fix CVEs
@@ -88,14 +98,14 @@
 - Upgraded SpringBoot to 3.0.7
 
 
-## Release 1.4.3
+## 1.4.3
 
 ### changed
 - Upgraded Docker Image to use JRE 17.0.7
 - Upgraded HAPI FHIR Utilities to 6.4.4
 
 
-## Release 1.4.2
+## 1.4.2
 
 ## fixed
 - fix CVE-2023-24057
@@ -105,12 +115,12 @@
 - Upgraded HAPI FHIR Utilities to 6.2.5
 
 
-## Release 1.4.1
+## 1.4.1
 
 ### changed
 - Changed logging format to JSON
 
-## Release 1.4.0
+## 1.4.0
 
 ### fixed
 - fix Apache Tomcat CVE-2022-45143
@@ -119,7 +129,7 @@
 - add code autoformat plugin to pom
 - changed base image to alpine
 
-## Release 1.3.0 (2023-01-25)
+## 1.3.0 (2023-01-25)
 
 ### fixed
 - fix Apache Tomcat CVE-2022-45143
@@ -128,18 +138,18 @@
 - Update Helm Chart
 
 
-## Release 1.2.0 (2022-12-04)
+## 1.2.0 (2022-12-04)
 
 ### changed
 - update code system, introduced hospitalization-reason
 
 
-## Release 1.1.0 (2022-11-11)
+## 1.1.0 (2022-11-11)
 
 ### changed
 - update profile snapshot to v2022-09-27
 
 
-## Release 1.0.0 (2022-09-12)
+## 1.0.0 (2022-09-12)
 
 initial Release

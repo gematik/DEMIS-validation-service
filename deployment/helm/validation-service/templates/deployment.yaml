@@ -44,8 +44,10 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       # Volume for Profiles
       volumes:
+        {{- if not (eq (toString .Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
         - name: {{ $profilesVolumeName }}
           emptyDir: { }
+        {{- end }}
         # Add writable volumes
         - name: tmp-volume
           emptyDir: { }
@@ -53,6 +55,7 @@ spec:
         - name: jfr-volume
           emptyDir: { }
         {{- end }}
+      {{- if not (eq (toString .Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
       initContainers:
         {{- range $index, $profilesVersion := $profiles }}
         {{- $profilesFolder := regexFind "(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)" $profilesVersion }}
@@ -69,6 +72,7 @@ spec:
             - name: {{ $profilesVolumeName }}
               mountPath: "/profiles"
         {{- end }}
+      {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
@@ -80,7 +84,11 @@ spec:
           {{- if .Values.application.parameters }}
           {{- with .Values.application.entrypoint }}
           command:
+            {{- if not (eq (toString $.Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
             {{- toYaml . | nindent 12 }}
+            {{- else }}
+            - /usr/local/bin/entrypoint.sh
+            {{- end }}
           {{- end }}
           {{- with .Values.application.parameters }}
           args:
@@ -90,9 +98,11 @@ spec:
           {{- end }}
           # Mount Volumes in container
           volumeMounts:
+            {{- if not (eq (toString .Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
             - name: {{ $profilesVolumeName }}
               mountPath: /profiles
               readOnly: true
+            {{- end }}
             - name: tmp-volume
               mountPath: /tmp
           {{- if .Values.debug.enable }}
@@ -105,10 +115,23 @@ spec:
               value: "8080"
             - name: "TZ"
               value: "Europe/Berlin"
+            {{- if not (eq (toString .Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
             - name: "FHIR_PROFILES_BASEPATH"
               value: "/profiles"
             - name: "FHIR_PROFILES_VERSIONS"
               value: "{{ range $index, $profilesVersion := $profiles }}{{ if $index }},{{ end }}{{ regexFind "(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)" $profilesVersion }}{{ end }}"
+            {{- else }}
+            - name: "PACKAGE_NAME"
+              value: "{{ .Values.required.profiles.packageName }}"
+            - name: "PACKAGE_VERSIONS"
+              value: "{{ range $index, $profilesVersion := $profiles }}{{ if $index }},{{ end }}{{ $profilesVersion }}{{ end }}"
+            - name: "TARGET_DIR"
+              value: "/tmp/fhir-profiles"
+            - name: "FHIR_PROFILES_BASEPATH"
+              value: "/tmp/fhir-profiles"
+            - name: "FHIR_PROFILES_VERSIONS"
+              value: "{{ range $index, $profilesVersion := $profiles }}{{ if $index }},{{ end }}{{ $profilesVersion }}{{ end }}"
+            {{- end }}
             {{- if .Values.debug.enable }}
             - name: "JAVA_TOOL_OPTIONS"
               value: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9000"
@@ -253,8 +276,10 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       # Volume for Profiles
       volumes:
+        {{- if not (eq (toString .Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
         - name: profiles-volume-{{ $fullVersionName }}
           emptyDir: { }
+        {{- end }}
         # Add writable volumes
         - name: tmp-volume
           emptyDir: { }
@@ -263,6 +288,7 @@ spec:
           emptyDir: { }
         {{- end }}
       initContainers:
+        {{- if not (eq (toString .Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
         {{- range $index, $profilesVersion := $profilesVersions }}
         - name: {{ $.Chart.Name }}-init-profiles-{{ $index }}
           securityContext:
@@ -277,6 +303,7 @@ spec:
             - name: profiles-volume-{{ $fullVersionName }}
               mountPath: "/profiles"
         {{- end }}
+        {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
@@ -288,7 +315,11 @@ spec:
           {{- if .Values.application.parameters }}
           {{- with .Values.application.entrypoint }}
           command:
+            {{- if not (eq (toString $.Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
             {{- toYaml . | nindent 12 }}
+            {{- else }}
+            - /usr/local/bin/entrypoint.sh
+            {{- end }}
           {{- end }}
           {{- with .Values.application.parameters }}
           args:
@@ -298,9 +329,11 @@ spec:
           {{- end }}
           # Mount Volumes in container
           volumeMounts:
+            {{- if not (eq (toString .Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
             - name: profiles-volume-{{ $fullVersionName }}
               mountPath: /profiles
               readOnly: true
+            {{- end }}
             - name: tmp-volume
               mountPath: /tmp
           {{- if .Values.debug.enable }}
@@ -313,8 +346,19 @@ spec:
               value: "8080"
             - name: "TZ"
               value: "Europe/Berlin"
+            {{- if not (eq (toString .Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
             - name: "FHIR_PROFILES_BASEPATH"
               value: "/profiles"
+            {{- else }}
+            - name: "PACKAGE_NAME"
+              value: "{{ .Values.required.profiles.packageName }}"
+            - name: "PACKAGE_VERSIONS"
+              value: "{{ range $index, $profilesVersion := $profilesVersions }}{{ if $index }},{{ end }}{{ $profilesVersion }}{{ end }}"
+            - name: "TARGET_DIR"
+              value: "/tmp/fhir-profiles"
+            - name: "FHIR_PROFILES_BASEPATH"
+              value: "/tmp/fhir-profiles"
+            {{- end }}
             - name: "FHIR_PROFILES_VERSIONS"
               value: "{{ range $index, $profilesVersion := $profilesVersions }}{{ if $index }},{{ end }}{{ $profilesVersion }}{{ end }}"
             {{- if .Values.debug.enable }}

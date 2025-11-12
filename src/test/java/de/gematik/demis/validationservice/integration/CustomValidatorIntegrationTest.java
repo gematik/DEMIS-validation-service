@@ -65,6 +65,17 @@ class CustomValidatorIntegrationTest {
   }
 
   @Test
+  void shouldReturnSuccessForValidNotificationInParameters() throws Exception {
+    final String validFileContent =
+        FileTestUtil.readFileIntoString(
+            "src/test/resources/integrationtests/customValidators/input/customValidatorInputWithParameters.json");
+
+    mockMvc
+        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
+        .andExpect(status().isOk());
+  }
+
+  @Test
   void shouldReturnUnprocessableEntityForInvalidNotification() throws Exception {
     final String validFileContent =
         FileTestUtil.readFileIntoString(

@@ -1,13 +1,13 @@
 {
   "resourceType": "QuestionnaireResponse",
-  "questionnaire": "http://example.org/fhir/Questionnaire/Q1",
+  "questionnaire": "http://example.org/fhir/Questionnaire/Q2",
   "item": [
     {
       "linkId": "glucose",
       "answer": [
         {
           "valueQuantity": {
-            "value": 111,
+            "value": 90,
             "unit": "mg/dL",
             "system": "http://unitsofmeasure.org",
             "code": "mg/dL"

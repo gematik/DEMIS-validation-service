@@ -66,6 +66,10 @@ class ValidationServiceTest {
   private static final String IGNORED_VALIDATION_ERROR = "IGNORE_THIS_ERROR";
   private static final String VALID_INFO_MESSAGE = "No issues detected during validation";
   private static final String EXCEPTION_MESSAGE = "exception in validation";
+  public static final String SOME_VALIDATION_ERROR = "some validation error";
+  public static final String SOME_VALIDATION_ERROR_FROM_NEWEST_VERSION =
+      "some validation error from newest version";
+  public static final String IS_IGNORED = "is ignored";
 
   private final FhirContext fhirContext = FhirContext.forR4Cached();
   private final MeterRegistry meterRegistry = new SimpleMeterRegistry();
@@ -92,12 +96,12 @@ class ValidationServiceTest {
     meterRegistry.clear();
     final var validationMetrics = new ValidationMetrics(meterRegistry);
 
-    final ValidationConfigProperties props =
-        new ValidationConfigProperties(null, Locale.getDefault(), ResultSeverityEnum.WARNING, 1);
-
     final FilteredMessagePrefixesFactory filteredMessagePrefixesFactory =
         mock(FilteredMessagePrefixesFactory.class);
     when(filteredMessagePrefixesFactory.get()).thenReturn(Set.of(IGNORED_VALIDATION_ERROR));
+
+    final ValidationConfigProperties props =
+        new ValidationConfigProperties(null, Locale.getDefault(), ResultSeverityEnum.WARNING, 1);
 
     underTest =
         new ValidationService(
@@ -106,7 +110,6 @@ class ValidationServiceTest {
             validationMetrics,
             props,
             filteredMessagePrefixesFactory,
-            true,
             true);
   }
 
@@ -162,14 +165,13 @@ class ValidationServiceTest {
 
     @Test
     void invalid() {
-      final var errorMsg =
-          createValidationMessage(ResultSeverityEnum.ERROR, "some validation error");
+      final var errorMsg = createValidationMessage(ResultSeverityEnum.ERROR, SOME_VALIDATION_ERROR);
       when(fhirValidatorMock.validateWithResult(CONTENT))
           .thenReturn(new ValidationResult(fhirContext, List.of(errorMsg)));
 
       final OperationOutcome result = underTest.validate(CONTENT);
 
-      assertOperationOutcome(result, ERROR, errorMsg.getMessage());
+      assertOperationOutcome(result, IssueSeverity.ERROR, errorMsg.getMessage());
       assertMetrics(tags(PROFILES_VERSION, false));
     }
 
@@ -236,14 +238,14 @@ class ValidationServiceTest {
     void invalidWithNewestVersionButValidWithOlderVersion() {
       final SingleValidationMessage errorMsg =
           createValidationMessage(
-              ResultSeverityEnum.ERROR, "some validation error from newest version");
+              ResultSeverityEnum.ERROR, SOME_VALIDATION_ERROR_FROM_NEWEST_VERSION);
 
       when(newProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
           .thenReturn(new ValidationResult(fhirContext, List.of(errorMsg)));
       when(oldProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
           .thenReturn(
               new ValidationResult(
-                  fhirContext, List.of(createValidationMessage(WARNING, "is ignored"))));
+                  fhirContext, List.of(createValidationMessage(WARNING, IS_IGNORED))));
 
       final OperationOutcome result = underTest.validate(CONTENT);
 
@@ -255,7 +257,7 @@ class ValidationServiceTest {
     void invalidWithAllVersions() {
       final SingleValidationMessage errorMsg =
           createValidationMessage(
-              ResultSeverityEnum.ERROR, "some validation error from newest version");
+              ResultSeverityEnum.ERROR, SOME_VALIDATION_ERROR_FROM_NEWEST_VERSION);
 
       when(newProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
           .thenReturn(new ValidationResult(fhirContext, List.of(errorMsg)));
@@ -263,11 +265,11 @@ class ValidationServiceTest {
           .thenReturn(
               new ValidationResult(
                   fhirContext,
-                  List.of(createValidationMessage(ResultSeverityEnum.ERROR, "is ignored"))));
+                  List.of(createValidationMessage(ResultSeverityEnum.ERROR, IS_IGNORED))));
 
       final OperationOutcome result = underTest.validate(CONTENT);
 
-      assertOperationOutcome(result, ERROR, errorMsg.getMessage());
+      assertOperationOutcome(result, IssueSeverity.ERROR, errorMsg.getMessage());
       assertMetrics(tags(NEW_VERSION, false), tags(OLD_VERSION, false));
     }
   }

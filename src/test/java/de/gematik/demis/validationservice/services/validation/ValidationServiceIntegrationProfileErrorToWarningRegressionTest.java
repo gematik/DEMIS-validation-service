@@ -54,6 +54,9 @@ import org.springframework.test.context.TestPropertySource;
 @Slf4j
 class ValidationServiceIntegrationProfileErrorToWarningRegressionTest {
 
+  public static final String THERE_ARE_ERRORS_OR_FATAL_ISSUES_IN_OUTCOME =
+      "There are Errors or Fatal issues in outcome";
+
   private static List<OperationOutcomeIssueComponent> getErrorOrFatalIssues(
       final OperationOutcome operationOutcome) {
     return operationOutcome.getIssue().stream()
@@ -78,7 +81,7 @@ class ValidationServiceIntegrationProfileErrorToWarningRegressionTest {
   @Nested
   @SpringBootTest(
       webEnvironment = SpringBootTest.WebEnvironment.NONE,
-      properties = {"feature.flag.filtered.validation.errors.disabled=true"})
+      properties = {"feature.flag.filtered.errors.as.warnings.disabled=false"})
   @ActiveProfiles("test")
   class ValidationWithDefaults {
 
@@ -92,7 +95,7 @@ class ValidationServiceIntegrationProfileErrorToWarningRegressionTest {
 
       final var issues = getErrorOrFatalIssues(operationOutcome);
 
-      assertThat(issues).as("There are Errors or Fatal issues in outcome").isEmpty();
+      assertThat(issues).as(THERE_ARE_ERRORS_OR_FATAL_ISSUES_IN_OUTCOME).isEmpty();
     }
 
     @Test
@@ -206,7 +209,6 @@ class ValidationServiceIntegrationProfileErrorToWarningRegressionTest {
   @TestPropertySource(
       properties = {
         "demis.validation-service.locale=de_DE",
-        "feature.flag.filtered.validation.errors.disabled=true",
         "feature.flag.filtered.errors.as.warnings.disabled=false"
       })
   class ValidationGerman {
@@ -237,8 +239,7 @@ class ValidationServiceIntegrationProfileErrorToWarningRegressionTest {
   @TestPropertySource(
       properties = {
         "demis.validation-service.profiles.versions=6.1.7,5.3.5",
-        "feature.flag.filtered.validation.errors.disabled=false",
-        "feature.flag.filtered.errors.as.warnings.disabled=true"
+        "feature.flag.filtered.errors.as.warnings.disabled=false"
       })
   class ValidationWithMultipleProfilesVersions {
 
@@ -257,7 +258,7 @@ class ValidationServiceIntegrationProfileErrorToWarningRegressionTest {
           operationOutcome.getIssue().stream()
               .filter(issue -> issue.getSeverity() == IssueSeverity.WARNING)
               .toList();
-      assertThat(warnings).hasSize(1);
+      assertThat(warnings).hasSize(3);
     }
 
     @Test

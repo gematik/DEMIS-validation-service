@@ -136,12 +136,11 @@ aus IntelliJ als SpringBoot Application starten
 ## Feature Flags
 
 
-| Feature Flag                                        | Description                                                                                                                                             |
-|-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| feature.flag.format.validation.enabled              | allow json only as valid format                                                                                                                         |
-| feature.flag.common.code.system.terminology.enabled | adds terminology support to validator                                                                                                                   |
-| feature.flag.filtered.validation.errors.disabled    | removes validation results so some errors are not shown to the users. if this is true, feature.flag.filtered.errors.as.warnings.disabled cannot be true |
-| feature.flag.filtered.errors.as.warnings.disabled   | changes error validation results to warnings. if this is true feature.flag.filtered.validation.errors.disabled cannot be true                           |
+| Feature Flag                                        | Description                                    |
+|-----------------------------------------------------|------------------------------------------------|
+| feature.flag.format.validation.enabled              | allow json only as valid format                |
+| feature.flag.common.code.system.terminology.enabled | adds terminology support to validator          |
+| feature.flag.filtered.errors.as.warnings.disabled   | changes error validation results to warnings.  |
 
 ## Usage
 

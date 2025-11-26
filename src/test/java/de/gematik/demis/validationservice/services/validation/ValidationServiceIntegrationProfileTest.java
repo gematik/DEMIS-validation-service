@@ -54,6 +54,9 @@ import org.springframework.test.context.TestPropertySource;
 @Slf4j
 class ValidationServiceIntegrationProfileTest {
 
+  public static final String THERE_ARE_ERRORS_OR_FATAL_ISSUES_IN_OUTCOME =
+      "There are Errors or Fatal issues in outcome";
+
   private static List<OperationOutcomeIssueComponent> getErrorOrFatalIssues(
       final OperationOutcome operationOutcome) {
     return operationOutcome.getIssue().stream()
@@ -78,10 +81,7 @@ class ValidationServiceIntegrationProfileTest {
   @Nested
   @SpringBootTest(
       webEnvironment = SpringBootTest.WebEnvironment.NONE,
-      properties = {
-        "feature.flag.filtered.validation.errors.disabled=true",
-        "feature.flag.filtered.errors.as.warnings.disabled=true"
-      })
+      properties = {"feature.flag.filtered.errors.as.warnings.disabled=true"})
   @ActiveProfiles("test")
   class ValidationWithDefaults {
 
@@ -95,7 +95,7 @@ class ValidationServiceIntegrationProfileTest {
 
       final var issues = getErrorOrFatalIssues(operationOutcome);
 
-      assertThat(issues).as("There are Errors or Fatal issues in outcome").isEmpty();
+      assertThat(issues).as(THERE_ARE_ERRORS_OR_FATAL_ISSUES_IN_OUTCOME).isEmpty();
     }
 
     @Test
@@ -209,8 +209,7 @@ class ValidationServiceIntegrationProfileTest {
   @TestPropertySource(
       properties = {
         "demis.validation-service.locale=de_DE",
-        "feature.flag.filtered.validation.errors.disabled=true",
-        "feature.flag.filtered.errors.as.warnings.disabled=false"
+        "feature.flag.filtered.errors.as.warnings.disabled=true"
       })
   class ValidationGerman {
 
@@ -240,7 +239,6 @@ class ValidationServiceIntegrationProfileTest {
   @TestPropertySource(
       properties = {
         "demis.validation-service.profiles.versions=6.1.7,5.3.5",
-        "feature.flag.filtered.validation.errors.disabled=true",
         "feature.flag.filtered.errors.as.warnings.disabled=true"
       })
   class ValidationWithMultipleProfilesVersions {

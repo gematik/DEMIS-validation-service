@@ -39,7 +39,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
-import java.util.function.Predicate;
 import javax.annotation.CheckForNull;
 import javax.annotation.Nonnull;
 import lombok.extern.slf4j.Slf4j;
@@ -61,7 +60,6 @@ public class ValidationService {
   private final ValidationMetrics validationMetrics;
   private final ResultSeverityEnum minSeverityOutcome;
   private final Set<String> filteredMessagePrefixes;
-  private final boolean isErrorFilteringEnabled;
   private final boolean isFilteredErrorsToWarningsEnabled;
 
   ValidationService(
@@ -70,8 +68,6 @@ public class ValidationService {
       final ValidationMetrics validationMetrics,
       final ValidationConfigProperties configProperties,
       final FilteredMessagePrefixesFactory filteredMessagePrefixesFactory,
-      @Value("${feature.flag.filtered.validation.errors.disabled}")
-          final boolean isFilteringOfErrorsDisabled,
       @Value("${feature.flag.filtered.errors.as.warnings.disabled}")
           final boolean isFilteredErrorsAsWarwningsDisabled) {
     this.fhirContext = fhirContext;
@@ -79,7 +75,6 @@ public class ValidationService {
     this.validationMetrics = validationMetrics;
     this.minSeverityOutcome = configProperties.minSeverityOutcome();
     this.filteredMessagePrefixes = filteredMessagePrefixesFactory.get();
-    this.isErrorFilteringEnabled = !isFilteringOfErrorsDisabled;
     this.isFilteredErrorsToWarningsEnabled = !isFilteredErrorsAsWarwningsDisabled;
   }
 
@@ -167,10 +162,6 @@ public class ValidationService {
       @Nonnull final String profileVersion,
       @CheckForNull final String principalId) {
     List<SingleValidationMessage> resultList = validationResult.getMessages();
-    if (isErrorFilteringEnabled) {
-      // remove suppressed errors from the resultList
-      resultList = resultList.stream().filter(Predicate.not(this::isSuppressedMessage)).toList();
-    }
     if (isFilteredErrorsToWarningsEnabled) {
       // Mutate resultList and keep the mutated errors around to log metrics
       final List<SingleValidationMessage> ignoredErrors =

@@ -2,6 +2,9 @@
 
 # Release Validation-Service
 
+## Release 2.10.1
+- removed feature flag FEATURE_FLAG_FILTERED_VALIDATION_ERRORS_DISABLED from values.yaml
+
 ## Release 2.10.0
 - added support of FHIR packages through new Docker base image (FHIR package initializer)
 - update custom quantity validation to match profile definitions from 6.1.7 upwards

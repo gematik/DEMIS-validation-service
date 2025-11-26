@@ -53,10 +53,7 @@ import org.springframework.web.context.WebApplicationContext;
 @ActiveProfiles(value = {"test"})
 @SpringBootTest(
     classes = {ValidationServiceApplication.class},
-    properties = {
-      "feature.flag.filtered.validation.errors.disabled=true",
-      "feature.flag.filtered.errors.as.warnings.disabled=false"
-    })
+    properties = {"feature.flag.filtered.errors.as.warnings.disabled=false"})
 class ValidationControllerIntegrationProfileRegressionErrorToWarningTest {
   @Autowired private WebApplicationContext webApplicationContext;
   private MockMvc mockMvc;

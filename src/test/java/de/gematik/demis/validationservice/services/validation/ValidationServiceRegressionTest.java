@@ -117,7 +117,6 @@ class ValidationServiceRegressionTest {
             validationMetrics,
             props,
             filteredMessagePrefixesFactory,
-            true,
             false);
   }
 

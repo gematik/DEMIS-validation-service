@@ -1,0 +1,1608 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answerSetABVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/answerSetABVP",
+  "version": "1.6.0",
+  "name": "AnswerSetABVP",
+  "title": "AnswerSet für Arboviren (sonstige)",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-04-08",
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "demis-support@rki.de"
+        }
+      ]
+    }
+  ],
+  "description": "Das ValueSet AnswerSetABVP enthält die Codes der Answer-Codes für Arboviren (sonstige).",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "version": "ALPHA-2",
+          "code": "DE"
+        }
+      ]
+    }
+  ],
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "11428003",
+            "display": "Westliche-equine-Enzephalomyelitis-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "12576002",
+            "display": "Venezuelanische-equine-Enzephalomyelitis-Virus, Stamm Everglades FE3-7C"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "1262000",
+            "display": "Sagiyama-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "14191007",
+            "display": "Entebbe-Fledermaus-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "14267007",
+            "display": "Negishi-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "15184004",
+            "display": "Sokoluk-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "16604006",
+            "display": "Wataroa-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "19389005",
+            "display": "Kadam-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "19874008",
+            "display": "Mayaro-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "21676006",
+            "display": "Middelburg-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "23264006",
+            "display": "Ndumu-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "23466005",
+            "display": "Langat-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "243600001",
+            "display": "Gattung Alphavirus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "243601002",
+            "display": "Östliche-equine-Enzephalitis-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 85
+              }
+            ],
+            "code": "243603004",
+            "display": "Japanische B-Enzephalitis-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "26130005",
+            "display": "Getah-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "27530005",
+            "display": "Louping-ill-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "28375005",
+            "display": "Gattung Flavivirus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "30681002",
+            "display": "Sindbis-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "312318005",
+            "display": "Ockelbo-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "312319002",
+            "display": "Rio-Bravo-Virus-Gruppe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "314824006",
+            "display": "Mutmaßliches Flavivirus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "314825007",
+            "display": "Mutmaßliches Mücken-übertragenes Flavivirus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "31719006",
+            "display": "Fort-Morgan-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "31899000",
+            "display": "Modoc-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "31989009",
+            "display": "Murray-Valley-Enzephalitis-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "32137001",
+            "display": "Kyasanur-Wald-Fieber-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "322070401000087107",
+            "display": "Salmon-pancreas-disease-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 89
+              }
+            ],
+            "code": "32458000",
+            "display": "Ross River-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "33660003",
+            "display": "Oropouche-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "38113008",
+            "display": "Apoi-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "38222004",
+            "display": "Spondweni-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "397582004",
+            "display": "Hepatitis-G-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 88
+              }
+            ],
+            "code": "39982002",
+            "display": "Sandfliegenfieber-Naples-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "407466000",
+            "display": "Gattung Orthobunyavirus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 86
+              }
+            ],
+            "code": "407475003",
+            "display": "Sandfliegenfieber-Sicilian-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "407540001",
+            "display": "Japanische Enzephalitis-Virus-Gruppe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "407541002",
+            "display": "Kokobera-Virus-Gruppe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "414649007",
+            "display": "Säugetier-tick-borne-Virus-Gruppe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "428354003",
+            "display": "Seabird-tick-borne-Virus-Gruppe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "428380002",
+            "display": "Spondweni-Virus-Gruppe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "428458004",
+            "display": "Entebbe-Fledermaus-Virus-Gruppe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "428729001",
+            "display": "Aroa-Virus-Gruppe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "429172006",
+            "display": "Ntaya-Virus-Gruppe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "44725007",
+            "display": "Gattung Orbivirus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "45838003",
+            "display": "Powassan-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "46098008",
+            "display": "Bukalassa-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "4729008",
+            "display": "Tembusu-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "47637005",
+            "display": "Ntaya-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "48439003",
+            "display": "Stratford-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "50471002",
+            "display": "Zika-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "51045004",
+            "display": "Mucambo-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 87
+              }
+            ],
+            "code": "51253001",
+            "display": "Toscana-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "51439004",
+            "display": "Omsk-Hämorrhagisches-Fieber-Virus",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000013009"
+                },
+                "value": "Omsk-hämorrhagisches-Fieber-Virus (OHFV)"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "51741004",
+            "display": "Saumarez-Reef-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "53694009",
+            "display": "Tonate-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "54521007",
+            "display": "Alfuy-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "55249007",
+            "display": "Tyuleniy-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "5531007",
+            "display": "Cowbone-Ridge-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "55345004",
+            "display": "Semliki Forest-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "56932004",
+            "display": "Barmah-Forest-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "58432001",
+            "display": "Saint-Louis-Enzephalitis-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "588234111000087104",
+            "display": "Highlands-J-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "60420002",
+            "display": "Kokobera-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "60542003",
+            "display": "Koutango-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "61023003",
+            "display": "Jutiapa-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "61728001",
+            "display": "Batu-Cave-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "62958000",
+            "display": "Venezuelanische-equine-Enzephalomyelitis-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "64149007",
+            "display": "Bijou Bridge-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "64995004",
+            "display": "Ilheus-virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "65090000",
+            "display": "Royal-Farm-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "68096005",
+            "display": "Bagaza-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "68262008",
+            "display": "Montana-Myotis-Leukoenzephalitis-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "68323002",
+            "display": "Bussuquara-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "70101005",
+            "display": "Cabassou-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "710254005",
+            "display": "78V-3531-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "71518008",
+            "display": "Rocio-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "721926000",
+            "display": "Venezuelanische-equine-Enzephalomyelitis-Virus, Stamm AG80-663"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "76383005",
+            "display": "Dakar-Fledermaus-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "764949001",
+            "display": "Alkhurma-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "76833007",
+            "display": "Phnom-Penh-Fledermaus-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "76850009",
+            "display": "Israel-Truthahn-Meningoenzephalitis-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "77985003",
+            "display": "Rio-Bravo-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "79809000",
+            "display": "Karshi-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "84133002",
+            "display": "Bebaru-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 90
+              }
+            ],
+            "code": "85183000",
+            "display": "Usutu-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "87149006",
+            "display": "Aura-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "88920004",
+            "display": "Pixuna-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "8905000",
+            "display": "O'nyong-nyong-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "90596006",
+            "display": "Una-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "90868008",
+            "display": "Carey-Island-Virus"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "91412000",
+            "display": "Kyzylagch-Virus"
+          }
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetLaboratoryTest-SNOMED"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://demis.rki.de/fhir/ValueSet/answerSetResistance-SNOMED"
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2025-04-08T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "31899000",
+        "display": "Modoc-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "428458004",
+        "display": "Entebbe-Fledermaus-Virus-Gruppe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "260385009",
+        "display": "Negative (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "314825007",
+        "display": "Mutmaßliches Mücken-übertragenes Flavivirus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "62958000",
+        "display": "Venezuelanische-equine-Enzephalomyelitis-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "51045004",
+        "display": "Mucambo-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "68262008",
+        "display": "Montana-Myotis-Leukoenzephalitis-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "46098008",
+        "display": "Bukalassa-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "91412000",
+        "display": "Kyzylagch-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "23264006",
+        "display": "Ndumu-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "53694009",
+        "display": "Tonate-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "68096005",
+        "display": "Bagaza-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "90868008",
+        "display": "Carey-Island-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "51741004",
+        "display": "Saumarez-Reef-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "47637005",
+        "display": "Ntaya-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "50471002",
+        "display": "Zika-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "11428003",
+        "display": "Westliche-equine-Enzephalomyelitis-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "88920004",
+        "display": "Pixuna-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "322070401000087107",
+        "display": "Salmon-pancreas-disease-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "1262000",
+        "display": "Sagiyama-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "721926000",
+        "display": "Venezuelanische-equine-Enzephalomyelitis-Virus, Stamm AG80-663"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "260373001",
+        "display": "Detected (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "65090000",
+        "display": "Royal-Farm-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "414649007",
+        "display": "Säugetier-tick-borne-Virus-Gruppe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "33660003",
+        "display": "Oropouche-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "19389005",
+        "display": "Kadam-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "70101005",
+        "display": "Cabassou-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "38222004",
+        "display": "Spondweni-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "8905000",
+        "display": "O'nyong-nyong-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "243600001",
+        "display": "Gattung Alphavirus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "429172006",
+        "display": "Ntaya-Virus-Gruppe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "1255965005",
+        "display": "Susceptible with increased exposure (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "407540001",
+        "display": "Japanische Enzephalitis-Virus-Gruppe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "30681002",
+        "display": "Sindbis-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "56932004",
+        "display": "Barmah-Forest-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "19874008",
+        "display": "Mayaro-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "45838003",
+        "display": "Powassan-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "64149007",
+        "display": "Bijou Bridge-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "428354003",
+        "display": "Seabird-tick-borne-Virus-Gruppe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "407466000",
+        "display": "Gattung Orthobunyavirus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "16604006",
+        "display": "Wataroa-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "60542003",
+        "display": "Koutango-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "14191007",
+        "display": "Entebbe-Fledermaus-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "243603004",
+        "display": "Japanische B-Enzephalitis-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "31719006",
+        "display": "Fort-Morgan-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "407541002",
+        "display": "Kokobera-Virus-Gruppe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "32137001",
+        "display": "Kyasanur-Wald-Fieber-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "76383005",
+        "display": "Dakar-Fledermaus-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "31989009",
+        "display": "Murray-Valley-Enzephalitis-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "32458000",
+        "display": "Ross River-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "58432001",
+        "display": "Saint-Louis-Enzephalitis-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "68323002",
+        "display": "Bussuquara-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "44725007",
+        "display": "Gattung Orbivirus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "5531007",
+        "display": "Cowbone-Ridge-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "61728001",
+        "display": "Batu-Cave-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "60420002",
+        "display": "Kokobera-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "428380002",
+        "display": "Spondweni-Virus-Gruppe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "87149006",
+        "display": "Aura-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "407475003",
+        "display": "Sandfliegenfieber-Sicilian-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "51253001",
+        "display": "Toscana-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "64995004",
+        "display": "Ilheus-virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "14267007",
+        "display": "Negishi-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "28375005",
+        "display": "Gattung Flavivirus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "51439004",
+        "display": "Omsk-Hämorrhagisches-Fieber-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "12576002",
+        "display": "Venezuelanische-equine-Enzephalomyelitis-Virus, Stamm Everglades FE3-7C"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "27530005",
+        "display": "Louping-ill-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "312318005",
+        "display": "Ockelbo-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "314824006",
+        "display": "Mutmaßliches Flavivirus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "131196009",
+        "display": "Susceptible (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "26130005",
+        "display": "Getah-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "264841006",
+        "display": "Intermediately susceptible (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "61023003",
+        "display": "Jutiapa-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "260408008",
+        "display": "Weakly positive (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "4729008",
+        "display": "Tembusu-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "23466005",
+        "display": "Langat-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "243601002",
+        "display": "Östliche-equine-Enzephalitis-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "90596006",
+        "display": "Una-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "79809000",
+        "display": "Karshi-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "312319002",
+        "display": "Rio-Bravo-Virus-Gruppe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "764949001",
+        "display": "Alkhurma-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "15184004",
+        "display": "Sokoluk-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "260415000",
+        "display": "Not detected (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "39982002",
+        "display": "Sandfliegenfieber-Naples-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "85183000",
+        "display": "Usutu-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "21676006",
+        "display": "Middelburg-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "55249007",
+        "display": "Tyuleniy-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "82334004",
+        "display": "Indeterminate (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "54521007",
+        "display": "Alfuy-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "10828004",
+        "display": "Positive (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "38113008",
+        "display": "Apoi-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "84133002",
+        "display": "Bebaru-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "48439003",
+        "display": "Stratford-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "397582004",
+        "display": "Hepatitis-G-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "588234111000087104",
+        "display": "Highlands-J-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "428729001",
+        "display": "Aroa-Virus-Gruppe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "71518008",
+        "display": "Rocio-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "76833007",
+        "display": "Phnom-Penh-Fledermaus-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "710254005",
+        "display": "78V-3531-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "77985003",
+        "display": "Rio-Bravo-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "42425007",
+        "display": "Equivocal (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "55345004",
+        "display": "Semliki Forest-Virus"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "30714006",
+        "display": "Resistant (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "76850009",
+        "display": "Israel-Truthahn-Meningoenzephalitis-Virus"
+      }
+    ]
+  }
+}

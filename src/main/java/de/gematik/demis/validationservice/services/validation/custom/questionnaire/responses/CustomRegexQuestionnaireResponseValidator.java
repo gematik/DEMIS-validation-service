@@ -1,10 +1,10 @@
-package de.gematik.demis.validationservice.services.validation.custom;
+package de.gematik.demis.validationservice.services.validation.custom.questionnaire.responses;
 
 /*-
  * #%L
  * validation-service
  * %%
- * Copyright (C) 2025 gematik GmbH
+ * Copyright (C) 2025 - 2026 gematik GmbH
  * %%
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
@@ -22,23 +22,30 @@ package de.gematik.demis.validationservice.services.validation.custom;
  *
  * *******
  *
- * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
+ * For additional notes and disclaimer from gematik and in case of changes by gematik,
+ * find details in the "Readme" file.
  * #L%
  */
 
 import ca.uhn.fhir.validation.IValidationContext;
 import ca.uhn.fhir.validation.IValidatorModule;
 import ca.uhn.fhir.validation.SingleValidationMessage;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
 import org.hl7.fhir.instance.model.api.IBaseResource;
-import org.hl7.fhir.r4.model.*;
+import org.hl7.fhir.r4.model.DateType;
+import org.hl7.fhir.r4.model.Extension;
+import org.hl7.fhir.r4.model.Questionnaire;
+import org.hl7.fhir.r4.model.QuestionnaireResponse;
+import org.hl7.fhir.r4.model.StringType;
 
 /**
  * Custom validator for validating FHIR QuestionnaireResponses using regex patterns. Implements the
  * IValidatorModule interface to validate resources.
  */
-public class CustomRegexValidator extends AbstractCustomValidator implements IValidatorModule {
+public class CustomRegexQuestionnaireResponseValidator
+    extends AbstractCustomQuestionnaireResponseValidator implements IValidatorModule {
 
   /**
    * Constructor to initialize the validator with a map of questionnaires.
@@ -46,7 +53,7 @@ public class CustomRegexValidator extends AbstractCustomValidator implements IVa
    * @param questionnaireMap A map of questionnaire URLs to IBaseResource objects. Only
    *     Questionnaire resources are retained.
    */
-  public CustomRegexValidator(Map<String, IBaseResource> questionnaireMap) {
+  public CustomRegexQuestionnaireResponseValidator(Map<String, IBaseResource> questionnaireMap) {
     super(questionnaireMap);
   }
 

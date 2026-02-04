@@ -4,7 +4,7 @@ package de.gematik.demis.validationservice.integration;
  * #%L
  * validation-service
  * %%
- * Copyright (C) 2025 gematik GmbH
+ * Copyright (C) 2025 - 2026 gematik GmbH
  * %%
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
@@ -22,7 +22,8 @@ package de.gematik.demis.validationservice.integration;
  *
  * *******
  *
- * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
+ * For additional notes and disclaimer from gematik and in case of changes by gematik,
+ * find details in the "Readme" file.
  * #L%
  */
 
@@ -47,10 +48,10 @@ import org.springframework.test.web.servlet.MockMvc;
     properties = {
       "feature.flag.custom.regex.validator.enabled=true",
       "feature.flag.custom.quantity.validator.enabled=true",
-      "demis.validation-service.profiles.basepath=src/test/resources/integrationtests/customValidators",
+      "demis.validation-service.profiles.basepath=src/test/resources/integrationtests/customValidators/quantity",
       "demis.validation-service.profiles.versions=6.1.2"
     })
-class CustomValidatorIntegrationTest {
+class CustomQuantityValidatorIntegrationTest {
   @Autowired private MockMvc mockMvc;
 
   @Test

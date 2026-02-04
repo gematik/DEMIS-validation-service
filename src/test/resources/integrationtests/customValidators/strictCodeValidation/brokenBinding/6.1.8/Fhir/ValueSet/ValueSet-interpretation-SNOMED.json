@@ -1,0 +1,270 @@
+{
+  "resourceType": "ValueSet",
+  "id": "interpretation-SNOMED",
+  "url": "https://demis.rki.de/fhir/ValueSet/interpretation-SNOMED",
+  "version": "1.1.0",
+  "name": "Interpretation-SNOMED",
+  "title": "SNOMED-Interpretation des Testergebnisses",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-04-08",
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "demis-support@rki.de"
+        }
+      ]
+    }
+  ],
+  "description": "Das ValueSet Interpretation-SNOMED enthält die SNOMED-Codes für die Interpretation des Testergebnisses.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "version": "ALPHA-2",
+          "code": "DE"
+        }
+      ]
+    }
+  ],
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "10828004",
+            "display": "Positive (qualifier value)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Positiv"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "1255965005",
+            "display": "Susceptible with increased exposure (qualifier value)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Empfindlich bei erhöhter Exposition"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "131196009",
+            "display": "Susceptible (qualifier value)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Empfindlich"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "260373001",
+            "display": "Detected (qualifier value)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Nachgewiesen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "260385009",
+            "display": "Negative (qualifier value)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Negativ"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "260415000",
+            "display": "Not detected (qualifier value)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Nicht nachgewiesen"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "264841006",
+            "display": "Intermediately susceptible (qualifier value)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Intermediät empfindlich"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "30714006",
+            "display": "Resistant (qualifier value)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Resistent"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "42425007",
+            "display": "Equivocal (qualifier value)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Grenzwertig"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "82334004",
+            "display": "Indeterminate (qualifier value)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Uneindeutig"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2025-04-08T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "260373001",
+        "display": "Detected (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "82334004",
+        "display": "Indeterminate (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "260385009",
+        "display": "Negative (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "10828004",
+        "display": "Positive (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "131196009",
+        "display": "Susceptible (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "260415000",
+        "display": "Not detected (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "42425007",
+        "display": "Equivocal (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "1255965005",
+        "display": "Susceptible with increased exposure (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "264841006",
+        "display": "Intermediately susceptible (qualifier value)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "30714006",
+        "display": "Resistant (qualifier value)"
+      }
+    ]
+  }
+}

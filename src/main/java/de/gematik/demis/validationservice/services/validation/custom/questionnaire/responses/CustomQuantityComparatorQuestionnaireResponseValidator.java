@@ -1,10 +1,10 @@
-package de.gematik.demis.validationservice.services.validation.custom;
+package de.gematik.demis.validationservice.services.validation.custom.questionnaire.responses;
 
 /*-
  * #%L
  * validation-service
  * %%
- * Copyright (C) 2025 gematik GmbH
+ * Copyright (C) 2025 - 2026 gematik GmbH
  * %%
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
@@ -22,22 +22,26 @@ package de.gematik.demis.validationservice.services.validation.custom;
  *
  * *******
  *
- * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
+ * For additional notes and disclaimer from gematik and in case of changes by gematik,
+ * find details in the "Readme" file.
  * #L%
  */
 
 import ca.uhn.fhir.validation.IValidationContext;
 import ca.uhn.fhir.validation.IValidatorModule;
-import java.util.*;
+import java.util.Map;
 import org.hl7.fhir.instance.model.api.IBaseResource;
-import org.hl7.fhir.r4.model.*;
+import org.hl7.fhir.r4.model.Extension;
+import org.hl7.fhir.r4.model.Quantity;
+import org.hl7.fhir.r4.model.Questionnaire;
+import org.hl7.fhir.r4.model.QuestionnaireResponse;
 
 /**
  * Custom validator for comparing quantities in FHIR QuestionnaireResponses. Implements the
  * IValidatorModule interface to validate resources.
  */
-public class CustomQuantityComparatorValidator extends AbstractCustomValidator
-    implements IValidatorModule {
+public class CustomQuantityComparatorQuestionnaireResponseValidator
+    extends AbstractCustomQuestionnaireResponseValidator implements IValidatorModule {
 
   /**
    * Constructor to initialize the validator with a map of questionnaires.
@@ -45,7 +49,8 @@ public class CustomQuantityComparatorValidator extends AbstractCustomValidator
    * @param questionnaireMap A map of questionnaire URLs to IBaseResource objects. Only
    *     Questionnaire resources are retained.
    */
-  public CustomQuantityComparatorValidator(Map<String, IBaseResource> questionnaireMap) {
+  public CustomQuantityComparatorQuestionnaireResponseValidator(
+      Map<String, IBaseResource> questionnaireMap) {
     super(questionnaireMap);
   }
 

@@ -1,0 +1,492 @@
+{
+  "resourceType": "ValueSet",
+  "language": "en",
+  "url": "http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.1.11.78"
+    }
+  ],
+  "version": "3.0.0",
+  "name": "ObservationInterpretation",
+  "title": "ObservationInterpretation",
+  "status": "active",
+  "experimental": false,
+  "date": "2014-03-26",
+  "expansion": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "uri",
+            "valueUri": "http://hl7.org/fhir/concept-properties#status"
+          },
+          {
+            "url": "code",
+            "valueCode": "status"
+          }
+        ],
+        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property"
+      }
+    ],
+    "identifier": "urn:uuid:a34363b0-cc25-481f-b9fc-c9cad2c9c9c3",
+    "timestamp": "2025-12-03T17:58:07.941Z",
+    "total": 57,
+    "parameter": [
+      {
+        "name": "displayLanguage",
+        "valueCode": "de, en-US; q=0.7, en; q=0.3"
+      },
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation|3.0.0"
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "abstract": true,
+        "code": "_GeneticObservationInterpretation",
+        "display": "GeneticObservationInterpretation"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "abstract": true,
+        "code": "_ObservationInterpretationChange",
+        "display": "ObservationInterpretationChange"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "abstract": true,
+        "code": "_ObservationInterpretationExceptions",
+        "display": "ObservationInterpretationExceptions"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "abstract": true,
+        "code": "_ObservationInterpretationNormality",
+        "display": "ObservationInterpretationNormality"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "abstract": true,
+        "code": "_ObservationInterpretationSusceptibility",
+        "display": "ObservationInterpretationSusceptibility"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "EX",
+        "display": "outside threshold"
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "deprecated"
+              }
+            ],
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "HM",
+        "display": "Hold for Medical Review"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "abstract": true,
+        "code": "ObservationInterpretationDetection",
+        "display": "ObservationInterpretationDetection"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "abstract": true,
+        "code": "ObservationInterpretationExpectation",
+        "display": "ObservationInterpretationExpectation"
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "deprecated"
+              }
+            ],
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "OBX",
+        "display": "Interpretation qualifiers in separate OBX segments"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "abstract": true,
+        "code": "ReactivityObservationInterpretation",
+        "display": "ReactivityObservationInterpretation"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "CAR",
+        "display": "Carrier"
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "deprecated"
+              }
+            ],
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "Carrier",
+        "display": "Carrier"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "B",
+        "display": "Better"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "D",
+        "display": "Significant change down"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "U",
+        "display": "Significant change up"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "W",
+        "display": "Worse"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "<",
+        "display": "Off scale low"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": ">",
+        "display": "Off scale high"
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "deprecated"
+              }
+            ],
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "AC",
+        "display": "Anti-complementary substances present"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "IE",
+        "display": "Insufficient evidence"
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "deprecated"
+              }
+            ],
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "QCF",
+        "display": "Quality control failure"
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "deprecated"
+              }
+            ],
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "TOX",
+        "display": "Cytotoxic substance present"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "A",
+        "display": "Abnormal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "N",
+        "display": "Normal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "I",
+        "display": "Intermediate"
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "deprecated"
+              }
+            ],
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "MS",
+        "display": "moderately susceptible"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "NCL",
+        "display": "No CLSI defined breakpoint"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "NS",
+        "display": "Non-susceptible"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "R",
+        "display": "Resistant"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "S",
+        "display": "Susceptible"
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "deprecated"
+              }
+            ],
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "VS",
+        "display": "very susceptible"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "AA",
+        "display": "Critical abnormal"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "H",
+        "display": "High"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "L",
+        "display": "Low"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "HH",
+        "display": "Critical high"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "LL",
+        "display": "Critical low"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "HX",
+        "display": "above high threshold"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "LX",
+        "display": "below low threshold"
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "deprecated"
+              }
+            ],
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "H>",
+        "display": "Significantly high"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "HU",
+        "display": "Significantly high"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "E",
+        "display": "Equivocal"
+      },
+      {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "deprecated"
+              }
+            ],
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property"
+          }
+        ],
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "L<",
+        "display": "Significantly low"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "LU",
+        "display": "Significantly low"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "ND",
+        "display": "Not detected"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "IND",
+        "display": "Indeterminate"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "NEG",
+        "display": "Negative"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "POS",
+        "display": "Positive"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "EXP",
+        "display": "Expected"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "UNE",
+        "display": "Unexpected"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "DET",
+        "display": "Detected"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "SYN-R",
+        "display": "Synergy - resistant"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "NR",
+        "display": "Non-reactive"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "RR",
+        "display": "Reactive"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "WR",
+        "display": "Weakly reactive"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "SDD",
+        "display": "Susceptible-dose dependent"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "SYN-S",
+        "display": "Synergy - susceptible"
+      }
+    ]
+  }
+}

@@ -1,6 +1,14 @@
-<img align="right" width="250" height="47" src="media/Gematik_Logo_Flag.png"/> <br/>    
+<div style="text-align:right"><img src="https://raw.githubusercontent.com/gematik/gematik.github.io/master/Gematik_Logo_Flag_With_Background.png" width="250" height="47" alt="gematik GmbH Logo"/> <br/> </div> <br/>    
 
 # Release Validation-Service
+
+## Release 2.11.0
+- added new validation module for strict validation of codings with fragmented code systems and required binding for a
+  value set.
+- upgrade fhir-package-initializer to 1.0.6 for faster package loading
+- validate extensions in FHIR resources and log warnings for unexpected extensions
+- deny modifier extensions
+- update spring-parent version to 2.14.15
 
 ## Release 2.10.1
 - removed feature flag FEATURE_FLAG_FILTERED_VALIDATION_ERRORS_DISABLED from values.yaml

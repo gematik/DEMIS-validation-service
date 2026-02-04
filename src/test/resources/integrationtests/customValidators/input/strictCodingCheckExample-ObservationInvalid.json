@@ -1,0 +1,396 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "lastUpdated": "2021-11-12T22:50:01.000+01:00",
+    "profile": [
+      "https://demis.rki.de/fhir/StructureDefinition/NotificationBundleLaboratory"
+    ]
+  },
+  "identifier": {
+    "system": "https://demis.rki.de/fhir/NamingSystem/NotificationBundleId",
+    "value": "b509a9d8-2135-3760-b664-86b74013202a"
+  },
+  "type": "document",
+  "timestamp": "2021-11-12T22:50:01.000+01:00",
+  "entry": [
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Composition/b684b3d0-d599-301e-91c3-2f62264bf37b",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "b684b3d0-d599-301e-91c3-2f62264bf37b",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/NotificationLaboratory"
+          ]
+        },
+        "identifier": {
+          "system": "https://demis.rki.de/fhir/NamingSystem/NotificationId",
+          "value": "81eb659e-4277-49f3-82cf-877d18fe8dbb"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34782-3",
+              "display": "Infectious disease Note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/0f272475-9fed-31f7-b837-ecf1fb1dd252"
+        },
+        "date": "2021-11-12T22:50:00.000+01:00",
+        "author": [
+          {
+            "reference": "PractitionerRole/333a559f-1256-3098-a49b-ebb8bb0f5b19"
+          }
+        ],
+        "title": "Erregernachweismeldung",
+        "section": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "11502-2",
+                  "display": "Laboratory report"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "DiagnosticReport/f91e840c-5f79-33c8-874c-4f246a5ffc82"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Patient/0f272475-9fed-31f7-b837-ecf1fb1dd252",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "0f272475-9fed-31f7-b837-ecf1fb1dd252",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/NotifiedPerson"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Tester",
+            "given": [
+              "Testus"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1978-12-12",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "https://demis.rki.de/fhir/StructureDefinition/AddressUse",
+                "valueCoding": {
+                  "system": "https://demis.rki.de/fhir/CodeSystem/addressUse",
+                  "code": "primary"
+                }
+              }
+            ],
+            "line": [
+              "Teststr. 123"
+            ],
+            "city": "Lauenburg",
+            "postalCode": "37154",
+            "country": "DE"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/PractitionerRole/333a559f-1256-3098-a49b-ebb8bb0f5b19",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "333a559f-1256-3098-a49b-ebb8bb0f5b19",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/NotifierRole"
+          ]
+        },
+        "organization": {
+          "reference": "Organization/aa85734c-3c98-39ae-b970-1a4298e2fcf1"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Organization/aa85734c-3c98-39ae-b970-1a4298e2fcf1",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "aa85734c-3c98-39ae-b970-1a4298e2fcf1",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/NotifierFacility"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://demis.rki.de/fhir/NamingSystem/DemisLaboratoryId",
+            "value": "12345"
+          },
+          {
+            "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR",
+            "value": "987654300"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+                "code": "laboratory",
+                "display": "Erregerdiagnostische Untersuchungsstelle"
+              }
+            ]
+          }
+        ],
+        "name": "Primärlabor",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0309876543210",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Dingsweg 321"
+            ],
+            "city": "Berlin",
+            "postalCode": "37154",
+            "country": "DE"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/PractitionerRole/52347f9f-2d01-3c6a-99e3-507a691b73b4",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "52347f9f-2d01-3c6a-99e3-507a691b73b4",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/SubmittingRole"
+          ]
+        },
+        "organization": {
+          "reference": "Organization/4be553fc-9bfc-3b0c-ad10-a6f7f472fd8e"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Organization/4be553fc-9bfc-3b0c-ad10-a6f7f472fd8e",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "4be553fc-9bfc-3b0c-ad10-a6f7f472fd8e",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/SubmittingFacility"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR",
+            "value": "123456780"
+          }
+        ],
+        "name": "Einsendepraxis ABC",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "030 1234567890",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Teststr. 123"
+            ],
+            "city": "Berlin",
+            "postalCode": "37154",
+            "country": "DE"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/DiagnosticReport/f91e840c-5f79-33c8-874c-4f246a5ffc82",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "f91e840c-5f79-33c8-874c-4f246a5ffc82",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportABVP"
+          ]
+        },
+        "basedOn": [
+          {
+            "type": "ServiceRequest",
+            "identifier": {
+              "system": "https://demis.rki.de/fhir/NamingSystem/ServiceRequestId",
+              "value": "2021-0021201"
+            }
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+              "version": "1.13.2",
+              "code": "abvp",
+              "display": "Arboviren (sonstige)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/0f272475-9fed-31f7-b837-ecf1fb1dd252"
+        },
+        "issued": "2021-11-12T22:49:00.000+01:00",
+        "result": [
+          {
+            "reference": "Observation/f9bc414d-1e28-37ba-a45e-aafa832b545c"
+          }
+        ],
+        "conclusion": "Ich bin die textuelle Conclusion ...",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "https://demis.rki.de/fhir/CodeSystem/conclusionCode",
+                "code": "pathogenDetected",
+                "display": "Meldepflichtiger Erreger nachgewiesen"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Observation/f9bc414d-1e28-37ba-a45e-aafa832b545c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f9bc414d-1e28-37ba-a45e-aafa832b545c",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/PathogenDetectionABVP"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "version": "2.79",
+              "code": "XXXXXX",
+              "display": "Arbovirus identified in Blood by Organism specific culture"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/0f272475-9fed-31f7-b837-ecf1fb1dd252"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "version": "2.79",
+              "code": "LA6576-8",
+              "display": "Positive"
+            }
+          ]
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "POS",
+                "display": "Positive"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Nette Zusatzinformation"
+          }
+        ],
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/sct/11000274103/version/20241115",
+              "code": "61594008",
+              "display": "Microbial culture (procedure)"
+            }
+          ]
+        },
+        "specimen": {
+          "reference": "Specimen/4016fbc2-2439-3f6d-8935-0eb71c3d487c"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Specimen/4016fbc2-2439-3f6d-8935-0eb71c3d487c",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "4016fbc2-2439-3f6d-8935-0eb71c3d487c",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/SpecimenABVP"
+          ]
+        },
+        "status": "available",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/sct/11000274103/version/20241115",
+              "code": "119297000",
+              "display": "Blood specimen (specimen)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/0f272475-9fed-31f7-b837-ecf1fb1dd252"
+        },
+        "receivedTime": "2021-11-12T17:24:00.000+01:00",
+        "collection": {
+          "collector": {
+            "reference": "PractitionerRole/52347f9f-2d01-3c6a-99e3-507a691b73b4"
+          },
+          "collectedDateTime": "2021-11-12T12:24:00.000+01:00"
+        },
+        "note": [
+          {
+            "text": "Ich bin eine interessante Zusatzinformation ..."
+          }
+        ]
+      }
+    }
+  ]
+}

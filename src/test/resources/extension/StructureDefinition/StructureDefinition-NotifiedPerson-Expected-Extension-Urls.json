@@ -1,0 +1,27 @@
+{
+  "Patient.name.family.extension": [
+    "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+    "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+    "http://hl7.org/fhir/StructureDefinition/humanname-own-name"
+  ],
+  "Patient.address.line.extension": [
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox"
+  ],
+  "Patient.name.prefix.extension": [
+    "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+  ],
+  "Patient.gender.extension": [
+    "http://fhir.de/StructureDefinition/gender-amtlich-de"
+  ],
+  "Patient.address.extension": [
+    "https://demis.rki.de/fhir/StructureDefinition/AddressUse",
+    "https://demis.rki.de/fhir/StructureDefinition/FacilityAddressNotifiedPerson",
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct"
+  ],
+  "Patient.telecom.extension": [
+    "https://demis.rki.de/fhir/StructureDefinition/Comment"
+  ]
+}

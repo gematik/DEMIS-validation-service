@@ -4,7 +4,7 @@ package de.gematik.demis.validationservice.services.terminology.remote;
  * #%L
  * validation-service
  * %%
- * Copyright (C) 2025 gematik GmbH
+ * Copyright (C) 2025 - 2026 gematik GmbH
  * %%
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
@@ -22,7 +22,8 @@ package de.gematik.demis.validationservice.services.terminology.remote;
  *
  * *******
  *
- * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
+ * For additional notes and disclaimer from gematik and in case of changes by gematik,
+ * find details in the "Readme" file.
  * #L%
  */
 
@@ -45,6 +46,7 @@ import de.gematik.demis.validationservice.config.ValidationConfigProperties;
 import de.gematik.demis.validationservice.config.ValidationServiceConfiguration;
 import de.gematik.demis.validationservice.services.ProfileParserService;
 import de.gematik.demis.validationservice.services.validation.FhirValidatorFactory;
+import de.gematik.demis.validationservice.services.validation.extension.ExtensionAllowedValidatorProvider;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
@@ -59,6 +61,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 @SpringBootTest(
     classes = {
@@ -102,6 +105,7 @@ class RemoteTerminologyValidationIntegrationTest {
 {"resourceType":"Parameters","parameter":[{"name":"result","valueBoolean":false}]}
 """;
 
+  @MockitoBean ExtensionAllowedValidatorProvider extensionAllowedValidatorProvider;
   @Autowired FhirValidatorFactory fhirValidatorFactory;
 
   private FhirValidator fhirValidator;

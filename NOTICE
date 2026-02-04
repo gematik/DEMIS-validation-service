@@ -30,7 +30,7 @@ This project includes:
   asm under BSD-3-Clause
   ASM based accessors helper used by json-smart under The Apache Software License, Version 2.0
   AspectJ Weaver under Eclipse Public License - v 2.0
-  AssertJ Core under Apache-2.0
+  AssertJ Core under Apache License, Version 2.0
   attoparser under The Apache Software License, Version 2.0
   Awaitility under Apache 2.0
   Byte Buddy (without dependencies) under Apache License, Version 2.0

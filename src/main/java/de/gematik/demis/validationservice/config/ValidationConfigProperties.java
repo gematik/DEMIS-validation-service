@@ -4,7 +4,7 @@ package de.gematik.demis.validationservice.config;
  * #%L
  * validation-service
  * %%
- * Copyright (C) 2025 gematik GmbH
+ * Copyright (C) 2025 - 2026 gematik GmbH
  * %%
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
@@ -22,7 +22,8 @@ package de.gematik.demis.validationservice.config;
  *
  * *******
  *
- * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
+ * For additional notes and disclaimer from gematik and in case of changes by gematik,
+ * find details in the "Readme" file.
  * #L%
  */
 
@@ -49,7 +50,8 @@ public record ValidationConfigProperties(
     @Bean @NotNull @Valid ValidationConfigProperties.ProfilesProperties profiles,
     @NotNull Locale locale,
     @NotNull ResultSeverityEnum minSeverityOutcome,
-    @Name("cache.expireAfterAccessMins") @Positive long cacheExpireAfterAccessTimeoutMins) {
+    @Name("cache.expireAfterAccessMins") @Positive long cacheExpireAfterAccessTimeoutMins,
+    @NotNull ResultSeverityEnum unexpectedExtensionSeverity) {
 
   @PostConstruct
   void log() {

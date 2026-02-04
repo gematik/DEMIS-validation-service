@@ -4,7 +4,7 @@ package de.gematik.demis.validationservice.services.validation;
  * #%L
  * validation-service
  * %%
- * Copyright (C) 2025 gematik GmbH
+ * Copyright (C) 2025 - 2026 gematik GmbH
  * %%
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
@@ -22,7 +22,8 @@ package de.gematik.demis.validationservice.services.validation;
  *
  * *******
  *
- * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
+ * For additional notes and disclaimer from gematik and in case of changes by gematik,
+ * find details in the "Readme" file.
  * #L%
  */
 
@@ -34,8 +35,10 @@ import de.gematik.demis.validationservice.config.ValidationConfigProperties;
 import de.gematik.demis.validationservice.services.ProfileParserService;
 import de.gematik.demis.validationservice.services.ProfileSnapshot;
 import de.gematik.demis.validationservice.services.terminology.TerminologyValidationProvider;
-import de.gematik.demis.validationservice.services.validation.custom.CustomQuantityComparatorValidator;
-import de.gematik.demis.validationservice.services.validation.custom.CustomRegexValidator;
+import de.gematik.demis.validationservice.services.validation.custom.questionnaire.responses.CustomQuantityComparatorQuestionnaireResponseValidator;
+import de.gematik.demis.validationservice.services.validation.custom.questionnaire.responses.CustomRegexQuestionnaireResponseValidator;
+import de.gematik.demis.validationservice.services.validation.custom.strict.valuesets.StrictValueSetMembershipValidator;
+import de.gematik.demis.validationservice.services.validation.extension.ExtensionAllowedValidatorProvider;
 import java.nio.file.Path;
 import java.util.concurrent.TimeUnit;
 import lombok.RequiredArgsConstructor;
@@ -60,6 +63,7 @@ public final class FhirValidatorFactory {
   private final FhirContext fhirContext;
   private final ValidationConfigProperties configProperties;
   private final TerminologyValidationProvider terminologyValidationProvider;
+  private final ExtensionAllowedValidatorProvider extensionAllowedValidatorProvider;
   private ProfileSnapshot profileSnapshot;
 
   @Value("${feature.flag.common.code.system.terminology.enabled}")
@@ -70,6 +74,15 @@ public final class FhirValidatorFactory {
 
   @Value("${feature.flag.custom.regex.validator.enabled}")
   private boolean featureFlagCustomRegexValidatorEnabled;
+
+  @Value("${feature.flag.validation.extension.check.enabled}")
+  private boolean featureFlagValidationExtensionCheckEnabled;
+
+  @Value("${feature.flag.deny.modifier.extensions}")
+  private boolean featureFlagDenyModifierExtensions;
+
+  @Value("${feature.flag.additional.strict.coding.validator.enabled}")
+  private boolean featureFlagAdditionalStrictCodingValidatorEnabled;
 
   public FhirValidator createFhirValidator(final Path profilesPath) {
     log.info("Start creating and initializing fhir validator for profiles path {}", profilesPath);
@@ -85,12 +98,27 @@ public final class FhirValidatorFactory {
     fhirModule.setErrorForUnknownProfiles(true);
     final var validator = fhirContext.newValidator();
     validator.registerValidatorModule(fhirModule);
+    // additional validation modules
+    if (featureFlagValidationExtensionCheckEnabled || featureFlagDenyModifierExtensions) {
+      validator.registerValidatorModule(
+          extensionAllowedValidatorProvider.createValidatorModule(
+              validationSupport,
+              featureFlagValidationExtensionCheckEnabled,
+              featureFlagDenyModifierExtensions));
+    }
     if (featureFlagCustomQuantityValidatorEnabled) {
       validator.registerValidatorModule(
-          new CustomQuantityComparatorValidator(profileSnapshot.questionnaires()));
+          new CustomQuantityComparatorQuestionnaireResponseValidator(
+              profileSnapshot.questionnaires()));
     }
     if (featureFlagCustomRegexValidatorEnabled) {
-      validator.registerValidatorModule(new CustomRegexValidator(profileSnapshot.questionnaires()));
+      validator.registerValidatorModule(
+          new CustomRegexQuestionnaireResponseValidator(profileSnapshot.questionnaires()));
+    }
+    if (featureFlagAdditionalStrictCodingValidatorEnabled) {
+      validator.registerValidatorModule(
+          new StrictValueSetMembershipValidator(
+              profileSnapshot.valueSets(), profileSnapshot.structureDefinitions()));
     }
     return validator;
   }

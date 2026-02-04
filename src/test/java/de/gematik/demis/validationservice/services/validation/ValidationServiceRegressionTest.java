@@ -4,7 +4,7 @@ package de.gematik.demis.validationservice.services.validation;
  * #%L
  * validation-service
  * %%
- * Copyright (C) 2025 gematik GmbH
+ * Copyright (C) 2025 - 2026 gematik GmbH
  * %%
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
@@ -22,7 +22,8 @@ package de.gematik.demis.validationservice.services.validation;
  *
  * *******
  *
- * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
+ * For additional notes and disclaimer from gematik and in case of changes by gematik,
+ * find details in the "Readme" file.
  * #L%
  */
 
@@ -31,7 +32,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.ERROR;
 import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.FATAL;
 import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.INFORMATION;
-import static org.mockito.Mockito.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoInteractions;
+import static org.mockito.Mockito.when;
 
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.validation.FhirValidator;
@@ -104,7 +112,8 @@ class ValidationServiceRegressionTest {
     validationMetrics = spy(new ValidationMetrics(meterRegistry));
 
     final ValidationConfigProperties props =
-        new ValidationConfigProperties(null, Locale.getDefault(), ResultSeverityEnum.WARNING, 1);
+        new ValidationConfigProperties(
+            null, Locale.getDefault(), ResultSeverityEnum.WARNING, 1, ResultSeverityEnum.WARNING);
 
     final FilteredMessagePrefixesFactory filteredMessagePrefixesFactory =
         mock(FilteredMessagePrefixesFactory.class);

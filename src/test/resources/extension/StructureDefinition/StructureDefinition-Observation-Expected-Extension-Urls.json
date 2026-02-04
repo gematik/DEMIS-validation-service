@@ -1,0 +1,12 @@
+{
+  "Observation.referenceRange.extension": [
+    "https://demis.rki.de/fhir/ars/StructureDefinition/Norm"
+  ],
+  "Observation.extension": [
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy"
+  ],
+  "Observation.extension.extension": [
+    "observation",
+    "type"
+  ]
+}

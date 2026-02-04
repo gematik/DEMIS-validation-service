@@ -1,0 +1,326 @@
+{
+  "resourceType": "ValueSet",
+  "id": "materialABVP",
+  "url": "https://demis.rki.de/fhir/ValueSet/materialABVP",
+  "version": "1.10.0",
+  "name": "MaterialABVP",
+  "title": "Material für Arboviren (sonstige)",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-04-08",
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "demis-support@rki.de"
+        }
+      ]
+    }
+  ],
+  "description": "Das ValueSet MaterialABVP enthält die Codes der Materialien für Arboviren (sonstige).",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "version": "ALPHA-2",
+          "code": "DE"
+        }
+      ]
+    }
+  ],
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO.\r\n\r\nDieses Material enthält SNOMED Clinical Terms® (SNOMED CT®), die mit Genehmigung der International Health Terminology Standards Development Organisation (IHTSDO) verwendet werden. Alle Rechte vorbehalten. SNOMED CT® wurde ursprünglich vom College of American Pathologists entwickelt. \"SNOMED\" und \"SNOMED CT\" sind eingetragene Warenzeichen der IHTSDO.\r\n\r\nDownloadbedingungen für SNOMED-CT\r\n\r\nEnthält durch SNOMED International urheberrechtlich geschützte Information. Jede Verwendung von SNOMED CT in Deutschland erfordert eine vollgültige Affiliate Lizenz oder eine Sublizenz. Die entsprechende Lizenz ist kostenlos, vorausgesetzt die Verwendung findet nur in Deutschland statt und erfüllt die Bedingungen des Affiliate License Agreements. Affiliate Lizenzen können über das Mitglieder-Lizenzierungs- und Distributions-Service (MLDS) direkt beim jeweiligen NRC beantragt werden. https://mlds.ihtsdotools.org/#/landing/DE?lang=de\r\n\r\nContains information protected by copyright of SNOMED International. Any use of SNOMED CT in Austria requires a valid affiliate license or sublicense. The corresponding license is free of charge, provided that the use only takes place in Austria and fulfills the conditions of the Affiliate License Agreement. Affiliate licenses can be requested directly from the respective NRC via the Member Licensing and Distribution Service (MLDS). ttps://mlds.ihtsdotools.org/#/landing/DE?lang=de",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "concept": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
+            "code": "123038009",
+            "display": "Probenmaterial"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "119294007",
+            "display": "Trockenblutprobe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 72
+              }
+            ],
+            "code": "119297000",
+            "display": "Blutprobe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "119361006",
+            "display": "Plasmaprobe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "119364003",
+            "display": "Serumprobe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "122554006",
+            "display": "Kapillarblutprobe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "122555007",
+            "display": "Venöse Blutprobe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "122592007",
+            "display": "Azelluläre Blutprobe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "258580003",
+            "display": "Vollblutprobe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "303248007",
+            "display": "Blood film specimen (specimen)",
+            "designation": [
+              {
+                "language": "de-DE",
+                "value": "Blutfilm"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "440500007",
+            "display": "Trockenblutkarte",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000013009"
+                },
+                "value": "Dried Blood Spot Sample"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "445295009",
+            "display": "Blutprobe mit EDTA-Zusatz",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000013009"
+                },
+                "value": "EDTA-Blutprobe"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "708049000",
+            "display": "Plasmaprobe mit EDTA-Zusatz",
+            "designation": [
+              {
+                "language": "de-DE",
+                "use": {
+                  "system": "http://snomed.info/sct",
+                  "code": "900000000000013009"
+                },
+                "value": "EDTA-Plasmaprobe"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "737535000",
+            "display": "Blutausstrichprobe"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 0
+              }
+            ],
+            "code": "788707000",
+            "display": "Plasma-, Serum- oder Vollblutprobe"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2025-04-08T00:00:00+02:00",
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "788707000",
+        "display": "Plasma-, Serum- oder Vollblutprobe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "445295009",
+        "display": "Blutprobe mit EDTA-Zusatz"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "122592007",
+        "display": "Azelluläre Blutprobe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "258580003",
+        "display": "Vollblutprobe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "737535000",
+        "display": "Blutausstrichprobe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "123038009",
+        "display": "Probenmaterial"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "303248007",
+        "display": "Blood film specimen (specimen)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "122554006",
+        "display": "Kapillarblutprobe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "122555007",
+        "display": "Venöse Blutprobe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "708049000",
+        "display": "Plasmaprobe mit EDTA-Zusatz"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "119297000",
+        "display": "Blutprobe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "119361006",
+        "display": "Plasmaprobe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "440500007",
+        "display": "Trockenblutkarte"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "119364003",
+        "display": "Serumprobe"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11000274103/version/20241115",
+        "code": "119294007",
+        "display": "Trockenblutprobe"
+      }
+    ]
+  }
+}

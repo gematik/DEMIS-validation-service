@@ -4,7 +4,7 @@ package de.gematik.demis.validationservice.services.validation.custom;
  * #%L
  * validation-service
  * %%
- * Copyright (C) 2025 gematik GmbH
+ * Copyright (C) 2025 - 2026 gematik GmbH
  * %%
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
@@ -22,7 +22,8 @@ package de.gematik.demis.validationservice.services.validation.custom;
  *
  * *******
  *
- * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
+ * For additional notes and disclaimer from gematik and in case of changes by gematik,
+ * find details in the "Readme" file.
  * #L%
  */
 
@@ -31,6 +32,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.validation.FhirValidator;
 import ca.uhn.fhir.validation.ValidationResult;
+import de.gematik.demis.validationservice.services.validation.custom.questionnaire.responses.CustomQuantityComparatorQuestionnaireResponseValidator;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -61,7 +63,8 @@ class CustomQuantityComparatorValidatorTest {
         Map.of(questionnaire.getUrl(), questionnaire);
 
     validator = ctx.newValidator();
-    validator.registerValidatorModule(new CustomQuantityComparatorValidator(questionnaireMap));
+    validator.registerValidatorModule(
+        new CustomQuantityComparatorQuestionnaireResponseValidator(questionnaireMap));
   }
 
   private void assertValidQuantityResponse(String responsePath) throws IOException {
@@ -156,7 +159,8 @@ class CustomQuantityComparatorValidatorTest {
         Map.of(questionnaire.getUrl(), questionnaire);
 
     validator = singleCtx.newValidator();
-    validator.registerValidatorModule(new CustomQuantityComparatorValidator(questionnaireMap));
+    validator.registerValidatorModule(
+        new CustomQuantityComparatorQuestionnaireResponseValidator(questionnaireMap));
 
     String responseJson =
         Files.readString(
@@ -185,7 +189,8 @@ class CustomQuantityComparatorValidatorTest {
         Map.of(questionnaire.getUrl(), questionnaire);
 
     validator = singleCtx.newValidator();
-    validator.registerValidatorModule(new CustomQuantityComparatorValidator(questionnaireMap));
+    validator.registerValidatorModule(
+        new CustomQuantityComparatorQuestionnaireResponseValidator(questionnaireMap));
 
     String responseJson =
         Files.readString(

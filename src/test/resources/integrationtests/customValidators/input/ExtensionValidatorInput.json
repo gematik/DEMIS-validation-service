@@ -1,0 +1,461 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "content",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "dd7fac8c-592f-357d-aed3-a3c3268e2c81",
+        "meta": {
+          "lastUpdated": "2025-08-07T20:16:00.000+01:00",
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/NotificationBundleDiseaseNonNominal"
+          ]
+        },
+        "identifier": {
+          "system": "https://demis.rki.de/fhir/NamingSystem/NotificationBundleId",
+          "value": "7603833e-ad48-3782-848f-c4114f19bd0f"
+        },
+        "type": "document",
+        "timestamp": "2025-08-07T20:16:00.000+01:00",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:9d18faf8-abda-32ff-be8c-564470eb4ac1",
+            "resource": {
+              "resourceType": "Composition",
+              "meta": {
+                "profile": [
+                  "https://demis.rki.de/fhir/StructureDefinition/NotificationDiseaseNonNominalCHTD"
+                ]
+              },
+              "identifier": {
+                "system": "https://demis.rki.de/fhir/NamingSystem/NotificationId",
+                "value": "07eebd38-0f25-4926-87fb-b3e339ab3d7e"
+              },
+              "status": "final",
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "version": "2.79",
+                    "code": "34782-3",
+                    "display": "Infectious disease Note"
+                  }
+                ]
+              },
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "https://demis.rki.de/fhir/CodeSystem/notificationType",
+                      "code": "7.3",
+                      "display": "Meldung gemäß IfSG §7 Absatz 3"
+                    }
+                  ]
+                }
+              ],
+              "subject": {
+                "reference": "urn:uuid:36b79944-af90-31d2-81f2-a4dee73b2408"
+              },
+              "date": "2025-08-07T20:16:00.000+01:00",
+              "author": [
+                {
+                  "reference": "urn:uuid:903c05b0-aedf-33d8-80c5-213a77922dea"
+                }
+              ],
+              "title": "6.1_2",
+              "section": [
+                {
+                  "title": "Diagnose",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "https://demis.rki.de/fhir/CodeSystem/sectionCode",
+                        "code": "diagnosis",
+                        "display": "Diagnose"
+                      }
+                    ]
+                  },
+                  "entry": [
+                    {
+                      "reference": "urn:uuid:9b7d68c8-9cb7-36e9-88c6-66a7434d2e12"
+                    }
+                  ]
+                },
+                {
+                  "title": "Meldetatbestandsspezifische klinische und epidemiologische Angaben",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "https://demis.rki.de/fhir/CodeSystem/sectionCode",
+                        "code": "specificClinAndEpiInformation",
+                        "display": "Meldetatbestandsspezifische klinische und epidemiologische Angaben"
+                      }
+                    ]
+                  },
+                  "entry": [
+                    {
+                      "reference": "urn:uuid:095af118-a7a6-3d55-85d8-95700b352670"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:c3693584-2845-3f02-9f14-658b0a746bbe",
+            "resource": {
+              "resourceType": "Organization",
+              "meta": {
+                "profile": [
+                  "https://demis.rki.de/fhir/StructureDefinition/NotifiedPersonFacility"
+                ]
+              },
+              "name": "St. Josef Krankenhaus",
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "030 12345-0",
+                  "use": "work"
+                },
+                {
+                  "system": "email",
+                  "value": "st.josef@himmelhausen.de",
+                  "use": "work"
+                }
+              ],
+              "address": [
+                {
+                  "line": [
+                    "Wunderstr. 99"
+                  ],
+                  "city": "Berlin",
+                  "postalCode": "12105",
+                  "country": "DE"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:36b79944-af90-31d2-81f2-a4dee73b2408",
+            "resource": {
+              "resourceType": "Patient",
+              "meta": {
+                "profile": [
+                  "https://demis.rki.de/fhir/StructureDefinition/NotifiedPerson"
+                ]
+              },
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Müller",
+                  "given": [
+                    "Markus"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "01577894624248"
+                },
+                {
+                  "system": "email",
+                  "value": "test@test.de"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1960-11-22",
+              "address": [
+                {
+                  "extension": [
+                    {
+                      "url": "https://demis.rki.de/fhir/StructureDefinition/AddressUse",
+                      "valueCoding": {
+                        "system": "https://demis.rki.de/fhir/CodeSystem/addressUse",
+                        "code": "primary"
+                      }
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                      "valueCode": "unknown"
+                    },
+                    {
+                      "url": "https://demis.rki.de/fhir/StructureDefinition/FacilityAddressNotifiedPerson",
+                      "valueReference": {
+                        "reference": "urn:uuid:c3693584-2845-3f02-9f14-658b0a746bbe"
+                      }
+                    }
+                  ],
+                  "line": [
+                    "Poststr. 18"
+                  ],
+                  "city": "Berlin",
+                  "postalCode": "13353",
+                  "country": "DE"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:9b7d68c8-9cb7-36e9-88c6-66a7434d2e12",
+            "resource": {
+              "resourceType": "Condition",
+              "meta": {
+                "profile": [
+                  "https://demis.rki.de/fhir/StructureDefinition/DiseaseCHTD"
+                ]
+              },
+              "clinicalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active"
+                  }
+                ]
+              },
+              "verificationStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                    "code": "confirmed"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "system": "https://demis.rki.de/fhir/CodeSystem/notificationDiseaseCategory",
+                    "code": "chtd",
+                    "display": "Chlamydia trachomatis (L1 bis L3)"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "urn:uuid:36b79944-af90-31d2-81f2-a4dee73b2408"
+              },
+              "onsetDateTime": "2025-07-28",
+              "recordedDate": "2025-08-02",
+              "evidence": [
+                {
+                  "code": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "30746006",
+                          "display": "Lymphknotenschwellung"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "code": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "386661006",
+                          "display": "Fieber"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "note": [
+                {
+                  "text": "Textueller Hinweis"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:584ee0b6-0387-3d4a-af2e-cf2db671c57f",
+            "resource": {
+              "resourceType": "Organization",
+              "meta": {
+                "profile": [
+                  "https://demis.rki.de/fhir/StructureDefinition/NotifierFacility"
+                ]
+              },
+              "identifier": [
+                {
+                  "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR",
+                  "value": "123456780"
+                }
+              ],
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+                      "code": "hospital"
+                    }
+                  ]
+                }
+              ],
+              "name": "St. Josef Krankenhaus",
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "030 12345-0",
+                  "use": "work"
+                },
+                {
+                  "system": "email",
+                  "value": "st.josef@himmelhausen.de",
+                  "use": "work"
+                }
+              ],
+              "address": [
+                {
+                  "line": [
+                    "Wunderstr. 99"
+                  ],
+                  "city": "Berlin",
+                  "postalCode": "12105",
+                  "country": "DE"
+                }
+              ],
+              "contact": [
+                {
+                  "name": {
+                    "use": "official",
+                    "family": "Müller",
+                    "given": [
+                      "Heiner"
+                    ],
+                    "prefix": [
+                      "Dr."
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "030-12345-2323",
+                      "use": "work"
+                    }
+                  ],
+                  "address": {
+                    "line": [
+                      "Station 1, Gastroenterologie, Interne Str. 5"
+                    ],
+                    "city": "Berlin",
+                    "postalCode": "12105",
+                    "country": "DE"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:903c05b0-aedf-33d8-80c5-213a77922dea",
+            "resource": {
+              "resourceType": "PractitionerRole",
+              "meta": {
+                "profile": [
+                  "https://demis.rki.de/fhir/StructureDefinition/NotifierRole"
+                ]
+              },
+              "practitioner": {
+                "reference": "urn:uuid:9fc761e2-1824-31b2-83ef-79d0cc1742dc"
+              },
+              "organization": {
+                "reference": "urn:uuid:584ee0b6-0387-3d4a-af2e-cf2db671c57f"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:9fc761e2-1824-31b2-83ef-79d0cc1742dc",
+            "resource": {
+              "resourceType": "Practitioner",
+              "meta": {
+                "profile": [
+                  "https://demis.rki.de/fhir/StructureDefinition/Notifier"
+                ]
+              },
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Behandler-Eckert",
+                  "given": [
+                    "Medicus"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "0309876543354"
+                },
+                {
+                  "system": "email",
+                  "value": "Medicus.Behandler-Eckert@EinsendepraxisABC.de"
+                }
+              ],
+              "address": [
+                {
+                  "line": [
+                    "Dingsweg 321"
+                  ],
+                  "city": "Berlin",
+                  "postalCode": "13055",
+                  "country": "DE"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:095af118-a7a6-3d55-85d8-95700b352670",
+            "resource": {
+              "resourceType": "QuestionnaireResponse",
+              "meta": {
+                "profile": [
+                  "https://demis.rki.de/fhir/StructureDefinition/DiseaseInformationCHTD"
+                ]
+              },
+              "questionnaire": "https://demis.rki.de/fhir/Questionnaire/DiseaseQuestionsCHTD",
+              "status": "completed",
+              "subject": {
+                "reference": "urn:uuid:36b79944-af90-31d2-81f2-a4dee73b2408"
+              },
+              "item": [
+                {
+                  "linkId": "timeOfInfection",
+                  "answer": [
+                    {
+                      "valueDate": "2024-05",
+                      "_valueDate": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                            "valueCode": "unknown"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "newbornWeight",
+                  "answer": [
+                    {
+                      "valueQuantity": {
+                        "value": 3200,
+                        "unit": "g",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "g"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

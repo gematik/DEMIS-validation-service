@@ -1,0 +1,348 @@
+{
+  "resourceType": "ValueSet",
+  "id": "organizationType",
+  "url": "https://demis.rki.de/fhir/ValueSet/organizationType",
+  "version": "1.5.2",
+  "name": "OrganizationType",
+  "title": "Einrichtungsart",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-03-18",
+  "publisher": "Robert Koch-Institut",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "demis-support@rki.de"
+        }
+      ]
+    }
+  ],
+  "description": "Das ValueSet OrganizationType enthält die Codes der Einrichtungsarten.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "version": "ALPHA-2",
+          "code": "DE"
+        }
+      ]
+    }
+  ],
+  "copyright": "(C) 2021-2025 Robert Koch-Institut",
+  "compose": {
+    "include": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2"
+      }
+    ]
+  },
+  "expansion": {
+    "timestamp": "2025-03-18T00:00:00+01:00",
+    "contains": [
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "maternity",
+        "display": "Entbindungseinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "foodEstablmt",
+        "display": "Lebensmittelbetrieb"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "prison",
+        "display": "Justizvollzugsanstalt"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "homelessShelter",
+        "display": "Obdachlosenunterkunft"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "ship",
+        "display": "Schiff o.ä."
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "othPublicLab",
+        "display": "Sonstige öffentliche Untersuchungsstelle"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "publicHealthLab",
+        "display": "Medizinaluntersuchungsamt"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "childDayCare",
+        "display": "Kinderhort"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "outpatICServ",
+        "display": "Ambulanter Intensivpflegedienst"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "othHygRelFacility",
+        "display": "Sonstige hygienerelevante Einrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "disabledCareHome",
+        "display": "Einrichtung zur Betreuung/Unterbringung behinderter Menschen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "hospital",
+        "display": "Krankenhaus"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "pathology",
+        "display": "Pathologisch-anatomische Einrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "othMassAccom",
+        "display": "Sonstige Massenunterkunft"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "hotel",
+        "display": "Hotel o.ä."
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "physicianOffice",
+        "display": "Arztpraxis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "camping",
+        "display": "Campingplatz o.ä."
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "holidayHome",
+        "display": "Ferienwohnung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "emResServ",
+        "display": "Rettungsdienst"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "othOutpatCareS",
+        "display": "Sonstiger ambulanter Pflegedienst"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "dialysisFacility",
+        "display": "Dialyseeinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "medFacPHA",
+        "display": "Medizinische Einrichtung des ÖGDs"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "laboratory",
+        "display": "Erregerdiagnostische Untersuchungsstelle"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "othPrivatLab",
+        "display": "Sonstige private Untersuchungsstelle"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "outpatSurgery",
+        "display": "Einrichtung für ambulantes Operieren"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "civDisFacility",
+        "display": "Einrichtungen des Zivil- und Katastrophenschutzes"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "refLab",
+        "display": "Einrichtung der Spezialdiagnostik"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "dayHospital",
+        "display": "Tagesklinik"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "nursingHome",
+        "display": "voll- oder teilstationäre Einrichtung und besondere Wohnform zur Betreuung und Unterbringung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "holidayCamp",
+        "display": "Ferienlager"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "dentalSurgery",
+        "display": "Zahnarztpraxis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "assistedCareHome",
+        "display": "Einrichtung zur Betreuung/Unterbringung pflegebedürftiger Menschen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "psycFacility",
+        "display": "Psychotherapeutische Praxis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "migrantAccom",
+        "display": "Migrantenunterkunft"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "othEdFac",
+        "display": "sonstige Ausbildungseinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "childCareFacility",
+        "display": "Gemeinschaftseinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "othAccom",
+        "display": "Andere Unterkunft"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "childHome",
+        "display": "Kinderheim o.ä."
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "othChildCareFac",
+        "display": "Sonstige Kinderbetreuungseinrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "othBloodRiskFac",
+        "display": "Sonstige Einrichtung mit Blutübertragungsrisiko"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "school",
+        "display": "Schule"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "housingFacility",
+        "display": "Gemeinschaftsunterkunft"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "medFacility",
+        "display": "Medizinische Einrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "elderlyCareHome",
+        "display": "Einrichtung zur Betreuung/Unterbringung älterer Menschen"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "hospitalLab",
+        "display": "Krankenhauslabor"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "othMedPractice",
+        "display": "Sonstige Heilberufepraxis"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "prevCareRehab",
+        "display": "Vorsorge- oder Reha-Einrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "othMedFacility",
+        "display": "Sonstige medizinische Einrichtung"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "childDayNursery",
+        "display": "Kindertagespflege"
+      },
+      {
+        "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+        "version": "1.4.2",
+        "code": "kindergarten",
+        "display": "Kindertageseinrichtung (z. B. Kita)"
+      }
+    ]
+  }
+}

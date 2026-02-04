@@ -1,10 +1,10 @@
-package de.gematik.demis.validationservice.services.validation.custom;
+package de.gematik.demis.validationservice.services.validation.custom.questionnaire.responses;
 
 /*-
  * #%L
  * validation-service
  * %%
- * Copyright (C) 2025 gematik GmbH
+ * Copyright (C) 2025 - 2026 gematik GmbH
  * %%
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
@@ -22,7 +22,8 @@ package de.gematik.demis.validationservice.services.validation.custom;
  *
  * *******
  *
- * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
+ * For additional notes and disclaimer from gematik and in case of changes by gematik,
+ * find details in the "Readme" file.
  * #L%
  */
 
@@ -35,9 +36,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import org.hl7.fhir.instance.model.api.IBaseResource;
-import org.hl7.fhir.r4.model.*;
+import org.hl7.fhir.r4.model.Bundle;
+import org.hl7.fhir.r4.model.Parameters;
+import org.hl7.fhir.r4.model.Questionnaire;
+import org.hl7.fhir.r4.model.QuestionnaireResponse;
 
-public abstract class AbstractCustomValidator implements IValidatorModule {
+public abstract class AbstractCustomQuestionnaireResponseValidator implements IValidatorModule {
 
   protected final Map<String, Questionnaire> questionnaireMap;
 
@@ -47,7 +51,8 @@ public abstract class AbstractCustomValidator implements IValidatorModule {
    * @param questionnaireMap A map of questionnaire URLs to IBaseResource objects. Only
    *     Questionnaire resources are retained.
    */
-  protected AbstractCustomValidator(Map<String, IBaseResource> questionnaireMap) {
+  protected AbstractCustomQuestionnaireResponseValidator(
+      Map<String, IBaseResource> questionnaireMap) {
     Map<String, Questionnaire> tmpMap =
         questionnaireMap.entrySet().stream()
             .filter(entry -> entry.getValue() instanceof Questionnaire)

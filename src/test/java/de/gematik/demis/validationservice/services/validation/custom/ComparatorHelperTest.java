@@ -4,7 +4,7 @@ package de.gematik.demis.validationservice.services.validation.custom;
  * #%L
  * validation-service
  * %%
- * Copyright (C) 2025 gematik GmbH
+ * Copyright (C) 2025 - 2026 gematik GmbH
  * %%
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
@@ -22,12 +22,17 @@ package de.gematik.demis.validationservice.services.validation.custom;
  *
  * *******
  *
- * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
+ * For additional notes and disclaimer from gematik and in case of changes by gematik,
+ * find details in the "Readme" file.
  * #L%
  */
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import de.gematik.demis.validationservice.services.validation.custom.questionnaire.responses.ComparatorHelper;
 import org.hl7.fhir.r4.model.Quantity;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

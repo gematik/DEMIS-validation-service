@@ -1,0 +1,41 @@
+{
+  "resourceType": "Patient",
+  "id": "0f272475-9fed-31f7-b837-ecf1fb1dd252",
+  "meta": {
+    "profile": [
+      "https://demis.rki.de/fhir/StructureDefinition/NotifiedPerson"
+    ]
+  },
+  "name": [
+    {
+      "use": "official",
+      "family": "Tester",
+      "given": [
+        "Testus"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1978-12-12",
+  "address": [
+    {
+      "extension": [
+        {
+          "url": "https://demis.rki.de/fhir/StructureDefinition/AddressUse",
+          "valueCoding": {
+            "system": "https://demis.rki.de/fhir/CodeSystem/addressUse",
+            "code": "primary"
+          }
+        }
+      ],
+      "line": [
+        "Teststr. 123"
+      ],
+      "city": "Lauenburg",
+      "postalCode": "37154",
+      "country": "DE"
+    }
+  ]
+}
+
+

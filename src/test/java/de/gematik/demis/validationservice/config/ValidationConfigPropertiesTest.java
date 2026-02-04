@@ -4,7 +4,7 @@ package de.gematik.demis.validationservice.config;
  * #%L
  * validation-service
  * %%
- * Copyright (C) 2025 gematik GmbH
+ * Copyright (C) 2025 - 2026 gematik GmbH
  * %%
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
@@ -22,7 +22,8 @@ package de.gematik.demis.validationservice.config;
  *
  * *******
  *
- * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
+ * For additional notes and disclaimer from gematik and in case of changes by gematik,
+ * find details in the "Readme" file.
  * #L%
  */
 
@@ -49,7 +50,8 @@ class ValidationConfigPropertiesTest {
     "demis.validation-service.profiles.versions=6.1.7,5.3.5",
     "demis.validation-service.locale=en_US",
     "demis.validation-service.minSeverityOutcome=error",
-    "demis.validation-service.cache.expireAfterAccessMins=120"
+    "demis.validation-service.cache.expireAfterAccessMins=120",
+    "demis.validation-service.unexpected-extension-severity=warning",
   };
 
   private final ApplicationContextRunner contextRunner =
@@ -70,6 +72,8 @@ class ValidationConfigPropertiesTest {
               assertThat(properties.minSeverityOutcome()).isEqualTo(ResultSeverityEnum.ERROR);
               assertThat(properties.cacheExpireAfterAccessTimeoutMins()).isEqualTo(120);
               assertThat(properties.locale()).isEqualTo(Locale.US);
+              assertThat(properties.unexpectedExtensionSeverity())
+                  .isEqualTo(ResultSeverityEnum.WARNING);
               final ValidationConfigProperties.ProfilesProperties profilesProperties =
                   properties.profiles();
               assertThat(profilesProperties)

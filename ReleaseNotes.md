@@ -2,6 +2,11 @@
 
 # Release Validation-Service
 
+## Release 2.12.0
+- removed related deployment resources for old deployments
+- increased sprint parent version to 2.14.21
+- increased docker base image fhir-package-initializer version to 1.0.9
+
 ## Release 2.11.0
 - added new validation module for strict validation of codings with fragmented code systems and required binding for a
   value set.

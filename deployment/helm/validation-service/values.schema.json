@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "replicaCount",
+    "debug",
+    "provisioningMode",
+    "required",
+    "imagePullPolicy"
+  ],
+  "properties": {
+    "replicaCount": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "The number of replicas for the validation service. Must be at least 0."
+    },
+    "debug": {
+      "required": [
+        "enable"
+      ],
+      "type": "object",
+      "description": "Debug configuration for the validation service.",
+      "properties": {
+        "enable": {
+          "type": "boolean",
+          "description": "Enable debug mode for the validation service. Default is false."
+        }
+      }
+    },
+    "provisioningMode": {
+      "type": "string",
+      "enum": [
+        "dedicated",
+        "distributed",
+        "combined"
+      ],
+      "description": "The provisioning mode for the validation service. Allowed values are 'dedicated', 'distributed', and 'combined'."
+    },
+    "required": {
+      "type": "object",
+      "description": "Define the docker images",
+      "required": [
+        "image",
+        "profiles"
+      ],
+      "properties": {
+        "image": {
+          "required": [
+            "repository",
+            "name"
+          ],
+          "type": "object",
+          "description": "The docker image for the validation service.",
+          "properties": {
+            "repository": {
+              "type": "string",
+              "description": "The repository of the docker image."
+            },
+            "name": {
+              "type": "string",
+              "description": "The name of the docker image."
+            },
+            "tag": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "The tag of the docker image."
+            }
+          }
+        },
+          "profiles": {
+            "required": [
+              "repository",
+              "name",
+              "packageName",
+              "version",
+              "versions"
+            ],
+            "type": "object",
+            "description": "The profiles for the validation service.",
+            "repository": {
+              "type": "string",
+              "description": "The repository of the docker image."
+            },
+            "name": {
+              "type": "string",
+              "description": "The name of the profile."
+            },
+            "packageName": {
+              "type": "string",
+              "description": "The name of the package."
+            },
+            "imageName": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "The name of the docker image for the profile."
+            },
+            "version": {
+              "type": "string",
+              "description": "The version of the profile."
+            },
+            "versions": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "description": "The versions of the profile.",
+              "items": {
+                "type": "string",
+                "description": "The version of the profile."
+              }
+            }
+          }
+        }
+      }
+    },
+    "imagePullPolicy": {
+      "type": "string",
+      "enum": [
+        "Always",
+        "IfNotPresent",
+        "Never"
+      ],
+      "description": "The image pull policy for the validation service. Allowed values are 'Always', 'IfNotPresent', and 'Never'. Default is 'IfNotPresent'."
+    }
+  }
+

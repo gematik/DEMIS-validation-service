@@ -6,14 +6,13 @@ replicaCount: 2
 # Enables debug mode
 debug:
   enable: false
-
 # mode for profile provisioning of snapshot profiles
 # default is dedicated
 # available modes:
 # - dedicated: all profiles are provisioned in a dedicated pod
 # - distributed: one profile provisioning for one pod
 # - combined: mix of dedicated and distributed
-provisioningMode: null
+provisioningMode: combined
 
 # Required Values for the Chart
 required:

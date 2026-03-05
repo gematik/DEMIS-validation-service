@@ -1,6 +1,0 @@
-apiVersion: v2
-name: validation-service-delegation-istio
-description: DEMIS validation-service Istio Configuration for delegation
-type: application
-version: 2.10.1
-appVersion: "2.10.1"

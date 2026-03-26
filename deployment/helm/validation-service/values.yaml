@@ -53,8 +53,8 @@ customEnvVars:
   FEATURE_FLAG_CUSTOM_QUANTITY_VALIDATOR_ENABLED: "false"
   FEATURE_FLAG_VALIDATION_EXTENSION_CHECK_ENABLED: "false"
   FEATURE_FLAG_DENY_MODIFIER_EXTENSIONS: "false"
-  FEATURE_FLAG_ADDITIONAL_STRICT_CODING_VALIDATOR_ENABLED: "false"
   CONFIG_OPTION_TERMINOLOGY_SERVER_URL: "http://terminology-server.demis.svc.cluster.local/fhir"
+  CONFIG_OPTION_ADDITIONAL_STRICT_CODING_VALIDATOR_ENABLED: "false"
 
 # Extra labels for deployments
 deploymentLabels: {}
@@ -63,7 +63,7 @@ deploymentLabels: {}
 # If not given, the Entrypoint defined in Dockerfile will be used
 application:
   entrypoint: ["java"]
-  parameters: ["-XX:ActiveProcessorCount=2", "-XX:MaxRAMPercentage=80.0", "-XX:+TieredCompilation", "-jar", "/app.jar"]
+  parameters: ["-XX:ActiveProcessorCount=2", "-XX:MaxRAMPercentage=65.0", "-XX:+TieredCompilation", "-XX:+UseG1GC", "-jar", "/app.jar"]
 
 imagePullPolicy: IfNotPresent
 # Define Image Pull Secrets if using private registry
@@ -136,7 +136,7 @@ resources:
   limits:
     memory: "2750Mi"
   requests:
-    cpu: "2.0"
+    cpu: "1.0"
     memory: "2750Mi"
 
 autoscaling:

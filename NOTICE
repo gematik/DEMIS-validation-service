@@ -118,7 +118,7 @@ This project includes:
   OpenTelemetry Java under The Apache License, Version 2.0
   OpenTelemetry Semantic Conventions Java under The Apache License, Version 2.0
   org.apiguardian:apiguardian-api under The Apache License, Version 2.0
-  org.eclipse.sisu.inject under Eclipse Public License, Version 2.0
+  org.eclipse.sisu:org.eclipse.sisu.inject under Eclipse Public License, Version 2.0
   org.hl7.fhir.convertors under Apache Software License 2.0
   org.hl7.fhir.dstu2 under Apache Software License 2.0
   org.hl7.fhir.dstu2016may under Apache Software License 2.0
@@ -132,7 +132,7 @@ This project includes:
   org.xmlunit:xmlunit-core under The Apache Software License, Version 2.0
   PlantUML under MIT License
   Plexus Common Utilities under Apache License, Version 2.0
-  Plexus Interpolation API under Apache License, Version 2.0
+  Plexus Interpolation API under Apache-2.0
   Project Lombok under The MIT License
   Prometheus Metrics Config under The Apache Software License, Version 2.0
   Prometheus Metrics Core under The Apache Software License, Version 2.0

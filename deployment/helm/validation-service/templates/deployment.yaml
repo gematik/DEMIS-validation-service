@@ -166,13 +166,15 @@ spec:
             httpGet:
               path: /actuator/health/liveness
               port: val-port
-            failureThreshold: 3
+            timeoutSeconds: 5
+            failureThreshold: 5
             periodSeconds: 30
           # Use SpringBoot Actuator Readiness Chech
           readinessProbe:
             httpGet:
               path: /actuator/health/readiness
               port: val-port
+            timeoutSeconds: 5
             failureThreshold: 5
             periodSeconds: 10
           # Define Limits and Requested Resources (CPU/RAM)

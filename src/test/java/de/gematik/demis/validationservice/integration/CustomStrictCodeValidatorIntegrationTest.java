@@ -46,7 +46,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @SpringBootTest(
     classes = {ValidationServiceApplication.class},
     properties = {
-      "feature.flag.additional.strict.coding.validator.enabled=true",
+      "config.option.additional.strict.coding.validator.enabled=true",
       "demis.validation-service.profiles.basepath=src/test/resources/integrationtests/customValidators/strictCodeValidation/fixedBinding",
       "demis.validation-service.profiles.versions=6.1.8"
     })

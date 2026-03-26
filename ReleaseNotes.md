@@ -2,10 +2,21 @@
 
 # Release Validation-Service
 
-## Release 2.12.0
+## Release 2.13.0
+- the default minimum severity level for validation issues has been changed from "information" to "warning"
+- changed FEATURE_FLAG_ADDITIONAL_STRICT_CODING_VALIDATOR_ENABLED to CONFIG_OPTION_ADDITIONAL_STRICT_CODING_VALIDATOR_EN
+- reduced default CPU requests to 1
+- increased spring-parent version to 2.15.1
+- updated dependencies
+
+## Release 2.12.0 
+- updated base-image and updated from java 21 to java 25
+- updated to new garbage-collector G1GC
 - removed related deployment resources for old deployments
-- increased sprint parent version to 2.14.21
+- increased spring-parent version to 2.14.21
 - increased docker base image fhir-package-initializer version to 1.0.9
+- updated probe-values
+- decreased MaxRAMPercentage from 80% to 65%
 
 ## Release 2.11.0
 - added new validation module for strict validation of codings with fragmented code systems and required binding for a

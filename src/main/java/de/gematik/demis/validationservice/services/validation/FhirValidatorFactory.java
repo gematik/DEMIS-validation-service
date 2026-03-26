@@ -81,8 +81,8 @@ public final class FhirValidatorFactory {
   @Value("${feature.flag.deny.modifier.extensions}")
   private boolean featureFlagDenyModifierExtensions;
 
-  @Value("${feature.flag.additional.strict.coding.validator.enabled}")
-  private boolean featureFlagAdditionalStrictCodingValidatorEnabled;
+  @Value("${config.option.additional.strict.coding.validator.enabled}")
+  private boolean configOptionAdditionalStrictCodingValidatorEnabled;
 
   public FhirValidator createFhirValidator(final Path profilesPath) {
     log.info("Start creating and initializing fhir validator for profiles path {}", profilesPath);
@@ -115,7 +115,7 @@ public final class FhirValidatorFactory {
       validator.registerValidatorModule(
           new CustomRegexQuestionnaireResponseValidator(profileSnapshot.questionnaires()));
     }
-    if (featureFlagAdditionalStrictCodingValidatorEnabled) {
+    if (configOptionAdditionalStrictCodingValidatorEnabled) {
       validator.registerValidatorModule(
           new StrictValueSetMembershipValidator(
               profileSnapshot.valueSets(), profileSnapshot.structureDefinitions()));

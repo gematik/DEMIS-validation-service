@@ -101,7 +101,7 @@ docker run --rm --name validation-service \
     -v $(pwd)/profiles:/profiles \
     -p 8080:8080 \
     -e FHIR_PROFILES_BASEPATH=/profiles \
-    -e FHIR_PROFILES_VERSIONS=5.2.0 \
+    -e PACKAGE_VERSIONS=5.2.0 \
     validation-service:latest
 ```
 
@@ -126,10 +126,10 @@ aus IntelliJ als SpringBoot Application starten
 
 
 | Property                                    | Default Value | Environment Variable   | Environment Variable  Description                                                                                          |
-| ------------------------------------------- | ------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| ------------------------------------------- | ------------- |------------------------| -------------------------------------------------------------------------------------------------------------------------- |
 | demis.validation-service.profiles.basepath  |               | FHIR_PROFILES_BASEPATH | Path to base directory with all profiles versions                                                                          |
 | demis.validation-service.profiles.fhirpath  | Fhir          |                        | Path inside of a profiles versions directory to the resources.                                                             |
-| demis.validation-service.profiles.versions  |               | FHIR_PROFILES_VERSIONS | List of versions. Must match the directory names under the base path.                                                      |
+| demis.validation-service.profiles.versions  |               | PACKAGE_VERSIONS       | List of versions. Must match the directory names under the base path.                                                      |
 | demis.validation-service.locale             | `en_US`       |                        | Locale for the HAPI-FHIR context and validator. The language of diagnostics of the outcome is dependent on this locale.    |
 | demis.validation-service.minSeverityOutcome | `information` |                        | Minimal severity that will not be filtered out in the Outcome. Possible values:`information`, `warning`, `error`, `fatal`. |
 

@@ -6,13 +6,7 @@ replicaCount: 2
 # Enables debug mode
 debug:
   enable: false
-# mode for profile provisioning of snapshot profiles
-# default is dedicated
-# available modes:
-# - dedicated: all profiles are provisioned in a dedicated pod
-# - distributed: one profile provisioning for one pod
-# - combined: mix of dedicated and distributed
-provisioningMode: combined
+  params: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9000"
 
 # Required Values for the Chart
 required:
@@ -25,17 +19,14 @@ required:
     # Overrides the image tag whose default is the chart appVersion.
     # If not given, the Chart AppVersion will be used
     tag: null
-  # Version of the profiles to be used
-  profiles:
-    repository: europe-west3-docker.pkg.dev/gematik-all-infra-prod/demis-dev
-    name: fhir-profile-snapshots
+  # Version of the packages to be used
+  packages:
     packageName: rki.demis.notification-api.snapshot
-    imageName: null
-    # For backward compatibility reasons, this version is used if the version list is not set
-    version: "TagOfProfileSnapshotsImage"
-    # list of versions (Image Tags).
+    name: fhir-profile-snapshots
+    # list of versions (Package Tags).
     # order is important! against the first version entry is validated first
-    versions: null
+    versions:
+      - "tag_of_package_in_profile_registry"
 
 # Extra Labels to be added
 # E.g.
@@ -45,6 +36,12 @@ customLabels: {}
 
 # Environment Variables to be defined
 customEnvVars:
+  SERVER_PORT: "8080"
+  TZ: "Europe/Berlin"
+  JAVA_TOOL_OPTIONS: "-XX:ActiveProcessorCount=2 -XX:MaxRAMPercentage=75.0 -XX:MaxMetaspaceSize=160m -XX:+UseG1GC"
+  TARGET_DIR: "/tmp/fhir-profiles"
+  FHIR_PROFILES_BASEPATH: "/tmp/fhir-profiles"
+  PACKAGE_NAME: "{{ .Values.required.packages.packageName }}"
   FEATURE_FLAG_FORMAT_VALIDATION_ENABLED: "true"
   FEATURE_FLAG_COMMON_CODE_SYSTEM_TERMINOLOGY_ENABLED: "false"
   FEATURE_FLAG_TERMINOLOGY_SERVER: "false"
@@ -59,11 +56,11 @@ customEnvVars:
 # Extra labels for deployments
 deploymentLabels: {}
 
-# Define custom Container Entrypoint and Arguments (e.g. JVM Tuning)
+# Define custom Container Entrypoint and Arguments
 # If not given, the Entrypoint defined in Dockerfile will be used
 application:
-  entrypoint: ["java"]
-  parameters: ["-XX:ActiveProcessorCount=2", "-XX:MaxRAMPercentage=65.0", "-XX:+TieredCompilation", "-XX:+UseG1GC", "-jar", "/app.jar"]
+  entrypoint: []
+  parameters: []
 
 imagePullPolicy: IfNotPresent
 # Define Image Pull Secrets if using private registry
@@ -134,10 +131,10 @@ service:
 # Default Resources
 resources:
   limits:
-    memory: "2750Mi"
+    memory: "2500Mi"
   requests:
-    cpu: "1.0"
-    memory: "2750Mi"
+    cpu: "200m"
+    memory: "2500Mi"
 
 autoscaling:
   enabled: false
@@ -147,6 +144,8 @@ autoscaling:
   targetMemoryUtilizationPercentage: 80
 
 nodeSelector: {}
+
+useTopologySpreadConstraints: false
 
 tolerations: []
 

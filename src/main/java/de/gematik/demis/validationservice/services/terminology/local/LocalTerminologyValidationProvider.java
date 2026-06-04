@@ -28,6 +28,7 @@ package de.gematik.demis.validationservice.services.terminology.local;
  */
 
 import ca.uhn.fhir.context.FhirContext;
+import de.gematik.demis.validationservice.config.ValidationConfigProperties;
 import de.gematik.demis.validationservice.services.terminology.TerminologyValidationProvider;
 import java.nio.file.Path;
 import lombok.RequiredArgsConstructor;
@@ -47,6 +48,7 @@ import org.springframework.stereotype.Component;
 class LocalTerminologyValidationProvider implements TerminologyValidationProvider {
 
   private final FhirContext fhirContext;
+  private final ValidationConfigProperties configProperties;
 
   @Override
   public void addTerminologyValidationSupport(
@@ -58,7 +60,9 @@ class LocalTerminologyValidationProvider implements TerminologyValidationProvide
   }
 
   private void addExpandedValueSetsValidation(final ValidationSupportChain chain) {
-    chain.addValidationSupport(new ExpandedValueSetsCodeValidationSupport(fhirContext));
+    chain.addValidationSupport(
+        new ExpandedValueSetsCodeValidationSupport(
+            fhirContext, configProperties.minSeverityOutcome()));
   }
 
   private void addInMemoryTerminologyServerValidation(

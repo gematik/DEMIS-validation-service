@@ -1,4 +1,4 @@
-{{- define "hpa" }}
+{{- if .Values.autoscaling.enabled }}
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
@@ -29,23 +29,4 @@ spec:
           type: Utilization
           averageUtilization: {{ .Values.autoscaling.targetMemoryUtilizationPercentage }}
     {{- end }}
-{{- end }}
-
-{{ $root := $ }}
-{{- include "init" $root }}
-
-{{- if .Values.autoscaling.enabled }}
-
-{{ if (or (has ($root.defaults.currentProvisioningMode) (list "distributed" "combined")) (eq (len $root.defaults.profilesVersions) 1)) }}
-{{- range $profilesVersion := $root.defaults.profilesVersions }}
----
-{{- $distributedValues := set (deepCopy $root) "profileVersion" $profilesVersion }}
-{{- include "hpa" $distributedValues }}
-{{- end }}
-{{- end }}
-{{- if (and (has $root.defaults.currentProvisioningMode (list "dedicated" "combined")) (gt (len $root.defaults.profilesVersions) 1)) }}
----
-{{- include "hpa" $root }}
-{{- end }}
-
 {{- end }}

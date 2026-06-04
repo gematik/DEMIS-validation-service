@@ -4,7 +4,6 @@
   "required": [
     "replicaCount",
     "debug",
-    "provisioningMode",
     "required",
     "imagePullPolicy"
   ],
@@ -27,21 +26,12 @@
         }
       }
     },
-    "provisioningMode": {
-      "type": "string",
-      "enum": [
-        "dedicated",
-        "distributed",
-        "combined"
-      ],
-      "description": "The provisioning mode for the validation service. Allowed values are 'dedicated', 'distributed', and 'combined'."
-    },
     "required": {
       "type": "object",
       "description": "Define the docker images",
       "required": [
         "image",
-        "profiles"
+        "packages"
       ],
       "properties": {
         "image": {
@@ -69,48 +59,38 @@
             }
           }
         },
-          "profiles": {
+          "packages": {
             "required": [
-              "repository",
-              "name",
               "packageName",
-              "version",
+              "name",
               "versions"
             ],
             "type": "object",
             "description": "The profiles for the validation service.",
-            "repository": {
-              "type": "string",
-              "description": "The repository of the docker image."
-            },
-            "name": {
-              "type": "string",
-              "description": "The name of the profile."
-            },
-            "packageName": {
-              "type": "string",
-              "description": "The name of the package."
-            },
-            "imageName": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "description": "The name of the docker image for the profile."
-            },
-            "version": {
-              "type": "string",
-              "description": "The version of the profile."
-            },
-            "versions": {
-              "type": [
-                "array",
-                "null"
-              ],
-              "description": "The versions of the profile.",
-              "items": {
+            "properties": {
+              "repository": {
                 "type": "string",
-                "description": "The version of the profile."
+                "description": "The repository of the docker image."
+              },
+              "name": {
+                "type": "string",
+                "description": "The name of the package."
+              },
+              "packageName": {
+                "type": "string",
+                "description": "The name of the package."
+              },
+              "versions": {
+                "type": [
+                  "array"
+                ],
+                "minItems": 1,
+                "description": "The list of package versions.",
+                "items": {
+
+                  "type": "string",
+                  "description": "A package version."
+                }
               }
             }
           }

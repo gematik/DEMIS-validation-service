@@ -33,17 +33,22 @@ import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.context.support.ConceptValidationOptions;
 import ca.uhn.fhir.context.support.IValidationSupport;
 import ca.uhn.fhir.context.support.ValidationSupportContext;
+import ca.uhn.fhir.validation.ResultSeverityEnum;
 import org.hl7.fhir.r4.model.CodeSystem;
 import org.hl7.fhir.r4.model.ValueSet;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
 import org.mockito.Mockito;
 
 class ExpandedValueSetsCodeValidationSupportTest {
 
-  /** unit under test */
+  /** Unit under test with minSeverityOutcome=INFORMATION (includes info messages). */
   private static final ExpandedValueSetsCodeValidationSupport VALIDATION =
-      new ExpandedValueSetsCodeValidationSupport(FhirContext.forR4());
+      new ExpandedValueSetsCodeValidationSupport(
+          FhirContext.forR4(), ResultSeverityEnum.INFORMATION);
 
   private static final String VALUE_SET_URL = "https://demis.rki.de/fhir/ValueSet/materialEBCP";
   private static final String DISPLAY = "Specimen from abscess obtained by aspiration (specimen)";
@@ -147,5 +152,130 @@ class ExpandedValueSetsCodeValidationSupportTest {
     assertThat(VALIDATION.isCodeSystemSupported(context, "unsupported"))
         .as("unsupported code system")
         .isFalse();
+  }
+
+  /**
+   * Tests that the informational match message produced by {@code createMatchResult} is suppressed
+   * depending on the configured {@code minSeverityOutcome}.
+   */
+  @Nested
+  class MatchMessageSeverityFiltering {
+
+    @Test
+    void shouldIncludeMatchMessage_whenMinSeverityIsInformation() {
+      ExpandedValueSetsCodeValidationSupport validation =
+          new ExpandedValueSetsCodeValidationSupport(
+              FhirContext.forR4(), ResultSeverityEnum.INFORMATION);
+
+      IValidationSupport.CodeValidationResult result =
+          validation.validateCode(context, options, SYSTEM, CODE, DISPLAY, VALUE_SET_URL);
+
+      assertThat(result).isNotNull();
+      assertThat(result.getMessage())
+          .as("info match message should be present at INFORMATION level")
+          .isEqualTo("Code was validated against existing expansion of ValueSet: " + VALUE_SET_URL);
+    }
+
+    @Test
+    void shouldIncludeMatchMessage_whenMinSeverityIsNull() {
+      // null is treated as INFORMATION by the SeverityComparator, so info messages are allowed
+      ExpandedValueSetsCodeValidationSupport validation =
+          new ExpandedValueSetsCodeValidationSupport(FhirContext.forR4(), null);
+
+      IValidationSupport.CodeValidationResult result =
+          validation.validateCode(context, options, SYSTEM, CODE, DISPLAY, VALUE_SET_URL);
+
+      assertThat(result).isNotNull();
+      assertThat(result.getMessage())
+          .as("info match message should be present when minSeverityOutcome is null")
+          .isEqualTo("Code was validated against existing expansion of ValueSet: " + VALUE_SET_URL);
+    }
+
+    @ParameterizedTest(name = "minSeverityOutcome={0}")
+    @EnumSource(
+        value = ResultSeverityEnum.class,
+        names = {"WARNING", "ERROR", "FATAL"})
+    void shouldSuppressMatchMessage_whenMinSeverityExceedsInformation(
+        ResultSeverityEnum minSeverity) {
+      ExpandedValueSetsCodeValidationSupport validation =
+          new ExpandedValueSetsCodeValidationSupport(FhirContext.forR4(), minSeverity);
+
+      IValidationSupport.CodeValidationResult result =
+          validation.validateCode(context, options, SYSTEM, CODE, DISPLAY, VALUE_SET_URL);
+
+      assertThat(result).as("validation result should not be null for a valid code").isNotNull();
+      assertThat(result.isOk()).as("result must still signal the code is valid").isTrue();
+      assertThat(result.getCode()).as("matched code").isEqualTo(CODE);
+      assertThat(result.getMessage())
+          .as("info match message should be suppressed at severity " + minSeverity)
+          .isNull();
+    }
+
+    @Test
+    void shouldReturnMinimalResult_whenMatchMessageIsSuppressed() {
+      // When INFO is suppressed, only the code itself is returned to signal validity.
+      // Metadata (version, name) is omitted because no OperationOutcome entry is produced.
+      ExpandedValueSetsCodeValidationSupport validation =
+          new ExpandedValueSetsCodeValidationSupport(
+              FhirContext.forR4(), ResultSeverityEnum.WARNING);
+
+      IValidationSupport.CodeValidationResult result =
+          validation.validateCode(context, options, SYSTEM, CODE, DISPLAY, VALUE_SET_URL);
+
+      assertThat(result).isNotNull();
+      assertThat(result.isOk()).as("minimal result must signal code validity").isTrue();
+      assertThat(result.getCode()).as("code must be present to confirm validity").isEqualTo(CODE);
+      assertThat(result.getMessage()).as("no info message").isNull();
+      assertThat(result.getCodeSystemVersion())
+          .as("version not populated in minimal result")
+          .isNull();
+    }
+
+    @Test
+    void shouldCreateFullResult_whenDisplayValidationActiveAndWarnLevelAllowed() {
+      // When display validation is active and WARNING passes the threshold,
+      // a full result must be created so a potential display mismatch can surface.
+      ConceptValidationOptions validateDisplayOptions =
+          Mockito.mock(ConceptValidationOptions.class);
+      Mockito.when(validateDisplayOptions.isValidateDisplay()).thenReturn(true);
+
+      ExpandedValueSetsCodeValidationSupport validation =
+          new ExpandedValueSetsCodeValidationSupport(
+              FhirContext.forR4(), ResultSeverityEnum.WARNING);
+
+      IValidationSupport.CodeValidationResult result =
+          validation.validateCode(
+              context, validateDisplayOptions, SYSTEM, CODE, DISPLAY, VALUE_SET_URL);
+
+      assertThat(result).isNotNull();
+      assertThat(result.isOk()).as("display matched, result is still ok").isTrue();
+      // Full result: metadata should be populated
+      assertThat(result.getCodeSystemVersion())
+          .as("version present in full result")
+          .isEqualTo(VERSION);
+    }
+
+    @Test
+    void shouldReturnMinimalResult_whenDisplayValidationActiveButWarnLevelSuppressed() {
+      // When minSeverityOutcome=ERROR, even a display-mismatch WARNING would be filtered.
+      // A minimal result is sufficient to confirm validity.
+      ConceptValidationOptions validateDisplayOptions =
+          Mockito.mock(ConceptValidationOptions.class);
+      Mockito.when(validateDisplayOptions.isValidateDisplay()).thenReturn(true);
+
+      ExpandedValueSetsCodeValidationSupport validation =
+          new ExpandedValueSetsCodeValidationSupport(FhirContext.forR4(), ResultSeverityEnum.ERROR);
+
+      IValidationSupport.CodeValidationResult result =
+          validation.validateCode(
+              context, validateDisplayOptions, SYSTEM, CODE, DISPLAY, VALUE_SET_URL);
+
+      assertThat(result).isNotNull();
+      assertThat(result.isOk()).isTrue();
+      assertThat(result.getMessage()).isNull();
+      assertThat(result.getCodeSystemVersion())
+          .as("version not populated in minimal result")
+          .isNull();
+    }
   }
 }

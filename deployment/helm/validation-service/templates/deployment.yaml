@@ -1,14 +1,5 @@
-{{/*
-template for deployments
-*/}}
-{{- define "deployment" }}
 {{- $fullVersionName := include "validation-service.fullversionname" . }}
-{{- $profilesVersion := include "validation-service.profileVersionName" . }}
-{{- $profiles := .defaults.profilesVersions }}
-{{- if (hasKey . "profileVersion") }}
-{{- $profiles = list .profileVersion }}
-{{- end }}
-{{- $profilesVolumeName := printf "profiles-%s" $fullVersionName }}
+{{- $packageVersion := include "validation-service.packageVersionName" . }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -42,12 +33,7 @@ spec:
       serviceAccountName: {{ include "validation-service.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
-      # Volume for Profiles
       volumes:
-        {{- if not (eq (toString .Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
-        - name: {{ $profilesVolumeName }}
-          emptyDir: { }
-        {{- end }}
         # Add writable volumes
         - name: tmp-volume
           emptyDir: { }
@@ -55,40 +41,18 @@ spec:
         - name: jfr-volume
           emptyDir: { }
         {{- end }}
-      {{- if not (eq (toString .Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
-      initContainers:
-        {{- range $index, $profilesVersion := $profiles }}
-        {{- $profilesFolder := regexFind "(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)" $profilesVersion }}
-        - name: {{ $.Chart.Name }}-init-profiles-{{ $index }}
-          securityContext:
-                    {{- toYaml $.Values.securityContext | nindent 12 }}
-          image: "{{ $.defaults.dockerProfilesRepository }}/{{ $.defaults.profilesName }}:{{ $profilesVersion }}"
-          imagePullPolicy: {{ $.Values.imagePullPolicy }}
-          command:
-            - /bin/sh
-            - -c
-            - "rm -rf /profiles/{{ $profilesFolder }} && mkdir -p /profiles/{{ $profilesFolder }} && cp -r /app/data/profiles/* /profiles/{{ $profilesFolder }}"
-          volumeMounts:
-            - name: {{ $profilesVolumeName }}
-              mountPath: "/profiles"
-        {{- end }}
-      {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .defaults.dockerRepository }}/{{ .defaults.dockerImage }}:{{ .defaults.dockerTag }}"
+          image: "{{ .Values.required.image.repository }}/{{ .Values.required.image.name }}:{{ .Values.required.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           {{- /* If entrypoint and parameters are both defined, configure them */ -}}
           {{- if .Values.application.entrypoint }}
           {{- if .Values.application.parameters }}
           {{- with .Values.application.entrypoint }}
           command:
-            {{- if not (eq (toString $.Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
-            {{- toYaml . | nindent 12 }}
-            {{- else }}
             - /usr/local/bin/entrypoint.sh
-            {{- end }}
           {{- end }}
           {{- with .Values.application.parameters }}
           args:
@@ -98,11 +62,6 @@ spec:
           {{- end }}
           # Mount Volumes in container
           volumeMounts:
-            {{- if not (eq (toString .Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
-            - name: {{ $profilesVolumeName }}
-              mountPath: /profiles
-              readOnly: true
-            {{- end }}
             - name: tmp-volume
               mountPath: /tmp
           {{- if .Values.debug.enable }}
@@ -111,38 +70,7 @@ spec:
           {{- end }}
           # Set the Environment Variables for the container
           env:
-            - name: "SERVER_PORT"
-              value: "8080"
-            - name: "TZ"
-              value: "Europe/Berlin"
-            {{- if not (eq (toString .Values.customEnvVars.FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED) "true") }}
-            - name: "FHIR_PROFILES_BASEPATH"
-              value: "/profiles"
-            - name: "FHIR_PROFILES_VERSIONS"
-              value: "{{ range $index, $profilesVersion := $profiles }}{{ if $index }},{{ end }}{{ regexFind "(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)" $profilesVersion }}{{ end }}"
-            {{- else }}
-            - name: "PACKAGE_NAME"
-              value: "{{ .Values.required.profiles.packageName }}"
-            - name: "PACKAGE_VERSIONS"
-              value: "{{ range $index, $profilesVersion := $profiles }}{{ if $index }},{{ end }}{{ $profilesVersion }}{{ end }}"
-            - name: "TARGET_DIR"
-              value: "/tmp/fhir-profiles"
-            - name: "FHIR_PROFILES_BASEPATH"
-              value: "/tmp/fhir-profiles"
-            - name: "FHIR_PROFILES_VERSIONS"
-              value: "{{ range $index, $profilesVersion := $profiles }}{{ if $index }},{{ end }}{{ $profilesVersion }}{{ end }}"
-            {{- end }}
-            {{- if .Values.debug.enable }}
-            - name: "JAVA_TOOL_OPTIONS"
-              value: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9000"
-            {{- end }}
-            {{- if .defaults.customEnvVars }}
-            # Custom Environment Variables
-            {{- range $_, $key := keys .defaults.customEnvVars | sortAlpha }}
-            - name: {{ $key | quote }}
-              value: {{ get $.defaults.customEnvVars $key | quote }}
-            {{- end }}
-            {{- end }}
+            {{- include "validation-service.env" . | nindent 12 }}
           # Ports to be exposed from the container
           ports:
             - name: val-port
@@ -184,6 +112,18 @@ spec:
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      {{- if eq (lower (toString (default false .Values.useTopologySpreadConstraints))) "true" }}
+      # Configure a topology spread constraint
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app.kubernetes.io/instance: {{ .Release.Name }}
+          matchLabelKeys:
+            - pod-template-hash
+      {{- else }}
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -197,33 +137,17 @@ spec:
                     operator: In
                     values:
                       - {{ .Chart.AppVersion | quote }}
-                  - key: fhirProfile
+                  - key: packageName
                     operator: In
                     values:
-                      - {{ .defaults.profilesName | quote }}
-                  - key: fhirProfileVersion
+                      - {{ .Values.required.packages.name | quote }}
+                  - key: packageVersion
                     operator: In
                     values:
-                      - {{ $profilesVersion }}
+                      - {{ $packageVersion }}
               topologyKey: "kubernetes.io/hostname"
+      {{- end }}
       {{- with .Values.tolerations }}
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-{{- end }}
-
-{{ $root := $ }}
-{{- include "init" $root }}
-
-
-{{ if (or (has ($root.defaults.currentProvisioningMode) (list "distributed" "combined")) (eq (len $root.defaults.profilesVersions) 1)) }}
-{{- range $profilesVersion := $root.defaults.profilesVersions }}
----
-{{- $distributedValues := set (deepCopy $root) "profileVersion" $profilesVersion }}
-{{- include "deployment" $distributedValues }}
-{{- end }}
-{{- end }}
-{{- if (and (has $root.defaults.currentProvisioningMode (list "dedicated" "combined")) (gt (len $root.defaults.profilesVersions) 1)) }}
----
-{{- include "deployment" $root }}
-{{- end }}

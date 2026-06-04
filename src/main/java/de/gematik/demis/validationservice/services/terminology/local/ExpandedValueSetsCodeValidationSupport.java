@@ -35,6 +35,7 @@ import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.context.support.ConceptValidationOptions;
 import ca.uhn.fhir.context.support.IValidationSupport;
 import ca.uhn.fhir.context.support.ValidationSupportContext;
+import ca.uhn.fhir.validation.ResultSeverityEnum;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashMap;
@@ -44,6 +45,7 @@ import java.util.function.Function;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.hl7.fhir.common.hapi.validation.support.InMemoryTerminologyServerValidationSupport;
 import org.hl7.fhir.instance.model.api.IBaseResource;
 import org.hl7.fhir.instance.model.api.IPrimitiveType;
@@ -59,6 +61,11 @@ import org.hl7.fhir.r4.model.ValueSet.ValueSetExpansionContainsComponent;
  *
  * <p>This component does not test for codes not matching the preconditions, so other components in
  * a chain can handle the cases not covered by this component.
+ *
+ * <p>Informational match messages (produced by successful code-in-ValueSet lookups) are only
+ * included in the {@link IValidationSupport.CodeValidationResult} when the configured {@code
+ * minSeverityOutcome} is {@link ResultSeverityEnum#INFORMATION}. This prevents the OperationOutcome
+ * from being flooded with noise when validating resources with many coded values.
  */
 @Slf4j
 @RequiredArgsConstructor
@@ -67,6 +74,13 @@ final class ExpandedValueSetsCodeValidationSupport implements IValidationSupport
   private static final String VALUE_NOT_PRESENT = "not-present";
 
   private final FhirContext ctx;
+
+  /**
+   * Minimum severity threshold for OperationOutcome entries. Used to suppress low-severity
+   * informational messages produced by {@link #createMatchResult} when they would be filtered by
+   * the {@link de.gematik.demis.validationservice.services.validation.ValidationService} anyway.
+   */
+  private final ResultSeverityEnum minSeverityOutcome;
 
   @Override
   public FhirContext getFhirContext() {
@@ -206,13 +220,27 @@ final class ExpandedValueSetsCodeValidationSupport implements IValidationSupport
     return createMismatchResult(theCodeSystem, theCode, codeSystems, codeSystemFinder);
   }
 
-  private static CodeValidationResult createMatchResult(
+  private CodeValidationResult createMatchResult(
       ValueSet vs,
       ConceptValidationOptions theOptions,
       String theCodeSystem,
       ValueSetExpansionContainsComponent current,
       CodeSystem codeSystem,
       String theDisplay) {
+
+    boolean infoLevelAllowed = isSeverityAtOrAboveMinimum(ResultSeverityEnum.INFORMATION);
+    // A display mismatch produces a WARNING; only populate the full result when that WARNING
+    // would also pass the severity threshold.
+    boolean displayWarnAllowed =
+        theOptions.isValidateDisplay() && isSeverityAtOrAboveMinimum(ResultSeverityEnum.WARNING);
+
+    if (!infoLevelAllowed && !displayWarnAllowed) {
+      // Neither an INFO match message nor a display-mismatch WARNING would be included in the
+      // OperationOutcome. Skip the full result creation and return only the minimal signal
+      // that tells HAPI FHIR the code is valid, avoiding unnecessary object allocation.
+      return new CodeValidationResult().setCode(current.getCode());
+    }
+
     String codeSystemVersion = null;
     String codeSystemName = null;
     if (codeSystem != null) {
@@ -226,11 +254,37 @@ final class ExpandedValueSetsCodeValidationSupport implements IValidationSupport
     }
     CodeValidationResult result = new CodeValidationResult();
     setDisplay(vs, theOptions, theDisplay, current, result);
-    return result
+    result
         .setCode(current.getCode())
         .setCodeSystemName(codeSystemName)
-        .setCodeSystemVersion(codeSystemVersion)
-        .setMessage("Code was validated against existing expansion of ValueSet: " + vs.getUrl());
+        .setCodeSystemVersion(codeSystemVersion);
+    if (infoLevelAllowed) {
+      result.setMessage(
+          "Code was validated against existing expansion of ValueSet: " + vs.getUrl());
+    }
+    return result;
+  }
+
+  /**
+   * Returns {@code true} when {@code severity} meets or exceeds the configured {@link
+   * #minSeverityOutcome} threshold, using the ordering INFORMATION(0) &lt; WARNING(1) &lt; ERROR(2)
+   * &lt; FATAL(3). A {@code null} {@code minSeverityOutcome} is treated as {@link
+   * ResultSeverityEnum#INFORMATION} (lowest), so every severity passes.
+   */
+  private boolean isSeverityAtOrAboveMinimum(ResultSeverityEnum severity) {
+    if (minSeverityOutcome == null) {
+      return true;
+    }
+    return severityOrdinal(severity) >= severityOrdinal(minSeverityOutcome);
+  }
+
+  private static int severityOrdinal(ResultSeverityEnum s) {
+    return switch (s) {
+      case INFORMATION -> 0;
+      case WARNING -> 1;
+      case ERROR -> 2;
+      case FATAL -> 3;
+    };
   }
 
   /**
@@ -257,7 +311,7 @@ final class ExpandedValueSetsCodeValidationSupport implements IValidationSupport
     final String expected = current.getDisplay();
     if (theOptions.isValidateDisplay()) {
       result.setDisplay(expected);
-      if (!StringUtils.equals(expected, theDisplay)) {
+      if (!Strings.CS.equals(expected, theDisplay)) {
         result.setSeverity(IssueSeverity.WARNING);
         log.warn(
             "Validated display value '{}' did not match ValueSet '{}' expected value '{}'",

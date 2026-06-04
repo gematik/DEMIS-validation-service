@@ -87,8 +87,8 @@ This project includes:
   JUnit Platform Engine API under Eclipse Public License v2.0
   LatencyUtils under Public Domain, per Creative Commons CC0
   Log4j API to SLF4J Adapter under Apache-2.0
-  Logback Classic Module under Eclipse Public License - v 1.0 or GNU Lesser General Public License
-  Logback Core Module under Eclipse Public License - v 1.0 or GNU Lesser General Public License
+  Logback Classic Module under Eclipse Public License - v 2.0 or GNU Lesser General Public License
+  Logback Core Module under Eclipse Public License - v 2.0 or GNU Lesser General Public License
   Logstash Logback Encoder under Apache License, Version 2.0 or MIT License
   Maven Artifact under Apache-2.0
   Maven Artifact Resolver API under Apache-2.0
@@ -141,7 +141,7 @@ This project includes:
   Prometheus Metrics Model under The Apache Software License, Version 2.0
   Prometheus Metrics Tracer Common under The Apache Software License, Version 2.0
   Saxon-HE under Mozilla Public License Version 2.0
-  service-base under Licensed under the EUPL 1.2
+  service-base under EUPL-1.2
   SLF4J API Module under MIT
   SnakeYAML under Apache License, Version 2.0
   Spring AOP under Apache License, Version 2.0
@@ -170,7 +170,7 @@ This project includes:
   spring-boot-test-autoconfigure under Apache License, Version 2.0
   spring-cloud-contract-wiremock under Apache License, Version 2.0
   spring-cloud-test-support under Apache License, Version 2.0
-  spring-parent under Licensed under the EUPL 1.2
+  spring-parent under EUPL-1.2
   springdoc-openapi-starter-common under The Apache License, Version 2.0
   springdoc-openapi-starter-webmvc-api under The Apache License, Version 2.0
   springdoc-openapi-starter-webmvc-ui under The Apache License, Version 2.0

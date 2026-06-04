@@ -2,6 +2,14 @@
 
 # Release Validation-Service
 
+## Release 2.14.0
+- reduced OperationOutcome size by suppressing informational code-in-ValueSet match results below `demis.validation-service.minSeverityOutcome`
+- remove FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED
+- increased docker base image fhir-package-initializer version to 1.1.7
+- arranged jvm options and resource limits
+- optimized custom environment variables handling in helm chart
+- simplified helm chart
+
 ## Release 2.13.0
 - the default minimum severity level for validation issues has been changed from "information" to "warning"
 - changed FEATURE_FLAG_ADDITIONAL_STRICT_CODING_VALIDATOR_ENABLED to CONFIG_OPTION_ADDITIONAL_STRICT_CODING_VALIDATOR_EN

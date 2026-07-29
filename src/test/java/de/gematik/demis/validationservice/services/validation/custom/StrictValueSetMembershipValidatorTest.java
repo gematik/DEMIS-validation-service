@@ -27,7 +27,7 @@ package de.gematik.demis.validationservice.services.validation.custom;
  * #L%
  */
 
-import static ca.uhn.fhir.validation.ResultSeverityEnum.*;
+import static ca.uhn.fhir.validation.ResultSeverityEnum.ERROR;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -602,8 +602,8 @@ class StrictValueSetMembershipValidatorTest {
 
         // Assert
         assertThat(result).hasSize(1);
-        assertThat(result.get(0).getSystem()).isEqualTo("http://snomed.info/sct");
-        assertThat(result.get(0).getCode()).isEqualTo("123456");
+        assertThat(result.getFirst().getSystem()).isEqualTo("http://snomed.info/sct");
+        assertThat(result.getFirst().getCode()).isEqualTo("123456");
       }
 
       @Test
@@ -622,8 +622,8 @@ class StrictValueSetMembershipValidatorTest {
 
         // Assert
         assertThat(result).hasSize(1);
-        assertThat(result.get(0).getCode()).isEqualTo("some-code");
-        assertThat(result.get(0).getSystem()).isNullOrEmpty();
+        assertThat(result.getFirst().getCode()).isEqualTo("some-code");
+        assertThat(result.getFirst().getSystem()).isNullOrEmpty();
       }
 
       @Test
@@ -1584,7 +1584,7 @@ class StrictValueSetMembershipValidatorTest {
 
         // Assert
         assertThat(result).hasSize(1);
-        assertThat(result.get(0)).isEqualTo(cc);
+        assertThat(result.getFirst()).isEqualTo(cc);
       }
 
       private List<IBase> safeGetValuesViaReflection(

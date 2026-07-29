@@ -2,6 +2,13 @@
 
 # Release Validation-Service
 
+## Release 2.15.0
+- spring boot 4 upgrade 
+- fixed handling of falsy custom environment variables (false, 0) in helm chart
+- extended validation logging with error code, senderId and profile version when filtered error as warnings flag is active
+- upgraded base image to version 1.1.9
+- upgraded spring parent to 4.1.4 
+
 ## Release 2.14.0
 - reduced OperationOutcome size by suppressing informational code-in-ValueSet match results below `demis.validation-service.minSeverityOutcome`
 - remove FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED

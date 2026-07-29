@@ -122,7 +122,7 @@ Environment Variables
 {{- $envs = set $envs "PACKAGE_VERSIONS" (join "," .Values.required.packages.versions) -}}
 {{- if .Values.customEnvVars -}}
 {{- range $key, $value := .Values.customEnvVars -}}
-{{ if $value -}}
+{{- if not (kindIs "invalid" $value) -}}
 {{- $envs = set $envs $key $value }}
 {{- end -}}
 {{- end -}}

@@ -30,7 +30,6 @@ package de.gematik.demis.validationservice.services;
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.parser.IParser;
 import de.gematik.demis.validationservice.services.ProfileSnapshot.ProfileSnapshotBuilder;
-import de.gematik.demis.validationservice.services.terminology.remote.TerminologyServerConfigProperties;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.file.Files;
@@ -51,7 +50,7 @@ import org.hl7.fhir.r4.model.Questionnaire;
 import org.hl7.fhir.r4.model.ResourceType;
 import org.hl7.fhir.r4.model.StructureDefinition;
 import org.hl7.fhir.r4.model.ValueSet;
-import org.springframework.core.io.PathResource;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Service;
 
 /** Service that parses and stores the profile in memory. */
@@ -70,7 +69,6 @@ public class ProfileParserService {
       EnumSet.of(ResourceType.CodeSystem, ResourceType.ValueSet);
 
   private final FhirContext fhirContext;
-  private final TerminologyServerConfigProperties terminologyServerConfigProperties;
 
   /**
    * With FHIR snapshot 09.05.2023 code systems and value sets can be looked up old style without
@@ -84,7 +82,7 @@ public class ProfileParserService {
     return VERSIONED_TYPES.contains(resource.getResourceType());
   }
 
-  private static Set<PathResource> getProfilesAsResources(final Path folderPath)
+  private static Set<FileSystemResource> getProfilesAsResources(final Path folderPath)
       throws IOException {
     log.info("Loading profiles from folder {}", folderPath);
     if (!Files.exists(folderPath)) {
@@ -95,7 +93,7 @@ public class ProfileParserService {
     try (final Stream<Path> stream = Files.walk(folderPath, MAX_FOLDER_DEPTH)) {
       return stream
           .filter(file -> !Files.isDirectory(file))
-          .map(path -> new PathResource(path.toAbsolutePath().toString()))
+          .map(path -> new FileSystemResource(path.toAbsolutePath().toString()))
           .collect(Collectors.toSet());
     }
   }
@@ -114,17 +112,10 @@ public class ProfileParserService {
         .structureDefinitions(
             loader.loadResources(StructureDefinition.class, FOLDER_STRUCTURE_DEFINITION))
         .questionnaires(loader.loadResources(Questionnaire.class, FOLDER_QUESTIONNAIRE));
-    if (terminologyServerConfigProperties.enabled()) {
-      profileSnapshotBuilder
-          .withTerminologyResources(false)
-          .codeSystems(Map.of())
-          .valueSets(Map.of());
-    } else {
-      profileSnapshotBuilder
-          .withTerminologyResources(true)
-          .codeSystems(loader.loadResources(CodeSystem.class, FOLDER_CODESYSTEM))
-          .valueSets(loader.loadResources(ValueSet.class, FOLDER_VALUE_SET));
-    }
+    profileSnapshotBuilder
+        .withTerminologyResources(true)
+        .codeSystems(loader.loadResources(CodeSystem.class, FOLDER_CODESYSTEM))
+        .valueSets(loader.loadResources(ValueSet.class, FOLDER_VALUE_SET));
 
     final ProfileSnapshot profileSnapshot = profileSnapshotBuilder.build();
 
@@ -160,7 +151,7 @@ public class ProfileParserService {
     private void parseProfileResource(
         Class<? extends MetadataResource> resourceType,
         Map<String, IBaseResource> result,
-        PathResource resource)
+        FileSystemResource resource)
         throws IOException {
       final MetadataResource parsedResource =
           parser.parseResource(resourceType, resource.getInputStream());

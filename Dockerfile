@@ -1,11 +1,11 @@
 # Declare Source Digest for the Base Image
-ARG SOURCE_DIGEST=cf7854f101345a586ba34ec1ae87050e6c6c9d57aa1b36d95145a4b662be5f88
-FROM gematik1/demis-fhir-package-initializer:1.1.7@sha256:${SOURCE_DIGEST}
+ARG SOURCE_DIGEST=dd8f43cfea8e6ee2f0c2f29decb0841776bffe36a38aecedbf9a6191513fba6d
+FROM gematik1/demis-fhir-package-initializer:1.1.9@sha256:${SOURCE_DIGEST}
 
 
 # Redeclare Source Digest to be used in the build context
 # https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
-ARG SOURCE_DIGEST=cf7854f101345a586ba34ec1ae87050e6c6c9d57aa1b36d95145a4b662be5f88
+ARG SOURCE_DIGEST=dd8f43cfea8e6ee2f0c2f29decb0841776bffe36a38aecedbf9a6191513fba6d
 
 # The STOPSIGNAL instruction sets the system call signal that will be sent to the container to exit
 # SIGTERM = 15 - https://de.wikipedia.org/wiki/Signal_(Unix)
@@ -41,7 +41,7 @@ ARG VERSION
 LABEL de.gematik.vendor="gematik GmbH" \
       maintainer="software-development@gematik.de" \
       de.gematik.app="DEMIS Validation-Service" \
-      de.gematik.git-repo-name="https://gitlab.prod.ccs.gematik.solutions/git/demis/validation-service.git" \
+      de.gematik.git-repo-name="https://gitlab.prod.ccs.gematik.solutions/demis/services/validation-service.git" \
       de.gematik.commit-sha=$COMMIT_HASH \
       de.gematik.version=$VERSION \
       de.gematik.source.digest=$SOURCE_DIGEST

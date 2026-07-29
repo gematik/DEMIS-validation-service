@@ -45,7 +45,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.core.env.Environment;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
@@ -63,8 +62,6 @@ class ValidationControllerIntegrationProfileTest {
   void setUp() {
     mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
   }
-
-  @Autowired Environment env;
 
   @Test
   void shouldReturn() throws Exception {
@@ -135,7 +132,7 @@ class ValidationControllerIntegrationProfileTest {
         FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_REPORT_BED_OCCUPANCY_EXAMPLE);
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
-        .andExpect(status().isUnprocessableEntity())
+        .andExpect(status().isUnprocessableContent())
         .andExpect(jsonPath("$.resourceType").value("OperationOutcome"))
         .andExpect(jsonPath("$..issue[?(@.severity == 'error')]").exists());
   }
@@ -146,7 +143,7 @@ class ValidationControllerIntegrationProfileTest {
         FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_TEST_NOTIFICATION_DV_2);
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(invalidFileContent))
-        .andExpect(status().isUnprocessableEntity())
+        .andExpect(status().isUnprocessableContent())
         .andExpect(jsonPath("$.resourceType").value("OperationOutcome"))
         .andExpect(
             jsonPath(
@@ -159,7 +156,7 @@ class ValidationControllerIntegrationProfileTest {
     final String invalidJson = "{ \"key\" : \"value\"";
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(invalidJson))
-        .andExpect(status().isUnprocessableEntity())
+        .andExpect(status().isUnprocessableContent())
         .andExpect(jsonPath("$.resourceType").value("OperationOutcome"))
         .andExpect(jsonPath("$..issue[?(@.severity == 'fatal')]").exists());
   }
@@ -179,7 +176,7 @@ class ValidationControllerIntegrationProfileTest {
     final String xmlContent = "<test></test>";
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(xmlContent))
-        .andExpect(status().isUnprocessableEntity());
+        .andExpect(status().isUnprocessableContent());
   }
 
   @Test
@@ -187,7 +184,7 @@ class ValidationControllerIntegrationProfileTest {
     final String xmlContent = "<test></test";
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_XML_VALUE).content(xmlContent))
-        .andExpect(status().isUnprocessableEntity());
+        .andExpect(status().isUnprocessableContent());
   }
 
   @Test
@@ -197,7 +194,7 @@ class ValidationControllerIntegrationProfileTest {
             ResourceFileConstants.NOT_PARSEABLE_REPORT_BED_OCCUPANCY_EXAMPLE);
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
-        .andExpect(status().isUnprocessableEntity())
+        .andExpect(status().isUnprocessableContent())
         .andExpect(jsonPath("$.resourceType").value("OperationOutcome"))
         .andExpect(jsonPath("$..issue[?(@.severity == 'fatal')]").exists());
   }

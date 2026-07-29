@@ -37,8 +37,6 @@ import ca.uhn.fhir.validation.IValidationContext;
 import ca.uhn.fhir.validation.IValidatorModule;
 import ca.uhn.fhir.validation.ResultSeverityEnum;
 import ca.uhn.fhir.validation.SingleValidationMessage;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import de.gematik.demis.validationservice.services.validation.extension.ResourceWalker.ElementCtx;
 import de.gematik.demis.validationservice.services.validation.extension.StructureDefinitionExtensionExtractor.AllowedExtensionUrls;
 import java.time.Duration;
@@ -53,6 +51,8 @@ import org.hl7.fhir.r4.model.Resource;
 import org.hl7.fhir.r4.model.StructureDefinition;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.json.JsonMapper;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -80,7 +80,7 @@ class ExtensionAllowedValidator implements IValidatorModule {
 
   private final Cache<String, AllowedExtensionUrls> cacheAllowedExtensionUrlsByProfileMap =
       CacheFactory.build(CACHE_TIMEOUT, CACHE_MAX_SIZE);
-  private final ObjectMapper objectMapper = new ObjectMapper();
+  private final JsonMapper mapper = new JsonMapper();
 
   @Override
   public void validateResource(final IValidationContext<IBaseResource> validationContext) {
@@ -156,8 +156,8 @@ class ExtensionAllowedValidator implements IValidatorModule {
       final Logger logger, final UnexpectedExtensionInfo unexpectedExtensionInfo) {
     if (logger.isWarnEnabled()) {
       try {
-        logger.warn(objectMapper.writeValueAsString(unexpectedExtensionInfo));
-      } catch (final JsonProcessingException e) {
+        logger.warn(mapper.writeValueAsString(unexpectedExtensionInfo));
+      } catch (final JacksonException e) {
         // ignore
         log.error("error creating json for log entry", e);
       }

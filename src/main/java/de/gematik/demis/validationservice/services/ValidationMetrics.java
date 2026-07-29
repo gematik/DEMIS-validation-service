@@ -71,6 +71,11 @@ public class ValidationMetrics {
       @Nonnull final String profileVersion,
       @Nonnull final List<String> findings) {
     for (final String finding : findings) {
+      log.warn(
+          "Ignored validation error - senderId: {}, profileVersion: {}, errorCode: {}",
+          senderId,
+          profileVersion,
+          finding);
       meterRegistry
           .counter(
               VALIDATION_ERROR_TYPE_METRIC,

@@ -4,11 +4,11 @@
   <parent>
     <groupId>de.gematik.demis</groupId>
     <artifactId>spring-parent</artifactId>
-    <version>2.16.1</version>
+    <version>4.1.4</version>
     <relativePath></relativePath><!-- lookup parent from repository -->
   </parent>
   <artifactId>validation-service</artifactId>
-  <version>2.14.0-SNAPSHOT</version>
+  <version>2.15.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>validation-service</name>
   <description>Validation Service for DEMIS</description>
@@ -19,13 +19,13 @@
     </license>
   </licenses>
   <properties>
-    <java.version>25</java.version>
     <sonar.exclusions>**/de/gematik/demis/validationservice/ValidationServiceApplication.java</sonar.exclusions><!-- Fix CVEs needs to be removed if new version is available -->
     <caffeine.version>3.2.3</caffeine.version>
     <ucum.version>1.0.10</ucum.version><!-- DO NOT UPGRADE until HAPI FHIR the hl7 core library (>= 6.5.8) is not part of its pom.xml -->
     <hapi.fhir.version>7.2.2</hapi.fhir.version>
     <hl7.version>6.1.2.2</hl7.version>
     <awaitility.version>4.3.0</awaitility.version>
+    <swagger-core.version>2.2.47</swagger-core.version>
     <openapi-generator.inputSpec>target/spec/api-spec.yaml</openapi-generator.inputSpec>
     <openapi-generator.outputDir>docs/api</openapi-generator.outputDir>
   </properties>
@@ -47,21 +47,6 @@
         <version>3.52.1</version>
       </dependency>
       <dependency>
-        <groupId>com.google.errorprone</groupId>
-        <artifactId>error_prone_annotations</artifactId>
-        <version>2.42.0</version>
-      </dependency>
-      <dependency>
-        <groupId>com.google.guava</groupId>
-        <artifactId>guava</artifactId>
-        <version>33.5.0-jre</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-text</artifactId>
-        <version>1.14.0</version>
-      </dependency>
-      <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-compress</artifactId>
         <version>1.28.0</version>
@@ -76,13 +61,24 @@
         <artifactId>ucum</artifactId>
         <version>${ucum.version}</version>
       </dependency>
+      <dependency>
+        <groupId>io.swagger.core.v3</groupId>
+        <artifactId>swagger-core-jakarta</artifactId>
+        <version>${swagger-core.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.swagger.core.v3</groupId>
+        <artifactId>swagger-models-jakarta</artifactId>
+        <version>${swagger-core.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.swagger.core.v3</groupId>
+        <artifactId>swagger-annotations-jakarta</artifactId>
+        <version>${swagger-core.version}</version>
+      </dependency><!--  end springdoc-openapi fix -->
     </dependencies>
   </dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>de.gematik.demis</groupId>
-      <artifactId>service-base</artifactId>
-    </dependency>
     <dependency>
       <groupId>ca.uhn.hapi.fhir</groupId>
       <artifactId>hapi-fhir-validation</artifactId>
@@ -121,11 +117,6 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-contract-wiremock</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>com.ibm.icu</groupId>
       <artifactId>icu4j</artifactId>
       <scope>runtime</scope>
@@ -138,12 +129,6 @@
       <version>${project.parent.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.assertj</groupId>
-      <artifactId>assertj-core</artifactId>
-      <version>3.26.3</version>
-      <scope>test</scope>
-    </dependency><!-- AssertJ for fluent assertions in tests -->
   </dependencies>
   <profiles><!-- with this profile you can skip all tests which are depends on profile snapshot -->
     <profile>

@@ -65,6 +65,6 @@ class ValidationControllerWithCommonCodeValidationIntegrationProfileTest {
 
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_XML_VALUE).content(validFileContent))
-        .andExpect(status().isUnprocessableEntity());
+        .andExpect(status().isUnprocessableContent());
   }
 }

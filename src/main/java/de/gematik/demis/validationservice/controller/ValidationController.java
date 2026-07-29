@@ -143,7 +143,7 @@ public class ValidationController {
                         || issue.getSeverity() == IssueSeverity.FATAL);
     if (hasErrorOrFatalIssue) {
       log.warn("Operation failed with {}", operationOutcomeAsString);
-      return ResponseEntity.unprocessableEntity().body(operationOutcomeAsString);
+      return ResponseEntity.unprocessableContent().body(operationOutcomeAsString);
     }
 
     return ResponseEntity.ok().body(operationOutcomeAsString);

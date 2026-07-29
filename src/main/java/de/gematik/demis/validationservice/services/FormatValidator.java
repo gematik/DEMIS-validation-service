@@ -27,18 +27,18 @@ package de.gematik.demis.validationservice.services;
  * #L%
  */
 
-import com.fasterxml.jackson.core.JacksonException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.StringReader;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.springframework.stereotype.Service;
 import org.xml.sax.InputSource;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.json.JsonMapper;
 
 @Service
 public class FormatValidator {
 
-  private static final ObjectMapper mapper = new ObjectMapper();
+  private static final JsonMapper mapper = new JsonMapper();
   private static final DocumentBuilderFactory documentBuilderFactory =
       DocumentBuilderFactory.newInstance();
 

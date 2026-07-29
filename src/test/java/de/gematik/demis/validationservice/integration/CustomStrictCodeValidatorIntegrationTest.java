@@ -38,8 +38,8 @@ import de.gematik.demis.validationservice.ValidationServiceApplication;
 import de.gematik.demis.validationservice.util.FileTestUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.web.servlet.MockMvc;
 
 @AutoConfigureMockMvc
@@ -60,7 +60,7 @@ class CustomStrictCodeValidatorIntegrationTest {
             "src/test/resources/integrationtests/customValidators/input/strictCodingCheckExample-ObservationInvalid.json");
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(invalidFileContent))
-        .andExpect(status().isUnprocessableEntity())
+        .andExpect(status().isUnprocessableContent())
         .andExpect(
             content()
                 .string(

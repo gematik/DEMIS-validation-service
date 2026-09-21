@@ -113,7 +113,14 @@ class ValidationServiceRegressionTest {
 
     final ValidationConfigProperties props =
         new ValidationConfigProperties(
-            null, Locale.getDefault(), ResultSeverityEnum.WARNING, 1, ResultSeverityEnum.WARNING);
+            null,
+            Locale.getDefault(),
+            ResultSeverityEnum.WARNING,
+            1,
+            ResultSeverityEnum.WARNING,
+            false,
+            false,
+            false);
 
     final FilteredMessagePrefixesFactory filteredMessagePrefixesFactory =
         mock(FilteredMessagePrefixesFactory.class);

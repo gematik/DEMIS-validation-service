@@ -1,11 +1,10 @@
 # Declare Source Digest for the Base Image
-ARG SOURCE_DIGEST=dd8f43cfea8e6ee2f0c2f29decb0841776bffe36a38aecedbf9a6191513fba6d
-FROM gematik1/demis-fhir-package-initializer:1.1.9@sha256:${SOURCE_DIGEST}
-
+ARG SOURCE_DIGEST=sha256:c25e194e222f927ba6f43efdb6396c85adf0732707a0dad3064a7c208a3fc501
+FROM gematik1/demis-fhir-package-initializer:1.3.0@${SOURCE_DIGEST}
 
 # Redeclare Source Digest to be used in the build context
 # https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
-ARG SOURCE_DIGEST=dd8f43cfea8e6ee2f0c2f29decb0841776bffe36a38aecedbf9a6191513fba6d
+ARG SOURCE_DIGEST
 
 # The STOPSIGNAL instruction sets the system call signal that will be sent to the container to exit
 # SIGTERM = 15 - https://de.wikipedia.org/wiki/Signal_(Unix)
@@ -28,7 +27,7 @@ ARG GROUPID=10000
 COPY --chown=$USERID:$GROUPID target/validation-service.jar /app.jar
 
 # Run as User (not root)
-USER $USERID:$USERID
+USER $USERID:$GROUPID
 
 CMD ["-jar", "/app.jar"]
 # Git Args

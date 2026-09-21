@@ -27,6 +27,9 @@ package de.gematik.demis.validationservice.services;
  * #L%
  */
 
+import static de.gematik.demis.validationservice.util.ResourceFileConstants.DUPLICATE_NON_TERMINOLOGY_URL_DIFFERENT_VERSION_PROFILES_PATH;
+import static de.gematik.demis.validationservice.util.ResourceFileConstants.DUPLICATE_TERMINOLOGY_URL_DIFFERENT_VERSION_PROFILES_PATH;
+import static de.gematik.demis.validationservice.util.ResourceFileConstants.DUPLICATE_URL_VERSION_PROFILES_PATH;
 import static de.gematik.demis.validationservice.util.ResourceFileConstants.EMPTY_PROFILES_PATH;
 import static de.gematik.demis.validationservice.util.ResourceFileConstants.MINIMLAL_PROFILES_PATH;
 import static de.gematik.demis.validationservice.util.ResourceFileConstants.NOT_EXISTING_PROFILES_PATH;
@@ -39,7 +42,7 @@ import org.junit.jupiter.api.Test;
 class ProfileParserServiceTest {
 
   private final ProfileParserService profileParserService =
-      new ProfileParserService(FhirContext.forR4Cached());
+      new ProfileParserService(FhirContext.forR4Cached(), new CodeSystemConsolidator());
 
   @Test
   void okay() {
@@ -62,5 +65,49 @@ class ProfileParserServiceTest {
   void notExistingProfilesDirectoryThrowsException() {
     assertThatThrownBy(() -> profileParserService.parseProfile(NOT_EXISTING_PROFILES_PATH))
         .isInstanceOf(IllegalArgumentException.class);
+  }
+
+  @Test
+  void duplicateUrlVersionThrowsExceptionForAllTypesOfResources() {
+    final var profileParserServiceWithPostprocessing =
+        new ProfileParserService(FhirContext.forR4Cached(), new CodeSystemConsolidator(), true);
+
+    assertThatThrownBy(
+            () ->
+                profileParserServiceWithPostprocessing.parseProfile(
+                    DUPLICATE_URL_VERSION_PROFILES_PATH))
+        .isInstanceOf(IllegalStateException.class)
+        .hasMessageContaining("Duplicate resource for lookup key")
+        .hasMessageContaining("https://demis.rki.de/fhir/ValueSet/DuplicateSameVersion|1.0.0");
+  }
+
+  @Test
+  void duplicateNonTerminologyUrlWithDifferentVersionThrowsException() {
+    final var profileParserServiceWithPostprocessing =
+        new ProfileParserService(FhirContext.forR4Cached(), new CodeSystemConsolidator(), true);
+
+    assertThatThrownBy(
+            () ->
+                profileParserServiceWithPostprocessing.parseProfile(
+                    DUPLICATE_NON_TERMINOLOGY_URL_DIFFERENT_VERSION_PROFILES_PATH))
+        .isInstanceOf(IllegalStateException.class)
+        .hasMessageContaining("Duplicate resource for lookup key");
+  }
+
+  @Test
+  void duplicateTerminologyUrlWithDifferentVersionIsAllowed() {
+    final var profileParserServiceWithPostprocessing =
+        new ProfileParserService(FhirContext.forR4Cached(), new CodeSystemConsolidator(), true);
+
+    final var result =
+        profileParserServiceWithPostprocessing.parseProfile(
+            DUPLICATE_TERMINOLOGY_URL_DIFFERENT_VERSION_PROFILES_PATH);
+
+    assertThat(result.codeSystems())
+        .hasSize(3)
+        .containsKeys(
+            "https://demis.rki.de/fhir/CodeSystem/DuplicateTerminology",
+            "https://demis.rki.de/fhir/CodeSystem/DuplicateTerminology|1.0.0",
+            "https://demis.rki.de/fhir/CodeSystem/DuplicateTerminology|2.0.0");
   }
 }

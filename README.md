@@ -125,13 +125,16 @@ aus IntelliJ als SpringBoot Application starten
 ## Properties
 
 
-| Property                                    | Default Value | Environment Variable   | Environment Variable  Description                                                                                          |
-| ------------------------------------------- | ------------- |------------------------| -------------------------------------------------------------------------------------------------------------------------- |
-| demis.validation-service.profiles.basepath  |               | FHIR_PROFILES_BASEPATH | Path to base directory with all profiles versions                                                                          |
-| demis.validation-service.profiles.fhirpath  | Fhir          |                        | Path inside of a profiles versions directory to the resources.                                                             |
-| demis.validation-service.profiles.versions  |               | PACKAGE_VERSIONS       | List of versions. Must match the directory names under the base path.                                                      |
-| demis.validation-service.locale             | `en_US`       |                        | Locale for the HAPI-FHIR context and validator. The language of diagnostics of the outcome is dependent on this locale.    |
-| demis.validation-service.minSeverityOutcome | `information` |                        | Minimal severity that will not be filtered out in the Outcome. Possible values:`information`, `warning`, `error`, `fatal`. |
+| Property                                                        | Default Value | Environment Variable                                 | Environment Variable  Description                                                                                          |
+|-----------------------------------------------------------------| ------------- |------------------------------------------------------| -------------------------------------------------------------------------------------------------------------------------- |
+| demis.validation-service.profiles.basepath                      |               | FHIR_PROFILES_BASEPATH                               | Path to base directory with all profiles versions                                                                          |
+| demis.validation-service.profiles.fhirpath                      | Fhir          |                                                      | Path inside of a profiles versions directory to the resources.                                                             |
+| demis.validation-service.profiles.versions                      |               | PACKAGE_VERSIONS                                     | List of versions. Must match the directory names under the base path.                                                      |
+| demis.validation-service.locale                                 | `en_US`       |                                                      | Locale for the HAPI-FHIR context and validator. The language of diagnostics of the outcome is dependent on this locale.    |
+| demis.validation-service.minSeverityOutcome                     | `information` |                                                      | Minimal severity that will not be filtered out in the Outcome. Possible values:`information`, `warning`, `error`, `fatal`. |
+| demis.validation-service.common-code-system-terminology-enabled | false         | CONFIG_OPTION_COMMON_CODE_SYSTEM_TERMINOLOGY_ENABLED | adds terminology support to validator                                                                                      |
+| demis.validation-service.custom-regex-validator-enabled         | false         | CONFIG_OPTION_CUSTOM_REGEX_VALIDATOR_ENABLED         | enables custom regex validator                                                                                             |
+| demis.validation-service.custom-quantity-validator-enabled      | false         | CONFIG_OPTION_CUSTOM_QUANTITY_VALIDATOR_ENABLED      | enables custom quantity validator                                                                                          |
 
 ## Feature Flags
 
@@ -139,7 +142,6 @@ aus IntelliJ als SpringBoot Application starten
 | Feature Flag                                        | Description                                    |
 |-----------------------------------------------------|------------------------------------------------|
 | feature.flag.format.validation.enabled              | allow json only as valid format                |
-| feature.flag.common.code.system.terminology.enabled | adds terminology support to validator          |
 | feature.flag.filtered.errors.as.warnings.disabled   | changes error validation results to warnings.  |
 
 ## Usage

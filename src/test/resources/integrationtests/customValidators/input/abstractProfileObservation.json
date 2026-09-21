@@ -1,0 +1,694 @@
+{
+  "resourceType": "Bundle",
+  "id": "0a3b99e4-3404-452c-b8fe-ee2540d9ac1c",
+  "meta": {
+    "profile": [
+      "https://demis.rki.de/fhir/StructureDefinition/NotificationBundleLaboratory"
+    ]
+  },
+  "identifier": {
+    "system": "https://demis.rki.de/fhir/NamingSystem/NotificationBundleId",
+    "value": "Bundle/0a3b99e4-3404-452c-b8fe-ee2540d9ac1c"
+  },
+  "type": "document",
+  "timestamp": "2025-10-21T10:08:44.210+02:00",
+  "entry": [
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Composition/400c2a10-0564-4bec-b843-b11fc6747ff4",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "400c2a10-0564-4bec-b843-b11fc6747ff4",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/NotificationLaboratory"
+          ]
+        },
+        "identifier": {
+          "system": "https://demis.rki.de/fhir/NamingSystem/NotificationId",
+          "value": "23856f8c-e6dd-42ca-9667-ed1dccc50299"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34782-3",
+              "display": "Infectious disease Note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3bf497c0-03c6-40e1-b46a-020466d4ee2f"
+        },
+        "date": "2025-10-21T10:08:41+02:00",
+        "author": [
+          {
+            "reference": "PractitionerRole/df3e2aa3-4a24-4750-b7c8-e0d5151deac0"
+          }
+        ],
+        "title": "Erregernachweismeldung",
+        "section": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "11502-2",
+                  "display": "Laboratory report"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "DiagnosticReport/e2a851f6-bc01-4c94-896e-a69d71ea65fc"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Organization/02c078af-207a-4441-b833-4afbcb9f3dd1",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "02c078af-207a-4441-b833-4afbcb9f3dd1",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/SubmittingFacility"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR",
+            "value": "999999999"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+                "code": "medFacility",
+                "display": "Medizinische Einrichtung"
+              }
+            ]
+          }
+        ],
+        "name": "Dr. med. Mustermann mit vielen Namen",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "030 123 40 40",
+            "use": "work"
+          },
+          {
+            "system": "email",
+            "value": "service@einrichtung.de",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Teststrasse 14"
+            ],
+            "city": "Muenchen",
+            "postalCode": "80803",
+            "country": "DE"
+          }
+        ],
+        "contact": [
+          {
+            "name": {
+              "use": "official",
+              "text": "Dr. med. Mustermann mit vielen Namen"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Patient/3bf497c0-03c6-40e1-b46a-020466d4ee2f",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "3bf497c0-03c6-40e1-b46a-020466d4ee2f",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/NotifiedPerson"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Blabber",
+            "given": [
+              "Blubber"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1988-01-13",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "https://demis.rki.de/fhir/StructureDefinition/AddressUse",
+                "valueCoding": {
+                  "system": "https://demis.rki.de/fhir/CodeSystem/addressUse",
+                  "code": "primary",
+                  "display": "Hauptwohnsitz"
+                }
+              }
+            ],
+            "line": [
+              "Karlstrasse 1"
+            ],
+            "city": "Testhausen",
+            "postalCode": "21481",
+            "country": "DE"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/PractitionerRole/13a46acd-86c0-4a4f-a22e-38b31e72476e",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "13a46acd-86c0-4a4f-a22e-38b31e72476e",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/SubmittingRole"
+          ]
+        },
+        "organization": {
+          "reference": "Organization/02c078af-207a-4441-b833-4afbcb9f3dd1"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Organization/5e98c6e2-3e40-4025-b499-994c3c383135",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "5e98c6e2-3e40-4025-b499-994c3c383135",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/NotifierFacility"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://demis.rki.de/fhir/NamingSystem/DemisLaboratoryId",
+            "value": "12345"
+          },
+          {
+            "system": "https://demis.rki.de/fhir/NamingSystem/DemisParticipantId",
+            "value": "98765"
+          },
+          {
+            "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR",
+            "value": "123456789"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "https://demis.rki.de/fhir/CodeSystem/organizationType",
+                "code": "laboratory",
+                "display": "Erregerdiagnostische Untersuchungsstelle"
+              }
+            ]
+          }
+        ],
+        "name": "Labor von Mustermann",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "030 1234",
+            "use": "work"
+          },
+          {
+            "system": "fax",
+            "value": "030 1234",
+            "use": "work"
+          },
+          {
+            "system": "email",
+            "value": "office@meldereinrichtung.de",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Meldereinrichtung Strasse nr 123 Hinterhof"
+            ],
+            "city": "Berlin",
+            "postalCode": "11111",
+            "country": "DE"
+          }
+        ],
+        "contact": [
+          {
+            "name": {
+              "use": "official",
+              "family": "MelderEinrichtung Ansp. Nachname",
+              "given": [
+                "MelderEinrichtung Ansp. Vorname"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Practitioner/75bfad3e-a8fb-41a3-b82e-bc1d8185ff87",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "75bfad3e-a8fb-41a3-b82e-bc1d8185ff87",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/Notifier"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "MelderPersonTestNachname",
+            "given": [
+              "MelderPersonTesVorname"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "extension": [
+              {
+                "url": "https://demis.rki.de/fhir/StructureDefinition/Comment",
+                "valueString": "montag-freitag 8:00-16:00"
+              }
+            ],
+            "system": "phone",
+            "value": "030 1234"
+          }
+        ],
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "MelderPerson Strasse nr 123 Drittenhinterhof"
+            ],
+            "city": "Berlin",
+            "postalCode": "11111",
+            "country": "DE"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/PractitionerRole/df3e2aa3-4a24-4750-b7c8-e0d5151deac0",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "df3e2aa3-4a24-4750-b7c8-e0d5151deac0",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/NotifierRole"
+          ]
+        },
+        "practitioner": {
+          "reference": "Practitioner/75bfad3e-a8fb-41a3-b82e-bc1d8185ff87"
+        },
+        "organization": {
+          "reference": "Organization/5e98c6e2-3e40-4025-b499-994c3c383135"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Specimen/a8dd1328-0c0a-45bc-bf75-9900d3dc9f59",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "a8dd1328-0c0a-45bc-bf75-9900d3dc9f59",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/SpecimenHEVP"
+          ]
+        },
+        "status": "available",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "20241115",
+              "code": "119364003",
+              "display": "Serumprobe"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3bf497c0-03c6-40e1-b46a-020466d4ee2f"
+        },
+        "receivedTime": "2025-10-14T09:38:34+02:00",
+        "collection": {
+          "collector": {
+            "reference": "PractitionerRole/13a46acd-86c0-4a4f-a22e-38b31e72476e"
+          },
+          "collectedDateTime": "2025-10-14T09:38:00+02:00"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Observation/7ee828b9-b147-47df-afcc-13f1cd82b1fd",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "7ee828b9-b147-47df-afcc-13f1cd82b1fd",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/PathogenDetection"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "version": "2.80",
+              "code": "56513-5",
+              "display": "Hepatitis E virus IgG Ab [Units/volume] in Serum or Plasma by Immunoassay"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3bf497c0-03c6-40e1-b46a-020466d4ee2f"
+        },
+        "valueQuantity": {
+          "value": 6.0
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "POS",
+                "display": "Positive"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Halli hallo wie gehts denn so?\n"
+          }
+        ],
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "20241115",
+              "code": "702661004",
+              "display": "Light microscopy technique (qualifier value)"
+            }
+          ]
+        },
+        "specimen": {
+          "reference": "Specimen/a8dd1328-0c0a-45bc-bf75-9900d3dc9f59"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Observation/d2990e4a-2bc9-4b36-901c-974e97c51971",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d2990e4a-2bc9-4b36-901c-974e97c51971",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/PathogenDetectionHEVP"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "version": "2.80",
+              "code": "51798-7",
+              "display": "Hepatitis E virus IgM Ab [Units/volume] in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3bf497c0-03c6-40e1-b46a-020466d4ee2f"
+        },
+        "valueRatio": {
+          "numerator": {
+            "value": 8.0,
+            "system": "http://unitsofmeasure.org",
+            "code": "[HPF]"
+          },
+          "denominator": {
+            "value": 9.0,
+            "system": "http://unitsofmeasure.org",
+            "code": "[HPF]"
+          }
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "POS",
+                "display": "Positive"
+              }
+            ]
+          }
+        ],
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "20241115",
+              "code": "702661004",
+              "display": "Light microscopy technique (qualifier value)"
+            }
+          ]
+        },
+        "specimen": {
+          "reference": "Specimen/a8dd1328-0c0a-45bc-bf75-9900d3dc9f59"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Observation/e3550e4a-2bc9-4b36-901c-974e97c51971",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "e3550e4a-2bc9-4b36-901c-974e97c51971",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/PathogenDetectionHEVP"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "version": "2.80",
+              "code": "51798-7",
+              "display": "Hepatitis E virus IgM Ab [Units/volume] in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3bf497c0-03c6-40e1-b46a-020466d4ee2f"
+        },
+        "valueQuantity": {
+          "value": 8.0,
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "POS",
+                "display": "Positive"
+              }
+            ]
+          }
+        ],
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "20241115",
+              "code": "702661004",
+              "display": "Light microscopy technique (qualifier value)"
+            }
+          ]
+        },
+        "specimen": {
+          "reference": "Specimen/a8dd1328-0c0a-45bc-bf75-9900d3dc9f59"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/Observation/f4770e4a-2bc9-4b36-901c-974e97c51971",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f4770e4a-2bc9-4b36-901c-974e97c51971",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/PathogenDetectionHEVP"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "version": "2.80",
+              "code": "51798-7",
+              "display": "Hepatitis E virus IgM Ab [Units/volume] in Serum"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3bf497c0-03c6-40e1-b46a-020466d4ee2f"
+        },
+        "valueQuantity": {
+          "value": 8.0,
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "POS",
+                "display": "Positive"
+              }
+            ]
+          }
+        ],
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "20241115",
+              "code": "702661004",
+              "display": "Light microscopy technique (qualifier value)"
+            }
+          ]
+        },
+        "specimen": {
+          "reference": "Specimen/a8dd1328-0c0a-45bc-bf75-9900d3dc9f59"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://demis.rki.de/fhir/DiagnosticReport/e2a851f6-bc01-4c94-896e-a69d71ea65fc",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "e2a851f6-bc01-4c94-896e-a69d71ea65fc",
+        "meta": {
+          "profile": [
+            "https://demis.rki.de/fhir/StructureDefinition/LaboratoryReportHEVP"
+          ]
+        },
+        "basedOn": [
+          {
+            "type": "ServiceRequest",
+            "identifier": {
+              "system": "https://demis.rki.de/fhir/NamingSystem/ServiceRequestId",
+              "value": "6531"
+            }
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "https://demis.rki.de/fhir/CodeSystem/notificationCategory",
+              "code": "hevp",
+              "display": "Hepatitis-E-Virus"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/3bf497c0-03c6-40e1-b46a-020466d4ee2f"
+        },
+        "issued": "2025-10-21T10:08:41.000+02:00",
+        "result": [
+          {
+            "reference": "Observation/7ee828b9-b147-47df-afcc-13f1cd82b1fd"
+          },
+          {
+            "reference": "Observation/d2990e4a-2bc9-4b36-901c-974e97c51971"
+          },
+          {
+            "reference": "Observation/e3550e4a-2bc9-4b36-901c-974e97c51971"
+          },
+          {
+            "reference": "Observation/f4770e4a-2bc9-4b36-901c-974e97c51971"
+          }
+        ],
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "https://demis.rki.de/fhir/CodeSystem/conclusionCode",
+                "code": "pathogenDetected",
+                "display": "Meldepflichtiger Erreger nachgewiesen"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

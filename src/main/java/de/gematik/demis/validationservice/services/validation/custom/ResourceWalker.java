@@ -1,4 +1,4 @@
-package de.gematik.demis.validationservice.services.validation.extension;
+package de.gematik.demis.validationservice.services.validation.custom;
 
 /*-
  * #%L
@@ -27,8 +27,6 @@ package de.gematik.demis.validationservice.services.validation.extension;
  * #L%
  */
 
-import static de.gematik.demis.validationservice.services.validation.extension.ResourceWalker.ElementCtx.rootContext;
-
 import jakarta.annotation.Nullable;
 import java.util.List;
 import java.util.function.Consumer;
@@ -39,11 +37,9 @@ import org.hl7.fhir.r4.model.Base;
 import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.Property;
 import org.hl7.fhir.r4.model.Resource;
-import org.springframework.stereotype.Component;
 
 @Slf4j
-@Component
-class ResourceWalker {
+public class ResourceWalker {
 
   private static void traverse(final ElementCtx ctx, final Consumer<ElementCtx> action) {
     action.accept(ctx);
@@ -72,6 +68,19 @@ class ResourceWalker {
     return profile;
   }
 
+  private static ElementCtx newResourceContext(
+      final String location, final Resource resource, final String currentBundleProfile) {
+    final String bundleProfile =
+        currentBundleProfile == null && resource instanceof Bundle
+            ? getProfile(resource)
+            : currentBundleProfile;
+    return new ElementCtx(location, resource.fhirType(), resource, resource, bundleProfile);
+  }
+
+  private static ElementCtx rootContext(final Resource resource) {
+    return newResourceContext(resource.fhirType(), resource, null);
+  }
+
   public void forEachElementDepthFirst(final Resource resource, final Consumer<ElementCtx> action) {
     traverse(rootContext(resource), action);
   }
@@ -90,25 +99,12 @@ class ResourceWalker {
    * @param element the fhir element itself
    * @param bundleProfile the profile of the encapsulated bundle. Can be null
    */
-  record ElementCtx(
+  public record ElementCtx(
       String locationPath,
       String resourcePath,
       Resource currentResource,
       Base element,
       @Nullable String bundleProfile) {
-
-    private static ElementCtx newResourceContext(
-        final String location, final Resource resource, final String currentBundleProfile) {
-      final String bundleProfile =
-          currentBundleProfile == null && resource instanceof Bundle
-              ? getProfile(resource)
-              : currentBundleProfile;
-      return new ElementCtx(location, resource.fhirType(), resource, resource, bundleProfile);
-    }
-
-    static ElementCtx rootContext(final Resource resource) {
-      return newResourceContext(resource.fhirType(), resource, null);
-    }
 
     public String getCurrentResourceProfile() {
       return getProfile(currentResource());

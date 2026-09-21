@@ -1,4 +1,4 @@
-package de.gematik.demis.validationservice.controller;
+package de.gematik.demis.validationservice.integration;
 
 /*-
  * #%L
@@ -27,44 +27,39 @@ package de.gematik.demis.validationservice.controller;
  * #L%
  */
 
-import static org.springframework.http.MediaType.APPLICATION_XML_VALUE;
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import de.gematik.demis.validationservice.ValidationServiceApplication;
 import de.gematik.demis.validationservice.util.FileTestUtil;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.TestPropertySource;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
 
-@ActiveProfiles(value = {"test"})
-@SpringBootTest(classes = {ValidationServiceApplication.class})
-@TestPropertySource(
-    locations = "classpath:application-test.properties",
-    properties = {"demis.validation-service.common-code-system-terminology-enabled=true"})
-class ValidationControllerWithCommonCodeValidationIntegrationProfileTest {
-  @Autowired private WebApplicationContext webApplicationContext;
-  private MockMvc mockMvc;
+@AutoConfigureMockMvc
+@SpringBootTest(
+    classes = {ValidationServiceApplication.class},
+    properties = {
+      "feature.flag.vs.reference.validation=true",
+      "feature.flag.strict.single.bundle.validation=true",
+      "demis.validation-service.profiles.basepath=src/test/resources/integrationtests/customValidators/strictCodeValidation/fixedBinding",
+      "demis.validation-service.profiles.versions=6.1.8"
+    })
+class ResourceReferencesValidationStrictIntegrationTest {
 
-  @BeforeEach
-  void setUp() {
-    mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-  }
+  private static final String VALID_PATIENT =
+      "src/test/resources/integrationtests/customValidators/input/customValidatorInput_PatientOnly.json";
+
+  @Autowired private MockMvc mockMvc;
 
   @Test
-  void shouldReturn() throws Exception {
-    final String validFileContent =
-        FileTestUtil.readFileIntoString(
-            "src/test/resources/RegressiontestForValueQuantityCorrect.xml");
-
+  void shouldRejectNonBundleResourceInStrictMode() throws Exception {
+    String patient = FileTestUtil.readFileIntoString(VALID_PATIENT);
     mockMvc
-        .perform(post("/$validate").contentType(APPLICATION_XML_VALUE).content(validFileContent))
+        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(patient))
         .andExpect(status().isUnprocessableContent());
   }
 }

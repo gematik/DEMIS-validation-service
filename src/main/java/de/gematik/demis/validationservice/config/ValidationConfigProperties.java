@@ -51,7 +51,10 @@ public record ValidationConfigProperties(
     @NotNull Locale locale,
     @NotNull ResultSeverityEnum minSeverityOutcome,
     @Name("cache.expireAfterAccessMins") @Positive long cacheExpireAfterAccessTimeoutMins,
-    @NotNull ResultSeverityEnum unexpectedExtensionSeverity) {
+    @NotNull ResultSeverityEnum unexpectedExtensionSeverity,
+    boolean commonCodeSystemTerminologyEnabled,
+    boolean customRegexValidatorEnabled,
+    boolean customQuantityValidatorEnabled) {
 
   @PostConstruct
   void log() {

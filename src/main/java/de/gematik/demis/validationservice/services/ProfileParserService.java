@@ -34,12 +34,7 @@ import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Collections;
-import java.util.EnumSet;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
+import java.util.*;
 import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -50,12 +45,13 @@ import org.hl7.fhir.r4.model.Questionnaire;
 import org.hl7.fhir.r4.model.ResourceType;
 import org.hl7.fhir.r4.model.StructureDefinition;
 import org.hl7.fhir.r4.model.ValueSet;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Service;
 
 /** Service that parses and stores the profile in memory. */
 @Service
-@RequiredArgsConstructor
 @Slf4j
 public class ProfileParserService {
 
@@ -69,6 +65,23 @@ public class ProfileParserService {
       EnumSet.of(ResourceType.CodeSystem, ResourceType.ValueSet);
 
   private final FhirContext fhirContext;
+  private final CodeSystemConsolidator codeSystemConsolidator;
+  private final boolean featureFlagFhirPackagePostprocessing;
+
+  @Autowired
+  ProfileParserService(
+      FhirContext fhirContext,
+      CodeSystemConsolidator codeSystemConsolidator,
+      @Value("${feature.flag.fhir.package.postprocessing}")
+          boolean featureFlagFhirPackagePostprocessing) {
+    this.fhirContext = fhirContext;
+    this.codeSystemConsolidator = codeSystemConsolidator;
+    this.featureFlagFhirPackagePostprocessing = featureFlagFhirPackagePostprocessing;
+  }
+
+  ProfileParserService(FhirContext fhirContext, CodeSystemConsolidator codeSystemConsolidator) {
+    this(fhirContext, codeSystemConsolidator, false);
+  }
 
   /**
    * With FHIR snapshot 09.05.2023 code systems and value sets can be looked up old style without
@@ -82,19 +95,21 @@ public class ProfileParserService {
     return VERSIONED_TYPES.contains(resource.getResourceType());
   }
 
-  private static Set<FileSystemResource> getProfilesAsResources(final Path folderPath)
+  private static List<FileSystemResource> getProfilesAsResources(final Path folderPath)
       throws IOException {
     log.info("Loading profiles from folder {}", folderPath);
     if (!Files.exists(folderPath)) {
       log.warn("Folder {} not present", folderPath);
 
-      return Collections.emptySet();
+      return Collections.emptyList();
     }
     try (final Stream<Path> stream = Files.walk(folderPath, MAX_FOLDER_DEPTH)) {
       return stream
           .filter(file -> !Files.isDirectory(file))
+          .map(Path::toAbsolutePath)
+          .sorted()
           .map(path -> new FileSystemResource(path.toAbsolutePath().toString()))
-          .collect(Collectors.toSet());
+          .toList();
     }
   }
 
@@ -136,30 +151,75 @@ public class ProfileParserService {
         final Class<? extends MetadataResource> resourceType, final String folder) {
       try {
         final Path path = profileSnapshotsPath.resolve(folder);
-        final var profileResources = getProfilesAsResources(path);
-        final var result = new HashMap<String, IBaseResource>();
-        for (final var resource : profileResources) {
-          parseProfileResource(resourceType, result, resource);
+        List<? extends MetadataResource> resourcesForLookup =
+            parseProfileResources(resourceType, path);
+
+        if (CodeSystem.class.equals(resourceType) && featureFlagFhirPackagePostprocessing) {
+          log.info(
+              "Consolidating CodeSystems to ensure a single CodeSystem per url/version combination.");
+          resourcesForLookup =
+              codeSystemConsolidator.consolidateByUrlAndVersion(
+                  resourcesForLookup.stream().map(CodeSystem.class::cast).toList());
         }
+
+        if (featureFlagFhirPackagePostprocessing) {
+          ensureNoDuplicateResources(resourcesForLookup);
+        }
+
+        final var result = toResourceLookupMap(resourcesForLookup);
         log.info("Loaded {}: {} ", folder, result.size());
-        return Map.copyOf(result);
+        return result;
       } catch (final IOException e) {
         throw new UncheckedIOException(e);
       }
     }
 
-    private void parseProfileResource(
-        Class<? extends MetadataResource> resourceType,
-        Map<String, IBaseResource> result,
-        FileSystemResource resource)
-        throws IOException {
-      final MetadataResource parsedResource =
-          parser.parseResource(resourceType, resource.getInputStream());
-      final String url = parsedResource.getUrl();
-      result.put(url, parsedResource);
-      if (versionedLookup(parsedResource)) {
-        result.put(url + "|" + parsedResource.getVersion(), parsedResource);
+    private List<MetadataResource> parseProfileResources(
+        Class<? extends MetadataResource> resourceType, Path path) throws IOException {
+      final var profileResources = getProfilesAsResources(path);
+      final var parsedResources =
+          new java.util.ArrayList<MetadataResource>(profileResources.size());
+      for (final var resource : profileResources) {
+        parsedResources.add(parser.parseResource(resourceType, resource.getInputStream()));
       }
+      return parsedResources;
+    }
+
+    private Map<String, IBaseResource> toResourceLookupMap(
+        List<? extends MetadataResource> parsedResources) {
+      final Map<String, IBaseResource> result = new LinkedHashMap<>();
+      for (final var parsedResource : parsedResources) {
+        final String url = parsedResource.getUrl();
+        result.put(url, parsedResource);
+        if (versionedLookup(parsedResource)) {
+          result.put(url + "|" + parsedResource.getVersion(), parsedResource);
+        }
+      }
+      return Map.copyOf(result);
+    }
+
+    private void ensureNoDuplicateResources(List<? extends MetadataResource> resources) {
+      final Set<String> lookupKeys = new HashSet<>();
+      for (final var resource : resources) {
+        final String key = toDuplicateCheckKey(resource);
+        if (!lookupKeys.add(key)) {
+          throw new IllegalStateException(
+              "Duplicate resource for lookup key "
+                  + key
+                  + " ("
+                  + resource.getResourceType()
+                  + ").");
+        }
+      }
+    }
+
+    private String toDuplicateCheckKey(MetadataResource resource) {
+      if (!versionedLookup(resource)) {
+        return Objects.toString(resource.getUrl(), "");
+      }
+      return Objects.toString(resource.getUrl(), "")
+          + "|"
+          + Objects.toString(resource.getVersion(), "");
     }
   }
 }

@@ -36,6 +36,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import de.gematik.demis.validationservice.ValidationServiceApplication;
 import de.gematik.demis.validationservice.util.FileTestUtil;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -46,51 +47,58 @@ import org.springframework.test.web.servlet.MockMvc;
 @SpringBootTest(
     classes = {ValidationServiceApplication.class},
     properties = {
-      "demis.validation-service.custom-regex-validator-enabled=true",
-      "demis.validation-service.custom-quantity-validator-enabled=true",
-      "demis.validation-service.profiles.basepath=src/test/resources/integrationtests/customValidators/quantity",
-      "demis.validation-service.profiles.versions=6.1.2"
+      "feature.flag.vs.reference.validation=true",
+      "feature.flag.strict.single.bundle.validation=true",
+      "demis.validation-service.profiles.basepath=src/test/resources/integrationtests/customValidators/strictCodeValidation/fixedBinding",
+      "demis.validation-service.profiles.versions=6.1.8"
     })
-class CustomQuantityValidatorIntegrationTest {
+class ResourceReferencesValidationIntegrationTest {
+
+  private static final String INPUT_FILE =
+      "src/test/resources/integrationtests/customValidators/input/strictCodingCheckExample.json";
+  private static final String INPUT_FILE_WITH_PARAMETERS =
+      "src/test/resources/integrationtests/customValidators/input/strictCodingCheckExample-Parameters.json";
+  private static final String VALID_SPECIMEN_REFERENCE =
+      "Specimen/4016fbc2-2439-3f6d-8935-0eb71c3d487c";
+
   @Autowired private MockMvc mockMvc;
 
-  @Test
-  void shouldReturnSuccessForValidNotification() throws Exception {
-    final String validFileContent =
-        FileTestUtil.readFileIntoString(
-            "src/test/resources/integrationtests/customValidators/input/customValidatorInput.json");
+  private String bundleNotification;
+  private String parametersNotification;
 
-    mockMvc
-        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
-        .andExpect(status().isOk());
+  @BeforeEach
+  void setUp() throws Exception {
+    bundleNotification = FileTestUtil.readFileIntoString(INPUT_FILE);
+    parametersNotification = FileTestUtil.readFileIntoString(INPUT_FILE_WITH_PARAMETERS);
   }
 
   @Test
-  void shouldReturnSuccessForValidNotificationInParameters() throws Exception {
-    final String validFileContent =
-        FileTestUtil.readFileIntoString(
-            "src/test/resources/integrationtests/customValidators/input/customValidatorInputWithParameters.json");
+  void shouldReturnUnprocessableEntityForUnresolvableReference() throws Exception {
+    final String notification =
+        bundleNotification.replace(VALID_SPECIMEN_REFERENCE, "Specimen/wrong-reference");
 
     mockMvc
-        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
-        .andExpect(status().isOk());
-  }
-
-  @Test
-  void shouldReturnUnprocessableEntityForInvalidNotification() throws Exception {
-    final String validFileContent =
-        FileTestUtil.readFileIntoString(
-            "src/test/resources/integrationtests/customValidators/input/invalidCustomValidatorInput.json");
-
-    mockMvc
-        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
+        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(notification))
         .andExpect(status().isUnprocessableContent())
         .andExpect(
             content()
                 .string(
                     allOf(
-                        containsString("Quantity in item newbornWeight violates constraint"),
-                        containsString(
-                            "Answer for item timeOfInfection does not match the regex"))));
+                        containsString("Reference 'Specimen/wrong-reference' is not resolvable"))));
+  }
+
+  @Test
+  void shouldNotReportErrorForValidInternalReference() throws Exception {
+    mockMvc
+        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(bundleNotification))
+        .andExpect(status().isOk());
+  }
+
+  @Test
+  void shouldResolveReferenceInParametersResource() throws Exception {
+    mockMvc
+        .perform(
+            post("/$validate").contentType(APPLICATION_JSON_VALUE).content(parametersNotification))
+        .andExpect(status().isOk());
   }
 }

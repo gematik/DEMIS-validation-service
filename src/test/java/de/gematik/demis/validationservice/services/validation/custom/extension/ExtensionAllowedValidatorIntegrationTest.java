@@ -1,4 +1,4 @@
-package de.gematik.demis.validationservice.services.validation.extension;
+package de.gematik.demis.validationservice.services.validation.custom.extension;
 
 /*-
  * #%L
@@ -47,11 +47,7 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.common.hapi.validation.support.PrePopulatedValidationSupport;
 import org.hl7.fhir.common.hapi.validation.support.ValidationSupportChain;
-import org.hl7.fhir.r4.model.Bundle;
-import org.hl7.fhir.r4.model.Composition;
-import org.hl7.fhir.r4.model.Patient;
-import org.hl7.fhir.r4.model.StringType;
-import org.hl7.fhir.r4.model.StructureDefinition;
+import org.hl7.fhir.r4.model.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -74,8 +70,7 @@ class ExtensionAllowedValidatorIntegrationTest {
             .unexpectedExtensionSeverity(ResultSeverityEnum.WARNING)
             .build();
     final var extensionAllowedValidatorProvider =
-        new ExtensionAllowedValidatorProvider(
-            new ResourceWalker(), new StructureDefinitionExtensionExtractor(), config);
+        new ExtensionAllowedValidatorProvider(new StructureDefinitionExtensionExtractor(), config);
     fhirValidator = fhirContext.newValidator();
     fhirValidator.registerValidatorModule(
         extensionAllowedValidatorProvider.createValidatorModule(

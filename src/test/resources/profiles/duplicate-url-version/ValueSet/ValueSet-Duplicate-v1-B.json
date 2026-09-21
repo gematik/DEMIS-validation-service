@@ -1,0 +1,7 @@
+{
+  "resourceType": "ValueSet",
+  "id": "DuplicateValueSetB",
+  "url": "https://demis.rki.de/fhir/ValueSet/DuplicateSameVersion",
+  "version": "1.0.0",
+  "status": "active"
+}

@@ -1,0 +1,15 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "DuplicateTerminologyV1",
+  "url": "https://demis.rki.de/fhir/CodeSystem/DuplicateTerminology",
+  "version": "1.0.0",
+  "name": "DuplicateTerminologyV1",
+  "status": "active",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "v1",
+      "display": "Version 1"
+    }
+  ]
+}

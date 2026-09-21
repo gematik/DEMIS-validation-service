@@ -1,4 +1,4 @@
-package de.gematik.demis.validationservice.services.validation.extension;
+package de.gematik.demis.validationservice.services.validation.custom;
 
 /*-
  * #%L
@@ -29,16 +29,12 @@ package de.gematik.demis.validationservice.services.validation.extension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import de.gematik.demis.validationservice.services.validation.extension.ResourceWalker.ElementCtx;
+import de.gematik.demis.validationservice.services.validation.custom.ResourceWalker.ElementCtx;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
-import org.hl7.fhir.r4.model.Bundle;
-import org.hl7.fhir.r4.model.Extension;
-import org.hl7.fhir.r4.model.Parameters;
-import org.hl7.fhir.r4.model.Patient;
-import org.hl7.fhir.r4.model.StringType;
+import org.hl7.fhir.r4.model.*;
 import org.junit.jupiter.api.Test;
 
 @Slf4j

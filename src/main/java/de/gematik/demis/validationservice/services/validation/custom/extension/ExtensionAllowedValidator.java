@@ -1,4 +1,4 @@
-package de.gematik.demis.validationservice.services.validation.extension;
+package de.gematik.demis.validationservice.services.validation.custom.extension;
 
 /*-
  * #%L
@@ -27,7 +27,7 @@ package de.gematik.demis.validationservice.services.validation.extension;
  * #L%
  */
 
-import static de.gematik.demis.validationservice.services.validation.extension.StructureDefinitionExtensionExtractor.NO_URLS_ALLOWED;
+import static de.gematik.demis.validationservice.services.validation.custom.extension.StructureDefinitionExtensionExtractor.NO_URLS_ALLOWED;
 import static java.time.temporal.ChronoUnit.HOURS;
 
 import ca.uhn.fhir.context.support.IValidationSupport;
@@ -37,8 +37,9 @@ import ca.uhn.fhir.validation.IValidationContext;
 import ca.uhn.fhir.validation.IValidatorModule;
 import ca.uhn.fhir.validation.ResultSeverityEnum;
 import ca.uhn.fhir.validation.SingleValidationMessage;
-import de.gematik.demis.validationservice.services.validation.extension.ResourceWalker.ElementCtx;
-import de.gematik.demis.validationservice.services.validation.extension.StructureDefinitionExtensionExtractor.AllowedExtensionUrls;
+import de.gematik.demis.validationservice.services.validation.custom.ResourceWalker;
+import de.gematik.demis.validationservice.services.validation.custom.ResourceWalker.ElementCtx;
+import de.gematik.demis.validationservice.services.validation.custom.extension.StructureDefinitionExtensionExtractor.AllowedExtensionUrls;
 import java.time.Duration;
 import java.util.Set;
 import lombok.Builder;

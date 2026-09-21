@@ -4,11 +4,11 @@
   <parent>
     <groupId>de.gematik.demis</groupId>
     <artifactId>spring-parent</artifactId>
-    <version>4.1.4</version>
+    <version>4.1.12</version>
     <relativePath></relativePath><!-- lookup parent from repository -->
   </parent>
   <artifactId>validation-service</artifactId>
-  <version>2.15.0-SNAPSHOT</version>
+  <version>2.16.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>validation-service</name>
   <description>Validation Service for DEMIS</description>
@@ -20,12 +20,12 @@
   </licenses>
   <properties>
     <sonar.exclusions>**/de/gematik/demis/validationservice/ValidationServiceApplication.java</sonar.exclusions><!-- Fix CVEs needs to be removed if new version is available -->
-    <caffeine.version>3.2.3</caffeine.version>
+    <caffeine.version>3.2.4</caffeine.version>
     <ucum.version>1.0.10</ucum.version><!-- DO NOT UPGRADE until HAPI FHIR the hl7 core library (>= 6.5.8) is not part of its pom.xml -->
     <hapi.fhir.version>7.2.2</hapi.fhir.version>
     <hl7.version>6.1.2.2</hl7.version>
     <awaitility.version>4.3.0</awaitility.version>
-    <swagger-core.version>2.2.47</swagger-core.version>
+    <swagger-core.version>2.2.55</swagger-core.version>
     <openapi-generator.inputSpec>target/spec/api-spec.yaml</openapi-generator.inputSpec>
     <openapi-generator.outputDir>docs/api</openapi-generator.outputDir>
   </properties>
@@ -34,7 +34,7 @@
       <dependency>
         <groupId>org.xerial</groupId>
         <artifactId>sqlite-jdbc</artifactId>
-        <version>3.51.1.0</version>
+        <version>3.53.4.0</version>
       </dependency>
       <dependency>
         <groupId>ca.uhn.hapi.fhir</groupId>
@@ -44,7 +44,7 @@
       <dependency>
         <groupId>org.checkerframework</groupId>
         <artifactId>checker-qual</artifactId>
-        <version>3.52.1</version>
+        <version>3.55.1</version>
       </dependency>
       <dependency>
         <groupId>org.apache.commons</groupId>
@@ -54,7 +54,7 @@
       <dependency>
         <groupId>com.ibm.icu</groupId>
         <artifactId>icu4j</artifactId>
-        <version>78.1</version>
+        <version>78.3</version>
       </dependency>
       <dependency>
         <groupId>org.fhir</groupId>

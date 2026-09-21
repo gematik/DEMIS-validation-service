@@ -35,10 +35,12 @@ import de.gematik.demis.validationservice.config.ValidationConfigProperties;
 import de.gematik.demis.validationservice.services.ProfileParserService;
 import de.gematik.demis.validationservice.services.ProfileSnapshot;
 import de.gematik.demis.validationservice.services.terminology.TerminologyValidationProvider;
+import de.gematik.demis.validationservice.services.validation.custom.extension.ExtensionAllowedValidatorProvider;
+import de.gematik.demis.validationservice.services.validation.custom.profile.AbstractProfileValidator;
 import de.gematik.demis.validationservice.services.validation.custom.questionnaire.responses.CustomQuantityComparatorQuestionnaireResponseValidator;
 import de.gematik.demis.validationservice.services.validation.custom.questionnaire.responses.CustomRegexQuestionnaireResponseValidator;
+import de.gematik.demis.validationservice.services.validation.custom.resourcereferences.ResourceReferencesValidationModule;
 import de.gematik.demis.validationservice.services.validation.custom.strict.valuesets.StrictValueSetMembershipValidator;
-import de.gematik.demis.validationservice.services.validation.extension.ExtensionAllowedValidatorProvider;
 import java.nio.file.Path;
 import java.util.concurrent.TimeUnit;
 import lombok.RequiredArgsConstructor;
@@ -66,15 +68,6 @@ public final class FhirValidatorFactory {
   private final ExtensionAllowedValidatorProvider extensionAllowedValidatorProvider;
   private ProfileSnapshot profileSnapshot;
 
-  @Value("${feature.flag.common.code.system.terminology.enabled}")
-  private boolean featureFlagCommonCodeSystemsTerminologyEnabled;
-
-  @Value("${feature.flag.custom.quantity.validator.enabled}")
-  private boolean featureFlagCustomQuantityValidatorEnabled;
-
-  @Value("${feature.flag.custom.regex.validator.enabled}")
-  private boolean featureFlagCustomRegexValidatorEnabled;
-
   @Value("${feature.flag.validation.extension.check.enabled}")
   private boolean featureFlagValidationExtensionCheckEnabled;
 
@@ -83,6 +76,15 @@ public final class FhirValidatorFactory {
 
   @Value("${config.option.additional.strict.coding.validator.enabled}")
   private boolean configOptionAdditionalStrictCodingValidatorEnabled;
+
+  @Value("${feature.flag.vs.reference.validation}")
+  private boolean featureFlagVsReferenceValidation;
+
+  @Value("${feature.flag.strict.single.bundle.validation}")
+  private boolean featureFlagStrictSingleBundleValidation;
+
+  @Value("${feature.flag.abstract.profile.validation:false}")
+  private boolean featureFlagAbstractProfileValidation;
 
   public FhirValidator createFhirValidator(final Path profilesPath) {
     log.info("Start creating and initializing fhir validator for profiles path {}", profilesPath);
@@ -106,12 +108,17 @@ public final class FhirValidatorFactory {
               featureFlagValidationExtensionCheckEnabled,
               featureFlagDenyModifierExtensions));
     }
-    if (featureFlagCustomQuantityValidatorEnabled) {
+    if (featureFlagVsReferenceValidation) {
+      validator.registerValidatorModule(
+          new ResourceReferencesValidationModule(featureFlagStrictSingleBundleValidation));
+    }
+
+    if (configProperties.customQuantityValidatorEnabled()) {
       validator.registerValidatorModule(
           new CustomQuantityComparatorQuestionnaireResponseValidator(
               profileSnapshot.questionnaires()));
     }
-    if (featureFlagCustomRegexValidatorEnabled) {
+    if (configProperties.customRegexValidatorEnabled()) {
       validator.registerValidatorModule(
           new CustomRegexQuestionnaireResponseValidator(profileSnapshot.questionnaires()));
     }
@@ -119,6 +126,10 @@ public final class FhirValidatorFactory {
       validator.registerValidatorModule(
           new StrictValueSetMembershipValidator(
               profileSnapshot.valueSets(), profileSnapshot.structureDefinitions()));
+    }
+    if (featureFlagAbstractProfileValidation) {
+      validator.registerValidatorModule(
+          new AbstractProfileValidator(profileSnapshot.structureDefinitions()));
     }
     return validator;
   }
@@ -166,7 +177,7 @@ public final class FhirValidatorFactory {
   }
 
   private void addCommonCodeSystemsValidation(ValidationSupportChain chain) {
-    if (featureFlagCommonCodeSystemsTerminologyEnabled) {
+    if (configProperties.commonCodeSystemTerminologyEnabled()) {
       chain.addValidationSupport(new CommonCodeSystemsTerminologyService(this.fhirContext));
     }
   }

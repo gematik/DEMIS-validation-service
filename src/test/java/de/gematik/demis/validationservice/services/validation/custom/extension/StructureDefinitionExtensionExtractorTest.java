@@ -1,4 +1,4 @@
-package de.gematik.demis.validationservice.services.validation.extension;
+package de.gematik.demis.validationservice.services.validation.custom.extension;
 
 /*-
  * #%L
@@ -27,14 +27,14 @@ package de.gematik.demis.validationservice.services.validation.extension;
  * #L%
  */
 
-import static de.gematik.demis.validationservice.services.validation.extension.StructureDefinitionExtensionExtractor.unionSets;
+import static de.gematik.demis.validationservice.services.validation.custom.extension.StructureDefinitionExtensionExtractor.unionSets;
 import static java.nio.file.Files.readString;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import ca.uhn.fhir.context.FhirContext;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import de.gematik.demis.validationservice.services.validation.extension.StructureDefinitionExtensionExtractor.AllowedExtensionUrls;
+import de.gematik.demis.validationservice.services.validation.custom.extension.StructureDefinitionExtensionExtractor.AllowedExtensionUrls;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Map;

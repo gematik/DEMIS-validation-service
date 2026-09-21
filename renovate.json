@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "groupName": "minor and patch versions",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    },
+    {
+      "groupName": "major versions",
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "matchPackageNames": ["ca.uhn.hapi.fhir:**"],
+      "enabled"          : false
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-package de.gematik.demis.validationservice.services.validation.extension;
+package de.gematik.demis.validationservice.services.validation.custom.extension;
 
 /*-
  * #%L
@@ -30,6 +30,7 @@ package de.gematik.demis.validationservice.services.validation.extension;
 import ca.uhn.fhir.context.support.IValidationSupport;
 import ca.uhn.fhir.validation.IValidatorModule;
 import de.gematik.demis.validationservice.config.ValidationConfigProperties;
+import de.gematik.demis.validationservice.services.validation.custom.ResourceWalker;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -37,7 +38,6 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class ExtensionAllowedValidatorProvider {
 
-  private final ResourceWalker resourceWalker;
   private final StructureDefinitionExtensionExtractor structureDefinitionExtensionExtractor;
   private final ValidationConfigProperties configProperties;
 
@@ -48,7 +48,7 @@ public class ExtensionAllowedValidatorProvider {
     return new ExtensionAllowedValidator(
         validationSupport,
         configProperties.unexpectedExtensionSeverity(),
-        resourceWalker,
+        new ResourceWalker(),
         structureDefinitionExtensionExtractor,
         featureFlagValidationExtensionCheckEnabled,
         featureFlagDenyModifierExtensions);

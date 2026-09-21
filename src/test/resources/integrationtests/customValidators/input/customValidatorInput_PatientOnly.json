@@ -1,0 +1,49 @@
+{
+  "resourceType": "Patient",
+  "meta": {
+    "profile": [
+      "https://demis.rki.de/fhir/StructureDefinition/NotifiedPerson"
+    ]
+  },
+  "name": [
+    {
+      "use": "official",
+      "family": "Müller",
+      "given": [
+        "Markus"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "01577894624248"
+    },
+    {
+      "system": "email",
+      "value": "test@test.de"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1960-11-22",
+  "address": [
+    {
+      "extension": [
+        {
+          "url": "https://demis.rki.de/fhir/StructureDefinition/AddressUse",
+          "valueCoding": {
+            "system": "https://demis.rki.de/fhir/CodeSystem/addressUse",
+            "code": "primary"
+          }
+        }
+      ],
+      "line": [
+        "Poststr. 18"
+      ],
+      "city": "Berlin",
+      "postalCode": "13353",
+      "country": "DE"
+    }
+  ]
+}
+

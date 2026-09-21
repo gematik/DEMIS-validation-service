@@ -85,7 +85,6 @@ This project includes:
   Kotlin Stdlib Common under The Apache License, Version 2.0
   Kotlin Stdlib Jdk7 under Apache-2.0
   Kotlin Stdlib Jdk8 under Apache-2.0
-  LatencyUtils under Public Domain, per Creative Commons CC0
   Log4j API to SLF4J Adapter under Apache-2.0
   Logback Classic Module under EPL-2.0 or LGPL-2.1-only
   Logback Core Module under EPL-2.0 or LGPL-2.1-only

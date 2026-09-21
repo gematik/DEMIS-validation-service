@@ -1,0 +1,13 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DuplicateNonTerminologyA",
+  "url": "https://demis.rki.de/fhir/StructureDefinition/DuplicateNonTerminology",
+  "version": "1.0.0",
+  "name": "DuplicateNonTerminologyA",
+  "status": "active",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint"
+}

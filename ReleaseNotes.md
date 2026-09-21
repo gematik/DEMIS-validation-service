@@ -2,15 +2,34 @@
 
 # Release Validation-Service
 
+## Release 2.16.0
+
+- upgraded base image to version 1.2.0
+- converted FEATURE_FLAG_COMMON_CODE_SYSTEM_TERMINOLOGY_ENABLED to CONFIG_OPTION_COMMON_CODE_SYSTEM_TERMINOLOGY_ENABLED
+- converted FEATURE_FLAG_CUSTOM_REGEX_VALIDATOR_ENABLED to CONFIG_OPTION_CUSTOM_REGEX_VALIDATOR_ENABLED
+- converted FEATURE_FLAG_CUSTOM_QUANTITY_VALIDATOR_ENABLED to CONFIG_OPTION_CUSTOM_QUANTITY_VALIDATOR_ENABLED
+- added VEX documents to repository
+- added validation to ensure internal FHIR references are resolvable within the same document
+- added optional CodeSystem post-processing during FHIR resource loading (controlled by
+  `CONFIG_OPTION_FHIR_PACKAGE_POSTPROCESSING`) to consolidate related fragments
+- upgraded spring parent to 4.1.12
+- upgraded base image to gematik1/demis-fhir-package-initializer:1.3.0
+- added validation module for validation of usage of abstract profiles in FHIR resource instances (FEATURE_FLAG_ABSTRACT_PROFILE_VALIDATION)
+- Updated minor/patch versions of dependencies
+
 ## Release 2.15.0
-- spring boot 4 upgrade 
+
+- spring boot 4 upgrade
 - fixed handling of falsy custom environment variables (false, 0) in helm chart
-- extended validation logging with error code, senderId and profile version when filtered error as warnings flag is active
+- extended validation logging with error code, senderId and profile version when filtered error as warnings flag is
+  active
 - upgraded base image to version 1.1.9
-- upgraded spring parent to 4.1.4 
+- upgraded spring parent to 4.1.4
 
 ## Release 2.14.0
-- reduced OperationOutcome size by suppressing informational code-in-ValueSet match results below `demis.validation-service.minSeverityOutcome`
+
+- reduced OperationOutcome size by suppressing informational code-in-ValueSet match results below
+  `demis.validation-service.minSeverityOutcome`
 - remove FEATURE_FLAG_PACKAGE_REGISTRY_ENABLED
 - increased docker base image fhir-package-initializer version to 1.1.7
 - arranged jvm options and resource limits
@@ -18,13 +37,15 @@
 - simplified helm chart
 
 ## Release 2.13.0
+
 - the default minimum severity level for validation issues has been changed from "information" to "warning"
 - changed FEATURE_FLAG_ADDITIONAL_STRICT_CODING_VALIDATOR_ENABLED to CONFIG_OPTION_ADDITIONAL_STRICT_CODING_VALIDATOR_EN
 - reduced default CPU requests to 1
 - increased spring-parent version to 2.15.1
 - updated dependencies
 
-## Release 2.12.0 
+## Release 2.12.0
+
 - updated base-image and updated from java 21 to java 25
 - updated to new garbage-collector G1GC
 - removed related deployment resources for old deployments
@@ -34,6 +55,7 @@
 - decreased MaxRAMPercentage from 80% to 65%
 
 ## Release 2.11.0
+
 - added new validation module for strict validation of codings with fragmented code systems and required binding for a
   value set.
 - upgrade fhir-package-initializer to 1.0.6 for faster package loading
@@ -42,9 +64,11 @@
 - update spring-parent version to 2.14.15
 
 ## Release 2.10.1
+
 - removed feature flag FEATURE_FLAG_FILTERED_VALIDATION_ERRORS_DISABLED from values.yaml
 
 ## Release 2.10.0
+
 - added support of FHIR packages through new Docker base image (FHIR package initializer)
 - update custom quantity validation to match profile definitions from 6.1.7 upwards
 - update dependency guava to 33.5.0
@@ -55,61 +79,82 @@
 - update dependency sqlite-jdbc 3.50.3.0
 
 ## 2.9.1
+
 - refactor deployment resource from helm chart for not using versions of profiles in selector
 
 ## 2.9.0
+
 - update spring-parent version to 2.13.4
 - add .gitattributes
 
 ## 2.8.2
+
 ### changed
+
 - collect metrics on validation errors
-- add quantity and regex checks to validation behind FEATURE_FLAG_CUSTOM_QUANTITY_VALIDATOR_ENABLED and FEATURE_FLAG_CUSTOM_REGEX_VALIDATOR_ENABLED 
+- add quantity and regex checks to validation behind FEATURE_FLAG_CUSTOM_QUANTITY_VALIDATOR_ENABLED and
+  FEATURE_FLAG_CUSTOM_REGEX_VALIDATOR_ENABLED
 
 ## 2.8.1
+
 ### changed
-- add default feature flags FEATURE_FLAG_FILTERED_VALIDATION_ERRORS_DISABLED, FEATURE_FLAG_FILTERED_ERRORS_AS_WARNINGS_DISABLED to values.yaml
+
+- add default feature flags FEATURE_FLAG_FILTERED_VALIDATION_ERRORS_DISABLED,
+  FEATURE_FLAG_FILTERED_ERRORS_AS_WARNINGS_DISABLED to values.yaml
 - removed feature flag FEATURE_FLAG_RELAXED_VALIDATION from values.yaml
 - refactor helm chart for supporting provisioning of deployment in modes "dedicated", "distributed" and "combined"
 - use spring-parent version 2.12.7
 
 ## 2.8.0
+
 ### changed
+
 - optional support for remote terminology server
 - updated profiles
 - removed filter of validation errors in the notification
 - updated base image
 - add feature.flag.relaxed.validation
+
 ### fixed
+
 - Dependency-Updates (CVEs et al.)
 
 ## 2.7.0
+
 ### changed
+
 - support for multiple profile snapshots versions: Breaking Change in Environment Variables.
 - updated dependencies
 
 ## 2.6.2
+
 - Updated ospo-resources for adding additional notes and disclaimer
 - setting new resources in helm chart
 - setting new timeouts and retries in helm chart
 
 ## 2.6.1
+
 - Rollback HAPI-FHIR to 7.2.2
 
 ## 2.6.0
+
 ### fixed
+
 - Dependency-Updates (CVEs et al.)
 
 ### changed
+
 - First official GitHub-Release
 - Update Base-Image to OSADL
 
 ## 2.5.0
 
 ### fixed
+
 - CVEs
 
 ### changed
+
 - Upgraded SpringBoot to 3.3.5
 - Upgraded HAPI FHIR to 7.4.5
 - Updated Profiles from RKI
@@ -119,78 +164,84 @@
 ## 2.1.0
 
 ### fixed
+
 - CVEs
 - Upgraded SpringBoot to 3.2.0
-
 
 ## 2.0.1
 
 ### fixed
+
 - add missing License-Header
 - add checks to CI-Pipeline
-
 
 ## 2.0.0
 
 ### fixed
+
 - fix CVEs
 
 ### changed
+
 - Support for new RKI Profiles 1.23.0.alpha3
 - Upgraded SpringBoot to 3.0.7
-
 
 ## 1.4.3
 
 ### changed
+
 - Upgraded Docker Image to use JRE 17.0.7
 - Upgraded HAPI FHIR Utilities to 6.4.4
-
 
 ## 1.4.2
 
 ## fixed
+
 - fix CVE-2023-24057
 - fix CVE-2023-28465
 
 ### changed
-- Upgraded HAPI FHIR Utilities to 6.2.5
 
+- Upgraded HAPI FHIR Utilities to 6.2.5
 
 ## 1.4.1
 
 ### changed
+
 - Changed logging format to JSON
 
 ## 1.4.0
 
 ### fixed
+
 - fix Apache Tomcat CVE-2022-45143
 
 ### changed
+
 - add code autoformat plugin to pom
 - changed base image to alpine
 
 ## 1.3.0 (2023-01-25)
 
 ### fixed
+
 - fix Apache Tomcat CVE-2022-45143
 
 ### changed
-- Update Helm Chart
 
+- Update Helm Chart
 
 ## 1.2.0 (2022-12-04)
 
 ### changed
-- update code system, introduced hospitalization-reason
 
+- update code system, introduced hospitalization-reason
 
 ## 1.1.0 (2022-11-11)
 
 ### changed
-- update profile snapshot to v2022-09-27
 
+- update profile snapshot to v2022-09-27
 
 ## 1.0.0 (2022-09-12)
 

@@ -103,7 +103,7 @@ class ValidationServiceTest {
 
     final ValidationConfigProperties props =
         new ValidationConfigProperties(
-            null, Locale.getDefault(), ResultSeverityEnum.WARNING, 1, WARNING);
+            null, Locale.getDefault(), ResultSeverityEnum.WARNING, 1, WARNING, false, false, false);
 
     underTest =
         new ValidationService(

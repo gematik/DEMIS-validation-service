@@ -57,6 +57,12 @@ public final class ResourceFileConstants {
   public static final Path EMPTY_PROFILES_PATH = TEST_RESOURCE_PATH.resolve("profiles/empty");
   public static final Path NOT_EXISTING_PROFILES_PATH =
       TEST_RESOURCE_PATH.resolve("profiles/not_exists");
+  public static final Path DUPLICATE_URL_VERSION_PROFILES_PATH =
+      TEST_RESOURCE_PATH.resolve("profiles/duplicate-url-version");
+  public static final Path DUPLICATE_NON_TERMINOLOGY_URL_DIFFERENT_VERSION_PROFILES_PATH =
+      TEST_RESOURCE_PATH.resolve("profiles/duplicate-url-non-terminology");
+  public static final Path DUPLICATE_TERMINOLOGY_URL_DIFFERENT_VERSION_PROFILES_PATH =
+      TEST_RESOURCE_PATH.resolve("profiles/duplicate-url-terminology");
   public static final Path TERMINOLOGY_PROFILES_PATH =
       TEST_RESOURCE_PATH.resolve("profiles/terminology");
 

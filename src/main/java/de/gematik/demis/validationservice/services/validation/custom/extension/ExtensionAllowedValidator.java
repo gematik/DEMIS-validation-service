@@ -76,9 +76,6 @@ class ExtensionAllowedValidator implements IValidatorModule {
   private final ResourceWalker resourceWalker;
   private final StructureDefinitionExtensionExtractor structureDefinitionExtensionExtractor;
 
-  private final boolean featureFlagValidationExtensionCheckEnabled;
-  private final boolean featureFlagDenyModifierExtensions;
-
   private final Cache<String, AllowedExtensionUrls> cacheAllowedExtensionUrlsByProfileMap =
       CacheFactory.build(CACHE_TIMEOUT, CACHE_MAX_SIZE);
   private final JsonMapper mapper = new JsonMapper();
@@ -88,13 +85,11 @@ class ExtensionAllowedValidator implements IValidatorModule {
     resourceWalker.forEachElementDepthFirst(
         (Resource) validationContext.getResource(),
         elementCtx -> {
-          if (featureFlagDenyModifierExtensions
-              && elementCtx.element()
-                  instanceof IBaseHasModifierExtensions modifierExtensionContainer) {
+          if (elementCtx.element()
+              instanceof IBaseHasModifierExtensions modifierExtensionContainer) {
             validateModifierExtensions(modifierExtensionContainer, elementCtx, validationContext);
           }
-          if (featureFlagValidationExtensionCheckEnabled
-              && elementCtx.element() instanceof Extension extension) {
+          if (elementCtx.element() instanceof Extension extension) {
             validateExtension(extension, elementCtx, validationContext);
           }
         });

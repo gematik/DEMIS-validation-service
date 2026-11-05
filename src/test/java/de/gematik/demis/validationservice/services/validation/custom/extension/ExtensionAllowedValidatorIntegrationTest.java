@@ -73,8 +73,7 @@ class ExtensionAllowedValidatorIntegrationTest {
         new ExtensionAllowedValidatorProvider(new StructureDefinitionExtensionExtractor(), config);
     fhirValidator = fhirContext.newValidator();
     fhirValidator.registerValidatorModule(
-        extensionAllowedValidatorProvider.createValidatorModule(
-            provideStructureDefinition(), true, true));
+        extensionAllowedValidatorProvider.createValidatorModule(provideStructureDefinition()));
   }
 
   @Test

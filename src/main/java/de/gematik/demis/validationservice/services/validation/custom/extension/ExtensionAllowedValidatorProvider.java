@@ -41,16 +41,11 @@ public class ExtensionAllowedValidatorProvider {
   private final StructureDefinitionExtensionExtractor structureDefinitionExtensionExtractor;
   private final ValidationConfigProperties configProperties;
 
-  public IValidatorModule createValidatorModule(
-      final IValidationSupport validationSupport,
-      final boolean featureFlagValidationExtensionCheckEnabled,
-      final boolean featureFlagDenyModifierExtensions) {
+  public IValidatorModule createValidatorModule(final IValidationSupport validationSupport) {
     return new ExtensionAllowedValidator(
         validationSupport,
         configProperties.unexpectedExtensionSeverity(),
         new ResourceWalker(),
-        structureDefinitionExtensionExtractor,
-        featureFlagValidationExtensionCheckEnabled,
-        featureFlagDenyModifierExtensions);
+        structureDefinitionExtensionExtractor);
   }
 }

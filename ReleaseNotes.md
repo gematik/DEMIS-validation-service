@@ -2,6 +2,10 @@
 
 # Release Validation-Service
 
+## Release 2.17.0
+- Updated minor/patch versions of dependencies
+- removed FF's FEATURE_FLAG_VALIDATION_EXTENSION_CHECK_ENABLED & FEATURE_FLAG_DENY_MODIFIER_EXTENSIONS
+
 ## Release 2.16.0
 
 - upgraded base image to version 1.2.0
@@ -11,11 +15,12 @@
 - added VEX documents to repository
 - added validation to ensure internal FHIR references are resolvable within the same document
 - added optional CodeSystem post-processing during FHIR resource loading (controlled by
-  `CONFIG_OPTION_FHIR_PACKAGE_POSTPROCESSING`) to consolidate related fragments
+  `FEATURE_FLAG_FHIR_PACKAGE_POSTPROCESSING`) to consolidate related fragments
 - upgraded spring parent to 4.1.12
 - upgraded base image to gematik1/demis-fhir-package-initializer:1.3.0
 - added validation module for validation of usage of abstract profiles in FHIR resource instances (FEATURE_FLAG_ABSTRACT_PROFILE_VALIDATION)
 - Updated minor/patch versions of dependencies
+- added validation of referenced resource meta.profile against slice-specific target profile constraints
 
 ## Release 2.15.0
 

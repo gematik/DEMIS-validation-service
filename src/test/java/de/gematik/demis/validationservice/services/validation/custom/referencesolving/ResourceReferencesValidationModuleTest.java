@@ -66,7 +66,7 @@ class ResourceReferencesValidationModuleTest {
   @BeforeEach
   void setUp() throws Exception {
     boolean featureFlagStrictSingleBundleValidation = false;
-    validator = new ResourceReferencesValidationModule(featureFlagStrictSingleBundleValidation);
+    validator = new ResourceReferencesValidationModule();
     bundleNotification = FileTestUtil.readFileIntoString(INPUT_FILE);
     parametersNotification = FileTestUtil.readFileIntoString(INPUT_FILE_WITH_PARAMETERS);
   }

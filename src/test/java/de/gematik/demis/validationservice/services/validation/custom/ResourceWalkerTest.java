@@ -211,6 +211,49 @@ class ResourceWalkerTest {
                 extension1.getValue(),
                 bundleProfile));
 
-    assertThat(list).containsExactlyInAnyOrderElementsOf(expected);
+    assertThat(list)
+        .usingRecursiveFieldByFieldElementComparatorIgnoringFields("parent")
+        .containsExactlyInAnyOrderElementsOf(expected);
+  }
+
+  @Test
+  void forEachElementDepthFirst_linksEachChildToItsParent() {
+    final Parameters parameters = new Parameters();
+    final Bundle bundle = new Bundle();
+    bundle
+        .getMeta()
+        .addProfile("https://demis.rki.de/fhir/StructureDefinition/NotificationBundleLaboratory");
+    parameters.addParameter().setName("content").setResource(bundle);
+    bundle.setId("abc");
+    final Patient patient = new Patient();
+    bundle.addEntry().setResource(patient);
+    patient.getMeta().addProfile("https://demis.rki.de/fhir/StructureDefinition/NotifiedPerson");
+    patient
+        .getBirthDateElement()
+        .setValue(new Date())
+        .addExtension(new Extension("http://demis.de/test/my-extension", new StringType("test")));
+
+    final List<ElementCtx> list = new ArrayList<>();
+    underTest.forEachElementDepthFirst(parameters, list::add);
+
+    final ElementCtx birthDateExt0 =
+        list.stream()
+            .filter(c -> c.locationPath().endsWith(".birthDate.extension[0]"))
+            .findFirst()
+            .orElseThrow();
+
+    final List<String> ancestorLocations = new ArrayList<>();
+    for (ElementCtx c = birthDateExt0.parent(); c != null; c = c.parent()) {
+      ancestorLocations.add(c.locationPath());
+    }
+
+    assertThat(ancestorLocations)
+        .containsExactly(
+            "Parameters.parameter[0].resource/*Bundle/abc*/.entry[0].resource/*Patient/null*/.birthDate",
+            "Parameters.parameter[0].resource/*Bundle/abc*/.entry[0].resource/*Patient/null*/",
+            "Parameters.parameter[0].resource/*Bundle/abc*/.entry[0]",
+            "Parameters.parameter[0].resource/*Bundle/abc*/",
+            "Parameters.parameter[0]",
+            "Parameters");
   }
 }

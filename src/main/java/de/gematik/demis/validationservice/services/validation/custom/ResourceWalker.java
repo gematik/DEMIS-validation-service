@@ -69,16 +69,19 @@ public class ResourceWalker {
   }
 
   private static ElementCtx newResourceContext(
-      final String location, final Resource resource, final String currentBundleProfile) {
+      final String location,
+      final Resource resource,
+      final String currentBundleProfile,
+      @Nullable final ElementCtx parent) {
     final String bundleProfile =
         currentBundleProfile == null && resource instanceof Bundle
             ? getProfile(resource)
             : currentBundleProfile;
-    return new ElementCtx(location, resource.fhirType(), resource, resource, bundleProfile);
+    return new ElementCtx(location, resource.fhirType(), resource, resource, bundleProfile, parent);
   }
 
   private static ElementCtx rootContext(final Resource resource) {
-    return newResourceContext(resource.fhirType(), resource, null);
+    return newResourceContext(resource.fhirType(), resource, null, null);
   }
 
   public void forEachElementDepthFirst(final Resource resource, final Consumer<ElementCtx> action) {
@@ -98,13 +101,28 @@ public class ResourceWalker {
    * @param currentResource the resource this element is contained
    * @param element the fhir element itself
    * @param bundleProfile the profile of the encapsulated bundle. Can be null
+   * @param parent the enclosing element context, or {@code null} for the root, allowing consumers
+   *     to walk upward through the element hierarchy
    */
   public record ElementCtx(
       String locationPath,
       String resourcePath,
       Resource currentResource,
       Base element,
-      @Nullable String bundleProfile) {
+      @Nullable String bundleProfile,
+      @Nullable ElementCtx parent) {
+
+    /// Convenience constructor for callers that do not track a parent context (e.g. tests
+    /// that build an ElementCtx directly). Production code within this walker always uses
+    /// the canonical six-argument constructor.
+    public ElementCtx(
+        String locationPath,
+        String resourcePath,
+        Resource currentResource,
+        Base element,
+        @Nullable String bundleProfile) {
+      this(locationPath, resourcePath, currentResource, element, bundleProfile, null);
+    }
 
     public String getCurrentResourceProfile() {
       return getProfile(currentResource());
@@ -114,14 +132,16 @@ public class ResourceWalker {
       final StringBuilder locationSegment = buildLocationSegment(property, index);
       if (child instanceof Resource resource) {
         addResourceInfo(locationSegment, resource);
-        return newResourceContext(locationPath() + locationSegment, resource, bundleProfile());
+        return newResourceContext(
+            locationPath() + locationSegment, resource, bundleProfile(), this);
       } else {
         return new ElementCtx(
             locationPath() + locationSegment,
             resourcePath() + "." + property.getName(),
             currentResource(),
             child,
-            bundleProfile());
+            bundleProfile(),
+            this);
       }
     }
 

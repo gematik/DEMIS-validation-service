@@ -114,12 +114,7 @@ class ExtensionAllowedValidatorTest {
   void setUp() {
     underTest =
         new ExtensionAllowedValidator(
-            validationSupport,
-            SEVERITY,
-            resourceWalker,
-            structureDefinitionExtensionExtractor,
-            true,
-            true);
+            validationSupport, SEVERITY, resourceWalker, structureDefinitionExtensionExtractor);
   }
 
   private void mockResourceWalker(final ElementCtx... elements) {

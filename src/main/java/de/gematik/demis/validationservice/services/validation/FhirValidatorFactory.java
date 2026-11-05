@@ -39,6 +39,9 @@ import de.gematik.demis.validationservice.services.validation.custom.extension.E
 import de.gematik.demis.validationservice.services.validation.custom.profile.AbstractProfileValidator;
 import de.gematik.demis.validationservice.services.validation.custom.questionnaire.responses.CustomQuantityComparatorQuestionnaireResponseValidator;
 import de.gematik.demis.validationservice.services.validation.custom.questionnaire.responses.CustomRegexQuestionnaireResponseValidator;
+import de.gematik.demis.validationservice.services.validation.custom.referenceprofilevalidation.ReferenceProfileValidationModule;
+import de.gematik.demis.validationservice.services.validation.custom.referenceprofilevalidation.rules.ReferenceProfileRules;
+import de.gematik.demis.validationservice.services.validation.custom.referenceprofilevalidation.rules.ReferenceProfileRulesBuilder;
 import de.gematik.demis.validationservice.services.validation.custom.resourcereferences.ResourceReferencesValidationModule;
 import de.gematik.demis.validationservice.services.validation.custom.strict.valuesets.StrictValueSetMembershipValidator;
 import java.nio.file.Path;
@@ -68,23 +71,17 @@ public final class FhirValidatorFactory {
   private final ExtensionAllowedValidatorProvider extensionAllowedValidatorProvider;
   private ProfileSnapshot profileSnapshot;
 
-  @Value("${feature.flag.validation.extension.check.enabled}")
-  private boolean featureFlagValidationExtensionCheckEnabled;
-
-  @Value("${feature.flag.deny.modifier.extensions}")
-  private boolean featureFlagDenyModifierExtensions;
-
   @Value("${config.option.additional.strict.coding.validator.enabled}")
   private boolean configOptionAdditionalStrictCodingValidatorEnabled;
 
   @Value("${feature.flag.vs.reference.validation}")
   private boolean featureFlagVsReferenceValidation;
 
-  @Value("${feature.flag.strict.single.bundle.validation}")
-  private boolean featureFlagStrictSingleBundleValidation;
-
   @Value("${feature.flag.abstract.profile.validation:false}")
   private boolean featureFlagAbstractProfileValidation;
+
+  @Value("${feature.flag.reference.profile.validation}")
+  private boolean featureFlagReferenceProfileValidation;
 
   public FhirValidator createFhirValidator(final Path profilesPath) {
     log.info("Start creating and initializing fhir validator for profiles path {}", profilesPath);
@@ -101,18 +98,17 @@ public final class FhirValidatorFactory {
     final var validator = fhirContext.newValidator();
     validator.registerValidatorModule(fhirModule);
     // additional validation modules
-    if (featureFlagValidationExtensionCheckEnabled || featureFlagDenyModifierExtensions) {
-      validator.registerValidatorModule(
-          extensionAllowedValidatorProvider.createValidatorModule(
-              validationSupport,
-              featureFlagValidationExtensionCheckEnabled,
-              featureFlagDenyModifierExtensions));
-    }
+
+    validator.registerValidatorModule(
+        extensionAllowedValidatorProvider.createValidatorModule(validationSupport));
     if (featureFlagVsReferenceValidation) {
-      validator.registerValidatorModule(
-          new ResourceReferencesValidationModule(featureFlagStrictSingleBundleValidation));
+      validator.registerValidatorModule(new ResourceReferencesValidationModule());
     }
 
+    if (featureFlagReferenceProfileValidation) {
+      validator.registerValidatorModule(
+          new ReferenceProfileValidationModule(buildReferenceProfileRules()));
+    }
     if (configProperties.customQuantityValidatorEnabled()) {
       validator.registerValidatorModule(
           new CustomQuantityComparatorQuestionnaireResponseValidator(
@@ -180,6 +176,13 @@ public final class FhirValidatorFactory {
     if (configProperties.commonCodeSystemTerminologyEnabled()) {
       chain.addValidationSupport(new CommonCodeSystemsTerminologyService(this.fhirContext));
     }
+  }
+
+  private ReferenceProfileRules buildReferenceProfileRules() {
+    log.info(
+        "Building reference profile rules from {} structure definitions",
+        profileSnapshot.structureDefinitions().size());
+    return new ReferenceProfileRulesBuilder().build(profileSnapshot.structureDefinitions());
   }
 
   /**

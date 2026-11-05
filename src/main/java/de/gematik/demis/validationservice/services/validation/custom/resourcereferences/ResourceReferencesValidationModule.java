@@ -27,10 +27,10 @@ package de.gematik.demis.validationservice.services.validation.custom.resourcere
  * #L%
  */
 
-import ca.uhn.fhir.validation.IValidationContext;
-import de.gematik.demis.validationservice.services.validation.custom.DemisValidationModule;
+import de.gematik.demis.validationservice.services.validation.custom.BundleResourceIndex;
+import de.gematik.demis.validationservice.services.validation.custom.ParametersValidationModule;
 import de.gematik.demis.validationservice.services.validation.custom.ResourceWalker;
-import java.util.HashMap;
+import de.gematik.demis.validationservice.services.validation.custom.ValidationMessages;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -40,28 +40,28 @@ import org.hl7.fhir.r4.model.Reference;
 import org.hl7.fhir.r4.model.Resource;
 
 @Slf4j
-public class ResourceReferencesValidationModule extends DemisValidationModule {
+public class ResourceReferencesValidationModule extends ParametersValidationModule {
 
   private final ResourceWalker resourceWalker = new ResourceWalker();
-
-  public ResourceReferencesValidationModule(final boolean strictSingleBundleValidation) {
-    super(strictSingleBundleValidation);
-  }
+  private final BundleResourceIndex bundleResourceIndex = new BundleResourceIndex();
 
   @Override
-  protected void validateBundle(IValidationContext<IBaseResource> theCtx, Bundle bundle) {
-    final Map<String, Resource> bundleResourcesIndex = indexResources(bundle);
+  protected void validateIndividualResource(IBaseResource resource, ValidationMessages messages) {
+    if (!(resource instanceof Bundle bundle)) {
+      return;
+    }
+    final Map<String, Resource> referenceIndex = bundleResourceIndex.build(bundle);
     resourceWalker.forEachElementDepthFirst(
         bundle,
         elementCtx -> {
           if (elementCtx.element() instanceof Reference reference) {
-            validateReference(theCtx, elementCtx, reference, bundleResourcesIndex);
+            validateReference(messages, elementCtx, reference, referenceIndex);
           }
         });
   }
 
   private void validateReference(
-      final IValidationContext<IBaseResource> validationContext,
+      final ValidationMessages messages,
       final ResourceWalker.ElementCtx elementCtx,
       final Reference reference,
       final Map<String, Resource> resourceIndex) {
@@ -74,45 +74,9 @@ public class ResourceReferencesValidationModule extends DemisValidationModule {
     if (targetResource == null) {
       log.debug(
           "Unresolvable internal reference: {} at {}", referenceValue, elementCtx.locationPath());
-      addValidationError(
-          validationContext,
+      messages.addError(
           String.format("Reference '%s' is not resolvable", referenceValue),
           elementCtx.locationPath());
-    }
-  }
-
-  private Map<String, Resource> indexResources(final Bundle bundle) {
-    final Map<String, Resource> bundleIndex = new HashMap<>();
-    indexResource(bundle, null, bundleIndex);
-    for (Bundle.BundleEntryComponent entry : bundle.getEntry()) {
-      if (entry.hasResource()) {
-        indexResource(entry.getResource(), entry.getFullUrl(), bundleIndex);
-      }
-    }
-    return bundleIndex;
-  }
-
-  private void indexResource(
-      final Resource resource, final String fullUrl, final Map<String, Resource> index) {
-    if (resource == null) {
-      return;
-    }
-
-    if (StringUtils.isNotBlank(fullUrl)) {
-      index.put(fullUrl, resource);
-    }
-
-    final String idPart = resource.getIdPart();
-    if (StringUtils.isNotBlank(idPart)) {
-      index.put(resource.fhirType() + "/" + idPart, resource);
-    }
-
-    if (resource instanceof Bundle bundle) {
-      for (Bundle.BundleEntryComponent entry : bundle.getEntry()) {
-        if (entry.hasResource()) {
-          indexResource(entry.getResource(), entry.getFullUrl(), index);
-        }
-      }
     }
   }
 

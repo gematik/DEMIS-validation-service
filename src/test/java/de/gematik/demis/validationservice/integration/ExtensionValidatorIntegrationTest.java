@@ -27,25 +27,33 @@ package de.gematik.demis.validationservice.integration;
  * #L%
  */
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import ca.uhn.fhir.context.FhirContext;
+import de.gematik.demis.validationservice.ValidationServiceApplication;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r4.model.StringType;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
 @AutoConfigureMockMvc
-// Note: sobald feature flags weggefallen sind, die tests aus den sub classes hier rein verschieben
-// vererbungskonstrukt löschen und nur noch einen IntegrationTest
-abstract class ExtensionValidatorIntegrationTest {
+@SpringBootTest(
+    classes = {ValidationServiceApplication.class},
+    properties = {
+      "demis.validation-service.profiles.basepath=src/test/resources/integrationtests/customValidators/quantity",
+      "demis.validation-service.profiles.versions=6.1.2"
+    })
+class ExtensionValidatorIntegrationTest {
   static final String MESSAGE_ID_UNEXPECTED_EXTENSION = "Unexpected_Extension";
   static final String MESSAGE_ID_MODIFIER_EXTENSION = "Modifier_Extension_not_allowed";
 
@@ -57,7 +65,7 @@ abstract class ExtensionValidatorIntegrationTest {
   @Autowired private MockMvc mockMvc;
   @Autowired private FhirContext fhirContext;
 
-  protected static List<String> filterOperationOutcomeByMessageIdAndMapToLocation(
+  private static List<String> filterOperationOutcomeByMessageIdAndMapToLocation(
       final OperationOutcome operationOutcome, final String messageId) {
     return operationOutcome.getIssue().stream()
         .filter(
@@ -69,7 +77,7 @@ abstract class ExtensionValidatorIntegrationTest {
         .toList();
   }
 
-  protected final OperationOutcome executeValidationAndExpectStatus(
+  private OperationOutcome executeValidationAndExpectStatus(
       final String inputFile, final int expectedStatus) throws Exception {
     final String notification = Files.readString(Path.of(inputFile));
 
@@ -80,5 +88,32 @@ abstract class ExtensionValidatorIntegrationTest {
             .andReturn();
     final String body = mvcResult.getResponse().getContentAsString();
     return fhirContext.newJsonParser().parseResource(OperationOutcome.class, body);
+  }
+
+  @Test
+  void notificationWithUnexpectedExtensionsIsValidAndHasWarnings() throws Exception {
+    final OperationOutcome operationOutcome =
+        executeValidationAndExpectStatus(EXTENSION_INPUT_FILE, 200);
+
+    assertThat(
+            filterOperationOutcomeByMessageIdAndMapToLocation(
+                operationOutcome, MESSAGE_ID_UNEXPECTED_EXTENSION))
+        .containsExactlyInAnyOrder(
+            "Parameters.parameter[0].resource/*Bundle/dd7fac8c-592f-357d-aed3-a3c3268e2c81*/.entry[2].resource/*Patient/null*/.address[0].extension[1]",
+            "Parameters.parameter[0].resource/*Bundle/dd7fac8c-592f-357d-aed3-a3c3268e2c81*/.entry[7].resource/*QuestionnaireResponse/null*/.item[0].answer[0].value[x].extension[0]");
+  }
+
+  @Test
+  void notificationWithModifierExtensionsIsInvalidAndHasErrors() throws Exception {
+    final OperationOutcome operationOutcome =
+        executeValidationAndExpectStatus(MODIFIER_EXTENSION_INPUT_FILE, 422);
+
+    assertThat(
+            filterOperationOutcomeByMessageIdAndMapToLocation(
+                operationOutcome, MESSAGE_ID_MODIFIER_EXTENSION))
+        .containsExactlyInAnyOrder(
+            "Parameters.parameter[0].resource/*Bundle/dd7fac8c-592f-357d-aed3-a3c3268e2c81*/.entry[0].resource/*Composition/null*/.modifierExtension[0]",
+            "Parameters.parameter[0].resource/*Bundle/dd7fac8c-592f-357d-aed3-a3c3268e2c81*/.entry[0].resource/*Composition/null*/.modifierExtension[1]",
+            "Parameters.parameter[0].resource/*Bundle/dd7fac8c-592f-357d-aed3-a3c3268e2c81*/.entry[2].resource/*Patient/null*/.modifierExtension[0]");
   }
 }

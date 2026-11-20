@@ -158,7 +158,8 @@ configured independently.
 3. Optional DEMIS-specific `IValidatorModule`s are registered on the same `FhirValidator`. Their activation is
    controlled independently by configuration and feature flags:
     - the extension validator checks allowed and modifier extensions,
-    - `ResourceReferencesValidationModule` checks whether internal references in Bundles can be resolved,
+    - `ResourceReferencesBundleValidationModule` checks whether literal references in Bundles resolve within the
+      notification,
     - `ReferenceProfileValidationModule` checks whether a referenced resource declares an allowed profile for the
       corresponding reference path,
     - QuestionnaireResponse validators check custom quantity/comparator and regular-expression constraints,
@@ -170,6 +171,19 @@ configured independently.
 5. One validator is built and cached per supported FHIR profile package version (`FhirValidatorManager`), because DEMIS
    supports validating against multiple profile generations. `ValidationService` invokes these validators in the
    configured order and applies the final severity filtering and error-to-warning handling.
+
+The resource-reference module is Bundle-specific and is enabled by `feature.flag.vs.reference.validation`. It resolves
+literal references against resources in the notification; it does not fetch targets from a server. An absolute HTTP(S)
+URL can still match a Bundle entry's `fullUrl`, while an unmatched URL is rejected by DEMIS policy. Relative references
+use the RESTful base of the Bundle entry containing the reference, URNs match an entry `fullUrl` exactly, and `#id`
+references are looked up among the contained resources of their enclosing resource. A resource's logical `id` alone
+does not prove that a reference resolves.
+
+For reference resolution, treat FHIR R4 as authoritative and R5 only as supplementary guidance. The package
+documentation in `services/validation/custom/resourcereferences/package-info.java` records the detailed rules and
+implementation gaps; in particular, container back-references (`#`), version-specific matching, strict RESTful URL
+recognition, and ambiguous matches still need implementation and tests. Do not infer these behaviors from the general
+overview above.
 
 Everything DEMIS-specific is additive around a mostly-standard HAPI FHIR validation pipeline — this is important: when
 debugging, first figure out whether a finding comes from stock HAPI FHIR or from one of the custom modules described
@@ -261,8 +275,18 @@ src/main/java/de/gematik/demis/validationservice/
             │       ├── SliceMatcher.java        Matches Bundle elements to slice definitions
             │       └── SlicingRoot.java         Represents a slicing root
             ├── resourcereferences/
-            │   └── ResourceReferencesValidationModule.java
-            │                                      Checks that internal Bundle references resolve
+            │   ├── ResourceReferencesBundleValidationModule.java
+            │   │                                  Validates references in a Bundle
+            │   ├── BundleValidation.java         Dispatches references by address form
+            │   ├── FullUrlResourceIndexFactory.java
+            │   │                                  Indexes Bundle resources by fullUrl
+            │   ├── RelativeReferenceValidation.java
+            │   ├── AbsoluteReferenceValidation.java
+            │   ├── ExternalReferenceValidation.java
+            │   ├── ContainedReferenceValidation.java
+            │   ├── ReferenceValidation.java      Shared reference-validation contract
+            │   ├── ReferenceType.java            Classifies literal reference address forms
+            │   └── package-info.java             Documents resolution rules and known gaps
             └── strict/
                 └── valuesets/
                     ├── BindingInfo.java        Stores binding information for coded elements
@@ -282,8 +306,9 @@ Read these files in order for the fastest path to understanding the implementati
 5. `services/ProfileParserService.java` + `ProfileSnapshot.java` — how profile files become in-memory lookup structures.
 6. `services/validation/custom/ParametersValidationModule.java` — how custom modules process direct resources or
    resources wrapped in a FHIR `Parameters` resource.
-7. `services/validation/custom/resourcereferences/ResourceReferencesValidationModule.java` — checks that Bundle-internal
-   references can be resolved.
+7. `services/validation/custom/resourcereferences/ResourceReferencesBundleValidationModule.java` and
+   `package-info.java` — the module checks literal Bundle references, and the package documentation describes the
+   resolution rules, FHIR-version precedence, and known implementation gaps.
 8. `services/validation/custom/referenceprofilevalidation/ReferenceProfileValidationModule.java` — checks that resources
    referenced within a Bundle declare an allowed profile for the corresponding reference path. The related `rules/` and
    `slicing/` packages show how these rules are derived from StructureDefinitions and how sliced reference paths are
@@ -374,7 +399,8 @@ change *how strict or lenient* the service is about edge cases.
         - `FhirInstanceValidator` for standard FHIR structure, cardinality, datatype, invariant, profile, and terminology
           validation;
         - `ExtensionAllowedValidator` for allowed or modifier extension findings;
-        - `ResourceReferencesValidationModule` for unresolved Bundle-internal references;
+        - `ResourceReferencesBundleValidationModule` for unresolved literal references in a Bundle; consult its
+          package-info for the resolution rules and known implementation gaps;
         - `ReferenceProfileValidationModule` for a referenced resource that declares a profile not allowed at the
           corresponding reference path;
         - `CustomRegexQuestionnaireResponseValidator` and
@@ -464,8 +490,8 @@ or tracked branch.
 | **RKI**                                         | Robert Koch-Institut — the German public health institute that authors the FHIR profiles DEMIS validates against.                                                                                                |
 | **Parameters**                                  | A FHIR resource that can wrap one or more resources in `parameter.resource`. The service accepts Bundles directly and also processes resources contained in Parameters for custom validation modules.            |
 | **ParametersValidationModule**                  | A base class for custom validator modules that handles resources supplied directly or wrapped in a Parameters resource and maps findings back to their original input locations.                                 |
-| **Bundle-local reference / Internal reference** | A reference to a resource within the same Bundle, for example `ResourceType/id`, `urn:uuid:…`, or a contained-resource reference. The service can resolve these references without accessing an external server. |
-| **Resource reference validation**               | Checking whether a Bundle-local reference points to an existing resource in the Bundle.                                                                                                                          |
+| **Literal resource reference**                  | A reference with an address, such as a relative URL, `urn:uuid:…`, an absolute HTTP(S) URL, or a contained-resource fragment such as `#local-id`.                                                                  |
+| **Resource reference validation**               | Checking whether a literal reference in a Bundle resolves to a matching Bundle entry or to a contained resource in its enclosing resource; the service does not retrieve remote targets.                           |
 | **Reference profile validation**                | Checking whether the resource targeted by a Bundle-local reference declares a profile allowed at the corresponding reference path.                                                                               |
 | **`meta.profile`**                              | The list of profile URLs declared by a FHIR resource. The reference-profile validator uses these declarations when checking whether a referenced resource is allowed at a particular path.                       |
 | **Profile inheritance / Derived profile**       | The relationship between a more specific profile and its base profile. A referenced resource may be accepted when its declared profile or one of its ancestors is allowed by the reference rule.                 |

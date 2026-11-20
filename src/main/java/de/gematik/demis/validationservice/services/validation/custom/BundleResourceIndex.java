@@ -34,6 +34,14 @@ import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.Bundle.BundleEntryComponent;
 import org.hl7.fhir.r4.model.Resource;
 
+/**
+ * Builds a lookup for reference profile validation using full URLs and {@code ResourceType/id}
+ * aliases, including the supplied Bundle and recursively traversing nested Bundles. Later entries
+ * overwrite earlier mappings with the same key.
+ *
+ * <p>This lookup supports profile checks, not context-sensitive reference resolution: it does not
+ * enforce Bundle scope, resolve versions, or detect ambiguous targets.
+ */
 public class BundleResourceIndex {
 
   public Map<String, Resource> build(final Bundle bundle) {

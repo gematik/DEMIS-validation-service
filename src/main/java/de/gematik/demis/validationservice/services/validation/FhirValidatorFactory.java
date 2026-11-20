@@ -42,7 +42,8 @@ import de.gematik.demis.validationservice.services.validation.custom.questionnai
 import de.gematik.demis.validationservice.services.validation.custom.referenceprofilevalidation.ReferenceProfileValidationModule;
 import de.gematik.demis.validationservice.services.validation.custom.referenceprofilevalidation.rules.ReferenceProfileRules;
 import de.gematik.demis.validationservice.services.validation.custom.referenceprofilevalidation.rules.ReferenceProfileRulesBuilder;
-import de.gematik.demis.validationservice.services.validation.custom.resourcereferences.ResourceReferencesValidationModule;
+import de.gematik.demis.validationservice.services.validation.custom.resourcereferences.ResourceReferencesBundleValidationConfigProperties;
+import de.gematik.demis.validationservice.services.validation.custom.resourcereferences.ResourceReferencesBundleValidationModule;
 import de.gematik.demis.validationservice.services.validation.custom.strict.valuesets.StrictValueSetMembershipValidator;
 import java.nio.file.Path;
 import java.util.concurrent.TimeUnit;
@@ -69,6 +70,9 @@ public final class FhirValidatorFactory {
   private final ValidationConfigProperties configProperties;
   private final TerminologyValidationProvider terminologyValidationProvider;
   private final ExtensionAllowedValidatorProvider extensionAllowedValidatorProvider;
+  private final ResourceReferencesBundleValidationConfigProperties
+      resourceReferencesBundleValidationConfigProperties;
+
   private ProfileSnapshot profileSnapshot;
 
   @Value("${config.option.additional.strict.coding.validator.enabled}")
@@ -102,7 +106,9 @@ public final class FhirValidatorFactory {
     validator.registerValidatorModule(
         extensionAllowedValidatorProvider.createValidatorModule(validationSupport));
     if (featureFlagVsReferenceValidation) {
-      validator.registerValidatorModule(new ResourceReferencesValidationModule());
+      validator.registerValidatorModule(
+          new ResourceReferencesBundleValidationModule(
+              resourceReferencesBundleValidationConfigProperties));
     }
 
     if (featureFlagReferenceProfileValidation) {

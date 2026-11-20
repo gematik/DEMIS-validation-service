@@ -74,8 +74,10 @@ class ResourceReferencesValidationIntegrationTest {
 
   @Test
   void shouldReturnUnprocessableEntityForUnresolvableReference() throws Exception {
-    final String notification =
-        bundleNotification.replace(VALID_SPECIMEN_REFERENCE, "Specimen/wrong-reference");
+
+    final String target = "\"reference\": \"" + VALID_SPECIMEN_REFERENCE + "\"";
+    final String replacement = "\"reference\": \"Specimen/wrong-reference\"";
+    final String notification = bundleNotification.replace(target, replacement);
 
     mockMvc
         .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(notification))
@@ -84,7 +86,8 @@ class ResourceReferencesValidationIntegrationTest {
             content()
                 .string(
                     allOf(
-                        containsString("Reference 'Specimen/wrong-reference' is not resolvable"))));
+                        containsString(
+                            "Referenced resource is missing in FHIR Bundle! Reference: Specimen/wrong-reference ResolvedFullUrl: https://demis.rki.de/fhir/Specimen/wrong-reference"))));
   }
 
   @Test

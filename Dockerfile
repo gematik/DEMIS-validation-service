@@ -1,6 +1,6 @@
 # Declare Source Digest for the Base Image
-ARG SOURCE_DIGEST=sha256:c25e194e222f927ba6f43efdb6396c85adf0732707a0dad3064a7c208a3fc501
-FROM gematik1/demis-fhir-package-initializer:1.3.0@${SOURCE_DIGEST}
+ARG SOURCE_DIGEST=sha256:9712fbfa9b27d92837f6a6c099f274633ea459fcd716981e32c4617f016bf8b1
+FROM gematik1/demis-fhir-package-initializer:1.3.3@${SOURCE_DIGEST}
 
 # Redeclare Source Digest to be used in the build context
 # https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact

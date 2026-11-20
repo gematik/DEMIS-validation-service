@@ -2,9 +2,15 @@
 
 # Release Validation-Service
 
+## Release 2.17.1
+- Updated minor/patch versions of dependencies
+- Upgraded base image to version 1.3.3
+
 ## Release 2.17.0
+
 - Updated minor/patch versions of dependencies
 - removed FF's FEATURE_FLAG_VALIDATION_EXTENSION_CHECK_ENABLED & FEATURE_FLAG_DENY_MODIFIER_EXTENSIONS
+- improved FHIR Bundle resource references validation with versioned resource references, contained resources and fixed resolution of relative reference
 
 ## Release 2.16.0
 

@@ -82,7 +82,7 @@ class ValidationServiceIntegrationProfileTest {
   @Nested
   @SpringBootTest(
       webEnvironment = SpringBootTest.WebEnvironment.NONE,
-      properties = {"feature.flag.filtered.errors.as.warnings.disabled=true"})
+      properties = {"feature.flag.filtered-errors-as-warnings-disabled=true"})
   @ActiveProfiles("test")
   class ValidationWithDefaults {
 
@@ -210,7 +210,7 @@ class ValidationServiceIntegrationProfileTest {
   @TestPropertySource(
       properties = {
         "demis.validation-service.locale=de_DE",
-        "feature.flag.filtered.errors.as.warnings.disabled=true"
+        "feature.flag.filtered-errors-as-warnings-disabled=true"
       })
   class ValidationGerman {
 
@@ -239,8 +239,8 @@ class ValidationServiceIntegrationProfileTest {
   @ActiveProfiles("test")
   @TestPropertySource(
       properties = {
-        "demis.validation-service.profiles.versions=6.1.7,5.3.5",
-        "feature.flag.filtered.errors.as.warnings.disabled=true"
+        "demis.validation-service.profiles.versions=6.2.6,5.4.1",
+        "feature.flag.filtered-errors-as-warnings-disabled=true"
       })
   class ValidationWithMultipleProfilesVersions {
 
@@ -286,7 +286,7 @@ class ValidationServiceIntegrationProfileTest {
       logOperationOutcome(operationOutcome);
 
       final var errorsOrFatalIssues = getErrorOrFatalIssues(operationOutcome);
-      assertThat(errorsOrFatalIssues).hasSize(4);
+      assertThat(errorsOrFatalIssues).hasSize(2);
     }
   }
 }

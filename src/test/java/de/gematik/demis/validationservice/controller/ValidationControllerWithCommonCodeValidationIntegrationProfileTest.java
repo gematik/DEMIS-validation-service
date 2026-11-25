@@ -33,32 +33,24 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import de.gematik.demis.validationservice.ValidationServiceApplication;
 import de.gematik.demis.validationservice.util.FileTestUtil;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
 
-@ActiveProfiles(value = {"test"})
-@SpringBootTest(classes = {ValidationServiceApplication.class})
-@TestPropertySource(
-    locations = "classpath:application-test.properties",
+@ActiveProfiles("test")
+@AutoConfigureMockMvc
+@SpringBootTest(
+    classes = {ValidationServiceApplication.class},
     properties = {"demis.validation-service.common-code-system-terminology-enabled=true"})
 class ValidationControllerWithCommonCodeValidationIntegrationProfileTest {
-  @Autowired private WebApplicationContext webApplicationContext;
-  private MockMvc mockMvc;
 
-  @BeforeEach
-  void setUp() {
-    mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-  }
+  @Autowired private MockMvc mockMvc;
 
   @Test
-  void shouldReturn() throws Exception {
+  void commonCodeSystemValidationShouldFail() throws Exception {
     final String validFileContent =
         FileTestUtil.readFileIntoString(
             "src/test/resources/RegressiontestForValueQuantityCorrect.xml");

@@ -82,7 +82,7 @@ class ValidationServiceIntegrationProfileErrorToWarningRegressionTest {
   @Nested
   @SpringBootTest(
       webEnvironment = SpringBootTest.WebEnvironment.NONE,
-      properties = {"feature.flag.filtered.errors.as.warnings.disabled=false"})
+      properties = {"feature.flag.filtered-errors-as-warnings-disabled=false"})
   @ActiveProfiles("test")
   class ValidationWithDefaults {
 
@@ -210,7 +210,7 @@ class ValidationServiceIntegrationProfileErrorToWarningRegressionTest {
   @TestPropertySource(
       properties = {
         "demis.validation-service.locale=de_DE",
-        "feature.flag.filtered.errors.as.warnings.disabled=false"
+        "feature.flag.filtered-errors-as-warnings-disabled=false"
       })
   class ValidationGerman {
 
@@ -239,8 +239,8 @@ class ValidationServiceIntegrationProfileErrorToWarningRegressionTest {
   @ActiveProfiles("test")
   @TestPropertySource(
       properties = {
-        "demis.validation-service.profiles.versions=6.1.7,5.3.5",
-        "feature.flag.filtered.errors.as.warnings.disabled=false"
+        "demis.validation-service.profiles.versions=6.2.6,5.4.1",
+        "feature.flag.filtered-errors-as-warnings-disabled=false"
       })
   class ValidationWithMultipleProfilesVersions {
 

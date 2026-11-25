@@ -28,10 +28,8 @@ package de.gematik.demis.validationservice.services.terminology;
  */
 
 import java.nio.file.Path;
-import org.hl7.fhir.common.hapi.validation.support.CachingValidationSupport.CacheTimeouts;
 import org.hl7.fhir.common.hapi.validation.support.ValidationSupportChain;
 
 public interface TerminologyValidationProvider {
-  void addTerminologyValidationSupport(
-      ValidationSupportChain chain, CacheTimeouts cacheTimeouts, Path profilesPath);
+  void addTerminologyValidationSupport(ValidationSupportChain chain, Path profilesPath);
 }

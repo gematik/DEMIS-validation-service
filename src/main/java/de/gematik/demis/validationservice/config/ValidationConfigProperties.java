@@ -32,13 +32,11 @@ import jakarta.annotation.PostConstruct;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
 import java.util.List;
 import java.util.Locale;
 import lombok.Builder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.bind.Name;
 import org.springframework.context.annotation.Bean;
 import org.springframework.validation.annotation.Validated;
 
@@ -50,8 +48,8 @@ public record ValidationConfigProperties(
     @Bean @NotNull @Valid ValidationConfigProperties.ProfilesProperties profiles,
     @NotNull Locale locale,
     @NotNull ResultSeverityEnum minSeverityOutcome,
-    @Name("cache.expireAfterAccessMins") @Positive long cacheExpireAfterAccessTimeoutMins,
     @NotNull ResultSeverityEnum unexpectedExtensionSeverity,
+    boolean additionalStrictCodingValidatorEnabled,
     boolean commonCodeSystemTerminologyEnabled,
     boolean customRegexValidatorEnabled,
     boolean customQuantityValidatorEnabled) {

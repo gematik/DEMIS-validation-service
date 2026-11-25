@@ -44,14 +44,12 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.Map;
 import lombok.SneakyThrows;
-import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.common.hapi.validation.support.PrePopulatedValidationSupport;
 import org.hl7.fhir.common.hapi.validation.support.ValidationSupportChain;
 import org.hl7.fhir.r4.model.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-@Slf4j
 class ExtensionAllowedValidatorIntegrationTest {
 
   private static final String STRUCTURE_DEFINITION_FILE =

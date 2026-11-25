@@ -1,4 +1,4 @@
-package de.gematik.demis.validationservice.integration;
+package de.gematik.demis.validationservice.services.validation.custom.strict.valuesets;
 
 /*-
  * #%L
@@ -46,51 +46,27 @@ import org.springframework.test.web.servlet.MockMvc;
 @SpringBootTest(
     classes = {ValidationServiceApplication.class},
     properties = {
-      "demis.validation-service.custom-regex-validator-enabled=true",
-      "demis.validation-service.custom-quantity-validator-enabled=true",
-      "demis.validation-service.profiles.basepath=src/test/resources/integrationtests/customValidators/quantity",
-      "demis.validation-service.profiles.versions=6.1.2"
+      "demis.validation-service.additional-strict-coding-validator-enabled=true",
+      "demis.validation-service.profiles.basepath=src/test/resources/integrationtests/customValidators/strictCodeValidation/fixedBinding",
+      "demis.validation-service.profiles.versions=6.1.8"
     })
-class CustomQuantityValidatorIntegrationTest {
+class CustomStrictCodeValidatorIntegrationTest {
+
   @Autowired private MockMvc mockMvc;
 
   @Test
-  void shouldReturnSuccessForValidNotification() throws Exception {
-    final String validFileContent =
+  void shouldReturnUprocessableEntityForInvalidNotification() throws Exception {
+    final String invalidFileContent =
         FileTestUtil.readFileIntoString(
-            "src/test/resources/integrationtests/customValidators/input/customValidatorInput.json");
-
+            "src/test/resources/integrationtests/customValidators/input/strictCodingCheckExample-ObservationInvalid.json");
     mockMvc
-        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
-        .andExpect(status().isOk());
-  }
-
-  @Test
-  void shouldReturnSuccessForValidNotificationInParameters() throws Exception {
-    final String validFileContent =
-        FileTestUtil.readFileIntoString(
-            "src/test/resources/integrationtests/customValidators/input/customValidatorInputWithParameters.json");
-
-    mockMvc
-        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
-        .andExpect(status().isOk());
-  }
-
-  @Test
-  void shouldReturnUnprocessableEntityForInvalidNotification() throws Exception {
-    final String validFileContent =
-        FileTestUtil.readFileIntoString(
-            "src/test/resources/integrationtests/customValidators/input/invalidCustomValidatorInput.json");
-
-    mockMvc
-        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
+        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(invalidFileContent))
         .andExpect(status().isUnprocessableContent())
         .andExpect(
             content()
                 .string(
                     allOf(
-                        containsString("Quantity in item newbornWeight violates constraint"),
                         containsString(
-                            "Answer for item timeOfInfection does not match the regex"))));
+                            "Code 'XXXXXX' (system 'http://loinc.org') is not contained in any of the bound ValueSets [https://demis.rki.de/fhir/ValueSet/laboratoryTestABVP] for path 'Observation.code.coding'"))));
   }
 }

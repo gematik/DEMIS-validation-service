@@ -52,7 +52,7 @@ class FhirValidatorManagerTest {
 
   private static final String BASE_PATH = "myprofiles";
   private static final String FHIR_PATH = "fhir";
-  private static final List<String> VERSIONS = List.of("6.1.0", "5.3.5");
+  private static final List<String> VERSIONS = List.of("6.2.6", "5.4.1");
 
   @Autowired private FhirValidatorManager underTest;
 

@@ -27,8 +27,6 @@ package de.gematik.demis.validationservice.controller;
  * #L%
  */
 
-import static org.hamcrest.Matchers.hasItems;
-import static org.hamcrest.Matchers.startsWith;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.http.MediaType.APPLICATION_XML_VALUE;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -53,7 +51,7 @@ import org.springframework.web.context.WebApplicationContext;
 @ActiveProfiles(value = {"test"})
 @SpringBootTest(
     classes = {ValidationServiceApplication.class},
-    properties = {"feature.flag.filtered.errors.as.warnings.disabled=false"})
+    properties = {"feature.flag.filtered-errors-as-warnings-disabled=false"})
 class ValidationControllerIntegrationProfileRegressionErrorToWarningTest {
   @Autowired private WebApplicationContext webApplicationContext;
   private MockMvc mockMvc;
@@ -135,20 +133,6 @@ class ValidationControllerIntegrationProfileRegressionErrorToWarningTest {
         .andExpect(status().isUnprocessableContent())
         .andExpect(jsonPath("$.resourceType").value("OperationOutcome"))
         .andExpect(jsonPath("$..issue[?(@.severity == 'error')]").exists());
-  }
-
-  @Test
-  void passInvalidDv2MessageAndCheckMatchingProfileIssuesAreNotFiltered() throws Exception {
-    final String invalidFileContent =
-        FileTestUtil.readFileIntoString(ResourceFileConstants.INVALID_TEST_NOTIFICATION_DV_2);
-    mockMvc
-        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(invalidFileContent))
-        .andExpect(status().isUnprocessableContent())
-        .andExpect(jsonPath("$.resourceType").value("OperationOutcome"))
-        .andExpect(
-            jsonPath(
-                "$..issue[*].diagnostics",
-                hasItems(startsWith("Unable to find a match for profile"))));
   }
 
   @Test

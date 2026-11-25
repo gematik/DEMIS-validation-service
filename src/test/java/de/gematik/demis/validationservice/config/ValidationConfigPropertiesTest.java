@@ -47,10 +47,9 @@ class ValidationConfigPropertiesTest {
   private static final String[] VALID_PROPERTIES = {
     "demis.validation-service.profiles.basepath=myprofiles",
     "demis.validation-service.profiles.fhirpath=Fhir",
-    "demis.validation-service.profiles.versions=6.1.7,5.3.5",
+    "demis.validation-service.profiles.versions=6.2.6,5.4.1",
     "demis.validation-service.locale=en_US",
     "demis.validation-service.minSeverityOutcome=error",
-    "demis.validation-service.cache.expireAfterAccessMins=120",
     "demis.validation-service.unexpected-extension-severity=warning",
   };
 
@@ -70,7 +69,6 @@ class ValidationConfigPropertiesTest {
 
               assertThat(properties).isNotNull();
               assertThat(properties.minSeverityOutcome()).isEqualTo(ResultSeverityEnum.ERROR);
-              assertThat(properties.cacheExpireAfterAccessTimeoutMins()).isEqualTo(120);
               assertThat(properties.locale()).isEqualTo(Locale.US);
               assertThat(properties.unexpectedExtensionSeverity())
                   .isEqualTo(ResultSeverityEnum.WARNING);
@@ -81,7 +79,7 @@ class ValidationConfigPropertiesTest {
                   .isSameAs(context.getBean(ValidationConfigProperties.ProfilesProperties.class));
               assertThat(profilesProperties.basepath()).isEqualTo("myprofiles");
               assertThat(profilesProperties.fhirpath()).isEqualTo("Fhir");
-              assertThat(profilesProperties.versions()).isEqualTo(List.of("6.1.7", "5.3.5"));
+              assertThat(profilesProperties.versions()).isEqualTo(List.of("6.2.6", "5.4.1"));
             });
   }
 
@@ -93,8 +91,6 @@ class ValidationConfigPropertiesTest {
         "demis.validation-service.locale=",
         "demis.validation-service.minSeverityOutcome=",
         "demis.validation-service.minSeverityOutcome=errors",
-        "demis.validation-service.cache.expireAfterAccessMins=",
-        "demis.validation-service.cache.expireAfterAccessMins=0"
       })
   @ParameterizedTest
   void invalidProperties(final String invalidProperty) {

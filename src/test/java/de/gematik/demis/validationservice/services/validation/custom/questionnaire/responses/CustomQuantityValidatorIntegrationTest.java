@@ -1,4 +1,4 @@
-package de.gematik.demis.validationservice.integration;
+package de.gematik.demis.validationservice.services.validation.custom.questionnaire.responses;
 
 /*-
  * #%L
@@ -46,11 +46,12 @@ import org.springframework.test.web.servlet.MockMvc;
 @SpringBootTest(
     classes = {ValidationServiceApplication.class},
     properties = {
-      "feature.flag.reference.profile.validation=true",
+      "demis.validation-service.custom-regex-validator-enabled=true",
+      "demis.validation-service.custom-quantity-validator-enabled=true",
       "demis.validation-service.profiles.basepath=src/test/resources/integrationtests/customValidators/quantity",
       "demis.validation-service.profiles.versions=6.1.2"
     })
-class ReferenceProfileValidationIntegrationTest {
+class CustomQuantityValidatorIntegrationTest {
   @Autowired private MockMvc mockMvc;
 
   @Test
@@ -65,73 +66,31 @@ class ReferenceProfileValidationIntegrationTest {
   }
 
   @Test
-  void shouldReturnUnprocessableEntityForBrokenNotifiedPerson() throws Exception {
-    final String withoutMetaProfileInput =
+  void shouldReturnSuccessForValidNotificationInParameters() throws Exception {
+    final String validFileContent =
         FileTestUtil.readFileIntoString(
-            "src/test/resources/integrationtests/customValidators/input/customValidatorInput_WithBrokenNotifiedPerson.json");
+            "src/test/resources/integrationtests/customValidators/input/customValidatorInputWithParameters.json");
 
     mockMvc
-        .perform(
-            post("/$validate").contentType(APPLICATION_JSON_VALUE).content(withoutMetaProfileInput))
+        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
+        .andExpect(status().isOk());
+  }
+
+  @Test
+  void shouldReturnUnprocessableEntityForInvalidNotification() throws Exception {
+    final String validFileContent =
+        FileTestUtil.readFileIntoString(
+            "src/test/resources/integrationtests/customValidators/input/invalidCustomValidatorInput.json");
+
+    mockMvc
+        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(validFileContent))
         .andExpect(status().isUnprocessableContent())
         .andExpect(
             content()
                 .string(
                     allOf(
-                        containsString("Referenced resource declares profile"),
-                        containsString("BrokenNotifiedPerson"))));
-  }
-
-  @Test
-  void shouldReturnUnprocessableEntityForMissingProfilesArray() throws Exception {
-    final String brokenNotifiedPersonInput =
-        FileTestUtil.readFileIntoString(
-            "src/test/resources/integrationtests/customValidators/input/customValidatorInput_WithoutMetaProfile.json");
-
-    mockMvc
-        .perform(
-            post("/$validate")
-                .contentType(APPLICATION_JSON_VALUE)
-                .content(brokenNotifiedPersonInput))
-        .andExpect(status().isUnprocessableContent())
-        .andExpect(
-            content().string(containsString("Referenced resource does not declare any profile")));
-  }
-
-  @Test
-  void shouldReturnUnprocessableEntityForBrokenCompositionAuthor() throws Exception {
-    final String brokenCompositionAuthorInput =
-        FileTestUtil.readFileIntoString(
-            "src/test/resources/integrationtests/customValidators/input/customValidatorInput_withBrokenCompositionAuthor.json");
-
-    mockMvc
-        .perform(
-            post("/$validate")
-                .contentType(APPLICATION_JSON_VALUE)
-                .content(brokenCompositionAuthorInput))
-        .andExpect(status().isUnprocessableContent())
-        .andExpect(
-            content()
-                .string(
-                    allOf(
-                        containsString("Referenced resource declares profile"),
-                        containsString("NotifierFacility"))));
-  }
-
-  @Test
-  void shouldReturnUnprocessableEntityForBrokenSectionEntryProfile() throws Exception {
-    final String brokenInput =
-        FileTestUtil.readFileIntoString(
-            "src/test/resources/integrationtests/customValidators/input/customValidatorInput_withBrokenSectionEntryProfile.json");
-
-    mockMvc
-        .perform(post("/$validate").contentType(APPLICATION_JSON_VALUE).content(brokenInput))
-        .andExpect(status().isUnprocessableContent())
-        .andExpect(
-            content()
-                .string(
-                    allOf(
-                        containsString("Referenced resource declares profile"),
-                        containsString("NotifiedPerson"))));
+                        containsString("Quantity in item newbornWeight violates constraint"),
+                        containsString(
+                            "Answer for item timeOfInfection does not match the regex"))));
   }
 }

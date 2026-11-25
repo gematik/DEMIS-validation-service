@@ -50,7 +50,6 @@ public final class ResourceFileConstants {
       "./src/test/resources/invalid_parameters_meta_exception.json";
   public static final String NOT_PARSEABLE_REPORT_BED_OCCUPANCY_EXAMPLE =
       "./src/test/resources/not_parseable_report_bed_occupancy_example.json";
-  public static final String PROFILE_RESOURCE_PATH = "./profiles/5.3.5/Fhir";
 
   private static final Path TEST_RESOURCE_PATH = Paths.get("src/test/resources");
   public static final Path MINIMLAL_PROFILES_PATH = TEST_RESOURCE_PATH.resolve("profiles/minimal");
@@ -63,8 +62,6 @@ public final class ResourceFileConstants {
       TEST_RESOURCE_PATH.resolve("profiles/duplicate-url-non-terminology");
   public static final Path DUPLICATE_TERMINOLOGY_URL_DIFFERENT_VERSION_PROFILES_PATH =
       TEST_RESOURCE_PATH.resolve("profiles/duplicate-url-terminology");
-  public static final Path TERMINOLOGY_PROFILES_PATH =
-      TEST_RESOURCE_PATH.resolve("profiles/terminology");
 
   private ResourceFileConstants() {}
 }

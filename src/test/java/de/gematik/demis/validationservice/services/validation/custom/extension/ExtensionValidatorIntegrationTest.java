@@ -1,4 +1,4 @@
-package de.gematik.demis.validationservice.integration;
+package de.gematik.demis.validationservice.services.validation.custom.extension;
 
 /*-
  * #%L

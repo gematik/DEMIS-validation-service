@@ -27,12 +27,12 @@ package de.gematik.demis.validationservice.services.validation;
  * #L%
  */
 
-import static ca.uhn.fhir.validation.ResultSeverityEnum.WARNING;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.ERROR;
-import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.FATAL;
-import static org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity.INFORMATION;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 
@@ -41,105 +41,65 @@ import ca.uhn.fhir.validation.FhirValidator;
 import ca.uhn.fhir.validation.ResultSeverityEnum;
 import ca.uhn.fhir.validation.SingleValidationMessage;
 import ca.uhn.fhir.validation.ValidationResult;
-import de.gematik.demis.validationservice.config.ValidationConfigProperties;
-import de.gematik.demis.validationservice.services.ValidationMetrics;
-import io.micrometer.core.instrument.Counter;
-import io.micrometer.core.instrument.MeterRegistry;
-import io.micrometer.core.instrument.Tags;
-import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import java.util.List;
-import java.util.Locale;
-import java.util.Map;
 import java.util.Optional;
-import java.util.Set;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
+@ExtendWith(MockitoExtension.class)
 class ValidationServiceTest {
 
   private static final String CONTENT = "Some Fhir bundle";
-  private static final String IGNORED_VALIDATION_ERROR = "IGNORE_THIS_ERROR";
   private static final String VALID_INFO_MESSAGE = "No issues detected during validation";
   private static final String EXCEPTION_MESSAGE = "exception in validation";
-  public static final String SOME_VALIDATION_ERROR = "some validation error";
-  public static final String SOME_VALIDATION_ERROR_FROM_NEWEST_VERSION =
-      "some validation error from newest version";
-  public static final String IS_IGNORED = "is ignored";
 
   private final FhirContext fhirContext = FhirContext.forR4Cached();
-  private final MeterRegistry meterRegistry = new SimpleMeterRegistry();
-  private FhirValidatorManager fhirValidatorManagerMock;
+
+  @Mock private FhirValidatorManager fhirValidatorManagerMock;
+  @Mock private ValidationResultPostProcessing validationResultPostProcessingMock;
 
   private ValidationService underTest;
 
-  private static SingleValidationMessage createValidationMessage(
-      final ResultSeverityEnum severity, final String message) {
-    final SingleValidationMessage validationMessage = new SingleValidationMessage();
-    validationMessage.setSeverity(severity);
-    validationMessage.setMessage(message);
-    return validationMessage;
-  }
-
-  private static Tags tags(final String version, final boolean success) {
-    return Tags.of("profiles_version", version, "success", String.valueOf(success));
-  }
-
   @BeforeEach
   void setUp() {
-    fhirValidatorManagerMock = mock(FhirValidatorManager.class);
+    underTest = new ValidationService(fhirValidatorManagerMock, validationResultPostProcessingMock);
+  }
 
-    meterRegistry.clear();
-    final var validationMetrics = new ValidationMetrics(meterRegistry);
+  /** Creates a processed ValidationResult with no issues (isSuccessful() == true). */
+  private ValidationResult successfulResult() {
+    return new ValidationResult(fhirContext, List.of());
+  }
 
-    final FilteredMessagePrefixesFactory filteredMessagePrefixesFactory =
-        mock(FilteredMessagePrefixesFactory.class);
-    when(filteredMessagePrefixesFactory.get()).thenReturn(Set.of(IGNORED_VALIDATION_ERROR));
-
-    final ValidationConfigProperties props =
-        new ValidationConfigProperties(
-            null, Locale.getDefault(), ResultSeverityEnum.WARNING, 1, WARNING, false, false, false);
-
-    underTest =
-        new ValidationService(
-            fhirContext,
-            fhirValidatorManagerMock,
-            validationMetrics,
-            props,
-            filteredMessagePrefixesFactory,
-            true);
+  /**
+   * Creates a processed ValidationResult containing a single ERROR message (isSuccessful() ==
+   * false).
+   */
+  private ValidationResult failedResult(final String errorText) {
+    final SingleValidationMessage msg = new SingleValidationMessage();
+    msg.setSeverity(ResultSeverityEnum.ERROR);
+    msg.setMessage(errorText);
+    return new ValidationResult(fhirContext, List.of(msg));
   }
 
   private void assertOperationOutcome(
       final OperationOutcome result,
       final IssueSeverity expectedSeverity,
-      final String expectedMessage) {
+      final String expectedDiagnostics) {
     assertThat(result).isNotNull();
     assertThat(result.getIssue()).hasSize(1);
     final var issue = result.getIssue().getFirst();
     assertThat(issue.getSeverity()).isEqualTo(expectedSeverity);
-    assertThat(issue.getDiagnostics()).isEqualTo(expectedMessage);
-  }
-
-  private void assertMetrics(final Tags... expectedTags) {
-    final Map<Tags, Double> expectedCounters =
-        Stream.of(expectedTags).collect(Collectors.toMap(Function.identity(), t -> 1.0d));
-    final Map<Tags, Double> actualCounters = getCounters();
-    assertThat(actualCounters).isEqualTo(expectedCounters);
-  }
-
-  private Map<Tags, Double> getCounters() {
-    return meterRegistry.find("DEMIS_COUNTER_VALIDATION").counters().stream()
-        .collect(Collectors.toMap(c -> Tags.of(c.getId().getTags()), Counter::count));
+    assertThat(issue.getDiagnostics()).isEqualTo(expectedDiagnostics);
   }
 
   @Nested
-  class OneProfilesVersion {
+  class OneProfileVersion {
 
     private static final String PROFILES_VERSION = "1.0.0";
 
@@ -148,7 +108,6 @@ class ValidationServiceTest {
     @BeforeEach
     void setUp() {
       when(fhirValidatorManagerMock.getVersions()).thenReturn(List.of(PROFILES_VERSION));
-
       fhirValidatorMock = mock(FhirValidator.class);
       when(fhirValidatorManagerMock.getFhirValidator(PROFILES_VERSION))
           .thenReturn(Optional.of(fhirValidatorMock));
@@ -156,123 +115,167 @@ class ValidationServiceTest {
 
     @Test
     void valid() {
-      when(fhirValidatorMock.validateWithResult(CONTENT))
-          .thenReturn(new ValidationResult(fhirContext, List.of()));
+      // Given
+      final ValidationResult rawResult = mock(ValidationResult.class);
+      when(fhirValidatorMock.validateWithResult(CONTENT)).thenReturn(rawResult);
+      when(validationResultPostProcessingMock.processValidationResult(
+              rawResult, PROFILES_VERSION, null))
+          .thenReturn(successfulResult());
 
+      // When
       final OperationOutcome result = underTest.validate(CONTENT);
 
-      assertOperationOutcome(result, INFORMATION, VALID_INFO_MESSAGE);
-      assertMetrics(tags(PROFILES_VERSION, true));
+      // Then: outcome reflects the processed successful result
+      assertOperationOutcome(result, IssueSeverity.INFORMATION, VALID_INFO_MESSAGE);
+      verify(validationResultPostProcessingMock)
+          .processValidationResult(rawResult, PROFILES_VERSION, null);
     }
 
     @Test
     void invalid() {
-      final var errorMsg = createValidationMessage(ResultSeverityEnum.ERROR, SOME_VALIDATION_ERROR);
-      when(fhirValidatorMock.validateWithResult(CONTENT))
-          .thenReturn(new ValidationResult(fhirContext, List.of(errorMsg)));
+      // Given
+      final String errorText = "some validation error";
+      final ValidationResult rawResult = mock(ValidationResult.class);
+      when(fhirValidatorMock.validateWithResult(CONTENT)).thenReturn(rawResult);
+      when(validationResultPostProcessingMock.processValidationResult(
+              rawResult, PROFILES_VERSION, null))
+          .thenReturn(failedResult(errorText));
 
+      // When
       final OperationOutcome result = underTest.validate(CONTENT);
 
-      assertOperationOutcome(result, IssueSeverity.ERROR, errorMsg.getMessage());
-      assertMetrics(tags(PROFILES_VERSION, false));
+      // Then
+      assertOperationOutcome(result, IssueSeverity.ERROR, errorText);
     }
 
     @Test
-    void validationErrorsAreNotFiltered() {
-      final var errorMsg =
-          createValidationMessage(ResultSeverityEnum.ERROR, IGNORED_VALIDATION_ERROR);
-      when(fhirValidatorMock.validateWithResult(CONTENT))
-          .thenReturn(new ValidationResult(fhirContext, List.of(errorMsg)));
+    void principalIdIsForwardedToPostProcessing() {
+      // Given
+      final String principalId = "sender-abc-123";
+      final ValidationResult rawResult = mock(ValidationResult.class);
+      when(fhirValidatorMock.validateWithResult(CONTENT)).thenReturn(rawResult);
+      when(validationResultPostProcessingMock.processValidationResult(
+              rawResult, PROFILES_VERSION, principalId))
+          .thenReturn(successfulResult());
 
-      final OperationOutcome result = underTest.validate(CONTENT);
+      // When
+      underTest.validate(CONTENT, principalId);
 
-      assertOperationOutcome(result, ERROR, IGNORED_VALIDATION_ERROR);
-      assertMetrics(tags(PROFILES_VERSION, false));
+      // Then: the principalId is passed through unmodified to post-processing
+      verify(validationResultPostProcessingMock)
+          .processValidationResult(rawResult, PROFILES_VERSION, principalId);
     }
 
     @Test
     void exceptionInHapiFhirValidator() {
+      // Given
       when(fhirValidatorMock.validateWithResult(CONTENT))
           .thenThrow(new NullPointerException("just for testing"));
 
+      // When
       final OperationOutcome result = underTest.validate(CONTENT);
 
-      assertOperationOutcome(result, FATAL, EXCEPTION_MESSAGE);
-      assertMetrics();
+      // Then: exception is caught and a FATAL outcome is returned; post-processing is never called
+      assertOperationOutcome(result, IssueSeverity.FATAL, EXCEPTION_MESSAGE);
+      verify(validationResultPostProcessingMock, never())
+          .processValidationResult(any(), any(), any());
     }
   }
 
   @Nested
-  class TwoProfilesVersions {
+  class TwoProfileVersions {
+
     private static final String NEW_VERSION = "2.0.0";
     private static final String OLD_VERSION = "1.0.0";
 
-    private FhirValidator newProfilesVersionFhirValidatorMock;
-    private FhirValidator oldProfilesVersionFhirValidatorMock;
+    private FhirValidator newValidatorMock;
+    private FhirValidator oldValidatorMock;
 
     @BeforeEach
     void setUp() {
       when(fhirValidatorManagerMock.getVersions()).thenReturn(List.of(NEW_VERSION, OLD_VERSION));
 
-      newProfilesVersionFhirValidatorMock = mock(FhirValidator.class);
+      newValidatorMock = mock(FhirValidator.class);
       when(fhirValidatorManagerMock.getFhirValidator(NEW_VERSION))
-          .thenReturn(Optional.of(newProfilesVersionFhirValidatorMock));
+          .thenReturn(Optional.of(newValidatorMock));
 
-      oldProfilesVersionFhirValidatorMock = mock(FhirValidator.class);
-      when(fhirValidatorManagerMock.getFhirValidator(OLD_VERSION))
-          .thenReturn(Optional.of(oldProfilesVersionFhirValidatorMock));
+      // oldValidatorMock is created here but getFhirValidator(OLD_VERSION) is only stubbed in
+      // tests that actually fall through to the older version (strict stubbing enforcement).
+      oldValidatorMock = mock(FhirValidator.class);
     }
 
     @Test
     void validWithNewestVersion() {
-      when(newProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
-          .thenReturn(new ValidationResult(fhirContext, List.of()));
+      // Given
+      final ValidationResult newRawResult = mock(ValidationResult.class);
+      when(newValidatorMock.validateWithResult(CONTENT)).thenReturn(newRawResult);
+      when(validationResultPostProcessingMock.processValidationResult(
+              newRawResult, NEW_VERSION, null))
+          .thenReturn(successfulResult());
 
+      // When
       final OperationOutcome result = underTest.validate(CONTENT);
 
-      assertOperationOutcome(result, INFORMATION, VALID_INFO_MESSAGE);
-      assertMetrics(tags(NEW_VERSION, true));
-
-      verifyNoInteractions(oldProfilesVersionFhirValidatorMock);
+      // Then: validation stops after the first (newest) version – the older validator is never used
+      assertOperationOutcome(result, IssueSeverity.INFORMATION, VALID_INFO_MESSAGE);
+      verifyNoInteractions(oldValidatorMock);
+      verify(validationResultPostProcessingMock, never())
+          .processValidationResult(any(), eq(OLD_VERSION), any());
     }
 
     @Test
     void invalidWithNewestVersionButValidWithOlderVersion() {
-      final SingleValidationMessage errorMsg =
-          createValidationMessage(
-              ResultSeverityEnum.ERROR, SOME_VALIDATION_ERROR_FROM_NEWEST_VERSION);
+      // Given
+      final String newestVersionError = "some validation error from newest version";
 
-      when(newProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
-          .thenReturn(new ValidationResult(fhirContext, List.of(errorMsg)));
-      when(oldProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
-          .thenReturn(
-              new ValidationResult(
-                  fhirContext, List.of(createValidationMessage(WARNING, IS_IGNORED))));
+      final ValidationResult newRawResult = mock(ValidationResult.class);
+      when(newValidatorMock.validateWithResult(CONTENT)).thenReturn(newRawResult);
+      when(validationResultPostProcessingMock.processValidationResult(
+              newRawResult, NEW_VERSION, null))
+          .thenReturn(failedResult(newestVersionError));
 
+      when(fhirValidatorManagerMock.getFhirValidator(OLD_VERSION))
+          .thenReturn(Optional.of(oldValidatorMock));
+      final ValidationResult oldRawResult = mock(ValidationResult.class);
+      when(oldValidatorMock.validateWithResult(CONTENT)).thenReturn(oldRawResult);
+      when(validationResultPostProcessingMock.processValidationResult(
+              oldRawResult, OLD_VERSION, null))
+          .thenReturn(successfulResult());
+
+      // When
       final OperationOutcome result = underTest.validate(CONTENT);
 
-      assertOperationOutcome(result, IssueSeverity.WARNING, errorMsg.getMessage());
-      assertMetrics(tags(NEW_VERSION, false), tags(OLD_VERSION, true));
+      // Then: outcome is based on the NEWEST version's result (errors from that version are
+      // reported), but ERROR severity is downgraded to WARNING because the older version validated
+      // successfully
+      assertOperationOutcome(result, IssueSeverity.WARNING, newestVersionError);
     }
 
     @Test
     void invalidWithAllVersions() {
-      final SingleValidationMessage errorMsg =
-          createValidationMessage(
-              ResultSeverityEnum.ERROR, SOME_VALIDATION_ERROR_FROM_NEWEST_VERSION);
+      // Given
+      final String newestVersionError = "some validation error from newest version";
 
-      when(newProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
-          .thenReturn(new ValidationResult(fhirContext, List.of(errorMsg)));
-      when(oldProfilesVersionFhirValidatorMock.validateWithResult(CONTENT))
-          .thenReturn(
-              new ValidationResult(
-                  fhirContext,
-                  List.of(createValidationMessage(ResultSeverityEnum.ERROR, IS_IGNORED))));
+      final ValidationResult newRawResult = mock(ValidationResult.class);
+      when(newValidatorMock.validateWithResult(CONTENT)).thenReturn(newRawResult);
+      when(validationResultPostProcessingMock.processValidationResult(
+              newRawResult, NEW_VERSION, null))
+          .thenReturn(failedResult(newestVersionError));
 
+      when(fhirValidatorManagerMock.getFhirValidator(OLD_VERSION))
+          .thenReturn(Optional.of(oldValidatorMock));
+      final ValidationResult oldRawResult = mock(ValidationResult.class);
+      when(oldValidatorMock.validateWithResult(CONTENT)).thenReturn(oldRawResult);
+      when(validationResultPostProcessingMock.processValidationResult(
+              oldRawResult, OLD_VERSION, null))
+          .thenReturn(failedResult("some error in older version too"));
+
+      // When
       final OperationOutcome result = underTest.validate(CONTENT);
 
-      assertOperationOutcome(result, IssueSeverity.ERROR, errorMsg.getMessage());
-      assertMetrics(tags(NEW_VERSION, false), tags(OLD_VERSION, false));
+      // Then: outcome is based on the NEWEST version's result; ERROR severity is NOT downgraded
+      // because no version validated successfully
+      assertOperationOutcome(result, IssueSeverity.ERROR, newestVersionError);
     }
   }
 }

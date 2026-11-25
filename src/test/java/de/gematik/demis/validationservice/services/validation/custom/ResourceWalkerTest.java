@@ -106,13 +106,13 @@ class ResourceWalkerTest {
                 "Parameters.parameter[0]",
                 "Parameters.parameter",
                 parameters,
-                parameters.getParameter().get(0),
+                parameters.getParameter().getFirst(),
                 null),
             new ElementCtx(
                 "Parameters.parameter[0].name",
                 "Parameters.parameter.name",
                 parameters,
-                parameters.getParameter().get(0).getNameElement(),
+                parameters.getParameter().getFirst().getNameElement(),
                 null),
             new ElementCtx(
                 "Parameters.parameter[0].resource/*Bundle/abc*/",

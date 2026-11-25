@@ -31,26 +31,24 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.r4.model.Base;
 import org.hl7.fhir.r4.model.PrimitiveType;
 
-/// Determines which slice a runtime element belongs to, given the slicing definition
-/// derived at startup.
+/// Determines which slice a runtime element belongs to, given the slicing definition derived at
+/// startup.
 ///
-/// A slice matches when *all* of its discriminators match. A discriminator matches when
-/// there is at least one value at the discriminator path that satisfies the expected
-/// value (for `value`) or contains the expected pattern (for `pattern`).
+/// A slice matches when *all* of its discriminators match. A discriminator matches when there is at
+/// least one value at the discriminator path that satisfies the expected value (for `value`) or
+/// contains the expected pattern (for `pattern`).
 ///
-/// Pattern values use the normalized form produced by `SliceExtractor`: primitives as
-/// `String` / `Number` / `Boolean`, composite types as `Map<String, Object>`, and
-/// repeating fields as `List<Object>`. Pattern matching is a recursive "is-subset"
-/// check: for each field in an expected map, at least one actual child must match; for
-/// each element in an expected list, at least one actual child must match it.
+/// Pattern values use the normalized form produced by `SliceExtractor`: primitives as `String` /
+/// `Number` / `Boolean`, composite types as `Map<String, Object>`, and repeating fields as
+/// `List<Object>`. Pattern matching is a recursive "is-subset" check: for each field in an expected
+/// map, at least one actual child must match; for each element in an expected list, at least one
+/// actual child must match it.
 ///
-/// If no slice matches, the caller must treat the element as outside the sliced scope
-/// (no slice-specific rules apply).
-@Slf4j
+/// If no slice matches, the caller must treat the element as outside the sliced scope (no
+/// slice-specific rules apply).
 public class SliceMatcher {
 
   public Optional<SliceDef> matchSlice(Base element, SlicingRoot root) {

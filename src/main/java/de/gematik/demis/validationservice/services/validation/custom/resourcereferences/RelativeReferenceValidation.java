@@ -33,7 +33,6 @@ import jakarta.annotation.Nullable;
 import java.net.URI;
 import java.net.URISyntaxException;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.Reference;
 import org.hl7.fhir.r4.model.Resource;
@@ -47,7 +46,6 @@ import org.hl7.fhir.r4.model.Resource;
  * versionless URL and the target's {@code meta.versionId}.
  */
 @RequiredArgsConstructor
-@Slf4j
 final class RelativeReferenceValidation implements ReferenceValidation {
 
   private final ValidationMessages validationMessages;

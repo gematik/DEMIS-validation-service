@@ -59,8 +59,8 @@ valid according to the currently supported DEMIS profiles?"**
 ```
 
 Remember, step 3 may try several profile versions (usually configured newest first) before it finds one the message
-passes. The response the caller receives always contains a single set of findings — never a mix from multiple versions.
-Which set is returned depends on the outcome:
+passes. The response the caller receives always contains a single set of findings — never a mix from multiple versions. Which set is returned
+depends on the outcome:
 
 - If the message is valid against the **first attempted** profile version (typically the newest), that version's
   (empty/clean) findings are returned — the common, happy-path case.
@@ -153,41 +153,34 @@ configured independently.
    loaded from disk, HAPI's default FHIR base definitions, DEMIS terminology support, snapshot generation support, and
    (optionally)
    HAPI's common code systems service.
-2. A `FhirInstanceValidator` is created from that chain and registered on a `FhirValidator`. The `FhirInstanceValidator`
-   performs the standard FHIR validation against the loaded profiles, structure definitions, terminology, and snapshots.
-3. Optional DEMIS-specific `IValidatorModule`s are registered on the same `FhirValidator`. Their activation is
-   controlled independently by configuration and feature flags:
-    - the extension validator checks allowed and modifier extensions,
-    - `ResourceReferencesBundleValidationModule` checks whether literal references in Bundles resolve within the
-      notification,
-    - `ReferenceProfileValidationModule` checks whether a referenced resource declares an allowed profile for the
-      corresponding reference path,
-    - QuestionnaireResponse validators check custom quantity/comparator and regular-expression constraints,
-    - `StrictValueSetMembershipValidator` performs additional strict ValueSet membership checks, and
-    - `AbstractProfileValidator` optionally validates against abstract profiles.
-4. The custom modules that process direct resources or resources wrapped in a FHIR `Parameters` resource use
-   `ParametersValidationModule`. Shared helpers such as `ResourceWalker`, `BundleResourceIndex`, and
-   `HapiValidationMessages` provide resource traversal, Bundle entry lookup, and location-aware message mapping.
-5. One validator is built and cached per supported FHIR profile package version (`FhirValidatorManager`), because DEMIS
-   supports validating against multiple profile generations. `ValidationService` invokes these validators in the
-   configured order and applies the final severity filtering and error-to-warning handling.
-
-The resource-reference module is Bundle-specific and is enabled by `feature.flag.vs.reference.validation`. It resolves
-literal references against resources in the notification; it does not fetch targets from a server. An absolute HTTP(S)
-URL can still match a Bundle entry's `fullUrl`, while an unmatched URL is rejected by DEMIS policy. Relative references
-use the RESTful base of the Bundle entry containing the reference, URNs match an entry `fullUrl` exactly, and `#id`
-references are looked up among the contained resources of their enclosing resource. A resource's logical `id` alone
-does not prove that a reference resolves.
-
-For reference resolution, treat FHIR R4 as authoritative and R5 only as supplementary guidance. The package
-documentation in `services/validation/custom/resourcereferences/package-info.java` records the detailed rules and
-implementation gaps; in particular, container back-references (`#`), version-specific matching, strict RESTful URL
-recognition, and ambiguous matches still need implementation and tests. Do not infer these behaviors from the general
-overview above.
+2. A `FhirInstanceValidator` is created from that chain and registered on a `FhirValidator`.
+3. The extension allow-list module is registered, and additional `IValidatorModule`s are enabled by configuration or
+   feature flags for strict ValueSet membership, QuestionnaireResponse rules, and reference/profile checks that the
+   standard validation pipeline does not fully enforce for DEMIS.
+4. One validator is built and cached **per supported FHIR profile package version**
+   (`FhirValidatorManager`), because DEMIS supports validating against multiple profile generations simultaneously (see
+   section 2, step 3).
 
 Everything DEMIS-specific is additive around a mostly-standard HAPI FHIR validation pipeline — this is important: when
 debugging, first figure out whether a finding comes from stock HAPI FHIR or from one of the custom modules described
 below.
+
+### What changed with HAPI FHIR 8
+
+The service uses HAPI FHIR **8.10.2**. As an online service, DEMIS needs to run current supported software versions.
+This upgrade was not just a dependency update: HAPI's validation behavior and the HL7 FHIR Core validation rules
+changed substantially. The Core is closer to HL7's rules now, which can make validation stricter in some cases and more
+permissive in others. A difference from HAPI 7 therefore is not automatically a DEMIS-specific regression; first
+identify whether the finding comes from the Core/HAPI engine or one of this service's custom modules.
+
+HAPI also changed caching in the `ValidationSupportChain`. When investigating profile, terminology, or validator setup,
+do not assume the previous HAPI 7 cache behavior; start with the chain assembly in `FhirValidatorFactory`.
+
+One important example is Bundle reference resolution. HAPI 7 could report an unhelpful profile error when a reference
+to a resource that should be present in the same Bundle could not be resolved. HAPI 8's Core does not report an error
+for this case. DEMIS expects complete documents, so the service now has its own Bundle reference validation module to
+check that these internal references resolve. It is registered when
+`FEATURE_FLAG_VS_REFERENCE_VALIDATION` is enabled.
 
 ---
 
@@ -197,101 +190,33 @@ below.
 src/main/java/de/gematik/demis/validationservice/
 ├── ValidationServiceApplication.java        Spring Boot entry point
 ├── controller/
-│   └── ValidationController.java            HTTP endpoints, including /$validate
+│   └── ValidationController.java            HTTP endpoint: /$validate
 ├── config/
-│   ├── ValidationServiceConfiguration.java  FhirContext bean and application-wide setup
-│   └── ValidationConfigProperties.java      Typed validation-service configuration
-└── services/
-    ├── CodeSystemConsolidator.java          Consolidates CodeSystem resources from the profile package
-    ├── FormatValidator.java                 Optional JSON/XML well-formedness check
-    ├── ProfileParserService.java            Reads profile resources from disk
-    ├── ProfileSnapshot.java                 In-memory resources for one profile package version
-    ├── ValidationMetrics.java               Micrometer metrics for validation outcomes
-    ├── terminology/
-    │   ├── TerminologyValidationProvider.java
-    │   │                                      Interface for plugging in a terminology strategy
-    │   └── local/
-    │       ├── ExpandedValueSetsCodeValidationSupport.java
-    │       │                                  Local ValueSet and code validation support
-    │       └── LocalTerminologyValidationProvider.java
-    │                                              Configures local terminology validation
-    └── validation/
-        ├── CacheDelegator.java               Delegates validation-support cache operations
-        ├── DemisPrePopulatedValidationSupportHapi4.java
-        │                                      Provides DEMIS profile resources to HAPI FHIR
-        ├── ExpireAfterAccessCacheProvider.java
-        │                                      Cache provider with expire-after-access behavior
-        ├── FhirValidatorFactory.java         Builds and configures one FhirValidator
-        ├── FhirValidatorManager.java         Manages one validator per profile package version
-        ├── FilteredMessagePrefixesFactory.java
-        │                                      Creates localized prefixes for error-to-warning filtering
-        ├── LoadingCacheDelegator.java        Delegates loading-cache operations
-        ├── SeverityComparator.java           Orders validation severities
-        ├── ValidationService.java            Orchestrates multi-version validation and result filtering
-        └── custom/
-            ├── BundleResourceIndex.java      Indexes resources contained in a Bundle
-            ├── HapiValidationMessages.java   Maps custom findings to HAPI validation messages
-            ├── ParametersValidationModule.java
-            │                                  Base class for validators handling direct resources
-            │                                  and resources wrapped in Parameters
-            ├── ResourceWalker.java           Traverses FHIR resources and provides element context
-            ├── ValidationMessages.java      Abstraction for adding mapped validation messages
-            ├── extension/
-            │   ├── ExtensionAllowedValidator.java
-            │   │                              Checks allowed and modifier extensions
-            │   ├── ExtensionAllowedValidatorProvider.java
-            │   │                              Creates the extension validation module
-            │   └── StructureDefinitionExtensionExtractor.java
-            │                                          Extracts allowed extensions from profiles
-            ├── profile/
-            │   └── AbstractProfileValidator.java
-            │                                      Optional validation against abstract profiles
-            ├── questionnaire/
-            │   └── responses/
-            │       ├── AbstractCustomQuestionnaireResponseValidator.java
-            │       │                              Base class for QuestionnaireResponse validators
-            │       ├── ComparatorHelper.java
-            │       │                              Compares QuestionnaireResponse quantities
-            │       ├── CustomQuantityComparatorQuestionnaireResponseValidator.java
-            │       │                              Validates quantity/comparator constraints
-            │       └── CustomRegexQuestionnaireResponseValidator.java
-            │                                              Validates QuestionnaireResponse regex constraints
-            ├── referenceprofilevalidation/
-            │   ├── ReferenceProfileValidationModule.java
-            │   │                              Checks profiles of Bundle-local referenced resources
-            │   ├── rules/
-            │   │   ├── EffectiveReferenceRulesResolver.java
-            │   │   │                              Resolves effective rules for reference paths
-            │   │   ├── ReferenceProfileRules.java
-            │   │   │                              Stores reference-profile rules derived from profiles
-            │   │   ├── ReferenceProfileRulesBuilder.java
-            │   │   │                              Builds reference-profile rules from StructureDefinitions
-            │   │   └── SlicingRootResolver.java
-            │   │                                  Resolves slicing roots for reference validation
-            │   └── slicing/
-            │       ├── Discriminator.java       Describes a slice discriminator
-            │       ├── SliceDef.java            Represents one slice and its reference rules
-            │       ├── SliceExtractor.java      Extracts slice definitions from profiles
-            │       ├── SliceMatcher.java        Matches Bundle elements to slice definitions
-            │       └── SlicingRoot.java         Represents a slicing root
-            ├── resourcereferences/
-            │   ├── ResourceReferencesBundleValidationModule.java
-            │   │                                  Validates references in a Bundle
-            │   ├── BundleValidation.java         Dispatches references by address form
-            │   ├── FullUrlResourceIndexFactory.java
-            │   │                                  Indexes Bundle resources by fullUrl
-            │   ├── RelativeReferenceValidation.java
-            │   ├── AbsoluteReferenceValidation.java
-            │   ├── ExternalReferenceValidation.java
-            │   ├── ContainedReferenceValidation.java
-            │   ├── ReferenceValidation.java      Shared reference-validation contract
-            │   ├── ReferenceType.java            Classifies literal reference address forms
-            │   └── package-info.java             Documents resolution rules and known gaps
-            └── strict/
-                └── valuesets/
-                    ├── BindingInfo.java        Stores binding information for coded elements
-                    └── StrictValueSetMembershipValidator.java
-                                                   Performs additional strict ValueSet membership checks
+│   ├── ValidationServiceConfiguration.java   FhirContext bean, locale setup
+│   ├── ValidationConfigProperties.java       Typed application settings and validator options
+│   └── FeatureFlags.java                     Typed feature-flag settings
+├── services/
+│   ├── CodeSystemConsolidator.java           Resolves duplicate CodeSystems in profile packages
+│   ├── ProfileParserService.java             Reads profile files from disk into memory
+│   ├── ProfileSnapshot.java                  In-memory holder for one profile version's resources
+│   ├── ValidationMetrics.java                Micrometer counters for validation outcomes
+│   ├── FormatValidator.java                  Cheap "is this valid JSON/XML" pre-check
+│   ├── validation/
+│   │   ├── FhirValidatorFactory.java         Builds one FhirValidator (see section 4)
+│   │   ├── FhirValidatorManager.java         Holds one FhirValidator per profile version
+│   │   ├── ValidationService.java            Orchestrates the multi-version validation flow
+│   │   ├── FilteredMessagePrefixesFactory.java Localized message-prefix set for error-to-warning downgrade
+│   │   ├── SeverityComparator.java           Orders severities for min-severity filtering
+│   │   └── custom/
+│   │       ├── extension/                    Extension allow-list validation
+│   │       ├── questionnaire/responses/      Regex and quantity rules for QuestionnaireResponses
+│   │       ├── referenceprofilevalidation/   Validates profiles on referenced resources
+│   │       ├── resourcereferences/           Checks Bundle references and holds its config class
+│   │       ├── profile/                      Shared profile-validation support
+│   │       └── strict/valuesets/             Checks membership in required ValueSets
+│   └── terminology/
+│       ├── TerminologyValidationProvider.java Interface for terminology strategies
+│       └── local/                             Default in-memory ValueSet lookup implementation
 ```
 
 ### Suggested reading path
@@ -304,43 +229,41 @@ Read these files in order for the fastest path to understanding the implementati
 4. `services/validation/FhirValidatorManager.java` and `FhirValidatorFactory.java` — how a validator is assembled per
    profile version, and how custom modules get plugged in.
 5. `services/ProfileParserService.java` + `ProfileSnapshot.java` — how profile files become in-memory lookup structures.
-6. `services/validation/custom/ParametersValidationModule.java` — how custom modules process direct resources or
-   resources wrapped in a FHIR `Parameters` resource.
-7. `services/validation/custom/resourcereferences/ResourceReferencesBundleValidationModule.java` and
-   `package-info.java` — the module checks literal Bundle references, and the package documentation describes the
-   resolution rules, FHIR-version precedence, and known implementation gaps.
-8. `services/validation/custom/referenceprofilevalidation/ReferenceProfileValidationModule.java` — checks that resources
-   referenced within a Bundle declare an allowed profile for the corresponding reference path. The related `rules/` and
-   `slicing/` packages show how these rules are derived from StructureDefinitions and how sliced reference paths are
-   matched.
-9. `services/terminology/local/ExpandedValueSetsCodeValidationSupport.java` — implements local terminology validation
-   for ValueSets and coded values loaded from the DEMIS profile package.
-10. `services/validation/custom/extension/ExtensionAllowedValidator.java` — shows how DEMIS-specific extension rules are
-    implemented, including allowed extension URLs and modifier extensions.
-11. `services/validation/custom/strict/valuesets/StrictValueSetMembershipValidator.java` — shows the additional
-    validation used when strict membership in a required ValueSet is enabled.
-12. `services/validation/ValidationServiceIntegrationProfileTest.java` (test) — see real example messages exercised
-    end-to-end and how the resulting validation outcome is asserted.
+6. `services/terminology/local/ExpandedValueSetsCodeValidationSupport.java` — DEMIS's terminology (code) checking logic.
+7. `services/validation/ValidationService.java` + `FilteredMessagePrefixesFactory.java` — how raw findings are
+   downgraded/filtered into the final response.
+8. Pick a custom validator module, for example
+   `services/validation/custom/resourcereferences/ResourceReferencesBundleValidationModule.java` or
+   `services/validation/custom/referenceprofilevalidation/ReferenceProfileValidationModule.java`, to see how
+   DEMIS-specific rules complement HAPI.
+9. `services/validation/ValidationServiceIntegrationProfileTest.java` (test) — see real example messages exercised
+   end-to-end.
 
 ## 6. Configuration overview
 
 Configuration is loaded from `application.properties` (overridable via environment variables — see `README.md` for the
-exact variable names). It is split between typed properties and direct flags/options:
+exact variable names). Spring services should receive typed configuration objects rather than injecting individual
+property values. The `@ConfigurationProperties` classes are registered in `ValidationServiceApplication`:
 
-- **`ValidationConfigProperties`** (`demis.validation-service.*`) — structural settings:
-    - where profile files live on disk, and which profile package *versions* to load and validate against
-      (`profiles.basepath`, `profiles.versions`).
-    - the **locale** for validation diagnostic messages.
-    - **`minSeverityOutcome`** — findings below this severity are stripped from the response entirely. This is the
-      single most impactful setting for how "noisy" responses are.
-    - **`unexpectedExtensionSeverity`**, **`commonCodeSystemTerminologyEnabled`**, **`customRegexValidatorEnabled`**,
-      and **`customQuantityValidatorEnabled`** — optional validator behavior.
-- **Direct flags/options** (`feature.flag.*`, `config.option.*`) — toggles wired via `@Value`, e.g.
-  `feature.flag.format.validation.enabled`, `feature.flag.filtered.errors.as.warnings.disabled` and
-  `config.option.additional.strict.coding.validator.enabled`.
+- **`ValidationConfigProperties`** (`demis.validation-service.*`) — profile base path, FHIR subdirectory, profile
+  versions, diagnostic locale, minimum outcome severity, unexpected-extension severity, and validator options such as
+  strict coding, common code systems, regex, and quantity validation.
+- **`FeatureFlags`** (`feature.flag.*`) — feature switches, including format checking, filtered-error downgrading,
+  HAPI/Core compatibility behavior, abstract/reference profile checks, Bundle reference validation, and profile
+  package post-processing.
+- **`ResourceReferencesBundleValidationConfigProperties`**
+  (`demis.validation-service.resource-references.*`) — trusted external domains used by Bundle reference validation.
 
-Rule of thumb: config properties change *what is structurally possible* (which profiles, which locale); feature flags
-change *how strict or lenient* the service is about edge cases.
+When adding a setting, add it to the appropriate typed configuration class and wire services through that class; do
+not add direct property injection (for example, `@Value`) to a service. `application.properties` maps deployment
+environment variables to these Spring property names. The terminology provider currently also uses
+`@ConditionalOnProperty` to select its implementation from `demis.validation-service.terminology-server.enabled`;
+that is a Spring bean condition, not a value injected into a service. The `terminology-server.url` key is also declared
+in `application.properties` but is not currently bound to one of these classes.
+
+Rule of thumb: configuration properties describe service and validator settings; feature flags switch optional or
+evolving behavior. For the complete property-to-environment-variable mapping and current defaults, see the tables in
+`README.md`.
 
 ---
 
@@ -351,13 +274,13 @@ change *how strict or lenient* the service is about edge cases.
   (FHIRPath-like string pointing at the offending field).
 - **`ValidationService.filterValidationResult(...)`** adjusts the raw list of messages and:
     1. downgrades specific known `error` messages to `warning` based on localized message prefixes from
-       `FilteredMessagePrefixesFactory` (when `feature.flag.filtered.errors.as.warnings.disabled=false`),
+       `FilteredMessagePrefixesFactory` (when `feature.flag.filtered-errors-as-warnings-disabled=false`),
     2. appends a migration note to each downgraded message indicating the downgrade is temporary,
     3. removes any remaining messages below the configured `minSeverityOutcome`.
-- Custom validator modules add their findings to the same HAPI validation context. This includes extension checks,
-  internal reference resolution, referenced-resource profile checks, abstract-profile validation, strict ValueSet
-  membership checks, and QuestionnaireResponse-specific checks. ParametersValidationModule and HapiValidationMessages
-  preserve the correct input location when a resource is wrapped in a Parameters resource.
+- Custom validator modules (extension allow-list, strict ValueSet membership, Questionnaire response, profile, and
+  Bundle reference checks) add their *own* `SingleValidationMessage`s directly into the same HAPI validation context —
+  so, by the time filtering runs, HAPI-native and DEMIS-native findings are already merged into one list and treated
+  uniformly.
 - The final list is converted into a FHIR `OperationOutcome` (`ValidationResult
   .populateOperationOutcome(...)`), one `issue` entry per message.
 - The controller inspects the outcome: if any issue has severity `error` or `fatal`, HTTP status is
@@ -379,52 +302,21 @@ change *how strict or lenient* the service is about edge cases.
 - **Regression tests** (e.g. `ExpandedValueSetsCodeValidationSupportRegressionTest`,
   `ValidationServiceIntegrationProfileErrorToWarningRegressionTest`) pin down specific historic bugs/behaviors so they
   don't silently reappear.
-- **If a message unexpectedly passes or fails validation**, walk the validation flow in this order:
-    1. **Check the input format first.** Verify whether
-       `feature.flag.format.validation.enabled` accepts the raw JSON or XML body. If the format check rejects the
-       input, profile validation has not started yet.
-    2. **Check the input resource and wrapper.** Determine whether the request contains a Bundle directly or contains
-       resources inside a FHIR `Parameters` resource. Custom modules based on `ParametersValidationModule` process
-       resources from both forms, but they may only apply their rules to specific resource types.
-    3. **Check the profile package version.** Determine which configured profile version was tried first and which versions
-       were tried afterwards. `ValidationService` may validate the same input against multiple versions. A message can fail
-       against the first version but pass against a later one. The per-attempt validation log contains the selected version
-       and the validation result.
-    4. **Separate raw findings from final findings.** Check whether the expected HAPI or custom validation message was
-       produced at all. If it was produced but is missing from the response, inspect
-       `ValidationService.filterValidationResult(...)`, the configured `minSeverityOutcome`, and the
-       `FilteredMessagePrefixesFactory`. Known findings may be downgraded from `error` to `warning` or removed because
-       of the minimum severity setting.
-    5. **Identify the responsible validation module.** Depending on the finding, inspect:
-        - `FhirInstanceValidator` for standard FHIR structure, cardinality, datatype, invariant, profile, and terminology
-          validation;
-        - `ExtensionAllowedValidator` for allowed or modifier extension findings;
-        - `ResourceReferencesBundleValidationModule` for unresolved literal references in a Bundle; consult its
-          package-info for the resolution rules and known implementation gaps;
-        - `ReferenceProfileValidationModule` for a referenced resource that declares a profile not allowed at the
-          corresponding reference path;
-        - `CustomRegexQuestionnaireResponseValidator` and
-          `CustomQuantityComparatorQuestionnaireResponseValidator` for QuestionnaireResponse-specific constraints;
-        - `StrictValueSetMembershipValidator` for additional strict ValueSet membership checks; and
-        - `AbstractProfileValidator` for optional abstract-profile validation.
-    6. **For reference-profile findings, inspect the derived rules and slicing.** Check the relevant
-       `StructureDefinition`, the rules built by `ReferenceProfileRulesBuilder`, and the path and slice resolution in
-       the `rules/` and `slicing/` packages. A reference may be resolvable but still fail because the target resource's
-       `meta.profile` is not allowed at that reference path.
-    7. **Check the relevant feature flag or configuration option.** In particular, verify
-       `feature.flag.vs.reference.validation`,
-       `feature.flag.reference.profile.validation`,
-       `feature.flag.abstract.profile.validation`,
-       `config.option.additional.strict.coding.validator.enabled`,
-       `customRegexValidatorEnabled`, and `customQuantityValidatorEnabled`.
-- **Useful log lines to watch:** startup logs from `FhirValidatorFactory` and `FhirValidatorManager` showing the
-  configured profile paths and versions; `ValidationService` logs for each profile-version attempt; debug logs from
-  `ExpandedValueSetsCodeValidationSupport` for terminology lookups; and debug logs from the reference validation
-  modules for Bundle reference paths, resolved targets, and declared profiles.
-- When a custom validation message is reported for a resource wrapped in `Parameters`, inspect the mapped location
-  produced by `HapiValidationMessages`. The reported path includes the corresponding
-  `Parameters.parameter[index].resource` path and may therefore differ from the resource-local path used inside the
-  validator.
+- **If a message unexpectedly passes or fails validation**, walk the flow in this order:
+    1. Is `feature.flag.format-validation-enabled` rejecting/accepting the raw body before validation even runs?
+    2. Which profile version actually matched (`ValidationService.validate` logs
+       `"Validation with version {} successful: {}..."`)? A message might be invalid against the first attempted
+       profile version (usually newest) but valid against a later one.
+    3. Is the raw HAPI finding present at all, or did `ValidationService.filterValidationResult(...)`
+       downgrade/filter it? Check the configured `minSeverityOutcome` and the `FilteredMessagePrefixesFactory` prefixes.
+    4. Is a custom module responsible (extension check, strict ValueSet membership, Questionnaire regex/quantity,
+       profile constraints, or Bundle reference resolution)? These
+       log distinctly (see `unexpected_extension` and
+       `modifier_extension` loggers, and debug logs in `ExpandedValueSetsCodeValidationSupport`).
+- Useful log lines to watch: `FhirValidatorFactory`/`FhirValidatorManager` startup logs (which profile paths/versions
+  loaded), `ValidationService`'s per-attempt timing/success log, and the `debug`-level logs in
+  `ExpandedValueSetsCodeValidationSupport` for terminology lookups.
+
 
 ### Git Submodules
 
@@ -443,8 +335,8 @@ given via `FHIR_PROFILES_BASEPATH`, normally populated from the separate
 | Situation                                                                             | Command                                                                                                                                                                      |
 |---------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **After cloning or pulling changes from the main repository**                         | `git submodule update --init --recursive` after `git clone` or `git pull`. This initializes newly added submodules and checks out the commits pinned by the main repository. |
-| **You want to update all profiles to the latest commit of their configured branches** | `git submodule update --remote`, then commit the changed submodule references.                                                                                               |
-| **You want to update one profile to the latest commit of its configured branch**      | `git submodule update --remote profiles/6.1.7`, then commit the changed submodule reference.                                                                                 |
+| **You want to update all profiles to the latest commit of their configured branches** | `git submodule update --remote -- profiles/5.4.1 profiles/6.2.6` (always list the profile paths, so other submodules are not updated), then commit the changed submodule references. |
+| **You want to update one profile to the latest commit of its configured branch**      | `git submodule update --remote profiles/6.2.6`, then commit the changed submodule reference.                                                                                 |
 
 **Do I need to edit .gitmodules?**
 Usually, no. Use Git commands when adding or removing a profile submodule because .gitmodules contains only the
@@ -464,40 +356,27 @@ or tracked branch.
 
 ---
 
-## 9. Glossary
+## 10. Glossary
 
-| Term                                            | Meaning                                                                                                                                                                                                          |
-|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **FHIR**                                        | Fast Healthcare Interoperability Resources — the HL7 data exchange standard used for the messages this service validates.                                                                                        |
-| **R4**                                          | The specific FHIR version (Release 4) this service supports.                                                                                                                                                     |
-| **Resource**                                    | A single structured FHIR data object (`Patient`, `Observation`, `Bundle`, …).                                                                                                                                    |
-| **Bundle**                                      | A FHIR resource that packages several other resources together; typical shape of a DEMIS notification message.                                                                                                   |
-| **Profile / StructureDefinition**               | A rule set that narrows a generic FHIR resource type for a specific use case (here: DEMIS/RKI notifications).                                                                                                    |
-| **ValueSet**                                    | A named set of allowed codes for a field.                                                                                                                                                                        |
-| **CodeSystem**                                  | The authoritative source/definition of a set of codes (e.g. LOINC, SNOMED CT, or a DEMIS-specific list).                                                                                                         |
-| **Terminology validation**                      | Checking whether a code used in a message belongs to the ValueSet/CodeSystem required by the profile.                                                                                                            |
-| **Binding (required/extensible/…)**             | How strictly a profile enforces that a coded field's value must come from a bound ValueSet. `REQUIRED` = must be a member.                                                                                       |
-| **OperationOutcome**                            | The standard FHIR resource used to report the result of an operation (like validation) as a list of issues.                                                                                                      |
-| **Issue / SingleValidationMessage**             | One individual finding: a severity, message, code/ID, and location.                                                                                                                                              |
-| **Severity**                                    | `information` < `warning` < `error` < `fatal`, in increasing seriousness.                                                                                                                                        |
-| **HAPI FHIR**                                   | The Java library this service is built on; provides the FHIR data model, parsers, and the validation engine.                                                                                                     |
-| **FhirContext**                                 | HAPI's central object for a given FHIR version; creates parsers and the validator.                                                                                                                               |
-| **FhirValidator / FhirInstanceValidator**       | HAPI's engine that actually checks a resource against profiles and terminology.                                                                                                                                  |
-| **IValidationSupport**                          | HAPI's pluggable interface for looking up profiles/ValueSets/CodeSystems and validating codes; DEMIS implements/chains several of these.                                                                         |
-| **ValidationSupportChain**                      | An ordered list of `IValidationSupport` implementations queried in turn.                                                                                                                                         |
-| **IValidatorModule**                            | A pluggable extra validation step registered on a `FhirValidator`; DEMIS uses this to add rules HAPI doesn't have natively.                                                                                      |
-| **Profile version / package version**           | One generation of the DEMIS/RKI profile rulebook (e.g. `5.2.0`); this service can validate against several versions at once and picks the best match.                                                            |
-| **RKI**                                         | Robert Koch-Institut — the German public health institute that authors the FHIR profiles DEMIS validates against.                                                                                                |
-| **Parameters**                                  | A FHIR resource that can wrap one or more resources in `parameter.resource`. The service accepts Bundles directly and also processes resources contained in Parameters for custom validation modules.            |
-| **ParametersValidationModule**                  | A base class for custom validator modules that handles resources supplied directly or wrapped in a Parameters resource and maps findings back to their original input locations.                                 |
-| **Literal resource reference**                  | A reference with an address, such as a relative URL, `urn:uuid:…`, an absolute HTTP(S) URL, or a contained-resource fragment such as `#local-id`.                                                                  |
-| **Resource reference validation**               | Checking whether a literal reference in a Bundle resolves to a matching Bundle entry or to a contained resource in its enclosing resource; the service does not retrieve remote targets.                           |
-| **Reference profile validation**                | Checking whether the resource targeted by a Bundle-local reference declares a profile allowed at the corresponding reference path.                                                                               |
-| **`meta.profile`**                              | The list of profile URLs declared by a FHIR resource. The reference-profile validator uses these declarations when checking whether a referenced resource is allowed at a particular path.                       |
-| **Profile inheritance / Derived profile**       | The relationship between a more specific profile and its base profile. A referenced resource may be accepted when its declared profile or one of its ancestors is allowed by the reference rule.                 |
-| **Slicing**                                     | A FHIR mechanism for dividing repeated elements into named slices with different constraints, usually identified by discriminator values.                                                                        |
-| **Slice / Slice discriminator**                 | A slice is one constrained part of a sliced element. A discriminator defines how the validator determines which slice a particular element belongs to.                                                           |
-| **Snapshot / Differential**                     | A StructureDefinition differential contains changes relative to the base profile; a snapshot contains the complete set of element definitions needed for validation.                                             |
-| **Abstract profile**                            | A profile intended as a reusable base definition rather than for direct instance validation. The service can optionally validate against abstract profiles through `AbstractProfileValidator`.                   |
-| **Profile version / package version**           | One generation of the DEMIS/RKI profile package, including StructureDefinitions and related terminology resources. The service can validate against several package versions and tries them in configured order. |
-| **ValidationSupportChain**                      | An ordered composite of `IValidationSupport` implementations. It resolves profile, terminology, and other reference data by querying its configured support components.                                          |
+| Term                                      | Meaning                                                                                                                                               |
+|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **FHIR**                                  | Fast Healthcare Interoperability Resources — the HL7 data exchange standard used for the messages this service validates.                             |
+| **R4**                                    | The specific FHIR version (Release 4) this service supports.                                                                                          |
+| **Resource**                              | A single structured FHIR data object (`Patient`, `Observation`, `Bundle`, …).                                                                         |
+| **Bundle**                                | A FHIR resource that packages several other resources together; typical shape of a DEMIS notification message.                                        |
+| **Profile / StructureDefinition**         | A rule set that narrows a generic FHIR resource type for a specific use case (here: DEMIS/RKI notifications).                                         |
+| **ValueSet**                              | A named set of allowed codes for a field.                                                                                                             |
+| **CodeSystem**                            | The authoritative source/definition of a set of codes (e.g. LOINC, SNOMED CT, or a DEMIS-specific list).                                              |
+| **Terminology validation**                | Checking whether a code used in a message belongs to the ValueSet/CodeSystem required by the profile.                                                 |
+| **Binding (required/extensible/…)**       | How strictly a profile enforces that a coded field's value must come from a bound ValueSet. `REQUIRED` = must be a member.                            |
+| **OperationOutcome**                      | The standard FHIR resource used to report the result of an operation (like validation) as a list of issues.                                           |
+| **Issue / SingleValidationMessage**       | One individual finding: a severity, message, code/ID, and location.                                                                                   |
+| **Severity**                              | `information` < `warning` < `error` < `fatal`, in increasing seriousness.                                                                             |
+| **HAPI FHIR**                             | The Java library this service is built on; provides the FHIR data model, parsers, and the validation engine.                                          |
+| **FhirContext**                           | HAPI's central object for a given FHIR version; creates parsers and the validator.                                                                    |
+| **FhirValidator / FhirInstanceValidator** | HAPI's engine that actually checks a resource against profiles and terminology.                                                                       |
+| **IValidationSupport**                    | HAPI's pluggable interface for looking up profiles/ValueSets/CodeSystems and validating codes; DEMIS implements/chains several of these.              |
+| **ValidationSupportChain**                | An ordered list of `IValidationSupport` implementations queried in turn.                                                                              |
+| **IValidatorModule**                      | A pluggable extra validation step registered on a `FhirValidator`; DEMIS uses this to add rules HAPI doesn't have natively.                           |
+| **Profile version / package version**     | One generation of the DEMIS/RKI profile rulebook (e.g. `5.2.0`); this service can validate against several versions at once and picks the best match. |
+| **RKI**                                   | Robert Koch-Institut — the German public health institute that authors the FHIR profiles DEMIS validates against.                                     |

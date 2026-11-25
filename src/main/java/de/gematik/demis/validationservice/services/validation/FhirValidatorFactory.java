@@ -31,6 +31,7 @@ import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.context.support.DefaultProfileValidationSupport;
 import ca.uhn.fhir.context.support.IValidationSupport;
 import ca.uhn.fhir.validation.FhirValidator;
+import de.gematik.demis.validationservice.config.FeatureFlags;
 import de.gematik.demis.validationservice.config.ValidationConfigProperties;
 import de.gematik.demis.validationservice.services.ProfileParserService;
 import de.gematik.demis.validationservice.services.ProfileSnapshot;
@@ -46,18 +47,15 @@ import de.gematik.demis.validationservice.services.validation.custom.resourceref
 import de.gematik.demis.validationservice.services.validation.custom.resourcereferences.ResourceReferencesBundleValidationModule;
 import de.gematik.demis.validationservice.services.validation.custom.strict.valuesets.StrictValueSetMembershipValidator;
 import java.nio.file.Path;
-import java.util.concurrent.TimeUnit;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.time.DurationFormatUtils;
-import org.hl7.fhir.common.hapi.validation.support.CachingValidationSupport.CacheTimeouts;
 import org.hl7.fhir.common.hapi.validation.support.CommonCodeSystemsTerminologyService;
 import org.hl7.fhir.common.hapi.validation.support.SnapshotGeneratingValidationSupport;
 import org.hl7.fhir.common.hapi.validation.support.ValidationSupportChain;
 import org.hl7.fhir.common.hapi.validation.validator.FhirInstanceValidator;
 import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.Observation;
-import org.springframework.beans.factory.annotation.Value;
+import org.hl7.fhir.r5.utils.validation.constants.BestPracticeWarningLevel;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -70,22 +68,11 @@ public final class FhirValidatorFactory {
   private final ValidationConfigProperties configProperties;
   private final TerminologyValidationProvider terminologyValidationProvider;
   private final ExtensionAllowedValidatorProvider extensionAllowedValidatorProvider;
+  private final FeatureFlags featureFlags;
   private final ResourceReferencesBundleValidationConfigProperties
       resourceReferencesBundleValidationConfigProperties;
 
   private ProfileSnapshot profileSnapshot;
-
-  @Value("${config.option.additional.strict.coding.validator.enabled}")
-  private boolean configOptionAdditionalStrictCodingValidatorEnabled;
-
-  @Value("${feature.flag.vs.reference.validation}")
-  private boolean featureFlagVsReferenceValidation;
-
-  @Value("${feature.flag.abstract.profile.validation:false}")
-  private boolean featureFlagAbstractProfileValidation;
-
-  @Value("${feature.flag.reference.profile.validation}")
-  private boolean featureFlagReferenceProfileValidation;
 
   public FhirValidator createFhirValidator(final Path profilesPath) {
     log.info("Start creating and initializing fhir validator for profiles path {}", profilesPath);
@@ -99,19 +86,19 @@ public final class FhirValidatorFactory {
     final IValidationSupport validationSupport = createValidationSupport(profilesPath);
     final FhirInstanceValidator fhirModule = new FhirInstanceValidator(validationSupport);
     fhirModule.setErrorForUnknownProfiles(true);
+    fhirModule.setBestPracticeWarningLevel(BestPracticeWarningLevel.Ignore);
     final var validator = fhirContext.newValidator();
     validator.registerValidatorModule(fhirModule);
-    // additional validation modules
 
     validator.registerValidatorModule(
         extensionAllowedValidatorProvider.createValidatorModule(validationSupport));
-    if (featureFlagVsReferenceValidation) {
+
+    if (featureFlags.isVsReferenceValidation()) {
       validator.registerValidatorModule(
           new ResourceReferencesBundleValidationModule(
               resourceReferencesBundleValidationConfigProperties));
     }
-
-    if (featureFlagReferenceProfileValidation) {
+    if (featureFlags.isReferenceProfileValidation()) {
       validator.registerValidatorModule(
           new ReferenceProfileValidationModule(buildReferenceProfileRules()));
     }
@@ -124,12 +111,12 @@ public final class FhirValidatorFactory {
       validator.registerValidatorModule(
           new CustomRegexQuestionnaireResponseValidator(profileSnapshot.questionnaires()));
     }
-    if (configOptionAdditionalStrictCodingValidatorEnabled) {
+    if (configProperties.additionalStrictCodingValidatorEnabled()) {
       validator.registerValidatorModule(
           new StrictValueSetMembershipValidator(
               profileSnapshot.valueSets(), profileSnapshot.structureDefinitions()));
     }
-    if (featureFlagAbstractProfileValidation) {
+    if (featureFlags.isAbstractProfileValidation()) {
       validator.registerValidatorModule(
           new AbstractProfileValidator(profileSnapshot.structureDefinitions()));
     }
@@ -140,8 +127,7 @@ public final class FhirValidatorFactory {
     final ValidationSupportChain chain = new ValidationSupportChain();
     addDemisPrePopulatedValidation(chain, profilesPath);
     addDefaultProfileValidation(chain);
-    terminologyValidationProvider.addTerminologyValidationSupport(
-        chain, createTerminologyServerCacheTimeouts(), profilesPath);
+    terminologyValidationProvider.addTerminologyValidationSupport(chain, profilesPath);
     addSnapshotGeneratingValidation(chain);
     addCommonCodeSystemsValidation(chain);
     return chain;
@@ -156,22 +142,6 @@ public final class FhirValidatorFactory {
 
   private void addDefaultProfileValidation(ValidationSupportChain chain) {
     chain.addValidationSupport(new DefaultProfileValidationSupport(this.fhirContext));
-  }
-
-  private CacheTimeouts createTerminologyServerCacheTimeouts() {
-    final long millis =
-        TimeUnit.MINUTES.toMillis(configProperties.cacheExpireAfterAccessTimeoutMins());
-    if (log.isInfoEnabled()) {
-      log.info(
-          "Creating terminology server cache timeouts. ExpireAfterAccessTimeout: {}",
-          DurationFormatUtils.formatDurationHMS(millis));
-    }
-    return new CacheTimeouts()
-        .setLookupCodeMillis(millis)
-        .setExpandValueSetMillis(millis)
-        .setTranslateCodeMillis(millis)
-        .setValidateCodeMillis(millis)
-        .setMiscMillis(millis);
   }
 
   private void addSnapshotGeneratingValidation(ValidationSupportChain chain) {

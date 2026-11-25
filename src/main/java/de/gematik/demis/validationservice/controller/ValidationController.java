@@ -36,12 +36,13 @@ import static org.springframework.http.MediaType.APPLICATION_XML_VALUE;
 
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.parser.IParser;
+import de.gematik.demis.validationservice.config.FeatureFlags;
 import de.gematik.demis.validationservice.services.validation.ValidationService;
 import javax.annotation.CheckForNull;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -54,21 +55,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping(path = "/")
+@RequiredArgsConstructor
 public class ValidationController {
-  public static final String HEADER_SENDER = "x-sender";
+
+  private static final String HEADER_SENDER = "x-sender";
+
   private final FhirContext fhirContext;
   private final ValidationService validationService;
-
-  private final boolean isFormatValidationActive;
-
-  public ValidationController(
-      final FhirContext fhirContext,
-      final ValidationService validationService,
-      @Value("${feature.flag.format.validation.enabled}") boolean isFormatValidationActive) {
-    this.fhirContext = fhirContext;
-    this.validationService = validationService;
-    this.isFormatValidationActive = isFormatValidationActive;
-  }
+  private final FeatureFlags featureFlags;
 
   @PostMapping(
       path = "$validate",
@@ -94,7 +88,7 @@ public class ValidationController {
       @RequestHeader(name = ACCEPT, required = false) MediaType accept,
       @RequestHeader(name = HEADER_SENDER, required = false) @CheckForNull
           final String principalId) {
-    if (isFormatValidationActive && !isFormatValid(content, mediaType)) {
+    if (featureFlags.isFormatValidationEnabled() && !isFormatValid(content, mediaType)) {
       return operationOutcomeErrorWithNoValidJson(mediaType, accept);
     }
     final OperationOutcome operationOutcome = validationService.validate(content, principalId);

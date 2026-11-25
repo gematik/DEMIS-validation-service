@@ -13,9 +13,7 @@ In case of changes by gematik find details in the "Readme" file.
 See the Licence for the specific language governing permissions and limitations under the Licence.
 
 This project includes:
-  Apache Commons BeanUtils under Apache License, Version 2.0
   Apache Commons Codec under Apache-2.0
-  Apache Commons Collections under Apache License, Version 2.0
   Apache Commons Compress under Apache-2.0
   Apache Commons IO under Apache-2.0
   Apache Commons Lang under Apache-2.0
@@ -24,6 +22,7 @@ This project includes:
   Apache HttpClient under Apache License, Version 2.0
   Apache HttpCore under Apache License, Version 2.0
   Apache Log4j API under Apache-2.0
+  Apache XML Security for Java under Apache-2.0
   asm under BSD-3-Clause
   ASM based accessors helper used by json-smart under The Apache Software License, Version 2.0
   AspectJ Weaver under Eclipse Public License - v 2.0
@@ -34,6 +33,8 @@ This project includes:
   Byte Buddy agent under Apache License, Version 2.0
   Caffeine cache under Apache License, Version 2.0
   ClassMate under Apache License, Version 2.0
+  commonmark-java core under BSD 2-Clause License
+  commonmark-java extension for tables under BSD 2-Clause License
   context-propagation under The Apache Software License, Version 2.0
   error-prone annotations under Apache 2.0
   FindBugs-jsr305 under The Apache Software License, Version 2.0
@@ -46,12 +47,25 @@ This project includes:
   HAPI FHIR - Converter under Apache Software License 2.0
   HAPI FHIR - Core Library under Apache Software License 2.0
   HAPI FHIR - ServiceLoaders - Caching API under Apache Software License 2.0
+  HAPI FHIR - ServiceLoaders - Caching Caffeine under Apache Software License 2.0
   HAPI FHIR - Validation under Apache Software License 2.0
   HAPI FHIR - Validation Resources (FHIR R4) under Apache Software License 2.0
   HAPI FHIR Structures - FHIR R4 under Apache Software License 2.0
   HAPI FHIR Structures - FHIR R5 under Apache Software License 2.0
   HdrHistogram under Public Domain, per Creative Commons CC0 or BSD-2-Clause
   Hibernate Validator Engine under Apache License 2.0
+  HL7 Core Artifact - Convertors under Apache Software License 2.0
+  HL7 Core Artifact - DSTU2 under Apache Software License 2.0
+  HL7 Core Artifact - DSTU2016May under Apache Software License 2.0
+  HL7 Core Artifact - DSTU3 under Apache Software License 2.0
+  HL7 Core Artifact - DSTU3 - Support under Apache Software License 2.0
+  HL7 Core Artifact - Model under Apache Software License 2.0
+  HL7 Core Artifact - R4 under Apache Software License 2.0
+  HL7 Core Artifact - R4B under Apache Software License 2.0
+  HL7 Core Artifact - R5 under Apache Software License 2.0
+  HL7 Core Artifact - Support under Apache Software License 2.0
+  HL7 Core Artifact - Utilities under Apache Software License 2.0
+  HL7 Core Artifact - Validation under Apache Software License 2.0
   ICU4J under Unicode-3.0
   J2ObjC Annotations under Apache License, Version 2.0
   Jackson datatype: JSR310 under The Apache Software License, Version 2.0
@@ -64,10 +78,11 @@ This project includes:
   Jakarta Validation API under Apache License 2.0
   Jakarta XML Binding API under Eclipse Distribution License - v 1.0
   jakarta-regexp under Apache License, Version 2.0
+  JavaEWAH under Apache 2
   Javassist under MPL 1.1 or LGPL 2.1 or Apache License 2.0
   JBoss Logging 3 under Apache License 2.0
   JCL 1.2 implemented over SLF4J under Apache-2.0
-  JetBrains Java Annotations under The Apache Software License, Version 2.0
+  JGit - Core under BSD-3-Clause
   JSON library from Android SDK under Apache License 2.0
   JSON Small and Fast Parser under The Apache Software License, Version 2.0
   json-path under The Apache Software License, Version 2.0
@@ -95,6 +110,7 @@ This project includes:
   micrometer-tracing-bridge-otel under The Apache Software License, Version 2.0
   mockito-core under MIT
   mockito-junit-jupiter under MIT
+  Nimbus JOSE+JWT under The Apache Software License, Version 2.0
   Objenesis under Apache License, Version 2.0
   OGNL - Object Graph Navigation Library under The Apache Software License, Version 2.0
   okhttp under The Apache Software License, Version 2.0
@@ -103,15 +119,6 @@ This project includes:
   OpenTelemetry Java under The Apache License, Version 2.0
   OpenTelemetry Semantic Conventions Java under The Apache License, Version 2.0
   org.apiguardian:apiguardian-api under The Apache License, Version 2.0
-  org.hl7.fhir.convertors under Apache Software License 2.0
-  org.hl7.fhir.dstu2 under Apache Software License 2.0
-  org.hl7.fhir.dstu2016may under Apache Software License 2.0
-  org.hl7.fhir.dstu3 under Apache Software License 2.0
-  org.hl7.fhir.r4 under Apache Software License 2.0
-  org.hl7.fhir.r4b under Apache Software License 2.0
-  org.hl7.fhir.r5 under Apache Software License 2.0
-  org.hl7.fhir.utilities under Apache Software License 2.0
-  org.hl7.fhir.validation under Apache Software License 2.0
   org.opentest4j:opentest4j under The Apache License, Version 2.0
   org.xmlunit:xmlunit-core under The Apache Software License, Version 2.0
   PlantUML under MIT License
@@ -180,6 +187,7 @@ This project includes:
   springdoc-openapi-starter-webmvc-api under The Apache License, Version 2.0
   springdoc-openapi-starter-webmvc-ui under The Apache License, Version 2.0
   SQLite JDBC under The Apache Software License, Version 2.0
+  Stax2 API under The BSD License
   Swagger UI under Apache-2.0
   swagger-annotations-jakarta under Apache License 2.0
   swagger-core-jakarta under Apache License 2.0
@@ -192,6 +200,8 @@ This project includes:
   unbescape under The Apache Software License, Version 2.0
   validation-service under Licensed under the EUPL 1.2
   webjars-locator-lite under MIT
+  Woodstox under The Apache License, Version 2.0
+  XML Resolver under Apache License version 2.0
   XPP3 under The Apache Software License, Version 2.0
 
 

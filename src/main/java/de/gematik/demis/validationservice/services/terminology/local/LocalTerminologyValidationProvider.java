@@ -28,12 +28,11 @@ package de.gematik.demis.validationservice.services.terminology.local;
  */
 
 import ca.uhn.fhir.context.FhirContext;
+import de.gematik.demis.validationservice.config.FeatureFlags;
 import de.gematik.demis.validationservice.config.ValidationConfigProperties;
 import de.gematik.demis.validationservice.services.terminology.TerminologyValidationProvider;
 import java.nio.file.Path;
 import lombok.RequiredArgsConstructor;
-import org.hl7.fhir.common.hapi.validation.support.CachingValidationSupport;
-import org.hl7.fhir.common.hapi.validation.support.CachingValidationSupport.CacheTimeouts;
 import org.hl7.fhir.common.hapi.validation.support.InMemoryTerminologyServerValidationSupport;
 import org.hl7.fhir.common.hapi.validation.support.ValidationSupportChain;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -49,26 +48,13 @@ class LocalTerminologyValidationProvider implements TerminologyValidationProvide
 
   private final FhirContext fhirContext;
   private final ValidationConfigProperties configProperties;
+  private final FeatureFlags featureFlags;
 
   @Override
   public void addTerminologyValidationSupport(
-      final ValidationSupportChain chain,
-      final CacheTimeouts cacheTimeouts,
-      final Path profilesPath) {
-    addExpandedValueSetsValidation(chain);
-    addInMemoryTerminologyServerValidation(chain, cacheTimeouts);
-  }
-
-  private void addExpandedValueSetsValidation(final ValidationSupportChain chain) {
+      final ValidationSupportChain chain, final Path profilesPath) {
     chain.addValidationSupport(
-        new ExpandedValueSetsCodeValidationSupport(
-            fhirContext, configProperties.minSeverityOutcome()));
-  }
-
-  private void addInMemoryTerminologyServerValidation(
-      final ValidationSupportChain chain, final CacheTimeouts cacheTimeouts) {
-    chain.addValidationSupport(
-        new CachingValidationSupport(
-            new InMemoryTerminologyServerValidationSupport(fhirContext), cacheTimeouts));
+        new ExpandedValueSetsCodeValidationSupport(fhirContext, configProperties, featureFlags));
+    chain.addValidationSupport(new InMemoryTerminologyServerValidationSupport(fhirContext));
   }
 }

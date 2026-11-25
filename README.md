@@ -124,25 +124,50 @@ aus IntelliJ als SpringBoot Application starten
 
 ## Properties
 
+Configuration values are bound to typed `@ConfigurationProperties` classes and injected as those classes; individual
+properties should not be injected into Spring services. The environment-variable column shows the deployment-facing
+name configured in `application.properties`.
 
-| Property                                                        | Default Value | Environment Variable                                 | Environment Variable  Description                                                                                          |
-|-----------------------------------------------------------------| ------------- |------------------------------------------------------| -------------------------------------------------------------------------------------------------------------------------- |
-| demis.validation-service.profiles.basepath                      |               | FHIR_PROFILES_BASEPATH                               | Path to base directory with all profiles versions                                                                          |
-| demis.validation-service.profiles.fhirpath                      | Fhir          |                                                      | Path inside of a profiles versions directory to the resources.                                                             |
-| demis.validation-service.profiles.versions                      |               | PACKAGE_VERSIONS                                     | List of versions. Must match the directory names under the base path.                                                      |
-| demis.validation-service.locale                                 | `en_US`       |                                                      | Locale for the HAPI-FHIR context and validator. The language of diagnostics of the outcome is dependent on this locale.    |
-| demis.validation-service.minSeverityOutcome                     | `information` |                                                      | Minimal severity that will not be filtered out in the Outcome. Possible values:`information`, `warning`, `error`, `fatal`. |
-| demis.validation-service.common-code-system-terminology-enabled | false         | CONFIG_OPTION_COMMON_CODE_SYSTEM_TERMINOLOGY_ENABLED | adds terminology support to validator                                                                                      |
-| demis.validation-service.custom-regex-validator-enabled         | false         | CONFIG_OPTION_CUSTOM_REGEX_VALIDATOR_ENABLED         | enables custom regex validator                                                                                             |
-| demis.validation-service.custom-quantity-validator-enabled      | false         | CONFIG_OPTION_CUSTOM_QUANTITY_VALIDATOR_ENABLED      | enables custom quantity validator                                                                                          |
+| Spring property | Default | Environment variable | Description |
+|---|---|---|---|
+| `demis.validation-service.profiles.basepath` | empty | `FHIR_PROFILES_BASEPATH` | Base directory containing profile-version directories. Required at startup. |
+| `demis.validation-service.profiles.fhirpath` | `Fhir` | — | Path within a profile-version directory containing FHIR resources. |
+| `demis.validation-service.profiles.versions` | empty | `PACKAGE_VERSIONS` | Comma-separated profile versions to load; must match directories under the base path. Required at startup. |
+| `demis.validation-service.locale` | `en_US` | — | Locale used for HAPI FHIR diagnostics. |
+| `demis.validation-service.minSeverityOutcome` | `warning` | — | Lowest severity retained in the outcome: `information`, `warning`, `error`, or `fatal`. |
+| `demis.validation-service.unexpected-extension-severity` | `warning` | — | Severity assigned to unexpected extensions. |
+| `demis.validation-service.additional-strict-coding-validator-enabled` | `false` | `CONFIG_OPTION_ADDITIONAL_STRICT_CODING_VALIDATOR_ENABLED` | Enables the additional strict ValueSet membership validator. |
+| `demis.validation-service.common-code-system-terminology-enabled` | `false` | `CONFIG_OPTION_COMMON_CODE_SYSTEM_TERMINOLOGY_ENABLED` | Enables HAPI's common CodeSystem terminology support. |
+| `demis.validation-service.custom-regex-validator-enabled` | `false` | `CONFIG_OPTION_CUSTOM_REGEX_VALIDATOR_ENABLED` | Enables custom QuestionnaireResponse regex validation. |
+| `demis.validation-service.custom-quantity-validator-enabled` | `false` | `CONFIG_OPTION_CUSTOM_QUANTITY_VALIDATOR_ENABLED` | Enables custom QuestionnaireResponse quantity validation. |
+| `demis.validation-service.resource-references.trusted-external-domains` | empty | `CONFIG_OPTION_TRUSTED_EXTERNAL_REFERENCES_DOMAINS` | Comma-separated domains accepted as trusted external Bundle references. |
+| `demis.validation-service.terminology-server.enabled` | `false` | `FEATURE_FLAG_TERMINOLOGY_SERVER` | Spring bean-condition switch for the terminology provider. |
+| `demis.validation-service.terminology-server.url` | empty | `CONFIG_OPTION_TERMINOLOGY_SERVER_URL` | Terminology-server URL property. |
+
+These settings are grouped in `ValidationConfigProperties` and
+`ResourceReferencesBundleValidationConfigProperties`. The terminology-server switch is currently used with Spring's
+`@ConditionalOnProperty`; the URL is declared in `application.properties` but is not part of those configuration
+classes. New settings should follow the typed-configuration pattern rather than extending this exception.
 
 ## Feature Flags
 
 
-| Feature Flag                                        | Description                                    |
-|-----------------------------------------------------|------------------------------------------------|
-| feature.flag.format.validation.enabled              | allow json only as valid format                |
-| feature.flag.filtered.errors.as.warnings.disabled   | changes error validation results to warnings.  |
+Feature flags are bound to the `FeatureFlags` class. These switches use the `feature.flag.*` Spring-property namespace:
+
+| Spring property | Environment variable | Default | Description |
+|---|---|---:|---|
+| `feature.flag.format-validation-enabled` | `FEATURE_FLAG_FORMAT_VALIDATION_ENABLED` | `true` | Enables the pre-validation check that the request body is well-formed JSON or XML. |
+| `feature.flag.filtered-errors-as-warnings-disabled` | `FEATURE_FLAG_FILTERED_ERRORS_AS_WARNINGS_DISABLED` | `false` | Disables downgrading selected validation errors to warnings when enabled. |
+| `feature.flag.codesystem-version-verification-enabled` | `FEATURE_FLAG_CODESYSTEM_VERSION_VERIFICATION_ENABLED` | `false` | Enables CodeSystem version verification. |
+| `feature.flag.vs-hapi-qr-qmin-verification-enabled` | `FEATURE_FLAG_VS_HAPI_QR_QMIN_VERIFICATION_ENABLED` | `false` | Enables HAPI's lower-bound verification for QuestionnaireResponse quantities. |
+| `feature.flag.address-country-errors-as-warnings-disabled` | `FEATURE_FLAG_ADDRESS_COUNTRY_ERRORS_AS_WARNINGS_DISABLED` | `false` | When `true`, disables downgrading selected country-code errors to warnings. |
+| `feature.flag.address-state-errors-as-warnings-disabled` | `FEATURE_FLAG_ADDRESS_STATE_ERRORS_AS_WARNINGS_DISABLED` | `false` | When `true`, disables downgrading selected state-code errors to warnings. |
+| `feature.flag.address-zip-errors-as-warnings-disabled` | `FEATURE_FLAG_ADDRESS_ZIP_ERRORS_AS_WARNINGS_DISABLED` | `false` | When `true`, disables downgrading selected postal-code errors to warnings. |
+| `feature.flag.vs-reference-validation` | `FEATURE_FLAG_VS_REFERENCE_VALIDATION` | `false` | Enables validation of Bundle references, including resolution of references to resources in the same Bundle. |
+| `feature.flag.abstract-profile-validation` | `FEATURE_FLAG_ABSTRACT_PROFILE_VALIDATION` | `false` | Enables checks that abstract profiles are not used directly on resource instances. |
+| `feature.flag.reference-profile-validation` | `FEATURE_FLAG_REFERENCE_PROFILE_VALIDATION` | `false` | Enables validation of referenced resources against slice-specific target profile constraints. |
+| `feature.flag.fhir-package-postprocessing` | `FEATURE_FLAG_FHIR_PACKAGE_POSTPROCESSING` | `false` | Enables post-processing of profile-package resources, including CodeSystem consolidation. |
+| `feature.flag.hl7-issue-2876-fixed` | `FEATURE_FLAG_HL7_ISSUE_2876_FIXED` | `false` | Set to `true` only after HL7 Core issue [2876](https://github.com/hapifhir/org.hl7.fhir.core/issues/2876) is fixed. While `false`, loading Observation profiles relaxes `Observation.value[x]:valueString.value` from `min=1` to `min=0` in snapshots and differentials, in memory only. This intentionally allows extension-only string values. |
 
 ## Usage
 
@@ -182,9 +207,9 @@ See the [LICENSE](./LICENSE.md) for the specific language governing permissions 
 
 1. Copyright notice: Each published work result is accompanied by an explicit statement of the license conditions for use. These are regularly typical conditions in connection with open source or free software. Programs described/provided/linked here are free software, unless otherwise stated.
 2. Permission notice: Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-    1. The copyright notice (Item 1) and the permission notice (Item 2) shall be included in all copies or substantial portions of the Software.
-    2. The software is provided "as is" without warranty of any kind, either express or implied, including, but not limited to, the warranties of fitness for a particular purpose, merchantability, and/or non-infringement. The authors or copyright holders shall not be liable in any manner whatsoever for any damages or other claims arising from, out of or in connection with the software or the use or other dealings with the software, whether in an action of contract, tort, or otherwise.
-    3. We take open source license compliance very seriously. We are always striving to achieve compliance at all times and to improve our processes. If you find any issues or have any suggestions or comments, or if you see any other ways in which we can improve, please reach out to: ospo@gematik.de
+   1. The copyright notice (Item 1) and the permission notice (Item 2) shall be included in all copies or substantial portions of the Software.
+   2. The software is provided "as is" without warranty of any kind, either express or implied, including, but not limited to, the warranties of fitness for a particular purpose, merchantability, and/or non-infringement. The authors or copyright holders shall not be liable in any manner whatsoever for any damages or other claims arising from, out of or in connection with the software or the use or other dealings with the software, whether in an action of contract, tort, or otherwise.
+   3. We take open source license compliance very seriously. We are always striving to achieve compliance at all times and to improve our processes. If you find any issues or have any suggestions or comments, or if you see any other ways in which we can improve, please reach out to: ospo@gematik.de
 3. Please note: Parts of this code may have been generated using AI-supported technology. Please take this into account, especially when troubleshooting, for security analyses and possible adjustments.
 
 ## Contact

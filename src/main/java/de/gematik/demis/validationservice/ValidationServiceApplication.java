@@ -27,6 +27,7 @@ package de.gematik.demis.validationservice;
  * #L%
  */
 
+import de.gematik.demis.validationservice.config.FeatureFlags;
 import de.gematik.demis.validationservice.config.ValidationConfigProperties;
 import de.gematik.demis.validationservice.services.validation.custom.resourcereferences.ResourceReferencesBundleValidationConfigProperties;
 import org.springframework.boot.SpringApplication;
@@ -35,6 +36,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 
 @EnableConfigurationProperties({
   ValidationConfigProperties.class,
+  FeatureFlags.class,
   ResourceReferencesBundleValidationConfigProperties.class
 })
 @SpringBootApplication

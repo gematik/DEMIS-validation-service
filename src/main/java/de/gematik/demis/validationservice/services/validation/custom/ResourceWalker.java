@@ -30,7 +30,6 @@ package de.gematik.demis.validationservice.services.validation.custom;
 import jakarta.annotation.Nullable;
 import java.util.List;
 import java.util.function.Consumer;
-import lombok.extern.slf4j.Slf4j;
 import org.hl7.fhir.instance.model.api.IBaseResource;
 import org.hl7.fhir.instance.model.api.IPrimitiveType;
 import org.hl7.fhir.r4.model.Base;
@@ -38,7 +37,6 @@ import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.Property;
 import org.hl7.fhir.r4.model.Resource;
 
-@Slf4j
 public class ResourceWalker {
 
   private static void traverse(final ElementCtx ctx, final Consumer<ElementCtx> action) {
